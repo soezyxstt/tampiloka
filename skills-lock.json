@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "am-will/codex-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "d3334661de9ed476cdd2d4ebef8da6a1f0f0432915b2de035f5f2e989216dd94"
+    },
+    "vercel-react-best-practices": {
+      "source": "am-will/codex-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vercel-react-best-practices/SKILL.md",
+      "computedHash": "0152317e3e11aaec2fd3675d7f0f88bff9b0388be78cf482a7e0657dc7d70239"
+    }
+  }
+}

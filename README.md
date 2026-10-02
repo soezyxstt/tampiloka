@@ -1,3 +1,18 @@
+# Tampiloka
+
+## Marketing imagery
+
+The 26 active photographs are mapped in `scripts/image-manifest.json`. Keep the original Gemini downloads in `public/generated`; the website uses descriptive WebP copies in `public/images`.
+
+```sh
+bun scripts/prepare-images.mjs
+# Optional source directory for files still in Downloads:
+bun scripts/prepare-images.mjs C:/Users/adiha/Downloads
+bun scripts/verify-marketing.mjs http://localhost:3001
+```
+
+Conversion limits width to 1800 px without enlarging the source. Page visuals use responsive Next.js images; each demo has its own hero, collection, and process photograph. The repeated final hero frame closes the animation loop.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

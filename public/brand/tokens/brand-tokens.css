@@ -1,0 +1,45 @@
+/* Load Manrope and Inter separately. Mobile typography applies below 768px. */
+:root {
+  --color-primary: #22C55E;
+  --color-primary-dark: #15803D;
+  --color-primary-light: #DCFCE7;
+  --color-neutral-dark: #0F172A;
+  --color-neutral-light: #F8FAFC;
+  --color-neutral-mid: #64748B;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+.type-display-xl { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 64px; line-height: 1.05; letter-spacing: -0.03em; }
+.type-display { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 56px; line-height: 1.08; letter-spacing: -0.03em; }
+.type-heading-1 { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 48px; line-height: 1.1; letter-spacing: -0.025em; }
+.type-heading-2 { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 36px; line-height: 1.15; letter-spacing: -0.02em; }
+.type-heading-3 { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 28px; line-height: 1.2; letter-spacing: -0.015em; }
+.type-heading-4 { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 22px; line-height: 1.25; letter-spacing: -0.01em; }
+.type-heading-5 { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 18px; line-height: 1.3; letter-spacing: -0.005em; }
+.type-body-lg { font-family: "Inter", sans-serif; font-weight: 400; font-size: 18px; line-height: 1.6; letter-spacing: 0em; }
+.type-body { font-family: "Inter", sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: 0em; }
+.type-body-sm { font-family: "Inter", sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; letter-spacing: 0em; }
+.type-label-lg { font-family: "Inter", sans-serif; font-weight: 600; font-size: 16px; line-height: 1.2; letter-spacing: 0em; }
+.type-label { font-family: "Inter", sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; letter-spacing: 0em; }
+.type-label-sm { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; line-height: 1.2; letter-spacing: 0.01em; }
+.type-caption { font-family: "Inter", sans-serif; font-weight: 400; font-size: 12px; line-height: 1.4; letter-spacing: 0em; }
+.type-overline { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; }
+
+@media (max-width: 767px) {
+.type-display-xl { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; letter-spacing: -0.03em; }
+.type-display { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 40px; line-height: 1.08; letter-spacing: -0.03em; }
+.type-heading-1 { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 36px; line-height: 1.1; letter-spacing: -0.025em; }
+.type-heading-2 { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 30px; line-height: 1.15; letter-spacing: -0.02em; }
+.type-heading-3 { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 24px; line-height: 1.2; letter-spacing: -0.015em; }
+.type-heading-4 { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; }
+.type-heading-5 { font-family: "Manrope", sans-serif; font-weight: 600; font-size: 18px; line-height: 1.3; letter-spacing: -0.005em; }
+.type-body-lg { font-family: "Inter", sans-serif; font-weight: 400; font-size: 18px; line-height: 1.6; letter-spacing: 0em; }
+.type-body { font-family: "Inter", sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; letter-spacing: 0em; }
+.type-body-sm { font-family: "Inter", sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; letter-spacing: 0em; }
+.type-label-lg { font-family: "Inter", sans-serif; font-weight: 600; font-size: 16px; line-height: 1.2; letter-spacing: 0em; }
+.type-label { font-family: "Inter", sans-serif; font-weight: 600; font-size: 14px; line-height: 1.2; letter-spacing: 0em; }
+.type-label-sm { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; line-height: 1.2; letter-spacing: 0.01em; }
+.type-caption { font-family: "Inter", sans-serif; font-weight: 400; font-size: 12px; line-height: 1.4; letter-spacing: 0em; }
+.type-overline { font-family: "Inter", sans-serif; font-weight: 600; font-size: 12px; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; }
+}
