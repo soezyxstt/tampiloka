@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
-import { Pause, Play, X } from "lucide-react";
+import { ArrowUpRight, Pause, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sheet, SheetClose, SheetContent, SheetTitle } from "@/components/ui/sheet";
@@ -182,6 +182,15 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                     setActiveProject(project);
                   }}
                 />
+                <a
+                  className="showcase__external"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Buka situs demo ${project.name} di tab baru`}
+                >
+                  <ArrowUpRight aria-hidden="true" />
+                </a>
               </div>
               <div className="showcase__project-meta">
                 <h3 className="type-heading-4 showcase__project-name">{project.name}</h3>
@@ -228,6 +237,15 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                 </SheetClose>
               </header>
               <div className="showcase-sheet__viewport">
+                <a
+                  className="showcase-sheet__external"
+                  href={activeProject.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Buka situs demo ${activeProject.name} di tab baru`}
+                >
+                  <ArrowUpRight aria-hidden="true" />
+                </a>
                 <iframe
                   key={activeProject.id}
                   className="showcase-sheet__frame"

@@ -90,7 +90,41 @@
   cursor: zoom-in;
 }
 
+.showcase__external,
+.showcase-sheet__external {
+  display: grid;
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgb(23 37 29 / 12%);
+  border-radius: 50%;
+  color: var(--showcase-ink);
+  background: rgb(248 249 246 / 96%);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 15%);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.35rem) scale(0.92);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.showcase__external { position: absolute; inset: 1rem 1rem auto auto; }
+.showcase-sheet__external { position: absolute; inset: 1rem 1rem auto auto; }
+.showcase__external svg,
+.showcase-sheet__external svg { width: 1.1rem; height: 1.1rem; }
+.showcase__external:focus-visible,
+.showcase-sheet__external:focus-visible { outline: 3px solid #52705b; outline-offset: 3px; }
+
 .showcase__open:focus-visible { outline: 3px solid #52705b; outline-offset: 5px; }
+.showcase__preview-shell:hover .showcase__external,
+.showcase__preview-shell:focus-within .showcase__external,
+.showcase-sheet__viewport:hover .showcase-sheet__external,
+.showcase-sheet__external:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
 .showcase__preview-shell:hover .showcase__screen,
 .showcase__preview-shell:focus-within .showcase__screen { transform: translateY(-0.35rem); box-shadow: 0 1.6rem 3.8rem rgb(45 55 42 / 16%); }
 
@@ -165,7 +199,7 @@
 .showcase-sheet__title { margin: 0; }
 .showcase-sheet__category { margin: 0; color: var(--showcase-muted); }
 .showcase-sheet__header button { width: 2.65rem; height: 2.65rem; }
-.showcase-sheet__viewport { flex: 1; min-height: 0; overflow: hidden; background: #fff; overscroll-behavior: contain; }
+.showcase-sheet__viewport { position: relative; flex: 1; min-height: 0; overflow: hidden; background: #fff; overscroll-behavior: contain; }
 .showcase-sheet__frame { display: block; width: calc(100% + 18px); height: 100%; border: 0; background: #fff; }
 
 .sheet-backdrop:has(+ .showcase-sheet) { background: rgb(14 24 18 / 45%); backdrop-filter: blur(4px); }
@@ -220,6 +254,15 @@
 @media (max-width: 25rem) {
   .showcase__filters { gap: 0; }
   .showcase-sheet__header { padding-inline: 1rem; }
+}
+
+@media (hover: none) {
+  .showcase__external,
+  .showcase-sheet__external {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
