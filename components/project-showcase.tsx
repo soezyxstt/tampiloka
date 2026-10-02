@@ -1,202 +1,113 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
-import { ArrowUpRight, Pause, Play } from "lucide-react";
+import { useEffect, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
+import { Pause, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Sheet, SheetClose, SheetContent, SheetTitle } from "@/components/ui/sheet";
 
 const projects = [
   {
-    id: "nayara",
-    name: "Nayara",
-    category: "Fashion",
-    description: "Konsep website untuk label fashion kontemporer.",
-  },
-  {
-    id: "sagara",
-    name: "Sagara Coffee",
+    id: "pagi-roti",
+    name: "Pagi & Roti",
     category: "Kuliner",
-    description: "Konsep website untuk brand kopi dan ruang seduh.",
+    description: "Konsep kedai roti dan kopi di Yogyakarta.",
+    url: "https://demo-cafe-1.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#cerita", "#nuansa", "#menu", "#suasana", "#lokasi"],
   },
   {
-    id: "arunika",
-    name: "Arunika Goods",
-    category: "Produk",
-    description: "Konsep katalog untuk produk kulit buatan tangan.",
+    id: "tepi-sagara",
+    name: "Tepi Sagara",
+    category: "Kuliner",
+    description: "Konsep restoran pesisir di Labuan Bajo.",
+    url: "https://demo-fnb-2.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#suasana", "#menu", "#galeri", "#tentang", "#lokasi", "#kabar"],
+  },
+  {
+    id: "sela-rasa",
+    name: "Sela Rasa",
+    category: "Kuliner",
+    description: "Konsep restoran dan ruang berkumpul di Malang.",
+    url: "https://demo-fnb-1.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#menu", "#pilihan", "#acara", "#ruang-kumpul", "#tentang", "#lokasi"],
+  },
+  {
+    id: "rona-forma",
+    name: "Rona Forma",
+    category: "Katalog",
+    description: "Konsep katalog sepatu, tas, dan aksesori.",
+    url: "https://demo-katalog-1.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#editor-picks", "#everyday-edit", "#10003", "#10001", "#10005", "#top"],
   },
 ] as const;
 
 type Project = (typeof projects)[number];
 type Filter = "Semua" | Project["category"];
+const filters: Filter[] = ["Semua", "Kuliner", "Katalog"];
 
-function NayaraPreview() {
+function ProjectPreview({ project, paused }: { project: Project; paused: boolean }) {
+  const [stopIndex, setStopIndex] = useState(0);
+  const stopCount = project.scrollStops.length;
+
+  useEffect(() => {
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const interval = window.setInterval(() => {
+      setStopIndex((current) => (current + 1) % stopCount);
+    }, 6500);
+
+    return () => window.clearInterval(interval);
+  }, [paused, stopCount]);
+
   return (
-    <div className="showcase__site showcase__site--nayara" aria-hidden="true">
-      <div className="showcase__site-nav showcase__site-nav--nayara">
-        <span className="showcase__wordmark">nayara</span>
-        <span>New arrivals</span><span>Collections</span>
-        <span className="showcase__nav-end">Bag <b>02</b></span>
-      </div>
-      <div className="showcase__site-track showcase__site-track--nayara">
-        <section className="showcase__scene showcase__scene--fashion showcase__scene--nayara">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Nayara / 2026</p>
-            <p className="showcase__scene-title">Busana<br />harian.</p>
-            <span className="showcase__text-link">Lihat koleksi <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--nayara"><span>07 / 26</span></div>
-          <span className="showcase__scene-note">Bahan linen</span>
-        </section>
-        <section className="showcase__scene showcase__scene--fashion showcase__scene--nayara-collection">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Koleksi terbaru</p>
-            <p className="showcase__scene-title">Koleksi<br />linen.</p>
-            <span className="showcase__text-link">Lihat semua <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--nayara-collection"><span>Collection / 02</span></div>
-          <span className="showcase__scene-note">Koleksi sehari-hari</span>
-        </section>
-        <section className="showcase__scene showcase__scene--fashion showcase__scene--nayara-story">
-          <div className="showcase__art showcase__art--nayara-process"><span>In the studio</span></div>
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Di balik koleksi</p>
-            <p className="showcase__scene-title">Bahan.<br />Potongan.</p>
-            <span className="showcase__text-link">Lihat proses <ArrowUpRight /></span>
-          </div>
-        </section>
-        <section className="showcase__scene showcase__scene--fashion showcase__scene--nayara" aria-hidden="true">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Nayara / 2026</p>
-            <p className="showcase__scene-title">Busana<br />harian.</p>
-            <span className="showcase__text-link">Lihat koleksi <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--nayara"><span>07 / 26</span></div>
-          <span className="showcase__scene-note">Bahan linen</span>
-        </section>
-      </div>
+    <div className="showcase__site" aria-hidden="true">
+      <iframe
+        title={`Preview ${project.name}`}
+        src={`${project.url}${project.scrollStops[stopIndex]}`}
+        loading="lazy"
+        tabIndex={-1}
+      />
     </div>
   );
-}
-
-function SagaraPreview() {
-  return (
-    <div className="showcase__site showcase__site--sagara" aria-hidden="true">
-      <div className="showcase__site-nav showcase__site-nav--sagara">
-        <span className="showcase__wordmark">sagara<span> coffee</span></span>
-        <span>Our coffee</span><span>Our story</span>
-        <span className="showcase__nav-end">Belanja <ArrowUpRight /></span>
-      </div>
-      <div className="showcase__site-track showcase__site-track--sagara">
-        <section className="showcase__scene showcase__scene--coffee showcase__scene--sagara">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Sagara Coffee</p>
-            <p className="showcase__scene-title">Kopi<br />lokal.</p>
-            <span className="showcase__text-link">Belanja kopi <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--sagara" />
-          <span className="showcase__scene-note">Biji kopi pilihan</span>
-        </section>
-        <section className="showcase__scene showcase__scene--coffee showcase__scene--sagara-menu">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Pilihan kopi</p>
-            <p className="showcase__scene-title">Arabika.<br />Robusta.</p>
-            <span className="showcase__text-link">Lihat pilihan <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--sagara-selection"><span>Seasonal selection</span></div>
-          <span className="showcase__scene-note">Dipanggang segar</span>
-        </section>
-        <section className="showcase__scene showcase__scene--coffee showcase__scene--sagara-story">
-          <div className="showcase__art showcase__art--sagara-roasting"><span>Small batch / 01</span></div>
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Proses kami</p>
-            <p className="showcase__scene-title">Proses<br />sangrai.</p>
-            <span className="showcase__text-link">Lihat proses <ArrowUpRight /></span>
-          </div>
-        </section>
-        <section className="showcase__scene showcase__scene--coffee showcase__scene--sagara" aria-hidden="true">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Sagara Coffee</p>
-            <p className="showcase__scene-title">Kopi<br />lokal.</p>
-            <span className="showcase__text-link">Belanja kopi <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--sagara"><span>01 / Origin</span></div>
-          <span className="showcase__scene-note">Biji kopi pilihan</span>
-        </section>
-      </div>
-    </div>
-  );
-}
-
-function ArunikaPreview() {
-  return (
-    <div className="showcase__site showcase__site--arunika" aria-hidden="true">
-      <div className="showcase__site-nav showcase__site-nav--arunika">
-        <span className="showcase__wordmark">ARUNIKA</span>
-        <span>Objects</span><span>Made by hand</span>
-        <span className="showcase__nav-end">IDR <b>⌄</b></span>
-      </div>
-      <div className="showcase__site-track showcase__site-track--arunika">
-        <section className="showcase__scene showcase__scene--leather showcase__scene--arunika">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Arunika Goods</p>
-            <p className="showcase__scene-title">Produk kulit.<br />Buatan tangan.</p>
-            <span className="showcase__text-link">Lihat produk <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--arunika"><span>01 / Daily carry</span></div>
-          <span className="showcase__scene-note">Handmade leather goods</span>
-        </section>
-        <section className="showcase__scene showcase__scene--leather showcase__scene--arunika-collection">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Koleksi terbaru</p>
-            <p className="showcase__scene-title">Tas.<br />Dompet.</p>
-            <span className="showcase__text-link">Lihat koleksi <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--arunika-collection"><span>Objects / 03</span></div>
-          <span className="showcase__scene-note">Kulit asli</span>
-        </section>
-        <section className="showcase__scene showcase__scene--leather showcase__scene--arunika-story">
-          <div className="showcase__art showcase__art--arunika-craft"><span>At the workbench</span></div>
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Proses kami</p>
-            <p className="showcase__scene-title">Potong.<br />Jahit.</p>
-            <span className="showcase__text-link">Lihat proses <ArrowUpRight /></span>
-          </div>
-        </section>
-        <section className="showcase__scene showcase__scene--leather showcase__scene--arunika" aria-hidden="true">
-          <div className="showcase__scene-copy">
-            <p className="showcase__scene-label">Arunika Goods</p>
-            <p className="showcase__scene-title">Produk kulit.<br />Buatan tangan.</p>
-            <span className="showcase__text-link">Lihat produk <ArrowUpRight /></span>
-          </div>
-          <div className="showcase__art showcase__art--arunika"><span>01 / Daily carry</span></div>
-          <span className="showcase__scene-note">Handmade leather goods</span>
-        </section>
-      </div>
-    </div>
-  );
-}
-
-function ProjectPreview({ project }: { project: Project }) {
-  if (project.id === "nayara") return <NayaraPreview />;
-  if (project.id === "sagara") return <SagaraPreview />;
-  return <ArunikaPreview />;
 }
 
 export default function ProjectShowcase({ page = false }: { page?: boolean }) {
   const [isPaused, setIsPaused] = useState(false);
   const [filter, setFilter] = useState<Filter>("Semua");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const filters: Filter[] = ["Semua", "Fashion", "Kuliner", "Produk"];
+  const [dragOffset, setDragOffset] = useState(0);
+  const dragStart = useRef<number | null>(null);
+  const dragDistance = useRef(0);
   const visibleProjects = filter === "Semua"
     ? projects
     : projects.filter((project) => project.category === filter);
 
-  useEffect(() => {
-    if (activeProject && dialogRef.current && !dialogRef.current.open) {
-      dialogRef.current.showModal();
-    }
-  }, [activeProject]);
+  const startDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
+    dragStart.current = event.clientY;
+    dragDistance.current = 0;
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const moveDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
+    if (dragStart.current === null) return;
+    dragDistance.current = Math.max(0, event.clientY - dragStart.current);
+    setDragOffset(dragDistance.current);
+  };
+
+  const endDrag = () => {
+    if (dragStart.current === null) return;
+    const shouldClose = dragDistance.current > 80;
+    dragStart.current = null;
+    dragDistance.current = 0;
+    if (shouldClose) setActiveProject(null);
+    else setDragOffset(0);
+  };
+
+  const cancelDrag = () => {
+    dragStart.current = null;
+    dragDistance.current = 0;
+    setDragOffset(0);
+  };
 
   const Heading = page ? "h1" : "h2";
 
@@ -205,11 +116,10 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
       className={`project-showcase${page ? " project-showcase--page" : ""}`}
       id="produk"
       aria-labelledby="showcase-heading"
-      data-motion={isPaused ? "paused" : "playing"}
     >
       <div className="showcase__inner">
         <header className="showcase__header" data-reveal>
-            <Heading className={`${page ? "type-display-xl" : "type-display"} showcase__heading`} id="showcase-heading">
+          <Heading className={`${page ? "type-display-xl" : "type-display"} showcase__heading`} id="showcase-heading">
             Karya pilihan.
           </Heading>
           <div className="showcase__controls">
@@ -228,7 +138,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                 ))}
               </div>
             ) : (
-              <p className="type-body showcase__intro-copy">Proyek konsep, bukan proyek klien.</p>
+              <p className="type-body showcase__intro-copy">Empat situs demo interaktif.</p>
             )}
             <Button
               className="showcase__motion-toggle"
@@ -246,7 +156,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
 
         {page && (
           <p className="type-body-sm showcase__concept-disclosure">
-            Proyek konsep, bukan proyek klien.
+            Situsnya dapat dijelajahi langsung; merek dan kontennya adalah konsep.
           </p>
         )}
 
@@ -258,17 +168,21 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
               data-reveal
               style={{ "--reveal-index": index } as CSSProperties}
             >
-              <button
-                className="showcase__open"
-                type="button"
-                aria-label={`Buka preview konsep ${project.name}`}
-                aria-haspopup="dialog"
-                onClick={() => setActiveProject(project)}
-              >
-                <span className="showcase__screen">
-                  <ProjectPreview project={project} />
+              <div className="showcase__preview-shell">
+                <span className="showcase__screen" aria-hidden="true">
+                  <ProjectPreview project={project} paused={isPaused || activeProject !== null} />
                 </span>
-              </button>
+                <button
+                  className="showcase__open"
+                  type="button"
+                  aria-label={`Buka preview situs ${project.name}`}
+                  aria-haspopup="dialog"
+                  onClick={() => {
+                    setDragOffset(0);
+                    setActiveProject(project);
+                  }}
+                />
+              </div>
               <div className="showcase__project-meta">
                 <h3 className="type-heading-4 showcase__project-name">{project.name}</h3>
                 <p className="showcase__project-category">{project.category}</p>
@@ -278,31 +192,53 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
         </div>
       </div>
 
-      <dialog
-        className="showcase__dialog"
-        ref={dialogRef}
-        aria-labelledby="showcase-dialog-title"
-        aria-describedby="showcase-dialog-description"
-        onClose={() => setActiveProject(null)}
-        onClick={(event) => {
-          if (event.target === event.currentTarget) dialogRef.current?.close();
+      <Sheet
+        open={activeProject !== null}
+        onOpenChange={(open) => {
+          if (!open) setActiveProject(null);
         }}
       >
-        {activeProject && (
-          <div className="showcase__dialog-panel">
-            <div className="showcase__dialog-header">
-              <h2 className="type-heading-3" id="showcase-dialog-title">{activeProject.name}</h2>
-              <Button className="showcase__dialog-close" variant="outline" type="button" onClick={() => dialogRef.current?.close()}>
-                Tutup <span aria-hidden="true">×</span>
-              </Button>
-            </div>
-            <div className="showcase__dialog-screen"><ProjectPreview project={activeProject} /></div>
-            <p className="type-body-sm showcase__dialog-description" id="showcase-dialog-description">
-              {activeProject.description} Preview ini merupakan konsep visual.
-            </p>
-          </div>
-        )}
-      </dialog>
+        <SheetContent
+          className="showcase-sheet"
+          style={{ "--showcase-sheet-drag": `${dragOffset}px` } as CSSProperties}
+        >
+          {activeProject && (
+            <>
+              <SheetClose
+                className="showcase-sheet__handle"
+                aria-label="Tutup preview atau tarik ke bawah untuk menutup"
+                onPointerDown={startDrag}
+                onPointerMove={moveDrag}
+                onPointerUp={endDrag}
+                onPointerCancel={cancelDrag}
+                render={<button type="button" className="showcase-sheet__handle" />}
+              >
+                <span aria-hidden="true" />
+              </SheetClose>
+              <header className="showcase-sheet__header">
+                <div className="showcase-sheet__heading">
+                  <SheetTitle className="type-heading-4 showcase-sheet__title">{activeProject.name}</SheetTitle>
+                  <p className="type-caption showcase-sheet__category">{activeProject.category}</p>
+                </div>
+                <SheetClose
+                  aria-label="Tutup preview"
+                  render={<Button variant="ghost" size="icon" aria-label="Tutup preview" />}
+                >
+                  <X aria-hidden="true" />
+                </SheetClose>
+              </header>
+              <div className="showcase-sheet__viewport">
+                <iframe
+                  key={activeProject.id}
+                  className="showcase-sheet__frame"
+                  title={`Situs demo ${activeProject.name}`}
+                  src={activeProject.url}
+                />
+              </div>
+            </>
+          )}
+        </SheetContent>
+      </Sheet>
     </section>
   );
 }
