@@ -46,7 +46,7 @@ const projects = [
     category: "Undangan digital",
     description: "Konsep undangan pernikahan digital dari Temura.",
     url: TEMURA_DEMO_URL,
-    scrollStops: ["", "#cerita", "#acara", "#lokasi"],
+    scrollStops: [""],
   },
 ] as const;
 

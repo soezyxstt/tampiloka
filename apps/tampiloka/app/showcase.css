@@ -222,7 +222,7 @@
 }
 
 @media (max-width: 48rem) {
-  .project-showcase { padding: 5.25rem 0; }
+  .project-showcase { padding: 2.75rem 0 4.5rem; }
   .project-showcase--page { padding-top: 7.5rem; }
   .showcase__inner { max-width: none; margin-inline: 0; }
   .showcase__header { display: grid; align-items: start; gap: 1.25rem; margin: 0 1.1rem 2rem; }

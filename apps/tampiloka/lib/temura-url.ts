@@ -4,4 +4,4 @@ const defaultTemuraUrl = process.env.NODE_ENV === "development"
   : "https://temura.adihnursyam.com";
 
 export const TEMURA_URL = (configuredTemuraUrl || defaultTemuraUrl).replace(/\/$/, "");
-export const TEMURA_DEMO_URL = `${TEMURA_URL}/demo/nara-aruna`;
+export const TEMURA_DEMO_URL = `${TEMURA_URL}/preview/adat-sunda`;

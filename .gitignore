@@ -24,4 +24,5 @@ yarn-error.log*
 
 # Temura generated Prisma client and local backups
 apps/temura/app/generated/prisma
-artifacts/temura-before-rebrand
+artifacts/*
+!artifacts/image-review.jpg
