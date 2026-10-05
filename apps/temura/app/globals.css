@@ -1,0 +1,261 @@
+@import "tailwindcss";
+@import "@tampiloka/brand-system/styles.css";
+
+/* Native scrollbars, including nested panels and horizontal scrollers. */
+:root, .dark {
+  --scrollbar-track: var(--background);
+  --scrollbar-thumb: var(--muted-foreground);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-corner { background: var(--scrollbar-track); }
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: 2px solid var(--scrollbar-track);
+  border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--color-brand-primary-dark); }
+@media (forced-colors: active) {
+  * { scrollbar-width: auto; scrollbar-color: auto; }
+  *::-webkit-scrollbar { width: auto; height: auto; }
+  *::-webkit-scrollbar-track, *::-webkit-scrollbar-corner { background: Canvas; }
+  *::-webkit-scrollbar-thumb { background: ButtonText; border-color: Canvas; }
+  *::-webkit-scrollbar-thumb:hover { background: Highlight; }
+}
+
+/* Legacy invitation palette remains local to the invitation templates. */
+@theme inline {
+  --color-primary-cream: #f8fafc;
+  --color-deep-charcoal: #0f172a;
+  --color-muted-gold: #94a3b8;
+  --color-sage-green: #15803d;
+  --color-wood-brown: #166534;
+  --color-ivory-mist: #f8fafc;
+  --color-deep-forest: #0f172a;
+  --color-warm-champagne: #94a3b8;
+  --color-royal-emerald: #15803d;
+  --color-hunter-green: #166534;
+  --color-surface-night: #0f172a;
+  --color-whatsapp: #15803d;
+  --color-accent-ember: #15803d;
+  --color-gold-shine: #cbd5e1;
+  --font-serif: var(--font-manrope);
+}
+html { scroll-behavior: smooth; }
+body { background: #f8fafc; color: #0f172a; font-family: var(--font-inter), sans-serif; }
+.inv-layout {
+  --color-primary-cream: oklch(97% 0.008 145);
+  --color-deep-charcoal: oklch(20% 0.055 162);
+  --color-muted-gold: oklch(83% 0.095 90);
+  --color-sage-green: oklch(52% 0.220 152);
+  --color-wood-brown: oklch(40% 0.130 162);
+  --color-gold-shine: oklch(87% 0.12 90);
+  --font-serif: var(--font-invitation-serif);
+}
+.inv-layout .font-sans { font-family: var(--font-sans-inv), sans-serif; }
+.inv-layout .font-serif, .inv-layout [class*="font-serif"] { font-family: var(--font-invitation-serif), Georgia, serif; }
+.inv-layout h1, .inv-layout h2, .inv-layout h3, .inv-layout h4, .inv-layout h5, .inv-layout h6 { font-family: var(--font-invitation-serif), Georgia, serif; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Grain/noise texture overlay for luxury sections */
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+
+/* Batik decorative divider */
+.batik-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklch, var(--color-muted-gold) 75%, transparent) 20%,
+    color-mix(in oklch, var(--color-muted-gold) 100%, transparent) 50%,
+    color-mix(in oklch, var(--color-muted-gold) 75%, transparent) 80%,
+    transparent
+  );
+}
+
+/* Marquee scroll for logo strip */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* Ornament: floating petal / leaf */
+@keyframes petal-drift {
+  0%   { transform: translateY(0)    rotate(0deg)  scale(1);    opacity: 0; }
+  12%  { opacity: 0.72; }
+  88%  { opacity: 0.38; }
+  100% { transform: translateY(-170px) rotate(32deg) scale(0.72); opacity: 0; }
+}
+.animate-petal-drift {
+  animation: petal-drift 8.5s ease-in-out infinite;
+}
+
+/* Ornament: cloud slow sway */
+@keyframes cloud-sway {
+  0%, 100% { transform: translateX(0px); opacity: 0.08; }
+  50%       { transform: translateX(10px); opacity: 0.13; }
+}
+.animate-cloud-sway {
+  animation: cloud-sway 9s ease-in-out infinite;
+}
+
+/* Ornament: gentle pulse ring */
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1);    opacity: 0.35; }
+  50%       { transform: scale(1.06); opacity: 0.55; }
+}
+.animate-gentle-pulse {
+  animation: gentle-pulse 4s ease-in-out infinite;
+}
+
+/* ── Invitation / admin: gradients & shadows (theme tokens only in TSX) ── */
+
+.text-gradient-gold-live {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-muted-gold) 0%,
+    var(--color-gold-shine) 40%,
+    var(--color-muted-gold) 60%,
+    var(--color-muted-gold) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-radial-gold-header {
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    color-mix(in oklch, var(--color-gold-shine) 12%, transparent),
+    transparent
+  );
+}
+
+.bg-radial-muted-gold-soft {
+  background: radial-gradient(
+    ellipse 60% 40% at 50% 0%,
+    color-mix(in oklch, var(--color-muted-gold) 8%, transparent),
+    transparent
+  );
+}
+
+.avatar-ring-editorial {
+  box-shadow:
+    0 0 0 5px var(--color-primary-cream),
+    0 0 0 7px color-mix(in oklch, var(--color-muted-gold) 28%, transparent),
+    0 8px 32px -8px color-mix(in oklch, var(--color-surface-night) 25%, transparent);
+}
+
+.inv-hero-vignette {
+  box-shadow: inset 0 0 80px color-mix(in oklch, var(--color-surface-night) 8%, transparent);
+}
+
+.scanner-backdrop-dim {
+  box-shadow: 0 0 0 9999px color-mix(in oklch, var(--color-surface-night) 45%, transparent);
+}
+
+.shadow-template2-float {
+  box-shadow: 0 32px 80px -16px color-mix(in oklch, var(--color-surface-night) 90%, transparent);
+}
+
+.shadow-template2-float-strong {
+  box-shadow: 0 32px 80px -12px color-mix(in oklch, var(--color-surface-night) 95%, transparent);
+}
+
+.shadow-t3-card {
+  box-shadow: 0 8px 40px -12px color-mix(in oklch, var(--color-wood-brown) 18%, transparent);
+}
+
+.shadow-inv-narrow {
+  box-shadow: 0 0 80px color-mix(in oklch, var(--color-surface-night) 70%, transparent);
+}
+
+@media (min-width: 1024px) {
+  .invitation-column-shadow {
+    box-shadow: 0 0 80px color-mix(in oklch, var(--color-surface-night) 70%, transparent);
+  }
+}
+
+.maps-embed-inset {
+  box-shadow: inset 0 0 20px color-mix(in oklch, var(--color-surface-night) 8%, transparent);
+}
+
+.bg-instagram-filter-cta {
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in oklch, var(--color-primary-cream) 85%, white),
+    color-mix(in oklch, var(--color-muted-gold) 12%, var(--color-primary-cream))
+  );
+}
+
+.bg-gradient-instagram-icon {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-accent-ember),
+    color-mix(in oklch, var(--color-accent-ember) 85%, var(--color-muted-gold))
+  );
+}
+
+.shadow-accent-ember-ring {
+  box-shadow:
+    0 0 0 3px var(--color-surface-night),
+    0 0 0 5px color-mix(in oklch, var(--color-accent-ember) 35%, transparent);
+}
+
+/* Cover overlay (invitation open screen) */
+.cover-hero-fallback {
+  background: radial-gradient(
+    ellipse 80% 80% at 50% 60%,
+    var(--color-deep-charcoal),
+    var(--color-surface-night)
+  );
+}
+
+.cover-vignette-top {
+  background: radial-gradient(
+    ellipse 100% 60% at 50% 0%,
+    var(--color-surface-night) 0%,
+    transparent 100%
+  );
+}
+
+.cover-vignette-bottom {
+  background: radial-gradient(
+    ellipse 100% 55% at 50% 100%,
+    var(--color-surface-night) 0%,
+    transparent 100%
+  );
+}
+
+.cover-vignette-left {
+  background: radial-gradient(
+    ellipse 50% 100% at 0% 50%,
+    color-mix(in oklch, var(--color-surface-night) 60%, transparent) 0%,
+    transparent 100%
+  );
+}
+
+.cover-vignette-right {
+  background: radial-gradient(
+    ellipse 50% 100% at 100% 50%,
+    color-mix(in oklch, var(--color-surface-night) 60%, transparent) 0%,
+    transparent 100%
+  );
+}

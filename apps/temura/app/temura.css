@@ -1,0 +1,191 @@
+.temura-site { background: #f8fafc; color: #0f172a; }
+.temura-site a { text-decoration: none; }
+.temura-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 5%;
+}
+
+/* Hero section */
+.temura-hero { position: relative; isolation: isolate; overflow: hidden; background: #0f172a; color: #fff; }
+.temura-hero-background { object-fit: cover; object-position: center 20%; z-index: -2; }
+.temura-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.2) 90px, rgba(15, 23, 42, 0) 160px),
+    linear-gradient(90deg, rgb(15 23 42 / 82%) 0%, rgb(15 23 42 / 60%) 45%, rgb(15 23 42 / 16%) 100%);
+}
+.temura-hero-inner {
+  display: flex;
+  align-items: center;
+  min-height: min(48rem, 100svh);
+  padding-top: calc(5rem + 3.5rem);
+  padding-bottom: 5rem;
+}
+.temura-hero-copy { max-width: 44rem; }
+.temura-hero h1 span { color: #dcfce7; }
+.temura-intro { color: #f1f5f9; margin-top: 1.75rem; max-width: 31rem; }
+.temura-actions { display: flex; align-items: center; gap: 1.25rem; margin-top: 2rem; flex-wrap: wrap; }
+.temura-text-link { display: inline-flex; gap: 0.5rem; align-items: center; color: #fff; transition: color 0.2s ease; }
+.temura-text-link:hover { color: #dcfce7; }
+.temura-hero-note { margin-top: 1.5rem; color: #cbd5e1; }
+
+/* Section layouts */
+.temura-section { padding-block: 5rem; scroll-margin-top: 5rem; }
+.temura-section-heading { display: flex; justify-content: space-between; gap: 2rem; align-items: end; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.temura-section-heading h2 { max-width: 23ch; margin: 0; }
+.temura-muted { color: #64748b; }
+
+/* Design Showcase Grid */
+.temura-design-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 1.5rem; }
+.temura-design-card { overflow: visible; background: transparent; border: 0; box-shadow: none; }
+.temura-design-image { position: relative; aspect-ratio: 27/40; background: #e2e8f0; border-radius: 1.25rem; overflow: hidden; width: 100%; height: 100%; }
+.temura-design-image img { object-fit: cover; transition: transform 750ms cubic-bezier(0.19, 1, 0.22, 1); }
+.temura-design-card:hover img { transform: scale(1.04); }
+.temura-design-caption { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1rem; }
+
+/* Pricing Grid */
+.temura-pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.temura-price-card { border: 1px solid #e2e8f0; border-radius: 1.25rem; padding: 1.75rem; background: white; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.temura-price-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+.temura-price-featured { border-color: #15803d; background: #f0fdf4; }
+.temura-price { display: flex; align-items: baseline; gap: .35rem; }
+
+/* Process Steps */
+.temura-process { border-top: 1px solid #e2e8f0; }
+.temura-process ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; }
+.temura-process li { display: grid; align-content: start; gap: 0.5rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; }
+.temura-step { color: #15803d; }
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .temura-pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .temura-design-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .temura-container { padding-inline: 6%; }
+  .temura-hero-inner {
+    min-height: max(38rem, 100svh);
+    padding-top: calc(4.5rem + 2.5rem);
+    padding-bottom: 3.5rem;
+  }
+  .temura-hero-background { object-position: 74% 20%; }
+  .temura-hero::before {
+    background:
+      linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.25) 80px, rgba(15, 23, 42, 0) 140px),
+      linear-gradient(90deg, rgb(15 23 42 / 85%), rgb(15 23 42 / 45%));
+  }
+  .temura-section { padding-block: 3.5rem; }
+  .temura-section-heading { display: block; margin-bottom: 2rem; }
+  .temura-design-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .temura-pricing-grid, .temura-process ol { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .temura-site *, .temura-site *::before, .temura-site *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.temura-admin input, .temura-admin textarea, .temura-admin select {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+}
+.temura-admin h1, .temura-admin h2, .temura-admin h3, .temura-admin h4 {
+  font-family: var(--font-manrope), sans-serif;
+}
+.temura-admin .font-serif {
+  font-family: var(--font-manrope), sans-serif;
+}
+/* Marketing catalogue and product previews */
+.temura-category-tabs { display:flex; gap:.5rem; overflow-x:auto; padding-block:.35rem .75rem; scrollbar-width:thin; }
+.temura-category-tabs button { flex-shrink:0; padding:.9rem 1.3rem; border:1px solid #dce3da; border-radius:99rem; background:transparent; cursor:pointer; color:#46574a; }
+.temura-category-tabs button[aria-pressed="true"] { background:#163e26; border-color:#163e26; color:#fff; }
+.temura-category-tabs button:focus-visible,.temura-button:focus-visible,.temura-inline-link:focus-visible { outline:3px solid #22c55e; outline-offset:4px; }
+.temura-catalog-note { margin-block:1rem 2rem; }
+.temura-design-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:2.5rem 1.5rem; }
+.temura-concept { position:relative; aspect-ratio:4/5; overflow:hidden; border:1px solid #d9ddd1; border-radius:1.25rem; background:#ececde; color:#334736; }
+.temura-concept-scroll { min-height:145%; padding:2.2rem 1.5rem; display:flex; flex-direction:column; align-items:center; gap:1.3rem; text-align:center; animation:temura-concept-pan 16s ease-in-out infinite alternate; }
+.temura-concept-monogram { font-family:Georgia,serif; font-size:clamp(4rem,7vw,7rem); padding-block:1.5rem; letter-spacing:-.08em; }
+.temura-concept-monogram span { font-size:.45em; font-style:italic; }
+.temura-concept-rule { width:2rem; height:1px; background:currentColor; margin-block:1rem; opacity:.4; }
+.temura-concept--game-kartun { background:#d8e5d6; color:#26514a; }
+.temura-concept--minimalist { background:#f1eee8; color:#66504f; }
+.temura-concept--islamic { background:#e1e6d9; color:#355441; }
+.temura-concept--retro-nostalgia { background:#e8d5bc; color:#6b4635; }
+.temura-concept-status { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%); padding:.65rem 1rem; border-radius:99rem; white-space:nowrap; color:#354638; background:rgb(255 255 255 / 94%); border:1px solid #d6ddd2; }
+.temura-design-card:hover .temura-concept-scroll { animation-play-state:paused; }
+.temura-design-caption h3 { margin:0; }
+.temura-design-caption > span { flex-shrink:0; }
+.temura-design-card > p { margin-top:0; }
+.temura-button { min-height:3rem; display:inline-flex; align-items:center; justify-content:center; gap:.8rem; border:1px solid #ccd7ce; padding:.8rem 1.3rem; border-radius:99rem; color:#153d26; background:#fff; cursor:pointer; }
+.temura-button--brand { background:#22c55e; border-color:#22c55e; color:#10331f; }
+.temura-inline-link { display:inline-flex; align-items:center; gap:.6rem; padding-block:.8rem; border:0; border-bottom:1px solid #a3b9a8; background:transparent; color:#215735; cursor:pointer; }
+.temura-eyebrow { color:#52705b; margin-bottom:1.2rem; }
+.temura-product-section { background:#eaf0e6; }
+.temura-product-intro { max-width:28rem; }
+.temura-product-intro p { margin:0 0 1rem; }
+.temura-product-screen { overflow:hidden; border:1px solid #d4ddd1; border-radius:1.25rem; box-shadow:0 1.5rem 4rem rgb(35 60 42 / 8%); background:#fff; }
+.temura-product-screen > img { display:block; width:100%; height:auto; }
+.temura-screen-bar { min-height:2.8rem; display:flex; align-items:center; gap:.4rem; padding:.5rem 1rem; background:#f5f7f3; border-bottom:1px solid #e1e6dd; }
+.temura-screen-bar > span { width:.5rem; height:.5rem; border-radius:50%; background:#ccd5c8; }
+.temura-screen-bar > p { margin:0 .5rem; color:#62735f; }
+.temura-screen-fallback { min-height:28rem; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1rem; text-align:center; padding:2rem; }
+.temura-screen-fallback p { margin:0; }
+.temura-product-points { display:flex; flex-wrap:wrap; gap:1rem 3rem; margin-top:1.3rem; }
+.temura-product-points p { display:flex; gap:.75rem; align-items:center; }
+.temura-pricing-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.temura-price-card { display:flex; flex-direction:column; }
+.temura-plan-price { margin-block:1.7rem 1rem; display:flex; flex-wrap:wrap; gap:.25rem; align-items:baseline; }
+.temura-price-card ul { padding:0; list-style:none; display:grid; gap:1rem; margin-block:1.7rem 2rem; }
+.temura-price-card li { display:flex; gap:.65rem; align-items:start; }
+.temura-price-card li svg { flex-shrink:0; margin-top:.4rem; color:#15803d; }
+.temura-price-card .temura-button { margin-top:auto; }
+.temura-page-intro { padding-top:6rem; }
+.temura-page-description { max-width:43rem; margin-block:1.6rem 3.5rem; }
+.temura-feature-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:3rem 2.5rem; }
+.temura-feature-grid article { border-top:1px solid #d8e0d5; padding-top:1.5rem; }
+.temura-feature-grid h2 { margin-block:1.2rem 1rem; }
+.temura-welcome-dialog { width:min(90vw,34rem); margin:auto; padding:2.5rem; border:1px solid #d4ddcf; border-radius:1.5rem; background:#f8faf6; }
+.temura-welcome-dialog::backdrop { background:rgb(20 40 25 / 55%); backdrop-filter:blur(5px); }
+.temura-welcome-dialog p { margin-block:1.5rem; }
+@keyframes temura-concept-pan { 0%,15% { transform:translateY(0); } 85%,100% { transform:translateY(-22%); } }
+@media(max-width:1100px) { .temura-design-grid,.temura-feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .temura-pricing-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; } .temura-price-card { padding:1.2rem; } }
+@media(max-width:767px) { .temura-design-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem .8rem; } .temura-design-caption { align-items:start; flex-direction:column; gap:.4rem; } .temura-concept-scroll { padding:1.5rem .6rem; gap:.9rem; } .temura-concept-monogram { font-size:3.5rem; } .temura-concept-scroll .type-heading-3 { font-size:18px; } .temura-concept-status { font-size:10px; padding:.5rem .6rem; } .temura-design-card > p { font-size:16px; } .temura-pricing-grid,.temura-feature-grid { grid-template-columns:1fr; } .temura-section-heading .temura-product-intro { margin-top:1.5rem; } .temura-screen-fallback { min-height:20rem; } .temura-page-intro { padding-top:4rem; } .temura-product-points { gap:0; flex-direction:column; } }
+@media(prefers-reduced-motion:reduce) { .temura-concept-scroll { animation:none; } }
+/* Lean marketing layouts */
+.temura-concept-placeholder { height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.5rem; }
+.temura-concept-placeholder .temura-concept-monogram { padding-block:0; }
+.temura-price-card { border:0; border-top:1px solid #d8e0d5; border-radius:0; padding:1.7rem 0; background:transparent; box-shadow:none; }
+.temura-price-card:hover { transform:none; box-shadow:none; }
+.temura-price-card > .temura-inline-link { margin-top:1rem; align-self:start; }
+.temura-product-screen { border-radius:.75rem; box-shadow:none; }
+.temura-page-description:has(.temura-catalog) { max-width:none; }
+.temura-feature-groups { display:grid; gap:4rem; }
+.temura-feature-groups > section { display:grid; grid-template-columns:1fr 2fr; gap:3rem; }
+.temura-feature-groups dl { margin:0; }
+.temura-feature-row { display:grid; grid-template-columns:11rem 1fr; gap:1.5rem; border-top:1px solid #d8e0d5; padding-block:1.5rem; }
+.temura-feature-row dd { margin:0; }
+.temura-feature-row dd .temura-inline-link { display:flex; width:fit-content; margin-top:.65rem; }
+@media(max-width:767px) { .temura-feature-groups > section { grid-template-columns:1fr; gap:1rem; } .temura-feature-row { grid-template-columns:1fr; gap:.5rem; } }
+.temura-category-tabs { gap:1.5rem; border-bottom:1px solid #d8e0d5; padding-bottom:0; }
+.temura-category-tabs button { padding:.9rem 0; border:0; border-bottom:2px solid transparent; border-radius:0; color:#64748b; background:transparent; }
+.temura-category-tabs button[aria-pressed="true"] { color:#215735; background:transparent; border-color:#215735; }
+.temura-preview-tile { display:block; color:#30413a; }
+.temura-preview-tile > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.temura-preview-tile-copy { position:relative; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem 1rem; }
+.temura-preview-tile-copy > span { font-size:9px; letter-spacing:.12em; }
+.temura-preview-tile-copy > p { font-family:var(--font-invitation-serif),Georgia,serif; font-size:clamp(34px,5vw,72px); line-height:.85; margin:1.4rem 0; letter-spacing:-.04em; }
+.temura-preview-tile-copy i { font-size:.5em; line-height:1.4; }
+.temura-preview-tile-open { position:absolute; bottom:0; left:0; width:100%; padding:.8rem; text-align:center; font-size:11px; background:#faf5e9ed; border-top:1px solid #d4c6ab; }
+.temura-preview-tile--minimalist-eunoia { color:#483e40; }
+.temura-preview-tile--minimalist-eunoia .temura-preview-tile-copy { align-items:flex-start; text-align:left; padding-inline:14%; }
+.temura-preview-tile--minimalist-eunoia .temura-preview-tile-copy > p { font-family:Georgia,serif; font-weight:400; line-height:.9; }
+.temura-preview-tile:focus-visible { outline:3px solid #15803d; outline-offset:5px; }
+.temura-site .temura-concept { border-radius:.5rem; }

@@ -1,0 +1,246 @@
+.tk-tom-jerry {
+  --tk-ink: #2e211d;
+  --tk-paper: #f4ead6;
+  --tk-rule: rgb(63 40 31 / 24%);
+  --tk-focus: #9a4838;
+  --tk-body-font: var(--font-inter, "Avenir Next", sans-serif);
+  --tk-ui-font: var(--font-inter, "Avenir Next", sans-serif);
+  --tj-russet: #8e4437;
+  --tj-oxblood: #512d2a;
+  --tj-gold: #be965a;
+  --tj-paper: #f4ead6;
+  --tj-ink: #2e211d;
+  color: var(--tj-ink);
+  background: var(--tj-paper);
+  font-family: var(--tk-body-font);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.tk-tom-jerry,
+.tk-tom-jerry *,
+.tk-tom-jerry *::before,
+.tk-tom-jerry *::after { box-sizing: border-box; }
+.tk-tom-jerry h1,
+.tk-tom-jerry h2,
+.tk-tom-jerry h3,
+.tk-tom-jerry p,
+.tk-tom-jerry figure { margin: 0; }
+.tk-tom-jerry h1,
+.tk-tom-jerry h2,
+.tk-tom-jerry h3 { font-family: var(--font-preview-editorial, Georgia, serif); font-weight: 400; letter-spacing: -.045em; line-height: 1.06; }
+.tk-tom-jerry button,
+.tk-tom-jerry input,
+.tk-tom-jerry select,
+.tk-tom-jerry textarea { font: inherit; }
+.tk-tom-jerry [data-scene] { transform: translate3d(var(--tk-drift, 0px), var(--tk-counter, 0px), 0) rotate(var(--tk-turn, 0deg)); }
+.tk-tom-jerry .tj-overline { color: var(--tj-russet); font-family: var(--tk-ui-font); font-size: 14px; font-weight: 600; letter-spacing: .14em; line-height: 1.35; text-transform: uppercase; }
+.tk-tom-jerry [data-reveal] { transition: opacity 650ms ease, translate 650ms cubic-bezier(.2,.7,.2,1); }
+.tk-tom-jerry .tk-content.tk-motion-ready [data-reveal]:not(.is-visible) { opacity: 0; translate: 0 20px; }
+.tk-tom-jerry .tk-content.tk-motion-ready [data-reveal].is-visible { opacity: 1; translate: 0 0; }
+
+/* A round iris, like a theatre lens, holds the couple's portrait on the cover. */
+.tk-tom-jerry .tj-cover { position: relative; display: grid; width: 100%; height: 100%; min-height: 100%; place-items: center; overflow: hidden; isolation: isolate; color: var(--tj-ink); background: #ead9bb; }
+.tk-tom-jerry .tj-cover__room { position: absolute; z-index: -3; inset: 0; width: 100%; height: 100%; }
+.tk-tom-jerry .tj-cover__room .tk-decoration { width: 100%; height: 100%; object-fit: cover; object-position: 50% 47%; }
+.tk-tom-jerry .tj-cover__veil { position: absolute; z-index: -2; inset: 0; background: radial-gradient(ellipse at 50% 43%, rgb(255 249 232 / 91%) 0%, rgb(255 249 232 / 78%) 31%, rgb(239 224 197 / 31%) 68%, rgb(77 43 39 / 12%) 100%); }
+.tk-tom-jerry .tj-cover__iris { position: absolute; z-index: -1; top: 50%; left: 50%; aspect-ratio: 1; border: 1px solid rgb(93 55 41 / 36%); border-radius: 50%; pointer-events: none; translate: -50% -50%; }
+.tk-tom-jerry .tj-cover__iris--outer { width: min(88vw, 720px, 82svh); box-shadow: 0 0 0 9px rgb(245 234 211 / 43%), 0 0 0 10px rgb(93 55 41 / 20%), 0 0 0 24px rgb(245 234 211 / 23%); }
+.tk-tom-jerry .tj-cover__iris--inner { width: min(72vw, 570px, 68svh); border-color: rgb(190 150 90 / 66%); }
+.tk-tom-jerry .tj-cover__copy { position: relative; display: flex; width: min(100%, 760px); height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: clamp(7px, 1.8svh, 16px); padding: 12px 16px 24px; text-align: center; }
+.tk-tom-jerry .tj-cover__date { color: #5b4638; font-size: 14px; font-weight: 600; letter-spacing: .14em; }
+.tk-tom-jerry .tj-cover__names { display: flex; align-items: baseline; justify-content: center; gap: clamp(6px, 2vw, 18px); color: #352521; font-size: clamp(38px, 8.3vw, 82px); line-height: 1; white-space: nowrap; }
+.tk-tom-jerry .tj-cover__names i { color: var(--tj-russet); font-size: .52em; font-weight: 400; }
+.tk-tom-jerry .tj-cover__portrait { position: relative; width: clamp(190px, 31svh, 292px); aspect-ratio: 1; padding: 9px; border: 1px solid rgb(142 68 55 / 72%); border-radius: 50%; background: #f9f1df; box-shadow: 0 14px 40px rgb(68 37 27 / 22%), inset 0 0 0 5px #f9f1df, inset 0 0 0 6px rgb(190 150 90 / 70%); }
+.tk-tom-jerry .tj-cover__portrait .tk-photo-picture,
+.tk-tom-jerry .tj-cover__photo { width: 100%; height: 100%; overflow: hidden; border-radius: 50%; }
+.tk-tom-jerry .tj-cover__photo { object-position: 50% 24%; }
+.tk-tom-jerry .tj-cover__portrait-mark { position: absolute; right: -16px; bottom: 12%; display: grid; width: 52px; aspect-ratio: 1; place-items: center; border: 1px solid var(--tj-gold); border-radius: 50%; background: var(--tj-paper); color: var(--tj-oxblood); font-family: var(--font-preview-editorial, Georgia, serif); font-size: 14px; }
+.tk-tom-jerry .tj-cover .tj-open { min-height: 48px; margin-top: 1px; border-color: var(--tj-oxblood); background: var(--tj-oxblood); color: #fff8e9 !important; font-size: 14px; letter-spacing: .025em; }
+.tk-tom-jerry .tj-cover .tj-open:hover { border-color: var(--tj-russet); background: var(--tj-russet); }
+.tk-tom-jerry .tj-cover__envelope { position: absolute; top: 7%; left: 7%; width: clamp(58px, 10vw, 104px); height: auto; rotate: -11deg; filter: drop-shadow(0 7px 7px rgb(67 43 29 / 12%)); }
+.tk-tom-jerry .tj-cover__duo { position: absolute; right: 5%; bottom: 9%; width: clamp(72px, 12vw, 128px); height: auto; }
+.tk-tom-jerry .tj-cover__floor { position: absolute; right: 0; bottom: 0; left: 0; height: 8px; background: linear-gradient(90deg, var(--tj-russet), var(--tj-gold), var(--tj-russet)); }
+
+.tk-tom-jerry .tj-page { overflow: hidden; padding-bottom: 12px; background: var(--tj-paper); }
+.tk-tom-jerry .tj-welcome { position: relative; display: grid; min-height: 660px; grid-template-columns: minmax(0, .95fr) minmax(310px, .85fr); align-items: center; gap: clamp(30px, 8vw, 110px); padding: 100px max(calc((100vw - 1120px) / 2), 44px); overflow: hidden; background: linear-gradient(112deg, #f8f0df 0 50%, #e8d8bd 50% 100%); }
+.tk-tom-jerry .tj-welcome::before { position: absolute; inset: 26px; border: 1px solid rgb(114 69 50 / 21%); content: ""; pointer-events: none; }
+.tk-tom-jerry .tj-welcome__copy { position: relative; z-index: 2; max-width: 490px; }
+.tk-tom-jerry .tj-welcome__copy h2 { margin-top: 18px; color: var(--tj-ink); font-size: clamp(46px, 6vw, 76px); }
+.tk-tom-jerry .tj-welcome__copy h2 i { color: var(--tj-russet); font-weight: 400; }
+.tk-tom-jerry .tj-welcome__copy > p:not(.tj-overline) { max-width: 355px; margin-top: 20px; color: #584840; font-size: 16px; }
+.tk-tom-jerry .tj-text-link { display: inline-flex; min-height: 44px; align-items: center; gap: 12px; margin-top: 18px; color: var(--tj-oxblood); font-size: 14px; font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.tk-tom-jerry .tj-text-link span { font-size: 20px; }
+.tk-tom-jerry .tj-welcome__portrait { position: relative; width: min(100%, 430px); margin-inline: auto; padding: 13px; border: 1px solid var(--tj-gold); background: #fbf4e5; box-shadow: 0 20px 48px rgb(56 37 28 / 17%); }
+.tk-tom-jerry .tj-welcome__portrait .tk-photo-picture { display: block; width: 100%; }
+.tk-tom-jerry .tj-welcome__photo { width: 100%; aspect-ratio: 4 / 5; object-position: 50% 25%; }
+.tk-tom-jerry .tj-welcome__bouquet { position: absolute; z-index: 0; right: -65px; bottom: -55px; width: 31%; height: auto; pointer-events: none; }
+.tk-tom-jerry .tj-welcome__ribbon { position: absolute; top: 5%; right: 44%; width: 110px; height: auto; opacity: .75; rotate: 7deg; pointer-events: none; }
+
+.tk-tom-jerry .tj-couple { position: relative; overflow: hidden; padding: 100px clamp(20px, 7vw, 100px) 112px; background: #312724; color: #f6ebd7; }
+.tk-tom-jerry .tj-couple::before { position: absolute; inset: 18px; border: 1px solid rgb(194 157 101 / 45%); content: ""; pointer-events: none; }
+.tk-tom-jerry .tj-couple__heading { position: relative; z-index: 1; margin-bottom: 54px; text-align: center; }
+.tk-tom-jerry .tj-couple__heading .tj-overline { color: #d8b879; }
+.tk-tom-jerry .tj-couple__heading h2 { margin-top: 12px; font-size: clamp(44px, 6vw, 72px); }
+.tk-tom-jerry .tj-couple__stage { position: relative; display: grid; width: min(1050px, 100%); grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr); align-items: center; gap: clamp(12px, 3vw, 48px); margin-inline: auto; }
+.tk-tom-jerry .tj-vignette { position: relative; display: grid; grid-template-columns: minmax(130px, .88fr) minmax(150px, 1fr); align-items: center; gap: 20px; }
+.tk-tom-jerry .tj-vignette--nara { align-self: start; }
+.tk-tom-jerry .tj-vignette--aruna { align-self: end; grid-template-columns: minmax(150px, 1fr) minmax(130px, .88fr); text-align: right; }
+.tk-tom-jerry .tj-vignette__photo { width: 100%; aspect-ratio: 1; border: 8px solid #f5ead7; border-radius: 50%; box-shadow: 0 0 0 1px var(--tj-gold), 0 12px 32px rgb(0 0 0 / 25%); }
+.tk-tom-jerry .tj-vignette__photo .tk-photo-picture,
+.tk-tom-jerry .tj-vignette__photo .tk-photo { width: 100%; height: 100%; border-radius: 50%; object-position: 50% 24%; }
+.tk-tom-jerry .tj-vignette__caption > span { color: #d4b16d; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+.tk-tom-jerry .tj-vignette__caption h3 { margin-top: 7px; color: #fff6e7; font-size: clamp(24px, 3vw, 42px); }
+.tk-tom-jerry .tj-vignette__caption p { margin-top: 12px; color: #d7caba; font-size: 14px; line-height: 1.7; }
+.tk-tom-jerry .tj-couple__center { position: relative; display: grid; width: 100px; aspect-ratio: 1; place-items: center; margin-inline: auto; color: #e0bd81; font-family: var(--font-preview-editorial, Georgia, serif); font-size: 54px; }
+.tk-tom-jerry .tj-couple__orbit { position: absolute; inset: 0; border: 1px solid rgb(218 186 125 / 64%); border-radius: 50%; }
+.tk-tom-jerry .tj-couple__orbit--two { inset: 10px -8px; rotate: 48deg; }
+.tk-tom-jerry .tj-couple__duo { position: absolute; z-index: 2; top: 110%; left: 50%; width: 94px; max-height: 94px; object-fit: contain; translate: -50% 0; }
+.tk-tom-jerry .tj-couple__ribbon { position: absolute; right: -5%; bottom: -57px; width: 144px; height: auto; opacity: .8; pointer-events: none; }
+
+.tk-tom-jerry .tj-story { position: relative; overflow: hidden; padding: 98px clamp(20px, 7vw, 100px) 115px; background: #e8d7b9; }
+.tk-tom-jerry .tj-story__header { position: relative; z-index: 1; text-align: center; }
+.tk-tom-jerry .tj-story__header h2 { margin-top: 12px; color: var(--tj-ink); font-size: clamp(38px, 5.3vw, 64px); }
+.tk-tom-jerry .tj-story__reel { position: relative; display: grid; width: min(990px, 100%); grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: 26px; margin: 64px auto 0; padding: 0; list-style: none; }
+.tk-tom-jerry .tj-story__reel::before { position: absolute; top: 50%; right: 8%; left: 8%; height: 2px; background: repeating-linear-gradient(90deg, var(--tj-russet) 0 10px, transparent 10px 17px); content: ""; }
+.tk-tom-jerry .tj-story__reel li { position: relative; z-index: 1; display: flex; min-height: 104px; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 12px; border: 1px solid rgb(105 67 47 / 34%); background: #f5ebd8; color: var(--tj-ink); text-align: center; }
+.tk-tom-jerry .tj-story__reel li > span { color: var(--tj-russet); font-size: 14px; letter-spacing: .11em; }
+.tk-tom-jerry .tj-story__reel li strong { font-family: var(--font-preview-editorial, Georgia, serif); font-size: clamp(20px, 2.5vw, 29px); font-weight: 400; }
+.tk-tom-jerry .tj-story__reel li .tk-decoration-picture { width: 46px; height: 46px; }
+.tk-tom-jerry .tj-story__reel li .tk-decoration { width: 100%; height: 100%; object-fit: contain; }
+.tk-tom-jerry .tj-story__mousehole { position: absolute; right: 4%; bottom: 0; width: min(21vw, 198px); height: auto; pointer-events: none; }
+
+.tk-tom-jerry .tj-events { position: relative; padding: 104px clamp(18px, 7vw, 100px) 108px; overflow: hidden; background: #efe3cb; }
+.tk-tom-jerry .tj-events__poster { position: relative; width: min(1020px, 100%); margin-inline: auto; padding: clamp(28px, 6vw, 72px); border: 1px solid #d3ad70; outline: 1px solid rgb(80 45 42 / 44%); outline-offset: -10px; background: #4d2d2b; color: #f7ecd8; box-shadow: 0 22px 45px rgb(50 35 26 / 18%); }
+.tk-tom-jerry .tj-events__poster::before { position: absolute; top: 18px; right: 18px; bottom: 18px; left: 18px; border: 1px solid rgb(220 188 133 / 26%); content: ""; pointer-events: none; }
+.tk-tom-jerry .tj-events__ribbon { position: absolute; top: -38px; right: 7%; z-index: 1; width: clamp(88px, 12vw, 136px); height: auto; rotate: 9deg; }
+.tk-tom-jerry .tj-events__title { position: relative; z-index: 1; text-align: center; }
+.tk-tom-jerry .tj-events__title .tj-overline { color: #e4c88c; }
+.tk-tom-jerry .tj-events__title h2 { margin-top: 13px; color: #fff0d8; font-size: clamp(54px, 10vw, 108px); letter-spacing: -.07em; }
+.tk-tom-jerry .tj-events__title h2 i { color: #d29a83; font-size: .62em; font-style: normal; }
+.tk-tom-jerry .tj-events__title > p:last-child { margin-top: 9px; color: #eadbc4; font-size: 16px; }
+.tk-tom-jerry .tj-timebands { position: relative; z-index: 1; margin-top: clamp(32px, 6vw, 60px); border-top: 1px solid rgb(232 203 151 / 70%); }
+.tk-tom-jerry .tj-timebands article { display: grid; min-height: 84px; grid-template-columns: 1fr auto auto; align-items: center; gap: 17px; border-bottom: 1px solid rgb(232 203 151 / 43%); }
+.tk-tom-jerry .tj-timebands article span { color: #e9c995; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
+.tk-tom-jerry .tj-timebands article strong { color: #fff5e4; font-family: var(--font-preview-editorial, Georgia, serif); font-size: clamp(24px, 4vw, 42px); font-weight: 400; font-variant-numeric: tabular-nums; }
+.tk-tom-jerry .tj-timebands article small { color: #dcc9ae; font-size: 14px; }
+.tk-tom-jerry .tj-events__footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; color: #f6e8d0; font-size: 15px; }
+.tk-tom-jerry .tj-calendar { color: #fff2dc; }
+.tk-tom-jerry .tj-countdown { position: relative; z-index: 1; justify-content: center; margin-top: 34px; color: #fbedd6; }
+.tk-tom-jerry .tj-countdown dt { color: #e8cb93; }
+.tk-tom-jerry .tj-countdown dd { font-family: var(--font-preview-editorial, Georgia, serif); }
+.tk-tom-jerry .tj-location { position: relative; display: grid; width: min(1020px, 100%); grid-template-columns: minmax(220px, .7fr) minmax(0, 1.5fr); align-items: center; gap: clamp(20px, 4vw, 48px); margin: 48px auto 0; padding: 26px; border: 1px solid rgb(103 69 49 / 30%); background: #f8f0df; }
+.tk-tom-jerry .tj-location__copy h3 { margin-top: 10px; font-size: clamp(30px, 4vw, 48px); }
+.tk-tom-jerry .tj-location__copy > p:last-child { margin-top: 8px; color: #5e5146; font-size: 15px; }
+.tk-tom-jerry .tj-map { position: relative; z-index: 1; min-width: 0; border: 1px solid #b89e7b; }
+.tk-tom-jerry .tj-map iframe { min-height: 245px; }
+.tk-tom-jerry .tj-location__mousehole { position: absolute; bottom: -24px; left: -35px; z-index: 2; width: 115px; height: auto; }
+
+.tk-tom-jerry .tj-gallery { position: relative; padding: 104px clamp(18px, 7vw, 110px) 120px; overflow: hidden; background: #f8f0df; }
+.tk-tom-jerry .tj-gallery__heading { display: flex; width: min(1130px, 100%); align-items: end; justify-content: space-between; margin: 0 auto 30px; border-bottom: 1px solid var(--tk-rule); padding-bottom: 17px; }
+.tk-tom-jerry .tj-gallery__heading h2 { margin-top: 7px; font-size: clamp(46px, 7vw, 76px); }
+.tk-tom-jerry .tj-gallery__reel { position: relative; width: min(1130px, 100%); min-height: clamp(1380px, 128vw, 1720px); margin-inline: auto; }
+.tk-tom-jerry .tj-shot { position: absolute; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 9px; border: 1px solid #c7a875; background: #fffaed; box-shadow: 0 13px 28px rgb(52 37 28 / 14%); }
+.tk-tom-jerry .tj-shot__button { width: 100%; height: 100%; min-height: 44px; background: #e2d5bd; }
+.tk-tom-jerry .tj-shot__button .tk-photo-picture,
+.tk-tom-jerry .tj-shot__button .tk-photo { width: 100%; height: 100%; }
+.tk-tom-jerry .tj-shot__button .tk-photo { object-fit: cover; object-position: 50% 24%; }
+.tk-tom-jerry .tj-shot--wide { top: 0; left: 0; width: 59%; aspect-ratio: 1.58; rotate: -2deg; }
+.tk-tom-jerry .tj-shot--round { top: 4%; right: 4%; width: 29%; aspect-ratio: 1; border-radius: 50%; }
+.tk-tom-jerry .tj-shot--round .tj-shot__button,
+.tk-tom-jerry .tj-shot--round .tk-photo-picture,
+.tk-tom-jerry .tj-shot--round .tk-photo { border-radius: 50%; }
+.tk-tom-jerry .tj-shot--portrait { top: 25%; left: 6%; width: 32%; aspect-ratio: .72; rotate: 2.1deg; }
+.tk-tom-jerry .tj-shot--wide.tj-shot--offset { top: 40%; right: 1%; left: auto; width: 51%; aspect-ratio: 1.6; rotate: 1.5deg; }
+.tk-tom-jerry .tj-shot--round.tj-shot--offset-round { top: 58%; left: 39%; width: 26%; aspect-ratio: 1; rotate: -4deg; }
+.tk-tom-jerry .tj-shot--portrait.tj-shot--last { top: 72%; right: 8%; left: auto; width: 24%; aspect-ratio: .74; rotate: 2.4deg; }
+.tk-tom-jerry .tj-gallery__heart { position: absolute; right: 3%; bottom: 4%; width: clamp(64px, 9vw, 108px); height: auto; pointer-events: none; }
+
+.tk-tom-jerry .tj-rsvp { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.3fr); gap: clamp(24px, 6vw, 78px); padding: 100px max(calc((100vw - 1050px) / 2), 28px); background: #e4d1b0; }
+.tk-tom-jerry .tj-rsvp__heading { align-self: start; }
+.tk-tom-jerry .tj-rsvp__heading h2 { margin-top: 12px; font-size: clamp(38px, 5vw, 62px); }
+.tk-tom-jerry .tj-rsvp__form { max-width: 620px; color: var(--tj-ink); }
+.tk-tom-jerry .tj-gift { padding: 62px 24px; background: #f5eddd; text-align: center; }
+.tk-tom-jerry .tj-gift h2 { margin-top: 8px; font-size: 42px; }
+.tk-tom-jerry .tj-gift__details { width: min(420px, 100%); margin: 18px auto 0; text-align: left; }
+.tk-tom-jerry .tj-gift__details summary { min-height: 48px; justify-content: center; border-block: 1px solid var(--tk-rule); }
+.tk-tom-jerry .tj-closing { position: relative; display: flex; min-height: 350px; flex-direction: column; align-items: center; justify-content: center; gap: 11px; overflow: hidden; padding: 70px 24px; background: #382925; color: #f6ead6; text-align: center; }
+.tk-tom-jerry .tj-closing > p { font-size: 15px; }
+.tk-tom-jerry .tj-closing > strong { font-family: var(--font-preview-editorial, Georgia, serif); font-size: clamp(48px, 7vw, 78px); font-weight: 400; }
+.tk-tom-jerry .tj-closing > strong i { color: #d29a83; font-weight: 400; }
+.tk-tom-jerry .tj-closing > span { color: #dfc188; font-size: 14px; letter-spacing: .15em; }
+.tk-tom-jerry .tj-closing__envelope { position: absolute; right: max(6%, calc((100vw - 1150px) / 2)); bottom: 9%; width: clamp(74px, 12vw, 130px); height: auto; opacity: .78; }
+
+@media (max-width: 760px) {
+  .tk-tom-jerry .tj-cover__copy { gap: clamp(7px, 1.6svh, 12px); padding: 12px 10px 22px; }
+  .tk-tom-jerry .tj-cover__date { font-size: 14px; letter-spacing: .06em; }
+  .tk-tom-jerry .tj-cover__names { gap: 5px; font-size: clamp(34px, 10.2vw, 60px); }
+  .tk-tom-jerry .tj-cover__portrait { width: clamp(184px, 32svh, 250px); }
+  .tk-tom-jerry .tj-cover__envelope { top: 4%; left: 3%; width: 60px; }
+  .tk-tom-jerry .tj-cover__duo { right: 2%; bottom: 4%; width: 72px; }
+  .tk-tom-jerry .tj-welcome { min-height: 0; grid-template-columns: 1fr; gap: 38px; padding: 78px 28px 90px; }
+  .tk-tom-jerry .tj-welcome__copy { width: min(520px, 100%); margin-inline: auto; }
+  .tk-tom-jerry .tj-welcome__portrait { width: min(72vw, 360px); }
+  .tk-tom-jerry .tj-welcome__ribbon { top: 42%; right: 3%; width: 78px; }
+  .tk-tom-jerry .tj-couple { padding: 78px 24px 86px; }
+  .tk-tom-jerry .tj-couple__heading { margin-bottom: 34px; }
+  .tk-tom-jerry .tj-couple__stage { grid-template-columns: minmax(0, 1fr) 55px minmax(0, 1fr); gap: 6px; }
+  .tk-tom-jerry .tj-vignette,
+  .tk-tom-jerry .tj-vignette--aruna { display: flex; flex-direction: column; gap: 13px; }
+  .tk-tom-jerry .tj-vignette--aruna { flex-direction: column-reverse; }
+  .tk-tom-jerry .tj-vignette__photo { width: 100%; border-width: 5px; }
+  .tk-tom-jerry .tj-vignette__caption { width: 100%; text-align: center; }
+  .tk-tom-jerry .tj-vignette__caption h3 { font-size: clamp(21px, 5vw, 29px); }
+  .tk-tom-jerry .tj-vignette__caption p { font-size: 14px; }
+  .tk-tom-jerry .tj-couple__center { width: 54px; font-size: 34px; }
+  .tk-tom-jerry .tj-couple__duo { top: 116%; width: 56px; }
+  .tk-tom-jerry .tj-couple__ribbon { right: -8%; bottom: -34px; width: 90px; }
+  .tk-tom-jerry .tj-story { padding: 78px 22px 98px; }
+  .tk-tom-jerry .tj-story__reel { gap: 9px; margin-top: 40px; }
+  .tk-tom-jerry .tj-story__reel li { min-height: 96px; padding: 8px 5px; }
+  .tk-tom-jerry .tj-story__reel li strong { font-size: clamp(16px, 4vw, 21px); }
+  .tk-tom-jerry .tj-story__reel li .tk-decoration-picture { width: 34px; height: 34px; }
+  .tk-tom-jerry .tj-story__mousehole { right: 1%; width: 82px; }
+  .tk-tom-jerry .tj-events { padding: 78px 18px 82px; }
+  .tk-tom-jerry .tj-events__poster { padding: 38px 22px; }
+  .tk-tom-jerry .tj-events__poster::before { inset: 11px; }
+  .tk-tom-jerry .tj-events__ribbon { top: -27px; right: 4%; width: 76px; }
+  .tk-tom-jerry .tj-timebands article { min-height: 76px; grid-template-columns: 1fr auto; gap: 5px 10px; }
+  .tk-tom-jerry .tj-timebands article span { font-size: 14px; }
+  .tk-tom-jerry .tj-timebands article strong { grid-column: 1; grid-row: 2; font-size: clamp(22px, 7vw, 31px); }
+  .tk-tom-jerry .tj-timebands article small { grid-column: 2; grid-row: 2; justify-self: end; }
+  .tk-tom-jerry .tj-events__footer { align-items: start; flex-direction: column; }
+  .tk-tom-jerry .tj-location { grid-template-columns: 1fr; padding: 18px; }
+  .tk-tom-jerry .tj-map iframe { min-height: 230px; }
+  .tk-tom-jerry .tj-location__mousehole { width: 80px; left: -10px; }
+  .tk-tom-jerry .tj-gallery { padding: 78px 18px 100px; }
+  .tk-tom-jerry .tj-gallery__reel { display: grid; min-height: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
+  .tk-tom-jerry .tj-shot { position: relative; top: auto; right: auto; left: auto; width: 100%; }
+  .tk-tom-jerry .tj-shot--wide { grid-column: 1 / -1; aspect-ratio: 1.5; }
+  .tk-tom-jerry .tj-shot--round { grid-column: 2; aspect-ratio: 1; margin-top: 12%; }
+  .tk-tom-jerry .tj-shot--portrait { grid-column: 1; aspect-ratio: .74; margin-top: -10%; }
+  .tk-tom-jerry .tj-shot--wide.tj-shot--offset { grid-column: 1 / -1; aspect-ratio: 1.5; }
+  .tk-tom-jerry .tj-shot--round.tj-shot--offset-round { grid-column: 1; aspect-ratio: 1; margin-top: 10%; }
+  .tk-tom-jerry .tj-shot--portrait.tj-shot--last { grid-column: 2; aspect-ratio: .74; margin-top: -9%; }
+  .tk-tom-jerry .tj-gallery__heart { right: 4%; bottom: 4%; width: 58px; }
+  .tk-tom-jerry .tj-rsvp { grid-template-columns: 1fr; gap: 28px; padding: 78px 24px; }
+  .tk-tom-jerry .tj-closing { min-height: 300px; }
+  .tk-tom-jerry .tj-closing__envelope { right: 3%; bottom: 4%; width: 70px; }
+}
+
+@media (max-width: 360px) {
+  .tk-tom-jerry .tj-cover__names { font-size: clamp(31px, 9.5vw, 36px); }
+  .tk-tom-jerry .tj-cover__portrait { width: 174px; }
+  .tk-tom-jerry .tj-cover__portrait-mark { right: -10px; width: 44px; }
+  .tk-tom-jerry .tj-vignette__caption h3 { font-size: 20px; }
+  .tk-tom-jerry .tj-story__reel li strong { font-size: 15px; }
+  .tk-tom-jerry .tj-gallery__heading { align-items: start; flex-direction: column; gap: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-tom-jerry *,
+  .tk-tom-jerry *::before,
+  .tk-tom-jerry *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .tk-tom-jerry [data-scene] { transform: none !important; }
+  .tk-tom-jerry .tk-content.tk-motion-ready [data-reveal] { opacity: 1 !important; translate: none !important; }
+}

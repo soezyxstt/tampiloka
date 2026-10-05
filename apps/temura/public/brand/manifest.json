@@ -1,0 +1,648 @@
+{
+  "source": "https://www.figma.com/design/oR4rKJm4U5RSS51hb9jfA5/Tampiloka",
+  "page": "Logo Exports",
+  "node": "107:514",
+  "assets": [
+    {
+      "path": "logos/light/temura-symbol-light.svg",
+      "sha256": "7efa9ce32fb1c9ce799955486056ac1b9e9c008ca5c2d729c2fb09cdb3e54432",
+      "source": "Temura /symbol /temura-symbol-light.svg"
+    },
+    {
+      "path": "logos/light/temura-symbol-light@1x.png",
+      "sha256": "160bc19f0eae4a7f6ed2113d91d76e2b0aceaa20a0c3a1f31362fa933939b30c",
+      "source": "Temura /symbol /temura-symbol-light@1x.png"
+    },
+    {
+      "path": "logos/light/temura-symbol-light@2x.png",
+      "sha256": "a663bd7e0f59ec75e6c69991e397e6272cbcf6c18be263f6d93cd90976907f99",
+      "source": "Temura /symbol /temura-symbol-light@2x.png"
+    },
+    {
+      "path": "logos/light/temura-wordmark-light.svg",
+      "sha256": "5e924ef867592ffb8a52aabff7342a7e75ec582b505585e1204047d176e93dcd",
+      "source": "Temura /wordmark /temura-wordmark-light.svg"
+    },
+    {
+      "path": "logos/light/temura-wordmark-light@1x.png",
+      "sha256": "109a5a31c87c71983c58fc90c39b33bdbc548f1a51d1a72baa7b5c60a86588e0",
+      "source": "Temura /wordmark /temura-wordmark-light@1x.png"
+    },
+    {
+      "path": "logos/light/temura-wordmark-light@2x.png",
+      "sha256": "101244f69222a97ec284ab962707b32e05baa45905891552c2db294463385c95",
+      "source": "Temura /wordmark /temura-wordmark-light@2x.png"
+    },
+    {
+      "path": "logos/light/temura-horizontal-light.svg",
+      "sha256": "269ae8c0ddebbade43b8a23b1007452395807715299154b6db8a68f286e71014",
+      "source": "Temura /horizontal /temura-horizontal-light.svg"
+    },
+    {
+      "path": "logos/light/temura-horizontal-light@1x.png",
+      "sha256": "075f8e2fe0836ee6b18c21ba591f1c238552c01d64c0aed93de8c1088e7df7ad",
+      "source": "Temura /horizontal /temura-horizontal-light@1x.png"
+    },
+    {
+      "path": "logos/light/temura-horizontal-light@2x.png",
+      "sha256": "22eb9aa9c442886a34ec607a442c13cbbbd19ac9129687707c958b3387be38ae",
+      "source": "Temura /horizontal /temura-horizontal-light@2x.png"
+    },
+    {
+      "path": "logos/light/temura-vertical-light.svg",
+      "sha256": "6ab684ac50ef74f4464e871172b52f2f62e0f8158f43ffec465da7979dd167f3",
+      "source": "Temura /vertical /temura-vertical-light.svg"
+    },
+    {
+      "path": "logos/light/temura-vertical-light@1x.png",
+      "sha256": "a248b982e45bb9eaf4630cdcba4c1d15cf12dbc1c76f6153c1b1e5868bd776bd",
+      "source": "Temura /vertical /temura-vertical-light@1x.png"
+    },
+    {
+      "path": "logos/light/temura-vertical-light@2x.png",
+      "sha256": "8573dfb417d09dec8b47c1e3384850323413f3674a984ccb79370af1c9a46f73",
+      "source": "Temura /vertical /temura-vertical-light@2x.png"
+    },
+    {
+      "path": "social/light/temura-profile-light.png",
+      "sha256": "1013e98e05be22807fdc13bf0fc0819e8e272abb9e6268fc94752f6d4c6d87eb",
+      "source": "Temura /profile /temura-profile-light.png"
+    },
+    {
+      "path": "icons/light/temura-app-icon-light.png",
+      "sha256": "e80adb633244675b9b15b7d3449bfb749552f55b13dd1c06b5012d4b319ca3c1",
+      "source": "Temura /app-icon /temura-app-icon-light.png"
+    },
+    {
+      "path": "icons/light/temura-pwa-512-light.png",
+      "sha256": "45ef5cc50207b31213720e69aa01124c338ec870b60765ed8356ccdcaa493de9",
+      "source": "Temura /pwa-512 /temura-pwa-512-light.png"
+    },
+    {
+      "path": "icons/light/temura-pwa-192-light.png",
+      "sha256": "1ccd53e176112c2e86692dea61cee1c79624637e0e3b279b531ba9d1f5ac92c8",
+      "source": "Temura /pwa-192 /temura-pwa-192-light.png"
+    },
+    {
+      "path": "icons/light/temura-maskable-512-light.png",
+      "sha256": "20ba3d28973c40de68da3caf830c1923bb8d392d5c608c02ef70734f90f15969",
+      "source": "Temura /maskable-512 /temura-maskable-512-light.png"
+    },
+    {
+      "path": "icons/light/temura-apple-touch-light.png",
+      "sha256": "965512c1d4681b81916a8205ca43f3ffe0911ee89cf4f1fbbd624a97778181ea",
+      "source": "Temura /apple-touch /temura-apple-touch-light.png"
+    },
+    {
+      "path": "icons/light/temura-favicon-16-light.png",
+      "sha256": "59623d63e3f288e182f1ccd7f2a5a1fedd4041f3c03f4ce3e1d59ec993d87617",
+      "source": "Temura /favicon-16 /temura-favicon-16-light.png"
+    },
+    {
+      "path": "icons/light/temura-favicon-32-light.png",
+      "sha256": "7440c7221c43113ec79ffb471f5e8c4fc345891d75fb0823248e4a571d720e9d",
+      "source": "Temura /favicon-32 /temura-favicon-32-light.png"
+    },
+    {
+      "path": "icons/light/temura-favicon-48-light.png",
+      "sha256": "33fc8ad976a1128a7d9ded9d40a3358ebb7203b1ec25575b542f924131562b7e",
+      "source": "Temura /favicon-48 /temura-favicon-48-light.png"
+    },
+    {
+      "path": "social/light/temura-og-image-light.png",
+      "sha256": "76d78f89dfc53f1de3ad4f96397d4d7d8b40d2decfdd91c7696d97f40deeff4f",
+      "source": "Temura /og-image /temura-og-image-light.png"
+    },
+    {
+      "path": "logos/dark/temura-symbol-dark.svg",
+      "sha256": "2f3225c08a6645362908a812008b19745826d34a72eab595526467f4adfba65c",
+      "source": "Temura /symbol /temura-symbol-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-symbol-dark@1x.png",
+      "sha256": "01213e9c788104e0547ddd8fcf52d6491066f3546e88f328049ac1395ba34bf9",
+      "source": "Temura /symbol /temura-symbol-dark@1x.png"
+    },
+    {
+      "path": "logos/dark/temura-symbol-dark@2x.png",
+      "sha256": "fef9db1d404292e9156880e11394eaf6026c49ecf81701bc313b41e85b67190f",
+      "source": "Temura /symbol /temura-symbol-dark@2x.png"
+    },
+    {
+      "path": "logos/dark/temura-wordmark-dark.svg",
+      "sha256": "0d46dbd8d14bf9ce75df29b0978e6d0d9769f34acaf9e9c0676d85924bb0d78b",
+      "source": "Temura /wordmark /temura-wordmark-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-wordmark-dark@1x.png",
+      "sha256": "95ad4e4a9bf25eecebc90c6a45a8aaad5986976121e44ae4c73345f727ee3137",
+      "source": "Temura /wordmark /temura-wordmark-dark@1x.png"
+    },
+    {
+      "path": "logos/dark/temura-wordmark-dark@2x.png",
+      "sha256": "e8d15216b2636bbcddd96f425d03758d3125c3fb9578e5785bdb7d59fdf74dc4",
+      "source": "Temura /wordmark /temura-wordmark-dark@2x.png"
+    },
+    {
+      "path": "logos/dark/temura-horizontal-dark.svg",
+      "sha256": "f948ce295132a02f01bc0822c35ac96801d77bc627b57de198fe3bb2b07847e0",
+      "source": "Temura /horizontal /temura-horizontal-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-horizontal-dark@1x.png",
+      "sha256": "8220ade2e9c1bbad36c18e1785958a5768da0a3ff6780bdfbfcd38f03a0e40b1",
+      "source": "Temura /horizontal /temura-horizontal-dark@1x.png"
+    },
+    {
+      "path": "logos/dark/temura-horizontal-dark@2x.png",
+      "sha256": "b5be38df35c1400b51468be7ff1af59cdd4e36f523f07be17ab461e91af9a3e6",
+      "source": "Temura /horizontal /temura-horizontal-dark@2x.png"
+    },
+    {
+      "path": "logos/dark/temura-vertical-dark.svg",
+      "sha256": "d871fc2be204687ab9818ec0ed59ef5003d7dde035367ab6b429f02c0de08f41",
+      "source": "Temura /vertical /temura-vertical-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-vertical-dark@1x.png",
+      "sha256": "348faceabc682ab09741bf28d714f35e933f91ba681902581253565973c5db6a",
+      "source": "Temura /vertical /temura-vertical-dark@1x.png"
+    },
+    {
+      "path": "logos/dark/temura-vertical-dark@2x.png",
+      "sha256": "dac75c1362c533a34e336c2f15a503473e0abe0226d7a511c3313f9c099faf87",
+      "source": "Temura /vertical /temura-vertical-dark@2x.png"
+    },
+    {
+      "path": "social/dark/temura-profile-dark.png",
+      "sha256": "0540c056bdff765a89ed8043b749363e503f319aef3a69453aedb63bfb3bbae7",
+      "source": "Temura /profile /temura-profile-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-app-icon-dark.png",
+      "sha256": "06ed4756344e1d9b384157d254be64f747ec7ceeb82d844a9de91ba639448542",
+      "source": "Temura /app-icon /temura-app-icon-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-pwa-512-dark.png",
+      "sha256": "085ae30a5179d5094085ac8a79a72e9c0b1ee3efe048f10c64287b4ef23543f1",
+      "source": "Temura /pwa-512 /temura-pwa-512-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-pwa-192-dark.png",
+      "sha256": "d87109ce67491023c9c9524f5935ce78c9d5cfce0aaf0c55a4392aebec5a7c30",
+      "source": "Temura /pwa-192 /temura-pwa-192-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-maskable-512-dark.png",
+      "sha256": "dc3f15bc8f0ff25e8178f868a715b28590b89b6a315d9e81e70d86277f1ed3bd",
+      "source": "Temura /maskable-512 /temura-maskable-512-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-apple-touch-dark.png",
+      "sha256": "24fae6d19abfc0af6a25eb95e8692e71ebac50af4a3cf9a9308d598990cc4001",
+      "source": "Temura /apple-touch /temura-apple-touch-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-favicon-16-dark.png",
+      "sha256": "ae91f3824bc83b552cbc5353f0b82e2e7e74c5d2f004a36d682ad5cdb73aaf61",
+      "source": "Temura /favicon-16 /temura-favicon-16-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-favicon-32-dark.png",
+      "sha256": "5a813254b8c6e9cf5a57faeee71f95b1a9b4e379163d4d965535576626102566",
+      "source": "Temura /favicon-32 /temura-favicon-32-dark.png"
+    },
+    {
+      "path": "icons/dark/temura-favicon-48-dark.png",
+      "sha256": "1b4b619ded203cd9b3583d3bad3ff4a7ad79cfab219c4765c927b542b08e6031",
+      "source": "Temura /favicon-48 /temura-favicon-48-dark.png"
+    },
+    {
+      "path": "social/dark/temura-og-image-dark.png",
+      "sha256": "b74d40e8070e2a5b8c057573070e928e36638aded2086b63a1c38e447faf0bc8",
+      "source": "Temura /og-image /temura-og-image-dark.png"
+    },
+    {
+      "path": "logos/black/temura-symbol-black.svg",
+      "sha256": "6e88f3737b0cb8498fc39dc977e1ab319c2dc8fe6f69b58e6f670bb22eb146fb",
+      "source": "Temura /symbol /temura-symbol-black.svg"
+    },
+    {
+      "path": "logos/black/temura-symbol-black@1x.png",
+      "sha256": "d7109ca0db3944b233f555185c702c141a8e1a197171695439752bdc64d0cc37",
+      "source": "Temura /symbol /temura-symbol-black@1x.png"
+    },
+    {
+      "path": "logos/black/temura-symbol-black@2x.png",
+      "sha256": "96b1f833ff9e0fdea4f315f25ec6617a712a8b56b9a23aeab9a41aaa40f49989",
+      "source": "Temura /symbol /temura-symbol-black@2x.png"
+    },
+    {
+      "path": "logos/black/temura-wordmark-black.svg",
+      "sha256": "60ad9654688ff26f4d7758541d9cb53e0f8223a3dfeed01f16f5188671193413",
+      "source": "Temura /wordmark /temura-wordmark-black.svg"
+    },
+    {
+      "path": "logos/black/temura-wordmark-black@1x.png",
+      "sha256": "0530c92f0a6d28df513fcedbbb73a3f83872cb6cd85259a3a17d50567cf83042",
+      "source": "Temura /wordmark /temura-wordmark-black@1x.png"
+    },
+    {
+      "path": "logos/black/temura-wordmark-black@2x.png",
+      "sha256": "f1fa65fe8adbc8b7df5fce656d286e1495668e2f05ee8eab63788c30be6df332",
+      "source": "Temura /wordmark /temura-wordmark-black@2x.png"
+    },
+    {
+      "path": "logos/black/temura-horizontal-black.svg",
+      "sha256": "e88ebfe6393a204eaff6df921f3f847ee21f8895cbe29313900a9ebc10525dec",
+      "source": "Temura /horizontal /temura-horizontal-black.svg"
+    },
+    {
+      "path": "logos/black/temura-horizontal-black@1x.png",
+      "sha256": "993f04db897e6648b22cd238773651568b6cc52676b0f4f61001db1c391fd685",
+      "source": "Temura /horizontal /temura-horizontal-black@1x.png"
+    },
+    {
+      "path": "logos/black/temura-horizontal-black@2x.png",
+      "sha256": "e6678d7e071d41b79a7650933d674c9bd3c2cff8dfffff7c715c45724b58f630",
+      "source": "Temura /horizontal /temura-horizontal-black@2x.png"
+    },
+    {
+      "path": "logos/black/temura-vertical-black.svg",
+      "sha256": "2e84e1976b56f9ab411b0fc29d9bd019443ce0249404a30da7252949d1fbea5c",
+      "source": "Temura /vertical /temura-vertical-black.svg"
+    },
+    {
+      "path": "logos/black/temura-vertical-black@1x.png",
+      "sha256": "2d92d93660ba50988d9722bd6ae1b8ba499405b2ab3bcd7eb31899e0b2eea21c",
+      "source": "Temura /vertical /temura-vertical-black@1x.png"
+    },
+    {
+      "path": "logos/black/temura-vertical-black@2x.png",
+      "sha256": "164e89515a7b5e5facfd24cb3ced9268201c9b599bd4c41d7dc77a19894de152",
+      "source": "Temura /vertical /temura-vertical-black@2x.png"
+    },
+    {
+      "path": "social/black/temura-profile-black.png",
+      "sha256": "3b87a2c7d8ad885aab57347c77e57bd96d04920269ec0858309f2cf05c1a71eb",
+      "source": "Temura /profile /temura-profile-black.png"
+    },
+    {
+      "path": "icons/black/temura-app-icon-black.png",
+      "sha256": "a230819facf1fbb64e025ac31b7afaa8c1db4077e8968f5c33feead755f6fcf7",
+      "source": "Temura /app-icon /temura-app-icon-black.png"
+    },
+    {
+      "path": "icons/black/temura-pwa-512-black.png",
+      "sha256": "07ea695029244ef4ca0081ea34bea9231ca4f97055728876e4d905083288c87e",
+      "source": "Temura /pwa-512 /temura-pwa-512-black.png"
+    },
+    {
+      "path": "icons/black/temura-pwa-192-black.png",
+      "sha256": "3b0164743a640839d155c0179d25987faa1619b1169546ca4f6f140c2c14b7bf",
+      "source": "Temura /pwa-192 /temura-pwa-192-black.png"
+    },
+    {
+      "path": "icons/black/temura-maskable-512-black.png",
+      "sha256": "f481fc674e9af1ecf72c8dd22e599a89c8bbec9824fa718d5ce77601ee311f8a",
+      "source": "Temura /maskable-512 /temura-maskable-512-black.png"
+    },
+    {
+      "path": "icons/black/temura-apple-touch-black.png",
+      "sha256": "b222a127a450e8b6904398338a5c3182dfbf05ff46e7c494ec92534267b3ba09",
+      "source": "Temura /apple-touch /temura-apple-touch-black.png"
+    },
+    {
+      "path": "icons/black/temura-favicon-16-black.png",
+      "sha256": "a4c3bf4422d1ef196169b1b53166925fb4c1f090031fde05d710b70ca8074c1e",
+      "source": "Temura /favicon-16 /temura-favicon-16-black.png"
+    },
+    {
+      "path": "icons/black/temura-favicon-32-black.png",
+      "sha256": "5fe04c3aa8257c763ec844ebab134970012c53f9a33c172e529ea085bf631c51",
+      "source": "Temura /favicon-32 /temura-favicon-32-black.png"
+    },
+    {
+      "path": "icons/black/temura-favicon-48-black.png",
+      "sha256": "bc27dc8bc64c2c37fa976ccdaa85b3f8d5745a7e793ba53ac2b2524f6311e267",
+      "source": "Temura /favicon-48 /temura-favicon-48-black.png"
+    },
+    {
+      "path": "social/black/temura-og-image-black.png",
+      "sha256": "a317c54cdb18c32b424d8a258582acbdffde27d8bd2f3d60d2f8d9f8ba0c9f69",
+      "source": "Temura /og-image /temura-og-image-black.png"
+    },
+    {
+      "path": "logos/white/temura-symbol-white.svg",
+      "sha256": "43d0cc15408f197fcee00300c51a767d8b25df3ecc97c3c3b36005e96643be44",
+      "source": "Temura /symbol /temura-symbol-white.svg"
+    },
+    {
+      "path": "logos/white/temura-symbol-white@1x.png",
+      "sha256": "190869d28e9ec5ab93b8a143877345f440b4bc370aff9f89290fe5434b502b7c",
+      "source": "Temura /symbol /temura-symbol-white@1x.png"
+    },
+    {
+      "path": "logos/white/temura-symbol-white@2x.png",
+      "sha256": "d132b2000063cde57f76a37c8c4e95e1df09f09c9275c83465e30fafd7b573c2",
+      "source": "Temura /symbol /temura-symbol-white@2x.png"
+    },
+    {
+      "path": "logos/white/temura-wordmark-white.svg",
+      "sha256": "2b3f62f4662050c3a8d4b3d17c1ed98c951e91a5ba2221338532fc659ae9d3dc",
+      "source": "Temura /wordmark /temura-wordmark-white.svg"
+    },
+    {
+      "path": "logos/white/temura-wordmark-white@1x.png",
+      "sha256": "95ad4e4a9bf25eecebc90c6a45a8aaad5986976121e44ae4c73345f727ee3137",
+      "source": "Temura /wordmark /temura-wordmark-white@1x.png"
+    },
+    {
+      "path": "logos/white/temura-wordmark-white@2x.png",
+      "sha256": "e8d15216b2636bbcddd96f425d03758d3125c3fb9578e5785bdb7d59fdf74dc4",
+      "source": "Temura /wordmark /temura-wordmark-white@2x.png"
+    },
+    {
+      "path": "logos/white/temura-horizontal-white.svg",
+      "sha256": "263e30a2f8e3b76276ca5c3cbf5955d47e498024ca7f00e4df34077d11180a43",
+      "source": "Temura /horizontal /temura-horizontal-white.svg"
+    },
+    {
+      "path": "logos/white/temura-horizontal-white@1x.png",
+      "sha256": "9c63a610440e0c9380b0bc31b0ebc9db08a4c1b699778f140968e6645a56b487",
+      "source": "Temura /horizontal /temura-horizontal-white@1x.png"
+    },
+    {
+      "path": "logos/white/temura-horizontal-white@2x.png",
+      "sha256": "05a4035490119f874801c203a16c501c459941230670d431fee4491145e80372",
+      "source": "Temura /horizontal /temura-horizontal-white@2x.png"
+    },
+    {
+      "path": "logos/white/temura-vertical-white.svg",
+      "sha256": "5532933a3b1c9140c6e153a520f44bfc8879b0c61b698f486543b2527637abbd",
+      "source": "Temura /vertical /temura-vertical-white.svg"
+    },
+    {
+      "path": "logos/white/temura-vertical-white@1x.png",
+      "sha256": "6d43c330b98c7d1dd614c6523a7d8bb182d83b46bb0f31f89c54c7d7021471d8",
+      "source": "Temura /vertical /temura-vertical-white@1x.png"
+    },
+    {
+      "path": "logos/white/temura-vertical-white@2x.png",
+      "sha256": "386104ecc962bbc295f3f286ca9022462359d13dbf0c49e2297f38aed3b7e73b",
+      "source": "Temura /vertical /temura-vertical-white@2x.png"
+    },
+    {
+      "path": "social/white/temura-profile-white.png",
+      "sha256": "1944d5c7201e59565c678ca084f31f7816f68dfc3eca74158476f14f1a6a6ce2",
+      "source": "Temura /profile /temura-profile-white.png"
+    },
+    {
+      "path": "icons/white/temura-app-icon-white.png",
+      "sha256": "787a16ce406b9d3261ef83cfd964113debfc601c31fbd41ea8bcee13be8b2ec5",
+      "source": "Temura /app-icon /temura-app-icon-white.png"
+    },
+    {
+      "path": "icons/white/temura-pwa-512-white.png",
+      "sha256": "eefb585135a6a767ac22b3c3954e5f7b46b57552ea9666af4c6444d2d106f26e",
+      "source": "Temura /pwa-512 /temura-pwa-512-white.png"
+    },
+    {
+      "path": "icons/white/temura-pwa-192-white.png",
+      "sha256": "b995da8eaec7e3039310dbd53511231c5a072c221c20341ffaea5c82397b795f",
+      "source": "Temura /pwa-192 /temura-pwa-192-white.png"
+    },
+    {
+      "path": "icons/white/temura-maskable-512-white.png",
+      "sha256": "fb7e92cefb4b59db278fb249f68cd213deb6abe53ec7d6e32703c4deb4da70d2",
+      "source": "Temura /maskable-512 /temura-maskable-512-white.png"
+    },
+    {
+      "path": "icons/white/temura-apple-touch-white.png",
+      "sha256": "391c37a6a056c54ea84238a703d996c3fcdab89436e6e38c5fed1f6c47ab6bd4",
+      "source": "Temura /apple-touch /temura-apple-touch-white.png"
+    },
+    {
+      "path": "icons/white/temura-favicon-16-white.png",
+      "sha256": "4a82809c81d54d8c1a878f54738250e362d8c96bebc112364fd983e2d4960889",
+      "source": "Temura /favicon-16 /temura-favicon-16-white.png"
+    },
+    {
+      "path": "icons/white/temura-favicon-32-white.png",
+      "sha256": "fe9cba03df2db3d5cba880721e2400d821aa450ec7be89ab1349dc3c8cedccc5",
+      "source": "Temura /favicon-32 /temura-favicon-32-white.png"
+    },
+    {
+      "path": "icons/white/temura-favicon-48-white.png",
+      "sha256": "a0c2a9bc9622863a345b80091ef423cc25cdde3cb484399b0e1942ff439ac5cf",
+      "source": "Temura /favicon-48 /temura-favicon-48-white.png"
+    },
+    {
+      "path": "social/white/temura-og-image-white.png",
+      "sha256": "02ba94bd77b48dca273b2a5482dd61c03973bbbc4d77c273c1d9731ef9561a8e",
+      "source": "Temura /og-image /temura-og-image-white.png"
+    },
+    {
+      "path": "logos/light/temura-horizontal-endorsed-light.svg",
+      "sha256": "50ff083b3bcf7b890e850f20adcc9f8e9a98ff569be6f38b7f523502b78741c7",
+      "source": "Temura /light /temura-horizontal-endorsed-light.svg"
+    },
+    {
+      "path": "logos/light/temura-horizontal-endorsed-light.png",
+      "sha256": "687b6c1b954748a5fab18ae2f5a10128b080157d423f579448712f5806805cc0",
+      "source": "Temura /light /temura-horizontal-endorsed-light.png"
+    },
+    {
+      "path": "logos/light/temura-horizontal-endorsed-light@2x.png",
+      "sha256": "12ceb719571fe2186e1352604e6a2c658f187c5cca3630353fd19e61270c7326",
+      "source": "Temura /light /temura-horizontal-endorsed-light@2x.png"
+    },
+    {
+      "path": "logos/light/temura-wordmark-endorsed-light.svg",
+      "sha256": "e4f5792d9c6989c313c1b4fb416872bb5d0182353a8552d2d6bd1ca96e805673",
+      "source": "Temura /light /temura-wordmark-endorsed-light.svg"
+    },
+    {
+      "path": "logos/light/temura-wordmark-endorsed-light.png",
+      "sha256": "a340e0aad4ab76447e1512b1db6b88630093ff2eff7d896c9278c740b5764536",
+      "source": "Temura /light /temura-wordmark-endorsed-light.png"
+    },
+    {
+      "path": "logos/light/temura-wordmark-endorsed-light@2x.png",
+      "sha256": "8ab72bfdde6fd91172fe73a5b12fa7d71ff107727b071aa0ff52cc94ea31e8ca",
+      "source": "Temura /light /temura-wordmark-endorsed-light@2x.png"
+    },
+    {
+      "path": "logos/light/temura-vertical-endorsed-light.svg",
+      "sha256": "f6964c9d142f3dd71ed0029fae7d528c389b8cd1dbbab4ae31a689757497e1e4",
+      "source": "Temura /light /temura-vertical-endorsed-light.svg"
+    },
+    {
+      "path": "logos/light/temura-vertical-endorsed-light.png",
+      "sha256": "0f10dce735fe27d48873cf4d705f78898337f2343cbfc8289581a4a42259d8c3",
+      "source": "Temura /light /temura-vertical-endorsed-light.png"
+    },
+    {
+      "path": "logos/light/temura-vertical-endorsed-light@2x.png",
+      "sha256": "0609da38d8626d09ecc1dce46ef643dede7bb2e808042c175da766ad25e6a97c",
+      "source": "Temura /light /temura-vertical-endorsed-light@2x.png"
+    },
+    {
+      "path": "social/light/temura-og-image-endorsed-light.png",
+      "sha256": "39123dcd5a623f7d7a3ebb025d2ab5d76b245e141affe42dfc38ba9839910885",
+      "source": "Temura /light /temura-og-image-endorsed-light.png"
+    },
+    {
+      "path": "logos/dark/temura-horizontal-endorsed-dark.svg",
+      "sha256": "3bc09beb682bca20262126df1fd34a1316aab141ab74698a14108e8831385426",
+      "source": "Temura /dark /temura-horizontal-endorsed-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-horizontal-endorsed-dark.png",
+      "sha256": "2c14f9640d76d922ac88806bb1ef84c60ff0d2996990c1b469227b4e0fdb8592",
+      "source": "Temura /dark /temura-horizontal-endorsed-dark.png"
+    },
+    {
+      "path": "logos/dark/temura-horizontal-endorsed-dark@2x.png",
+      "sha256": "c2225fe3bf46bc58baf5656033d2bc24949f5c8ab72bcafe3fe3f9ed47dc0736",
+      "source": "Temura /dark /temura-horizontal-endorsed-dark@2x.png"
+    },
+    {
+      "path": "logos/dark/temura-wordmark-endorsed-dark.svg",
+      "sha256": "21b7d1b60835993d8480e95b81da9a47be6d5376ca830c903f93ad2596bf048f",
+      "source": "Temura /dark /temura-wordmark-endorsed-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-wordmark-endorsed-dark.png",
+      "sha256": "92c35607a8285126c29122112f76457b3b3b294ff02d32e379e7ca580ed376a4",
+      "source": "Temura /dark /temura-wordmark-endorsed-dark.png"
+    },
+    {
+      "path": "logos/dark/temura-wordmark-endorsed-dark@2x.png",
+      "sha256": "dafe816314d22bf3023a988c2f1e1595f1f93c253a3b410c1d1f66448b14953c",
+      "source": "Temura /dark /temura-wordmark-endorsed-dark@2x.png"
+    },
+    {
+      "path": "logos/dark/temura-vertical-endorsed-dark.svg",
+      "sha256": "9af9e1f6b8130f29eebce9b030691809f59c524b6dd4e912ca8d1b158410d59a",
+      "source": "Temura /dark /temura-vertical-endorsed-dark.svg"
+    },
+    {
+      "path": "logos/dark/temura-vertical-endorsed-dark.png",
+      "sha256": "1bc7db22bd4852f4704a62ac2acc92ec3c534a5447b840933460bca2a715004b",
+      "source": "Temura /dark /temura-vertical-endorsed-dark.png"
+    },
+    {
+      "path": "logos/dark/temura-vertical-endorsed-dark@2x.png",
+      "sha256": "47ea3e43240321d06c4bdcff151298736afc13b7e9c7d42c1035fcf68b7efdd5",
+      "source": "Temura /dark /temura-vertical-endorsed-dark@2x.png"
+    },
+    {
+      "path": "social/dark/temura-og-image-endorsed-dark.png",
+      "sha256": "f1e53730272e6cf3315c417bfd2e4cf8877da2913de63300bb93f41e5c1bb9c3",
+      "source": "Temura /dark /temura-og-image-endorsed-dark.png"
+    },
+    {
+      "path": "logos/black/temura-horizontal-endorsed-black.svg",
+      "sha256": "80259433cdc6fba56c767c6d963423542032d30799ac7d0cebbbc40e38985e83",
+      "source": "Temura /black /temura-horizontal-endorsed-black.svg"
+    },
+    {
+      "path": "logos/black/temura-horizontal-endorsed-black.png",
+      "sha256": "8df6597e65f36182da557b2b7b8ba6adff42f70d2cfbe46d5ed9b1d9783ae548",
+      "source": "Temura /black /temura-horizontal-endorsed-black.png"
+    },
+    {
+      "path": "logos/black/temura-horizontal-endorsed-black@2x.png",
+      "sha256": "3f79f7917d97e7f4f3a25d30e0d92f967b0bb1cb12aa39e8d4e033f21620c521",
+      "source": "Temura /black /temura-horizontal-endorsed-black@2x.png"
+    },
+    {
+      "path": "logos/black/temura-wordmark-endorsed-black.svg",
+      "sha256": "6709ba27e0651aea0beea5e87f60c9c39c506bf8f8703f65d3bf91dabdc9ac57",
+      "source": "Temura /black /temura-wordmark-endorsed-black.svg"
+    },
+    {
+      "path": "logos/black/temura-wordmark-endorsed-black.png",
+      "sha256": "cc0f804616c86528fb80846f77885dba3f0aff643b929dee848cab3295ea18d4",
+      "source": "Temura /black /temura-wordmark-endorsed-black.png"
+    },
+    {
+      "path": "logos/black/temura-wordmark-endorsed-black@2x.png",
+      "sha256": "1c9e7874b254616718722dd83ef3d76a77c1f4a4d10d25f17524a77cc4bc3b2c",
+      "source": "Temura /black /temura-wordmark-endorsed-black@2x.png"
+    },
+    {
+      "path": "logos/black/temura-vertical-endorsed-black.svg",
+      "sha256": "d7d2bcdd96b8d739e82c216d270b54e806e8474d72352b694d54d6b8391e1810",
+      "source": "Temura /black /temura-vertical-endorsed-black.svg"
+    },
+    {
+      "path": "logos/black/temura-vertical-endorsed-black.png",
+      "sha256": "6a92fac8addab865cbeb152c0fecf93bcbc869692fa6be400b1a9d1a327c940d",
+      "source": "Temura /black /temura-vertical-endorsed-black.png"
+    },
+    {
+      "path": "logos/black/temura-vertical-endorsed-black@2x.png",
+      "sha256": "b9fdc506d4f23da865d46c4afa623148ca8a9dcd6cad145106576d7df5210e1b",
+      "source": "Temura /black /temura-vertical-endorsed-black@2x.png"
+    },
+    {
+      "path": "social/black/temura-og-image-endorsed-black.png",
+      "sha256": "9511022d65eef9a1abc903417edb3242eb721a8d71f1aa7054fe9ebcf880b8ab",
+      "source": "Temura /black /temura-og-image-endorsed-black.png"
+    },
+    {
+      "path": "logos/white/temura-horizontal-endorsed-white.svg",
+      "sha256": "85a281ae883a6035032e57c85c02ca5d9be9c0ce53b91c66ba3c4fa23bd34416",
+      "source": "Temura /white /temura-horizontal-endorsed-white.svg"
+    },
+    {
+      "path": "logos/white/temura-horizontal-endorsed-white.png",
+      "sha256": "871ef7a4889a3310a116c4cecc8791f72c07efdd5ce614ed1a47500857158a2a",
+      "source": "Temura /white /temura-horizontal-endorsed-white.png"
+    },
+    {
+      "path": "logos/white/temura-horizontal-endorsed-white@2x.png",
+      "sha256": "60c74217310f6e4626fe0df30dc34eca82b22cd496f12501f491e5427c68b68d",
+      "source": "Temura /white /temura-horizontal-endorsed-white@2x.png"
+    },
+    {
+      "path": "logos/white/temura-wordmark-endorsed-white.svg",
+      "sha256": "e67daf17112c74d2581284344240e4d1fe4166088b12f3728e135b00b2387f3b",
+      "source": "Temura /white /temura-wordmark-endorsed-white.svg"
+    },
+    {
+      "path": "logos/white/temura-wordmark-endorsed-white.png",
+      "sha256": "7bb76253004823af46daff1523ba09ed9faf5aeb1e9041dc176405ea806a2adb",
+      "source": "Temura /white /temura-wordmark-endorsed-white.png"
+    },
+    {
+      "path": "logos/white/temura-wordmark-endorsed-white@2x.png",
+      "sha256": "00c1c856bd1fe95cfe9f6f04465df5953a583645d92ad4a3a34dc9f3a436305e",
+      "source": "Temura /white /temura-wordmark-endorsed-white@2x.png"
+    },
+    {
+      "path": "logos/white/temura-vertical-endorsed-white.svg",
+      "sha256": "a86ce7fbff0801f8987af07e5b61d55985c23a686ea7c195a069b8179d398750",
+      "source": "Temura /white /temura-vertical-endorsed-white.svg"
+    },
+    {
+      "path": "logos/white/temura-vertical-endorsed-white.png",
+      "sha256": "e5f5f96c5b4b16fc59cdd6fc33f801e31b26a340e283b1371aa24432d9cf94ae",
+      "source": "Temura /white /temura-vertical-endorsed-white.png"
+    },
+    {
+      "path": "logos/white/temura-vertical-endorsed-white@2x.png",
+      "sha256": "96dca261f3016233f399b9926f049153b938437947d3113c3b83fde7b5b2f925",
+      "source": "Temura /white /temura-vertical-endorsed-white@2x.png"
+    },
+    {
+      "path": "social/white/temura-og-image-endorsed-white.png",
+      "sha256": "c266579eaeaac43075fea0dc9dbdde98f33a98460fc388b01fe0623490a0f8d6",
+      "source": "Temura /white /temura-og-image-endorsed-white.png"
+    }
+  ],
+  "endorsedNode": "141:1584"
+}

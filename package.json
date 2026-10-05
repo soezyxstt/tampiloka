@@ -1,42 +1,20 @@
 {
-  "name": "tampiloka",
-  "version": "0.1.0",
+  "name": "tampiloka-temura-monorepo",
   "private": true,
+  "packageManager": "pnpm@11.19.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "check:brand": "bun scripts/verify-brand.mjs"
-  },
-  "dependencies": {
-    "@base-ui/react": "^1.8.0",
-    "class-variance-authority": "^0.7.1",
-    "cn": "^0.4.0",
-    "lucide-react": "^1.49.0",
-    "next": "16.3.8",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "shadcn": "^4.21.1",
-    "tw-animate-css": "^1.4.0"
+    "dev": "turbo run dev",
+    "dev:tampiloka": "turbo run dev --filter=@tampiloka/web",
+    "dev:temura": "turbo run dev --filter=@temura/web",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "check:brand": "turbo run check:brand",
+    "verify:marketing": "turbo run verify:marketing --filter=@tampiloka/web",
+    "prepare:images": "turbo run prepare:images --filter=@tampiloka/web"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.8",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  },
-  "packageManager": "bun@1.2.21",
-  "ignoreScripts": [
-    "sharp",
-    "unrs-resolver"
-  ],
-  "trustedDependencies": [
-    "sharp",
-    "unrs-resolver"
-  ]
+    "playwright": "^1.63.0",
+    "turbo": "^2.8.0"
+  }
 }

@@ -1,0 +1,4547 @@
+{
+  "generatedAt": "2026-10-05T02:19:35.720Z",
+  "assetCount": 108,
+  "variantCount": 324,
+  "sourceBytes": 139089520,
+  "fullBytes": 20423830,
+  "allVariantBytes": 28055136,
+  "fullSavingsPercent": 85.3,
+  "assets": [
+    {
+      "id": "bg-adat-bali",
+      "kind": "background",
+      "source": "bg-adat-bali.png",
+      "sourceSha256": "3334e6b887ebb69856a02ec22c6bed7a1ab6fd84a7189c67a341f91783ded72c",
+      "sourceBytes": 2458063,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-adat-bali.webp",
+          "file": "backgrounds/bg-adat-bali.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 188858,
+          "encoding": "lossy",
+          "sha256": "bac2d3f1a896cd997d3d0d264cde1e7e42a4b7ca2361cf1104a8fdbf5cbcec06",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-adat-bali-480.webp",
+          "file": "backgrounds/bg-adat-bali-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 60426,
+          "encoding": "lossy",
+          "sha256": "70347a4ff0bda1184450ad29edd5248e3cef22269fdbb7db40a24ccbcbc99054",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-adat-bali-thumb.webp",
+          "file": "backgrounds/bg-adat-bali-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 15804,
+          "encoding": "lossy",
+          "sha256": "98badd57400751175bdfceac18ee5a51e097f38bb121be2165cdd31cb31a937c",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-adat-betawi",
+      "kind": "background",
+      "source": "bg-adat-betawi.png",
+      "sourceSha256": "b141f884d60eb4fa2b085ef83f9a146190f9d2bc2327f1d1f09701e0b552533d",
+      "sourceBytes": 2173249,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-adat-betawi.webp",
+          "file": "backgrounds/bg-adat-betawi.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 174024,
+          "encoding": "lossy",
+          "sha256": "dcffea9367b7b0037dba31ae452a5cd86ef672e528912e1e467e49e31a14a286",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-adat-betawi-480.webp",
+          "file": "backgrounds/bg-adat-betawi-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 54898,
+          "encoding": "lossy",
+          "sha256": "49352c41e525d9c62d5c3e575607920b02f60c4e089d643a74f1dd3a4a2d073e",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-adat-betawi-thumb.webp",
+          "file": "backgrounds/bg-adat-betawi-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 15162,
+          "encoding": "lossy",
+          "sha256": "8736329c1ae7c1344ea3543baadcb18870ecdf512b7982fa606e5303fd27dd20",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-adat-jawa",
+      "kind": "background",
+      "source": "bg-adat-jawa.png",
+      "sourceSha256": "56a905c3e3af7abcbd954a5ff25e193052229d2bc52f5283a7ed1ee48f2cef83",
+      "sourceBytes": 2687743,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-adat-jawa.webp",
+          "file": "backgrounds/bg-adat-jawa.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 176136,
+          "encoding": "lossy",
+          "sha256": "3cc4393763fcd9878b26c7506cb36ca941e7cd2b4eb6b81d97421f9e11b5c866",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-adat-jawa-480.webp",
+          "file": "backgrounds/bg-adat-jawa-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 40152,
+          "encoding": "lossy",
+          "sha256": "55bae29a024edcf55a728c1be9bb0ebdac4f9c3baa440e4b246264250c379469",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-adat-jawa-thumb.webp",
+          "file": "backgrounds/bg-adat-jawa-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 8780,
+          "encoding": "lossy",
+          "sha256": "7b0cb784163eee1d11713895bb6bf7d734099a9bf897ccea169e42956b8b60fa",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-adat-minang",
+      "kind": "background",
+      "source": "bg-adat-minang.png",
+      "sourceSha256": "e99d2504c77a467ae9094d29cd4a2338c675f1a83d06dcb57a1b48814446658e",
+      "sourceBytes": 2353056,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-adat-minang.webp",
+          "file": "backgrounds/bg-adat-minang.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 185498,
+          "encoding": "lossy",
+          "sha256": "747adc408b329b3c8bbf2e954a224c0b0d756e665e06948a4cb5aeaf472fba0c",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-adat-minang-480.webp",
+          "file": "backgrounds/bg-adat-minang-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 48628,
+          "encoding": "lossy",
+          "sha256": "06da535f3f7ff2b2f37b7561c633580a0e074048e0dda00243a3aff763ce0fd0",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-adat-minang-thumb.webp",
+          "file": "backgrounds/bg-adat-minang-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 10818,
+          "encoding": "lossy",
+          "sha256": "7171924999ef6fa5c880f989241d3dcf380ce80abec1253fa05b4d8d517fd5be",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-adat-sunda",
+      "kind": "background",
+      "source": "bg-adat-sunda.png",
+      "sourceSha256": "f2334b75d279c08f1a9452f064a6f9085288a90066ee5a61f092595253eef6b1",
+      "sourceBytes": 2367018,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-adat-sunda.webp",
+          "file": "backgrounds/bg-adat-sunda.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 142782,
+          "encoding": "lossy",
+          "sha256": "d50c9b922fa5693ad2d17ff46fffa4a3e683c320cabacc8dec86c6a43602ad35",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-adat-sunda-480.webp",
+          "file": "backgrounds/bg-adat-sunda-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 40338,
+          "encoding": "lossy",
+          "sha256": "96f0b84a3eb5df2160f63ebbea762a49bcabc95f6dcae1214567a8c58f222fb1",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-adat-sunda-thumb.webp",
+          "file": "backgrounds/bg-adat-sunda-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 9516,
+          "encoding": "lossy",
+          "sha256": "0d94b727e8e0d31855cbdeb8769dd9dbf3e4a27e878c9c291090dfc53ee00971",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-game-block-blast",
+      "kind": "background",
+      "source": "bg-game-block-blast.png",
+      "sourceSha256": "8d99013ec00f9db608c9e6ada8f02aeb4d29144ae2ba6282b21e4c48b815c46e",
+      "sourceBytes": 1642570,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-game-block-blast.webp",
+          "file": "backgrounds/bg-game-block-blast.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 70322,
+          "encoding": "lossy",
+          "sha256": "9f6945e0fc77c772725d18a1e038f1a9a6d85f21b340c9a96e7715ae4389b613",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-game-block-blast-480.webp",
+          "file": "backgrounds/bg-game-block-blast-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 27474,
+          "encoding": "lossy",
+          "sha256": "f9e2a85d5961877c8a5205cc9b82a619e50efb7289df4e13b1874d96293d1827",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-game-block-blast-thumb.webp",
+          "file": "backgrounds/bg-game-block-blast-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 8790,
+          "encoding": "lossy",
+          "sha256": "53f16fda98c94d5d3cec80457b0aefb1f4c16564becbf550bc2d0f04847bd384",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-game-minecraft",
+      "kind": "background",
+      "source": "bg-game-minecraft.png",
+      "sourceSha256": "1e19c22c820b600537f7765d32d7125c14317afef169bbe9b399fa2d5a39ed33",
+      "sourceBytes": 2096367,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-game-minecraft.webp",
+          "file": "backgrounds/bg-game-minecraft.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 194370,
+          "encoding": "lossy",
+          "sha256": "92078de9a9562cc06ff6ffa876a372771e24631dada8204259a9fa8e5b6d1fd5",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-game-minecraft-480.webp",
+          "file": "backgrounds/bg-game-minecraft-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 63774,
+          "encoding": "lossy",
+          "sha256": "7130b30c12058f7446f6c105b49a5f03e4d53e772154fc37ff228ce3095e0846",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-game-minecraft-thumb.webp",
+          "file": "backgrounds/bg-game-minecraft-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 15936,
+          "encoding": "lossy",
+          "sha256": "aaee56fecc80b08d7e61d38877e2568ef6d7acda049c9d90ce63acec998dc98e",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-game-tom-jerry",
+      "kind": "background",
+      "source": "bg-game-tom-jerry.png",
+      "sourceSha256": "240cedf836505ddd08dc97fa9b8ec0d0179bec07fc74aa1c4dfa5b8406dda137",
+      "sourceBytes": 1989161,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-game-tom-jerry.webp",
+          "file": "backgrounds/bg-game-tom-jerry.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 75738,
+          "encoding": "lossy",
+          "sha256": "9040907579a06039556b8767718c060cb4e7c1e978003fc34375bc66cc17e8de",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-game-tom-jerry-480.webp",
+          "file": "backgrounds/bg-game-tom-jerry-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 23966,
+          "encoding": "lossy",
+          "sha256": "5537694d7b19ce9a778ea2948450b8631418fd2b1e67158a537002753a1c44f4",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-game-tom-jerry-thumb.webp",
+          "file": "backgrounds/bg-game-tom-jerry-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 6100,
+          "encoding": "lossy",
+          "sha256": "855b526fb093931d9cfdbeecf78a49ebc3f220cf0a070c605f1affe24dfb3aaa",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-game-upin-ipin",
+      "kind": "background",
+      "source": "bg-game-upin-ipin.png",
+      "sourceSha256": "e279dcd4e7256a0770125089965d87e96b0c562570131d5ae79ddced1fc13f22",
+      "sourceBytes": 2242586,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-game-upin-ipin.webp",
+          "file": "backgrounds/bg-game-upin-ipin.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 209012,
+          "encoding": "lossy",
+          "sha256": "9fe8bc7fe89b72eb0c3c03235bee56c8cca85ec998ca920aa77d477ac5a156c5",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-game-upin-ipin-480.webp",
+          "file": "backgrounds/bg-game-upin-ipin-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 65554,
+          "encoding": "lossy",
+          "sha256": "7da9d85377643fdc52708043116770badf19d4a57369d02c3c5dec6120052e03",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-game-upin-ipin-thumb.webp",
+          "file": "backgrounds/bg-game-upin-ipin-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 16330,
+          "encoding": "lossy",
+          "sha256": "1ad8137b64ce9f81182f7645a985449cf60e7528660b605310b3b73bf827c7cc",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-islamic-mawaddah",
+      "kind": "background",
+      "source": "Arabesque Floral Invitation Background.png",
+      "sourceSha256": "7d1acaa83aca7f1eda34968aebc1ca18e2de9d93624275065c153344bec99aba",
+      "sourceBytes": 2542531,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-islamic-mawaddah.webp",
+          "file": "backgrounds/bg-islamic-mawaddah.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 139640,
+          "encoding": "lossy",
+          "sha256": "e076bf91ef52afbf50103f08b2cd53c718cf8c8597cc583c39313e15cdd8bfea",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-islamic-mawaddah-480.webp",
+          "file": "backgrounds/bg-islamic-mawaddah-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 39748,
+          "encoding": "lossy",
+          "sha256": "73994f18efcec3ac5bfaf39573d3de95f999aea659473feed8ff0dfca28feb32",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-islamic-mawaddah-thumb.webp",
+          "file": "backgrounds/bg-islamic-mawaddah-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 9498,
+          "encoding": "lossy",
+          "sha256": "5a531d658544b677b68b95364de294e73da8c6eee8026bf5688fbf6dcd711bfe",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-islamic-rahmah",
+      "kind": "background",
+      "source": "Elegant Floral Arch Invitation Background.png",
+      "sourceSha256": "e1e6ce5455bb6fd8a825e2117f4c15a34cebcc37fa309190c2c4f2f490a8ed34",
+      "sourceBytes": 2409954,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-islamic-rahmah.webp",
+          "file": "backgrounds/bg-islamic-rahmah.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 128484,
+          "encoding": "lossy",
+          "sha256": "53f40ec6b634e350140306efd37a65e9633a11cd665a7131f4154fd98447b4f2",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-islamic-rahmah-480.webp",
+          "file": "backgrounds/bg-islamic-rahmah-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 37604,
+          "encoding": "lossy",
+          "sha256": "f43be96f80b68f8471502f788ebe2b09dc7c3621aa9d8b620580004df857b4c0",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-islamic-rahmah-thumb.webp",
+          "file": "backgrounds/bg-islamic-rahmah-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 8568,
+          "encoding": "lossy",
+          "sha256": "71618ea89fc4f9b85b77f67c701468885f9282115afbf7125cadc633c774f845",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-islamic-sakinah",
+      "kind": "background",
+      "source": "Botanical Ivory Moorish Archway.png",
+      "sourceSha256": "7e7ad0bc52f6c1a43471f272e41dc2f64775d38aa229ba52e75b98cb1eeed0ff",
+      "sourceBytes": 2550621,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-islamic-sakinah.webp",
+          "file": "backgrounds/bg-islamic-sakinah.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 165070,
+          "encoding": "lossy",
+          "sha256": "3a481b7ac419738458c708597d976426d418199cfe201a2508bf433a7d6628a3",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-islamic-sakinah-480.webp",
+          "file": "backgrounds/bg-islamic-sakinah-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 47502,
+          "encoding": "lossy",
+          "sha256": "f24b7108a2369e97c896603b7a07a7981a97be9d08ee22706f1739002890bbe3",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-islamic-sakinah-thumb.webp",
+          "file": "backgrounds/bg-islamic-sakinah-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 11414,
+          "encoding": "lossy",
+          "sha256": "f8898f05ca45ab36a6459d53f09c7b2b2bf0e433d8d6029325bee2d9149a1330",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-minimalist-eunoia",
+      "kind": "background",
+      "source": "bg-minimalist-eunoia.png",
+      "sourceSha256": "c39554d2c098be5f649f606eabc4eec0803913298d35c5d4e071247c63e4ce91",
+      "sourceBytes": 2098448,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-minimalist-eunoia.webp",
+          "file": "backgrounds/bg-minimalist-eunoia.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 40220,
+          "encoding": "lossy",
+          "sha256": "20addcb418bb61d7b16c06cdd91fd5d75bd17b2b77f1ff4fdc51c9dc06373e40",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-minimalist-eunoia-480.webp",
+          "file": "backgrounds/bg-minimalist-eunoia-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 7420,
+          "encoding": "lossy",
+          "sha256": "0d9e37c9edb43b3be3e415277b52409695ccecc5595a57eb03e2b9b3285ec920",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-minimalist-eunoia-thumb.webp",
+          "file": "backgrounds/bg-minimalist-eunoia-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 1648,
+          "encoding": "lossy",
+          "sha256": "180a1a7a164551375d1eda56849cb08cdcd184eb6a465acad2ffc678f8916ae7",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-minimalist-ruang-rindu",
+      "kind": "background",
+      "source": "bg-minimalist-ruang-rindu.png",
+      "sourceSha256": "63d9e3b82236dfdf139cc88eda0b87ee8eb181dd4ed6cd25e65adb2e07729ffa",
+      "sourceBytes": 2390157,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-minimalist-ruang-rindu.webp",
+          "file": "backgrounds/bg-minimalist-ruang-rindu.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 67294,
+          "encoding": "lossy",
+          "sha256": "85043ba63682c4afa56062deff4c925229e9a28c5149cfc4175164275b3f666c",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-minimalist-ruang-rindu-480.webp",
+          "file": "backgrounds/bg-minimalist-ruang-rindu-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 9896,
+          "encoding": "lossy",
+          "sha256": "873d989cc07a85d80bf11027df0251ad45f6d7b89712792d9c68b7d260d0ce2c",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-minimalist-ruang-rindu-thumb.webp",
+          "file": "backgrounds/bg-minimalist-ruang-rindu-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 2272,
+          "encoding": "lossy",
+          "sha256": "8a7d25fe5f32ae9e4ad270112130949f369888dc5af64496169aa60730202555",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-minimalist-senja",
+      "kind": "background",
+      "source": "bg-minimalist-senja.png",
+      "sourceSha256": "98a65d34a9fd89ed84e099950108c206512330c1e5b1f942e0b2307c4a461a77",
+      "sourceBytes": 2093208,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-minimalist-senja.webp",
+          "file": "backgrounds/bg-minimalist-senja.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 48338,
+          "encoding": "lossy",
+          "sha256": "c3062dc36cdac92526304bd6e39d8255b298416d53a25ecfc0d653b8fa00c4a7",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-minimalist-senja-480.webp",
+          "file": "backgrounds/bg-minimalist-senja-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 9096,
+          "encoding": "lossy",
+          "sha256": "753c06ce140da8cc8510faec677431e902f67d0a245f2490677c105de9b7abd5",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-minimalist-senja-thumb.webp",
+          "file": "backgrounds/bg-minimalist-senja-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 1930,
+          "encoding": "lossy",
+          "sha256": "b53d14e604be178600a2dbb170ae9943202e2b7bad08f9ff42fd096d4e64586f",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-retro-kabar-bahagia",
+      "kind": "background",
+      "source": "bg-retro-kabar-bahagia.png",
+      "sourceSha256": "13bd8c39d7d853f5f0284c9dd6e917abb4db1ad2322c7c181218665bc12da7ed",
+      "sourceBytes": 3134637,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-retro-kabar-bahagia.webp",
+          "file": "backgrounds/bg-retro-kabar-bahagia.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 282990,
+          "encoding": "lossy",
+          "sha256": "f468236ae91c30d243907a24caeb7cca1152031cdf91c022ca74afd121412a9a",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-retro-kabar-bahagia-480.webp",
+          "file": "backgrounds/bg-retro-kabar-bahagia-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 42110,
+          "encoding": "lossy",
+          "sha256": "274b0abe7446340ec2859ec1ebabfee472842ef8fcd0988bfbc7bd62189b32dd",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-retro-kabar-bahagia-thumb.webp",
+          "file": "backgrounds/bg-retro-kabar-bahagia-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 6456,
+          "encoding": "lossy",
+          "sha256": "ddb0166585a62abe6697eaf508a495e60bf1bed2c90f411bdf6cc062355fa75d",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-retro-layar-tancep",
+      "kind": "background",
+      "source": "bg-retro-layar-tancep.png",
+      "sourceSha256": "8397b8bbb7d441534fc7177648210376b62f26273138aa09f8931b4e138bb800",
+      "sourceBytes": 2738322,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-retro-layar-tancep.webp",
+          "file": "backgrounds/bg-retro-layar-tancep.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 232074,
+          "encoding": "lossy",
+          "sha256": "fe194502320295cb185762e24873f53a7fb1840253d318447f5fe09f21b9a8c5",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-retro-layar-tancep-480.webp",
+          "file": "backgrounds/bg-retro-layar-tancep-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 64416,
+          "encoding": "lossy",
+          "sha256": "0bd72943602e884e3ddbf72327fdb357a643329b7d2c1ac7b349828b1116bc3b",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-retro-layar-tancep-thumb.webp",
+          "file": "backgrounds/bg-retro-layar-tancep-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 14160,
+          "encoding": "lossy",
+          "sha256": "49e89b046695a6ce7086545dc901f8a991e10b1f547bc2a964c91e7d0ea57ea0",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "bg-retro-sundown-letters",
+      "kind": "background",
+      "source": "bg-retro-sundown-letters.png",
+      "sourceSha256": "a205ac3cd3c47661fe1d1f54c80cfc79ee72d9d3fa38a97707f09452adb579f9",
+      "sourceBytes": 2637840,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/backgrounds/bg-retro-sundown-letters.webp",
+          "file": "backgrounds/bg-retro-sundown-letters.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 140672,
+          "encoding": "lossy",
+          "sha256": "9a33d81bf76f925b86262276777fe13eac1b1ad72285400f8e452a6cb7ed0ec9",
+          "hasAlpha": false
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/backgrounds/bg-retro-sundown-letters-480.webp",
+          "file": "backgrounds/bg-retro-sundown-letters-480.webp",
+          "width": 480,
+          "height": 720,
+          "bytes": 22574,
+          "encoding": "lossy",
+          "sha256": "f9c6ec52dd3eb9ad33bbffd3109ed446d9b0049dd88b5e6131495807afd09a0a",
+          "hasAlpha": false
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/backgrounds/bg-retro-sundown-letters-thumb.webp",
+          "file": "backgrounds/bg-retro-sundown-letters-thumb.webp",
+          "width": 240,
+          "height": 360,
+          "bytes": 4068,
+          "encoding": "lossy",
+          "sha256": "36e85945daa9a82cdc769e582fe6ca574f17364e4dafaa38284a854d85dafbca",
+          "hasAlpha": false
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-bali-01",
+      "kind": "ornament",
+      "source": "orn-adat-bali-01.png",
+      "sourceSha256": "22df7315387046f07ecba3c2824931e63b21f8929b19b14c6d22f7bff33a80d1",
+      "sourceBytes": 1747304,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-bali-01.webp",
+          "file": "ornaments/orn-adat-bali-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 257352,
+          "encoding": "lossy",
+          "sha256": "85287b879de4a8ddf7525351cdba3eaad15d724d66592e576a4a3916b7216434",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-bali-01-512.webp",
+          "file": "ornaments/orn-adat-bali-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 77076,
+          "encoding": "lossy",
+          "sha256": "804cf4e06ad21512bd19e1ee989ce75132353dc79c9a52e3aac8e7a843a1343c",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-bali-01-thumb.webp",
+          "file": "ornaments/orn-adat-bali-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 15156,
+          "encoding": "lossy",
+          "sha256": "f4d4d16c78c1013913ffecdc373d3592f9b7e81484f2d9d76fa662997634439c",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-bali-02",
+      "kind": "ornament",
+      "source": "orn-adat-bali-02.png",
+      "sourceSha256": "3ddca3781aaeeb146da4f6d66450bce979500145074669c35d2d0ff969d600f7",
+      "sourceBytes": 2064246,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-bali-02.webp",
+          "file": "ornaments/orn-adat-bali-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 422682,
+          "encoding": "lossy",
+          "sha256": "d20c84c7a15715f170ec39723b11fa4d4e26a40669f2cf1a5b14777ee22b2bae",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-bali-02-512.webp",
+          "file": "ornaments/orn-adat-bali-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 130856,
+          "encoding": "lossy",
+          "sha256": "b3281b66b8b183bc5b7af62276efeb84c6193f044dc98ccd9b5582a9db2ff6b1",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-bali-02-thumb.webp",
+          "file": "ornaments/orn-adat-bali-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 23808,
+          "encoding": "lossy",
+          "sha256": "99088a8c8658fda9b88a89ccf756b03785efd387c032476b296f04e1b7e4f4d0",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-bali-03",
+      "kind": "ornament",
+      "source": "orn-adat-bali-03.png",
+      "sourceSha256": "31828b33bb284d81e6a828e8b3ef78df2480a21a218468b7eca4b63b26279135",
+      "sourceBytes": 1928636,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-bali-03.webp",
+          "file": "ornaments/orn-adat-bali-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 314500,
+          "encoding": "lossy",
+          "sha256": "2c8aebbfd7b249553f15862e5e835301b3f24d2925ea33f55a123d613b0eb246",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-bali-03-512.webp",
+          "file": "ornaments/orn-adat-bali-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 95076,
+          "encoding": "lossy",
+          "sha256": "2344338adc273476787146a642332b77d9fa5e7cb80422ce478524f408030846",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-bali-03-thumb.webp",
+          "file": "ornaments/orn-adat-bali-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 19154,
+          "encoding": "lossy",
+          "sha256": "367593777b52cddd25811e96924bcd177afdd887e1218fed7098b9c30b253fac",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-bali-04",
+      "kind": "ornament",
+      "source": "orn-adat-bali-04.png",
+      "sourceSha256": "1b08455f9e3bed27d602d90140d174bdb99c3c8b4d1188986fbe3ff2a27ce80f",
+      "sourceBytes": 1193895,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-bali-04.webp",
+          "file": "ornaments/orn-adat-bali-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 205888,
+          "encoding": "lossy",
+          "sha256": "9599347b7ac2de66d01b2ba8698c4fbc63fbcbee9393616f18264da4ec6aad0b",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-bali-04-512.webp",
+          "file": "ornaments/orn-adat-bali-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 63790,
+          "encoding": "lossy",
+          "sha256": "aa08c7d2b4a8fb51f0356266051ed506d7e61c6a9ebce7da930cce5632ae74c3",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-bali-04-thumb.webp",
+          "file": "ornaments/orn-adat-bali-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12772,
+          "encoding": "lossy",
+          "sha256": "76f7a36715d0f34e8366054417ad47995f1ac7bd525ff51f6a4a0c1788a10ebf",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-bali-05",
+      "kind": "ornament",
+      "source": "orn-adat-bali-05.png",
+      "sourceSha256": "da5159adf6d9bbe73b9db5b82383243e7d0b1725d810693ab78c6cd7b0cbbf38",
+      "sourceBytes": 1751328,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-bali-05.webp",
+          "file": "ornaments/orn-adat-bali-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 323036,
+          "encoding": "lossy",
+          "sha256": "a46aa3ddc3b256e8fb76b7feb6699fcf0c3f8f32bc26b1b35457c37c639081f4",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-bali-05-512.webp",
+          "file": "ornaments/orn-adat-bali-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 99176,
+          "encoding": "lossy",
+          "sha256": "a504c006c16e5d3fd635a22e16f2df1a652e6923f44303e2a88c0d49254bbd6d",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-bali-05-thumb.webp",
+          "file": "ornaments/orn-adat-bali-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 19326,
+          "encoding": "lossy",
+          "sha256": "d649c9393e26d5bac65c7244a22a00e3844d1488022d97d7515ea588d3e823bf",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-bali-06",
+      "kind": "ornament",
+      "source": "orn-adat-bali-06.png",
+      "sourceSha256": "434a06e64b6f73407d08dc5580617db67f0e56d3a71776ff40380a56e1a81bb6",
+      "sourceBytes": 1463771,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-bali-06.webp",
+          "file": "ornaments/orn-adat-bali-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 240000,
+          "encoding": "lossy",
+          "sha256": "5e35616a9fb32f3e989a072917643863cefb5a5fc5f906993f86e4d8053e50e9",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-bali-06-512.webp",
+          "file": "ornaments/orn-adat-bali-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 71894,
+          "encoding": "lossy",
+          "sha256": "0c3325a7235c001f11a1aacb3692a9d2be3200d3475576c3931e19cf0fcd0d5a",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-bali-06-thumb.webp",
+          "file": "ornaments/orn-adat-bali-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 13702,
+          "encoding": "lossy",
+          "sha256": "2cfbd4f8a534044001ee7b36995243a8278226e9b03a7a0605a7ac19b09ff6e4",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-betawi-01",
+      "kind": "ornament",
+      "source": "orn-adat-betawi-01.png",
+      "sourceSha256": "40980c07d0cd57fca64f715a6b348aba3d654508da01c2bcc6aec923f79ac8e3",
+      "sourceBytes": 1288388,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-01.webp",
+          "file": "ornaments/orn-adat-betawi-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 320854,
+          "encoding": "lossy",
+          "sha256": "009a59dacb5fc9af1ba3c6cb40a7c2c34b4903639da6358c1812b8fd6577f621",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-01-512.webp",
+          "file": "ornaments/orn-adat-betawi-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 103764,
+          "encoding": "lossy",
+          "sha256": "e99994f17a86f5704a406771c747f870cbc71befaaa69b8665afa250e20fa504",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-01-thumb.webp",
+          "file": "ornaments/orn-adat-betawi-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 19886,
+          "encoding": "lossy",
+          "sha256": "64156f5fcad3275a6f2a37f22fd9f2597b0531bf14cd241fa489c1f67bdefcab",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-betawi-02",
+      "kind": "ornament",
+      "source": "orn-adat-betawi-02.png",
+      "sourceSha256": "2c22c4cb8f55203cdf0260013612b3ed7afbe505eb712291b499e8ebb372febd",
+      "sourceBytes": 1718697,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-02.webp",
+          "file": "ornaments/orn-adat-betawi-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 374720,
+          "encoding": "lossy",
+          "sha256": "dc60d9e4ff938c97e645468721c8600ad6418b9fa00e21f33e70e4ed0b00a70f",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-02-512.webp",
+          "file": "ornaments/orn-adat-betawi-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 110434,
+          "encoding": "lossy",
+          "sha256": "c30f35ca492502a55317267b551b00ef7633ebb244651668ce72f41a60f455be",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-02-thumb.webp",
+          "file": "ornaments/orn-adat-betawi-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 19180,
+          "encoding": "lossy",
+          "sha256": "ddbc50b985a1b9cc337d6101846de463088c74d76512e2c77d7b465629aa38e4",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-betawi-03",
+      "kind": "ornament",
+      "source": "orn-adat-betawi-03.png",
+      "sourceSha256": "67deb794de97dd09869fe0927cc3e603eb8106336d7efc0249a15aa70ff5c6cd",
+      "sourceBytes": 1213042,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-03.webp",
+          "file": "ornaments/orn-adat-betawi-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 249162,
+          "encoding": "lossy",
+          "sha256": "679206ec54e19d3253321001e21b4fbc8768ef375536dbd5da0f8f133092f9c3",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-03-512.webp",
+          "file": "ornaments/orn-adat-betawi-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 79294,
+          "encoding": "lossy",
+          "sha256": "f7d3396d8eb497c7ada87b4b5c0230c96f8b472218b7d0621c3915d160b7ddf6",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-03-thumb.webp",
+          "file": "ornaments/orn-adat-betawi-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 16194,
+          "encoding": "lossy",
+          "sha256": "738c177294f008504cdad5722a66d65e66b1c233fbb07a04801d9df6b87f82ca",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-betawi-04",
+      "kind": "ornament",
+      "source": "orn-adat-betawi-04.png",
+      "sourceSha256": "bfa0fc764fac7729afba78924ce46b4570c006c95761cf16bbb0aa5cb3132bfb",
+      "sourceBytes": 2446962,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-04.webp",
+          "file": "ornaments/orn-adat-betawi-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 298398,
+          "encoding": "lossy",
+          "sha256": "ac51c3d9b7682f81c4b624d621de01167a43693f5ced0e2050881c19b3186697",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-04-512.webp",
+          "file": "ornaments/orn-adat-betawi-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 96614,
+          "encoding": "lossy",
+          "sha256": "1ceef8feecf61024912ff0cce0ff1b5795a3ffc7b341831c1694b6e6bf1a8e35",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-04-thumb.webp",
+          "file": "ornaments/orn-adat-betawi-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 19228,
+          "encoding": "lossy",
+          "sha256": "9045296753478cd88eed0a08e893870559723f2fc28b12b7ce26e2f150a43f20",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-betawi-05",
+      "kind": "ornament",
+      "source": "orn-adat-betawi-05.png",
+      "sourceSha256": "3402639f8e250d3ebe795ccc97db3f41589e964829dcd5abd5d2478325bc7fbc",
+      "sourceBytes": 1832898,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-05.webp",
+          "file": "ornaments/orn-adat-betawi-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 296000,
+          "encoding": "lossy",
+          "sha256": "470b7b0f8e01d915391f201c2e9bff02ede46a4e78f09503a51fd2b6c9e1f27e",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-05-512.webp",
+          "file": "ornaments/orn-adat-betawi-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 89810,
+          "encoding": "lossy",
+          "sha256": "8e2813b91c5bcfa40623cf915eb7c136864f23c7cf8efcbe07874e883173e4e3",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-05-thumb.webp",
+          "file": "ornaments/orn-adat-betawi-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 17334,
+          "encoding": "lossy",
+          "sha256": "54ff8d625cc4ad49ac453dcf0cf907be9f1c6174d0810ebdd7caf15a73943183",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-betawi-06",
+      "kind": "ornament",
+      "source": "orn-adat-betawi-06.png",
+      "sourceSha256": "c605dc8e7bc8a1b9a6b3854ac9bd5b04e3c5270182f0e0b482088072a0942709",
+      "sourceBytes": 1420831,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-06.webp",
+          "file": "ornaments/orn-adat-betawi-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 203306,
+          "encoding": "lossy",
+          "sha256": "2a279564b97ce3309f40f3404c9eafa73cd35202802bdeb8ce188c4793fcd2e7",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-06-512.webp",
+          "file": "ornaments/orn-adat-betawi-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 62078,
+          "encoding": "lossy",
+          "sha256": "42900ce17c38188940c9158efef09887a50bce8c5ffbfb7c2ecc0a3f0b16ecc7",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-betawi-06-thumb.webp",
+          "file": "ornaments/orn-adat-betawi-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12828,
+          "encoding": "lossy",
+          "sha256": "0d7971bf8c1e56c7fb9ee34b2a590a19e0603f82c2b1fdd04cf2d157fb6cfbc9",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-jawa-01",
+      "kind": "ornament",
+      "source": "orn-adat-jawa-01.png",
+      "sourceSha256": "5c6533a4f3de903f7dafe404c99e113a4dee9557eb77941403a161db570a9523",
+      "sourceBytes": 961986,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-01.webp",
+          "file": "ornaments/orn-adat-jawa-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 193074,
+          "encoding": "lossy",
+          "sha256": "f5d3d107ff325950354d292d942cef07ddb3158de3e6b210de49786b657792c7",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-01-512.webp",
+          "file": "ornaments/orn-adat-jawa-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 63214,
+          "encoding": "lossy",
+          "sha256": "7b0d1375dd3ae31faffaca6c05f692b1c06f76e3e325ee97bb2427a43facd78d",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-01-thumb.webp",
+          "file": "ornaments/orn-adat-jawa-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 13126,
+          "encoding": "lossy",
+          "sha256": "f3c0819a33190a1b4eaae6bd2820cee0688106d1a4550a61db3c79978717504b",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-jawa-02",
+      "kind": "ornament",
+      "source": "orn-adat-jawa-02.png",
+      "sourceSha256": "7a90eb68ee6ca521ab0c06cc15c03aa06b733a6cade13611cd081df2642ed1ac",
+      "sourceBytes": 1244286,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-02.webp",
+          "file": "ornaments/orn-adat-jawa-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 211808,
+          "encoding": "lossy",
+          "sha256": "446ffef1933428ed984b3dea61740d29c0c3eb88f5caf2476bd6c2b80693dbe9",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-02-512.webp",
+          "file": "ornaments/orn-adat-jawa-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 71836,
+          "encoding": "lossy",
+          "sha256": "59ddc3d01d1f6c8ae748904bbd4eff9024682c9a0baef0339092bad3b7f02dc4",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-02-thumb.webp",
+          "file": "ornaments/orn-adat-jawa-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 16484,
+          "encoding": "lossy",
+          "sha256": "6b04e0c6288c860e121911d2621f55785e285117d0842fd0ece0f6c73442f0a8",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-jawa-03",
+      "kind": "ornament",
+      "source": "orn-adat-jawa-03.png",
+      "sourceSha256": "1434d81dbf4fbcf0a2dcb725b0601e43a22fdb589a5ff8713abfcbe036b69351",
+      "sourceBytes": 337416,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-03.webp",
+          "file": "ornaments/orn-adat-jawa-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 93548,
+          "encoding": "lossy",
+          "sha256": "1900038275c125c4e4bf04aa82981f8a6649c9144b09b90aa9a3011ba71185df",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-03-512.webp",
+          "file": "ornaments/orn-adat-jawa-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 30578,
+          "encoding": "lossy",
+          "sha256": "90db9ca1cac0947ad12df524a0fd54948eb8148ed92df44f4308826c9babbcce",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-03-thumb.webp",
+          "file": "ornaments/orn-adat-jawa-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6172,
+          "encoding": "lossy",
+          "sha256": "3f941c8680bc860621e89abc186a5b6887f82ac47a74cf64c87505ed02186c2a",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-jawa-04",
+      "kind": "ornament",
+      "source": "orn-adat-jawa-04.png",
+      "sourceSha256": "78c7929dd02b94335c349a6ffcf5601e0664351bc50bca902a8c984c5aec5f5f",
+      "sourceBytes": 1112530,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-04.webp",
+          "file": "ornaments/orn-adat-jawa-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 162530,
+          "encoding": "lossy",
+          "sha256": "372ae5bbbe266b4801b764901140d846a403a035593422cb345e857205e32cdf",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-04-512.webp",
+          "file": "ornaments/orn-adat-jawa-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 47304,
+          "encoding": "lossy",
+          "sha256": "7acf2f5c533e4352b0b310dfbfad96199398601d8ef0f87fc6dbfef9dbf7c434",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-04-thumb.webp",
+          "file": "ornaments/orn-adat-jawa-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9500,
+          "encoding": "lossy",
+          "sha256": "2634af671bfa03cad52aea201d06e810ce919b53e86fd48fce1d03b1c5311a92",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-jawa-05",
+      "kind": "ornament",
+      "source": "orn-adat-jawa-05.png",
+      "sourceSha256": "10563b6f97fc71f651935b03dd99f5a7cfc9ecd34229d8e4ed5319ec711470c0",
+      "sourceBytes": 224051,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-05.webp",
+          "file": "ornaments/orn-adat-jawa-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 76812,
+          "encoding": "lossy",
+          "sha256": "70d2708936276d675e6d691a775ed6f16e7ed9906d64ad84496b9e2e7e624948",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-05-512.webp",
+          "file": "ornaments/orn-adat-jawa-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 24754,
+          "encoding": "lossy",
+          "sha256": "8b76d46d0f112437fa9633c57eb680eaffb15b5bf4694792969c979e8ab63e62",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-05-thumb.webp",
+          "file": "ornaments/orn-adat-jawa-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5044,
+          "encoding": "lossy",
+          "sha256": "449adbb6ad02e0503034fc74895ed50b95f608635c7501749582d13f4f7fb25e",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-jawa-06",
+      "kind": "ornament",
+      "source": "orn-adat-jawa-06.png",
+      "sourceSha256": "81e3a306a17ae81daec451cf7f68f7d66543d9d3d53569104fbe359d8fb424bf",
+      "sourceBytes": 755168,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-06.webp",
+          "file": "ornaments/orn-adat-jawa-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 93296,
+          "encoding": "lossy",
+          "sha256": "7151235a30dd7ebd7a2dc12b3b50019fe8d5b19d447930619c5abd17ed09e943",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-06-512.webp",
+          "file": "ornaments/orn-adat-jawa-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 29890,
+          "encoding": "lossy",
+          "sha256": "57a6e7d3367337353407fff9977e6d7bdcd354c5d1247e80162e62d05a1e9c7d",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-jawa-06-thumb.webp",
+          "file": "ornaments/orn-adat-jawa-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6260,
+          "encoding": "lossy",
+          "sha256": "9d28c6a740017816443d7dbb9ab2dba366eadd052c18de562e96fd121376fb92",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-minang-01",
+      "kind": "ornament",
+      "source": "orn-adat-minang-01.png",
+      "sourceSha256": "e9c41c8eeaf681c3cbf37a1951b1c06279ca0f738f4083e892bd0cd445910b4e",
+      "sourceBytes": 1172992,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-minang-01.webp",
+          "file": "ornaments/orn-adat-minang-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 209342,
+          "encoding": "lossy",
+          "sha256": "e9fd54c899e56730ffca4e948cc4b34e3a1aba5752ff798d4711fb2293a4ccd9",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-minang-01-512.webp",
+          "file": "ornaments/orn-adat-minang-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 59880,
+          "encoding": "lossy",
+          "sha256": "fc6329cb137303042687b5176ac8d4f168a4bd57088b9de3a677fa82c695b36d",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-minang-01-thumb.webp",
+          "file": "ornaments/orn-adat-minang-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11532,
+          "encoding": "lossy",
+          "sha256": "a68048abde370b4f6addfa4d719c19f0d6ba414b1801759e8290aaee4f954cd3",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-minang-02",
+      "kind": "ornament",
+      "source": "orn-adat-minang-02.png",
+      "sourceSha256": "83765e576942ed532e5901c655417c19e1717c8d3e41c018a350574177740fd5",
+      "sourceBytes": 791552,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-minang-02.webp",
+          "file": "ornaments/orn-adat-minang-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 149018,
+          "encoding": "lossy",
+          "sha256": "22a4178f05d7666300f6b9de32cce5d781ebd6bb10ecd305d4b47fac728ac702",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-minang-02-512.webp",
+          "file": "ornaments/orn-adat-minang-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 45894,
+          "encoding": "lossy",
+          "sha256": "8e0c90e340473209f515eb0ac5f961ecd41a73865b0a67fd607ba662709fc94c",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-minang-02-thumb.webp",
+          "file": "ornaments/orn-adat-minang-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9462,
+          "encoding": "lossy",
+          "sha256": "fb400411a3a17e1aea8fe40cc4e925619c2a650e032f0a84d0eaa318b2b5cae4",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-minang-03",
+      "kind": "ornament",
+      "source": "orn-adat-minang-03.png",
+      "sourceSha256": "820eea6742a2667d48a1510e79da5c31a62418800664a7b9dfedc8bb36b1bbff",
+      "sourceBytes": 1183415,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-minang-03.webp",
+          "file": "ornaments/orn-adat-minang-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 192506,
+          "encoding": "lossy",
+          "sha256": "ee3775063ddf35b829303e59866a58c6e9cc1e9118e86c42502fede9f1051c32",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-minang-03-512.webp",
+          "file": "ornaments/orn-adat-minang-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 53828,
+          "encoding": "lossy",
+          "sha256": "8b40fd9cee7f5a711ed03ba3a18393727ad93cf12402e6c963ab0a051f09c882",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-minang-03-thumb.webp",
+          "file": "ornaments/orn-adat-minang-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9690,
+          "encoding": "lossy",
+          "sha256": "42e5dbe3ac6616ba13fb79c961fb6e08cf3a3906edfe55db1d5ff0d1abde59b1",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-minang-04",
+      "kind": "ornament",
+      "source": "orn-adat-minang-04.png",
+      "sourceSha256": "03cf0ca05a14a1117ddeb543b59930c4d58c77c460d1057ba604b69f4322242b",
+      "sourceBytes": 1462324,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-minang-04.webp",
+          "file": "ornaments/orn-adat-minang-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 270274,
+          "encoding": "lossy",
+          "sha256": "16d0c820ad3f203694d309d3820ddb823aa033b8c02b33c209bca1fa011bcb7d",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-minang-04-512.webp",
+          "file": "ornaments/orn-adat-minang-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 86262,
+          "encoding": "lossy",
+          "sha256": "e2da0026654280959c8a8da753a191f95770fad79f8fe330a0341d7dba2a69ff",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-minang-04-thumb.webp",
+          "file": "ornaments/orn-adat-minang-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 17464,
+          "encoding": "lossy",
+          "sha256": "5eec5688989ccf5d660b5e2f48f165ee16fadfd80a316a8a314eec72848d4bc9",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-minang-05",
+      "kind": "ornament",
+      "source": "orn-adat-minang-05-corrected.png",
+      "sourceSha256": "bcc32df16e7df24f6864e62926a36663d3eae62d625badcb56b80fc2d95c172c",
+      "sourceBytes": 351219,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-minang-05.webp",
+          "file": "ornaments/orn-adat-minang-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 100354,
+          "encoding": "lossy",
+          "sha256": "7a5684c17f9582a372673a92372d31cd21b4c99775973e22f11b9924e4f39a80",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-minang-05-512.webp",
+          "file": "ornaments/orn-adat-minang-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 29880,
+          "encoding": "lossy",
+          "sha256": "615562ee24b678f8c09b105ce951f8491bc1f8162628f5252f14990316453656",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-minang-05-thumb.webp",
+          "file": "ornaments/orn-adat-minang-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5282,
+          "encoding": "lossy",
+          "sha256": "3092cabba9d9bb4cfd819041f49b14662aac182bf5bea0777ba02b5851f28ec1",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-minang-06",
+      "kind": "ornament",
+      "source": "orn-adat-minang-06.png",
+      "sourceSha256": "ded1e78773417a62914bef9aecb9f8bb64fcca7c6836581c805a9de6f76bbb6f",
+      "sourceBytes": 2340590,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-minang-06.webp",
+          "file": "ornaments/orn-adat-minang-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 362828,
+          "encoding": "lossy",
+          "sha256": "5c6b6d2a0d8937ec7a8335e322d3bc1eee81bdd3de2716922e0fd6cd16787b73",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-minang-06-512.webp",
+          "file": "ornaments/orn-adat-minang-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 95252,
+          "encoding": "lossy",
+          "sha256": "ca5fc320aa0799ed1aac16151c7fba1d76cce24b4e3e13ab2c0f4356acc341eb",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-minang-06-thumb.webp",
+          "file": "ornaments/orn-adat-minang-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 15858,
+          "encoding": "lossy",
+          "sha256": "329e1043fe1d41d25e838d44d15b37b8a64f23e310949de52daf016a3359a6d3",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-sunda-01",
+      "kind": "ornament",
+      "source": "orn-adat-sunda-01.png",
+      "sourceSha256": "adcf8363ca12764ae5cfb9c3178d44f35ab3ced5e0f9b4ca6ed067379a9263e1",
+      "sourceBytes": 1819895,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-01.webp",
+          "file": "ornaments/orn-adat-sunda-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 271276,
+          "encoding": "lossy",
+          "sha256": "652de97afb8f8c2e8941ae9ee081c8ea21a747ad7ad9ddc541f701b7c5ff61be",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-01-512.webp",
+          "file": "ornaments/orn-adat-sunda-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 77802,
+          "encoding": "lossy",
+          "sha256": "59dae97e9b8046214a5651c63b9d960aadd05becaaa926c79430875550b38374",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-01-thumb.webp",
+          "file": "ornaments/orn-adat-sunda-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 13220,
+          "encoding": "lossy",
+          "sha256": "bc024ad2beacff6282b68ed8ae12509ce52a10e65072e55ff0eafd75a472cf64",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-sunda-02",
+      "kind": "ornament",
+      "source": "orn-adat-sunda-02.png",
+      "sourceSha256": "41aea49b328f5ebec80191f1ca1c8ff90c54cddad5db2bbb7aa28022b28b280f",
+      "sourceBytes": 1717040,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-02.webp",
+          "file": "ornaments/orn-adat-sunda-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 365546,
+          "encoding": "lossy",
+          "sha256": "3268416a6e624ad61c394cbfda5ff2fe61047cce14ee67f6c3b77eb81ee9ca27",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-02-512.webp",
+          "file": "ornaments/orn-adat-sunda-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 107736,
+          "encoding": "lossy",
+          "sha256": "0b6581a832aa10245bbba0b160734f0b89a10910cb23d468742ae05a590e9521",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-02-thumb.webp",
+          "file": "ornaments/orn-adat-sunda-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 18552,
+          "encoding": "lossy",
+          "sha256": "17b1bdcb195b8c03a427e29a455c4ca73a66f8f351f470cbca6d4e8a4500e8c3",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-sunda-03",
+      "kind": "ornament",
+      "source": "orn-adat-sunda-03.png",
+      "sourceSha256": "435cf874f37d9c160eeeb03dc32a82a45d1c54d105e0505ddfaee070d1d1a04c",
+      "sourceBytes": 1318799,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-03.webp",
+          "file": "ornaments/orn-adat-sunda-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 258168,
+          "encoding": "lossy",
+          "sha256": "cab2cfb1e25af37898cb07e4fd76ea8ec6c4a5e993de5350e36080ad13665631",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-03-512.webp",
+          "file": "ornaments/orn-adat-sunda-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 83448,
+          "encoding": "lossy",
+          "sha256": "f696a52ec0afd4408d3b10cb04ab016a5c1df6788d8a050be0933f2fd3288ee9",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-03-thumb.webp",
+          "file": "ornaments/orn-adat-sunda-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 16876,
+          "encoding": "lossy",
+          "sha256": "ee939414cd10ccfa6d369e4b3d793ac966528a14192c921d5c50760a7e7f3600",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-sunda-04",
+      "kind": "ornament",
+      "source": "orn-adat-sunda-04.png",
+      "sourceSha256": "b9eae0e0f06915063ed59d0864e34343d4311b744da49122d8099320f4453cd6",
+      "sourceBytes": 2682131,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-04.webp",
+          "file": "ornaments/orn-adat-sunda-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 337998,
+          "encoding": "lossy",
+          "sha256": "58c1029e88772f994fda2656dadc151d81c703b39ab13bfebae3114499f214ed",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-04-512.webp",
+          "file": "ornaments/orn-adat-sunda-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92458,
+          "encoding": "lossy",
+          "sha256": "0b016afa09591df312ce4dbae56ec1df21a59217c44185cd25e79b715552812b",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-04-thumb.webp",
+          "file": "ornaments/orn-adat-sunda-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 16876,
+          "encoding": "lossy",
+          "sha256": "e612f3dedfbf88a400fbc0f2c30c7e3c8c816f612e731bc067e83af988a09496",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-sunda-05",
+      "kind": "ornament",
+      "source": "orn-adat-sunda-05.png",
+      "sourceSha256": "cb88ff205a18993cc8456522bde692be29630b6e82efacd0e6bae43ea6096da0",
+      "sourceBytes": 1036062,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-05.webp",
+          "file": "ornaments/orn-adat-sunda-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 180184,
+          "encoding": "lossy",
+          "sha256": "961d571c0aa152dd1f132c2a17db069c6a78e8652d99df652e1a50e88ce69c4a",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-05-512.webp",
+          "file": "ornaments/orn-adat-sunda-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 55628,
+          "encoding": "lossy",
+          "sha256": "fd2d06234c7b15c6829af2c1f41f040d8831997f17128518607b25d24285843e",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-05-thumb.webp",
+          "file": "ornaments/orn-adat-sunda-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11474,
+          "encoding": "lossy",
+          "sha256": "1f3e9d3767ff97c840aa68985b5dd453f4e0e6a52c3bd441c39e0997e1dca262",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-adat-sunda-06",
+      "kind": "ornament",
+      "source": "orn-adat-sunda-06.png",
+      "sourceSha256": "1e8ebc674162de2159e75c96d2e1825c6229ae257d5acd692acee428ed550538",
+      "sourceBytes": 470552,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-06.webp",
+          "file": "ornaments/orn-adat-sunda-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 122316,
+          "encoding": "lossy",
+          "sha256": "67fea156f44d216dd6e9acbd4cb413c9977c1fc1a3fc8fabfb9e7cead63feec2",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-06-512.webp",
+          "file": "ornaments/orn-adat-sunda-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 38894,
+          "encoding": "lossy",
+          "sha256": "cf5ae816920a16b81a2ced62e201b59a1d0489ec041460cf2af760a9fb2b3f15",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-adat-sunda-06-thumb.webp",
+          "file": "ornaments/orn-adat-sunda-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8072,
+          "encoding": "lossy",
+          "sha256": "37625f8e0124a5766729430db0640eea1ecbbace4ce74f28342d895346106970",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-block-blast-01",
+      "kind": "ornament",
+      "source": "orn-game-block-blast-01.png",
+      "sourceSha256": "a792adca91c0b2230189e3d4197c59dc13af6042c5ae77abb5900ce712f7aa83",
+      "sourceBytes": 1689634,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-01.webp",
+          "file": "ornaments/orn-game-block-blast-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 193114,
+          "encoding": "lossy",
+          "sha256": "0447be51fee246218c09e9ad6428322eaa50667cc0c64f1b9196a6f67cbf5742",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-01-512.webp",
+          "file": "ornaments/orn-game-block-blast-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 57956,
+          "encoding": "lossy",
+          "sha256": "4827abb2390e737d4ee25ef3e4649539518037b4f6c3392a0d7ad519d5243180",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-01-thumb.webp",
+          "file": "ornaments/orn-game-block-blast-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12706,
+          "encoding": "lossy",
+          "sha256": "ecc9c0e5f6a8c739296191170a6b1e6afd326ee6f096743723558669a99346b6",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-block-blast-02",
+      "kind": "ornament",
+      "source": "orn-game-block-blast-02.png",
+      "sourceSha256": "6a95ccc6fc4e17402d00c5099640ed52402fec016c47cdd946bb88771fb58acb",
+      "sourceBytes": 2009335,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-02.webp",
+          "file": "ornaments/orn-game-block-blast-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 285598,
+          "encoding": "lossy",
+          "sha256": "4a436bbbf5de121444da276afbdede28da2043da2b5c29d01172345f1b0f27a2",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-02-512.webp",
+          "file": "ornaments/orn-game-block-blast-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 92202,
+          "encoding": "lossy",
+          "sha256": "6268a88c2443fce0bc8edeb00299c316044be8c7dc45a86dc260352f1fb6a4e6",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-02-thumb.webp",
+          "file": "ornaments/orn-game-block-blast-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 18086,
+          "encoding": "lossy",
+          "sha256": "15dc2aa398e861b0ab62a4068a265ca7a2060e94d31e2a88571cdf69e0e1d04d",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-block-blast-03",
+      "kind": "ornament",
+      "source": "orn-game-block-blast-03.png",
+      "sourceSha256": "0a4be7c6b88f60215e3c659c45cf8d70c53d9d480dc534766764e5e345e93609",
+      "sourceBytes": 1090917,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-03.webp",
+          "file": "ornaments/orn-game-block-blast-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 107416,
+          "encoding": "lossy",
+          "sha256": "fff40da2330b1592556d0a6cb58bba377e5dcf7273c27c4558bd8b9726d3bd3a",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-03-512.webp",
+          "file": "ornaments/orn-game-block-blast-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 41968,
+          "encoding": "lossy",
+          "sha256": "56d890135bcfb3a53e9954a3376bc3724e5422316b036410a6b3233c75933acd",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-03-thumb.webp",
+          "file": "ornaments/orn-game-block-blast-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10482,
+          "encoding": "lossy",
+          "sha256": "94bdbcc9bb472031cfc08dbddc73fae6a28c5f57eeedc75c2d3b1f9fcee250df",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-block-blast-04",
+      "kind": "ornament",
+      "source": "orn-game-block-blast-04.png",
+      "sourceSha256": "006bd585d7a62060eb3d6707a1b3af7cdd7b1aae31b2fb54f38294cccf5b03fd",
+      "sourceBytes": 786232,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-04.webp",
+          "file": "ornaments/orn-game-block-blast-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 92370,
+          "encoding": "lossy",
+          "sha256": "580a6bbe2b4d34dc4704d09dec1b7058f7d8a6f643ae734431a6c39db295673b",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-04-512.webp",
+          "file": "ornaments/orn-game-block-blast-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 35416,
+          "encoding": "lossy",
+          "sha256": "5f44f4d99e8a8b704f8c3f31a2faf9bb85014ce099125f44e90330513377f958",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-04-thumb.webp",
+          "file": "ornaments/orn-game-block-blast-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9596,
+          "encoding": "lossy",
+          "sha256": "d93406cc5d6ea59bdc80088e64ef28794c0c82796f5d0b80fd1138980e6b12cf",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-block-blast-05",
+      "kind": "ornament",
+      "source": "orn-game-block-blast-05.png",
+      "sourceSha256": "eae61539d9153747f254105c53bcda87225f595761db46228242b895d2d9acc9",
+      "sourceBytes": 1604653,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-05.webp",
+          "file": "ornaments/orn-game-block-blast-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 188598,
+          "encoding": "lossy",
+          "sha256": "13618d4e7ba4a3111089e795f21952c52a3fdabbd9b643d30653a735944e5da2",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-05-512.webp",
+          "file": "ornaments/orn-game-block-blast-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 65204,
+          "encoding": "lossy",
+          "sha256": "cbd390cb30b96c9fadebe74d3bdacd67692e71e2cc4584a6cf8fd9c2c06c1a30",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-05-thumb.webp",
+          "file": "ornaments/orn-game-block-blast-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 14984,
+          "encoding": "lossy",
+          "sha256": "4818eb806b0a9a209da3249f28c3503efc68d8afaf37b5d9e86786122e139ebd",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-block-blast-06",
+      "kind": "ornament",
+      "source": "orn-game-block-blast-06.png",
+      "sourceSha256": "ce5a4ebeb5369c5902f5f044ffeeeca2c72dcb8027926c46f70b1ced4ea84e29",
+      "sourceBytes": 1338676,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-06.webp",
+          "file": "ornaments/orn-game-block-blast-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 239930,
+          "encoding": "lossy",
+          "sha256": "0532b114d24825bfee84a362b181fa8db004714f30e284f9df40c5bab355a607",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-06-512.webp",
+          "file": "ornaments/orn-game-block-blast-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 80038,
+          "encoding": "lossy",
+          "sha256": "ecbbd99d76254c83ce9153c420fe88c77be4a7aa6aedaf65899425e2055142ee",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-block-blast-06-thumb.webp",
+          "file": "ornaments/orn-game-block-blast-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 18664,
+          "encoding": "lossy",
+          "sha256": "e220e2e8dbe7af12960d43522e8036524a261af5b6c0d417243097257cf0337b",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-minecraft-01",
+      "kind": "ornament",
+      "source": "orn-game-minecraft-01.png",
+      "sourceSha256": "fc08db63fbc1e5d87a8a9961887f94995e9d7826ec680b00d00e1b96fa7dc876",
+      "sourceBytes": 698667,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-01.webp",
+          "file": "ornaments/orn-game-minecraft-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 448018,
+          "encoding": "lossless",
+          "sha256": "974d4aa5fdbf9d1b465556834ed9e2f05002029f7578f6680eccc9a28ade9167",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-01-512.webp",
+          "file": "ornaments/orn-game-minecraft-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 162644,
+          "encoding": "lossless",
+          "sha256": "7ac9b55ca7fa573b0fff317775f1c2e15d94b187bb353568393bc1a4cda1fbd0",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-01-thumb.webp",
+          "file": "ornaments/orn-game-minecraft-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 30300,
+          "encoding": "lossless",
+          "sha256": "6e023cffc95e16047c8783b44912a251488d43fefd7d7179594e8cb3f20cb849",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-minecraft-02",
+      "kind": "ornament",
+      "source": "orn-game-minecraft-02.png",
+      "sourceSha256": "cbec62e8d11164960934f146f3ad6f60166e13c7e859c3efc6c1f3007a139624",
+      "sourceBytes": 686472,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-02.webp",
+          "file": "ornaments/orn-game-minecraft-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 425800,
+          "encoding": "lossless",
+          "sha256": "06277e5da600167763d4ac2c379abf5f41f939379e38759145447f5a32ae5c7f",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-02-512.webp",
+          "file": "ornaments/orn-game-minecraft-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 140676,
+          "encoding": "lossless",
+          "sha256": "d2710ef09bdf03fe5cb822a4d8c2dabe0c19eae3dac406a09be7562b14b9e5b9",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-02-thumb.webp",
+          "file": "ornaments/orn-game-minecraft-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 27528,
+          "encoding": "lossless",
+          "sha256": "3c3ee6d277c6b8adaa5e8c6d870187cab4c289083d5a2e1732da115a10e8a0d2",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-minecraft-03",
+      "kind": "ornament",
+      "source": "orn-game-minecraft-03.png",
+      "sourceSha256": "791b75db57f7581d401216453eebf21827bee3ed620bf7009716d6e4961d41a6",
+      "sourceBytes": 287447,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-03.webp",
+          "file": "ornaments/orn-game-minecraft-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 175450,
+          "encoding": "lossless",
+          "sha256": "ab2a0ee4579e29645a33d246d65609a32528e902a51e65248510de35bfc688f8",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-03-512.webp",
+          "file": "ornaments/orn-game-minecraft-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 67458,
+          "encoding": "lossless",
+          "sha256": "88e07260928177abfcc108bbfa07adcecdcc0b9cbf7e965e4ad92ea7203b65a5",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-03-thumb.webp",
+          "file": "ornaments/orn-game-minecraft-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 13432,
+          "encoding": "lossless",
+          "sha256": "b6c98d32568e86f916b5b87746f02c0be9aefc5fe1abe7b3172f49ec9b9c6373",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-minecraft-04",
+      "kind": "ornament",
+      "source": "orn-game-minecraft-04.png",
+      "sourceSha256": "625259740028b6208dba26ddbe9cb770f5d3d617ea4756cd518a145ba8d4cbab",
+      "sourceBytes": 852953,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-04.webp",
+          "file": "ornaments/orn-game-minecraft-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 538486,
+          "encoding": "lossless",
+          "sha256": "ee3295dc9fe91aa2700694d7ff4fecc30e7af1165bfb3b54060ee1ea2eb73c8e",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-04-512.webp",
+          "file": "ornaments/orn-game-minecraft-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 197348,
+          "encoding": "lossless",
+          "sha256": "dcdd9dddfbc5dea3efaf9ffc7bd20176b61d77b4d12b3c1758b782c25e43a67c",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-04-thumb.webp",
+          "file": "ornaments/orn-game-minecraft-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 36900,
+          "encoding": "lossless",
+          "sha256": "a4a661b384d6d7cd538e5369f268da49b1971e9483542fbcba7d2aa804bce726",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-minecraft-05",
+      "kind": "ornament",
+      "source": "orn-game-minecraft-05.png",
+      "sourceSha256": "a520fbb8808a8e5adee136ba0ff515bd2b1156fb75de79f389791344e4c4b25c",
+      "sourceBytes": 598706,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-05.webp",
+          "file": "ornaments/orn-game-minecraft-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 397788,
+          "encoding": "lossless",
+          "sha256": "2b9d9d73f387527e74be1d6e67d67a83a3d09a7226211ee79fc79fc85bdbc6d3",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-05-512.webp",
+          "file": "ornaments/orn-game-minecraft-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 155216,
+          "encoding": "lossless",
+          "sha256": "51dad7e2d772efefa7d3d83fee2271b611cc46e83ce6c459d800e95f4c568bcc",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-05-thumb.webp",
+          "file": "ornaments/orn-game-minecraft-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 29984,
+          "encoding": "lossless",
+          "sha256": "62eedf2ae23adbab17b7e1567001ca2a98daefb49818a593a806702e8032b7fa",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-minecraft-06",
+      "kind": "ornament",
+      "source": "orn-game-minecraft-06.png",
+      "sourceSha256": "0abd0ed45b99c3f1894d3a50244dce2e3df889c2d204da981e7cc64584c78236",
+      "sourceBytes": 833271,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-06.webp",
+          "file": "ornaments/orn-game-minecraft-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 521284,
+          "encoding": "lossless",
+          "sha256": "19afc63ae8abff08f20cf9ac4b8d2a9ce780d61b0d14b02d356de78fef1b06b0",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-06-512.webp",
+          "file": "ornaments/orn-game-minecraft-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 176798,
+          "encoding": "lossless",
+          "sha256": "e382b81da276267924fb363ef2bcf6bbecc09ce32047e110e4d1fcff0ca9e684",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-minecraft-06-thumb.webp",
+          "file": "ornaments/orn-game-minecraft-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 33346,
+          "encoding": "lossless",
+          "sha256": "69e1d7a60190368950e868000ffbc3ed0072f9e57b216980291c1da6113d5084",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-tom-jerry-01",
+      "kind": "ornament",
+      "source": "orn-game-tom-jerry-01.png",
+      "sourceSha256": "eccfe9426b33e30c814a134786ba2ff2399fb104f73d715b5a9a221737b78373",
+      "sourceBytes": 1076571,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-01.webp",
+          "file": "ornaments/orn-game-tom-jerry-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 139576,
+          "encoding": "lossy",
+          "sha256": "17bdff9a68cd7aaedcfa321c793dff56514af2e3dcf975245170dc970297e25b",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-01-512.webp",
+          "file": "ornaments/orn-game-tom-jerry-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 50648,
+          "encoding": "lossy",
+          "sha256": "a5e820725cb5c46871cbee59f1f805b81462890165caf0e3cf2e0b17a7d32768",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-01-thumb.webp",
+          "file": "ornaments/orn-game-tom-jerry-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12278,
+          "encoding": "lossy",
+          "sha256": "775947156ea77fe2bd14e6cc11bbe045a8ab3cd853a1fd5729239fec6ca4aa8f",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-tom-jerry-02",
+      "kind": "ornament",
+      "source": "orn-game-tom-jerry-02.png",
+      "sourceSha256": "6bfb346438692ac4af9692670bf3d7b8eff4d234182e1559cc4e7e8dc354f0b7",
+      "sourceBytes": 1303789,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-02.webp",
+          "file": "ornaments/orn-game-tom-jerry-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 91464,
+          "encoding": "lossy",
+          "sha256": "50ab5ce39cb3afbebf02c30c24e8a333c5a66a78b92a2e660a32ef7850870c69",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-02-512.webp",
+          "file": "ornaments/orn-game-tom-jerry-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 32024,
+          "encoding": "lossy",
+          "sha256": "12a3839bc673ae8350a0ba54f09379592982c4b104ec7c70a164043b2f4a99c4",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-02-thumb.webp",
+          "file": "ornaments/orn-game-tom-jerry-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7804,
+          "encoding": "lossy",
+          "sha256": "243f7d7a68dbad1b2b876ed2ec3821aa97b77c6d5e4262791263224d9686f570",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-tom-jerry-03",
+      "kind": "ornament",
+      "source": "orn-game-tom-jerry-03.png",
+      "sourceSha256": "c89da9163c1cfd7a71d7e9a28eb823c1757c0d8d99c0c4853a3e54e82952c5e0",
+      "sourceBytes": 821979,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-03.webp",
+          "file": "ornaments/orn-game-tom-jerry-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 125288,
+          "encoding": "lossy",
+          "sha256": "efa35dbdff4248e816b9649ecf34962c53f7dfaba88fb780d6c71513796a4521",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-03-512.webp",
+          "file": "ornaments/orn-game-tom-jerry-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 45610,
+          "encoding": "lossy",
+          "sha256": "a135213705b3741db67a98f799c90786c354ebf715d320d5cf9db1a51c4ae4d0",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-03-thumb.webp",
+          "file": "ornaments/orn-game-tom-jerry-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10960,
+          "encoding": "lossy",
+          "sha256": "7bfd6b9f7d79e3c4fb82535008518b38d4d95cc2b7f9aaceaa43e149c4da40dc",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-tom-jerry-04",
+      "kind": "ornament",
+      "source": "orn-game-tom-jerry-04.png",
+      "sourceSha256": "20374736bc3b8212725f2e371ec01ce178ff84e99bc6abc489d2b01898f13574",
+      "sourceBytes": 896132,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-04.webp",
+          "file": "ornaments/orn-game-tom-jerry-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 78910,
+          "encoding": "lossy",
+          "sha256": "54dbe6b84f0af0b9c379f9cdc914f01921d60b239f55ffafcfd36e649c741f78",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-04-512.webp",
+          "file": "ornaments/orn-game-tom-jerry-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 30642,
+          "encoding": "lossy",
+          "sha256": "8c1e8dc6ad559f3fb30be296d10ee25053b429d11c1777210c276b5dd842ff03",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-04-thumb.webp",
+          "file": "ornaments/orn-game-tom-jerry-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8308,
+          "encoding": "lossy",
+          "sha256": "b06d38f10a7c20fcc7c2e2d42e7b4e5460b05ebebef91321b3c8486000166c14",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-tom-jerry-05",
+      "kind": "ornament",
+      "source": "orn-game-tom-jerry-05.png",
+      "sourceSha256": "e6dc4700f6e44723759e0e23de8cc01376077d8f20e10cf7f7abed8ee989195f",
+      "sourceBytes": 744676,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-05.webp",
+          "file": "ornaments/orn-game-tom-jerry-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 79296,
+          "encoding": "lossy",
+          "sha256": "816f5abce71a38939593227fdcaa4d304730dafcf88c2f2364e69daa4640c834",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-05-512.webp",
+          "file": "ornaments/orn-game-tom-jerry-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 25620,
+          "encoding": "lossy",
+          "sha256": "72ce9ce55b42f9979591b1e4c5202b0c8d9ea9dd1c4f6350d408e720a3d9d535",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-05-thumb.webp",
+          "file": "ornaments/orn-game-tom-jerry-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5694,
+          "encoding": "lossy",
+          "sha256": "28edd4e23d311bd3361532ddaa3b832ddf3827b872265ea7ee2fd11bfc8cb6a2",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-tom-jerry-06",
+      "kind": "ornament",
+      "source": "orn-game-tom-jerry-06.png",
+      "sourceSha256": "4e5d2fb9103b773f897cc7612719cb05d2d194f59ee1db14870bc65f628a9b4c",
+      "sourceBytes": 529157,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-06.webp",
+          "file": "ornaments/orn-game-tom-jerry-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 100276,
+          "encoding": "lossy",
+          "sha256": "dfaeb4d02ad51e976b7a4ab176cddf7d84f48b85a65edf93945f8a7cd3abdb45",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-06-512.webp",
+          "file": "ornaments/orn-game-tom-jerry-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 30876,
+          "encoding": "lossy",
+          "sha256": "37d0241b758d1a84f42c0cf62408c7de0fa929ccc8985aa8c4b22bf00197035c",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-tom-jerry-06-thumb.webp",
+          "file": "ornaments/orn-game-tom-jerry-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6724,
+          "encoding": "lossy",
+          "sha256": "b54e32bfcc2caed784f0260723a214147c22d3ade8fc78b514d4e8bd8c2ceb34",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-upin-ipin-01",
+      "kind": "ornament",
+      "source": "orn-game-upin-ipin-01.png",
+      "sourceSha256": "46832841026010f3ec987f3f85a6d8b30b373048d67d60bc67d56f60aa039454",
+      "sourceBytes": 1405361,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-01.webp",
+          "file": "ornaments/orn-game-upin-ipin-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 193908,
+          "encoding": "lossy",
+          "sha256": "6ece2e1bcc1a48e8a76c15e17189b321d108a7c42dedc5812825b44ed7d678bb",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-01-512.webp",
+          "file": "ornaments/orn-game-upin-ipin-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 66948,
+          "encoding": "lossy",
+          "sha256": "8970930ba6897acb171b9ee27facc16472764930b0633c7fd6f98f6788be3b3c",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-01-thumb.webp",
+          "file": "ornaments/orn-game-upin-ipin-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 14944,
+          "encoding": "lossy",
+          "sha256": "fc863261f72c4686b15a59aa08d3bf5801ba91acf32e3fb26086dca6c9a139ed",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-upin-ipin-02",
+      "kind": "ornament",
+      "source": "orn-game-upin-ipin-02.png",
+      "sourceSha256": "f5f119c2390f5c25446d943203ad34fa5b4c10d66f47ae7a59a5ef32714aab0f",
+      "sourceBytes": 947725,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-02.webp",
+          "file": "ornaments/orn-game-upin-ipin-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 117676,
+          "encoding": "lossy",
+          "sha256": "1de2a86bfa40892a0e97884bf661696acbc8ad9f41ba0eb2b627666a8535ad68",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-02-512.webp",
+          "file": "ornaments/orn-game-upin-ipin-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 36942,
+          "encoding": "lossy",
+          "sha256": "16c4c86efe215b1b76be6e4d627424ac9f0aafc19437ecff41d8e7955620674a",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-02-thumb.webp",
+          "file": "ornaments/orn-game-upin-ipin-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8016,
+          "encoding": "lossy",
+          "sha256": "9cedba9f947b9b18ace15f2e7ecb7ae67171fa64063797dc6464397de3fff65a",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-upin-ipin-03",
+      "kind": "ornament",
+      "source": "orn-game-upin-ipin-03.png",
+      "sourceSha256": "f442e6cc70d9b3191bfdf2aaf2d151c5718772314d90c7b5985a01f1ef4c4f5d",
+      "sourceBytes": 732756,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-03.webp",
+          "file": "ornaments/orn-game-upin-ipin-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 90654,
+          "encoding": "lossy",
+          "sha256": "f2ed769a5af0e6ca7af1ca435fb348063892bd00df74f4cff1db6c9690062fb3",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-03-512.webp",
+          "file": "ornaments/orn-game-upin-ipin-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 31224,
+          "encoding": "lossy",
+          "sha256": "826e412faa9694025b7c1d43c7c8353139456a340148af5ce40cd4bf4543f6e2",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-03-thumb.webp",
+          "file": "ornaments/orn-game-upin-ipin-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7906,
+          "encoding": "lossy",
+          "sha256": "22e8c3349f90c30ed0c3fff125051d70b0269b169ed788c4d151a63733fc0870",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-upin-ipin-04",
+      "kind": "ornament",
+      "source": "orn-game-upin-ipin-04.png",
+      "sourceSha256": "263a231ad00a5d0c4ed3b0bb99edcc21098b2370d34535ab30cc7062b4cc6568",
+      "sourceBytes": 842802,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-04.webp",
+          "file": "ornaments/orn-game-upin-ipin-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 105014,
+          "encoding": "lossy",
+          "sha256": "26298445232f06339868281e0892c19b4e95aed09ece9ac908e4c80ff4a9f21a",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-04-512.webp",
+          "file": "ornaments/orn-game-upin-ipin-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 36766,
+          "encoding": "lossy",
+          "sha256": "681d687421af2c37b10bf39b591a1ca8bb52c0495fa810e656fabde1842cfef6",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-04-thumb.webp",
+          "file": "ornaments/orn-game-upin-ipin-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8466,
+          "encoding": "lossy",
+          "sha256": "057dc77759ad3064aff49f3e6775aed5dbc2c5fc960f5abb79d4a03c03d3bc86",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-upin-ipin-05",
+      "kind": "ornament",
+      "source": "orn-game-upin-ipin-05.png",
+      "sourceSha256": "17b8b7f519b3b95ddc793a76c317f846e13d8d57317d13c128752898113c1b58",
+      "sourceBytes": 684196,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-05.webp",
+          "file": "ornaments/orn-game-upin-ipin-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 98268,
+          "encoding": "lossy",
+          "sha256": "0675b8d30ff050e4f7fe0efd0601b02e4aa347edf57b1d2b8ce30d66d39f28e0",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-05-512.webp",
+          "file": "ornaments/orn-game-upin-ipin-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 34958,
+          "encoding": "lossy",
+          "sha256": "1d1256296037147bdca6ac70bf477237985f2ac6a0c8091a2025eec6aaa506e3",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-05-thumb.webp",
+          "file": "ornaments/orn-game-upin-ipin-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9262,
+          "encoding": "lossy",
+          "sha256": "3545e25cb2cbedd8dcb83d83fb3cf6f785059ed53f535819d17ef0b7439237e2",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-game-upin-ipin-06",
+      "kind": "ornament",
+      "source": "orn-game-upin-ipin-06.png",
+      "sourceSha256": "77cd07941001f44fd14982887c5e0f33ca437cd8001b43c660fa94c6f409c993",
+      "sourceBytes": 1590939,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-06.webp",
+          "file": "ornaments/orn-game-upin-ipin-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 242112,
+          "encoding": "lossy",
+          "sha256": "5fb285db62c75fc56df0298d16c2486b8fe90a5104cecda293d067860709fbe7",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-06-512.webp",
+          "file": "ornaments/orn-game-upin-ipin-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 81440,
+          "encoding": "lossy",
+          "sha256": "a0d688a70fbb5cdd1435efdb4aa50c30fdcc65b0dffa8d3c014c99ecc763a0e7",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-game-upin-ipin-06-thumb.webp",
+          "file": "ornaments/orn-game-upin-ipin-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 16028,
+          "encoding": "lossy",
+          "sha256": "cfd797220e4cfc135e765098cc713cefd4b5145b3bee0da5231f27b3a9d5a2e1",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-islamic-01",
+      "kind": "ornament",
+      "source": "orn-islamic-01.png",
+      "sourceSha256": "8b090e7356026767dc6f287d548d2fac540e0d4ec34aa256f67913c76ac8b048",
+      "sourceBytes": 349883,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-islamic-01.webp",
+          "file": "ornaments/orn-islamic-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 87202,
+          "encoding": "lossy",
+          "sha256": "ef5cc9b6f5f8e30c8d75f53b475dd84865b73071ef4b443419b10df95d4cbcd0",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-islamic-01-512.webp",
+          "file": "ornaments/orn-islamic-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 28620,
+          "encoding": "lossy",
+          "sha256": "e362e055c05fd424adee02bc4ff5ce2d71a07671d1f7beec904ae82319ace6c9",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-islamic-01-thumb.webp",
+          "file": "ornaments/orn-islamic-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5772,
+          "encoding": "lossy",
+          "sha256": "c91d4f03f6a5a65807c95e1364b329600f2ec6aaf5599dbd2af0be70006a7ac3",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-islamic-02",
+      "kind": "ornament",
+      "source": "orn-islamic-02.png",
+      "sourceSha256": "37f740605f1b3a795e11f265ec59c0db40182082f887f7a106ba4c68eff3aef8",
+      "sourceBytes": 215746,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-islamic-02.webp",
+          "file": "ornaments/orn-islamic-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 58906,
+          "encoding": "lossy",
+          "sha256": "820faa21e12d371beb4fdc3b61cef4b1b49cb18b3cab7616a043efe664d4b625",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-islamic-02-512.webp",
+          "file": "ornaments/orn-islamic-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 19442,
+          "encoding": "lossy",
+          "sha256": "5f3dcb3339342576a68942cd8ab458dc1202bc70141dc484d5b9c161f352654b",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-islamic-02-thumb.webp",
+          "file": "ornaments/orn-islamic-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4360,
+          "encoding": "lossy",
+          "sha256": "e0d33c8feac8015251f442d807ae756b7a6d9aca25ecf6d032cdfb200aebe139",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-islamic-03",
+      "kind": "ornament",
+      "source": "orn-islamic-03.png",
+      "sourceSha256": "2f9678f6dc04cd7d0bf5962b38d5fc486fe29e563bd72b2a1fcfc6ea14b1ab72",
+      "sourceBytes": 1027564,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-islamic-03.webp",
+          "file": "ornaments/orn-islamic-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 126906,
+          "encoding": "lossy",
+          "sha256": "e59e1b71f7d52e221b955694badbdd37bbf8a8432133a1497a9282e4ce25d50e",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-islamic-03-512.webp",
+          "file": "ornaments/orn-islamic-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 39780,
+          "encoding": "lossy",
+          "sha256": "3f95e0111fdecaa95566133cad59b3491c90bb32e68beb3037e9c5f7893a13bb",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-islamic-03-thumb.webp",
+          "file": "ornaments/orn-islamic-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7424,
+          "encoding": "lossy",
+          "sha256": "9b1a5617e61b354a46dc6f90a0a12c4013d358fe4fa7575f29468b8291c93338",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-islamic-04",
+      "kind": "ornament",
+      "source": "orn-islamic-04.png",
+      "sourceSha256": "1bdf04ecfb234c24cf4ad9ec0e74d78f6c7e20e08bab6629cb929391715cad46",
+      "sourceBytes": 1263813,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-islamic-04.webp",
+          "file": "ornaments/orn-islamic-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 335590,
+          "encoding": "lossy",
+          "sha256": "7a2c4a125a7724931796d0cf68af1b6c66437fb44bbaa5da8eac0d7b15357083",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-islamic-04-512.webp",
+          "file": "ornaments/orn-islamic-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 109760,
+          "encoding": "lossy",
+          "sha256": "6df15a2f733abb5c58876aa39c9c29c435ab3cc5936e9a568612f2e61c3e2251",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-islamic-04-thumb.webp",
+          "file": "ornaments/orn-islamic-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 20112,
+          "encoding": "lossy",
+          "sha256": "39f9676a8116fa575a64c37ae3545d92f6c0ec350c18dd927e661718aeb12816",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-islamic-05",
+      "kind": "ornament",
+      "source": "orn-islamic-05.png",
+      "sourceSha256": "95fcf85e7217d5806ebb467ce756b5a4c644141c204cf629e20fd085d11c4b88",
+      "sourceBytes": 1031121,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-islamic-05.webp",
+          "file": "ornaments/orn-islamic-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 211160,
+          "encoding": "lossy",
+          "sha256": "80ec4dc91252772e1e3fd34b0d8ac43f5234e72b97b59df01d3e8cf6f601267c",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-islamic-05-512.webp",
+          "file": "ornaments/orn-islamic-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 65942,
+          "encoding": "lossy",
+          "sha256": "db3a1c808923434594270053638d0ca90390573d066675d516bc14d761882bf9",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-islamic-05-thumb.webp",
+          "file": "ornaments/orn-islamic-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 13176,
+          "encoding": "lossy",
+          "sha256": "c9f97256315ddf25e7f6fad2e1d42ae3eae94533697b99c0011aeeba2605728b",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-islamic-06",
+      "kind": "ornament",
+      "source": "orn-islamic-06.png",
+      "sourceSha256": "65c8e80e13aba8d63eef4f14522c2038bd0d908b5b7854784f51085e8680243b",
+      "sourceBytes": 371918,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-islamic-06.webp",
+          "file": "ornaments/orn-islamic-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 86630,
+          "encoding": "lossy",
+          "sha256": "a23b60f74ad0b52cd4b6341db79e8640070c68e71c69345786a2e40e26236675",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-islamic-06-512.webp",
+          "file": "ornaments/orn-islamic-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 29406,
+          "encoding": "lossy",
+          "sha256": "3efb310983a8d1098419b43c6f44ada12d4ab99f407ed67eaccbf02f6d83411e",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-islamic-06-thumb.webp",
+          "file": "ornaments/orn-islamic-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5910,
+          "encoding": "lossy",
+          "sha256": "f955e5bae23c3b2cf80d0f3276be463575bfe6ad13342a8375b0f930a1c2889c",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-eunoia-01",
+      "kind": "ornament",
+      "source": "orn-minimalist-eunoia-01.png",
+      "sourceSha256": "683ac7fe0b791fb01ef8551b4f8004d046c32bebf43c1f35fd306162bd33f781",
+      "sourceBytes": 630162,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-01.webp",
+          "file": "ornaments/orn-minimalist-eunoia-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 121238,
+          "encoding": "lossy",
+          "sha256": "16f914fa8b2aa3a521d02e6323b622d568be94f66271e572363e08a35b3563fc",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-01-512.webp",
+          "file": "ornaments/orn-minimalist-eunoia-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 36858,
+          "encoding": "lossy",
+          "sha256": "7a6dbb82fce119165d781f5f21d2dfb0c6e5d678dd1008cb716e2ec41b88c9e5",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-01-thumb.webp",
+          "file": "ornaments/orn-minimalist-eunoia-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8110,
+          "encoding": "lossy",
+          "sha256": "46df1dfc386a8cf3361f20a906f6ef98e8d2a017be288f2fc35116e2450323c6",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-eunoia-02",
+      "kind": "ornament",
+      "source": "orn-minimalist-eunoia-02-refined.png",
+      "sourceSha256": "e5dd8eb2bd9efc490d65534a6ed888e28f7e22c09760891e9de7cbe5f4a993cf",
+      "sourceBytes": 61355,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-02.webp",
+          "file": "ornaments/orn-minimalist-eunoia-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 15960,
+          "encoding": "lossless",
+          "sha256": "3d552c4ec99a038a08249cd8971d082a1e493d9ae744dc2b6c4002504fcfe8b6",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-02-512.webp",
+          "file": "ornaments/orn-minimalist-eunoia-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 5806,
+          "encoding": "lossless",
+          "sha256": "9829d8520576a81cc6b4d26564591804976aab45d5d99dda5411e63c0f8295f7",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-02-thumb.webp",
+          "file": "ornaments/orn-minimalist-eunoia-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 1400,
+          "encoding": "lossless",
+          "sha256": "06923ffa45ecdcc26c13527d07f11166291d3c05bb190ff92cbb4ceb24a69781",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-eunoia-03",
+      "kind": "ornament",
+      "source": "orn-minimalist-eunoia-03.png",
+      "sourceSha256": "31f588d4d2fdb04b6cf66c5f62b727fa1ff1f1e4720ea278d86bcca0fc4d4af7",
+      "sourceBytes": 879524,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-03.webp",
+          "file": "ornaments/orn-minimalist-eunoia-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 165790,
+          "encoding": "lossy",
+          "sha256": "8e470c67b225efe6db2481fb45a0a76bca3a58d8fd97c8e04760bcfc6abab1fe",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-03-512.webp",
+          "file": "ornaments/orn-minimalist-eunoia-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 49626,
+          "encoding": "lossy",
+          "sha256": "a854870d6e6d72ca2e4eecb14a1c4f6fd8f775d26c34157b39744abf3c77df0b",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-03-thumb.webp",
+          "file": "ornaments/orn-minimalist-eunoia-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10320,
+          "encoding": "lossy",
+          "sha256": "7ba8fa7ab4b6b030bc0d48db55b4ae09613c552bf6a055fda33d9bc8895869ec",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-eunoia-04",
+      "kind": "ornament",
+      "source": "orn-minimalist-eunoia-04.png",
+      "sourceSha256": "75e68cae30e9494965e68892ac3b2dc3f13b300b665c7f870dd85cabfc623b13",
+      "sourceBytes": 347238,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-04.webp",
+          "file": "ornaments/orn-minimalist-eunoia-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 50884,
+          "encoding": "lossy",
+          "sha256": "dd8aff01155568ebcb5bd9fb54c6ada02704d7defb72be8c85e085ea51f059bc",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-04-512.webp",
+          "file": "ornaments/orn-minimalist-eunoia-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 16488,
+          "encoding": "lossy",
+          "sha256": "70a272131986b214a4f15ac3549a2b42d5791d069f0218974320c118024fc154",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-04-thumb.webp",
+          "file": "ornaments/orn-minimalist-eunoia-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4108,
+          "encoding": "lossy",
+          "sha256": "9cb793fdc63bad38c245054bba55762a1fcb8ca602a1eb1cae08551a531bf9ab",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-eunoia-05",
+      "kind": "ornament",
+      "source": "orn-minimalist-eunoia-05-refined.png",
+      "sourceSha256": "70a1e24d0b71f44235b8985639f75a6790a247df06121144854f16038ad54244",
+      "sourceBytes": 155324,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-05.webp",
+          "file": "ornaments/orn-minimalist-eunoia-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 61662,
+          "encoding": "lossless",
+          "sha256": "3c473e17e0fcdf42e98084fb5f24cfbf394e179299361241a7780cf2e8b89854",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-05-512.webp",
+          "file": "ornaments/orn-minimalist-eunoia-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 17722,
+          "encoding": "lossless",
+          "sha256": "092c318b01248f5cbb624a32052c1eb08d562d20751f941d030baaf8ef6e3f9e",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-05-thumb.webp",
+          "file": "ornaments/orn-minimalist-eunoia-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4078,
+          "encoding": "lossless",
+          "sha256": "5a236cf2e3765da1a8121c4f546b25efca06d92e036a6c4d373d49343fdcfe2f",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-eunoia-06",
+      "kind": "ornament",
+      "source": "orn-minimalist-eunoia-06.png",
+      "sourceSha256": "ea1130db4b9b8c5b252836dfbcae249dd42b3f28671b083f61df704785a8e6e7",
+      "sourceBytes": 235436,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-06.webp",
+          "file": "ornaments/orn-minimalist-eunoia-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 40476,
+          "encoding": "lossy",
+          "sha256": "7ea873b6060d44c7f319a033742f71ff35457000356268c0ebb6e8f0ca0485ea",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-06-512.webp",
+          "file": "ornaments/orn-minimalist-eunoia-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 12292,
+          "encoding": "lossy",
+          "sha256": "1a561d40e13c0b3d9c34ab315a79cb6488ec64ce81bed64db0bcd1d51b4b48fe",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-eunoia-06-thumb.webp",
+          "file": "ornaments/orn-minimalist-eunoia-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 2570,
+          "encoding": "lossy",
+          "sha256": "9c6459b6c46053d6b9e29692f519e96de0fd9a1ecc3c19cfb09dd45fa403ef56",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-ruang-rindu-01",
+      "kind": "ornament",
+      "source": "orn-minimalist-ruang-rindu-01.png",
+      "sourceSha256": "cae0112f65d48a8b887d97bd78dcdee99cb14eaa77a5d081ed2c0b9676bdd6bf",
+      "sourceBytes": 953597,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-01.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 182230,
+          "encoding": "lossy",
+          "sha256": "ece82fc04a515b4354e0e383621f901e0d2e1ebe68499a623b17237e2d8e18fd",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-01-512.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 57208,
+          "encoding": "lossy",
+          "sha256": "67a62242f8d0f693662113a5c39d4118d72e2c9a0be5b6fd7e358e6a0ab48288",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-01-thumb.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12430,
+          "encoding": "lossy",
+          "sha256": "f9341a64a542bab3d79e433562b434d3d10513d10355d6c2550b9cfd62674403",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-ruang-rindu-02",
+      "kind": "ornament",
+      "source": "orn-minimalist-ruang-rindu-02.png",
+      "sourceSha256": "fd12df9b1b68511a30d8da794acc2ecc8126042dcd22dca5339f556cc0b7e040",
+      "sourceBytes": 159836,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-02.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 53232,
+          "encoding": "lossy",
+          "sha256": "3460994cf14416fa228166f5b28c0080b125259f698e268bfddc4904f66db223",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-02-512.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 18480,
+          "encoding": "lossy",
+          "sha256": "b835c57ab8d121f5e23a6a4168b8802225cb933c33d8a5a5b6b78388e6db57db",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-02-thumb.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 4116,
+          "encoding": "lossy",
+          "sha256": "89312c6361dae91ced4d5b2ce39e3b1b034290ca6872f71b6055ab9851508ff3",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-ruang-rindu-03",
+      "kind": "ornament",
+      "source": "orn-minimalist-ruang-rindu-03.png",
+      "sourceSha256": "0c5ab7ba349d01bc5b858098c0e0eb22190a753aed4953cfcb16a52eea9e4c57",
+      "sourceBytes": 450888,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-03.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 106970,
+          "encoding": "lossy",
+          "sha256": "92c5471368e90f45fc857faabfad03853986eedc1ba57ffbabd476c932fca733",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-03-512.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 35680,
+          "encoding": "lossy",
+          "sha256": "f87f093d06b2529a26ad750402dfc42804049e32f173f0dd0c498fee91f56f2c",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-03-thumb.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 7858,
+          "encoding": "lossy",
+          "sha256": "e2889547d6e31677572f50d76c7189e7808a511bc4c416d11b49e487f14e3620",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-ruang-rindu-04",
+      "kind": "ornament",
+      "source": "orn-minimalist-ruang-rindu-04.png",
+      "sourceSha256": "944c7e85d8143e672b8cbd7a97ac7321daf9f2a8fcc5c9c914d52ee550c4b641",
+      "sourceBytes": 898957,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-04.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 155902,
+          "encoding": "lossy",
+          "sha256": "f8442a9cfde8e4774f60e9514b6dbb27171e3497a9126e147fbb0a2da48ab6de",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-04-512.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 49746,
+          "encoding": "lossy",
+          "sha256": "41b9b02022a05e5a7d1b97e22090172daecc04755aa69669a146e94584fbe88a",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-04-thumb.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12256,
+          "encoding": "lossy",
+          "sha256": "958fe2a699b1c6032f0a25df078efdd5634a48a38a260a25aa1ce4f63cdc7dda",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-ruang-rindu-05",
+      "kind": "ornament",
+      "source": "orn-minimalist-ruang-rindu-05.png",
+      "sourceSha256": "5d843594eca054931417d47443117f38e8f44221dfb2df32ee5f0aea92302954",
+      "sourceBytes": 98710,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-05.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 35706,
+          "encoding": "lossless",
+          "sha256": "96ca0e43c07b45a6b7ce183869bd034d234ac83beae50fc07c99f73a7d202809",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-05-512.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 10104,
+          "encoding": "lossless",
+          "sha256": "d456a94791648ae68f9822bfefeede2bde8d168d4a89530cd7cdf482980153bc",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-05-thumb.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 2292,
+          "encoding": "lossless",
+          "sha256": "807c28d454c413453857075cf3772969982b11bea415422e13413e030bffa417",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-ruang-rindu-06",
+      "kind": "ornament",
+      "source": "orn-minimalist-ruang-rindu-06.png",
+      "sourceSha256": "cdfa38a88e9ccdd77d671c8ca49b9c1e1ae794ca2915875a5af182ec6eed55df",
+      "sourceBytes": 296160,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-06.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 53198,
+          "encoding": "lossy",
+          "sha256": "9638cd52666cb05cce9078cbc4728431b1afe5d293fde7177ad8a643c3d47896",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-06-512.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 15888,
+          "encoding": "lossy",
+          "sha256": "f56aa647c25a257fdb0617bd502d4e60264ac5f6af02ba5b3617cfbea2cc3ce8",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-ruang-rindu-06-thumb.webp",
+          "file": "ornaments/orn-minimalist-ruang-rindu-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3590,
+          "encoding": "lossy",
+          "sha256": "e73e133c8c55fb37c381a6dc149554ef70a27b0b9581d692a400f7ad0a79f1f4",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-senja-01",
+      "kind": "ornament",
+      "source": "orn-minimalist-senja-01.png",
+      "sourceSha256": "ee35cdb58b0657d4b389e7edf9ee946835feab02ee7e5e6d9eae909deea60507",
+      "sourceBytes": 468386,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-01.webp",
+          "file": "ornaments/orn-minimalist-senja-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 146118,
+          "encoding": "lossy",
+          "sha256": "2ab831fe0e0477e4b10c64b3fd44e0f8ebc6142adcf97da402631b9de121e9c2",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-01-512.webp",
+          "file": "ornaments/orn-minimalist-senja-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 46358,
+          "encoding": "lossy",
+          "sha256": "4d057ca63328660502c742cc597059940ae29e5a6f7f40e5041e566f15654ce3",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-01-thumb.webp",
+          "file": "ornaments/orn-minimalist-senja-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8568,
+          "encoding": "lossy",
+          "sha256": "1224a5fb4754f6f5d716c8df8618268fbc6be6b18c14730b7dca5ca10d7c7b57",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-senja-02",
+      "kind": "ornament",
+      "source": "orn-minimalist-senja-02.png",
+      "sourceSha256": "e5840fc20f338a0a83e2eefc47b75a79ff17945fe4ecec3e998a1a9a48a85f7e",
+      "sourceBytes": 1040446,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-02.webp",
+          "file": "ornaments/orn-minimalist-senja-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 134016,
+          "encoding": "lossy",
+          "sha256": "0a50860e8f0fcd91cf64515bb96d2460a23cb3d638bfbfe9ee5e5224e0158c89",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-02-512.webp",
+          "file": "ornaments/orn-minimalist-senja-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 40058,
+          "encoding": "lossy",
+          "sha256": "c437e4e2d92dfa3671795ff0a639609e51ae54f3bdb5eb8a05b236a495d777c9",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-02-thumb.webp",
+          "file": "ornaments/orn-minimalist-senja-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8934,
+          "encoding": "lossy",
+          "sha256": "9707b78debc4642bcfe854fb9bdd0db04ccd745ec10d3fe2d7b1828bbee8850b",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-senja-03",
+      "kind": "ornament",
+      "source": "orn-minimalist-senja-03.png",
+      "sourceSha256": "dce837d486278e883d0fd9ac6cf1b757962336f38c7d4c39bcd76e6fa9d1ef9b",
+      "sourceBytes": 717121,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-03.webp",
+          "file": "ornaments/orn-minimalist-senja-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 170518,
+          "encoding": "lossy",
+          "sha256": "b8c1c8c038336a91fb97bcb11bbadf9da5e42290742ba42694856cfb879addec",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-03-512.webp",
+          "file": "ornaments/orn-minimalist-senja-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 55796,
+          "encoding": "lossy",
+          "sha256": "b6a447c5bc1bd9043c9ada5b64dd8e2e02f1d0d2805c928163a6465f09cb2793",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-03-thumb.webp",
+          "file": "ornaments/orn-minimalist-senja-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12352,
+          "encoding": "lossy",
+          "sha256": "2ea6fec4843f1e4743314f6d42cdb16f13b7b1ced709aa6919d6fd8fe7402f94",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-senja-04",
+      "kind": "ornament",
+      "source": "orn-minimalist-senja-04.png",
+      "sourceSha256": "b473261fc1441362e3abacbf3df8c2ba4002e2954e76800b7421b0d58f6e8020",
+      "sourceBytes": 912828,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-04.webp",
+          "file": "ornaments/orn-minimalist-senja-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 112498,
+          "encoding": "lossy",
+          "sha256": "016376c2ec3a36fd8db58db00a481ad21188160a6c405a66f4b32166a32744d0",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-04-512.webp",
+          "file": "ornaments/orn-minimalist-senja-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 29646,
+          "encoding": "lossy",
+          "sha256": "7275dfa6994dfe6b8c425e9f8a27c671fcd0c557ba74ccaee57127dc1c4100ff",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-04-thumb.webp",
+          "file": "ornaments/orn-minimalist-senja-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5922,
+          "encoding": "lossy",
+          "sha256": "4b7d0c7615045dfb9b557500221ffd8aab300acdb413d90bc8e3923663bba0f5",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-senja-05",
+      "kind": "ornament",
+      "source": "orn-minimalist-senja-05.png",
+      "sourceSha256": "247dcdd80a73260f365bfcd13533de8d6a1439b747048f5cbf9a4519e9644b24",
+      "sourceBytes": 294330,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-05.webp",
+          "file": "ornaments/orn-minimalist-senja-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 47304,
+          "encoding": "lossy",
+          "sha256": "26baa3a450313ec8bf2a12d65f0aefacea66564b6d99a8398f009f67df36dbda",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-05-512.webp",
+          "file": "ornaments/orn-minimalist-senja-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 16356,
+          "encoding": "lossy",
+          "sha256": "ccec38d9d2480e210778f8af74378d1311d725e174586d06df52851cef934ad1",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-05-thumb.webp",
+          "file": "ornaments/orn-minimalist-senja-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3830,
+          "encoding": "lossy",
+          "sha256": "adb2d1ed409f2982342cb0d25ef29aab4e784d3f9e1951731c8500700e8ae26d",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-minimalist-senja-06",
+      "kind": "ornament",
+      "source": "orn-minimalist-senja-06.png",
+      "sourceSha256": "94760129cc8cb9748bf7058f4794a7b0f0e461a0e90d2511c426fedbe8abc843",
+      "sourceBytes": 639310,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-06.webp",
+          "file": "ornaments/orn-minimalist-senja-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 93808,
+          "encoding": "lossy",
+          "sha256": "0f96bdbb71670eb0ae1840fefe6aa3a2e0a9de77155e8b6266aabf1da087a9fa",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-06-512.webp",
+          "file": "ornaments/orn-minimalist-senja-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 27480,
+          "encoding": "lossy",
+          "sha256": "0c5671b0f140b3a14a7e6845350ed7fc47aec9cffa7205f66e61cf279080b8a6",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-minimalist-senja-06-thumb.webp",
+          "file": "ornaments/orn-minimalist-senja-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6390,
+          "encoding": "lossy",
+          "sha256": "4fc706823204884996ddbc0a5cba9497c01a50eaaf56a3b2af9a013ec625673a",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-retro-01",
+      "kind": "ornament",
+      "source": "orn-retro-01.png",
+      "sourceSha256": "176971247ea996839177ad3534f37413c4c671e650d51c868e9912cf7909f994",
+      "sourceBytes": 1011876,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-retro-01.webp",
+          "file": "ornaments/orn-retro-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 137902,
+          "encoding": "lossy",
+          "sha256": "5410298ee7c01ff39f8e339d29c0e93c9f708e8c700451961920c2c3fdb1dd94",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-retro-01-512.webp",
+          "file": "ornaments/orn-retro-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 40968,
+          "encoding": "lossy",
+          "sha256": "35bad2860e7352fc2b09f593337775b8c9afdca29ffb13d6f133fe7fd83b8cc7",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-retro-01-thumb.webp",
+          "file": "ornaments/orn-retro-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 8402,
+          "encoding": "lossy",
+          "sha256": "63a8d8f0569d1bdefaa90969ff0edd112b16263d0bf702f98cafe2339cccc9bc",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-retro-02",
+      "kind": "ornament",
+      "source": "orn-retro-02.png",
+      "sourceSha256": "b58656832df081f740a4bdad2eeccd23a8937897f39e8cc28554a0468c5dc90b",
+      "sourceBytes": 1843958,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-retro-02.webp",
+          "file": "ornaments/orn-retro-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 218466,
+          "encoding": "lossy",
+          "sha256": "9e80514d314f7d55a7e0ad9ca32b62ef888656b8ae1f076ee49641383dc9d018",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-retro-02-512.webp",
+          "file": "ornaments/orn-retro-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 58642,
+          "encoding": "lossy",
+          "sha256": "62681538d2ee12d079b8817f35ce07c4594f0869437a2e9257f41600c0dc5d9d",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-retro-02-thumb.webp",
+          "file": "ornaments/orn-retro-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 9752,
+          "encoding": "lossy",
+          "sha256": "f00e3f3c843c90edb3707fbf4fd4e5c2d11d53c1d692b60121454d1f8b916909",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-retro-03",
+      "kind": "ornament",
+      "source": "orn-retro-03.png",
+      "sourceSha256": "a31800086cbce5f8c5e3997f6b9d1445640cd4735f244e4dc112966ba1a2eaaf",
+      "sourceBytes": 1327392,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-retro-03.webp",
+          "file": "ornaments/orn-retro-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 154458,
+          "encoding": "lossy",
+          "sha256": "4294d4ba9f0f532f061e1322ae6bffd2e4ec198314e584cc7ea12492b5691259",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-retro-03-512.webp",
+          "file": "ornaments/orn-retro-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 38988,
+          "encoding": "lossy",
+          "sha256": "389cd4a513daf5d5e03ff3ecbd73b2e13f86f736451ec4b0e10ea293ce4556d3",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-retro-03-thumb.webp",
+          "file": "ornaments/orn-retro-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 5988,
+          "encoding": "lossy",
+          "sha256": "c284d1ba7dc5208478b744541baa2ca68993831dc5d298d7b5cd106a52621a92",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-retro-04",
+      "kind": "ornament",
+      "source": "orn-retro-04.png",
+      "sourceSha256": "2b18faecdbea8c9fdb98d07d7cde0cb21f9e2ca43da4b8c0a57426d3cdaa593a",
+      "sourceBytes": 1835669,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-retro-04.webp",
+          "file": "ornaments/orn-retro-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 236636,
+          "encoding": "lossy",
+          "sha256": "b9b027afed1f02309d40295ded805259d9409de86c452580f1535f3ac7bf196c",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-retro-04-512.webp",
+          "file": "ornaments/orn-retro-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 68434,
+          "encoding": "lossy",
+          "sha256": "d24fa1472f7867dadf0ee6ddbda09d132652b016a16a18326f169aec39ea7b50",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-retro-04-thumb.webp",
+          "file": "ornaments/orn-retro-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 13854,
+          "encoding": "lossy",
+          "sha256": "8325b8d2c2969373ddbdcaff9c656ef6bca1487279fbca50dcd29ffdab73c27b",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-retro-05",
+      "kind": "ornament",
+      "source": "orn-retro-05.png",
+      "sourceSha256": "87d0130594efde0bcf496cc5fcf3f393801c7260a01f2b114cac1490c4291ec6",
+      "sourceBytes": 1728353,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-retro-05.webp",
+          "file": "ornaments/orn-retro-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 207058,
+          "encoding": "lossy",
+          "sha256": "bd05aff93940ac0ee29387912ec95429070a2e8b6f9f2325ccf94697d42dd09c",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-retro-05-512.webp",
+          "file": "ornaments/orn-retro-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 57116,
+          "encoding": "lossy",
+          "sha256": "5054f062046f26ec9b48d3de5296e3670a546559b7a4ae9e909fa98d61afbc35",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-retro-05-thumb.webp",
+          "file": "ornaments/orn-retro-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 10964,
+          "encoding": "lossy",
+          "sha256": "9d2ca8d81209801564ef9a08cd7e3c51bb704405975bea1b4eee2fdfd6692021",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-retro-06",
+      "kind": "ornament",
+      "source": "orn-retro-06.png",
+      "sourceSha256": "56ac7d09cb741aa551ea6b730f2c077d6cba7b9eca73bb23670860b4ab6983af",
+      "sourceBytes": 1740432,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-retro-06.webp",
+          "file": "ornaments/orn-retro-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 443066,
+          "encoding": "lossy",
+          "sha256": "689d29b30b6e4e7a16111de789bddf832934410733766fafda6cff7a2fb238d3",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-retro-06-512.webp",
+          "file": "ornaments/orn-retro-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 127902,
+          "encoding": "lossy",
+          "sha256": "9a19ec61da5ac2cd26fe86c5599d2b09a22ca0996a4c63a7f208a218249cfd4e",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-retro-06-thumb.webp",
+          "file": "ornaments/orn-retro-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 21124,
+          "encoding": "lossy",
+          "sha256": "09825a6d589fb4f3e81694482345939dab8664e4194d5654560af482e490774e",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-shared-romance-01",
+      "kind": "ornament",
+      "source": "orn-shared-romance-01.png",
+      "sourceSha256": "2dfe560d7bed69302b846dcfc7ab3346c6865b11aa43d15796e510699c50e0e9",
+      "sourceBytes": 1548487,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-shared-romance-01.webp",
+          "file": "ornaments/orn-shared-romance-01.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 319682,
+          "encoding": "lossy",
+          "sha256": "e32c7bfabcdeaf5621e14d933752e2deb66985fbb5b8eec54792c7612e49f3d4",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-shared-romance-01-512.webp",
+          "file": "ornaments/orn-shared-romance-01-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 100222,
+          "encoding": "lossy",
+          "sha256": "3a63c17e872072478354d200916506126bff8eab46b36da50b2822594783bc03",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-shared-romance-01-thumb.webp",
+          "file": "ornaments/orn-shared-romance-01-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 17598,
+          "encoding": "lossy",
+          "sha256": "d33b4cf1002c8b07ffba1ca150dd10d273ab7230e5b144ee6cfc7a532a94c39b",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-shared-romance-02",
+      "kind": "ornament",
+      "source": "orn-shared-romance-02.png",
+      "sourceSha256": "a2cc7d1158411605652bb4e7c53209cfffe08e758beb8b3d31acc29cc6f16353",
+      "sourceBytes": 1120586,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-shared-romance-02.webp",
+          "file": "ornaments/orn-shared-romance-02.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 240624,
+          "encoding": "lossy",
+          "sha256": "0129693d9a2f385e617be6f96f4ad853b3e0aa95d6b9459a514190be73c0e6d7",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-shared-romance-02-512.webp",
+          "file": "ornaments/orn-shared-romance-02-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 76548,
+          "encoding": "lossy",
+          "sha256": "d5d3f8bef5f7b3c898a6f1fc4c76dfba2722d8487bf026473cf0cd9835e4cc2d",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-shared-romance-02-thumb.webp",
+          "file": "ornaments/orn-shared-romance-02-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 15264,
+          "encoding": "lossy",
+          "sha256": "eaca37d304984ed3715cbc2ed41c7c50c1b9cdfaab3e2aa0461d7b94c51bb5bb",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-shared-romance-03",
+      "kind": "ornament",
+      "source": "orn-shared-romance-03-corrected.png",
+      "sourceSha256": "ed064634a48d9f76b628b655576c023b71b959151f90d453cd476182de87ad0a",
+      "sourceBytes": 1465826,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-shared-romance-03.webp",
+          "file": "ornaments/orn-shared-romance-03.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 187384,
+          "encoding": "lossy",
+          "sha256": "8308377af6bbd6bbab8e29d2e358bf8b0caaed513774ebe6a33d49a30fef3589",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-shared-romance-03-512.webp",
+          "file": "ornaments/orn-shared-romance-03-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 55254,
+          "encoding": "lossy",
+          "sha256": "408a24a6d5ea4bf9ca64e2720b00267ae5c552acd61f8549b413bc1e5f6de79e",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-shared-romance-03-thumb.webp",
+          "file": "ornaments/orn-shared-romance-03-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 12622,
+          "encoding": "lossy",
+          "sha256": "3f61125b39d1214951789435c8d1302f9deff8da537c175b0f0e6b7ba9a0ef63",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-shared-romance-04",
+      "kind": "ornament",
+      "source": "orn-shared-romance-04.png",
+      "sourceSha256": "e8a2098efea7a765a8270a8f0bb53348b5040c0dd17daa1d115642eb35e35cd9",
+      "sourceBytes": 1737843,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-shared-romance-04.webp",
+          "file": "ornaments/orn-shared-romance-04.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 260970,
+          "encoding": "lossy",
+          "sha256": "de12e54970855fecca6653d5def75bf22cfecc18630c1c031e156a138d589ed5",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-shared-romance-04-512.webp",
+          "file": "ornaments/orn-shared-romance-04-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 79418,
+          "encoding": "lossy",
+          "sha256": "36ad9e8ac7bc6d2d8ede1e56683a32658c19b7b2042cbdc332c342192ebc274f",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-shared-romance-04-thumb.webp",
+          "file": "ornaments/orn-shared-romance-04-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 14340,
+          "encoding": "lossy",
+          "sha256": "6824227baeb1fb16b0a3081b2ceb06a7953ab94be3ea6ec5bb361ee40d8d8833",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-shared-romance-05",
+      "kind": "ornament",
+      "source": "orn-shared-romance-05.png",
+      "sourceSha256": "470ae373f8ba5b6cde5aad124032b6b627a5b15b7f7d0aca7a8b1d3f96845377",
+      "sourceBytes": 1218451,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-shared-romance-05.webp",
+          "file": "ornaments/orn-shared-romance-05.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 196292,
+          "encoding": "lossy",
+          "sha256": "a9c01e495c06aa69a13e694d6916fa52cd4631c36b73d46ae5bef6916cce87a3",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-shared-romance-05-512.webp",
+          "file": "ornaments/orn-shared-romance-05-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 60008,
+          "encoding": "lossy",
+          "sha256": "f49fe325d4d7dd4a1455cf25f1351996dee66f09733d6825f2932a863d0c5c81",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-shared-romance-05-thumb.webp",
+          "file": "ornaments/orn-shared-romance-05-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 11008,
+          "encoding": "lossy",
+          "sha256": "8b1d415ffe22adabaa2fbd65782b55b375edefcd75f6ca1365078fe039602663",
+          "hasAlpha": true
+        }
+      ]
+    },
+    {
+      "id": "orn-shared-romance-06",
+      "kind": "ornament",
+      "source": "orn-shared-romance-06.png",
+      "sourceSha256": "7b053f7fa8e881950d7f63b0ef1a2b644ea3dc614a813d59a3f3d522127dea46",
+      "sourceBytes": 1300411,
+      "variants": [
+        {
+          "role": "full",
+          "url": "/assets/templates/ornaments/orn-shared-romance-06.webp",
+          "file": "ornaments/orn-shared-romance-06.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 272796,
+          "encoding": "lossy",
+          "sha256": "799c58c10764ed7981e2880fce71e310328e0a0b6efb89fb3265d992745029ea",
+          "hasAlpha": true
+        },
+        {
+          "role": "small",
+          "url": "/assets/templates/ornaments/orn-shared-romance-06-512.webp",
+          "file": "ornaments/orn-shared-romance-06-512.webp",
+          "width": 512,
+          "height": 512,
+          "bytes": 85010,
+          "encoding": "lossy",
+          "sha256": "81c3a6b63cbd950496bbaad29684aada7509064deadf85f5b77a45aa3184defa",
+          "hasAlpha": true
+        },
+        {
+          "role": "thumbnail",
+          "url": "/assets/templates/ornaments/orn-shared-romance-06-thumb.webp",
+          "file": "ornaments/orn-shared-romance-06-thumb.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 15702,
+          "encoding": "lossy",
+          "sha256": "3416553f68e530624c9fd320d2dde0e6b2dd0e98f8df0e5c286792e3dc4eff8f",
+          "hasAlpha": true
+        }
+      ]
+    }
+  ]
+}

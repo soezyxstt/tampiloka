@@ -1,0 +1,543 @@
+.tk-frame,
+.tk-frame *,
+.tk-frame *::before,
+.tk-frame *::after {
+  box-sizing: border-box;
+}
+
+.tk-frame {
+  --tk-ink: #28332e;
+  --tk-paper: #f8f5ee;
+  --tk-rule: rgb(40 51 46 / 18%);
+  --tk-focus: #9e6841;
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  background: var(--tk-paper);
+  color: var(--tk-ink);
+  font-family: var(--tk-body-font, "Cormorant Garamond", Georgia, serif);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.tk-frame button,
+.tk-frame input,
+.tk-frame select,
+.tk-frame textarea {
+  color: inherit;
+  font: inherit;
+}
+
+.tk-frame button,
+.tk-frame a,
+.tk-frame summary,
+.tk-frame select,
+.tk-frame input,
+.tk-frame textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tk-frame :focus-visible {
+  outline: 3px solid var(--tk-focus);
+  outline-offset: 3px;
+}
+
+.tk-frame.tk-closed {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  max-height: 100vh;
+  max-height: 100svh;
+  overflow: hidden;
+}
+
+.tk-toolbar {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: minmax(84px, 1fr) minmax(0, 2fr) minmax(50px, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--tk-rule);
+  background: var(--tk-paper);
+  color: var(--tk-ink);
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.tk-toolbar-back,
+.tk-toolbar-name,
+.tk-toolbar-kind {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tk-toolbar-back {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: 7px;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tk-toolbar-name {
+  justify-self: center;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tk-toolbar-kind {
+  justify-self: end;
+  opacity: 0.65;
+}
+
+.tk-cover {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 52px);
+  height: calc(100svh - 52px);
+  overflow: hidden;
+}
+
+.tk-cover > * {
+  max-width: 100%;
+}
+
+.tk-open-button,
+.tk-greeting-continue,
+.tk-rsvp-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--tk-ink);
+  border-radius: 2px;
+  background: var(--tk-ink);
+  color: var(--tk-paper) !important;
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.tk-open-button:hover,
+.tk-greeting-continue:hover,
+.tk-rsvp-submit:hover {
+  border-color: var(--tk-focus);
+  background: var(--tk-focus);
+}
+
+.tk-content {
+  min-height: calc(100vh - 52px);
+  min-height: calc(100svh - 52px);
+  padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  outline: none;
+}
+
+.tk-controls {
+  position: fixed;
+  z-index: 30;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3.5vw, 38px);
+  min-height: calc(58px + env(safe-area-inset-bottom, 0px));
+  padding: 6px max(16px, env(safe-area-inset-right, 0px)) max(6px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  border-top: 1px solid var(--tk-rule);
+  background: color-mix(in srgb, var(--tk-paper) 94%, transparent);
+  color: var(--tk-ink);
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+  line-height: 1.2;
+  backdrop-filter: blur(12px);
+}
+
+.tk-controls > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tk-controls > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tk-music-button,
+.tk-dialog-close {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--tk-rule);
+  border-radius: 50%;
+  background: var(--tk-paper);
+  color: var(--tk-ink);
+  cursor: pointer;
+}
+
+.tk-audio-error {
+  position: absolute;
+  right: 12px;
+  bottom: calc(100% + 8px);
+  max-width: min(90vw, 320px);
+  padding: 8px 12px;
+  background: var(--tk-paper);
+  color: var(--tk-ink);
+  font-size: 14px;
+  box-shadow: 0 3px 18px rgb(0 0 0 / 12%);
+}
+
+.tk-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  width: min(90vw, 560px);
+  max-width: calc(100vw - 24px);
+  max-height: min(92vh, 900px);
+  max-height: min(92svh, 900px);
+  margin: 0;
+  padding: clamp(26px, 5vw, 48px);
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--tk-rule);
+  background: var(--tk-paper);
+  color: var(--tk-ink);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 20%);
+}
+
+.tk-dialog:not([open]) {
+  display: none;
+}
+
+.tk-dialog::backdrop {
+  background: rgb(18 20 18 / 58%);
+  backdrop-filter: blur(3px);
+}
+
+.tk-dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.tk-greeting-dialog {
+  text-align: center;
+}
+
+.tk-greeting-kicker {
+  margin: 0 42px 10px;
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.tk-greeting-dialog h2 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 7vw, 44px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.tk-greeting-dialog > p:not(.tk-greeting-kicker) {
+  max-width: 34rem;
+  margin: 0 auto 24px;
+  font-size: 16px;
+}
+
+.tk-photo-dialog[open] {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 12px;
+  width: min(92vw, 800px);
+  height: min(92vh, 920px);
+  height: min(92svh, 920px);
+  padding: 48px 18px 16px;
+}
+
+.tk-photo-full {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+  object-fit: contain;
+}
+
+.tk-photo-dialog-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+}
+
+.tk-photo-dialog-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tk-decoration-picture,
+.tk-photo-picture {
+  display: block;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.tk-decoration {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tk-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.tk-photo-button {
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: inherit;
+  cursor: zoom-in;
+}
+
+.tk-countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 26px;
+  margin: 0;
+}
+
+.tk-countdown > div {
+  display: grid;
+  gap: 2px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.tk-countdown dt {
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+}
+
+.tk-countdown dd {
+  order: -1;
+  margin: 0;
+  font-size: clamp(20px, 4vw, 30px);
+  font-variant-numeric: tabular-nums;
+}
+
+.tk-event-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.tk-event-map > a,
+.tk-calendar-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  color: inherit;
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+  text-underline-offset: 4px;
+}
+
+.tk-rsvp {
+  font-size: 16px;
+}
+
+.tk-rsvp form {
+  display: grid;
+  gap: 9px;
+}
+
+.tk-rsvp label {
+  margin-top: 7px;
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tk-rsvp input,
+.tk-rsvp select,
+.tk-rsvp textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 11px;
+  border: 1px solid var(--tk-rule);
+  border-radius: 0;
+  background: var(--tk-paper);
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 16px;
+}
+
+.tk-rsvp textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.tk-rsvp-submit {
+  justify-self: start;
+  margin-top: 6px;
+}
+
+.tk-rsvp-status {
+  min-height: 1.5em;
+  margin: 0;
+}
+
+.tk-wishes {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.tk-wishes > article {
+  display: grid;
+  gap: 3px;
+  padding-top: 12px;
+  border-top: 1px solid var(--tk-rule);
+}
+
+.tk-wishes > article > span {
+  font-family: var(--tk-ui-font, Arial, sans-serif);
+  font-size: 14px;
+}
+
+.tk-wishes p,
+.tk-wishes > p {
+  margin: 3px 0 0;
+}
+
+.tk-gift summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.tk-gift > p {
+  max-width: 42rem;
+  margin: 8px 0 0;
+}
+
+.tk-content.tk-motion-ready [data-reveal] {
+  opacity: 0;
+  translate: 0 18px;
+  transition: opacity 620ms ease, translate 620ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.tk-content.tk-motion-ready [data-reveal].is-visible,
+.tk-content.tk-motion-ready [data-reveal][data-revealed="true"] {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (max-width: 520px) {
+  .tk-toolbar {
+    grid-template-columns: minmax(62px, 1fr) minmax(0, 2fr) minmax(44px, 1fr);
+    gap: 6px;
+    padding-inline: 12px;
+    font-size: 14px;
+  }
+
+  .tk-toolbar-back {
+    gap: 4px;
+  }
+
+  .tk-controls {
+    justify-content: space-around;
+    gap: 2px;
+    padding-right: max(8px, env(safe-area-inset-right, 0px));
+    padding-left: max(8px, env(safe-area-inset-left, 0px));
+  }
+
+  .tk-controls > a {
+    min-width: 0;
+    padding-inline: 4px;
+    font-size: 14px;
+  }
+
+  .tk-music-button {
+    flex-basis: 44px;
+  }
+
+  .tk-photo-dialog-controls button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-frame *,
+  .tk-frame *::before,
+  .tk-frame *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .tk-content.tk-motion-ready [data-reveal] {
+    opacity: 1;
+    translate: none;
+  }
+}

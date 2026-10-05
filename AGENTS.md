@@ -8,6 +8,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+# Temura presentation rules
+
+For work in `apps/temura`, follow the Tampiloka website's restrained style system. Keep copy short, concrete, and functional. Omit unnecessary headings, slogans, overlines, and repeated descriptions. Do not introduce decorative pills, badges, chips, or pill-shaped tabs. Avoid card-heavy layouts; prefer open sections, rows, lists, tables, and dividers, except where equal-size template previews or a specific interaction need cards. Dashboard and studio should read as working tools with essential labels and help. Primary CTA and header buttons follow Tampiloka's reusable brand system (`size="pill"` / `rounded-full`). These rules also apply to delegated work. See `apps/temura/AGENTS.md` for the detailed rules and the asset-download gate before creating invitation previews.
+
 # Tampiloka brand assets and typography
 
 ## Assets

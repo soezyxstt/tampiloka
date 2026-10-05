@@ -1,0 +1,33 @@
+{
+  "name": "@tampiloka/brand-system",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./ui/button": "./src/ui/button.tsx",
+    "./ui/accordion": "./src/ui/accordion.tsx",
+    "./ui/card": "./src/ui/card.tsx",
+    "./ui/sheet": "./src/ui/sheet.tsx",
+    "./motion": "./src/motion/site-motion.tsx",
+    "./header": "./src/layout/site-header.tsx",
+    "./footer": "./src/layout/site-footer.tsx",
+    "./showcase": "./src/showcase/index.tsx",
+    "./styles.css": "./styles.css",
+    "./styles/*": "./styles/*",
+    "./lib/utils": "./src/lib/utils.ts"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.8.0",
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.4.0",
+    "lucide-react": "^1.49.0"
+  },
+  "peerDependencies": {
+    "next": ">=15.0.0",
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
+  }
+}

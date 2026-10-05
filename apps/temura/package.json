@@ -1,0 +1,62 @@
+{
+  "name": "@temura/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "prisma generate && next build",
+    "postinstall": "prisma generate",
+    "start": "next start --port 3001",
+    "lint": "eslint",
+    "db:seed": "bun prisma/seed.ts",
+    "typecheck": "prisma generate && next typegen && tsc --noEmit",
+    "build:favicon": "node scripts/create-favicon.mjs",
+    "check:brand": "node scripts/verify-brand.mjs"
+  },
+  "prisma": {
+    "seed": "bun prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "@uploadthing/react": "^7.3.3",
+    "@zxing/browser": "^0.1.5",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.8.0",
+    "next": "16.3.8",
+    "next-auth": "^4.24.13",
+    "pg": "^8.20.0",
+    "prisma": "^7.7.0",
+    "qrcode.react": "^4.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "uploadthing": "^7.7.4",
+    "zod": "^4.3.6",
+    "@base-ui/react": "^1.8.0",
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.4.0",
+    "@tampiloka/brand-system": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^20",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
