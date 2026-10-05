@@ -8,12 +8,24 @@ importers:
 
   .:
     devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.19.43
+      '@types/react':
+        specifier: ^19
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19
+        version: 19.3.0(@types/react@19.3.0)
       playwright:
         specifier: ^1.63.0
         version: 1.63.0
       turbo:
         specifier: ^2.8.0
         version: 2.11.6
+      typescript:
+        specifier: ^5
+        version: 5.9.3
 
   apps/tampiloka:
     dependencies:
@@ -196,6 +208,19 @@ importers:
       react-dom:
         specifier: '>=19.0.0'
         version: 19.2.8(react@19.2.8)
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.19.43
+      '@types/react':
+        specifier: ^19
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19
+        version: 19.3.0(@types/react@19.3.0)
+      typescript:
+        specifier: ^5
+        version: 5.9.3
 
 packages:
 

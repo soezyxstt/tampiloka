@@ -210,7 +210,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
 
       <Sheet
         open={activeProject !== null}
-        onOpenChange={(open) => {
+        onOpenChange={(open: boolean) => {
           if (!open) setActiveProject(null);
         }}
       >

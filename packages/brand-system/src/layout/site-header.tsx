@@ -225,7 +225,7 @@ export function SiteHeader({
         )}
         <Sheet
           open={sheetOpen}
-          onOpenChange={(open) => {
+          onOpenChange={(open: boolean) => {
             setSheetOpen(open);
             if (open) setHiddenFor(null);
           }}

@@ -28,7 +28,9 @@ export function SiteMotion({
     if (!container) return;
 
     const selector = revealSelector;
-    const targets = Array.from(container.querySelectorAll<HTMLElement>(selector));
+    const targets = Array.from(container.querySelectorAll(selector)).filter(
+      (el): el is HTMLElement => el instanceof HTMLElement
+    );
     const siblingIndexes = new Map<HTMLElement, number>();
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -80,10 +82,12 @@ export function SiteMotion({
     const scan = (node: Node) => {
       if (!(node instanceof HTMLElement)) return;
       if (node.matches(selector)) register(node);
-      node.querySelectorAll<HTMLElement>(selector).forEach(register);
+      node.querySelectorAll(selector).forEach((el) => {
+        if (el instanceof HTMLElement) register(el);
+      });
     };
 
-    targets.forEach(register);
+    targets.forEach((target) => register(target));
     const mutations = new MutationObserver((records) => {
       for (const record of records) {
         if (record.type === "attributes") register(record.target as HTMLElement);

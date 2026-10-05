@@ -109,7 +109,7 @@ export function ShowcaseSheetDrawer({
   };
 
   return (
-    <Sheet open={item !== null} onOpenChange={(open) => { if (!open) onClose(); }}>
+    <Sheet open={item !== null} onOpenChange={(open: boolean) => { if (!open) onClose(); }}>
       <SheetContent
         className="showcase-sheet"
         style={{ "--showcase-sheet-drag": `${dragOffset}px` } as CSSProperties}

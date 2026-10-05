@@ -1,26 +1,32 @@
 "use client"
 
-import { Dialog } from "@base-ui/react/dialog"
+import {
+  Dialog,
+  type DialogRootProps,
+  type DialogTriggerProps,
+  type DialogCloseProps,
+  type DialogTitleProps,
+  type DialogPopupProps,
+} from "@base-ui/react/dialog"
 import { cn } from "cn"
-import type { ComponentProps } from "react"
 
-function Sheet(props: ComponentProps<typeof Dialog.Root>) {
+function Sheet(props: DialogRootProps) {
   return <Dialog.Root {...props} />
 }
 
-function SheetTrigger(props: ComponentProps<typeof Dialog.Trigger>) {
+function SheetTrigger(props: DialogTriggerProps) {
   return <Dialog.Trigger {...props} />
 }
 
-function SheetClose(props: ComponentProps<typeof Dialog.Close>) {
+function SheetClose(props: DialogCloseProps) {
   return <Dialog.Close {...props} />
 }
 
-function SheetTitle({ className, ...props }: ComponentProps<typeof Dialog.Title>) {
+function SheetTitle({ className, ...props }: DialogTitleProps) {
   return <Dialog.Title className={cn("sheet-title", className)} {...props} />
 }
 
-function SheetContent({ className, children, ...props }: ComponentProps<typeof Dialog.Popup>) {
+function SheetContent({ className, children, ...props }: DialogPopupProps) {
   return (
     <Dialog.Portal>
       <Dialog.Backdrop className="sheet-backdrop" />
