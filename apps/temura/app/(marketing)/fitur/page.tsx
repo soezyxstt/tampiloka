@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { WelcomeExample } from "@/components/welcome-example";
-export const metadata: Metadata = { title: "Fitur undangan | Temura", alternates: { canonical: "/fitur" } };
+const title = "Fitur undangan digital";
+const description = "Lihat fitur undangan digital Temura, dari detail acara dan peta hingga RSVP, galeri, dashboard, dan studio.";
+const socialImage = { url: "/images/wedding-hero.webp", alt: "Pasangan pengantin di lokasi pernikahan dengan dekorasi bunga" };
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: { canonical: "/fitur" },
+  openGraph: { title, description, url: "/fitur", type: "website", siteName: "Temura", locale: "id_ID", images: [socialImage] },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage.url] },
+};
 const groups = [
   { name: "Undangan", rows: [["Detail acara", "Nama pasangan, keluarga, tanggal, dan lokasi."], ["Maps", "Tautan peta lokasi acara."], ["Sambutan", "Salam pembuka yang bisa disesuaikan."], ["Musik & galeri", "Lagu pilihan, foto, dan cerita pasangan."], ["Hadiah", "Transfer atau QRIS dengan ucapan."]] },
   { name: "Tamu", rows: [["Tautan personal", "Bagikan undangan dengan nama tamu."], ["RSVP", "Konfirmasi kehadiran dan jumlah tamu."], ["Ucapan", "Doa dan pesan dari keluarga dan sahabat."]] },

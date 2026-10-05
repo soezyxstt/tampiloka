@@ -3,8 +3,18 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ProjectShowcase from "@/components/project-showcase";
 import { StudioSections } from "@/components/studio-sections";
 import { Button } from "@/components/ui/button";
+import { createPageMetadata } from "@/lib/seo";
 
 import { HeroBackdrop } from "@/components/hero-backdrop";
+
+export const metadata = createPageMetadata({
+  path: "/",
+  title: "Studio Web untuk Brand dan Bisnis",
+  description:
+    "Studio web independen untuk brand dan bisnis. Tampiloka merancang website, produk digital, branding, dan undangan pernikahan digital melalui Temura.",
+  imageAlt: "Rancangan website dengan antarmuka hijau di layar laptop dan contoh palet warna.",
+  imagePath: "/images/service-overview.webp",
+});
 
 export default function Home() {
   return <>

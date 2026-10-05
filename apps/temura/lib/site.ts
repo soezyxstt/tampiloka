@@ -1,4 +1,9 @@
-export const siteOrigin = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3001";
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const defaultSiteUrl = process.env.NODE_ENV === "production"
+  ? "https://temura.adihnursyam.com"
+  : "http://localhost:3001";
+
+export const siteOrigin = new URL(configuredSiteUrl || defaultSiteUrl).origin;
 
 export function contactLink(packageName?: string) {
   const number = process.env.ADMIN_WHATSAPP?.replace(/\D/g, "");

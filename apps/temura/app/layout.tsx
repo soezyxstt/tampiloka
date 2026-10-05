@@ -26,16 +26,24 @@ export const metadata: Metadata = {
     type: "website",
     title: "Temura | Undangan Digital oleh Tampiloka",
     description: "Pilih desain undangan, bagikan kepada tamu, dan kelola kehadiran. Undangan digital oleh Tampiloka.",
-    images: [{ url: "/brand/social/light/temura-og-image-light.png", width: 1200, height: 630, alt: "Temura | Undangan Digital oleh Tampiloka" }],
+    images: [{ url: "/images/wedding-hero.webp", alt: "Pasangan pengantin di lokasi pernikahan dengan dekorasi bunga" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Temura | Undangan Digital oleh Tampiloka",
     description: "Pilih desain undangan, bagikan kepada tamu, dan kelola kehadiran. Undangan digital oleh Tampiloka.",
-    images: ["/brand/social/light/temura-og-image-light.png"],
+    images: ["/images/wedding-hero.webp"],
   },
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Temura",
+  url: siteOrigin,
+  inLanguage: "id-ID",
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="id" className={`${inter.variable} ${manrope.variable} ${mono.variable} ${cormorant.variable} ${lato.variable} h-full antialiased`}><body className="min-h-full"><Providers>{children}</Providers></body></html>;
+  return <html lang="id" className={`${inter.variable} ${manrope.variable} ${mono.variable} ${cormorant.variable} ${lato.variable} h-full antialiased`}><body className="min-h-full"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c") }} /><Providers>{children}</Providers></body></html>;
 }

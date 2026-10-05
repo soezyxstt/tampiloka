@@ -1,8 +1,6 @@
 /**
- * Display-only catalog for the Temura starter redesign.
- *
- * These string IDs do not map to the current Prisma templateId yet. The
- * invitation database and renderer still support numeric template IDs 1–6.
+ * Catalog for Temura invitation designs.
+ * Previews are served at /preview/[templateId].
  */
 
 export const TEMURA_CATEGORIES = [

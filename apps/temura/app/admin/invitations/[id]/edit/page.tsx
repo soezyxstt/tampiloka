@@ -4,10 +4,9 @@ import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { TimelineManager } from "@/components/admin/timeline-manager";
 import { SultanFieldsForm } from "@/components/admin/sultan-fields-form";
-import { TemplateSwitcher } from "@/components/admin/template-switcher";
 import { SongUrlForm } from "@/components/admin/song-url-form";
 import { toggleInvitationStatus } from "@/app/actions/invitation";
-import { ScrollText, Heart, Eye, EyeOff, Crown, Tv2, ScanLine, LayoutTemplate } from "lucide-react";
+import { ScrollText, Heart, Eye, EyeOff, Crown, Tv2, ScanLine } from "lucide-react";
 import Link from "next/link";
 
 export async function generateMetadata() {
@@ -36,7 +35,6 @@ export default async function EditInvitationPage({
   const isTier2Plus = inv.tierId >= 2;
   const isTier3Plus = inv.tierId >= 3;
   const isTier4 = inv.tierId >= 4;
-  const currentTemplateId = inv.templateId ?? 1;
 
   const publishAction = toggleInvitationStatus.bind(
     null,
@@ -150,20 +148,6 @@ export default async function EditInvitationPage({
           </>
         )}
       </div>
-
-      {/* ── Template / Desain Switcher ─────────────────────────────────── */}
-      <section className="mt-10">
-        <div className="mb-5 flex items-center gap-2.5 border-b border-stone-200 pb-3">
-          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-sage-green/15">
-            <LayoutTemplate size={13} className="text-sage-green" />
-          </div>
-          <div>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-stone-600">Ganti Desain Template</h2>
-            <p className="mt-0.5 text-xs text-stone-400">Pilih tampilan layout yang sesuai untuk klien ini.</p>
-          </div>
-        </div>
-        <TemplateSwitcher invitationId={inv.id} currentTemplateId={currentTemplateId} />
-      </section>
 
       {/* ── Musik latar URL (Tier 2+) ───────────────────────────────────── */}
       {isTier2Plus ? (

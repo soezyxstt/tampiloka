@@ -1,8 +1,17 @@
-export const metadata = { title: 'Tentang' };
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  path: "/tentang",
+  title: "Tentang Studio Web Independen",
+  description:
+    "Tampiloka adalah studio web independen yang menghubungkan strategi, desain, dan teknologi untuk membantu bisnis tampil lebih baik secara digital.",
+  imageAlt: "Ruang kerja dengan sketsa desain di papan inspirasi.",
+  imagePath: "/images/about-studio.webp",
+});
 
 const principles = [
   "Mulai dari kebutuhan bisnis",
@@ -22,7 +31,7 @@ export default function TentangPage() {
             Kenali cara kerja kami <ArrowUpRight aria-hidden="true" />
           </Button>
         </div>
-        <PageVisual imageKey="about-studio" preload />
+        <PageVisual imageKey="about-studio" alt="Sketsa antarmuka pada papan inspirasi di ruang kerja." preload />
       </section>
 
       <section className="about-note">
@@ -36,7 +45,7 @@ export default function TentangPage() {
       </section>
 
       <section className="about-visual-section" aria-label="Cara kerja Tampiloka">
-        <PageVisual imageKey="creative-process" />
+        <PageVisual imageKey="creative-process" alt="Tangan menata sketsa antarmuka website dan ponsel di atas meja." />
         <div data-reveal>
           <h2 className="type-heading-1">Rapi di layar. Siap dipakai.</h2>
           <p className="type-body-lg">Dari struktur informasi hingga detail visual, pengalaman dibangun agar tetap jelas di ponsel maupun desktop.</p>

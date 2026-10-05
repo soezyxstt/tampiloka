@@ -308,26 +308,6 @@ export async function updateInvitationSongUrl(
   return { success: true };
 }
 
-// ── Template switcher (standalone) ───────────────────────────────────────────
-
-export async function updateInvitationTemplate(
-  invitationId: string,
-  templateId: number,
-): Promise<void> {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) throw new Error("Unauthorized");
-
-  const valid = [1, 2, 3, 4, 5, 6].includes(templateId);
-  if (!valid) throw new Error("templateId tidak valid");
-
-  await prisma.invitation.updateMany({
-    where: { id: invitationId, ownerId: session.user.id },
-    data: { templateId },
-  });
-
-  redirect(`/admin/invitations/${invitationId}/edit`);
-}
-
 export async function deleteInvitation(id: string): Promise<void> {
   const session = await getServerSession(authOptions);
   if (!session?.user?.id) throw new Error("Unauthorized");

@@ -23,7 +23,7 @@ type ImageKey =
 type PageVisualProps = {
   imageKey?: ImageKey;
   kind?: "workspace" | "products";
-  alt?: string;
+  alt: string;
   position?: string;
   sizes?: string;
   preload?: boolean;
@@ -33,7 +33,7 @@ type PageVisualProps = {
 export function PageVisual({
   imageKey,
   kind,
-  alt = "",
+  alt,
   position = "center",
   sizes = "(max-width: 680px) 88vw, (max-width: 900px) 70vw, 42vw",
   preload = false,

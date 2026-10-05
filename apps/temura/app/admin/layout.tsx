@@ -5,6 +5,11 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { LogoutButton } from "@/components/admin/logout-button";
 import { LayoutDashboard, ScrollText, MessageCircle, ScanLine } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 function NavLink({
   href,

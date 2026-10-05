@@ -9,9 +9,9 @@ const plans = [
   { name: "Studio", price: "289.000–449.000", detail: "Game, kartun, dan desain dengan kustomisasi lebih luas." },
 ];
 
-export function PricingSection() {
+export function PricingSection({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" }) {
   return <section id="paket" className="temura-section temura-container">
-    <div className="temura-section-heading"><h2 className="type-display">Harga</h2><p className="type-body temura-muted">Sesuai desain dan tingkat kustomisasi.</p></div>
+    <div className="temura-section-heading">{headingLevel === "h1" ? <h1 className="type-display">Harga</h1> : <h2 className="type-display">Harga</h2>}<p className="type-body temura-muted">Sesuai desain dan tingkat kustomisasi.</p></div>
     <div className="temura-pricing-grid">
       {plans.map((plan) => <article key={plan.name} className="temura-price-card">
         <h3 className="type-heading-4">{plan.name}</h3>

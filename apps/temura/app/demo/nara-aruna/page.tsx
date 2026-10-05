@@ -1,2 +1,2 @@
 import { redirect } from "next/navigation";
-export default function LegacyPreview() { redirect("/demo-geulis?template=1&to=Tamu%20Temura"); }
+export default function LegacyPreview() { redirect("/preview/adat-sunda?to=Tamu%20Temura"); }

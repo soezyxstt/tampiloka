@@ -129,7 +129,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
       <div className="showcase__inner">
         <header className="showcase__header" data-reveal>
           <Heading className={`${page ? "type-display-xl" : "type-display"} showcase__heading`} id="showcase-heading">
-            Karya pilihan.
+            {page ? "Contoh website dan undangan digital." : "Karya pilihan."}
           </Heading>
           <div className="showcase__controls">
             {page ? (

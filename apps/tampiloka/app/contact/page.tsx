@@ -1,8 +1,17 @@
-export const metadata = { title: 'Contact' };
 import Link from "next/link";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  path: "/contact",
+  title: "Kontak",
+  description:
+    "Hubungi Tampiloka untuk membahas website, produk digital, branding, atau kebutuhan pengembangan digital untuk bisnis Anda.",
+  imageAlt: "Ruang kerja dengan laptop dan contoh rancangan website.",
+  imagePath: "/images/studio-workspace.webp",
+});
 
 const contactLinks = [
   { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
@@ -22,7 +31,7 @@ export default function ContactPage() {
           </Button>
           <a className="contact-page__email type-body" href="mailto:soezyxst@gmail.com">soezyxst@gmail.com</a>
         </div>
-        <PageVisual imageKey="contact-invitation" preload />
+        <PageVisual imageKey="contact-invitation" alt="Pasangan pengantin berbusana Jawa di taman sebagai contoh undangan digital." preload />
       </section>
 
       <section className="contact-page__social" aria-labelledby="social-title" data-reveal>

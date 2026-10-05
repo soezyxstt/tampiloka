@@ -5,6 +5,7 @@ export const metadata: Metadata = {
     template: "%s — Temura",
     default: "Undangan Digital Temura",
   },
+  robots: { index: false, follow: false },
 };
 
 export default function InvitationLayout({

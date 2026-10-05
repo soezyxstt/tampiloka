@@ -54,8 +54,8 @@ export function CustomerDashboard() {
     return save(next);
   }
   async function copyLink(name = "Tamu Temura") {
-    const url = new URL("/demo-geulis", window.location.origin);
-    url.searchParams.set("template", "1"); url.searchParams.set("to", name);
+    const url = new URL("/preview/adat-sunda", window.location.origin);
+    url.searchParams.set("to", name);
     try { await navigator.clipboard.writeText(url.toString()); setNotice(`Tautan demo untuk ${name} disalin.`); }
     catch { setNotice(`Salin tautan demo: ${url.toString()}`); }
   }

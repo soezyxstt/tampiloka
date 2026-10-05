@@ -16,7 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ templateI
   const design = PREVIEW_DESIGNS.find((item) => item.id === templateId);
   const starter = findStarterPreview(templateId);
   const name = design?.name ?? starter?.name;
-  return { title: name ? `${name} — Nara & Aruna` : "Desain tidak ditemukan", robots: { index: false, follow: false } };
+  return {
+    title: name ? `${name} — Nara & Aruna` : "Desain tidak ditemukan",
+    robots: { index: false, follow: false },
+    ...(name ? { alternates: { canonical: `/preview/${encodeURIComponent(templateId)}` } } : {}),
+  };
 }
 
 export default async function PreviewPage({ params }: { params: Promise<{ templateId: string }> }) {

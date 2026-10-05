@@ -1,9 +1,18 @@
-export const metadata = { title: 'Industri' };
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IndustryPreview } from "@/components/industry-preview";
 import { TEMURA_URL } from "@/lib/temura-url";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  path: "/industri",
+  title: "Website untuk Berbagai Industri",
+  description:
+    "Website dan pengalaman digital untuk kuliner, fashion, portofolio, UMKM, teknologi, bisnis B2B, serta kebutuhan pernikahan.",
+  imageAlt: "Koleksi benda dan material yang mewakili beragam bidang usaha.",
+  imagePath: "/images/industry-overview.webp",
+});
 
 type Industry = {
   name: string;

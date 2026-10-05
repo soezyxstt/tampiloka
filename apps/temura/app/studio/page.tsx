@@ -5,6 +5,7 @@ import "../studio.css";
 export const metadata: Metadata = {
   title: "Studio",
   description: "Coba ruang kreasi Temura. Susun teks dan elemen, lalu simpan draf di perangkat Anda.",
+  robots: { index: false, follow: false },
 };
 
 export default function StudioPage() {

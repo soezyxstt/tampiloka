@@ -6,7 +6,11 @@ import { siteOrigin } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
-  title: { absolute: "Temura | Undangan Digital oleh Tampiloka" },
+  title: {
+    default: "Temura | Undangan Digital oleh Tampiloka",
+    template: "%s | Temura",
+  },
+  description: "Pilih desain undangan, bagikan kepada tamu, dan kelola kehadiran. Undangan digital oleh Tampiloka.",
   alternates: { canonical: "/" },
 };
 
