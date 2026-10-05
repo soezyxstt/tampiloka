@@ -123,9 +123,10 @@
 .ip-empty { color:var(--ip-accent); }
 .ip-gift { padding-top:0; }
 .ip-gift > p { margin:24px 0 30px; font-size:14px; }
-.ip-gift details { border-top:1px solid var(--ip-line); border-bottom:1px solid var(--ip-line); font-size:13px; }
-.ip-gift summary { display:flex; justify-content:space-between; align-items:center; cursor:pointer; padding:18px 0; }
+.ip-gift-options { border-block:1px solid var(--ip-line); font-size:13px; }
 .ip-gift-content { padding:20px 0 30px; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.ip-gift-content + .ip-gift-content { border-top:1px solid var(--ip-line); }
+.ip-gift-content h3 { font-size:14px; font-weight:600; }
 .ip-gift-content > p { font-size:11px; }
 .ip-gift-content strong { font-family:var(--ip-serif); font-size:28px; font-weight:400; }
 .ip-gift-content > span { font-size:12px; }

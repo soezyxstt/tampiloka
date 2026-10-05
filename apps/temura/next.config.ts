@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   transpilePackages: ["@tampiloka/brand-system"],
   images: {
     qualities: [75, 80, 82, 85, 90],

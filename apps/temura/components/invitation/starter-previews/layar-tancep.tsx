@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   CalendarLink,
   Countdown,
@@ -14,19 +15,64 @@ import {
 } from "./preview-kit";
 import "./layar-tancep.css";
 
+const filmPhotos = [1, 2, 3, 4, 5, 6] as const;
+
 function LayarCover() {
   return (
-    <section className="lt-cover" aria-label="Undangan Nara dan Aruna">
+    <section className="lt-cover" aria-labelledby="lt-cover-title">
       <Decoration id="bg-retro-layar-tancep" className="lt-cover-background" eager />
       <div className="lt-cover-shade" aria-hidden="true" />
-      <div className="lt-cover-credit">
-        <Photo index={1} className="lt-cover-photo" alt="Nara dan Aruna di kebun teh" />
-        <h1><span>Nara</span><i>&amp;</i><span>Aruna</span></h1>
-        <p>12 Desember 2027 <span aria-hidden="true">·</span> Bandung</p>
-        <OpenButton className="lt-open">Buka undangan</OpenButton>
+      <div className="lt-cover-title">
+        <p>Undangan pernikahan · Bandung</p>
+        <h1 id="lt-cover-title">Nara <i aria-hidden="true">&amp;</i> Aruna</h1>
+        <time dateTime="2027-12-12">12 Desember 2027</time>
       </div>
-      <div className="lt-cover-camera" data-scene data-scene-depth="-0.65" aria-hidden="true">
-        <Decoration id="orn-retro-04" className="lt-camera-art" />
+      <OpenButton className="lt-cover-open">Buka undangan</OpenButton>
+    </section>
+  );
+}
+
+function ProjectionGallery() {
+  const [activePhoto, setActivePhoto] = useState(1);
+  const previous = () => setActivePhoto((current) => current === 1 ? 6 : current - 1);
+  const next = () => setActivePhoto((current) => current === 6 ? 1 : current + 1);
+
+  return (
+    <section className="lt-gallery" id="galeri" aria-labelledby="lt-gallery-title">
+      <header className="lt-section-heading" data-reveal>
+        <p>12 Desember 2027 · Bandung</p>
+        <h2 id="lt-gallery-title">Galeri</h2>
+      </header>
+      <div className="lt-projection-layout">
+        <div className="lt-projection">
+          <div className="lt-projection-rim" aria-hidden="true" />
+          <PhotoButton
+            key={activePhoto}
+            index={activePhoto}
+            className="lt-projection-photo"
+          />
+        </div>
+        <div className="lt-projection-choices">
+          <div className="lt-projection-controls" aria-label="Kontrol proyeksi">
+            <button type="button" onClick={previous} aria-label="Foto sebelumnya">←</button>
+            <span aria-live="polite">{activePhoto} / {filmPhotos.length}</span>
+            <button type="button" onClick={next} aria-label="Foto berikutnya">→</button>
+          </div>
+          <div className="lt-thumbnails" aria-label="Pilih foto proyeksi">
+            {filmPhotos.map((photo) => (
+              <button
+                className="lt-thumbnail"
+                type="button"
+                key={photo}
+                aria-label={"Tampilkan foto " + photo}
+                aria-pressed={activePhoto === photo}
+                onClick={() => setActivePhoto(photo)}
+              >
+                <Photo index={photo} alt="" />
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -34,109 +80,89 @@ function LayarCover() {
 
 export function LayarTancepPreview() {
   return (
-    <InvitationFrame templateId="retro-layar-tancep" name="Layar Tancep" className="layar-tancep" cover={<LayarCover />}>
+    <InvitationFrame
+      templateId="retro-layar-tancep"
+      name="Layar Tancep"
+      className="lt-frame"
+      cover={<LayarCover />}
+    >
       <article className="lt-content">
-        <section className="lt-opening" id="mempelai">
-          <header className="lt-opening-heading" data-reveal>
-            <h1>Nara <span>&amp;</span> Aruna</h1>
-            <p>Minggu, 12 Desember 2027 <span aria-hidden="true">·</span> Bandung</p>
-          </header>
-          <figure className="lt-widescreen" data-reveal>
-            <PhotoButton index={6} className="lt-wide-photo" />
+        <section className="lt-intro" id="mempelai" aria-labelledby="lt-intro-title">
+          <div className="lt-intro-credit" data-reveal>
+            <p>Bandung · Minggu, 12 Desember 2027</p>
+            <h1 id="lt-intro-title">Nara <i aria-hidden="true">&amp;</i> Aruna</h1>
+          </div>
+          <figure className="lt-intro-screen" data-reveal>
+            <PhotoButton index={6} className="lt-intro-photo" />
           </figure>
-          <div className="lt-portrait-pair">
-            <figure className="lt-portrait-frame lt-portrait-left" data-reveal>
-              <PhotoButton index={2} className="lt-portrait-photo" />
-            </figure>
-            <figure className="lt-portrait-frame lt-portrait-right" data-reveal>
-              <PhotoButton index={4} className="lt-portrait-photo" />
-            </figure>
-          </div>
-          <div className="lt-family-credits" data-reveal>
-            <section>
-              <h2>Nara Pradipta</h2>
-              <p>Putra dari Bapak Aditya dan Ibu Laras</p>
-            </section>
-            <span aria-hidden="true">&amp;</span>
-            <section>
-              <h2>Aruna Kirana</h2>
-              <p>Putri dari Bapak Baskara dan Ibu Ratih</p>
-            </section>
-          </div>
-          <div className="lt-bloom lt-bloom-one" data-scene data-scene-depth="0.45" aria-hidden="true">
-            <Decoration id="orn-shared-romance-01" className="lt-bloom-art" />
-          </div>
+          <p className="lt-intro-note">Kami mengundang Anda untuk hadir.</p>
         </section>
 
-        <section className="lt-program" id="acara">
-          <div className="lt-program-heading" data-reveal>
-            <div>
-              <p className="lt-event-date">Minggu, 12 Desember 2027</p>
-              <h2>Acara</h2>
+        <ProjectionGallery />
+
+        <section className="lt-couple" aria-labelledby="lt-couple-title">
+          <header className="lt-section-heading" data-reveal>
+            <p>Mempelai</p>
+            <h2 id="lt-couple-title">Nara &amp; Aruna</h2>
+          </header>
+          <figure className="lt-couple-screen" data-reveal>
+            <PhotoButton index={2} className="lt-couple-photo" />
+            <figcaption>
+              <div><strong>Nara Pradipta</strong><span>Putra Bapak Aditya &amp; Ibu Laras</span></div>
+              <i aria-hidden="true">&amp;</i>
+              <div><strong>Aruna Kirana</strong><span>Putri Bapak Baskara &amp; Ibu Ratih</span></div>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section className="lt-programme" id="acara" aria-labelledby="lt-programme-title">
+          <div className="lt-ticket">
+            <div className="lt-ticket-heading">
+              <p>Bandung, Jawa Barat</p>
+              <h2 id="lt-programme-title">Acara</h2>
+              <time dateTime="2027-12-12">12 Desember 2027</time>
             </div>
             <Countdown className="lt-countdown" />
-          </div>
-          <ol className="lt-showtimes" data-reveal>
-            <li><span>08.00–10.00 WIB</span><h3>Akad</h3></li>
-            <li><span>11.00–14.00 WIB</span><h3>Resepsi</h3></li>
-          </ol>
-          <div className="lt-venue" data-reveal>
-            <div className="lt-venue-copy">
-              <h3>Bandung</h3>
-              <p>Jawa Barat</p>
+            <ol className="lt-schedule">
+              <li><time dateTime="2027-12-12T08:00:00+07:00">08.00–10.00 WIB</time><strong>Akad nikah</strong></li>
+              <li><time dateTime="2027-12-12T11:00:00+07:00">11.00–14.00 WIB</time><strong>Resepsi</strong></li>
+            </ol>
+            <div className="lt-map">
+              <h3>Lokasi</h3>
+              <EventMap />
+              <CalendarLink />
             </div>
-            <EventMap className="lt-map" />
-          </div>
-          <div className="lt-ticket" data-reveal>
-            <Decoration id="orn-retro-03" className="lt-ticket-art" />
-            <CalendarLink className="lt-calendar" />
-          </div>
-          <div className="lt-program-reel" data-scene data-scene-depth="-0.8" aria-hidden="true">
-            <Decoration id="orn-retro-04" className="lt-reel-art" />
           </div>
         </section>
 
-        <section className="lt-story" data-reveal>
-          <h2>Cerita kami</h2>
-          <ol>
-            <li><span>01</span><h3>Pertemuan</h3><p>Satu pertemuan membuka cerita baru.</p></li>
-            <li><span>02</span><h3>Bersama</h3><p>Hari-hari sederhana menjadi kenangan berharga.</p></li>
-            <li><span>03</span><h3>Hari ini</h3><p>Kami melangkah bersama dengan doa keluarga.</p></li>
+        <section className="lt-story" aria-labelledby="lt-story-title">
+          <header className="lt-section-heading" data-reveal>
+            <p>Bandung</p>
+            <h2 id="lt-story-title">Cerita kami</h2>
+          </header>
+          <ol className="lt-credits">
+            <li data-reveal><time dateTime="2022">2022</time><p>Kedua keluarga bertemu.</p></li>
+            <li data-reveal><time dateTime="2025">2025</time><p>Kami memilih berjalan bersama.</p></li>
+            <li data-reveal><time dateTime="2027">2027</time><p>Hari bahagia dimulai.</p></li>
           </ol>
-          <div className="lt-story-flower" data-scene data-scene-depth="0.7" aria-hidden="true">
-            <Decoration id="orn-shared-romance-02" className="lt-story-flower-art" />
-          </div>
         </section>
 
-        <section className="lt-gallery" id="galeri">
-          <header data-reveal><h2>Galeri</h2></header>
-          <div className="lt-film-strip">
-            {[1, 2, 3, 4, 5, 6].map((index) => (
-              <figure className={`lt-film-frame lt-film-frame-${index}`} key={index} data-reveal>
-                <PhotoButton index={index} className="lt-film-photo" />
-              </figure>
-            ))}
-          </div>
-          <div className="lt-gallery-rose" data-scene data-scene-depth="-0.55" aria-hidden="true">
-            <Decoration id="orn-shared-romance-05" className="lt-gallery-rose-art" />
-          </div>
+        <section className="lt-rsvp" id="ucapan" aria-labelledby="lt-rsvp-title">
+          <header className="lt-section-heading" data-reveal>
+            <p>12 Desember 2027</p>
+            <h2 id="lt-rsvp-title">Kehadiran &amp; doa</h2>
+          </header>
+          <Rsvp className="lt-rsvp-form" />
         </section>
 
-        <section className="lt-response" id="ucapan">
-          <div className="lt-response-heading" data-reveal>
-            <p>Bandung <span aria-hidden="true">·</span> 12.12.2027</p>
-            <h2>Ucapan</h2>
-          </div>
-          <Rsvp className="lt-rsvp" />
-          <Gift className="lt-gift" />
-        </section>
+        <section className="lt-gift" aria-label="Hadiah"><Gift /></section>
 
-        <footer className="lt-closing" data-reveal>
-          <div className="lt-closing-flower" data-scene data-scene-depth="0.55" aria-hidden="true">
-            <Decoration id="orn-shared-romance-06" className="lt-closing-flower-art" />
+        <footer className="lt-ending">
+          <div className="lt-ending-frame" data-reveal>
+            <p>Terima kasih telah hadir.</p>
+            <strong>Nara <i aria-hidden="true">&amp;</i> Aruna</strong>
+            <time dateTime="2027-12-12">12 Desember 2027 · Bandung</time>
           </div>
-          <p>Terima kasih atas doa dan kehadiran Anda.</p>
-          <span>Bandung <i aria-hidden="true">·</i> 12 Desember 2027</span>
         </footer>
       </article>
     </InvitationFrame>

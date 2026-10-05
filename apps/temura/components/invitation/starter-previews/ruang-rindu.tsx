@@ -1,168 +1,96 @@
 import "./ruang-rindu.css";
-import {
-  CalendarLink,
-  Countdown,
-  Decoration,
-  EventMap,
-  Gift,
-  InvitationFrame,
-  OpenButton,
-  PhotoButton,
-  Rsvp,
-} from "./preview-kit";
+import { CalendarLink, Countdown, Decoration, EventMap, Gift, InvitationFrame, OpenButton, PhotoButton, Rsvp } from "./preview-kit";
 
 const story = [
-  { year: "2021", text: "Hari biasa yang mempertemukan dua jalan." },
-  { year: "2024", text: "Percakapan kecil tumbuh menjadi rumah." },
-  { year: "2027", text: "Kini, kami melangkah dengan restu keluarga." },
+  { year: "2021", text: "Kami mulai saling mengenal." },
+  { year: "2024", text: "Kami memilih berjalan bersama." },
+  { year: "2027", text: "Dengan restu keluarga, kami menikah." },
 ];
 
-const galleryPairs = [
-  { first: 1, second: 2, className: "ruang-rindu-spread--one" },
-  { first: 3, second: 4, className: "ruang-rindu-spread--two" },
-  { first: 5, second: 6, className: "ruang-rindu-spread--three" },
-];
-
-export function RuangRinduPreview() {
-  const cover = (
-    <section className="ruang-rindu-cover" aria-labelledby="ruang-rindu-cover-title">
-      <div className="ruang-rindu-cover-backdrop" aria-hidden="true">
-        <Decoration id="bg-minimalist-ruang-rindu" eager />
+function RuangRinduCover() {
+  return (
+    <section className="rr-cover" aria-labelledby="rr-cover-title">
+      <div className="rr-cover-ground" aria-hidden="true"><Decoration id="bg-minimalist-ruang-rindu" eager /></div>
+      <div className="rr-cover-branch" aria-hidden="true"><Decoration id="orn-minimalist-ruang-rindu-02" eager /></div>
+      <p className="rr-cover-date"><time dateTime="2027-12-12">12 Desember 2027</time><span>Bandung</span></p>
+      <div className="rr-cover-lockup">
+        <h1 id="rr-cover-title"><span>Nara</span><i aria-hidden="true">&amp;</i><span>Aruna</span></h1>
+        <PhotoButton index={2} className="rr-cover-portrait" />
       </div>
-      <div className="ruang-rindu-cover-meta">
-        <time dateTime="2027-12-12">Minggu, 12 Desember 2027</time>
-        <span>Bandung, Jawa Barat</span>
-      </div>
-      <h1 className="ruang-rindu-cover-names" id="ruang-rindu-cover-title">
-        <span className="ruang-rindu-cover-nara">Nara</span>
-        <i aria-hidden="true">&amp;</i>
-        <span className="ruang-rindu-cover-aruna">Aruna</span>
-      </h1>
-      <div className="ruang-rindu-cover-photo-wrap" data-scene data-scene-depth="0.65">
-        <PhotoButton index={5} className="ruang-rindu-cover-photo" />
-      </div>
-      <div className="ruang-rindu-cover-flower" data-scene data-scene-depth="-0.8" aria-hidden="true">
-        <Decoration id="orn-minimalist-ruang-rindu-01" eager />
-      </div>
-      <div className="ruang-rindu-cover-bottom">
-        <OpenButton className="ruang-rindu-open" />
-      </div>
+      <OpenButton className="rr-open" />
     </section>
   );
+}
 
+export function RuangRinduPreview() {
   return (
-    <InvitationFrame templateId="minimalist-ruang-rindu" name="Ruang Rindu" className="rr-frame" cover={cover}>
-      <div className="ruang-rindu-content">
-        <section className="ruang-rindu-letter" id="mempelai" aria-label="Mempelai">
-          <header className="ruang-rindu-letter-heading" data-reveal>
-            <h2>Kami mengundang Anda untuk hadir.</h2>
+    <InvitationFrame templateId="minimalist-ruang-rindu" name="Ruang Rindu" className="rr-frame" cover={<RuangRinduCover />}>
+      <div className="rr-content">
+        <section className="rr-editorial" id="mempelai" aria-labelledby="rr-editorial-title">
+          <header className="rr-editorial-heading" data-reveal>
+            <p><time dateTime="2027-12-12">Minggu, 12 Desember 2027</time><span>Bandung, Jawa Barat</span></p>
+            <h2 id="rr-editorial-title">Mempelai</h2>
+            <p className="rr-editorial-invitation">Dengan hormat, kami mengundang Anda untuk hadir di hari pernikahan kami.</p>
           </header>
-          <div className="ruang-rindu-letter-layout">
-            <div className="ruang-rindu-letter-photo" data-reveal>
-              <PhotoButton index={1} className="ruang-rindu-letter-photo-button" />
-              <div className="ruang-rindu-letter-arch" aria-hidden="true">
-                <Decoration id="orn-minimalist-ruang-rindu-02" />
-              </div>
-            </div>
-            <div className="ruang-rindu-couple-columns">
-              <article className="ruang-rindu-person" data-reveal>
+          <div className="rr-identity-layout">
+            <div className="rr-identities">
+              <article className="rr-person" data-reveal>
+                <p>Putra</p>
                 <h3>Nara Pradipta</h3>
-                <p>Putra Bapak Aditya<br />&amp; Ibu Laras</p>
+                <p>Putra dari Bapak Aditya dan Ibu Laras</p>
               </article>
-              <span className="ruang-rindu-couple-amp" aria-hidden="true">&amp;</span>
-              <article className="ruang-rindu-person" data-reveal>
+              <span className="rr-identity-join" aria-hidden="true">&amp;</span>
+              <article className="rr-person" data-reveal>
+                <p>Putri</p>
                 <h3>Aruna Kirana</h3>
-                <p>Putri Bapak Baskara<br />&amp; Ibu Ratih</p>
+                <p>Putri dari Bapak Baskara dan Ibu Ratih</p>
               </article>
             </div>
-          </div>
-          <div className="ruang-rindu-letter-ribbon" data-scene data-scene-depth="0.55" aria-hidden="true">
-            <Decoration id="orn-minimalist-ruang-rindu-04" />
+            <PhotoButton index={1} className="rr-identity-photo" />
           </div>
         </section>
 
-        <section className="ruang-rindu-agenda" id="acara" aria-labelledby="ruang-rindu-agenda-title">
-          <div className="ruang-rindu-agenda-heading" data-reveal>
-            <h2 id="ruang-rindu-agenda-title">Acara</h2>
-            <p>Minggu, 12 Desember 2027<br />Bandung, Jawa Barat</p>
-          </div>
-          <div className="ruang-rindu-countdown-row" data-reveal>
-            <Countdown className="ruang-rindu-countdown" />
-            <CalendarLink className="ruang-rindu-calendar" />
-          </div>
-          <ol className="ruang-rindu-agenda-list">
-            <li data-reveal>
-              <time>08.00–10.00 WIB</time>
-              <h3>Akad nikah</h3>
-            </li>
-            <li data-reveal>
-              <time>11.00–14.00 WIB</time>
-              <h3>Resepsi</h3>
-            </li>
-          </ol>
-          <div className="ruang-rindu-map" data-reveal>
-            <EventMap className="ruang-rindu-map-frame" />
-          </div>
-          <div className="ruang-rindu-agenda-stem" data-scene data-scene-depth="-0.45" aria-hidden="true">
-            <Decoration id="orn-minimalist-ruang-rindu-05" />
-          </div>
-        </section>
-
-        <section className="ruang-rindu-story" aria-labelledby="ruang-rindu-story-title">
-          <div className="ruang-rindu-story-letter" data-reveal>
-            <span className="ruang-rindu-story-margin" aria-hidden="true">12.12</span>
-            <div>
-              <h2 id="ruang-rindu-story-title">Cerita kami</h2>
-            </div>
-            <ol>
-              {story.map((item) => (
-                <li key={item.year}>
-                  <time dateTime={item.year}>{item.year}</time>
-                  <p>{item.text}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-          <div className="ruang-rindu-story-flower" data-scene data-scene-depth="0.7" aria-hidden="true">
-            <Decoration id="orn-minimalist-ruang-rindu-03" />
-          </div>
-        </section>
-
-        <section className="ruang-rindu-gallery" id="galeri" aria-labelledby="ruang-rindu-gallery-title">
-          <header className="ruang-rindu-gallery-heading" data-reveal>
-            <h2 id="ruang-rindu-gallery-title">Galeri</h2>
+        <section className="rr-agenda" id="acara" aria-labelledby="rr-agenda-title">
+          <header className="rr-agenda-heading" data-reveal>
+            <div><p>12 Desember 2027 · Bandung</p><h2 id="rr-agenda-title">Acara</h2></div>
+            <Countdown className="rr-countdown" />
           </header>
-          <div className="ruang-rindu-spreads">
-            {galleryPairs.map((pair, index) => (
-              <div className={`ruang-rindu-spread ${pair.className}`} key={pair.first} data-reveal>
-                <span className="ruang-rindu-spread-index" aria-hidden="true">0{index + 1}</span>
-                <PhotoButton index={pair.first} className="ruang-rindu-spread-photo ruang-rindu-spread-photo--first" />
-                <PhotoButton index={pair.second} className="ruang-rindu-spread-photo ruang-rindu-spread-photo--second" />
-              </div>
+          <ol className="rr-agenda-list">
+            <li data-reveal><time dateTime="2027-12-12T08:00:00+07:00">08.00–10.00 WIB</time><h3>Akad nikah</h3><span>Bandung</span></li>
+            <li data-reveal><time dateTime="2027-12-12T11:00:00+07:00">11.00–14.00 WIB</time><h3>Resepsi</h3><span>Bandung</span></li>
+          </ol>
+          <div className="rr-agenda-actions" data-reveal><CalendarLink /><p>Bandung, Jawa Barat</p></div>
+          <EventMap className="rr-map" />
+        </section>
+
+        <section className="rr-story" aria-labelledby="rr-story-title">
+          <header className="rr-story-heading" data-reveal><h2 id="rr-story-title">Cerita kami</h2></header>
+          <div className="rr-story-layout">
+            <ol className="rr-story-list">
+              {story.map((item) => <li data-reveal key={item.year}><time dateTime={item.year}>{item.year}</time><p>{item.text}</p></li>)}
+            </ol>
+            <PhotoButton index={4} className="rr-story-photo" />
+          </div>
+        </section>
+
+        <section className="rr-gallery" id="galeri" aria-labelledby="rr-gallery-title">
+          <header className="rr-gallery-heading" data-reveal><h2 id="rr-gallery-title">Galeri</h2></header>
+          <div className="rr-masonry">
+            {[1, 2, 3, 4, 5, 6].map((index) => (
+              <figure className={`rr-gallery-photo rr-gallery-photo--${index}`} key={index}>
+                <PhotoButton index={index} />
+              </figure>
             ))}
           </div>
-          <div className="ruang-rindu-gallery-edge" aria-hidden="true">
-            <Decoration id="orn-minimalist-ruang-rindu-06" />
-          </div>
+          <div className="rr-gallery-leaf" aria-hidden="true"><Decoration id="orn-minimalist-ruang-rindu-01" /></div>
         </section>
 
-        <section className="ruang-rindu-rsvp" id="ucapan" aria-labelledby="ruang-rindu-rsvp-title">
-          <div className="ruang-rindu-rsvp-heading" data-reveal>
-            <h2 id="ruang-rindu-rsvp-title">Ucapan</h2>
-            <p>Kami menantikan kehadiran Anda.</p>
-          </div>
-          <Rsvp className="ruang-rindu-rsvp-form" />
+        <section className="rr-rsvp" id="ucapan" aria-labelledby="rr-rsvp-title">
+          <header data-reveal><h2 id="rr-rsvp-title">Ucapan</h2><p>Konfirmasi kehadiran dan kirimkan doa.</p></header>
+          <Rsvp className="rr-rsvp-form" />
         </section>
-
-        <section className="ruang-rindu-gift" aria-label="Hadiah">
-          <span aria-hidden="true">N <i>&amp;</i> A</span>
-          <Gift className="ruang-rindu-gift-details" />
-        </section>
-
-        <footer className="ruang-rindu-closing">
-          <p>Dengan hormat,</p>
-          <strong>Nara &amp; Aruna</strong>
-        </footer>
+        <section className="rr-gift" aria-label="Hadiah"><Gift className="rr-gift-details" /></section>
+        <footer className="rr-closing"><div className="rr-closing-copy" data-reveal><p>Terima kasih atas doa dan kehadiran Anda.</p><strong>Nara <i aria-hidden="true">&amp;</i> Aruna</strong><time dateTime="2027-12-12">12 Desember 2027 · Bandung</time></div></footer>
       </div>
     </InvitationFrame>
   );

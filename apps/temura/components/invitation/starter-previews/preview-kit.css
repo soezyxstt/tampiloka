@@ -101,6 +101,7 @@
 
 .tk-cover {
   position: relative;
+  isolation: isolate;
   width: 100%;
   height: calc(100vh - 52px);
   height: calc(100svh - 52px);
@@ -142,10 +143,55 @@
 }
 
 .tk-content {
+  position: relative;
   min-height: calc(100vh - 52px);
   min-height: calc(100svh - 52px);
   padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
   outline: none;
+}
+
+.tk-content [data-scene] {
+  --tk-progress: 0;
+  --tk-drift: 0px;
+  --tk-counter: 0px;
+  --tk-turn: 0deg;
+}
+
+.tk-opening {
+  position: absolute;
+  z-index: 40;
+  inset: 0 0 auto;
+  width: 100%;
+  height: calc(100vh - 52px);
+  height: calc(100svh - 52px);
+  min-height: 480px;
+  max-height: 100svh;
+  overflow: hidden;
+  pointer-events: none !important;
+  animation: tk-opening-dismiss 1.7s cubic-bezier(0.68, 0, 0.24, 1) both;
+}
+
+.tk-opening * {
+  pointer-events: none !important;
+}
+
+.tk-frame[data-greeting-open="true"] .tk-opening,
+.tk-frame[data-greeting-open="true"] .tk-opening * {
+  animation-play-state: paused !important;
+}
+
+@keyframes tk-opening-dismiss {
+  0%, 76% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+    visibility: hidden;
+  }
 }
 
 .tk-controls {
@@ -461,16 +507,60 @@
   margin: 3px 0 0;
 }
 
-.tk-gift summary {
-  display: flex;
-  align-items: center;
-  min-height: 44px;
-  cursor: pointer;
+.tk-gift-title {
+  margin: 0 0 8px;
+  font: inherit;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 .tk-gift > p {
   max-width: 42rem;
-  margin: 8px 0 0;
+  margin: 0;
+}
+
+.tk-gift-methods {
+  display: grid;
+  gap: 18px;
+}
+
+.tk-gift-account,
+.tk-gift-qris {
+  padding-top: 14px;
+  border-top: 1px solid var(--tk-rule);
+}
+
+.tk-gift h3 {
+  margin: 0 0 8px;
+  font: inherit;
+  font-weight: 600;
+}
+
+.tk-gift dl,
+.tk-gift dl > div {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+}
+
+.tk-gift dl {
+  gap: 10px;
+}
+
+.tk-gift dt {
+  opacity: .72;
+  font-size: .82em;
+}
+
+.tk-gift dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.tk-gift-qris img {
+  display: block;
+  width: min(200px, 100%);
+  height: auto;
 }
 
 .tk-content.tk-motion-ready [data-reveal] {
@@ -539,5 +629,19 @@
   .tk-content.tk-motion-ready [data-reveal] {
     opacity: 1;
     translate: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-opening {
+    animation: none !important;
+    visibility: hidden;
+  }
+
+  .tk-content [data-scene] {
+    --tk-progress: 0 !important;
+    --tk-drift: 0px !important;
+    --tk-counter: 0px !important;
+    --tk-turn: 0deg !important;
   }
 }

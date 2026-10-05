@@ -1,4 +1,5 @@
-import "./purnama.css";
+"use client";
+
 import {
   CalendarLink,
   Countdown,
@@ -7,149 +8,117 @@ import {
   Gift,
   InvitationFrame,
   OpenButton,
+  Photo,
   PhotoButton,
   Rsvp,
 } from "./preview-kit";
+import "./purnama.css";
+import "./purnama-immersive.css";
 
-const story = [
-  { title: "Berkenalan", text: "Sebuah pertemuan membuka cerita kami." },
-  { title: "Melangkah", text: "Kami memilih tumbuh dan berjalan bersama." },
-  { title: "Hari ini", text: "Dengan restu keluarga, kami memulai bab baru." },
-];
-
-function BaliArch({ number, title, time }: { number: string; title: string; time: string }) {
+function PurnamaCover() {
   return (
-    <article className="purnama-event-niche">
-      <Decoration id="orn-adat-bali-04" className="purnama-event-arch" />
-      <span className="purnama-event-number">{number}</span>
-      <h3>{title}</h3>
-      <p>{time}</p>
-      <span className="purnama-event-place">Bandung · Jawa Barat</span>
-    </article>
-  );
-}
-
-function BaliSpread({ first, second, third, label }: { first: number; second: number; third: number; label: string }) {
-  return (
-    <div className="purnama-gallery-spread" data-reveal>
-      <PhotoButton index={first} className="purnama-gallery-large" />
-      <PhotoButton index={second} className="purnama-gallery-inset purnama-gallery-inset-top" />
-      <PhotoButton index={third} className="purnama-gallery-inset purnama-gallery-inset-bottom" />
-      <span className="purnama-gallery-label">{label}</span>
-    </div>
+    <section className="purnama__cover" aria-label="Undangan Nara dan Aruna">
+      <div className="purnama__cover-garden"><Decoration id="bg-adat-bali" eager /></div>
+      <div className="purnama__cover-rail" aria-hidden="true">
+        <span>12</span><i /><span>12</span><i /><span>2027</span>
+      </div>
+      <Photo index={1} className="purnama__cover-photo" alt="Nara dan Aruna mengenakan busana adat di kebun teh" />
+      <div className="purnama__cover-copy">
+        <p>Bandung, Jawa Barat</p>
+        <h1>Nara <i>&amp;</i> Aruna</h1>
+        <OpenButton className="purnama__open" />
+      </div>
+      <div className="purnama__cover-candi" aria-hidden="true"><Decoration id="orn-adat-bali-04" eager /></div>
+      <div className="purnama__cover-frond" aria-hidden="true"><Decoration id="orn-adat-bali-02" eager /></div>
+    </section>
   );
 }
 
 export function PurnamaPreview() {
-  const cover = (
-    <section className="purnama-cover" aria-labelledby="purnama-cover-title">
-      <Decoration id="bg-adat-bali" className="purnama-cover-background" eager />
-      <div className="purnama-cover-wash" aria-hidden="true" />
-      <div className="purnama-cover-stamp">Undangan pernikahan</div>
-      <div className="purnama-cover-gateway" data-scene data-scene-depth="-1.4" aria-hidden="true">
-        <Decoration id="orn-adat-bali-04" className="purnama-cover-arch" eager />
-      </div>
-      <div className="purnama-cover-palm purnama-cover-palm-left" data-scene data-scene-depth="1.5" aria-hidden="true">
-        <Decoration id="orn-adat-bali-02" className="purnama-cover-palm-art" eager />
-      </div>
-      <div className="purnama-cover-palm purnama-cover-palm-right" data-scene data-scene-depth="-1.2" aria-hidden="true">
-        <Decoration id="orn-adat-bali-01" className="purnama-cover-flower-art" eager />
-      </div>
-      <PhotoButton index={6} className="purnama-cover-photo" />
-      <div className="purnama-cover-name-band">
-        <h1 id="purnama-cover-title"><span>Nara</span><i>&amp;</i><span>Aruna</span></h1>
-      </div>
-      <p className="purnama-cover-date">Minggu, 12 Desember 2027 <span>Bandung</span></p>
-      <OpenButton className="purnama-open">Buka undangan</OpenButton>
-    </section>
-  );
-
   return (
-    <InvitationFrame templateId="adat-bali" name="Purnama" className="purnama" cover={cover}>
-      <article className="purnama-content">
-        <section className="purnama-intro" id="mempelai">
-          <div className="purnama-intro-flower" data-scene data-scene-depth="-1.3" aria-hidden="true">
-            <Decoration id="orn-adat-bali-01" className="purnama-intro-flower-art" />
+    <InvitationFrame templateId="purnama" name="Purnama" className="purnama" cover={<PurnamaCover />}>
+      <div className="purnama__world">
+        <section className="purnama__courtyard" id="mempelai" aria-labelledby="purnama-title">
+          <div className="purnama__courtyard-scene" aria-hidden="true"><Decoration id="bg-adat-bali" /></div>
+          <div className="purnama__courtyard-candi" aria-hidden="true"><Decoration id="orn-adat-bali-04" /></div>
+          <div className="purnama__courtyard-copy" data-reveal>
+            <p>Bandung · 12 Desember 2027</p>
+            <h2 id="purnama-title">Nara <i>&amp;</i><br />Aruna</h2>
+            <p>Dengan restu keluarga, kami mengundang Anda.</p>
           </div>
-          <p className="purnama-kicker">12 · 12 · 2027</p>
-          <h1>Nara <i>&amp;</i> Aruna</h1>
-          <p>Dengan restu keluarga, kami mengundang Anda.</p>
-          <a href="#pasangan" className="purnama-scroll-link">Lihat cerita <span aria-hidden="true">↓</span></a>
+          <PhotoButton index={1} className="purnama__courtyard-photo" />
+          <div className="purnama__courtyard-leaf" aria-hidden="true"><Decoration id="orn-adat-bali-02" /></div>
+          <span className="purnama__courtyard-stone" aria-hidden="true" />
         </section>
 
-        <section className="purnama-couple" id="pasangan" data-reveal>
-          <div className="purnama-couple-collage">
-            <PhotoButton index={1} className="purnama-couple-main-photo" />
-            <PhotoButton index={3} className="purnama-couple-overlap-photo" />
-            <div className="purnama-couple-ribbon" data-scene data-scene-depth="1.2" aria-hidden="true">
-              <Decoration id="orn-adat-bali-03" className="purnama-ribbon-art" />
+        <section className="purnama__agenda" id="acara" aria-labelledby="purnama-agenda-title">
+          <header className="purnama__agenda-date" data-reveal>
+            <p>Minggu</p>
+            <h2 id="purnama-agenda-title"><span>12</span><i>·</i><span>12</span><i>·</i><span>27</span></h2>
+            <Countdown className="purnama__countdown" />
+          </header>
+          <div className="purnama__agenda-detail" data-reveal>
+            <ol>
+              <li><time dateTime="2027-12-12T08:00:00+07:00">08.00 WIB</time><div><h3>Akad nikah</h3><p>Bandung, Jawa Barat</p></div></li>
+              <li><time dateTime="2027-12-12T11:00:00+07:00">11.00 WIB</time><div><h3>Resepsi</h3><p>Bandung, Jawa Barat</p></div></li>
+            </ol>
+            <div className="purnama__agenda-map"><EventMap className="purnama__map" /><CalendarLink /></div>
+          </div>
+          <div className="purnama__agenda-flower" aria-hidden="true"><Decoration id="orn-adat-bali-01" /></div>
+        </section>
+
+        <section className="purnama__niches" aria-label="Mempelai">
+          <header data-reveal><h2>Mempelai</h2></header>
+          <div className="purnama__niche-grid">
+            <article className="purnama__niche purnama__niche--nara" data-reveal>
+              <div className="purnama__niche-arch"><PhotoButton index={2} className="purnama__niche-photo" /></div>
+              <div><h3>Nara Pradipta</h3><p>Putra dari Bapak Aditya dan Ibu Laras</p></div>
+            </article>
+            <article className="purnama__niche purnama__niche--aruna" data-reveal>
+              <div className="purnama__niche-arch"><PhotoButton index={3} className="purnama__niche-photo" /></div>
+              <div><h3>Aruna Kirana</h3><p>Putri dari Bapak Baskara dan Ibu Ratih</p></div>
+            </article>
+          </div>
+          <div className="purnama__niche-garland" aria-hidden="true"><Decoration id="orn-adat-bali-03" /></div>
+        </section>
+
+        <section className="purnama__story" aria-labelledby="purnama-story-title">
+          <h2 id="purnama-story-title" data-reveal>Cerita kami</h2>
+          <ol>
+            <li data-reveal><time dateTime="2022">2022</time><p>Berkenalan lewat teman.</p></li>
+            <li data-reveal><time dateTime="2025">2025</time><p>Memilih berjalan bersama.</p></li>
+            <li data-reveal><time dateTime="2027">2027</time><p>Memulai keluarga dengan doa orang tua.</p></li>
+          </ol>
+          <div className="purnama__story-leaf" aria-hidden="true"><Decoration id="orn-adat-bali-05" /></div>
+        </section>
+
+        <section className="purnama__gallery" id="galeri" aria-labelledby="purnama-gallery-title">
+          <header data-reveal><h2 id="purnama-gallery-title">Galeri</h2></header>
+          <div className="purnama__gallery-layout">
+            <aside className="purnama__garden-architecture" aria-hidden="true">
+              <Decoration id="orn-adat-bali-04" />
+              <Decoration id="orn-adat-bali-02" />
+            </aside>
+            <div className="purnama__garden-path">
+              <PhotoButton index={1} className="purnama__garden-photo purnama__garden-photo--one" />
+              <PhotoButton index={2} className="purnama__garden-photo purnama__garden-photo--two" />
+              <PhotoButton index={3} className="purnama__garden-photo purnama__garden-photo--three" />
+              <PhotoButton index={4} className="purnama__garden-photo purnama__garden-photo--four" />
+              <PhotoButton index={5} className="purnama__garden-photo purnama__garden-photo--five" />
+              <PhotoButton index={6} className="purnama__garden-photo purnama__garden-photo--six" />
             </div>
           </div>
-          <div className="purnama-couple-paper">
-            <div className="purnama-couple-names">
-              <div><h2>Nara Pradipta</h2><p>Putra Bapak Aditya<br />&amp; Ibu Laras</p></div>
-              <span aria-hidden="true">&amp;</span>
-              <div><h2>Aruna Kirana</h2><p>Putri Bapak Baskara<br />&amp; Ibu Ratih</p></div>
-            </div>
-          </div>
         </section>
 
-        <section className="purnama-events" id="acara" data-reveal>
-          <div className="purnama-section-heading">
-            <p className="purnama-kicker">Bandung · Jawa Barat</p>
-            <h2>Acara</h2>
-            <p>Minggu, 12 Desember 2027</p>
-          </div>
-          <Countdown className="purnama-countdown" />
-          <div className="purnama-event-niches">
-            <BaliArch number="01" title="Akad nikah" time="08.00–10.00 WIB" />
-            <BaliArch number="02" title="Resepsi" time="11.00–14.00 WIB" />
-          </div>
-          <div className="purnama-map-wrap">
-            <div className="purnama-map-heading"><h3>Bandung</h3><CalendarLink className="purnama-calendar" /></div>
-            <EventMap className="purnama-map" />
+        <section className="purnama__closing" id="ucapan" aria-labelledby="purnama-closing-title">
+          <div className="purnama__closing-arch" aria-hidden="true"><Decoration id="orn-adat-bali-04" /></div>
+          <div className="purnama__closing-copy" data-reveal>
+            <h2 id="purnama-closing-title">Kehadiran &amp; ucapan</h2>
+            <Rsvp className="purnama__rsvp" />
+            <Gift className="purnama__gift" />
           </div>
         </section>
-
-        <section className="purnama-story" data-reveal>
-          <div className="purnama-story-head">
-            <Decoration id="orn-adat-bali-05" className="purnama-marigold" />
-            <h2>Cerita kami</h2>
-          </div>
-          <ol>{story.map((item, index) => <li key={item.title} data-scene>
-            <span className="purnama-story-no">0{index + 1}</span>
-            <div><h3>{item.title}</h3><p>{item.text}</p></div>
-          </li>)}</ol>
-        </section>
-
-        <section className="purnama-gallery" id="galeri">
-          <div className="purnama-gallery-heading" data-reveal>
-            <h2>Galeri</h2>
-          </div>
-          <BaliSpread first={1} second={2} third={3} label="01 / 02" />
-          <BaliSpread first={4} second={5} third={6} label="02 / 02" />
-        </section>
-
-        <section className="purnama-rsvp" id="ucapan" data-reveal>
-          <p className="purnama-kicker">12 Desember 2027</p>
-          <h2>Kabar kehadiran</h2>
-          <Rsvp className="purnama-rsvp-form" />
-        </section>
-
-        <section className="purnama-gift" data-reveal>
-          <div className="purnama-gift-frame" data-scene aria-hidden="true">
-            <Decoration id="orn-adat-bali-04" className="purnama-gift-arch" />
-          </div>
-          <Gift className="purnama-gift-content" />
-        </section>
-
-        <footer className="purnama-closing" data-reveal>
-          <div className="purnama-closing-shell" data-scene data-scene-depth="-1" aria-hidden="true"><Decoration id="orn-adat-bali-06" className="purnama-closing-shell-art" /></div>
-          <p>Terima kasih atas doa dan kehadiran Anda.</p>
-          <strong>Nara <i>&amp;</i> Aruna</strong>
-          <span>Bandung · 12.12.2027</span>
-        </footer>
-      </article>
+      </div>
     </InvitationFrame>
   );
 }

@@ -2,152 +2,144 @@ import "./kabar-bahagia.css";
 import {
   CalendarLink,
   Countdown,
-  Decoration,
   EventMap,
   Gift,
   InvitationFrame,
   OpenButton,
+  Photo,
   PhotoButton,
   Rsvp,
 } from "./preview-kit";
 
-const story = [
-  { number: "01", title: "Berkenalan", text: "Dua keluarga dipertemukan dalam niat baik." },
-  { number: "02", title: "Bertumbuh", text: "Perjalanan bersama dirawat dengan doa dan restu." },
-  { number: "03", title: "Hari bahagia", text: "Nara dan Aruna mengundang Anda menyaksikan awal keluarga." },
+const dispatches = [
+  { date: "2022", title: "Berkenalan", text: "Kedua keluarga mempertemukan langkah kami." },
+  { date: "2025", title: "Bertumbuh", text: "Hari-hari sederhana menjadi cerita bersama." },
+  { date: "2027", title: "Hari bahagia", text: "Dengan restu keluarga, kami melangkah bersama." },
 ];
 
-const contactSheet = [1, 2, 3, 4, 5, 6];
+function Cover() {
+  return (
+    <section className="kb-cover" aria-labelledby="kb-cover-title">
+      <header className="kb-cover-masthead">
+        <span>Kabar Bahagia</span>
+        <time dateTime="2027-12-12">12 Desember 2027</time>
+      </header>
+      <p className="kb-cover-edition">Undangan pernikahan · Bandung</p>
+      <h1 id="kb-cover-title" className="kb-cover-names">
+        <span>Nara</span><i aria-hidden="true">&amp;</i><span>Aruna</span>
+      </h1>
+      <figure className="kb-cover-photo">
+        <Photo index={5} alt="Nara dan Aruna dengan latar pegunungan" />
+      </figure>
+      <OpenButton className="kb-cover-open">Buka undangan</OpenButton>
+    </section>
+  );
+}
 
-export function KabarBahagiaPreview() {
-  const cover = (
-    <section className="kabar-cover" aria-labelledby="kabar-cover-title">
-      <Decoration id="bg-retro-kabar-bahagia" className="kabar-cover-paper" eager />
-      <div className="kabar-cover-content">
-        <header className="kabar-masthead">
-          <span>Bandung</span>
-          <span>12 · 12 · 2027</span>
-        </header>
-        <div className="kabar-cover-image" data-scene data-scene-depth="-0.7">
-          <PhotoButton index={5} className="kabar-frontpage-photo" />
-          <div className="kabar-cover-corner" aria-hidden="true">
-            <Decoration id="orn-retro-01" className="kabar-corner-art" eager />
-          </div>
-        </div>
-        <h1 className="kabar-cover-title" id="kabar-cover-title">
-          <span>Nara</span><i aria-hidden="true">&amp;</i><span>Aruna</span>
-        </h1>
-        <p className="kabar-cover-date"><time dateTime="2027-12-12">Minggu, 12 Desember 2027</time><span>Undangan pernikahan</span></p>
-        <OpenButton className="kabar-open">Buka undangan</OpenButton>
+function ContactSheet() {
+  return (
+    <section className="kb-gallery" id="galeri" aria-labelledby="kb-gallery-title">
+      <header className="kb-section-heading">
+        <p>12 Desember 2027 · Bandung</p>
+        <h2 id="kb-gallery-title">Galeri</h2>
+      </header>
+      <div className="kb-contact-sheet">
+        <figure className="kb-contact-photo kb-contact-lead"><PhotoButton index={1} /></figure>
+        <figure className="kb-contact-photo kb-contact-two"><PhotoButton index={2} /></figure>
+        <figure className="kb-contact-photo kb-contact-three"><PhotoButton index={3} /></figure>
+        <figure className="kb-contact-photo kb-contact-four"><PhotoButton index={4} /></figure>
+        <figure className="kb-contact-photo kb-contact-five"><PhotoButton index={5} /></figure>
+        <figure className="kb-contact-photo kb-contact-six"><PhotoButton index={6} /></figure>
       </div>
     </section>
   );
+}
 
+export function KabarBahagiaPreview() {
   return (
-    <InvitationFrame templateId="retro-kabar-bahagia" name="Kabar Bahagia" className="kabar-frame" cover={cover}>
-      <div className="kabar-content">
-        <section className="kabar-couple" id="mempelai" aria-labelledby="kabar-couple-title">
-          <header className="kabar-section-heading" data-reveal>
-            <h2 id="kabar-couple-title">Mempelai</h2>
-            <span>Bandung · 12.12.2027</span>
+    <InvitationFrame
+      templateId="retro-kabar-bahagia"
+      name="Kabar Bahagia"
+      className="kabar-frame"
+      cover={<Cover />}
+    >
+      <article className="kabar-content">
+        <section className="kb-frontpage" id="mempelai" aria-labelledby="kb-frontpage-title">
+          <div className="kb-publication-rule" aria-hidden="true" />
+          <header className="kb-frontpage-heading" data-reveal>
+            <p>Bandung · 12 Desember 2027</p>
+            <h1 id="kb-frontpage-title"><span>Nara</span><i aria-hidden="true">&amp;</i><span>Aruna</span></h1>
+            <p>Putra Aditya &amp; Laras · Putri Baskara &amp; Ratih</p>
           </header>
-          <div className="kabar-people">
-            <article className="kabar-person" data-reveal>
-              <PhotoButton index={2} className="kabar-person-photo" />
-              <div className="kabar-person-name">
-                <h3>Nara <span>Pradipta</span></h3>
-                <p>Putra Bapak Aditya<br />&amp; Ibu Laras</p>
-              </div>
-            </article>
-            <article className="kabar-person" data-reveal>
-              <PhotoButton index={3} className="kabar-person-photo" />
-              <div className="kabar-person-name">
-                <h3>Aruna <span>Kirana</span></h3>
-                <p>Putri Bapak Baskara<br />&amp; Ibu Ratih</p>
-              </div>
-            </article>
-          </div>
-          <div className="kabar-couple-rule" aria-hidden="true" />
-        </section>
-
-        <section className="kabar-events" id="acara" aria-labelledby="kabar-events-title">
-          <div className="kabar-event-stamp" data-reveal>
-            <time dateTime="2027-12-12"><span>12</span><span>Des</span><span>2027</span></time>
-          </div>
-          <div className="kabar-event-main" data-reveal>
-            <h2 id="kabar-events-title">Acara</h2>
-            <p className="kabar-event-place">Bandung, Jawa Barat</p>
-            <table className="kabar-event-table">
-              <tbody>
-                <tr><th scope="row">Akad nikah</th><td><time dateTime="2027-12-12T08:00:00+07:00">08.00–10.00 WIB</time></td></tr>
-                <tr><th scope="row">Resepsi</th><td><time dateTime="2027-12-12T11:00:00+07:00">11.00–14.00 WIB</time></td></tr>
-              </tbody>
-            </table>
-            <Countdown className="kabar-countdown" />
-            <CalendarLink className="kabar-calendar" />
-          </div>
-          <div className="kabar-map-row" data-reveal>
-            <h3>Lokasi</h3>
-            <EventMap className="kabar-map" />
+          <figure className="kb-frontpage-photo" data-reveal>
+            <PhotoButton index={1} />
+          </figure>
+          <p className="kb-frontpage-note" data-reveal>
+            Dengan restu keluarga, kami mengundang Anda untuk hadir.
+          </p>
+          <div className="kb-frontpage-dateline" aria-label="Informasi mempelai">
+            <div><strong>Nara Pradipta</strong><span>Putra Bapak Aditya &amp; Ibu Laras</span></div>
+            <i aria-hidden="true">&amp;</i>
+            <div><strong>Aruna Kirana</strong><span>Putri Bapak Baskara &amp; Ibu Ratih</span></div>
           </div>
         </section>
 
-        <section className="kabar-story" aria-labelledby="kabar-story-title">
-          <div className="kabar-story-paper" data-reveal>
-            <header><h2 id="kabar-story-title">Cerita kami</h2></header>
-            <ol>
-              {story.map((item) => (
-                <li key={item.number} data-reveal>
-                  <span>{item.number}</span>
-                  <div><h3>{item.title}</h3><p>{item.text}</p></div>
-                </li>
-              ))}
-            </ol>
-            <div className="kabar-story-rose" data-scene data-scene-depth="-0.8" aria-hidden="true">
-              <Decoration id="orn-shared-romance-01" className="kabar-story-rose-art" />
-            </div>
-          </div>
-        </section>
-
-        <section className="kabar-gallery" id="galeri" aria-labelledby="kabar-gallery-title">
-          <header className="kabar-gallery-heading" data-reveal>
-            <h2 id="kabar-gallery-title">Galeri</h2>
+        <section className="kb-events" id="acara" aria-labelledby="kb-events-title">
+          <header className="kb-section-heading" data-reveal>
+            <p>Bandung, Jawa Barat</p>
+            <h2 id="kb-events-title">Acara</h2>
           </header>
-          <div className="kabar-contact-sheet">
-            {contactSheet.map((photoIndex) => (
-              <PhotoButton
-                index={photoIndex}
-                className={`kabar-contact-photo kabar-contact-photo-${photoIndex}`}
-                key={photoIndex}
-              />
+          <div className="kb-event-date" data-reveal>
+            <time dateTime="2027-12-12">Minggu, 12 Desember 2027</time>
+            <Countdown className="kb-countdown" />
+          </div>
+          <ol className="kb-event-rows">
+            <li><h3>Akad nikah</h3><time dateTime="2027-12-12T08:00:00+07:00">08.00–10.00 WIB</time></li>
+            <li><h3>Resepsi</h3><time dateTime="2027-12-12T11:00:00+07:00">11.00–14.00 WIB</time></li>
+            <li><h3>Lokasi</h3><span>Bandung, Jawa Barat</span></li>
+          </ol>
+          <div className="kb-map">
+            <EventMap />
+            <CalendarLink />
+          </div>
+        </section>
+
+        <section className="kb-story" aria-labelledby="kb-story-title">
+          <header className="kb-section-heading" data-reveal>
+            <p>Catatan keluarga</p>
+            <h2 id="kb-story-title">Cerita kami</h2>
+          </header>
+          <ol className="kb-dispatches">
+            {dispatches.map((item) => (
+              <li key={item.date} data-reveal>
+                <time dateTime={item.date}>{item.date}</time>
+                <div><h3>{item.title}</h3><p>{item.text}</p></div>
+              </li>
             ))}
-          </div>
-          <div className="kabar-gallery-edge" data-scene data-scene-depth="0.65" aria-hidden="true">
-            <Decoration id="orn-retro-02" className="kabar-envelope-art" />
-          </div>
+          </ol>
         </section>
 
-        <section className="kabar-rsvp" id="ucapan" aria-labelledby="kabar-rsvp-title">
-          <header data-reveal>
-            <h2 id="kabar-rsvp-title">Kehadiran &amp; doa</h2>
-            <p>12 Desember 2027 · Bandung</p>
+        <ContactSheet />
+
+        <section className="kb-rsvp" id="ucapan" aria-labelledby="kb-rsvp-title">
+          <header className="kb-section-heading" data-reveal>
+            <p>12 Desember 2027</p>
+            <h2 id="kb-rsvp-title">Kehadiran &amp; doa</h2>
           </header>
-          <Rsvp className="kabar-rsvp-form" />
+          <Rsvp className="kb-rsvp-form" />
         </section>
 
-        <section className="kabar-gift" aria-label="Hadiah">
-          <Gift className="kabar-gift-details" />
+        <section className="kb-gift" aria-label="Hadiah">
+          <Gift />
         </section>
 
-        <footer className="kabar-closing" data-reveal>
-          <div className="kabar-closing-envelope" data-scene data-scene-depth="-0.65" aria-hidden="true">
-            <Decoration id="orn-shared-romance-04" className="kabar-closing-envelope-art" />
-          </div>
-          <p>Dengan hormat,</p>
-          <strong>Nara Pradipta <i>&amp;</i> Aruna Kirana</strong>
+        <footer className="kb-closing">
+          <div className="kb-colophon-rule" aria-hidden="true" />
+          <p>Terima kasih atas doa dan kehadiran Anda.</p>
+          <strong>Nara Pradipta <i aria-hidden="true">&amp;</i> Aruna Kirana</strong>
           <time dateTime="2027-12-12">12 Desember 2027 · Bandung</time>
         </footer>
-      </div>
+      </article>
     </InvitationFrame>
   );
 }
