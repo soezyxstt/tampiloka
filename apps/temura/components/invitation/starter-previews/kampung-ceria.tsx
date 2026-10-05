@@ -1,153 +1,237 @@
 "use client";
 
 import "./kampung-ceria.css";
-import {
-  CalendarLink,
-  Countdown,
-  Decoration,
-  EventMap,
-  Gift,
-  InvitationFrame,
-  OpenButton,
-  Photo,
-  PhotoButton,
-  Rsvp,
-} from "./preview-kit";
+import { CalendarLink, Countdown, Decoration, EventMap, Gift, InvitationFrame, OpenButton, Photo, PhotoButton, Rsvp } from "./preview-kit";
 
-function KampungCeriaCover() {
-  return (
-    <section className="kc-cover" aria-label="Undangan Nara dan Aruna">
-      <Decoration id="bg-game-upin-ipin" className="kc-cover__village" eager />
-      <span className="kc-cover__haze" aria-hidden="true" />
-      <Decoration id="orn-game-upin-ipin-06" className="kc-cover__house" eager />
-      <Decoration id="orn-game-upin-ipin-01" className="kc-cover__friends" eager />
-      <Decoration id="orn-game-upin-ipin-05" className="kc-cover__pennant" eager />
-      <article className="kc-letter" data-reveal>
-        <span className="kc-letter__rule" aria-hidden="true" />
-        <p className="kc-letter__date">Bandung · 12 Desember 2027</p>
-        <div className="kc-letter__portrait"><Photo index={1} className="kc-letter__photo" alt="Nara dan Aruna di kebun teh" /></div>
-        <h1><span>Nara</span><i aria-hidden="true">&amp;</i><span>Aruna</span></h1>
-        <OpenButton className="kc-open">Buka undangan <span aria-hidden="true">↓</span></OpenButton>
-      </article>
-      <span className="kc-cover__foreground" aria-hidden="true" />
-    </section>
-  );
-}
-
-function KampungCeriaContent() {
-  return (
-    <div className="kc-page">
-      <section className="kc-letter-open" aria-label="Salam pembuka">
-        <div className="kc-letter-open__paper" data-reveal>
-          <Decoration id="orn-game-upin-ipin-02" className="kc-letter-open__ros" />
-          <h2>Kami mengundang Anda.</h2>
-          <a className="kc-text-link" href="#mempelai">Lihat mempelai <span aria-hidden="true">↓</span></a>
-        </div>
-        <div className="kc-letter-open__landscape" data-scene data-scene-depth="0.65" aria-hidden="true">
-          <span className="kc-landscape__hill kc-landscape__hill--back" />
-          <span className="kc-landscape__hill kc-landscape__hill--front" />
-          <span className="kc-landscape__path" />
-        </div>
-      </section>
-
-      <section className="kc-journey" id="mempelai" aria-labelledby="kc-journey-title">
-        <header className="kc-journey__heading" data-reveal>
-          <h2 id="kc-journey-title">Mempelai</h2>
-        </header>
-        <div className="kc-pathway" aria-label="Nara dan Aruna bersama keluarga">
-          <span className="kc-pathway__line" aria-hidden="true" />
-          <article className="kc-stop kc-stop--nara" data-reveal>
-            <div className="kc-stop__photo"><PhotoButton index={2} className="kc-photo-button" /></div>
-            <div className="kc-stop__copy"><span>Putra</span><h3>Nara Pradipta</h3><p>Bapak Aditya<br />&amp; Ibu Laras</p></div>
-          </article>
-          <div className="kc-stop__marker kc-stop__marker--first" aria-hidden="true">01</div>
-          <article className="kc-stop kc-stop--aruna" data-reveal>
-            <div className="kc-stop__photo"><PhotoButton index={3} className="kc-photo-button" /></div>
-            <div className="kc-stop__copy"><span>Putri</span><h3>Aruna Kirana</h3><p>Bapak Baskara<br />&amp; Ibu Ratih</p></div>
-          </article>
-          <div className="kc-stop__marker kc-stop__marker--second" aria-hidden="true">02</div>
-          <Decoration id="orn-game-upin-ipin-04" className="kc-pathway__mei" />
-          <Decoration id="orn-game-upin-ipin-02" className="kc-pathway__ros" />
-        </div>
-      </section>
-
-      <section className="kc-story" aria-labelledby="kc-story-title">
-        <Decoration id="orn-game-upin-ipin-03" className="kc-story__gift" />
-        <div className="kc-story__heading" data-reveal><h2 id="kc-story-title">Cerita kami</h2></div>
-        <ol className="kc-story__stops">
-          <li data-reveal><span>01</span><strong>Saling mengenal</strong></li>
-          <li data-reveal><span>02</span><strong>Memilih bersama</strong></li>
-          <li data-reveal><span>03</span><strong>Mengucap janji</strong></li>
-        </ol>
-      </section>
-
-      <section className="kc-events" id="acara" aria-labelledby="kc-events-title">
-        <div className="kc-courtyard">
-          <header className="kc-courtyard__heading" data-reveal>
-            <p className="kc-overline">Acara</p>
-            <h2 id="kc-events-title">12 · 12 · 27</h2>
-            <p>Minggu</p>
-            <CalendarLink className="kc-calendar" />
-          </header>
-          <div className="kc-courtyard__house" data-scene data-scene-depth="-0.45">
-            <Decoration id="orn-game-upin-ipin-06" className="kc-house-ornament" />
-            <span className="kc-courtyard__ground" aria-hidden="true" />
-          </div>
-          <div className="kc-schedule" data-reveal>
-            <article><span>Akad nikah</span><strong>08.00–10.00 WIB</strong></article>
-            <article><span>Resepsi</span><strong>11.00–14.00 WIB</strong></article>
-            <Countdown className="kc-countdown" />
-          </div>
-          <div className="kc-courtyard__map" data-reveal>
-            <div className="kc-map-copy"><p className="kc-overline">Lokasi acara</p><h3>Bandung</h3><p>Jawa Barat, Indonesia</p></div>
-            <EventMap className="kc-map" />
-          </div>
-          <Decoration id="orn-game-upin-ipin-05" className="kc-courtyard__pennant" />
-        </div>
-      </section>
-
-      <section className="kc-gallery" id="galeri" aria-labelledby="kc-gallery-title">
-        <header className="kc-gallery__heading" data-reveal><h2 id="kc-gallery-title">Galeri</h2></header>
-        <div className="kc-photo-pairs">
-          <div className="kc-photo-pair kc-photo-pair--first" data-scene data-scene-depth="0.55">
-            <figure className="kc-photo-pair__tall" data-reveal><PhotoButton index={1} className="kc-photo-button" /></figure>
-            <figure className="kc-photo-pair__wide" data-reveal><PhotoButton index={2} className="kc-photo-button" /></figure>
-          </div>
-          <div className="kc-photo-pair kc-photo-pair--second" data-scene data-scene-depth="-0.65">
-            <figure className="kc-photo-pair__tall" data-reveal><PhotoButton index={3} className="kc-photo-button" /></figure>
-            <figure className="kc-photo-pair__wide" data-reveal><PhotoButton index={4} className="kc-photo-button" /></figure>
-          </div>
-          <div className="kc-photo-pair kc-photo-pair--third" data-scene data-scene-depth="0.5">
-            <figure className="kc-photo-pair__tall" data-reveal><PhotoButton index={5} className="kc-photo-button" /></figure>
-            <figure className="kc-photo-pair__wide" data-reveal><PhotoButton index={6} className="kc-photo-button" /></figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="kc-rsvp" id="ucapan" aria-labelledby="kc-rsvp-title">
-        <div className="kc-rsvp__heading" data-reveal><h2 id="kc-rsvp-title">Kehadiran &amp; doa</h2></div>
-        <Rsvp className="kc-rsvp__form" />
-      </section>
-
-      <section className="kc-gift" aria-label="Hadiah">
-        <Decoration id="orn-game-upin-ipin-03" className="kc-gift__mail" />
-        <Gift className="kc-gift__details" />
-      </section>
-
-      <footer className="kc-closing" data-reveal>
-        <Decoration id="orn-game-upin-ipin-01" className="kc-closing__friends" />
-        <Decoration id="orn-game-upin-ipin-05" className="kc-closing__pennant" />
-        <p>Terima kasih atas doa dan kehadiran Anda.</p>
-        <strong>Nara <i>&amp;</i> Aruna</strong>
-      </footer>
-    </div>
-  );
-}
+const galleryRows = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+] as const;
 
 export function KampungCeriaPreview() {
+  const cover = (
+    <section className="kc-cover" aria-label="Undangan Nara dan Aruna">
+      <div className="kc-cover__backdrop" aria-hidden="true">
+        <Decoration id="bg-game-upin-ipin" eager />
+      </div>
+      <div className="kc-cover__shade" aria-hidden="true" />
+      <div className="kc-cover__house" aria-hidden="true">
+        <Decoration id="orn-game-upin-ipin-06" eager />
+      </div>
+      <div className="kc-cover__veranda" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+        <i />
+      </div>
+      <div className="kc-cover__content">
+        <div className="kc-cover__window">
+          <Photo index={1} alt="Nara dan Aruna mengenakan busana adat di kebun teh" />
+        </div>
+        <div className="kc-cover__board">
+          <h1>Nara <i aria-hidden="true">&amp;</i> Aruna</h1>
+          <p>Minggu, 12 Desember 2027 · Bandung</p>
+          <OpenButton className="kc-open">Buka undangan <span aria-hidden="true">↓</span></OpenButton>
+        </div>
+      </div>
+      <div className="kc-cover__guests" aria-hidden="true">
+        <span className="kc-cover__guest kc-cover__guest--left">
+          <Decoration id="orn-game-upin-ipin-01" eager />
+        </span>
+        <span className="kc-cover__guest kc-cover__guest--right">
+          <Decoration id="orn-game-upin-ipin-04" eager />
+        </span>
+      </div>
+    </section>
+  );
+
   return (
-    <InvitationFrame templateId="game-upin-ipin" name="Kampung Ceria" className="tk-kampung-ceria" cover={<KampungCeriaCover />}>
-      <KampungCeriaContent />
+    <InvitationFrame templateId="game-upin-ipin" name="Kampung Ceria" className="tk-kampung-ceria" cover={cover}>
+      <div className="kc-page">
+        <section className="kc-welcome" aria-labelledby="kc-welcome-title">
+          <div className="kc-welcome__shade" aria-hidden="true" />
+          <div className="kc-welcome__layout">
+            <div className="kc-welcome__copy" data-reveal>
+              <p>Dengan hormat, kami mengundang Anda untuk hadir di hari pernikahan kami.</p>
+              <h1 id="kc-welcome-title">Nara <i aria-hidden="true">&amp;</i> Aruna</h1>
+              <p>Minggu, 12 Desember 2027 · Bandung</p>
+            </div>
+            <div className="kc-welcome__photo" data-reveal>
+              <div className="kc-window kc-window--hero">
+                <PhotoButton index={1} className="kc-photo-button" />
+              </div>
+            </div>
+          </div>
+          <div className="kc-welcome__garden" aria-hidden="true">
+            <span className="kc-welcome__house"><Decoration id="orn-game-upin-ipin-06" /></span>
+            <span className="kc-welcome__duo"><Decoration id="orn-game-upin-ipin-01" /></span>
+          </div>
+        </section>
+
+        <section className="kc-couple" id="mempelai" aria-labelledby="kc-couple-title">
+          <div className="kc-couple__roof" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+            <i />
+          </div>
+          <header className="kc-heading" data-reveal>
+            <h2 id="kc-couple-title">Mempelai</h2>
+          </header>
+          <div className="kc-couple__windows">
+            <article className="kc-person" data-reveal>
+              <div className="kc-window kc-person__window">
+                <PhotoButton index={2} className="kc-photo-button" />
+              </div>
+              <div className="kc-person__copy">
+                <h3>Nara Pradipta</h3>
+                <p>Putra Bapak Aditya &amp; Ibu Laras</p>
+              </div>
+            </article>
+            <article className="kc-person kc-person--aruna" data-reveal>
+              <div className="kc-window kc-person__window">
+                <PhotoButton index={3} className="kc-photo-button" />
+              </div>
+              <div className="kc-person__copy">
+                <h3>Aruna Kirana</h3>
+                <p>Putri Bapak Baskara &amp; Ibu Ratih</p>
+              </div>
+            </article>
+          </div>
+          <div className="kc-couple__house" aria-hidden="true">
+            <Decoration id="orn-game-upin-ipin-06" />
+          </div>
+        </section>
+
+        <section className="kc-events" id="acara" aria-labelledby="kc-events-title">
+          <header className="kc-heading" data-reveal>
+            <h2 id="kc-events-title">Acara</h2>
+          </header>
+          <div className="kc-events__layout">
+            <div className="kc-programme" data-reveal>
+              <div className="kc-programme__date">
+                <span>Minggu</span>
+                <strong>12</strong>
+                <span>Desember 2027</span>
+              </div>
+              <div className="kc-programme__rows">
+                <article>
+                  <span>08.00–10.00 WIB</span>
+                  <h3>Akad nikah</h3>
+                </article>
+                <article>
+                  <span>11.00–14.00 WIB</span>
+                  <h3>Resepsi</h3>
+                </article>
+              </div>
+              <div className="kc-programme__place">
+                <h3>Bandung</h3>
+                <p>Jawa Barat, Indonesia</p>
+                <Countdown className="kc-countdown" />
+                <CalendarLink className="kc-calendar" />
+              </div>
+            </div>
+            <div className="kc-events__map" data-reveal>
+              <h3>Lokasi acara</h3>
+              <EventMap className="kc-map" />
+              <div className="kc-bench" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </div>
+            </div>
+          </div>
+          <div className="kc-events__yard" aria-hidden="true">
+            <span><Decoration id="orn-game-upin-ipin-05" /></span>
+          </div>
+        </section>
+
+        <section className="kc-story" aria-labelledby="kc-story-title">
+          <header className="kc-heading" data-reveal>
+            <h2 id="kc-story-title">Cerita kami</h2>
+          </header>
+          <div className="kc-story__layout">
+            <div className="kc-story__notes">
+              <ol className="kc-story__timeline">
+                <li data-reveal>
+                  <time dateTime="2022">2022</time>
+                  <span>Bertemu</span>
+                </li>
+                <li data-reveal>
+                  <time dateTime="2025">2025</time>
+                  <span>Saling mengenal</span>
+                </li>
+                <li data-reveal>
+                  <time dateTime="2027">2027</time>
+                  <span>Menetapkan hari</span>
+                </li>
+              </ol>
+              <figure className="kc-story__postcard" data-reveal>
+                <div className="kc-window kc-window--postcard">
+                  <PhotoButton index={4} className="kc-photo-button" />
+                </div>
+              </figure>
+            </div>
+            <aside className="kc-story__path" aria-hidden="true">
+              <Decoration id="bg-game-upin-ipin" />
+            </aside>
+          </div>
+        </section>
+
+        <section className="kc-gallery" id="galeri" aria-labelledby="kc-gallery-title">
+          <header className="kc-gallery__heading" data-reveal>
+            <h2 id="kc-gallery-title">Galeri</h2>
+          </header>
+          <div className="kc-gallery__clothesline">
+            {galleryRows.map((row, rowIndex) => (
+              <div className="kc-gallery__row" key={rowIndex}>
+                <span className="kc-gallery__beam" aria-hidden="true" />
+                {row.map((index) => (
+                  <figure className={"kc-gallery__item kc-gallery__item--" + index} data-reveal key={index}>
+                    <span className="kc-gallery__cord" aria-hidden="true" />
+                    <div className="kc-window kc-gallery__window">
+                      <PhotoButton index={index} className="kc-photo-button" />
+                    </div>
+                  </figure>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="kc-gallery__companions" aria-hidden="true">
+            <span><Decoration id="orn-game-upin-ipin-01" /></span>
+            <span><Decoration id="orn-game-upin-ipin-03" /></span>
+          </div>
+        </section>
+
+        <section className="kc-rsvp" id="ucapan" aria-labelledby="kc-rsvp-title">
+          <header className="kc-heading" data-reveal>
+            <h2 id="kc-rsvp-title">Konfirmasi kehadiran</h2>
+          </header>
+          <div className="kc-rsvp__content">
+            <Rsvp className="kc-rsvp__form" />
+            <Gift className="kc-gift" />
+          </div>
+        </section>
+
+        <footer className="kc-closing">
+          <div className="kc-closing__village" aria-hidden="true">
+            <Decoration id="bg-game-upin-ipin" />
+          </div>
+          <div className="kc-closing__postbox" aria-hidden="true">
+            <span />
+            <i />
+          </div>
+          <div className="kc-closing__message" data-reveal>
+            <p>Terima kasih atas doa dan kehadiran Anda.</p>
+            <strong>Nara <i aria-hidden="true">&amp;</i> Aruna</strong>
+            <span>Bandung · 12 Desember 2027</span>
+          </div>
+          <div className="kc-closing__duo" aria-hidden="true">
+            <Decoration id="orn-game-upin-ipin-01" />
+          </div>
+        </footer>
+      </div>
     </InvitationFrame>
   );
 }

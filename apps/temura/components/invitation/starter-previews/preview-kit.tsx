@@ -29,6 +29,7 @@ type InvitationFrameProps = {
   name: string;
   className?: string;
   cover: ReactNode;
+  opening?: ReactNode;
   children: ReactNode;
 };
 
@@ -102,14 +103,22 @@ function photoAt(index: number): PhotoInfo {
   return photos[index - 1];
 }
 
+function sceneNumber(value: string | undefined, fallback: number, min: number, max: number): number {
+  if (value === undefined || value.trim() === "") return fallback;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? Math.max(min, Math.min(max, parsed)) : fallback;
+}
+
 export function InvitationFrame({
   templateId,
   name,
   className = "",
   cover,
+  opening,
   children,
 }: InvitationFrameProps) {
   const [opened, setOpened] = useState(false);
+  const [greetingOpen, setGreetingOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
   const [audioError, setAudioError] = useState("");
@@ -118,7 +127,10 @@ export function InvitationFrame({
   const contentRef = useRef<HTMLElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const open = useCallback(() => setOpened(true), []);
+  const open = useCallback(() => {
+    setGreetingOpen(true);
+    setOpened(true);
+  }, []);
   const openPhoto = useCallback((index: number) => {
     photoAt(index);
     setSelectedPhoto(index);
@@ -135,66 +147,129 @@ export function InvitationFrame({
     if (!opened) return;
     const dialog = greetingRef.current;
     if (dialog && !dialog.open) dialog.showModal();
+    setGreetingOpen(Boolean(dialog?.open));
   }, [opened]);
 
   useEffect(() => {
     if (!opened) return;
     const content = contentRef.current;
-    if (!content || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
+    if (!content) return;
 
-    const revealNodes = content.querySelectorAll<HTMLElement>("[data-reveal]");
+    const revealNodes = Array.from(content.querySelectorAll<HTMLElement>("[data-reveal]"));
     const scenes = Array.from(content.querySelectorAll<HTMLElement>("[data-scene]"));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue;
-          entry.target.setAttribute("data-revealed", "true");
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -5% 0px" },
-    );
-
-    content.classList.add("tk-motion-ready");
-    revealNodes.forEach((node) => observer.observe(node));
-
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const viewportScenes = new Set<HTMLElement>();
+    let revealObserver: IntersectionObserver | null = null;
+    let sceneObserver: IntersectionObserver | null = null;
     let frame = 0;
+    let running = false;
+
     const updateScenes = () => {
       frame = 0;
-      const height = window.innerHeight || 1;
-      for (const scene of scenes) {
+      const viewportHeight = window.innerHeight || 1;
+      for (const scene of viewportScenes) {
         const rect = scene.getBoundingClientRect();
-        if (rect.bottom < -120 || rect.top > height + 120) continue;
-        const centered = (height / 2 - (rect.top + rect.height / 2)) / height;
-        const depth = Number(scene.dataset.sceneDepth ?? 1);
-        const safeDepth = Number.isFinite(depth) ? Math.max(-2, Math.min(2, depth)) : 1;
-        const progress = Math.max(-1, Math.min(1, centered));
-        scene.style.setProperty("--tk-drift", `${progress * 48 * safeDepth}px`);
-        scene.style.setProperty("--tk-counter", `${progress * -28 * safeDepth}px`);
-        scene.style.setProperty("--tk-turn", `${progress * 3.5 * safeDepth}deg`);
-        scene.style.setProperty(
-          "--tk-progress",
-          `${Math.max(0, Math.min(1, (height - rect.top) / (height + rect.height)))}`,
+        if (rect.bottom < -160 || rect.top > viewportHeight + 160) {
+          viewportScenes.delete(scene);
+          continue;
+        }
+
+        const centered = Math.max(
+          -1,
+          Math.min(1, (viewportHeight / 2 - (rect.top + rect.height / 2)) / viewportHeight),
         );
+        const depth = sceneNumber(scene.dataset.sceneDepth, 1, -4, 4);
+        const travel = sceneNumber(scene.dataset.sceneTravel, 140, 0, 1600);
+        const rotation = sceneNumber(scene.dataset.sceneRotation, 7, -180, 180);
+        const progress = Math.max(
+          0,
+          Math.min(1, (viewportHeight - rect.top) / (viewportHeight + Math.max(0, rect.height))),
+        );
+
+        scene.style.setProperty("--tk-progress", String(progress));
+        scene.style.setProperty("--tk-drift", String(centered * travel * depth) + "px");
+        scene.style.setProperty("--tk-counter", String(centered * travel * -0.65 * depth) + "px");
+        scene.style.setProperty("--tk-turn", String(centered * rotation * depth) + "deg");
       }
     };
+
     const scheduleSceneUpdate = () => {
-      if (!frame) frame = window.requestAnimationFrame(updateScenes);
+      if (!running || viewportScenes.size === 0 || frame) return;
+      frame = window.requestAnimationFrame(updateScenes);
     };
 
-    updateScenes();
-    window.addEventListener("scroll", scheduleSceneUpdate, { passive: true });
-    window.addEventListener("resize", scheduleSceneUpdate, { passive: true });
+    const reveal = (node: HTMLElement) => {
+      node.setAttribute("data-revealed", "true");
+      node.classList.add("is-visible");
+    };
 
-    return () => {
-      observer.disconnect();
+    const stopMotion = () => {
+      if (!running) return;
+      running = false;
       if (frame) window.cancelAnimationFrame(frame);
+      frame = 0;
       window.removeEventListener("scroll", scheduleSceneUpdate);
       window.removeEventListener("resize", scheduleSceneUpdate);
+      revealObserver?.disconnect();
+      sceneObserver?.disconnect();
+      revealObserver = null;
+      sceneObserver = null;
+      viewportScenes.clear();
       content.classList.remove("tk-motion-ready");
+      for (const scene of scenes) {
+        scene.style.removeProperty("--tk-progress");
+        scene.style.removeProperty("--tk-drift");
+        scene.style.removeProperty("--tk-counter");
+        scene.style.removeProperty("--tk-turn");
+      }
+    };
+
+    const startMotion = () => {
+      if (running || reducedMotion.matches) return;
+      if (typeof IntersectionObserver === "undefined") {
+        revealNodes.forEach(reveal);
+        return;
+      }
+
+      running = true;
+      content.classList.add("tk-motion-ready");
+      revealObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            reveal(entry.target as HTMLElement);
+            revealObserver?.unobserve(entry.target);
+          }
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -5% 0px" },
+      );
+      sceneObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            const scene = entry.target as HTMLElement;
+            if (entry.isIntersecting) viewportScenes.add(scene);
+            else viewportScenes.delete(scene);
+          }
+          scheduleSceneUpdate();
+        },
+        { rootMargin: "160px 0px 160px 0px" },
+      );
+      revealNodes.forEach((node) => revealObserver?.observe(node));
+      scenes.forEach((scene) => sceneObserver?.observe(scene));
+      window.addEventListener("scroll", scheduleSceneUpdate, { passive: true });
+      window.addEventListener("resize", scheduleSceneUpdate, { passive: true });
+    };
+
+    const syncMotionPreference = () => {
+      if (reducedMotion.matches) stopMotion();
+      else startMotion();
+    };
+
+    syncMotionPreference();
+    reducedMotion.addEventListener("change", syncMotionPreference);
+    return () => {
+      reducedMotion.removeEventListener("change", syncMotionPreference);
+      stopMotion();
     };
   }, [opened]);
 
@@ -236,7 +311,11 @@ export function InvitationFrame({
 
   return (
     <InvitationContext.Provider value={context}>
-      <div className={frameClassName} data-template-id={templateId}>
+      <div
+        className={frameClassName}
+        data-template-id={templateId}
+        data-greeting-open={greetingOpen ? "true" : "false"}
+      >
         <header className="tk-toolbar">
           <Link className="tk-toolbar-back" href="/desain" aria-label="Kembali ke desain">
             <ArrowLeft aria-hidden="true" size={16} />
@@ -250,6 +329,7 @@ export function InvitationFrame({
           <div className="tk-cover">{cover}</div>
         ) : (
           <main ref={contentRef} className="tk-content" tabIndex={-1}>
+            {opening && <div className="tk-opening" aria-hidden="true">{opening}</div>}
             {children}
           </main>
         )}
@@ -288,7 +368,10 @@ export function InvitationFrame({
           ref={greetingRef}
           className="tk-dialog tk-greeting-dialog"
           aria-labelledby="tk-greeting-title"
-          onClose={() => contentRef.current?.focus({ preventScroll: true })}
+          onClose={() => {
+            setGreetingOpen(false);
+            contentRef.current?.focus({ preventScroll: true });
+          }}
         >
           <button className="tk-dialog-close" type="button" aria-label="Tutup salam" onClick={closeGreeting}>
             <X aria-hidden="true" size={20} />
@@ -624,12 +707,50 @@ export function Rsvp({ className = "" }: { className?: string }) {
   );
 }
 
-export function Gift({ className = "" }: { className?: string }) {
+type GiftBankAccount = {
+  bankName?: string | null;
+  bankAccountNumber?: string | null;
+  bankAccountName?: string | null;
+};
+
+export function Gift({
+  className = "",
+  bankAccounts = [],
+  qrisUrl,
+}: {
+  className?: string;
+  bankAccounts?: GiftBankAccount[];
+  qrisUrl?: string | null;
+}) {
+  const accounts = bankAccounts.filter((account) => Boolean(account.bankAccountNumber?.trim()));
+  const usableQrisUrl = qrisUrl?.trim() && !qrisUrl.includes("qris-placeholder") ? qrisUrl.trim() : null;
+
   return (
-    <details className={["tk-gift", className].filter(Boolean).join(" ")}>
-      <summary>Informasi hadiah</summary>
-      <p>Kehadiran dan doa Anda sudah sangat berarti. Informasi hadiah dapat diperoleh dari keluarga.</p>
-    </details>
+    <div className={["tk-gift", className].filter(Boolean).join(" ")}>
+      <h2 className="tk-gift-title">Informasi hadiah</h2>
+      {accounts.length === 0 && !usableQrisUrl ? (
+        <p>Kehadiran dan doa Anda sudah sangat berarti. Informasi hadiah dapat diperoleh dari keluarga.</p>
+      ) : (
+        <div className="tk-gift-methods">
+          {accounts.map((account, index) => (
+            <div className="tk-gift-account" key={`${account.bankName ?? "bank"}-${account.bankAccountNumber}-${index}`}>
+              <h3>Transfer bank</h3>
+              <dl>
+                {account.bankName && <div><dt>Bank</dt><dd>{account.bankName}</dd></div>}
+                <div><dt>Nomor rekening</dt><dd>{account.bankAccountNumber}</dd></div>
+                {account.bankAccountName && <div><dt>Atas nama</dt><dd>{account.bankAccountName}</dd></div>}
+              </dl>
+            </div>
+          ))}
+          {usableQrisUrl && (
+            <div className="tk-gift-qris">
+              <h3>QRIS</h3>
+              <Image src={usableQrisUrl} alt="QRIS" width={200} height={200} unoptimized />
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
 

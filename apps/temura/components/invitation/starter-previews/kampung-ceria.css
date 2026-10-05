@@ -1,253 +1,845 @@
 .tk-kampung-ceria {
-  --tk-ink: #26392b;
-  --tk-paper: #f8f1dc;
-  --tk-rule: rgb(48 71 45 / 23%);
-  --tk-focus: #8d5737;
-  --tk-body-font: var(--font-inter, "Avenir Next", sans-serif);
-  --tk-ui-font: var(--font-inter, "Avenir Next", sans-serif);
-  --kc-leaf: #405e3f;
-  --kc-moss: #718457;
-  --kc-earth: #9c6646;
-  --kc-sun: #d9b467;
-  --kc-paper: #f8f1dc;
-  --kc-ink: #26392b;
-  color: var(--kc-ink);
-  background: var(--kc-paper);
+  --tk-paper: #f5edd9;
+  --tk-ink: #2d4635;
+  --tk-rule: rgb(67 78 53 / 30%);
+  --tk-focus: #a4472b;
+  --kc-cream: #f5edd9;
+  --kc-wood: #67472f;
+  --kc-wood-deep: #4c3425;
+  --kc-wood-light: #a1764b;
+  --kc-gold: #d5b66c;
+  --kc-leaf: #546e41;
+  --kc-display: var(--font-invitation-serif, Georgia, serif);
+  --tk-body-font: var(--font-sans-inv, "Trebuchet MS"), sans-serif;
+  color: var(--tk-ink);
+  background: var(--kc-cream);
   font-family: var(--tk-body-font);
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 .tk-kampung-ceria,
 .tk-kampung-ceria *,
 .tk-kampung-ceria *::before,
 .tk-kampung-ceria *::after { box-sizing: border-box; }
+
 .tk-kampung-ceria h1,
 .tk-kampung-ceria h2,
 .tk-kampung-ceria h3,
 .tk-kampung-ceria p,
 .tk-kampung-ceria figure { margin: 0; }
+
 .tk-kampung-ceria h1,
 .tk-kampung-ceria h2,
-.tk-kampung-ceria h3 { font-family: var(--font-preview-editorial, Georgia, serif); font-weight: 400; letter-spacing: -.04em; line-height: 1.08; }
-.tk-kampung-ceria button,
-.tk-kampung-ceria input,
-.tk-kampung-ceria select,
-.tk-kampung-ceria textarea { font: inherit; }
-.tk-kampung-ceria [data-scene] { transform: translate3d(var(--tk-drift, 0px), var(--tk-counter, 0px), 0) rotate(var(--tk-turn, 0deg)); }
-.tk-kampung-ceria .kc-overline { color: #536d49; font-family: var(--tk-ui-font); font-size: 14px; font-weight: 600; letter-spacing: .11em; line-height: 1.35; text-transform: uppercase; }
-.tk-kampung-ceria [data-reveal] { transition: opacity 650ms ease, translate 650ms cubic-bezier(.2,.7,.2,1); }
-.tk-kampung-ceria .tk-content.tk-motion-ready [data-reveal]:not(.is-visible) { opacity: 0; translate: 0 20px; }
-.tk-kampung-ceria .tk-content.tk-motion-ready [data-reveal].is-visible { opacity: 1; translate: 0 0; }
-
-/* The invitation opens like a letter set down on a path through the village. */
-.tk-kampung-ceria .kc-cover { position: relative; display: grid; width: 100%; height: 100%; min-height: 100%; place-items: center; overflow: hidden; isolation: isolate; background: #749763; color: var(--kc-ink); }
-.tk-kampung-ceria .kc-cover__village { position: absolute; z-index: -4; inset: 0; width: 100%; height: 100%; }
-.tk-kampung-ceria .kc-cover__village .tk-decoration { width: 100%; height: 100%; object-fit: cover; object-position: 54% 48%; }
-.tk-kampung-ceria .kc-cover__haze { position: absolute; z-index: -3; inset: 0; background: linear-gradient(180deg, rgb(255 248 221 / 4%) 10%, rgb(51 83 51 / 13%) 45%, rgb(28 56 36 / 42%) 100%); }
-.tk-kampung-ceria .kc-letter { position: relative; display: flex; width: min(590px, calc(100% - 34px)); min-height: min(620px, calc(100% - 34px)); flex-direction: column; align-items: center; justify-content: center; gap: clamp(7px, 1.5svh, 13px); padding: 24px clamp(22px, 7vw, 58px) 28px; border: 1px solid #bfa976; background: rgb(250 244 224 / 95%); box-shadow: 0 24px 70px rgb(28 51 32 / 28%), inset 0 0 0 7px rgb(216 193 141 / 23%); text-align: center; }
-.tk-kampung-ceria .kc-letter::before,
-.tk-kampung-ceria .kc-letter::after { position: absolute; right: 14px; left: 14px; height: 1px; background: rgb(89 111 70 / 35%); content: ""; }
-.tk-kampung-ceria .kc-letter::before { top: 13px; }
-.tk-kampung-ceria .kc-letter::after { bottom: 13px; }
-.tk-kampung-ceria .kc-letter__rule { position: absolute; top: 18px; bottom: 18px; left: 18px; width: 1px; background: rgb(89 111 70 / 20%); }
-.tk-kampung-ceria .kc-letter__date { color: #586a4b; font-size: 14px; font-weight: 600; letter-spacing: .1em; }
-.tk-kampung-ceria .kc-letter__portrait { width: clamp(108px, 18svh, 150px); aspect-ratio: .88; padding: 5px; border: 1px solid #a28250; border-radius: 48% 48% 3px 3px; background: #fff9e8; box-shadow: 0 7px 17px rgb(53 58 33 / 13%); }
-.tk-kampung-ceria .kc-letter__portrait .tk-photo-picture,
-.tk-kampung-ceria .kc-letter__photo { width: 100%; height: 100%; border-radius: inherit; }
-.tk-kampung-ceria .kc-letter__photo { object-position: 50% 23%; }
-.tk-kampung-ceria .kc-letter h1 { display: flex; align-items: baseline; justify-content: center; gap: clamp(6px, 2vw, 15px); color: #304533; font-size: clamp(42px, 8.8vw, 68px); white-space: nowrap; }
-.tk-kampung-ceria .kc-letter h1 i { color: var(--kc-earth); font-size: .54em; font-weight: 400; }
-.tk-kampung-ceria .kc-cover .kc-open { min-height: 48px; border-color: #36513a; background: #36513a; color: #fff8e8 !important; font-size: 14px; }
-.tk-kampung-ceria .kc-cover .kc-open:hover { border-color: #8c563b; background: #8c563b; }
-.tk-kampung-ceria .kc-cover .kc-open span { font-size: 18px; }
-.tk-kampung-ceria .kc-cover__house { position: absolute; z-index: -1; right: -4%; bottom: 1%; width: clamp(130px, 24vw, 260px); height: auto; filter: drop-shadow(0 14px 18px rgb(23 50 31 / 28%)); }
-.tk-kampung-ceria .kc-cover__friends { position: absolute; z-index: -1; bottom: 3%; left: 3%; width: clamp(95px, 16vw, 174px); height: auto; }
-.tk-kampung-ceria .kc-cover__pennant { position: absolute; z-index: -1; top: 3%; right: 4%; width: clamp(78px, 13vw, 138px); height: auto; rotate: 4deg; }
-.tk-kampung-ceria .kc-cover__foreground { position: absolute; z-index: -2; right: -5%; bottom: -43px; left: -5%; height: clamp(90px, 19svh, 190px); border-radius: 50% 50% 0 0; background: linear-gradient(180deg, rgb(74 104 55 / 4%), rgb(44 77 43 / 35%)); pointer-events: none; }
-
-.tk-kampung-ceria .kc-page { overflow: hidden; padding-bottom: 12px; background: var(--kc-paper); }
-.tk-kampung-ceria .kc-letter-open { position: relative; display: grid; min-height: 660px; grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr); align-items: center; gap: clamp(26px, 7vw, 90px); overflow: hidden; padding: 94px max(calc((100vw - 1100px) / 2), 36px); background: #edf0d7; }
-.tk-kampung-ceria .kc-letter-open__paper { position: relative; z-index: 2; max-width: 580px; padding: clamp(28px, 5vw, 54px); border: 1px solid #c8b68a; background: #fbf4df; box-shadow: 0 20px 48px rgb(61 74 43 / 14%); }
-.tk-kampung-ceria .kc-letter-open__paper::after { position: absolute; top: 12px; right: 12px; bottom: 12px; left: 12px; border: 1px solid rgb(128 133 86 / 22%); content: ""; pointer-events: none; }
-.tk-kampung-ceria .kc-letter-open__paper > *:not(.kc-letter-open__ros):not(.kc-letter-open__postmark) { position: relative; z-index: 1; }
-.tk-kampung-ceria .kc-letter-open__paper h2 { margin-top: 16px; color: #344b38; font-size: clamp(44px, 6vw, 74px); }
-.tk-kampung-ceria .kc-letter-open__paper h2 i { color: var(--kc-earth); font-weight: 400; }
-.tk-kampung-ceria .kc-letter-open__paper > p:not(.kc-overline) { margin-top: 18px; color: #4c5e46; font-size: 16px; }
-.tk-kampung-ceria .kc-letter-open__ros { position: absolute; right: -34px; bottom: -36px; z-index: 0; width: 126px; height: auto; opacity: .82; pointer-events: none; }
-.tk-kampung-ceria .kc-text-link { display: inline-flex; min-height: 44px; align-items: center; gap: 10px; margin-top: 16px; color: #39513b; font-size: 14px; font-weight: 600; text-underline-offset: 5px; }
-.tk-kampung-ceria .kc-text-link span { font-size: 20px; }
-.tk-kampung-ceria .kc-letter-open__landscape { position: relative; align-self: stretch; min-height: 420px; overflow: hidden; }
-.tk-kampung-ceria .kc-landscape__hill { position: absolute; right: -10%; left: -10%; border-radius: 50% 50% 0 0; }
-.tk-kampung-ceria .kc-landscape__hill--back { top: 17%; height: 57%; background: #a8b687; transform: translateX(calc(var(--tk-drift, 0px) * -.3)); }
-.tk-kampung-ceria .kc-landscape__hill--front { right: -30%; bottom: -12%; left: -30%; height: 60%; background: linear-gradient(160deg, #577b4a, #82965e); transform: translateX(calc(var(--tk-counter, 0px) * .4)); }
-.tk-kampung-ceria .kc-landscape__path { position: absolute; right: 19%; bottom: -8%; left: 14%; height: 52%; border-radius: 50% 50% 0 0; background: #d4bb83; clip-path: polygon(46% 0, 57% 0, 85% 100%, 8% 100%); }
-
-.tk-kampung-ceria .kc-journey { position: relative; overflow: hidden; padding: 100px clamp(20px, 7vw, 90px) 116px; background: linear-gradient(180deg, #dce5c4, #f4edda 90%); }
-.tk-kampung-ceria .kc-journey::before,
-.tk-kampung-ceria .kc-journey::after { position: absolute; top: -20px; bottom: -20px; width: 13%; border-radius: 50%; background: rgb(93 128 67 / 15%); content: ""; filter: blur(3px); }
-.tk-kampung-ceria .kc-journey::before { left: -8%; }
-.tk-kampung-ceria .kc-journey::after { right: -8%; width: 18%; background: rgb(71 111 60 / 13%); }
-.tk-kampung-ceria .kc-journey__heading { position: relative; z-index: 2; text-align: center; }
-.tk-kampung-ceria .kc-journey__heading h2 { margin-top: 12px; color: #314b35; font-size: clamp(42px, 6vw, 72px); }
-.tk-kampung-ceria .kc-journey__heading h2 i { color: var(--kc-earth); font-weight: 400; }
-.tk-kampung-ceria .kc-pathway { position: relative; display: flex; width: min(930px, 100%); flex-direction: column; gap: 72px; margin: 64px auto 0; }
-.tk-kampung-ceria .kc-pathway__line { position: absolute; top: 7%; bottom: 7%; left: 50%; width: 16px; border: 2px dashed #9b794c; border-radius: 50%; opacity: .65; translate: -50% 0; }
-.tk-kampung-ceria .kc-stop { position: relative; z-index: 1; display: grid; width: 84%; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); align-items: center; gap: clamp(18px, 4vw, 42px); }
-.tk-kampung-ceria .kc-stop--nara { margin-right: auto; }
-.tk-kampung-ceria .kc-stop--aruna { grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); margin-left: auto; text-align: right; }
-.tk-kampung-ceria .kc-stop--aruna .kc-stop__photo { order: 2; }
-.tk-kampung-ceria .kc-stop__photo { position: relative; overflow: hidden; padding: 8px; border: 1px solid #b29a6a; border-radius: 46% 46% 5px 5px; background: #fff9e8; box-shadow: 0 16px 34px rgb(55 68 38 / 17%); }
-.tk-kampung-ceria .kc-photo-button { width: 100%; aspect-ratio: .9; border-radius: 43% 43% 2px 2px; }
-.tk-kampung-ceria .kc-photo-button .tk-photo-picture,
-.tk-kampung-ceria .kc-photo-button .tk-photo { width: 100%; height: 100%; border-radius: inherit; object-position: 50% 23%; }
-.tk-kampung-ceria .kc-stop__copy > span { color: #60744f; font-size: 14px; letter-spacing: .13em; text-transform: uppercase; }
-.tk-kampung-ceria .kc-stop__copy h3 { margin-top: 8px; color: #2e4733; font-size: clamp(29px, 4vw, 48px); }
-.tk-kampung-ceria .kc-stop__copy p { margin-top: 12px; color: #495a43; font-size: 14px; line-height: 1.7; }
-.tk-kampung-ceria .kc-stop__marker { position: absolute; z-index: 2; left: 50%; display: grid; width: 44px; min-height: 44px; place-items: center; border: 1px solid #a98b55; border-radius: 50%; background: #f7efd9; color: #785b35; font-size: 14px; translate: -50% 0; }
-.tk-kampung-ceria .kc-stop__marker--first { top: 31%; }
-.tk-kampung-ceria .kc-stop__marker--second { top: 79%; }
-.tk-kampung-ceria .kc-pathway__mei { position: absolute; z-index: 2; top: 7%; right: -2%; width: clamp(70px, 12vw, 116px); height: auto; }
-.tk-kampung-ceria .kc-pathway__ros { position: absolute; z-index: 2; right: 1%; bottom: 2%; width: clamp(66px, 11vw, 104px); height: auto; }
-
-.tk-kampung-ceria .kc-story { position: relative; overflow: hidden; padding: 76px 22px 86px; background: #f5eddb; text-align: center; }
-.tk-kampung-ceria .kc-story__heading h2 { margin-top: 8px; color: #334d35; font-size: clamp(38px, 5vw, 60px); }
-.tk-kampung-ceria .kc-story__stops { display: flex; width: min(940px, 100%); flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px clamp(22px, 6vw, 84px); margin: 36px auto 0; padding: 0; list-style: none; }
-.tk-kampung-ceria .kc-story__stops li { display: flex; align-items: center; gap: 11px; color: #3e563d; }
-.tk-kampung-ceria .kc-story__stops li span { display: grid; width: 44px; min-height: 44px; place-items: center; border: 1px solid #b69b68; border-radius: 50%; color: #865b3c; font-size: 14px; }
-.tk-kampung-ceria .kc-story__stops li strong { font-family: var(--font-preview-editorial, Georgia, serif); font-size: clamp(21px, 2.5vw, 29px); font-weight: 400; }
-.tk-kampung-ceria .kc-story__gift { position: absolute; right: 3%; top: 5%; width: 85px; height: auto; opacity: .85; }
-
-.tk-kampung-ceria .kc-events { overflow: hidden; padding: 96px clamp(18px, 6vw, 76px) 104px; background: #d9e2c1; }
-.tk-kampung-ceria .kc-courtyard { position: relative; width: min(1140px, 100%); margin: 0 auto; padding: clamp(28px, 5vw, 62px); border: 1px solid #9a9b68; background: #f7f0dc; box-shadow: 0 18px 43px rgb(47 71 40 / 12%); }
-.tk-kampung-ceria .kc-courtyard::before { position: absolute; inset: 12px; border: 1px dashed rgb(111 128 76 / 40%); content: ""; pointer-events: none; }
-.tk-kampung-ceria .kc-courtyard__heading { position: relative; z-index: 2; max-width: 620px; }
-.tk-kampung-ceria .kc-courtyard__heading h2 { margin-top: 13px; color: #334d35; font-size: clamp(48px, 7vw, 82px); }
-.tk-kampung-ceria .kc-courtyard__heading h2 i { color: var(--kc-earth); font-weight: 400; }
-.tk-kampung-ceria .kc-courtyard__heading > p:not(.kc-overline) { margin-top: 15px; color: #4b5d43; font-size: 15px; }
-.tk-kampung-ceria .kc-calendar { margin-top: 14px; color: #344f38; }
-.tk-kampung-ceria .kc-courtyard__house { position: absolute; z-index: 1; top: 3%; right: 3%; width: clamp(155px, 24vw, 270px); aspect-ratio: 1.25; }
-.tk-kampung-ceria .kc-house-ornament { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-.tk-kampung-ceria .kc-courtyard__ground { position: absolute; right: -16%; bottom: 0; left: -18%; height: 18%; border-radius: 50% 50% 0 0; background: #d8c38b; }
-.tk-kampung-ceria .kc-schedule { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 28px; max-width: 690px; margin-top: 46px; border-top: 1px solid #99a07b; }
-.tk-kampung-ceria .kc-schedule article { display: grid; min-height: 75px; align-content: center; gap: 3px; border-bottom: 1px solid #c4c4a1; }
-.tk-kampung-ceria .kc-schedule article span { color: #64754d; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
-.tk-kampung-ceria .kc-schedule article strong { color: #304936; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.tk-kampung-ceria .kc-countdown { grid-column: 1 / -1; margin-top: 23px; color: #344e37; }
-.tk-kampung-ceria .kc-countdown dt { color: #5d714b; }
-.tk-kampung-ceria .kc-countdown dd { font-family: var(--font-preview-editorial, Georgia, serif); }
-.tk-kampung-ceria .kc-courtyard__map { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(170px, .5fr) minmax(0, 1fr); align-items: center; gap: 24px; margin-top: 40px; padding: 18px; border: 1px solid #a9ab7e; background: #edf0dc; }
-.tk-kampung-ceria .kc-map-copy h3 { margin-top: 8px; color: #334c36; font-size: 38px; }
-.tk-kampung-ceria .kc-map-copy > p:last-child { margin-top: 7px; color: #536146; font-size: 14px; }
-.tk-kampung-ceria .kc-map { min-width: 0; border: 1px solid #aaa57a; }
-.tk-kampung-ceria .kc-map iframe { min-height: 250px; }
-.tk-kampung-ceria .kc-courtyard__pennant { position: absolute; right: 2%; bottom: -20px; z-index: 3; width: clamp(72px, 11vw, 118px); height: auto; pointer-events: none; }
-
-.tk-kampung-ceria .kc-gallery { overflow: hidden; padding: 96px clamp(18px, 7vw, 100px) 110px; background: #eef0dd; }
-.tk-kampung-ceria .kc-gallery__heading { width: min(1040px, 100%); margin: 0 auto 42px; padding-bottom: 17px; border-bottom: 1px solid #b0b695; }
-.tk-kampung-ceria .kc-gallery__heading h2 { margin-top: 8px; color: #324a35; font-size: clamp(48px, 7vw, 76px); }
-.tk-kampung-ceria .kc-photo-pairs { display: grid; width: min(1040px, 100%); gap: clamp(44px, 7vw, 84px); margin: 0 auto; }
-.tk-kampung-ceria .kc-photo-pair { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: clamp(14px, 3vw, 32px); }
-.tk-kampung-ceria .kc-photo-pair--second { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); }
-.tk-kampung-ceria .kc-photo-pair--second .kc-photo-pair__tall { order: 2; }
-.tk-kampung-ceria .kc-photo-pair--second .kc-photo-pair__wide { order: 1; }
-.tk-kampung-ceria .kc-photo-pair--third { margin-left: 4%; }
-.tk-kampung-ceria .kc-photo-pair figure { min-width: 0; padding: 8px; border: 1px solid #b2a374; background: #fbf5e3; box-shadow: 0 15px 30px rgb(47 67 39 / 14%); }
-.tk-kampung-ceria .kc-photo-pair__tall .kc-photo-button { width: 100%; aspect-ratio: .72; }
-.tk-kampung-ceria .kc-photo-pair__wide { display: flex; flex-direction: column; align-self: center; }
-.tk-kampung-ceria .kc-photo-pair__wide .kc-photo-button { width: 100%; aspect-ratio: 1.22; }
-.tk-kampung-ceria .kc-photo-pair .kc-photo-button .tk-photo-picture,
-.tk-kampung-ceria .kc-photo-pair .kc-photo-button .tk-photo { width: 100%; height: 100%; }
-.tk-kampung-ceria .kc-photo-pair .kc-photo-button .tk-photo { object-position: 50% 23%; }
-
-.tk-kampung-ceria .kc-rsvp { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.3fr); gap: clamp(24px, 6vw, 78px); padding: 96px max(calc((100vw - 1050px) / 2), 28px); background: #dce4c8; }
-.tk-kampung-ceria .kc-rsvp__heading h2 { margin-top: 12px; color: #304935; font-size: clamp(38px, 5vw, 62px); }
-.tk-kampung-ceria .kc-rsvp__form { max-width: 620px; color: var(--kc-ink); }
-.tk-kampung-ceria .kc-gift { position: relative; display: flex; min-height: 150px; align-items: center; justify-content: center; padding: 40px 100px; background: #fbf4df; }
-.tk-kampung-ceria .kc-gift__details { width: min(420px, 100%); text-align: center; }
-.tk-kampung-ceria .kc-gift__details summary { min-height: 48px; justify-content: center; border-block: 1px solid var(--tk-rule); }
-.tk-kampung-ceria .kc-gift__mail { position: absolute; right: max(8%, calc((100vw - 980px) / 2)); width: clamp(66px, 10vw, 100px); height: auto; }
-.tk-kampung-ceria .kc-closing { position: relative; display: flex; min-height: 350px; flex-direction: column; align-items: center; justify-content: center; gap: 11px; overflow: hidden; padding: 76px 24px; background: #314a36; color: #fbf2dd; text-align: center; }
-.tk-kampung-ceria .kc-closing > p { font-size: 15px; }
-.tk-kampung-ceria .kc-closing > strong { font-family: var(--font-preview-editorial, Georgia, serif); font-size: clamp(48px, 7vw, 78px); font-weight: 400; }
-.tk-kampung-ceria .kc-closing > strong i { color: #ddb675; font-weight: 400; }
-.tk-kampung-ceria .kc-closing > span { color: #d8c58f; font-size: 14px; letter-spacing: .13em; }
-.tk-kampung-ceria .kc-closing__friends { position: absolute; bottom: 0; left: max(4%, calc((100vw - 1180px) / 2)); width: clamp(92px, 15vw, 160px); height: auto; }
-.tk-kampung-ceria .kc-closing__pennant { position: absolute; top: 7%; right: 6%; width: clamp(70px, 10vw, 106px); height: auto; }
-
-@media (max-width: 760px) {
-  .tk-kampung-ceria .kc-cover__village .tk-decoration { object-position: 57% center; }
-  .tk-kampung-ceria .kc-letter { width: min(520px, calc(100% - 30px)); min-height: min(590px, calc(100% - 30px)); gap: clamp(7px, 1.5svh, 12px); padding: 25px 16px; }
-  .tk-kampung-ceria .kc-letter__date { font-size: 14px; letter-spacing: .045em; }
-  .tk-kampung-ceria .kc-letter__portrait { width: clamp(106px, 17svh, 136px); }
-  .tk-kampung-ceria .kc-letter h1 { gap: 6px; font-size: clamp(37px, 10.5vw, 52px); }
-  .tk-kampung-ceria .kc-cover__house { right: -8%; bottom: 0; width: 128px; }
-  .tk-kampung-ceria .kc-cover__friends { left: -2%; bottom: 1%; width: 88px; }
-  .tk-kampung-ceria .kc-cover__pennant { top: 1%; right: 1%; width: 64px; }
-  .tk-kampung-ceria .kc-letter-open { min-height: 0; grid-template-columns: 1fr; gap: 20px; padding: 72px 22px 0; }
-  .tk-kampung-ceria .kc-letter-open__paper { width: min(560px, 100%); margin-inline: auto; padding: 28px 24px 44px; }
-  .tk-kampung-ceria .kc-letter-open__paper h2 { font-size: clamp(40px, 10vw, 58px); }
-  .tk-kampung-ceria .kc-letter-open__landscape { min-height: 265px; margin-inline: -22px; }
-  .tk-kampung-ceria .kc-journey { padding: 76px 20px 90px; }
-  .tk-kampung-ceria .kc-pathway { gap: 55px; margin-top: 42px; }
-  .tk-kampung-ceria .kc-pathway__line { left: 50%; }
-  .tk-kampung-ceria .kc-stop,
-  .tk-kampung-ceria .kc-stop--aruna { width: 92%; grid-template-columns: minmax(0, 1fr) minmax(0, .88fr); gap: 12px; }
-  .tk-kampung-ceria .kc-stop--aruna .kc-stop__photo { order: 2; }
-  .tk-kampung-ceria .kc-stop__copy h3 { font-size: clamp(23px, 6vw, 31px); }
-  .tk-kampung-ceria .kc-stop__copy p { margin-top: 8px; font-size: 14px; }
-  .tk-kampung-ceria .kc-stop__copy > span { font-size: 14px; }
-  .tk-kampung-ceria .kc-stop__marker { width: 44px; }
-  .tk-kampung-ceria .kc-pathway__mei { top: 4%; right: -4%; width: 66px; }
-  .tk-kampung-ceria .kc-pathway__ros { right: -3%; bottom: -1%; width: 62px; }
-  .tk-kampung-ceria .kc-story { padding: 68px 18px 76px; }
-  .tk-kampung-ceria .kc-story__gift { right: -1%; top: 1%; width: 58px; }
-  .tk-kampung-ceria .kc-story__stops { flex-direction: column; align-items: flex-start; gap: 12px; width: max-content; margin-top: 25px; }
-  .tk-kampung-ceria .kc-story__stops li strong { font-size: 21px; }
-  .tk-kampung-ceria .kc-events { padding: 66px 14px 74px; }
-  .tk-kampung-ceria .kc-courtyard { padding: 30px 20px; }
-  .tk-kampung-ceria .kc-courtyard::before { inset: 9px; }
-  .tk-kampung-ceria .kc-courtyard__house { top: 7%; right: 0; width: 112px; opacity: .82; }
-  .tk-kampung-ceria .kc-courtyard__heading { max-width: 85%; }
-  .tk-kampung-ceria .kc-courtyard__heading h2 { font-size: clamp(43px, 11vw, 62px); }
-  .tk-kampung-ceria .kc-courtyard__heading > p:not(.kc-overline) { max-width: 210px; font-size: 14px; }
-  .tk-kampung-ceria .kc-schedule { grid-template-columns: 1fr; margin-top: 32px; }
-  .tk-kampung-ceria .kc-schedule article { min-height: 68px; }
-  .tk-kampung-ceria .kc-schedule article strong { font-size: 14px; }
-  .tk-kampung-ceria .kc-courtyard__map { grid-template-columns: 1fr; gap: 12px; margin-top: 26px; padding: 14px; }
-  .tk-kampung-ceria .kc-map-copy h3 { font-size: 32px; }
-  .tk-kampung-ceria .kc-map iframe { min-height: 220px; }
-  .tk-kampung-ceria .kc-gallery { padding: 70px 18px 84px; }
-  .tk-kampung-ceria .kc-gallery__heading { margin-bottom: 30px; }
-  .tk-kampung-ceria .kc-photo-pairs { gap: 40px; }
-  .tk-kampung-ceria .kc-photo-pair,
-  .tk-kampung-ceria .kc-photo-pair--second { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: 12px; }
-  .tk-kampung-ceria .kc-photo-pair--second { margin-left: 0; }
-  .tk-kampung-ceria .kc-photo-pair figure { padding: 5px; }
-  .tk-kampung-ceria .kc-rsvp { grid-template-columns: 1fr; gap: 24px; padding: 76px 22px; }
-  .tk-kampung-ceria .kc-gift { min-height: 130px; padding: 36px 80px 36px 24px; }
-  .tk-kampung-ceria .kc-gift__mail { right: 4%; width: 62px; }
-  .tk-kampung-ceria .kc-closing { min-height: 310px; }
-  .tk-kampung-ceria .kc-closing__friends { left: -1%; width: 84px; }
-  .tk-kampung-ceria .kc-closing__pennant { top: 5%; right: 3%; width: 62px; }
+.tk-kampung-ceria h3 {
+  font-family: var(--kc-display);
+  font-weight: 600;
+  letter-spacing: -.025em;
+  line-height: 1.14;
 }
 
-@media (max-width: 360px) {
-  .tk-kampung-ceria .kc-letter { gap: 8px; padding-inline: 12px; }
-  .tk-kampung-ceria .kc-letter h1 { font-size: 36px; }
-  .tk-kampung-ceria .kc-letter__portrait { width: 100px; }
-  .tk-kampung-ceria .kc-stop,
-  .tk-kampung-ceria .kc-stop--aruna { width: 100%; gap: 9px; }
-  .tk-kampung-ceria .kc-stop__copy h3 { font-size: 21px; }
-  .tk-kampung-ceria .kc-stop__marker { width: 40px; min-height: 40px; }
-  .tk-kampung-ceria .kc-photo-pair,
-  .tk-kampung-ceria .kc-photo-pair--second { gap: 8px; }
+.tk-kampung-ceria :focus-visible {
+  outline: 3px solid #a4472b;
+  outline-offset: 4px;
+}
+
+.tk-kampung-ceria button { cursor: pointer; }
+.tk-kampung-ceria .kc-page { background: var(--kc-cream); }
+.tk-kampung-ceria .tk-decoration-picture,
+.tk-kampung-ceria .tk-photo-picture { max-width: none; }
+
+.tk-kampung-ceria .kc-photo-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 44px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #d9c58c;
+}
+
+.tk-kampung-ceria .kc-photo-button .tk-photo-picture,
+.tk-kampung-ceria .kc-photo-button .tk-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tk-kampung-ceria .kc-photo-button .tk-photo {
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.tk-kampung-ceria [data-reveal] {
+  transition: opacity 560ms ease, translate 560ms cubic-bezier(.2,.7,.2,1);
+}
+
+.tk-kampung-ceria .tk-content.tk-motion-ready [data-reveal]:not(.is-visible):not([data-revealed="true"]) {
+  opacity: 0;
+  translate: 0 10px;
+}
+
+.tk-kampung-ceria .tk-content.tk-motion-ready [data-reveal].is-visible,
+.tk-kampung-ceria .tk-content.tk-motion-ready [data-reveal][data-revealed="true"] {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.tk-kampung-ceria .kc-heading {
+  width: min(1080px, 100%);
+  margin: 0 auto 28px;
+}
+
+.tk-kampung-ceria .kc-heading h2 {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.tk-kampung-ceria .kc-window {
+  padding: 8px;
+  border: 10px solid var(--kc-wood);
+  background: #dfc987;
+  box-shadow: inset 0 0 0 2px #f3dfa5, 8px 9px rgb(47 51 34 / 23%);
+}
+
+.tk-kampung-ceria .kc-window--hero,
+.tk-kampung-ceria .kc-person__window {
+  aspect-ratio: 4 / 5;
+}
+
+.tk-kampung-ceria .kc-window--postcard {
+  aspect-ratio: 4 / 5;
+  border-width: 8px;
+}
+
+/* The accepted cover keeps the invitation sign and photo in their own veranda bays. */
+.tk-kampung-ceria .kc-cover {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  place-items: center;
+  overflow: hidden;
+  background: #5c7548;
+  color: #fff3d6;
+}
+
+.tk-kampung-ceria .kc-cover__backdrop,
+.tk-kampung-ceria .kc-cover__backdrop > .tk-decoration-picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tk-kampung-ceria .kc-cover__backdrop .tk-decoration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+.tk-kampung-ceria .kc-cover__shade {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(35 48 31 / 42%), transparent 73%), linear-gradient(0deg, rgb(34 44 29 / 58%), transparent 60%);
+}
+
+.tk-kampung-ceria .kc-cover__house {
+  position: absolute;
+  z-index: 1;
+  right: -7%;
+  bottom: -10%;
+  width: min(39vw, 500px);
+  pointer-events: none;
+}
+
+.tk-kampung-ceria .kc-cover__house .tk-decoration-picture,
+.tk-kampung-ceria .kc-cover__guest .tk-decoration-picture,
+.tk-kampung-ceria .kc-welcome__garden .tk-decoration-picture,
+.tk-kampung-ceria .kc-couple__house .tk-decoration-picture,
+.tk-kampung-ceria .kc-events__yard .tk-decoration-picture,
+.tk-kampung-ceria .kc-gallery__companions .tk-decoration-picture,
+.tk-kampung-ceria .kc-closing__duo .tk-decoration-picture {
+  display: block;
+}
+
+.tk-kampung-ceria .kc-cover__house .tk-decoration,
+.tk-kampung-ceria .kc-cover__guest .tk-decoration,
+.tk-kampung-ceria .kc-welcome__garden .tk-decoration,
+.tk-kampung-ceria .kc-couple__house .tk-decoration,
+.tk-kampung-ceria .kc-events__yard .tk-decoration,
+.tk-kampung-ceria .kc-gallery__companions .tk-decoration,
+.tk-kampung-ceria .kc-closing__duo .tk-decoration {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tk-kampung-ceria .kc-cover__veranda {
+  position: absolute;
+  z-index: 1;
+  right: -10%;
+  bottom: -2%;
+  left: -10%;
+  display: flex;
+  height: 17%;
+  border-top: 12px solid #c4a35e;
+  background: repeating-linear-gradient(90deg, #755238 0 9px, transparent 9px 55px), linear-gradient(#815b3b, #543d2b);
+  opacity: .94;
+}
+
+.tk-kampung-ceria .kc-cover__veranda i {
+  width: 12px;
+  height: 100%;
+  margin-left: 14%;
+  background: #64462f;
+}
+
+.tk-kampung-ceria .kc-cover__veranda i:nth-child(2) { margin-left: 21%; }
+.tk-kampung-ceria .kc-cover__veranda i:nth-child(3) { margin-left: 18%; }
+
+.tk-kampung-ceria .kc-cover__content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  width: min(1020px, calc(100% - 44px));
+  grid-template-columns: minmax(210px, 330px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(26px, 6vw, 82px);
+  padding: 26px 0 44px;
+}
+
+.tk-kampung-ceria .kc-cover__window {
+  width: min(100%, 330px);
+  aspect-ratio: 4 / 5;
+  padding: 10px;
+  border: 11px solid var(--kc-wood);
+  background: #d9bd78;
+  box-shadow: 12px 13px rgb(35 48 30 / 42%), inset 0 0 0 2px #e7cb86;
+}
+
+.tk-kampung-ceria .kc-cover__window > .tk-photo-picture { display: block; width: 100%; height: 100%; }
+.tk-kampung-ceria .kc-cover__window .tk-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+
+.tk-kampung-ceria .kc-cover__board {
+  justify-self: start;
+  width: min(100%, 610px);
+  padding: clamp(24px, 4vw, 42px);
+  border: 8px solid var(--kc-wood-deep);
+  background: linear-gradient(135deg, #875c3a, #704a32 48%, #8a6040);
+  box-shadow: inset 0 0 0 2px #c79f5c, 9px 10px rgb(32 44 29 / 32%);
+  text-align: center;
+}
+
+.tk-kampung-ceria .kc-cover__board h1 {
+  color: #fff2d3;
+  font-size: clamp(42px, 5.4vw, 72px);
+  font-weight: 600;
+}
+
+.tk-kampung-ceria .kc-cover__board h1 i,
+.tk-kampung-ceria .kc-welcome__copy h1 i,
+.tk-kampung-ceria .kc-closing__message strong i { color: #edc66f; font-style: normal; }
+.tk-kampung-ceria .kc-cover__board p { margin-top: 12px; color: #fff1d2; font-size: 15px; }
+
+.tk-kampung-ceria .kc-open {
+  margin-top: 22px;
+  border: 2px solid #f0cf7e;
+  border-radius: 999px;
+  background: #36553b;
+  color: #fff7e2 !important;
+  font-family: var(--tk-ui-font, sans-serif);
+  font-weight: 700;
+  box-shadow: 3px 4px #493829;
+}
+
+.tk-kampung-ceria .kc-open:hover { background: #4e7045; }
+
+.tk-kampung-ceria .kc-cover__guests {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  height: 30%;
+  pointer-events: none;
+}
+
+.tk-kampung-ceria .kc-cover__guest { position: absolute; bottom: 2px; width: clamp(110px, 12vw, 165px); }
+.tk-kampung-ceria .kc-cover__guest--left { left: 2%; }
+.tk-kampung-ceria .kc-cover__guest--right { right: 3%; width: clamp(105px, 11vw, 148px); }
+
+/* The first view settles on the real kampung backdrop; its cast stays in a separate margin. */
+.tk-kampung-ceria .kc-welcome {
+  position: relative;
+  isolation: isolate;
+  padding: 70px 20px 22px;
+  background: #536d46 url("/assets/templates/backgrounds/bg-game-upin-ipin-480.webp") center 61% / cover no-repeat;
+  color: #fff5df;
+}
+
+.tk-kampung-ceria .kc-welcome__shade {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(35 52 35 / 66%), rgb(41 61 40 / 20%) 72%), linear-gradient(0deg, rgb(42 51 33 / 48%), transparent 62%);
+}
+
+.tk-kampung-ceria .kc-welcome__layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(1080px, 100%);
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 340px);
+  align-items: center;
+  gap: clamp(32px, 7vw, 96px);
+  margin: 0 auto;
+}
+
+.tk-kampung-ceria .kc-welcome__copy {
+  padding: clamp(18px, 3vw, 34px);
+  border-left: 8px solid var(--kc-gold);
+  background: rgb(57 58 38 / 55%);
+}
+
+.tk-kampung-ceria .kc-welcome__copy > p:first-child { max-width: 38rem; font-size: 16px; }
+.tk-kampung-ceria .kc-welcome__copy h1 { margin-top: 12px; color: #fff2d3; font-size: clamp(42px, 5.5vw, 68px); }
+.tk-kampung-ceria .kc-welcome__copy > p:last-child { margin-top: 8px; color: #f5dda3; font-size: 15px; }
+.tk-kampung-ceria .kc-welcome__photo { width: min(100%, 340px); }
+
+.tk-kampung-ceria .kc-welcome__garden {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(1080px, 100%);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 20px auto 0;
+  padding-inline: clamp(8px, 3vw, 34px);
+  pointer-events: none;
+}
+
+.tk-kampung-ceria .kc-welcome__house { display: block; width: clamp(150px, 25vw, 250px); }
+.tk-kampung-ceria .kc-welcome__duo { display: block; width: clamp(108px, 15vw, 154px); }
+
+/* Two separate wooden window portraits belong to the same open verandah. */
+.tk-kampung-ceria .kc-couple {
+  position: relative;
+  padding: 56px 22px 30px;
+  background: linear-gradient(180deg, #e9dfc0, #f5edd9 58%);
+}
+
+.tk-kampung-ceria .kc-couple__roof {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  height: 22px;
+  justify-content: space-around;
+  border-bottom: 9px solid #6b4931;
+  background: linear-gradient(#a97a4b 0 8px, #735137 8px 13px, #c9a765 13px 100%);
+}
+
+.tk-kampung-ceria .kc-couple__roof i { width: 11px; height: 34px; background: #6b4931; }
+
+.tk-kampung-ceria .kc-couple .kc-heading { text-align: center; }
+
+.tk-kampung-ceria .kc-couple__windows {
+  display: grid;
+  width: min(1040px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(24px, 8vw, 112px);
+  margin: 0 auto;
+}
+
+.tk-kampung-ceria .kc-person { width: min(100%, 360px); }
+.tk-kampung-ceria .kc-person--aruna { justify-self: end; margin-top: 52px; }
+.tk-kampung-ceria .kc-person__copy { margin-top: 14px; text-align: center; }
+.tk-kampung-ceria .kc-person__copy h3 { color: #294532; font-size: clamp(25px, 3vw, 34px); }
+.tk-kampung-ceria .kc-person__copy p { margin-top: 5px; color: #495d40; font-size: 15px; }
+
+.tk-kampung-ceria .kc-couple__house {
+  width: min(260px, 48vw);
+  margin: 14px 0 0 auto;
+  opacity: .92;
+  pointer-events: none;
+}
+
+/* The courtyard programme and map remain side-by-side, with their labels outside the map. */
+.tk-kampung-ceria .kc-events {
+  padding: 58px 22px 20px;
+  background: #d3d9b8;
+  color: #2d4432;
+}
+
+.tk-kampung-ceria .kc-events .kc-heading { text-align: center; }
+
+.tk-kampung-ceria .kc-events__layout {
+  display: grid;
+  width: min(1080px, 100%);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  align-items: start;
+  gap: clamp(20px, 4vw, 54px);
+  margin: 0 auto;
+}
+
+.tk-kampung-ceria .kc-programme {
+  display: grid;
+  grid-template-columns: 122px minmax(0, 1fr);
+  border: 8px solid var(--kc-wood);
+  background: #f7f0df;
+  box-shadow: 8px 9px rgb(49 57 37 / 16%);
+}
+
+.tk-kampung-ceria .kc-programme__date {
+  display: flex;
+  grid-row: span 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 8px;
+  border-right: 1px solid #cfc39f;
+  color: #3d563b;
+  text-align: center;
+}
+
+.tk-kampung-ceria .kc-programme__date span { font-size: 14px; }
+.tk-kampung-ceria .kc-programme__date strong { font-family: var(--kc-display); font-size: 68px; font-weight: 600; line-height: 1; }
+.tk-kampung-ceria .kc-programme__rows { padding: 4px 18px; }
+.tk-kampung-ceria .kc-programme__rows article { padding: 19px 0 16px; border-bottom: 1px solid #cfc39f; }
+.tk-kampung-ceria .kc-programme__rows article:last-child { border-bottom: 0; }
+.tk-kampung-ceria .kc-programme__rows article > span { font-size: 14px; }
+.tk-kampung-ceria .kc-programme__rows h3 { margin-top: 4px; font-size: 24px; }
+.tk-kampung-ceria .kc-programme__place { grid-column: 1 / -1; padding: 15px 18px 16px; border-top: 1px solid #cfc39f; }
+.tk-kampung-ceria .kc-programme__place h3 { font-size: 23px; }
+.tk-kampung-ceria .kc-programme__place p { margin-top: 2px; font-size: 14px; }
+.tk-kampung-ceria .kc-countdown { gap: 10px 20px; margin-top: 15px; }
+.tk-kampung-ceria .kc-countdown dt { font-size: 12px; }
+.tk-kampung-ceria .kc-countdown dd { font-family: var(--kc-display); font-size: 25px; }
+.tk-kampung-ceria .kc-calendar { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; margin-top: 12px; color: #294532; font-size: 14px; text-underline-offset: 4px; }
+
+.tk-kampung-ceria .kc-events__map { min-width: 0; }
+.tk-kampung-ceria .kc-events__map h3 { margin: 0 0 10px; font-size: 22px; }
+.tk-kampung-ceria .kc-map { padding: 8px; border: 8px solid #775238; background: #f2e5bd; }
+.tk-kampung-ceria .kc-map iframe { display: block; width: 100%; min-height: 265px; border: 0; }
+
+.tk-kampung-ceria .kc-bench {
+  display: flex;
+  width: 120px;
+  height: 38px;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 12px 20px 0 auto;
+  border-top: 8px solid #795638;
+}
+
+.tk-kampung-ceria .kc-bench i { width: 8px; height: 30px; background: #795638; }
+
+.tk-kampung-ceria .kc-events__yard {
+  display: flex;
+  width: min(1080px, 100%);
+  justify-content: flex-end;
+  margin: 10px auto 0;
+  pointer-events: none;
+}
+
+.tk-kampung-ceria .kc-events__yard > span { display: block; width: clamp(100px, 15vw, 150px); }
+
+/* The timeline and postcard sit beside one still image of the village path. */
+.tk-kampung-ceria .kc-story {
+  padding: 58px 22px 42px;
+  background: #f1e6c9;
+}
+
+.tk-kampung-ceria .kc-story .kc-heading { text-align: center; }
+
+.tk-kampung-ceria .kc-story__layout {
+  display: grid;
+  width: min(1080px, 100%);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  align-items: stretch;
+  gap: clamp(24px, 6vw, 76px);
+  margin: 0 auto;
+}
+
+.tk-kampung-ceria .kc-story__notes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+  align-items: center;
+  gap: 24px;
+}
+
+.tk-kampung-ceria .kc-story__timeline {
+  position: relative;
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0 0 0 23px;
+  border-left: 3px solid #9a734c;
+  list-style: none;
+}
+
+.tk-kampung-ceria .kc-story__timeline li {
+  position: relative;
+  display: flex;
+  min-height: 65px;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #cbbd96;
+  font-size: 16px;
+}
+
+.tk-kampung-ceria .kc-story__timeline li::before {
+  position: absolute;
+  left: -30px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #f1e6c9;
+  border-radius: 50%;
+  background: #6f8651;
+  box-shadow: 0 0 0 2px #6f8651;
+  content: "";
+}
+
+.tk-kampung-ceria .kc-story__timeline time { min-width: 48px; color: #506742; font-weight: 700; }
+.tk-kampung-ceria .kc-story__postcard { width: min(100%, 250px); justify-self: end; }
+.tk-kampung-ceria .kc-story__path { min-height: 300px; overflow: hidden; border: 8px solid #765339; background: #687b50; }
+.tk-kampung-ceria .kc-story__path .tk-decoration-picture { display: block; width: 100%; height: 100%; }
+.tk-kampung-ceria .kc-story__path .tk-decoration { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 73%; }
+
+/* Six separate rectangular pictures hang in three ordinary rows. */
+.tk-kampung-ceria .kc-gallery {
+  padding: 0 22px 25px;
+  background: #e8d8ae;
+}
+
+.tk-kampung-ceria .kc-gallery__heading {
+  margin: 0 -22px 27px;
+  padding: 27px 22px;
+  border-top: 10px solid #68472f;
+  border-bottom: 11px solid #68472f;
+  background: linear-gradient(#997248, #78563a);
+  color: #fff1cf;
+  box-shadow: inset 0 -4px #d0ac63;
+  text-align: center;
+}
+
+.tk-kampung-ceria .kc-gallery__heading h2 { font-size: clamp(36px, 4.5vw, 52px); }
+
+.tk-kampung-ceria .kc-gallery__clothesline {
+  display: grid;
+  width: min(1100px, 100%);
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.tk-kampung-ceria .kc-gallery__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(16px, 4vw, 48px);
+  padding: 29px 0 8px;
+}
+
+.tk-kampung-ceria .kc-gallery__beam {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  left: 0;
+  height: 9px;
+  border: 2px solid #4e3726;
+  background: linear-gradient(#bb9254, #745036);
+  box-shadow: 0 3px rgb(61 43 29 / 24%);
+}
+
+.tk-kampung-ceria .kc-gallery__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: stretch;
+}
+
+.tk-kampung-ceria .kc-gallery__cord {
+  display: block;
+  width: 3px;
+  height: 27px;
+  background: #765339;
+  box-shadow: 2px 0 rgb(54 43 31 / 20%);
+}
+
+.tk-kampung-ceria .kc-gallery__window { width: min(100%, 480px); }
+.tk-kampung-ceria .kc-gallery__item--1 .kc-gallery__window,
+.tk-kampung-ceria .kc-gallery__item--4 .kc-gallery__window,
+.tk-kampung-ceria .kc-gallery__item--5 .kc-gallery__window { aspect-ratio: 4 / 5; }
+.tk-kampung-ceria .kc-gallery__item--2 .kc-gallery__window,
+.tk-kampung-ceria .kc-gallery__item--3 .kc-gallery__window,
+.tk-kampung-ceria .kc-gallery__item--6 .kc-gallery__window { aspect-ratio: 6 / 5; }
+
+.tk-kampung-ceria .kc-gallery__item--2 .tk-photo,
+.tk-kampung-ceria .kc-gallery__item--3 .tk-photo,
+.tk-kampung-ceria .kc-gallery__item--6 .tk-photo { object-position: center 10%; }
+
+.tk-kampung-ceria .kc-gallery__companions {
+  display: flex;
+  width: min(1100px, 100%);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 14px auto 0;
+  padding: 10px clamp(12px, 5vw, 58px) 0;
+  border-top: 8px solid #765339;
+  pointer-events: none;
+}
+
+.tk-kampung-ceria .kc-gallery__companions > span:first-child { display: block; width: clamp(125px, 17vw, 180px); }
+.tk-kampung-ceria .kc-gallery__companions > span:last-child { display: block; width: clamp(92px, 13vw, 138px); }
+
+/* The RSVP and truthful gift details stay in the page's natural flow. */
+.tk-kampung-ceria .kc-rsvp {
+  padding: 58px 22px 40px;
+  background: #b8c398;
+  color: #2d4635;
+}
+
+.tk-kampung-ceria .kc-rsvp .kc-heading { text-align: center; }
+
+.tk-kampung-ceria .kc-rsvp__content {
+  display: grid;
+  width: min(1000px, 100%);
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 250px);
+  align-items: start;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.tk-kampung-ceria .kc-rsvp__form {
+  padding: 22px;
+  border: 8px solid var(--kc-wood);
+  background: #f7f0df;
+  box-shadow: 8px 9px rgb(49 57 37 / 16%);
+}
+
+.tk-kampung-ceria .kc-rsvp__form form { gap: 9px; }
+.tk-kampung-ceria .kc-rsvp__form label { margin-top: 9px; color: #3c543d; font-size: 14px; }
+.tk-kampung-ceria .kc-rsvp__form input,
+.tk-kampung-ceria .kc-rsvp__form select,
+.tk-kampung-ceria .kc-rsvp__form textarea {
+  min-height: 48px;
+  border: 1px solid #8d9970;
+  border-radius: 2px;
+  background: #fffaf0;
+  color: #293f30;
+}
+
+.tk-kampung-ceria .kc-rsvp__form textarea { resize: vertical; }
+.tk-kampung-ceria .kc-rsvp__form .tk-rsvp-submit { border-radius: 999px; background: #36553b; }
+.tk-kampung-ceria .kc-rsvp__form .tk-rsvp-status,
+.tk-kampung-ceria .kc-rsvp__form .tk-wishes { font-size: 14px; }
+.tk-kampung-ceria .kc-rsvp__form .tk-wishes article { padding: 16px 0; border-top: 1px solid #c9bb91; }
+.tk-kampung-ceria .kc-rsvp__form .tk-wishes article > span { margin-left: 10px; font-size: 14px; }
+
+.tk-kampung-ceria .kc-gift {
+  padding: 19px 0;
+  border-top: 1px solid rgb(60 73 46 / 40%);
+  border-bottom: 1px solid rgb(60 73 46 / 40%);
+  background: transparent;
+  font-size: 15px;
+}
+
+.tk-kampung-ceria .kc-gift summary { display: flex; min-height: 48px; align-items: center; cursor: pointer; font-weight: 700; }
+.tk-kampung-ceria .kc-gift p { margin-top: 8px; font-size: 14px; }
+
+/* A short note returns to the garden path and a village postbox. */
+.tk-kampung-ceria .kc-closing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  padding: 54px 22px calc(92px + env(safe-area-inset-bottom, 0px));
+  background: #526b44;
+  color: #fff3d8;
+  text-align: center;
+}
+
+.tk-kampung-ceria .kc-closing__village {
+  position: absolute;
+  inset: 0;
+  opacity: .3;
+  pointer-events: none;
+}
+
+.tk-kampung-ceria .kc-closing__village .tk-decoration-picture { display: block; width: 100%; height: 100%; }
+.tk-kampung-ceria .kc-closing__village .tk-decoration { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 80%; }
+
+.tk-kampung-ceria .kc-closing__postbox {
+  position: relative;
+  z-index: 1;
+  width: 70px;
+  height: 65px;
+  border: 6px solid #543b29;
+  background: linear-gradient(90deg, #875d3b, #ab7b4c);
+  box-shadow: 5px 6px rgb(35 44 29 / 25%);
+}
+
+.tk-kampung-ceria .kc-closing__postbox::before {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  left: 7px;
+  height: 7px;
+  background: #4c392a;
+  content: "";
+}
+
+.tk-kampung-ceria .kc-closing__postbox span {
+  position: absolute;
+  top: 22px;
+  right: -14px;
+  width: 23px;
+  height: 18px;
+  border: 1px solid #ac844d;
+  background: #f4dfaa;
+  rotate: -12deg;
+}
+
+.tk-kampung-ceria .kc-closing__postbox i {
+  position: absolute;
+  right: 8px;
+  bottom: 7px;
+  left: 8px;
+  height: 5px;
+  background: #4c392a;
+}
+
+.tk-kampung-ceria .kc-closing__message {
+  position: relative;
+  z-index: 1;
+  width: min(660px, 100%);
+  padding: 20px;
+  border: 6px solid var(--kc-wood-deep);
+  background: rgb(93 65 43 / 91%);
+  box-shadow: inset 0 0 0 2px #c29b59;
+}
+
+.tk-kampung-ceria .kc-closing__message p { font-size: 16px; }
+.tk-kampung-ceria .kc-closing__message strong { display: block; margin-top: 6px; color: #fff2d2; font-family: var(--kc-display); font-size: clamp(36px, 5vw, 56px); font-weight: 600; }
+.tk-kampung-ceria .kc-closing__message > span { display: block; margin-top: 4px; color: #efd185; font-size: 14px; }
+.tk-kampung-ceria .kc-closing__duo { position: relative; z-index: 1; width: clamp(132px, 18vw, 188px); pointer-events: none; }
+
+@media (max-width: 760px) {
+  .tk-kampung-ceria .kc-cover__content {
+    width: min(100% - 32px, 520px);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+    padding: 18px 0 88px;
+  }
+
+  .tk-kampung-ceria .kc-cover__window { width: min(62vw, 235px); padding: 7px; border-width: 8px; }
+  .tk-kampung-ceria .kc-cover__board { justify-self: center; width: min(100%, 470px); padding: 17px 12px; border-width: 6px; }
+  .tk-kampung-ceria .kc-cover__board h1 { font-size: clamp(36px, 9vw, 50px); }
+  .tk-kampung-ceria .kc-cover__board p { margin-top: 5px; font-size: 14px; }
+  .tk-kampung-ceria .kc-open { min-height: 44px; margin-top: 12px; padding: 9px 18px; }
+  .tk-kampung-ceria .kc-cover__house { right: -18%; bottom: -2%; width: 220px; }
+  .tk-kampung-ceria .kc-cover__veranda { height: 13%; }
+  .tk-kampung-ceria .kc-cover__guest { width: 118px; }
+  .tk-kampung-ceria .kc-cover__guest--left { left: -2%; }
+  .tk-kampung-ceria .kc-cover__guest--right { right: -2%; width: 108px; }
+
+  .tk-kampung-ceria .kc-welcome { padding: 42px 14px 18px; }
+  .tk-kampung-ceria .kc-welcome__layout { grid-template-columns: 1fr; justify-items: center; gap: 20px; }
+  .tk-kampung-ceria .kc-welcome__copy { width: min(100%, 480px); padding: 16px 13px; }
+  .tk-kampung-ceria .kc-welcome__copy h1 { font-size: clamp(38px, 10vw, 52px); }
+  .tk-kampung-ceria .kc-welcome__copy > p:first-child { font-size: 15px; }
+  .tk-kampung-ceria .kc-welcome__copy > p:last-child { font-size: 14px; }
+  .tk-kampung-ceria .kc-welcome__photo { width: min(76vw, 292px); }
+  .tk-kampung-ceria .kc-welcome__garden { margin-top: 12px; padding-inline: 6px; }
+  .tk-kampung-ceria .kc-welcome__house { width: clamp(135px, 42vw, 190px); }
+  .tk-kampung-ceria .kc-welcome__duo { width: clamp(90px, 28vw, 124px); }
+
+  .tk-kampung-ceria .kc-couple { padding: 45px 16px 24px; }
+  .tk-kampung-ceria .kc-couple .kc-heading { margin-bottom: 22px; text-align: center; }
+  .tk-kampung-ceria .kc-couple__windows { grid-template-columns: 1fr; gap: 28px; }
+  .tk-kampung-ceria .kc-person { width: min(100%, 340px); }
+  .tk-kampung-ceria .kc-person--aruna { justify-self: end; margin-top: 0; }
+  .tk-kampung-ceria .kc-person__window { width: min(100%, 300px); border-width: 8px; }
+  .tk-kampung-ceria .kc-couple__house { width: min(200px, 48vw); }
+
+  .tk-kampung-ceria .kc-events { padding: 44px 14px 18px; }
+  .tk-kampung-ceria .kc-events .kc-heading { margin-bottom: 22px; text-align: center; }
+  .tk-kampung-ceria .kc-events__layout { grid-template-columns: 1fr; gap: 24px; }
+  .tk-kampung-ceria .kc-programme { grid-template-columns: 92px minmax(0, 1fr); border-width: 7px; }
+  .tk-kampung-ceria .kc-programme__date { padding: 12px 4px; }
+  .tk-kampung-ceria .kc-programme__date span { font-size: 13px; }
+  .tk-kampung-ceria .kc-programme__date strong { font-size: 58px; }
+  .tk-kampung-ceria .kc-programme__rows { padding-inline: 11px; }
+  .tk-kampung-ceria .kc-programme__rows article { padding: 16px 0 13px; }
+  .tk-kampung-ceria .kc-programme__rows h3 { font-size: 21px; }
+  .tk-kampung-ceria .kc-programme__place { padding: 13px 11px; }
+  .tk-kampung-ceria .kc-countdown { gap: 8px 13px; }
+  .tk-kampung-ceria .kc-countdown > div { min-width: 42px; }
+  .tk-kampung-ceria .kc-events__map h3 { font-size: 20px; }
+  .tk-kampung-ceria .kc-map { padding: 7px; border-width: 7px; }
+  .tk-kampung-ceria .kc-map iframe { min-height: 230px; }
+
+  .tk-kampung-ceria .kc-story { padding: 44px 15px 30px; }
+  .tk-kampung-ceria .kc-story .kc-heading { margin-bottom: 20px; text-align: center; }
+  .tk-kampung-ceria .kc-story__layout { grid-template-columns: 1fr; gap: 22px; }
+  .tk-kampung-ceria .kc-story__notes { grid-template-columns: minmax(0, 1fr) minmax(120px, 190px); gap: 15px; }
+  .tk-kampung-ceria .kc-story__timeline { padding-left: 18px; }
+  .tk-kampung-ceria .kc-story__timeline li { min-height: 60px; gap: 9px; font-size: 15px; }
+  .tk-kampung-ceria .kc-story__timeline li::before { left: -25px; }
+  .tk-kampung-ceria .kc-story__timeline time { min-width: 42px; font-size: 14px; }
+  .tk-kampung-ceria .kc-story__postcard { width: 100%; }
+  .tk-kampung-ceria .kc-story__path { min-height: 210px; }
+
+  .tk-kampung-ceria .kc-gallery { padding: 0 14px 20px; }
+  .tk-kampung-ceria .kc-gallery__heading { margin: 0 -14px 20px; padding: 20px 14px; }
+  .tk-kampung-ceria .kc-gallery__clothesline { gap: 20px; }
+  .tk-kampung-ceria .kc-gallery__row { grid-template-columns: 1fr; gap: 16px; padding-top: 25px; }
+  .tk-kampung-ceria .kc-gallery__beam { right: 3%; left: 3%; }
+  .tk-kampung-ceria .kc-gallery__window { width: min(100%, 430px); padding: 6px; border-width: 8px; }
+  .tk-kampung-ceria .kc-gallery__item--1 .kc-gallery__window,
+  .tk-kampung-ceria .kc-gallery__item--4 .kc-gallery__window,
+  .tk-kampung-ceria .kc-gallery__item--5 .kc-gallery__window { width: min(100%, 330px); }
+  .tk-kampung-ceria .kc-gallery__item--2 .kc-gallery__window,
+  .tk-kampung-ceria .kc-gallery__item--3 .kc-gallery__window,
+  .tk-kampung-ceria .kc-gallery__item--6 .kc-gallery__window { width: min(100%, 430px); }
+  .tk-kampung-ceria .kc-gallery__companions { padding-inline: 10px; }
+  .tk-kampung-ceria .kc-gallery__companions > span:first-child { width: clamp(105px, 35vw, 145px); }
+  .tk-kampung-ceria .kc-gallery__companions > span:last-child { width: clamp(80px, 25vw, 105px); }
+
+  .tk-kampung-ceria .kc-rsvp { padding: 44px 14px 30px; }
+  .tk-kampung-ceria .kc-rsvp .kc-heading { margin-bottom: 22px; text-align: center; }
+  .tk-kampung-ceria .kc-rsvp__content { grid-template-columns: 1fr; gap: 18px; }
+  .tk-kampung-ceria .kc-rsvp__form { padding: 18px 13px; border-width: 7px; }
+  .tk-kampung-ceria .kc-closing { padding: 38px 14px calc(88px + env(safe-area-inset-bottom, 0px)); }
+  .tk-kampung-ceria .kc-closing__message { padding: 17px 11px; border-width: 6px; }
+  .tk-kampung-ceria .kc-closing__message p { font-size: 15px; }
+  .tk-kampung-ceria .kc-closing__duo { width: 140px; }
+}
+
+@media (max-width: 380px) {
+  .tk-kampung-ceria .kc-cover__content { width: calc(100% - 24px); padding-bottom: 72px; }
+  .tk-kampung-ceria .kc-cover__window { width: min(60vw, 210px); }
+  .tk-kampung-ceria .kc-cover__board h1 { font-size: 34px; }
+  .tk-kampung-ceria .kc-cover__guest { width: 100px; }
+  .tk-kampung-ceria .kc-cover__guest--right { width: 96px; }
+  .tk-kampung-ceria .kc-story__notes { grid-template-columns: minmax(0, 1fr) minmax(108px, 145px); gap: 10px; }
+  .tk-kampung-ceria .kc-story__timeline li { gap: 6px; font-size: 14px; }
+  .tk-kampung-ceria .kc-programme { grid-template-columns: 82px minmax(0, 1fr); }
+  .tk-kampung-ceria .kc-programme__rows { padding-inline: 8px; }
+  .tk-kampung-ceria .kc-programme__rows h3 { font-size: 18px; }
+  .tk-kampung-ceria .kc-countdown { gap: 8px 9px; }
+  .tk-kampung-ceria .kc-countdown > div { min-width: 38px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tk-kampung-ceria *,
-  .tk-kampung-ceria *::before,
-  .tk-kampung-ceria *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .tk-kampung-ceria [data-scene] { transform: none !important; }
-  .tk-kampung-ceria .tk-content.tk-motion-ready [data-reveal] { opacity: 1 !important; translate: none !important; }
+  .tk-kampung-ceria [data-reveal] { transition: none; }
 }

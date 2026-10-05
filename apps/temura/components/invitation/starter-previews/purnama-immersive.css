@@ -1,0 +1,16 @@
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .tk-template-purnama .purnama__garden-photo {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .tk-template-purnama .purnama__garden-photo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 17px 34px rgb(57 53 36 / 22%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-template-purnama .purnama__garden-photo {
+    transition: none;
+  }
+}
