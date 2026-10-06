@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { cn } from "cn";
 import { DesignShowcase } from "@/components/design-showcase";
 import { PortfolioSection, PricingSection, ProductSections } from "@/components/marketing-sections";
 import { TEMPLATE_TIERS } from "@/lib/template-catalog";
@@ -18,7 +19,7 @@ export default function LandingPage() {
             <div className="temura-actions" data-reveal>
               <a
                 href="#desain"
-                className={buttonVariants({ variant: "brand", size: "pill" })}
+                className={cn(buttonVariants({ variant: "brand", size: "pill" }))}
               >
                 Lihat desain
                 <ArrowUpRight size={16} />

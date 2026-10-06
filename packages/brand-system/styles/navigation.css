@@ -199,7 +199,7 @@
   .faq-section { grid-template-columns: 1fr; gap: 30px; }
 }
 @media (max-width: 767px) {
-  .site-header { padding: 18px 6%; }
+  .site-header { padding-inline: 6%; }
   .header-brand { width: 175px; margin-left: -12px; }
 }
 @media (max-width: 600px) {
