@@ -28,6 +28,7 @@ const industryLinks = [
 ];
 
 const socials = [
+  { label: "WhatsApp", href: "https://wa.me/6282119307102" },
   { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
   { label: "X", href: "https://x.com/soezyxsttt" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
@@ -43,8 +44,8 @@ export function SiteFooter() {
         highlight: "bicara.",
       }}
       ctaLink={{
-        label: "soezyxst@gmail.com",
-        href: "mailto:soezyxst@gmail.com?subject=Diskusi%20proyek%20Tampiloka",
+        label: "+62 821-1930-7102",
+        href: "https://wa.me/6282119307102",
       }}
       directoryGroups={[
         { title: "Studio", items: studioLinks },
@@ -62,10 +63,6 @@ export function SiteFooter() {
         href: "/",
       }}
       socials={socials}
-      pendingNotice={{
-        label: "WhatsApp",
-        badge: "segera",
-      }}
       copyright={`© ${new Date().getFullYear()} Tampiloka`}
     />
   );

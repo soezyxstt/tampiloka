@@ -17,6 +17,14 @@ const projects = [
     scrollStops: ["", "#cerita", "#nuansa", "#menu", "#suasana", "#lokasi"],
   },
   {
+    id: "syahril-mc",
+    name: "Syahril MC",
+    category: "Portfolio",
+    description: "Website MC pernikahan dengan portfolio dan pilihan paket.",
+    url: "https://syahril-mc.vercel.app/",
+    scrollStops: ["", "#about", "#karakter", "#portfolio", "#faq"],
+  },
+  {
     id: "tepi-sagara",
     name: "Tepi Sagara",
     category: "Kuliner",
@@ -52,7 +60,7 @@ const projects = [
 
 type Project = (typeof projects)[number];
 type Filter = "Semua" | Project["category"];
-const filters: Filter[] = ["Semua", "Kuliner", "Katalog", "Undangan digital"];
+const filters: Filter[] = ["Semua", "Kuliner", "Portfolio", "Katalog", "Undangan digital"];
 
 function ProjectPreview({ project, paused }: { project: Project; paused: boolean }) {
   const [stopIndex, setStopIndex] = useState(0);
@@ -147,7 +155,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                 ))}
               </div>
             ) : (
-              <p className="type-body showcase__intro-copy">Empat situs dan satu undangan digital.</p>
+              <p className="type-body showcase__intro-copy">Lima situs dan satu undangan digital.</p>
             )}
             <Button
               className="showcase__motion-toggle"
@@ -164,7 +172,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
         </header>
 
         <p className="type-body-sm showcase__concept-disclosure">
-          Situsnya dapat dijelajahi langsung; merek dan kontennya adalah konsep, bukan proyek klien.
+          Situsnya dapat dijelajahi langsung. Selain Syahril MC, merek dan kontennya adalah konsep, bukan proyek klien.
         </p>
 
         <div className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
@@ -194,7 +202,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Buka situs demo ${project.name} di tab baru`}
+                  aria-label={`Buka situs ${project.name} di tab baru`}
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
@@ -249,14 +257,14 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                   href={activeProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Buka situs demo ${activeProject.name} di tab baru`}
+                  aria-label={`Buka situs ${activeProject.name} di tab baru`}
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
                 <iframe
                   key={activeProject.id}
                   className="showcase-sheet__frame"
-                  title={`Situs demo ${activeProject.name}`}
+                  title={`Situs ${activeProject.name}`}
                   src={activeProject.url}
                 />
               </div>

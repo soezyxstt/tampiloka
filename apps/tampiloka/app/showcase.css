@@ -58,11 +58,13 @@
   animation-delay: calc(var(--reveal-index, 0) * 70ms);
 }
 
-.showcase__project--pagi-roti { grid-column: 1 / span 5; }
-.showcase__project--tepi-sagara { grid-column: 7 / span 6; margin-top: clamp(4rem, 9vw, 8rem); }
-.showcase__project--sela-rasa { grid-column: 1 / span 6; margin-top: clamp(2.5rem, 6vw, 5rem); }
-.showcase__project--rona-forma { grid-column: 7 / span 6; }
-.showcase__project--temura-nara-aruna { grid-column: 3 / span 8; margin-top: clamp(1rem, 3vw, 2.5rem); }
+.showcase__project:nth-child(1) { grid-column: 1 / span 5; margin-top: 0; }
+.showcase__project:nth-child(2) { grid-column: 7 / span 6; margin-top: clamp(4rem, 9vw, 8rem); }
+.showcase__project:nth-child(3) { grid-column: 1 / span 6; margin-top: clamp(2.5rem, 6vw, 5rem); }
+.showcase__project:nth-child(4) { grid-column: 7 / span 6; margin-top: 0; }
+.showcase__project:nth-child(5) { grid-column: 1 / span 5; margin-top: clamp(1rem, 3vw, 2.5rem); }
+.showcase__project:nth-child(6) { grid-column: 7 / span 6; margin-top: 0; }
+.showcase__project--syahril-mc .showcase__site,
 .showcase__project--temura-nara-aruna .showcase__site { aspect-ratio: 1.65 / 1; }
 
 .showcase__grid > .showcase__project:only-child { grid-column: 3 / span 8; margin-top: 0; }
@@ -213,11 +215,12 @@
 
 @media (min-width: 48.001rem) and (max-width: 64rem) {
   .showcase__grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .showcase__project--pagi-roti { grid-column: 1 / span 3; }
-  .showcase__project--tepi-sagara { grid-column: 4 / span 3; margin-top: clamp(3rem, 7vw, 5rem); }
-  .showcase__project--sela-rasa { grid-column: 1 / span 3; margin-top: clamp(2rem, 5vw, 3.5rem); }
-  .showcase__project--rona-forma { grid-column: 4 / span 3; margin-top: 0; }
-  .showcase__project--temura-nara-aruna { grid-column: 2 / span 4; margin-top: 0; }
+  .showcase__project:nth-child(1) { grid-column: 1 / span 3; }
+  .showcase__project:nth-child(2) { grid-column: 4 / span 3; margin-top: clamp(3rem, 7vw, 5rem); }
+  .showcase__project:nth-child(3) { grid-column: 1 / span 3; margin-top: clamp(2rem, 5vw, 3.5rem); }
+  .showcase__project:nth-child(4) { grid-column: 4 / span 3; margin-top: 0; }
+  .showcase__project:nth-child(5) { grid-column: 1 / span 3; margin-top: 0; }
+  .showcase__project:nth-child(6) { grid-column: 4 / span 3; }
   .showcase__grid > .showcase__project:only-child { grid-column: 2 / span 4; margin-top: 0; }
 }
 
@@ -230,7 +233,7 @@
   .showcase__controls { justify-content: flex-start; gap: 0.6rem; }
   .showcase__filters { max-width: 100%; flex-wrap: wrap; }
   .showcase__grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
-  .showcase__project,
+  .showcase__project:nth-child(n),
   .showcase__project--pagi-roti,
   .showcase__project--tepi-sagara,
   .showcase__project--sela-rasa,
@@ -246,6 +249,7 @@
   .showcase__screen,
   .showcase__open { border-radius: 0; }
   .showcase__site,
+  .showcase__project--syahril-mc .showcase__site,
   .showcase__project--tepi-sagara .showcase__site,
   .showcase__project--sela-rasa .showcase__site,
   .showcase__project--rona-forma .showcase__site,

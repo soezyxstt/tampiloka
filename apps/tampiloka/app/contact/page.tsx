@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
 import { createPageMetadata } from "@/lib/seo";
@@ -14,6 +14,7 @@ export const metadata = createPageMetadata({
 });
 
 const contactLinks = [
+  { label: "Email", href: "mailto:soezyxst@gmail.com" },
   { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
   { label: "X", href: "https://x.com/soezyxsttt" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
@@ -26,10 +27,10 @@ export default function ContactPage() {
         <div className="inner-page__intro" data-reveal>
           <h1 id="contact-title" className="type-display-xl">Ada rencana untuk web Anda?</h1>
           <p className="type-body-lg">Ceritakan sedikit tentang proyeknya. Kita mulai dari sana.</p>
-          <Button className="inner-page__cta" size="lg" nativeButton={false} render={<a href="mailto:soezyxst@gmail.com?subject=Diskusi%20proyek%20Tampiloka" />}>
-            <Mail aria-hidden="true" /> Kirim email <ArrowUpRight aria-hidden="true" />
+          <Button className="inner-page__cta" size="pill" nativeButton={false} render={<a href="https://wa.me/6282119307102" target="_blank" rel="noopener noreferrer" />}>
+            <MessageCircle aria-hidden="true" /> Hubungi via WhatsApp <ArrowUpRight aria-hidden="true" />
           </Button>
-          <a className="contact-page__email type-body" href="mailto:soezyxst@gmail.com">soezyxst@gmail.com</a>
+          <a className="contact-page__email type-body" href="https://wa.me/6282119307102" target="_blank" rel="noopener noreferrer">+62 821-1930-7102</a>
         </div>
         <PageVisual imageKey="contact-invitation" alt="Pasangan pengantin berbusana Jawa di taman sebagai contoh undangan digital." preload />
       </section>

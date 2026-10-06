@@ -5,7 +5,7 @@ export const metadata = createPageMetadata({
   path: "/produk",
   title: "Contoh Website dan Undangan Digital",
   description:
-    "Lihat konsep website untuk kuliner dan katalog, serta undangan digital Temura. Merek dan isi tampilannya adalah konsep, bukan proyek klien.",
+    "Jelajahi website Syahril MC, konsep website kuliner dan katalog, serta undangan digital Temura.",
   imageAlt: "Contoh katalog produk pada layar laptop dan ponsel.",
   imagePath: "/images/service-website.webp",
 });

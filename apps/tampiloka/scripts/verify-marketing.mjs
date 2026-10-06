@@ -20,8 +20,22 @@ for (const route of routes) {
   assert.ok(!/Garut|Bandung/.test(html), `${route}: regional target stays internal`);
   for (const href of routes.slice(1)) assert.ok(html.includes(`href="${href}"`), `${route}: missing nav ${href}`);
   assert.ok(html.includes('faq-section'), `${route}: FAQ available`);
-  if (route === '/' || route === '/produk') assert.ok(html.includes('bukan proyek klien'), `${route}: concepts disclosed`);
+  assert.ok(html.includes('href="https://wa.me/6282119307102"'), `${route}: WhatsApp contact available`);
+  if (route === '/' || route === '/produk') {
+    assert.ok(html.includes('bukan proyek klien'), `${route}: concepts disclosed`);
+    const projectNames = [...html.matchAll(/<h3[^>]*showcase__project-name[^>]*>([^<]+)<\/h3>/g)].map(([,name]) => name);
+    assert.equal(projectNames.length, 6, `${route}: six selected works`);
+    assert.equal(projectNames[1], 'Syahril MC', `${route}: Syahril MC is second`);
+    assert.ok(html.includes('href="https://syahril-mc.vercel.app/"'), `${route}: Syahril website linked`);
+  }
 }
+assert.match(pages.get('/contact'), /<a[^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*>[\s\S]*?Hubungi via WhatsApp/, 'WhatsApp is the main contact CTA');
+const notFoundResponse = await fetch(new URL('/halaman-tidak-tersedia', origin));
+assert.equal(notFoundResponse.status, 404, 'Unknown routes return 404');
+const notFoundHtml = await notFoundResponse.text();
+assert.ok(notFoundHtml.includes('Halaman tidak ditemukan.'), '404 uses the Tampiloka page');
+assert.ok(notFoundHtml.includes('Kembali ke beranda') && notFoundHtml.includes('href="/produk"'), '404 provides recovery links');
+assert.match(notFoundHtml, /name="robots" content="[^"]*noindex/, '404 is excluded from search');
 const industryPage = pages.get('/industri');
 assert.equal((industryPage.match(/class="industry-row"/g) || []).length, 7, 'Seven editorial industry sections');
 assert.ok(!industryPage.includes('industry-card'), 'Industries use editorial sections');
