@@ -2,22 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { contactLink } from "@/lib/site";
+import { TEMPLATE_TIERS } from "@/lib/template-catalog";
 
-const plans = [
-  { name: "Essential", price: "79.000–150.000", detail: "Islamic & minimalist. Penyesuaian dasar." },
-  { name: "Standard", price: "139.000–189.000", detail: "Adat & retro. Penyesuaian desain dan ornamen." },
-  { name: "Studio", price: "289.000–449.000", detail: "Game, kartun, dan desain dengan kustomisasi lebih luas." },
-];
+const plans = Object.values(TEMPLATE_TIERS);
 
 export function PricingSection({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" }) {
   return <section id="paket" className="temura-section temura-container">
     <div className="temura-section-heading">{headingLevel === "h1" ? <h1 className="type-display">Harga</h1> : <h2 className="type-display">Harga</h2>}<p className="type-body temura-muted">Sesuai desain dan tingkat kustomisasi.</p></div>
     <div className="temura-pricing-grid">
-      {plans.map((plan) => <article key={plan.name} className="temura-price-card">
-        <h3 className="type-heading-4">{plan.name}</h3>
-        <p className="type-heading-3 temura-plan-price"><span className="type-label">Rp</span>{plan.price}</p>
-        <p className="type-body temura-muted">{plan.detail}</p>
-        <a className="temura-inline-link type-label" href={contactLink(plan.name)}>Hubungi kami<ArrowUpRight size={16} /></a>
+      {plans.map((plan) => <article key={plan.label} className="temura-price-card">
+        <h3 className="type-heading-4">{plan.label}</h3>
+        <div className="temura-plan-price"><s className="type-body-sm temura-muted"><span className="sr-only">Harga normal </span>Rp{plan.originalPriceIdr.toLocaleString("id-ID")}</s><p className="type-heading-3"><span className="sr-only">Harga sekarang </span>Rp{plan.priceIdr.toLocaleString("id-ID")}</p></div>
+        <p className="type-body temura-muted">{plan.note}</p>
+        <a className="temura-inline-link type-label" href={contactLink(plan.label)}>Hubungi kami<ArrowUpRight size={16} /></a>
       </article>)}
     </div>
   </section>;

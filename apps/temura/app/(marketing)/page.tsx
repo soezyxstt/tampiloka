@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { DesignShowcase } from "@/components/design-showcase";
 import { PortfolioSection, PricingSection, ProductSections } from "@/components/marketing-sections";
+import { TEMPLATE_TIERS } from "@/lib/template-catalog";
 
 export default function LandingPage() {
   return (
@@ -27,7 +28,7 @@ export default function LandingPage() {
                 <ArrowUpRight size={16} />
               </Link>
             </div>
-            <p className="type-body temura-hero-note">Mulai Rp79.000</p>
+            <p className="type-body temura-hero-note">Mulai Rp{TEMPLATE_TIERS.essential.priceIdr.toLocaleString("id-ID")}</p>
           </div>
         </div>
       </section>

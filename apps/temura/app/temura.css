@@ -123,6 +123,7 @@
 .temura-design-card:hover .temura-concept-scroll { animation-play-state:paused; }
 .temura-design-caption h3 { margin:0; }
 .temura-design-caption > span { flex-shrink:0; }
+.temura-design-price { display:flex; flex-direction:column; gap:.25rem; }
 .temura-design-card > p { margin-top:0; }
 .temura-button { min-height:3rem; display:inline-flex; align-items:center; justify-content:center; gap:.8rem; border:1px solid #ccd7ce; padding:.8rem 1.3rem; border-radius:99rem; color:#153d26; background:#fff; cursor:pointer; }
 .temura-button--brand { background:#22c55e; border-color:#22c55e; color:#10331f; }
@@ -142,7 +143,8 @@
 .temura-product-points p { display:flex; gap:.75rem; align-items:center; }
 .temura-pricing-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .temura-price-card { display:flex; flex-direction:column; }
-.temura-plan-price { margin-block:1.7rem 1rem; display:flex; flex-wrap:wrap; gap:.25rem; align-items:baseline; }
+.temura-plan-price { margin-block:1.7rem 1rem; display:flex; flex-direction:column; gap:.25rem; }
+.temura-plan-price p { margin:0; }
 .temura-price-card ul { padding:0; list-style:none; display:grid; gap:1rem; margin-block:1.7rem 2rem; }
 .temura-price-card li { display:flex; gap:.65rem; align-items:start; }
 .temura-price-card li svg { flex-shrink:0; margin-top:.4rem; color:#15803d; }
