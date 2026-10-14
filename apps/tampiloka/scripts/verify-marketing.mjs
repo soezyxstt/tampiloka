@@ -24,9 +24,11 @@ for (const route of routes) {
   if (route === '/' || route === '/produk') {
     assert.ok(html.includes('bukan proyek klien'), `${route}: concepts disclosed`);
     const projectNames = [...html.matchAll(/<h3[^>]*showcase__project-name[^>]*>([^<]+)<\/h3>/g)].map(([,name]) => name);
-    assert.equal(projectNames.length, 6, `${route}: six selected works`);
+    assert.equal(projectNames.length, 7, `${route}: seven selected works`);
     assert.equal(projectNames[1], 'Syahril MC', `${route}: Syahril MC is second`);
     assert.ok(html.includes('href="https://syahril-mc.vercel.app/"'), `${route}: Syahril website linked`);
+    assert.ok(projectNames.includes('Ginalist'), `${route}: Ginalist showcased`);
+    assert.ok(html.includes('href="https://ginalist.vercel.app/"'), `${route}: Ginalist website linked`);
   }
 }
 assert.match(pages.get('/contact'), /<a[^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*>[\s\S]*?Hubungi via WhatsApp/, 'WhatsApp is the main contact CTA');

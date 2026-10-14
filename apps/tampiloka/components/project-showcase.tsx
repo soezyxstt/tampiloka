@@ -49,6 +49,14 @@ const projects = [
     scrollStops: ["", "#editor-picks", "#everyday-edit", "#10003", "#10001", "#10005", "#top"],
   },
   {
+    id: "ginalist",
+    name: "Ginalist",
+    category: "Portfolio",
+    description: "Portfolio model Gina Listya Nuraini.",
+    url: "https://ginalist.vercel.app/",
+    scrollStops: ["", "#work", "#runway", "#about", "#journal", "#contact"],
+  },
+  {
     id: "temura-nara-aruna",
     name: "Nara & Aruna",
     category: "Undangan digital",
@@ -155,7 +163,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                 ))}
               </div>
             ) : (
-              <p className="type-body showcase__intro-copy">Lima situs dan satu undangan digital.</p>
+              <p className="type-body showcase__intro-copy">Enam situs dan satu undangan digital.</p>
             )}
             <Button
               className="showcase__motion-toggle"
@@ -172,7 +180,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
         </header>
 
         <p className="type-body-sm showcase__concept-disclosure">
-          Situsnya dapat dijelajahi langsung. Selain Syahril MC, merek dan kontennya adalah konsep, bukan proyek klien.
+          Situsnya dapat dijelajahi langsung. Selain Syahril MC dan Ginalist, merek dan kontennya adalah konsep, bukan proyek klien.
         </p>
 
         <div className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>

@@ -64,6 +64,7 @@
 .showcase__project:nth-child(4) { grid-column: 7 / span 6; margin-top: 0; }
 .showcase__project:nth-child(5) { grid-column: 1 / span 5; margin-top: clamp(1rem, 3vw, 2.5rem); }
 .showcase__project:nth-child(6) { grid-column: 7 / span 6; margin-top: 0; }
+.showcase__project:nth-child(7) { grid-column: 1 / span 6; margin-top: clamp(1rem, 3vw, 2.5rem); }
 .showcase__project--syahril-mc .showcase__site,
 .showcase__project--temura-nara-aruna .showcase__site { aspect-ratio: 1.65 / 1; }
 
