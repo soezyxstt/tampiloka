@@ -25,6 +25,14 @@ const projects = [
     scrollStops: ["", "#about", "#karakter", "#portfolio", "#faq"],
   },
   {
+    id: "zyx-academy",
+    name: "Zyx Academy",
+    category: "Edukasi",
+    description: "Platform belajar untuk mahasiswa tahun pertama dan kedua ITB.",
+    url: "https://www.zyxacademy.com/",
+    scrollStops: ["", "#pricing"],
+  },
+  {
     id: "tepi-sagara",
     name: "Tepi Sagara",
     category: "Kuliner",
@@ -57,6 +65,22 @@ const projects = [
     scrollStops: ["", "#work", "#runway", "#about", "#journal", "#contact"],
   },
   {
+    id: "iam-itb",
+    name: "IAM ITB",
+    category: "Organisasi",
+    description: "Website Ikatan Alumni Mahasiswa Teknik Mesin ITB.",
+    url: "https://iamitb.org/",
+    scrollStops: [""],
+  },
+  {
+    id: "pamoka",
+    name: "PAMOKA",
+    category: "Organisasi",
+    description: "Situs resmi Paguyuban Mojang Jajaka.",
+    url: "https://www.pamokagarut.com/",
+    scrollStops: ["", "#filosofi-tema", "#rangkaian-kegiatan", "#partisipasi"],
+  },
+  {
     id: "temura-nara-aruna",
     name: "Nara & Aruna",
     category: "Undangan digital",
@@ -68,7 +92,7 @@ const projects = [
 
 type Project = (typeof projects)[number];
 type Filter = "Semua" | Project["category"];
-const filters: Filter[] = ["Semua", "Kuliner", "Portfolio", "Katalog", "Undangan digital"];
+const filters: Filter[] = ["Semua", "Kuliner", "Portfolio", "Katalog", "Edukasi", "Organisasi", "Undangan digital"];
 
 function ProjectPreview({ project, paused }: { project: Project; paused: boolean }) {
   const [stopIndex, setStopIndex] = useState(0);
@@ -163,7 +187,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                 ))}
               </div>
             ) : (
-              <p className="type-body showcase__intro-copy">Enam situs dan satu undangan digital.</p>
+              <p className="type-body showcase__intro-copy">Sembilan situs dan satu undangan digital.</p>
             )}
             <Button
               className="showcase__motion-toggle"
@@ -180,7 +204,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
         </header>
 
         <p className="type-body-sm showcase__concept-disclosure">
-          Situsnya dapat dijelajahi langsung. Selain Syahril MC dan Ginalist, merek dan kontennya adalah konsep, bukan proyek klien.
+          Situsnya dapat dijelajahi langsung. Pagi &amp; Roti, Tepi Sagara, Sela Rasa, Rona Forma, dan Nara &amp; Aruna adalah konsep, bukan proyek klien.
         </p>
 
         <div className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
