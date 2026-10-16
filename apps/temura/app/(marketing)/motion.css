@@ -54,6 +54,8 @@
 @keyframes site-logo-fade { to { opacity: 0; visibility: hidden; } }
 
 @media (prefers-reduced-motion: reduce) {
+  .site-loader { display: none; }
+
   .site-motion [data-reveal] {
     opacity: 1 !important;
     transform: none !important;

@@ -73,6 +73,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .site-loader { display: none; }
+
   .site-motion [data-reveal] {
     opacity: 1 !important;
     transform: none !important;

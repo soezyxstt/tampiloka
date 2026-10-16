@@ -8,19 +8,19 @@ const revealSelector =
 
 export interface SiteMotionProps {
   children: ReactNode;
-  storageKey?: string;
   loader?: ReactNode;
   loaderDuration?: number;
 }
 
 export function SiteMotion({
   children,
-  storageKey,
   loader,
   loaderDuration = 1500,
 }: SiteMotionProps) {
   const root = useRef<HTMLDivElement>(null);
-  const [showLoader, setShowLoader] = useState(false);
+  // Rendered in the server HTML so the loader covers the first paint.
+  // Layouts persist across client navigation, so it only plays on full page loads.
+  const [showLoader, setShowLoader] = useState(Boolean(loader));
   const pathname = usePathname();
 
   useEffect(() => {
@@ -37,6 +37,14 @@ export function SiteMotion({
     if (!("MutationObserver" in window)) {
       targets.forEach((target) => (target.dataset.revealed = "true"));
       return;
+    }
+
+    // On first hydration, keep already-visible content visible instead of hiding it and fading it back in.
+    if (container.dataset.motionReady !== "true") {
+      for (const target of targets) {
+        const rect = target.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) target.dataset.revealed = "true";
+      }
     }
 
     container.dataset.motionReady = "true";
@@ -106,22 +114,6 @@ export function SiteMotion({
       mutations.disconnect();
     };
   }, [pathname]);
-
-  useEffect(() => {
-    if (!loader || !storageKey) return;
-    const token = String(window.performance.timeOrigin);
-    try {
-      const prev = window.sessionStorage.getItem(storageKey);
-      window.sessionStorage.setItem(storageKey, token);
-      const shouldAnimate = prev !== token;
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (shouldAnimate && !reduced) {
-        setShowLoader(true);
-      }
-    } catch {
-      // ignore
-    }
-  }, [storageKey, loader]);
 
   useEffect(() => {
     if (!showLoader) return;

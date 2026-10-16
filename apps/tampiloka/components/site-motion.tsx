@@ -34,7 +34,7 @@ function LogoLoader() {
 
 export default function SiteMotion({ children }: { children: ReactNode }) {
   return (
-    <SharedSiteMotion storageKey="tampiloka-page-entry" loader={<LogoLoader />}>
+    <SharedSiteMotion loader={<LogoLoader />}>
       {children}
     </SharedSiteMotion>
   );
