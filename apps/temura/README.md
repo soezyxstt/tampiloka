@@ -16,7 +16,7 @@ Required environment variables:
 
 - `DATABASE_URL`: existing Sentuh Undang Neon pooled PostgreSQL URL, or a separately prepared compatible database.
 - `NEXTAUTH_SECRET`: existing auth secret or a newly generated strong secret. Changing it invalidates existing sessions.
-- `NEXTAUTH_URL` and `NEXT_PUBLIC_SITE_URL`: the same verified production origin. The intended origin is `https://temura.adihnursyam.com`; confirm its Vercel domain assignment before shipping.
+- `NEXTAUTH_URL` and `NEXT_PUBLIC_SITE_URL`: the same verified production origin. The intended origin is `https://temura.tampiloka.site`; confirm its Vercel domain assignment before shipping.
 - `ADMIN_WHATSAPP`: the business number in international digits. If empty, ordering buttons link to Tampiloka's contact page.
 
 Optional: `UPLOADTHING_TOKEN` for uploads, `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` for map embeds, `FONNTE_TOKEN` for automatic RSVP notifications.

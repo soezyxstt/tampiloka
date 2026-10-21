@@ -6,8 +6,8 @@ Monorepo for two Next.js sites. Tampiloka is the web studio; Temura is its digit
 
 | Workspace | Local URL | Production origin |
 | --- | --- | --- |
-| `@tampiloka/web` | http://localhost:3000 | `NEXT_PUBLIC_SITE_URL` |
-| `@temura/web` | http://localhost:3001 | `NEXT_PUBLIC_SITE_URL` (Temura: `https://temura.adihnursyam.com`) |
+| `@tampiloka/web` | http://localhost:3000 | `NEXT_PUBLIC_SITE_URL` (`https://tampiloka.site`) |
+| `@temura/web` | http://localhost:3001 | `NEXT_PUBLIC_SITE_URL` (Temura: `https://temura.tampiloka.site`) |
 
 ## Development
 

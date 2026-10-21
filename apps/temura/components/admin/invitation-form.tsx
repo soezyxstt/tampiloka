@@ -249,7 +249,7 @@ export function InvitationForm({ tiers }: { tiers: { id: number; name: string; c
 
         <Field
           label="Slug (URL Undangan)"
-          hint={`Akan diakses di: temura.adihnursyam.com/${slug || "nama-mempelai"}`}
+          hint={`Akan diakses di: temura.tampiloka.site/${slug || "nama-mempelai"}`}
           required
           error={state.errors?.slug}
         >

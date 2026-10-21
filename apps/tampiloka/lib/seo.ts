@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const DEFAULT_SITE_ORIGIN = "https://tampiloka.adihnursyam.com";
+const DEFAULT_SITE_ORIGIN = "https://tampiloka.site";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_ORIGIN;
 const parsedSiteUrl = new URL(configuredSiteUrl);
 
