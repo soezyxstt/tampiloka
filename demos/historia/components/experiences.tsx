@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useRef, useState } from "react";
 import { Button } from "./ui/button";
@@ -18,8 +18,8 @@ export function FeaturedDishes({ items }: { items: Catalogue["items"] }) {
         {item.image && <Image src={item.image} alt={item.name} fill sizes="(max-width: 767px) 90vw, 55vw" />}
       </motion.div></AnimatePresence>
       <div className="taste-caption" aria-live="polite"><h3>{item.name}</h3><p>{item.description}</p>{item.price !== null && <span>{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(item.price)}</span>}</div>
-      <div className="taste-controls"><Button variant="icon" aria-label="Hidangan sebelumnya" onClick={() => setActive((active + items.length - 1) % items.length)}><ArrowLeft size={20} /></Button><span>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><Button variant="icon" aria-label="Hidangan berikutnya" onClick={() => setActive((active + 1) % items.length)}><ArrowRight size={20} /></Button></div>
-    </div><a className="text-link taste-menu-link" href="#menu">Jelajahi seluruh menu <ArrowUpRight size={18} /></a></div></section>;
+    </div><div className="taste-navigation"><a className="text-link taste-menu-link" href="#menu">Jelajahi seluruh menu <ArrowDown size={18} /></a><div className="taste-controls"><Button variant="icon" aria-label="Hidangan sebelumnya" onClick={() => setActive((active + items.length - 1) % items.length)}><ArrowLeft size={20} /></Button><span>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><Button variant="icon" aria-label="Hidangan berikutnya" onClick={() => setActive((active + 1) % items.length)}><ArrowRight size={20} /></Button></div></div></div></section>;
+
 }
 
 const spaces = [

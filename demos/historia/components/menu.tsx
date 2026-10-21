@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowDown, ArrowUpRight, Search, X } from "lucide-react";
 import { Button } from "./ui/button";
@@ -36,13 +36,12 @@ export const menuGroups = [
   { id: "snacks", label: "Camilan & dessert", categories: ["appetizer", "dessert"] },
 ];
 
-export function filterMenuItems(items: MenuItem[], group: string, category: string, query: string) {
+export function filterMenuItems(items: MenuItem[], group: string, query: string) {
   const search = query.trim().toLocaleLowerCase("id-ID");
   const allowed = menuGroups.find(option => option.id === group)?.categories;
   const ranks = new Map<string, number>();
   return items.filter(item =>
     (group === "all" || allowed?.includes(item.category)) &&
-    (category === "all" || item.category === category) &&
     (!search || `${item.name} ${item.description}`.toLocaleLowerCase("id-ID").includes(search))
   ).map(item => {
     const rank = ranks.get(item.category) ?? 0;
@@ -58,23 +57,31 @@ function Price({ item }: { item: MenuItem }) {
 
 export function Menu({ catalogue }: { catalogue: Catalogue }) {
   const [group, setGroup] = useState("all");
-  const [category, setCategory] = useState("all");
   const [query, setQuery] = useState("");
+  const [searchOpen, setSearchOpen] = useState(false);
+  const catalogueRoot = useRef<HTMLDivElement>(null);
+  const searchInput = useRef<HTMLInputElement>(null);
+  const searchToggle = useRef<HTMLButtonElement>(null);
   const [limit, setLimit] = useState(12);
   const [selected, setSelected] = useState<MenuItem | null>(null);
   const [detailOpen, setDetailOpen] = useState(false);
   const reduced = useReducedMotion();
-  const groupCategories = menuGroups.find(option => option.id === group)?.categories;
-  const categories = catalogue.categories.filter(option => group === "all" || groupCategories?.includes(option.id));
-  const filtered = filterMenuItems(catalogue.items, group, category, query);
+  const filtered = filterMenuItems(catalogue.items, group, query);
+  const categories = [{ value: "all", label: "Semua menu" }, ...menuGroups.map(option => ({ value: option.id, label: option.label }))];
+
+  useEffect(() => { if (searchOpen) searchInput.current?.focus(); }, [searchOpen]);
+
+  function showResults() {
+    requestAnimationFrame(() => catalogueRoot.current?.scrollIntoView({ block: "start", behavior: "instant" }));
+  }
   const visible = filtered.slice(0, limit);
   const pictured = visible.filter(item => item.image);
   const textOnly = visible.filter(item => !item.image);
 
   function reset() {
     setGroup("all");
-    setCategory("all");
     setQuery("");
+    setSearchOpen(false);
     setLimit(12);
   }
 
@@ -83,25 +90,27 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
     setDetailOpen(true);
   }
 
-  return <div className="menu-catalogue">
+  return <div className="menu-catalogue" ref={catalogueRoot}>
     <div className="menu-catalogue-toolbar">
-      <div className="menu-category-controls" role="group" aria-label="Kategori menu">
-        {[{ id: "all", label: "Semua" }, ...menuGroups].map(option =>
-          <Button variant="ghost" key={option.id} type="button" aria-pressed={group === option.id} onClick={() => { setGroup(option.id); setCategory("all"); setLimit(12); }}>{option.label}</Button>
-        )}
+      <div className="menu-refinements" data-search-open={searchOpen}>
+        <div className="menu-subcategory"><span id="menu-kind-label" className="sr-only">Kategori menu</span><Select value={group} onValueChange={value => { setGroup(value ?? "all"); setQuery(""); setSearchOpen(false); setLimit(12); showResults(); }} items={categories}><SelectTrigger aria-labelledby="menu-kind-label"><SelectValue /></SelectTrigger><SelectContent align="start" alignItemWithTrigger={false}>{categories.map(option => <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>)}</SelectContent></Select></div>
+        <div className="menu-search">
+          <Search className="menu-search-decoration" size={18} aria-hidden="true" />
+          <Button ref={searchToggle} variant="ghost" size="icon" className="menu-search-toggle" aria-label={searchOpen ? "Kembali ke kategori menu" : "Buka pencarian menu"} aria-expanded={searchOpen} aria-controls="menu-search-field" onClick={() => { if (searchOpen) reset(); else { setGroup("all"); setLimit(12); setSearchOpen(true); } }}><Search size={20} aria-hidden="true" /></Button>
+          <div className="menu-search-field" id="menu-search-field">
+            <label className="sr-only" htmlFor="historia-menu-search">Cari menu Historia</label><Input type="search" id="historia-menu-search" ref={searchInput} placeholder="Cari menu favoritmu" value={query} onChange={event => { setQuery(event.target.value); setSearchOpen(true); setGroup("all"); setLimit(12); showResults(); }} onKeyDown={event => { if (event.key === "Escape") { reset(); searchToggle.current?.focus(); } }} />
+            <Button variant="ghost" size="icon" className="menu-search-close" aria-label="Tutup pencarian menu" onClick={() => { reset(); searchToggle.current?.focus(); }}><X size={18} aria-hidden="true" /></Button>
+          </div>
+        </div>
       </div>
-      <div className="menu-refinements">
-        <div className="menu-subcategory"><span id="menu-kind-label">Jenis menu</span><Select value={category} onValueChange={value => { setCategory(value ?? "all"); setLimit(12); }} items={[{ value: "all", label: "Semua jenis" }, ...categories.map(option => ({ value: option.id, label: option.label }))]}><SelectTrigger aria-labelledby="menu-kind-label"><SelectValue /></SelectTrigger><SelectContent align="start" alignItemWithTrigger={false}><SelectItem value="all">Semua jenis</SelectItem>{categories.map(option => <SelectItem key={option.id} value={option.id}>{option.label}</SelectItem>)}</SelectContent></Select></div>
-        <label className="menu-search"><Search size={18} aria-hidden="true" /><span className="sr-only">Cari menu Historia</span><Input type="search" placeholder="Cari menu favoritmu" value={query} onChange={event => { setQuery(event.target.value); setLimit(12); }} /></label>
+      <div className="menu-catalogue-status">
+        <p role="status" aria-live="polite">{filtered.length ? `${visible.length} dari ${filtered.length} pilihan` : "Tidak ada menu yang cocok"}</p>
+        {(group !== "all" || query) && <Button variant="ghost" type="button" onClick={() => { reset(); if (searchOpen) searchToggle.current?.focus(); }}>Tampilkan semua <X size={14} aria-hidden="true" /></Button>}
       </div>
-    </div>
-    <div className="menu-catalogue-status">
-      <p role="status" aria-live="polite">{filtered.length ? `${visible.length} dari ${filtered.length} pilihan` : "Tidak ada menu yang cocok"}</p>
-      {(group !== "all" || category !== "all" || query) && <Button variant="ghost" type="button" onClick={reset}>Tampilkan semua <X size={14} aria-hidden="true" /></Button>}
     </div>
 
     <AnimatePresence initial={false} mode="wait">
-      <motion.div key={`${group}-${category}`} initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={reduced ? undefined : { opacity: 0, y: -6 }} transition={{ duration: 0.18 }}>
+      <motion.div key={group} initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={reduced ? undefined : { opacity: 0, y: -6 }} transition={{ duration: 0.18 }}>
         {pictured.length > 0 && <ul className="menu-product-grid">{pictured.map(item => <li key={item.id}>
           <Button variant="ghost" type="button" className="menu-product" aria-label={`Lihat detail ${item.name}`} onClick={() => open(item)}>
             <span className="menu-product-visual"><Image src={item.image!} alt={item.name} fill sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 25vw" /><span className="menu-product-view" aria-hidden="true"><ArrowUpRight size={22} /></span></span>
@@ -113,7 +122,7 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
 
         {textOnly.length > 0 && <ul className="menu-text-list">{textOnly.map(item => <li key={item.id}><Button variant="ghost" type="button" onClick={() => open(item)} aria-label={`Lihat detail ${item.name}`}><span><span className="menu-text-name">{item.name}</span><span className="menu-text-description">{item.description}</span></span><span className="menu-text-price"><Price item={item} /><ArrowUpRight size={17} aria-hidden="true" /></span></Button></li>)}</ul>}
 
-        {!filtered.length && <div className="menu-empty"><p>Belum ketemu yang kamu cari?</p><p>Coba nama menu lain atau jelajahi kembali semua pilihan.</p><Button variant="ghost" type="button" onClick={reset}>Jelajahi semua menu <ArrowUpRight size={17} aria-hidden="true" /></Button></div>}
+        {!filtered.length && <div className="menu-empty"><p>Belum ketemu yang kamu cari?</p><p>Coba nama menu lain atau jelajahi kembali semua pilihan.</p><Button variant="ghost" type="button" onClick={reset}>Jelajahi semua menu <ArrowDown size={17} aria-hidden="true" /></Button></div>}
       </motion.div>
     </AnimatePresence>
 

@@ -18,16 +18,20 @@ const original = catalogue.items.map(item => item.id).join(",");
 for (const category of catalogue.categories) {
   assert.equal(menuGroups.filter(group => group.categories.includes(category.id)).length, 1, `Each source category must belong to exactly one broad group: ${category.id}`);
 }
-const all = filterMenuItems(catalogue.items, "all", "all", "");
+const all = filterMenuItems(catalogue.items, "all", "");
 assert.equal(all.length, catalogue.items.length);
 assert.equal(new Set(all.map(item => item.id)).size, catalogue.items.length);
 assert.equal(new Set(all.slice(0, 12).map(item => item.category)).size, 12, "Default first 12 should offer distinct source categories");
 assert.ok(all.slice(0, 12).some(item => item.category === "coffee"), "Coffee must be discoverable in the initial selection");
-const coffee = filterMenuItems(catalogue.items, "coffee", "all", "");
+for (const group of menuGroups) {
+  const result = filterMenuItems(catalogue.items, group.id, "");
+  assert.ok(result.length > 0 && result.every(item => group.categories.includes(item.category)));
+}
+const coffee = filterMenuItems(catalogue.items, "coffee", "");
 assert.ok(coffee.length > 0 && coffee.every(item => ["coffee", "black-series"].includes(item.category)));
-assert.equal(filterMenuItems(catalogue.items, "coffee", "nasi-goreng", "").length, 0);
-const search = filterMenuItems(catalogue.items, "food", "nasi-goreng", " AROMA SMOKY ");
+assert.equal(filterMenuItems(catalogue.items, "unknown", "").length, 0);
+const search = filterMenuItems(catalogue.items, "all", " AROMA SMOKY ");
 assert.ok(search.some(item => item.id === "nasi-goreng-sapi"), "Search must trim, ignore case and include descriptions");
-assert.equal(filterMenuItems(catalogue.items, "all", "all", "no-such-historia-menu-item").length, 0);
+assert.equal(filterMenuItems(catalogue.items, "all", "no-such-historia-menu-item").length, 0);
 assert.equal(catalogue.items.map(item => item.id).join(","), original, "Filtering must not mutate source order");
 console.log(`Catalogue interaction logic passed (${catalogue.items.length} products, ${menuGroups.length} broad groups, diverse first 12).`);

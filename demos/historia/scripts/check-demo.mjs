@@ -24,7 +24,7 @@ assert.doesNotMatch(source, /<(?:form|textarea)\b|\bformAction\s*=|\bmethod\s*:\
 assert.match(components, /<Input\s+type="search"/, "Catalogue search must use the reusable input");
 assert.doesNotMatch(app, /officialMenu|Lihat menu digital asli|Buka menu digital asli/, "Visitor navigation must use the web catalogue");
 assert.match(components, /multiple=\{false\}/, "Event accordion must allow only one open item");
-assert.match(components, /aria-pressed=|role=["']tab["']/, "Category controls must expose selection");
+assert.match(components, /<Select value=\{group\}/, "The single category selector must expose its selected value");
 assert.match(components, /role=["']status["']|aria-live=/, "Catalogue updates must expose their result count");
 assert.match(components, /useReducedMotion/, "Motion must respect user preferences");
 assert.match(css, /prefers-reduced-motion/, "CSS motion must respect user preferences");

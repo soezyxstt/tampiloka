@@ -24,7 +24,7 @@ export function Hero() {
     <div className="hero-inner wrap">
       <h1 id="hero-title" className="type-display-xl"><span className="hero-line"><span>Dari rasa,</span></span><span className="hero-line"><em>jadi cerita.</em></span></h1>
       <div className="hero-bottom">
-        <div><p className="hero-description">Secangkir kopi. Sepiring favorit.<br />Waktu yang terasa lebih dekat.</p><div className="hero-actions"><Button className="hero-primary" nativeButton={false} render={<a href="#menu" />}>Temukan favoritmu <ArrowUpRight size={19} /></Button><Button variant="ghost" className="hero-direction" nativeButton={false} render={<a href="#kunjungi" />}>Mampir ke Historia <ArrowUpRight size={18} /></Button></div></div>
+        <div><p className="hero-description">Secangkir kopi. Sepiring favorit.<br />Waktu yang terasa lebih dekat.</p><div className="hero-actions"><Button className="hero-primary" nativeButton={false} render={<a href="#menu" />}>Temukan favoritmu <ArrowDown size={19} /></Button><Button variant="ghost" className="hero-direction" nativeButton={false} render={<a href="#kunjungi" />}>Mampir ke Historia <ArrowUpRight size={18} /></Button></div></div>
         <div className="hero-facts"><p><MapPin size={16} /> Cimanuk 305, Garut</p><p><Clock3 size={16} /> Setiap hari · 09.00–23.00</p><a href="#rasa" aria-label="Jelajahi rasa Historia"><ArrowDown size={21} /></a></div>
       </div>
     </div>
@@ -39,5 +39,5 @@ export function MovingWords() {
     const animation = animate(track.current, { x: ["0%", "-50%"] }, { duration: 30, ease: "linear", repeat: Infinity });
     return () => animation.stop();
   }, [animate, reduced, track]);
-  return <div className="moving-words" aria-hidden="true"><div ref={track}><span>Kopi. Makan. Bertemu. Bercerita. <i>✳</i> </span><span>Kopi. Makan. Bertemu. Bercerita. <i>✳</i> </span></div></div>;
+  return <div className="moving-words" aria-hidden="true"><div ref={track}><span>Kopi. Makan. Bertemu. Bercerita. <i>âœ³</i> </span><span>Kopi. Makan. Bertemu. Bercerita. <i>âœ³</i> </span></div></div>;
 }
