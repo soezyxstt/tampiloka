@@ -1,0 +1,278 @@
+{
+  "prospectId": "historia-garut",
+  "researchedAt": "2026-10-21",
+  "business": {
+    "name": "Historia Coffee & Eatery",
+    "category": "coffee-and-eatery",
+    "city": "Garut"
+  },
+  "verificationBoundary": "Parent directly inspected official Instagram in user Chrome on 2026-10-21; child used web research. Primary bio and official posts supersede older secondary claims. No direct business confirmation.",
+  "sources": [
+    {
+      "id": "instagram",
+      "url": "https://www.instagram.com/historiacoffee.co/",
+      "type": "official-account-candidate",
+      "access": "parent-chrome-direct-observation",
+      "note": "Parent verified official bio and grid on 2026-10-21."
+    },
+    {
+      "id": "canva",
+      "url": "https://historiacoffee.my.canva.site/co",
+      "type": "brand-operated-hub-candidate",
+      "access": "search-index-only",
+      "note": "Indexed title Historia Coffee & Eatery, MENU, WHATSAPP, GO FOOD, LOKASI, GRAB FOOD and tagline dari rasa jadi cerita; official Instagram cross-link still required."
+    },
+    {
+      "id": "employer",
+      "url": "https://www.kitalulus.com/company/historia-coffee-eatery-sgjl",
+      "type": "business-employer-profile",
+      "access": "read"
+    },
+    {
+      "id": "directory",
+      "url": "https://restaurantguru.com/Historia-Coffee-and-Eatery-Garut",
+      "type": "third-party-directory",
+      "access": "read"
+    },
+    {
+      "id": "picnic",
+      "url": "https://picnicdodolgarut.id/coffee-shop-garut/",
+      "type": "third-party-local-business-editorial",
+      "publishedAt": "2026-07-21",
+      "access": "read"
+    },
+    {
+      "id": "radar",
+      "url": "https://radargarut.id/2025/10/09/viral-cafe-di-garut-yang-aesthetic-dan-suasananya-bikin-betah-nongkrong/",
+      "type": "third-party-editorial",
+      "publishedAt": "2025-10-09",
+      "access": "read"
+    },
+    {
+      "id": "old-hours",
+      "url": "https://depok.pikiran-rakyat.com/gaya-hidup/amp/pr-098468043/instagramable-dan-cozy-inilah-5-cafe-recommended-di-garut-yang-cocok-buat-kumpul",
+      "type": "third-party-editorial",
+      "publishedAt": "2024-08-20",
+      "access": "search-index-only"
+    },
+    {
+      "id": "former-marketer",
+      "url": "https://id.linkedin.com/in/aldimuhammadridwan",
+      "type": "self-reported-former-brand-marketer",
+      "access": "read",
+      "note": "Historical positioning evidence, not current operational proof."
+    },
+    {
+      "id": "facilities",
+      "url": "https://garut.pikiran-rakyat.com/garut/pr-527898604/syahdunya-menikmati-hidangan-lezat-dan-suasana-nyaman-di-historia-coffe-garut-dengan-viewnya-bagus-banget",
+      "type": "third-party-editorial",
+      "publishedAt": "2024-03-28",
+      "access": "read"
+    },
+    {
+      "id": "linktree",
+      "url": "https://linktr.ee/Historiacoffee.co",
+      "type": "official-bio-link",
+      "access": "parent-chrome-bio-observation",
+      "note": "Parent inspected official bio-linked Linktree in Chrome on 2026-10-21. Tagline Dari Rasa Jadi Cerita; menu Drive folder 1uH8VRzMIt49nCWVGRUP5SShpQ4K9-Lhy; WhatsApp 6282130468241; location No.305."
+    },
+    {
+      "id": "official-event",
+      "url": "https://www.instagram.com/historiacoffee.co/p/DeG1qMaE9KB/",
+      "type": "official-instagram-post",
+      "access": "parent-chrome-direct-observation"
+    }
+  ],
+  "facts": [
+    {
+      "field": "name",
+      "value": "Historia Coffee & Eatery",
+      "sources": [
+        "instagram"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true
+    },
+    {
+      "field": "instagram",
+      "value": "https://www.instagram.com/historiacoffee.co/",
+      "sources": [
+        "instagram"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true
+    },
+    {
+      "field": "address",
+      "value": "Jl. Cimanuk No.305, Pataruman, Kec. Tarogong Kidul, Kabupaten Garut, Jawa Barat 44151",
+      "sources": [
+        "instagram"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true,
+      "note": "A lower-confidence article gives No.309/Jayaraga; prefer company profile and repeated No.305 evidence."
+    },
+    {
+      "field": "hours",
+      "value": "09.00–23.00 WIB setiap hari",
+      "sources": [
+        "instagram"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true,
+      "alternative": "2024 editorial states 09.00–22.00 weekdays, 23.00 Saturday/Sunday",
+      "displayRecommendation": "Display daily 09.00–23.00 WIB; parent verified current official bio."
+    },
+    {
+      "field": "phone",
+      "value": "+6282130468241",
+      "sources": [
+        "official-event"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true,
+      "displayRecommendation": "Official event post explicitly gives 0821-3046-8241; may link WhatsApp."
+    },
+    {
+      "field": "tagline",
+      "value": "dari rasa jadi cerita",
+      "sources": [
+        "instagram",
+        "linktree"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true
+    },
+    {
+      "field": "outdoor-seating-and-wifi",
+      "value": true,
+      "sources": [
+        "directory",
+        "facilities"
+      ],
+      "status": "corroborated-secondary",
+      "primaryVerified": false
+    },
+    {
+      "field": "rooftop",
+      "value": true,
+      "sources": [
+        "official-event"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true,
+      "note": "Official Romantic Dinner rooftop post verified by parent; avoid exact floor count."
+    },
+    {
+      "field": "brand-positioning",
+      "value": "Cozy and versatile; family gatherings, informal professional meetings, personal time",
+      "sources": [
+        "former-marketer"
+      ],
+      "status": "historical-self-report",
+      "primaryVerified": false,
+      "note": "Useful strategy evidence; not a current business promise."
+    },
+    {
+      "field": "visit-landmark",
+      "value": "Samping Dealer Toyota Garut",
+      "sources": [
+        "instagram"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true
+    },
+    {
+      "field": "business-positioning",
+      "value": "Cafe & Event Venue Garut — Dining, Celebrations, Meetings",
+      "sources": [
+        "instagram"
+      ],
+      "status": "verified-primary",
+      "primaryVerified": true
+    }
+  ],
+  "menuCandidates": [
+    {
+      "category": "coffee",
+      "status": "verified-primary-parent-grid",
+      "price": null,
+      "name": "Es Kopi Susu Historia",
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/"
+    },
+    {
+      "category": "food",
+      "status": "verified-primary-parent-grid",
+      "price": null,
+      "name": "Wagyu Meltique",
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/"
+    },
+    {
+      "category": "snack",
+      "status": "verified-primary-parent-grid",
+      "price": null,
+      "name": "Pisang Goreng Keju",
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/"
+    },
+    {
+      "category": "food",
+      "status": "verified-primary-parent-observation",
+      "price": null,
+      "name": "Chicken Nanban Rice",
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/reel/DejYIwzNb1s/"
+    },
+    {
+      "description": "Americano + mango",
+      "price": null,
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/reel/DeeLEkoNp5L/",
+      "name": "Black Mango",
+      "status": "verified-primary-parent-observation",
+      "category": "coffee"
+    },
+    {
+      "category": "food",
+      "status": "verified-primary-parent-observation",
+      "price": null,
+      "name": "Prawn Sushi Roll",
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/reel/Ddv4NX4tZth/"
+    },
+    {
+      "category": "snack",
+      "status": "verified-primary-parent-observation",
+      "price": null,
+      "name": "Chicken Thai Spring Roll",
+      "sourceUrl": "https://www.instagram.com/historiacoffee.co/reel/Dd6LWraN8wP/"
+    }
+  ],
+  "exclusions": [
+    "No current prices verified",
+    "No numerical review/rating claim for demo",
+    "No parking/capacity/payment/accessibility claim",
+    "No old Ramadan promotion as current offer",
+    "No guarantee that every menu candidate is currently available"
+  ],
+  "strategy": {
+    "blueprint": "atmosphere-led-with-menu-access",
+    "primaryGoal": "view-current-official-menu",
+    "secondaryGoal": "find-location",
+    "opportunities": [
+      "Bring atmosphere, curated menu and visit details into one coherent page instead of a link-only hub",
+      "Keep current menu and location visible within one or two actions",
+      "Use genuine venue photography and brand identity; list asset permission status separately"
+    ],
+    "recommendedSections": [
+      "Hero with real atmosphere photo",
+      "Menu selection linked to official current menu",
+      "Space gallery",
+      "Location and official channels",
+      "Independent demo disclosure"
+    ],
+    "publicationGate": [
+      "Parent browser confirms official identity/hub",
+      "Verify menu, hours and contact targets",
+      "Record asset origin and permission",
+      "Noindex and independent-demo disclosure",
+      "Human visual and factual review before outreach"
+    ]
+  }
+}

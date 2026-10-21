@@ -1,0 +1,735 @@
+{
+  "source": {
+    "url": "https://drive.google.com/file/d/1wnKDZJ8krV-tRUSY0PDZiIUsckuxN5X-/view",
+    "file": "research/menu/MENU-DIGITAL-HISTORIA.pdf",
+    "checkedAt": "2026-10-21",
+    "priceNote": "Harga mengikuti PDF menu resmi yang diakses 21 Oktober 2026; dapat berubah. Konfirmasikan harga dan ketersediaan langsung ke Historia.",
+    "descriptionNote": "Deskripsi diringkas dari menu resmi; nama dan harga mengikuti PDF.",
+    "sha256": "d773b4453f02af41d03c1ffd5813e68fe7d6ec995b6226ffce915a09f6c82ac5",
+    "pageCount": 31
+  },
+  "categories": [
+    {
+      "id": "nasi-goreng",
+      "label": "Nasi Goreng"
+    },
+    {
+      "id": "main-course",
+      "label": "Main Course"
+    },
+    {
+      "id": "steak",
+      "label": "Steak"
+    },
+    {
+      "id": "salad",
+      "label": "Salad"
+    },
+    {
+      "id": "sushi",
+      "label": "Sushi"
+    },
+    {
+      "id": "spring-roll",
+      "label": "Spring Roll"
+    },
+    {
+      "id": "pasta",
+      "label": "Pasta"
+    },
+    {
+      "id": "mie-goreng",
+      "label": "Mie Goreng"
+    },
+    {
+      "id": "appetizer",
+      "label": "Appetizer"
+    },
+    {
+      "id": "dessert",
+      "label": "Dessert"
+    },
+    {
+      "id": "coffee",
+      "label": "Coffee Based"
+    },
+    {
+      "id": "frappe",
+      "label": "Frappe"
+    },
+    {
+      "id": "black-series",
+      "label": "Black Series"
+    },
+    {
+      "id": "non-coffee",
+      "label": "Non Coffee"
+    },
+    {
+      "id": "strawberry-series",
+      "label": "Strawberry Series"
+    },
+    {
+      "id": "juice",
+      "label": "Fresh Juice"
+    },
+    {
+      "id": "mocktail",
+      "label": "Mocktail"
+    }
+  ],
+  "items": [
+    {
+      "id": "nasi-goreng-sapi",
+      "name": "Nasi Goreng Sapi",
+      "category": "nasi-goreng",
+      "description": "Nasi goreng dengan daging sapi dan aroma smoky.",
+      "price": 39000,
+      "image": "/images/menu/nasi-goreng-sapi.webp",
+      "page": 3
+    },
+    {
+      "id": "nasi-goreng-singapore",
+      "name": "Nasi Goreng Singapore",
+      "category": "nasi-goreng",
+      "description": "Nasi goreng gurih dengan pilihan seafood.",
+      "price": 36000,
+      "image": "/images/menu/nasi-goreng-singapore.webp",
+      "page": 3
+    },
+    {
+      "id": "nasi-goreng-ayam",
+      "name": "Nasi Goreng Ayam",
+      "category": "nasi-goreng",
+      "description": "Nasi goreng dengan ayam dan racikan khas Historia.",
+      "price": 35000,
+      "image": "/images/menu/nasi-goreng-ayam.webp",
+      "page": 3
+    },
+    {
+      "id": "nasi-sapi-lada-hitam",
+      "name": "Nasi Sapi Lada Hitam",
+      "category": "main-course",
+      "description": "Nasi dengan daging sapi dan saus lada hitam.",
+      "price": 38000,
+      "image": "/images/menu/nasi-sapi-lada-hitam.webp",
+      "page": 4
+    },
+    {
+      "id": "nasi-sapi-rawit-pedas",
+      "name": "Nasi Sapi Rawit Pedas",
+      "category": "main-course",
+      "description": "Daging sapi dengan bumbu pedas, gurih, dan tomat segar.",
+      "price": 38000,
+      "image": "/images/menu/nasi-sapi-rawit-pedas.webp",
+      "page": 4
+    },
+    {
+      "id": "nasi-sapi-manis-gurih",
+      "name": "Nasi Sapi Manis Gurih",
+      "category": "main-course",
+      "description": "Nasi dengan daging sapi dan saus manis gurih.",
+      "price": 38000,
+      "image": "/images/menu/nasi-sapi-manis-gurih.webp",
+      "page": 4
+    },
+    {
+      "id": "sop-iga",
+      "name": "Sop Iga",
+      "category": "main-course",
+      "description": "Iga berempah khas Indonesia, disajikan bersama nasi.",
+      "price": 63000,
+      "image": "/images/menu/sop-iga.webp",
+      "page": 5
+    },
+    {
+      "id": "iga-bakar",
+      "name": "Iga Bakar",
+      "category": "main-course",
+      "description": "Iga bakar dengan saus manis gurih, nasi, dan kuah rempah.",
+      "price": 66000,
+      "image": "/images/menu/iga-bakar.webp",
+      "page": 5
+    },
+    {
+      "id": "fish-and-chips",
+      "name": "Fish and Chips",
+      "category": "main-course",
+      "description": "Ikan krispi, kentang goreng, salad, dan saus tartar.",
+      "price": 50000,
+      "image": "/images/menu/fish-and-chips.webp",
+      "page": 5
+    },
+    {
+      "id": "nasi-tongseng-sapi",
+      "name": "Nasi Tongseng Sapi",
+      "category": "main-course",
+      "description": "Sajian sapi dengan nasi, acar, dan kerupuk.",
+      "price": 45000,
+      "image": "/images/menu/nasi-tongseng-sapi.webp",
+      "page": 5
+    },
+    {
+      "id": "chicken-nanban-rice",
+      "name": "Chicken Nanban Rice",
+      "category": "main-course",
+      "description": "Nasi ayam krispi ala Jepang dengan saus tartar.",
+      "price": 38000,
+      "image": "/images/menu/chicken-nanban-rice.webp",
+      "page": 6
+    },
+    {
+      "id": "nasi-ayam-crispy-sauce-historia",
+      "name": "Nasi Ayam Crispy Sauce Historia",
+      "category": "main-course",
+      "description": "Ayam krispi dengan saus asam manis khas Historia.",
+      "price": 33000,
+      "image": "/images/menu/nasi-ayam-crispy-sauce-historia.webp",
+      "page": 6
+    },
+    {
+      "id": "nasi-ayam-sambal-dabu-dabu",
+      "name": "Nasi Ayam Sambal Dabu-Dabu",
+      "category": "main-course",
+      "description": "Ayam krispi dengan sambal dabu-dabu pedas segar.",
+      "price": 33000,
+      "image": "/images/menu/nasi-ayam-sambal-dabu-dabu.webp",
+      "page": 6
+    },
+    {
+      "id": "wagyu-meltique",
+      "name": "Wagyu Meltique",
+      "category": "steak",
+      "description": "Daging sapi dengan pilihan saus, kentang, dan salad.",
+      "price": 125000,
+      "image": "/images/menu/wagyu-meltique.webp",
+      "page": 7,
+      "notes": "Pilihan kematangan dan saus tersedia pada menu resmi."
+    },
+    {
+      "id": "sirloin",
+      "name": "Sirloin",
+      "category": "steak",
+      "description": "Sirloin dengan pilihan saus, kentang, dan salad.",
+      "price": 89000,
+      "image": "/images/menu/sirloin.webp",
+      "page": 7,
+      "notes": "Pilihan kematangan dan saus tersedia pada menu resmi."
+    },
+    {
+      "id": "beef-thai-salad",
+      "name": "Beef Thai Salad",
+      "category": "salad",
+      "description": "Salad dengan daging sapi dan saus ala Thailand.",
+      "price": 38000,
+      "image": "/images/menu/beef-thai-salad.webp",
+      "page": 9
+    },
+    {
+      "id": "chicken-thai-salad",
+      "name": "Chicken Thai Salad",
+      "category": "salad",
+      "description": "Salad dengan ayam dan saus ala Thailand.",
+      "price": 35000,
+      "image": "/images/menu/chicken-thai-salad.webp",
+      "page": 9
+    },
+    {
+      "id": "prawn-sushi-roll",
+      "name": "Prawn Sushi Roll",
+      "category": "sushi",
+      "description": "Sushi roll dengan sayuran, rumput laut, dan udang.",
+      "price": 34000,
+      "image": "/images/menu/prawn-sushi-roll.webp",
+      "page": 10
+    },
+    {
+      "id": "crabstick-sushi-roll",
+      "name": "Crabstick Sushi Roll",
+      "category": "sushi",
+      "description": "Sushi roll dengan sayuran, rumput laut, dan crabstick.",
+      "price": 32000,
+      "image": "/images/menu/crabstick-sushi-roll.webp",
+      "page": 10
+    },
+    {
+      "id": "prawn-thai-spring-roll",
+      "name": "Prawn Thai Spring Roll",
+      "category": "spring-roll",
+      "description": "Sayuran dan udang dalam rice paper dengan saus Thai.",
+      "price": 34000,
+      "image": "/images/menu/prawn-thai-spring-roll.webp",
+      "page": 11
+    },
+    {
+      "id": "chicken-thai-spring-roll",
+      "name": "Chicken Thai Spring Roll",
+      "category": "spring-roll",
+      "description": "Sayuran dan ayam dalam rice paper dengan saus Thai.",
+      "price": 28000,
+      "image": "/images/menu/chicken-thai-spring-roll.webp",
+      "page": 11
+    },
+    {
+      "id": "creamy-mushroom-pasta",
+      "name": "Creamy Mushroom Pasta",
+      "category": "pasta",
+      "description": "Pasta creamy dengan ayam panggang dan jamur.",
+      "price": 38000,
+      "image": "/images/menu/creamy-mushroom-pasta.webp",
+      "page": 12
+    },
+    {
+      "id": "garlic-chili-pasta",
+      "name": "Garlic Chili Pasta",
+      "category": "pasta",
+      "description": "Pasta pedas gurih dengan bawang putih dan udang.",
+      "price": 38000,
+      "image": "/images/menu/garlic-chili-pasta.webp",
+      "page": 12
+    },
+    {
+      "id": "mie-goreng-sapi",
+      "name": "Mie Goreng Sapi",
+      "category": "mie-goreng",
+      "description": "Mie goreng kecap dengan sapi, sayuran, dan aroma smoky.",
+      "price": 38000,
+      "image": "/images/menu/mie-goreng-sapi.webp",
+      "page": 13
+    },
+    {
+      "id": "mie-goreng-ayam",
+      "name": "Mie Goreng Ayam",
+      "category": "mie-goreng",
+      "description": "Mie goreng kecap dengan ayam dan sayuran.",
+      "price": 36000,
+      "image": "/images/menu/mie-goreng-ayam.webp",
+      "page": 13
+    },
+    {
+      "id": "sharing-platter",
+      "name": "Sharing Platter",
+      "category": "appetizer",
+      "description": "Sosis, chicken wings, kentang, onion ring, dan sayuran.",
+      "price": 63000,
+      "image": "/images/menu/sharing-platter.webp",
+      "page": 15
+    },
+    {
+      "id": "quesadilla",
+      "name": "Quesadilla",
+      "category": "appetizer",
+      "description": "Tortilla dengan ayam, paprika, dan bawang bombay.",
+      "price": 38000,
+      "image": "/images/menu/quesadilla.webp",
+      "page": 15
+    },
+    {
+      "id": "potato-cheese-bread",
+      "name": "Potato Cheese Bread",
+      "category": "appetizer",
+      "description": "Tortilla berisi mashed potato dan keju mozzarella.",
+      "price": 35000,
+      "image": "/images/menu/potato-cheese-bread.webp",
+      "page": 15
+    },
+    {
+      "id": "hot-chicken-wings",
+      "name": "Hot Chicken Wings",
+      "category": "appetizer",
+      "description": "Sayap ayam krispi dengan pilihan fire sauce.",
+      "price": 35000,
+      "image": "/images/menu/hot-chicken-wings.webp",
+      "page": 16
+    },
+    {
+      "id": "mozzarella-stick-with-dipping-hot-sauce",
+      "name": "Mozzarella Stick With Dipping Hot Sauce",
+      "category": "appetizer",
+      "description": "Mozzarella krispi dengan saus pedas pendamping.",
+      "price": 37000,
+      "image": "/images/menu/mozzarella-stick-with-dipping-hot-sauce.webp",
+      "page": 16
+    },
+    {
+      "id": "potato-sausages",
+      "name": "Potato Sausages",
+      "category": "appetizer",
+      "description": "Kentang goreng dan sosis dengan bumbu keju.",
+      "price": 27000,
+      "image": "/images/menu/potato-sausages.webp",
+      "page": 16
+    },
+    {
+      "id": "tahu-cabe-garam",
+      "name": "Tahu Cabe Garam",
+      "category": "appetizer",
+      "description": "Tahu krispi dengan cabai dan bawang.",
+      "price": 26000,
+      "image": "/images/menu/tahu-cabe-garam.webp",
+      "page": 16
+    },
+    {
+      "id": "risol-ayam",
+      "name": "Risol Ayam",
+      "category": "appetizer",
+      "description": "Risol berisi ayam, wortel, kol putih, dan bawang.",
+      "price": 32000,
+      "image": "/images/menu/risol-ayam.webp",
+      "page": 17
+    },
+    {
+      "id": "pisang-goreng-keju",
+      "name": "Pisang Goreng Keju",
+      "category": "appetizer",
+      "description": "Pisang goreng dengan keju dan susu kental manis.",
+      "price": 28000,
+      "image": "/images/menu/pisang-goreng-keju.webp",
+      "page": 17
+    },
+    {
+      "id": "matcha-ice-cake",
+      "name": "Matcha Ice Cake",
+      "category": "dessert",
+      "description": "Es krim matcha berbentuk cake dengan es krim vanilla.",
+      "price": 38000,
+      "image": "/images/menu/matcha-ice-cake.webp",
+      "page": 18
+    },
+    {
+      "id": "waffle-ice-cream",
+      "name": "Waffle Ice Cream",
+      "category": "dessert",
+      "description": "Waffle hangat, es krim vanilla, dan selai cokelat.",
+      "price": 28000,
+      "image": "/images/menu/waffle-ice-cream.webp",
+      "page": 18
+    },
+    {
+      "id": "strawberry-cheese-cake",
+      "name": "Strawberry Cheese Cake",
+      "category": "dessert",
+      "description": "Cheesecake lembut dengan topping stroberi.",
+      "price": 38000,
+      "image": "/images/menu/strawberry-cheese-cake.webp",
+      "page": 18
+    },
+    {
+      "id": "es-kopi-susu-historia",
+      "name": "Es Kopi Susu Historia",
+      "category": "coffee",
+      "description": "Kopi susu dengan rasa creamy khas Historia.",
+      "price": 26000,
+      "image": "/images/menu/es-kopi-susu-historia.webp",
+      "page": 20
+    },
+    {
+      "id": "es-kopi-susu-large",
+      "name": "Es Kopi Susu Large",
+      "category": "coffee",
+      "description": "Kopi susu creamy dalam pilihan ukuran large.",
+      "price": 33000,
+      "image": "/images/menu/es-kopi-susu-large.webp",
+      "page": 20
+    },
+    {
+      "id": "es-kopi-harmonis",
+      "name": "Es Kopi Harmonis",
+      "category": "coffee",
+      "description": "Kopi susu creamy dan manis dengan karakter kopi lebih kuat.",
+      "price": 32000,
+      "image": "/images/menu/es-kopi-harmonis.webp",
+      "page": 20
+    },
+    {
+      "id": "americano",
+      "name": "Americano",
+      "category": "coffee",
+      "description": "Espresso dengan air panas, ringan dengan karakter kopi kuat.",
+      "price": 23000,
+      "image": "/images/menu/americano.webp",
+      "page": 21
+    },
+    {
+      "id": "cappuccino-hot",
+      "name": "Cappuccino (Hot)",
+      "category": "coffee",
+      "description": "Espresso, susu, dan foam lembut yang seimbang.",
+      "price": 27000,
+      "image": "/images/menu/cappuccino-hot.webp",
+      "page": 21
+    },
+    {
+      "id": "v60-hot-ice",
+      "name": "V60 (Hot/Ice)",
+      "category": "coffee",
+      "description": "Manual brew dengan karakter clean dan aroma kopi.",
+      "price": 28000,
+      "image": "/images/menu/v60-hot-ice.webp",
+      "page": 21
+    },
+    {
+      "id": "butterscoth-creamy",
+      "name": "Butterscoth Creamy",
+      "category": "coffee",
+      "description": "Kopi creamy dengan rasa manis buttery.",
+      "price": 30000,
+      "image": "/images/menu/butterscoth-creamy.webp",
+      "page": 22
+    },
+    {
+      "id": "creme-brulle",
+      "name": "Creme Brulle",
+      "category": "coffee",
+      "description": "Kopi creamy dengan sentuhan caramel brulee.",
+      "price": 29000,
+      "image": "/images/menu/creme-brulle.webp",
+      "page": 22
+    },
+    {
+      "id": "caffe-latte-hot-ice",
+      "name": "Caffe Latte (Hot/Ice)",
+      "category": "coffee",
+      "description": "Espresso dan susu dengan rasa kopi yang lembut.",
+      "price": 28000,
+      "image": "/images/menu/caffe-latte-hot-ice.webp",
+      "page": 22
+    },
+    {
+      "id": "caffe-latte-extra-syrup",
+      "name": "Caffe Latte (Extra Syrup)",
+      "category": "coffee",
+      "description": "Caffe latte dengan pilihan tambahan syrup.",
+      "price": 32000,
+      "image": "/images/menu/caffe-latte-extra-syrup.webp",
+      "page": 22,
+      "notes": "Pilihan syrup pada PDF: Vanilla, Caramel, Hazelnut Soft Bread."
+    },
+    {
+      "id": "caramel-machiatto-frapee",
+      "name": "Caramel Machiatto Frapee",
+      "category": "frappe",
+      "description": "Espresso, caramel syrup, es krim, dan creamy foam.",
+      "price": 34000,
+      "image": "/images/menu/caramel-machiatto-frapee.webp",
+      "page": 24
+    },
+    {
+      "id": "chocolate-frappe",
+      "name": "Chocolate Frappe",
+      "category": "frappe",
+      "description": "Cokelat dengan susu, es krim, dan creamy foam.",
+      "price": 32000,
+      "image": "/images/menu/chocolate-frappe.webp",
+      "page": 24
+    },
+    {
+      "id": "matcha-frappe",
+      "name": "Matcha Frappe",
+      "category": "frappe",
+      "description": "Matcha, susu, es krim, dan creamy foam.",
+      "price": 32000,
+      "image": "/images/menu/matcha-frappe.webp",
+      "page": 24
+    },
+    {
+      "id": "lotus-biscoff-frappe",
+      "name": "Lotus Biscoff Frappe",
+      "category": "frappe",
+      "description": "Biscoff, susu, es krim, dan creamy foam.",
+      "price": 34000,
+      "image": "/images/menu/lotus-biscoff-frappe.webp",
+      "page": 24
+    },
+    {
+      "id": "piscok",
+      "name": "Piscok",
+      "category": "frappe",
+      "description": "Dark chocolate dan pisang dalam minuman creamy.",
+      "price": 31000,
+      "image": "/images/menu/piscok.webp",
+      "page": 24
+    },
+    {
+      "id": "black-peach",
+      "name": "Black Peach",
+      "category": "black-series",
+      "description": "Americano dengan aroma peach.",
+      "price": 28000,
+      "image": "/images/menu/black-peach.webp",
+      "page": 25
+    },
+    {
+      "id": "black-mango",
+      "name": "Black Mango",
+      "category": "black-series",
+      "description": "Americano dengan sentuhan mangga segar.",
+      "price": 28000,
+      "image": "/images/menu/black-mango.webp",
+      "page": 25
+    },
+    {
+      "id": "black-cranberry",
+      "name": "Black Cranberry",
+      "category": "black-series",
+      "description": "Americano dengan cranberry yang asam segar.",
+      "price": 28000,
+      "image": "/images/menu/black-cranberry.webp",
+      "page": 25
+    },
+    {
+      "id": "chocolate-hot",
+      "name": "Chocolate Hot",
+      "category": "non-coffee",
+      "description": "Cokelat hangat yang creamy.",
+      "price": 28000,
+      "image": "/images/menu/chocolate-hot.webp",
+      "page": 26
+    },
+    {
+      "id": "matcha-hot",
+      "name": "Matcha Hot",
+      "category": "non-coffee",
+      "description": "Matcha latte hangat yang creamy.",
+      "price": 28000,
+      "image": "/images/menu/matcha-hot.webp",
+      "page": 26
+    },
+    {
+      "id": "tea-hot-ice",
+      "name": "Tea (Hot/Ice)",
+      "category": "non-coffee",
+      "description": "Pilihan teh klasik hangat atau dingin.",
+      "price": 10000,
+      "image": "/images/menu/tea-hot-ice.webp",
+      "page": 26
+    },
+    {
+      "id": "air-mineral",
+      "name": "Air Mineral",
+      "category": "non-coffee",
+      "description": "Air mineral.",
+      "price": 5000,
+      "image": "/images/menu/air-mineral.webp",
+      "page": 26
+    },
+    {
+      "id": "artisan-tea",
+      "name": "Artisan Tea",
+      "category": "non-coffee",
+      "description": "Teh artisan dengan aroma ringan dan menyegarkan.",
+      "price": 26000,
+      "image": "/images/menu/artisan-tea.webp",
+      "page": 26
+    },
+    {
+      "id": "strawberry-velvet",
+      "name": "Strawberry Velvet",
+      "category": "strawberry-series",
+      "description": "Minuman creamy dengan rasa strawberry cheesecake.",
+      "price": 31000,
+      "image": "/images/menu/strawberry-velvet.webp",
+      "page": 28
+    },
+    {
+      "id": "matcha-berry",
+      "name": "Matcha Berry",
+      "category": "strawberry-series",
+      "description": "Matcha lembut dengan stroberi dan susu creamy.",
+      "price": 31000,
+      "image": "/images/menu/matcha-berry.webp",
+      "page": 28
+    },
+    {
+      "id": "choco-berry",
+      "name": "Choco Berry",
+      "category": "strawberry-series",
+      "description": "Cokelat creamy dengan stroberi manis-asam.",
+      "price": 31000,
+      "image": "/images/menu/choco-berry.webp",
+      "page": 28
+    },
+    {
+      "id": "sunkist-berry",
+      "name": "Sunkist Berry",
+      "category": "juice",
+      "description": "Perpaduan sunkist dan stroberi yang segar.",
+      "price": 31000,
+      "image": "/images/menu/sunkist-berry.webp",
+      "page": 29
+    },
+    {
+      "id": "sweet-berry",
+      "name": "Sweet Berry",
+      "category": "juice",
+      "description": "Lychee dan stroberi dengan rasa fruity yang ringan.",
+      "price": 31000,
+      "image": "/images/menu/sweet-berry.webp",
+      "page": 29
+    },
+    {
+      "id": "pink-lady",
+      "name": "Pink Lady",
+      "category": "juice",
+      "description": "Stroberi, pisang, dan buah naga.",
+      "price": 29000,
+      "image": "/images/menu/pink-lady.webp",
+      "page": 29
+    },
+    {
+      "id": "green-land",
+      "name": "Green Land",
+      "category": "juice",
+      "description": "Nanas dan kale dengan rasa manis alami.",
+      "price": 28000,
+      "image": "/images/menu/green-land.webp",
+      "page": 29
+    },
+    {
+      "id": "strawberry-breeze",
+      "name": "Strawberry Breeze",
+      "category": "mocktail",
+      "description": "Minuman stroberi dengan rasa manis-asam ringan.",
+      "price": 26000,
+      "image": "/images/menu/strawberry-breeze.webp",
+      "page": 30
+    },
+    {
+      "id": "blue-hawaii",
+      "name": "Blue Hawaii",
+      "category": "mocktail",
+      "description": "Tropical fruit dengan pilihan creamy atau fruity.",
+      "price": 29000,
+      "image": "/images/menu/blue-hawaii.webp",
+      "page": 30,
+      "variants": [
+        {
+          "label": "Creamy",
+          "price": 29000
+        },
+        {
+          "label": "Fruity",
+          "price": 29000
+        }
+      ]
+    },
+    {
+      "id": "little-sunshine",
+      "name": "Little Sunshine",
+      "category": "mocktail",
+      "description": "Nanas dan lemon yang creamy dengan rasa candy.",
+      "price": 29000,
+      "image": "/images/menu/little-sunshine.webp",
+      "page": 30
+    },
+    {
+      "id": "mazagran",
+      "name": "Mazagran",
+      "category": "mocktail",
+      "description": "Kopi hitam manis dengan sentuhan lemon.",
+      "price": 29000,
+      "image": "/images/menu/mazagran.webp",
+      "page": 30
+    }
+  ]
+}

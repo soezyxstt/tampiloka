@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+.env*
+!.env.example
+.vercel/
+
+# Retain original research locally; publish only optimized runtime assets.
+research/media/
+research/assets-download.json
+research/contact-sheet.jpg
+research/previews/
+research/reference-previews/
+research/menu/*.pdf
+research/menu/*.png
+research/menu/*.jpg
+research/menu/raw/
+research/menu/raw-*.json
+__pycache__/

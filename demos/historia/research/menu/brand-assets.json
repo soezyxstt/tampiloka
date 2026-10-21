@@ -1,0 +1,52 @@
+[
+  {
+    "publicImage": "/images/menu/historia-space.webp",
+    "sourcePage": 2,
+    "sourceObject": "X4",
+    "width": 1546,
+    "height": 2319,
+    "transformation": "original embedded image; transparent margins trimmed where applicable; image resized/compressed only",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/historia-logo.png",
+    "sourcePage": 2,
+    "sourceObject": "X6",
+    "width": 239,
+    "height": 166,
+    "transformation": "original embedded image; transparent margins trimmed where applicable; image resized/compressed only",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/historia-wordmark.png",
+    "sourcePage": 1,
+    "sourceObject": "X9",
+    "width": 877,
+    "height": 226,
+    "transformation": "original embedded image; transparent margins trimmed where applicable; image resized/compressed only",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/historia-symbol.png",
+    "sourcePage": 1,
+    "sourceObject": "X4",
+    "width": 91,
+    "height": 180,
+    "transformation": "original embedded image; transparent margins trimmed where applicable; image resized/compressed only",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/menu-spoon.webp",
+    "sourcePage": 1,
+    "sourceObject": "X15",
+    "width": 156,
+    "height": 979,
+    "transformation": "original embedded image; transparent margins trimmed where applicable; image resized/compressed only",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-21",
+  "runtime": "Bundled Node.js; standalone Next.js production build at localhost:3004",
+  "results": {
+    "productionBuild": "PASS next build --webpack; final TypeScript passed",
+    "lint": "PASS full ESLint after official shadcn imports; focused menu lint after final dialog exit fix",
+    "catalogue": "PASS check-catalogue.mjs: 71 products, 17 categories, 4 broad groups, diverse initial 12",
+    "boundariesAndHttp": "PASS check-demo.mjs on final polish production build: 71 menu items, 79 local images and Next image optimizer",
+    "components": "Official shadcn base-nova registry adapted for local imports/Lucide/brand theme: Select, Button, Input, Accordion, Dialog, Collapsible. No native select remains.",
+    "font": "Poppins 400/500/600/700 self-hosted; computed Poppins confirmed. PDF embeds Poppins Regular/Medium/Bold and Quiche Display; main UI follows Poppins hierarchy.",
+    "visitorFlow": "Zero Drive/PDF links; no internal page/source annotations in product detail. Concept banner remains at top.",
+    "select": "Production: custom dropdown with checkmark, Steak yields 2 products, Escape closes; displayed label correct.",
+    "accordion": "Production: Perayaan bersama opens while rooftop and gathering are closed. Height/opacity transition 360/280ms; single-open configuration verified.",
+    "dialog": "Production: image/price render, Escape closes. Content retained until onOpenChangeComplete for exit animation. Focus restoration checked in browser before final exit-timing refinement; exact final-focus timing not separately reasserted.",
+    "mobileNavigation": "Collapsible opens; choice closes panel. Escape returns trigger focus in implementation.",
+    "responsiveWidths": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "horizontalOverflow": "No page overflow after fixing shadcn Button nowrap on product cards: 320 viewport/305 scroll, 390/375, 768/753, 1280/1265.",
+    "reducedMotion": "Emulated reduce and navigated fresh: hero transform none, marquee transform none, scroll behavior auto; no new hydration error observed. Preference override cleared.",
+    "map": "Embedded map pinpoint previously visually verified for Historia Coffee & Eatery No.305. Final build retains same verified map source."
+  },
+  "artifacts": [
+    "previews/redesign-desktop.png",
+    "previews/redesign-select.png",
+    "previews/redesign-mobile-select.png",
+    "previews/redesign-mobile-accordion.png",
+    "previews/polish-hero-desktop.png",
+    "previews/polish-menu-desktop.png",
+    "previews/polish-menu-mobile.png",
+    "previews/polish-whatsapp-mobile.png"
+  ],
+  "livePreview": "http://localhost:3004",
+  "notCompleted": [
+    "Owner reconfirmation of current prices/availability",
+    "Photo publication permission",
+    "External deployment/subdomain",
+    "Outreach sending",
+    "Reusable skill/shared package extraction",
+    "Real-device and performance audit"
+  ],
+  "referenceReview": "reference-review.md and reference-previews; all three references opened successfully in Chrome. Earlier claim they were unavailable was corrected.",
+  "polishReview": {
+    "date": "2026-10-21",
+    "changes": [
+      "Hero copy 18px desktop/16px mobile",
+      "Primary menu CTA solid rust, secondary location CTA shadcn ghost",
+      "WhatsApp icon on Hubungi Historia",
+      "Dark filled active categories with 10px corners, no pill shape",
+      "Grouped product name/description/price with 6px gap and opaque stone-600 descriptions"
+    ],
+    "calculatedContrast": {
+      "menuDescriptionOnCream": 6.39,
+      "menuPriceOnCream": 6.12,
+      "activeCategory": 13.94,
+      "heroPrimaryText": 6.3
+    },
+    "scope": "Ratios apply to these specific opaque color pairs, not an overall accessibility certification.",
+    "verification": {
+      "productionBuild": "PASS next build --webpack including TypeScript",
+      "lint": "PASS focused ESLint on hero/location/menu",
+      "http": "PASS 71 menu items and 79 local images including WhatsApp SVG",
+      "browser": "1280px desktop and 390px mobile; Kopi active state with 12/13 results; computed description/price colors match contrast calculations; 320/390 no horizontal overflow; WhatsApp icon loaded and destination preserved."
+    }
+  }
+}

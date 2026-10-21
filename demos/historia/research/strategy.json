@@ -1,0 +1,42 @@
+{
+  "reviewedAt": "2026-10-21",
+  "decision": "proceed-with-local-concept; external sharing awaits asset clearance",
+  "identityGate": "pass: official Instagram and its Linktree inspected in Chrome",
+  "informationGate": "Official Instagram/Linktree contact and hours verified; 71 products and prices transcribed from official 31-page PDF accessed 2026-10-21. Owner reconfirmation pending.",
+  "mediaGate": "authentic sources downloaded for local review; publication permission pending",
+  "blueprint": "Brand-led dining destination with interactive full product catalogue",
+  "primaryGoal": "Discover food and drink in the web catalogue, then visit or contact Historia",
+  "secondaryGoals": [
+    "find location and opening hours",
+    "contact Historia about visits or events"
+  ],
+  "referenceApplication": {
+    "Pagi & Roti": "Direct Chrome review: product photographs, descriptions and working category filters make the menu useful. Preserve plain-text underlined filters for Historia instead of pill controls.",
+    "Tepi Sagara": "Direct Chrome review: full-bleed atmosphere, editorial split sections and concise underlined actions create presence. Adapt image scale and open spacing using authentic Historia media; keep menu and visit details visible.",
+    "Sela Rasa": "Direct Chrome review: expressive typography, gathering/event sections and carousel-led content. Retain concise real occasion information for Historia; avoid extra career/news sections and simulated forms.",
+    "limit": "All three references opened successfully in user Chrome on 2026-10-21. Hero and menu areas inspected at desktop and 390px. Pagi category switch and Tepi menu navigation exercised. This is a focused review, not complete cross-device QA of external sites."
+  },
+  "visualDirection": {
+    "palette": "Cream #FFF8E6 and orange #CD3C0F sampled from official PDF artwork; no formal brand guide supplied.",
+    "typography": "Poppins 400/500/600/700 locally hosted OFL; PDF embeds Poppins Regular/Medium/Bold and Quiche Display. Main display and UI follow upright Poppins hierarchy. Quiche Display is not bundled without webfont license.",
+    "layout": "Soft corners on hero, gallery, events and map; open product grid with no heavy card boxes, pills or eyebrows.",
+    "motion": "motion/react hero entrance/parallax, marquee, dish transitions and viewport reveals; reusable Base UI/shadcn accordion height transition, collapsible navigation and dialog scale/fade; prefers-reduced-motion supported."
+  },
+  "pagePlan": [
+    "Top concept banner",
+    "Photo hero and visit essentials",
+    "Animated featured dishes",
+    "71-product web catalogue with filters/search/detail dialog",
+    "Atmosphere gallery",
+    "Single-open animated event accordion",
+    "Real location map/address/hours",
+    "Contact and internal catalogue navigation"
+  ],
+  "scope": "One standalone Next.js app, independent dependencies, no workspace imports, no CMS, database, payments or reservation forms.",
+  "sharingGate": [
+    "confirm permission from Historia and the relevant photo creators",
+    "review facts with the business before production",
+    "configure private preview access on the chosen host; noindex is not access control"
+  ],
+  "nextStep": "Review this first demo with the user before extracting the proven workflow into a reusable skill."
+}

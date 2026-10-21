@@ -1,0 +1,1289 @@
+{
+  "source": {
+    "url": "https://drive.google.com/file/d/1wnKDZJ8krV-tRUSY0PDZiIUsckuxN5X-/view",
+    "file": "research/menu/MENU-DIGITAL-HISTORIA.pdf",
+    "checkedAt": "2026-10-21",
+    "priceNote": "Harga mengikuti PDF menu resmi yang diakses 21 Oktober 2026; dapat berubah. Konfirmasikan harga dan ketersediaan langsung ke Historia.",
+    "descriptionNote": "Deskripsi diringkas dari menu resmi; nama dan harga mengikuti PDF."
+  },
+  "assets": [
+    {
+      "id": "nasi-goreng-sapi",
+      "sourcePage": 3,
+      "sourceObject": "X13",
+      "sourceFile": "raw/p03-X13.png",
+      "bbox": [
+        3.395966354501396,
+        261.64289787196276,
+        268.9960328878315,
+        527.2429644052929
+      ],
+      "publicImage": "/images/menu/nasi-goreng-sapi.webp",
+      "width": 676,
+      "height": 413,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-goreng-singapore",
+      "sourcePage": 3,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p03-X9.png",
+      "bbox": [
+        0.0,
+        388.46248298781325,
+        273.1029078207117,
+        661.565390808525
+      ],
+      "publicImage": "/images/menu/nasi-goreng-singapore.webp",
+      "width": 674,
+      "height": 419,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-goreng-ayam",
+      "sourcePage": 3,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p03-X11.png",
+      "bbox": [
+        -19.95792756841965,
+        512.5645290168944,
+        254.64553698976883,
+        787.167993575083
+      ],
+      "publicImage": "/images/menu/nasi-goreng-ayam.webp",
+      "width": 696,
+      "height": 436,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-sapi-lada-hitam",
+      "sourcePage": 4,
+      "sourceObject": "X13",
+      "sourceFile": "raw/p04-X13.png",
+      "bbox": [
+        3.395966354501396,
+        267.83549761393783,
+        268.9960328878315,
+        533.435564147268
+      ],
+      "publicImage": "/images/menu/nasi-sapi-lada-hitam.webp",
+      "width": 705,
+      "height": 441,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-sapi-rawit-pedas",
+      "sourcePage": 4,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p04-X9.png",
+      "bbox": [
+        8.5071428455357,
+        393.57390677483727,
+        281.61005066624745,
+        666.676814595549
+      ],
+      "publicImage": "/images/menu/nasi-sapi-rawit-pedas.webp",
+      "width": 685,
+      "height": 437,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-sapi-manis-gurih",
+      "sourcePage": 4,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p04-X11.png",
+      "bbox": [
+        -5.43397321358444,
+        535.6852976535291,
+        266.9186418383894,
+        808.037912705503
+      ],
+      "publicImage": "/images/menu/nasi-sapi-manis-gurih.webp",
+      "width": 721,
+      "height": 456,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "sop-iga",
+      "sourcePage": 5,
+      "sourceObject": "X12",
+      "sourceFile": "raw/p05-X12.png",
+      "bbox": [
+        29.70591668225342,
+        31.45809386299686,
+        274.29807369091316,
+        276.05025087165654
+      ],
+      "publicImage": "/images/menu/sop-iga.webp",
+      "width": 898,
+      "height": 584,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "iga-bakar",
+      "sourcePage": 5,
+      "sourceObject": "X8",
+      "sourceFile": "raw/p05-X8.png",
+      "bbox": [
+        322.13600257766603,
+        187.60632575682018,
+        575.7315888111829,
+        441.201911990337
+      ],
+      "publicImage": "/images/menu/iga-bakar.webp",
+      "width": 856,
+      "height": 541,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "fish-and-chips",
+      "sourcePage": 5,
+      "sourceObject": "X10",
+      "sourceFile": "raw/p05-X10.png",
+      "bbox": [
+        -26.15719739011673,
+        353.11957566043446,
+        270.9547622302178,
+        650.231535280769
+      ],
+      "publicImage": "/images/menu/fish-and-chips.webp",
+      "width": 661,
+      "height": 452,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-tongseng-sapi",
+      "sourcePage": 5,
+      "sourceObject": "X17",
+      "sourceFile": "raw/p05-X17.png",
+      "bbox": [
+        322.13600257766603,
+        523.2716317707652,
+        575.7315888111829,
+        776.867218004282
+      ],
+      "publicImage": "/images/menu/nasi-tongseng-sapi.webp",
+      "width": 865,
+      "height": 588,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "chicken-nanban-rice",
+      "sourcePage": 6,
+      "sourceObject": "X18",
+      "sourceFile": "raw/p06-X18.png",
+      "bbox": [
+        -5.69109024287123,
+        265.51351691068714,
+        278.66603630891467,
+        549.870643462473
+      ],
+      "publicImage": "/images/menu/chicken-nanban-rice.webp",
+      "width": 693,
+      "height": 437,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-ayam-crispy-sauce-historia",
+      "sourcePage": 6,
+      "sourceObject": "X14",
+      "sourceFile": "raw/p06-X14.png",
+      "bbox": [
+        5.0405426699773805,
+        397.00093863204427,
+        278.1434504906891,
+        670.103846452756
+      ],
+      "publicImage": "/images/menu/nasi-ayam-crispy-sauce-historia.webp",
+      "width": 715,
+      "height": 448,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "nasi-ayam-sambal-dabu-dabu",
+      "sourcePage": 6,
+      "sourceObject": "X16",
+      "sourceFile": "raw/p06-X16.png",
+      "bbox": [
+        -14.97952809585297,
+        533.6182881396545,
+        270.8781839934085,
+        819.4760002289161
+      ],
+      "publicImage": "/images/menu/nasi-ayam-sambal-dabu-dabu.webp",
+      "width": 699,
+      "height": 440,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "wagyu-meltique",
+      "sourcePage": 7,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p07-X11.png",
+      "bbox": [
+        18.16651724306175,
+        297.58078917455055,
+        305.5247860698001,
+        584.9390580012889
+      ],
+      "publicImage": "/images/menu/wagyu-meltique.webp",
+      "width": 672,
+      "height": 443,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "sirloin",
+      "sourcePage": 7,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p07-X9.png",
+      "bbox": [
+        288.2109263912109,
+        423.1466287426404,
+        586.0731499802844,
+        721.0088523317139
+      ],
+      "publicImage": "/images/menu/sirloin.webp",
+      "width": 670,
+      "height": 465,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "beef-thai-salad",
+      "sourcePage": 9,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p09-X11.png",
+      "bbox": [
+        297.74998759375,
+        66.64091399704591,
+        585.1082564204883,
+        353.9991828237842
+      ],
+      "publicImage": "/images/menu/beef-thai-salad.webp",
+      "width": 523,
+      "height": 387,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "chicken-thai-salad",
+      "sourcePage": 9,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p09-X9.png",
+      "bbox": [
+        293.0104869912292,
+        380.9167105022206,
+        590.8727105803027,
+        678.7789340912941
+      ],
+      "publicImage": "/images/menu/chicken-thai-salad.webp",
+      "width": 523,
+      "height": 387,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "prawn-sushi-roll",
+      "sourcePage": 10,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p10-X11.png",
+      "bbox": [
+        3.395966354501396,
+        343.96184324200675,
+        290.7542351812397,
+        631.3201120687451
+      ],
+      "publicImage": "/images/menu/prawn-sushi-roll.webp",
+      "width": 625,
+      "height": 474,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "crabstick-sushi-roll",
+      "sourcePage": 10,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p10-X9.png",
+      "bbox": [
+        297.74998759375,
+        506.09991328625335,
+        595.6122111828236,
+        803.9621368753269
+      ],
+      "publicImage": "/images/menu/crabstick-sushi-roll.webp",
+      "width": 613,
+      "height": 436,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "prawn-thai-spring-roll",
+      "sourcePage": 11,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p11-X9.png",
+      "bbox": [
+        297.74998759375,
+        66.64091399704591,
+        585.1082564204883,
+        353.9991828237842
+      ],
+      "publicImage": "/images/menu/prawn-thai-spring-roll.webp",
+      "width": 574,
+      "height": 409,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "chicken-thai-spring-roll",
+      "sourcePage": 11,
+      "sourceObject": "X7",
+      "sourceFile": "raw/p11-X7.png",
+      "bbox": [
+        293.0104869912292,
+        380.9167105022206,
+        590.8727105803027,
+        678.7789340912941
+      ],
+      "publicImage": "/images/menu/chicken-thai-spring-roll.webp",
+      "width": 604,
+      "height": 436,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "creamy-mushroom-pasta",
+      "sourcePage": 12,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p12-X11.png",
+      "bbox": [
+        24.46813554049431,
+        257.369311650029,
+        311.8264043672326,
+        688.781821674507
+      ],
+      "publicImage": "/images/menu/creamy-mushroom-pasta.webp",
+      "width": 652,
+      "height": 396,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "garlic-chili-pasta",
+      "sourcePage": 12,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p12-X9.png",
+      "bbox": [
+        285.3390409108728,
+        492.0077666734264,
+        604.9594667933545,
+        811.6281925559081
+      ],
+      "publicImage": "/images/menu/garlic-chili-pasta.webp",
+      "width": 684,
+      "height": 434,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "mie-goreng-sapi",
+      "sourcePage": 13,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p13-X11.png",
+      "bbox": [
+        -9.35782617009056,
+        349.7423390011528,
+        307.2614574374387,
+        666.3616226086821
+      ],
+      "publicImage": "/images/menu/mie-goreng-sapi.webp",
+      "width": 672,
+      "height": 403,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "mie-goreng-ayam",
+      "sourcePage": 13,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p13-X9.png",
+      "bbox": [
+        285.3390409108728,
+        492.69191064492026,
+        604.9594667933545,
+        812.312336527402
+      ],
+      "publicImage": "/images/menu/mie-goreng-ayam.webp",
+      "width": 688,
+      "height": 417,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "sharing-platter",
+      "sourcePage": 15,
+      "sourceObject": "X13",
+      "sourceFile": "raw/p15-X13.png",
+      "bbox": [
+        3.395966354501396,
+        267.1017936445089,
+        268.9960328878315,
+        532.7018601778391
+      ],
+      "publicImage": "/images/menu/sharing-platter.webp",
+      "width": 686,
+      "height": 486,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "quesadilla",
+      "sourcePage": 15,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p15-X9.png",
+      "bbox": [
+        2.779320940194956,
+        407.8077781817593,
+        275.8822287609067,
+        680.910686002471
+      ],
+      "publicImage": "/images/menu/quesadilla.webp",
+      "width": 677,
+      "height": 425,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "potato-cheese-bread",
+      "sourcePage": 15,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p15-X11.png",
+      "bbox": [
+        3.395966354501396,
+        535.765606450183,
+        274.2480246689985,
+        806.6176647646801
+      ],
+      "publicImage": "/images/menu/potato-cheese-bread.webp",
+      "width": 695,
+      "height": 443,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "hot-chicken-wings",
+      "sourcePage": 16,
+      "sourceObject": "X12",
+      "sourceFile": "raw/p16-X12.png",
+      "bbox": [
+        3.395966354501396,
+        16.005663306848078,
+        287.7530929062873,
+        300.36278985863396
+      ],
+      "publicImage": "/images/menu/hot-chicken-wings.webp",
+      "width": 645,
+      "height": 369,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "mozzarella-stick-with-dipping-hot-sauce",
+      "sourcePage": 16,
+      "sourceObject": "X8",
+      "sourceFile": "raw/p16-X8.png",
+      "bbox": [
+        264.8178393659229,
+        137.94423422607406,
+        612.1987232917188,
+        485.32511815187
+      ],
+      "publicImage": "/images/menu/mozzarella-stick-with-dipping-hot-sauce.webp",
+      "width": 525,
+      "height": 312,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "potato-sausages",
+      "sourcePage": 16,
+      "sourceObject": "X10",
+      "sourceFile": "raw/p16-X10.png",
+      "bbox": [
+        -31.676281560154877,
+        341.78634893265234,
+        305.2006476033058,
+        678.663278096113
+      ],
+      "publicImage": "/images/menu/potato-sausages.webp",
+      "width": 559,
+      "height": 355,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "tahu-cabe-garam",
+      "sourcePage": 16,
+      "sourceObject": "X18",
+      "sourceFile": "raw/p16-X18.png",
+      "bbox": [
+        280.7778099009241,
+        507.1380620429974,
+        634.9112423453638,
+        861.271494487437
+      ],
+      "publicImage": "/images/menu/tahu-cabe-garam.webp",
+      "width": 551,
+      "height": 362,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "risol-ayam",
+      "sourcePage": 17,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p17-X9.png",
+      "bbox": [
+        308.2966287543066,
+        66.60599159850096,
+        595.6548975810449,
+        353.9642604252393
+      ],
+      "publicImage": "/images/menu/risol-ayam.webp",
+      "width": 558,
+      "height": 366,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "pisang-goreng-keju",
+      "sourcePage": 17,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p17-X11.png",
+      "bbox": [
+        315.6856212464319,
+        401.4745672456432,
+        565.5297412362597,
+        651.3186872354711
+      ],
+      "publicImage": "/images/menu/pisang-goreng-keju.webp",
+      "width": 698,
+      "height": 424,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "matcha-ice-cake",
+      "sourcePage": 18,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p18-X9.png",
+      "bbox": [
+        320.8682386304895,
+        26.969095650038412,
+        562.4592677641962,
+        268.5601247837451
+      ],
+      "publicImage": "/images/menu/matcha-ice-cake.webp",
+      "width": 581,
+      "height": 388,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "waffle-ice-cream",
+      "sourcePage": 18,
+      "sourceObject": "X13",
+      "sourceFile": "raw/p18-X13.png",
+      "bbox": [
+        320.324458653147,
+        229.7147200023037,
+        589.6759602301673,
+        499.06622157932395
+      ],
+      "publicImage": "/images/menu/waffle-ice-cream.webp",
+      "width": 537,
+      "height": 395,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "strawberry-cheese-cake",
+      "sourcePage": 18,
+      "sourceObject": "X15",
+      "sourceFile": "raw/p18-X15.png",
+      "bbox": [
+        365.77015115957636,
+        538.2342655473221,
+        540.5860022755822,
+        713.050116663328
+      ],
+      "publicImage": "/images/menu/strawberry-cheese-cake.webp",
+      "width": 528,
+      "height": 375,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "es-kopi-susu-historia",
+      "sourcePage": 20,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p20-X9.png",
+      "bbox": [
+        342.6869977213745,
+        411.1006260445574,
+        546.7638924181701,
+        615.1775207413531
+      ],
+      "publicImage": "/images/menu/es-kopi-susu-historia.webp",
+      "width": 260,
+      "height": 312,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "es-kopi-susu-large",
+      "sourcePage": 20,
+      "sourceObject": "X9",
+      "sourceFile": "raw/p20-X9.png",
+      "bbox": [
+        342.6869977213745,
+        411.1006260445574,
+        546.7638924181701,
+        615.1775207413531
+      ],
+      "publicImage": "/images/menu/es-kopi-susu-large.webp",
+      "width": 260,
+      "height": 312,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "es-kopi-harmonis",
+      "sourcePage": 20,
+      "sourceObject": "X14",
+      "sourceFile": "raw/p20-X14.png",
+      "bbox": [
+        10.39423420690689,
+        517.948655192556,
+        275.994300740237,
+        783.548721725886
+      ],
+      "publicImage": "/images/menu/es-kopi-harmonis.webp",
+      "width": 243,
+      "height": 418,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "americano",
+      "sourcePage": 21,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p21-X11.png",
+      "bbox": [
+        -36.820098625829154,
+        222.15789311717162,
+        340.57212164949436,
+        599.5501133924951
+      ],
+      "publicImage": "/images/menu/americano.webp",
+      "width": 248,
+      "height": 326,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "cappuccino-hot",
+      "sourcePage": 21,
+      "sourceObject": "X15",
+      "sourceFile": "raw/p21-X15.png",
+      "bbox": [
+        281.1205250866443,
+        362.709797660842,
+        581.2335981819324,
+        662.8228707561301
+      ],
+      "publicImage": "/images/menu/cappuccino-hot.webp",
+      "width": 396,
+      "height": 352,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "v60-hot-ice",
+      "sourcePage": 21,
+      "sourceObject": "X13",
+      "sourceFile": "raw/p21-X13.png",
+      "bbox": [
+        66.2125676411429,
+        549.9148778606299,
+        208.7662785014047,
+        763.745434551023
+      ],
+      "publicImage": "/images/menu/v60-hot-ice.webp",
+      "width": 226,
+      "height": 521,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "butterscoth-creamy",
+      "sourcePage": 22,
+      "sourceObject": "X12",
+      "sourceFile": "raw/p22-X12.png",
+      "bbox": [
+        -17.333832237756962,
+        34.42782973925773,
+        314.29110514453674,
+        366.0527671215515
+      ],
+      "publicImage": "/images/menu/butterscoth-creamy.webp",
+      "width": 285,
+      "height": 377,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "creme-brulle",
+      "sourcePage": 22,
+      "sourceObject": "X8",
+      "sourceFile": "raw/p22-X8.png",
+      "bbox": [
+        256.9230948948706,
+        137.97312542487032,
+        593.0497600895923,
+        474.099790619592
+      ],
+      "publicImage": "/images/menu/creme-brulle.webp",
+      "width": 422,
+      "height": 316,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "caffe-latte-hot-ice",
+      "sourcePage": 22,
+      "sourceObject": "X14",
+      "sourceFile": "raw/p22-X14.png",
+      "bbox": [
+        -34.803657109847556,
+        267.1202400437403,
+        313.3275195846861,
+        615.251416738274
+      ],
+      "publicImage": "/images/menu/caffe-latte-hot-ice.webp",
+      "width": 419,
+      "height": 298,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "caffe-latte-extra-syrup",
+      "sourcePage": 22,
+      "sourceObject": "X10",
+      "sourceFile": "raw/p22-X10.png",
+      "bbox": [
+        301.67984103000606,
+        407.65617738807606,
+        613.0471616563672,
+        822.562496100312
+      ],
+      "publicImage": "/images/menu/caffe-latte-extra-syrup.webp",
+      "width": 267,
+      "height": 393,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "caramel-machiatto-frapee",
+      "sourcePage": 24,
+      "sourceObject": "X15",
+      "sourceFile": "raw/p24-X15.png",
+      "bbox": [
+        72.8236337656818,
+        73.73075850163582,
+        257.3931756752839,
+        258.3003004112379
+      ],
+      "publicImage": "/images/menu/caramel-machiatto-frapee.webp",
+      "width": 244,
+      "height": 477,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "chocolate-frappe",
+      "sourcePage": 24,
+      "sourceObject": "X8",
+      "sourceFile": "raw/p24-X8.png",
+      "bbox": [
+        288.50632557890265,
+        137.41551424810405,
+        595.3719471928346,
+        444.28113586203597
+      ],
+      "publicImage": "/images/menu/chocolate-frappe.webp",
+      "width": 267,
+      "height": 422,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "matcha-frappe",
+      "sourcePage": 24,
+      "sourceObject": "X10",
+      "sourceFile": "raw/p24-X10.png",
+      "bbox": [
+        27.830770360384516,
+        261.7420898678299,
+        327.9438434556726,
+        561.855162963118
+      ],
+      "publicImage": "/images/menu/matcha-frappe.webp",
+      "width": 267,
+      "height": 440,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "lotus-biscoff-frappe",
+      "sourcePage": 24,
+      "sourceObject": "X17",
+      "sourceFile": "raw/p24-X17.png",
+      "bbox": [
+        345.7901519920764,
+        429.03575329726027,
+        535.6116712828461,
+        618.85727258803
+      ],
+      "publicImage": "/images/menu/lotus-biscoff-frappe.webp",
+      "width": 264,
+      "height": 458,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "piscok",
+      "sourcePage": 24,
+      "sourceObject": "X19",
+      "sourceFile": "raw/p24-X19.png",
+      "bbox": [
+        73.7625929265585,
+        557.5709687416262,
+        288.3434423856894,
+        772.151818200757
+      ],
+      "publicImage": "/images/menu/piscok.webp",
+      "width": 215,
+      "height": 393,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "black-peach",
+      "sourcePage": 25,
+      "sourceObject": "X12",
+      "sourceFile": "raw/p25-X12.png",
+      "bbox": [
+        34.679247835031276,
+        333.1365860930591,
+        232.00359401318318,
+        530.460932271211
+      ],
+      "publicImage": "/images/menu/black-peach.webp",
+      "width": 294,
+      "height": 331,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "black-mango",
+      "sourcePage": 25,
+      "sourceObject": "X14",
+      "sourceFile": "raw/p25-X14.png",
+      "bbox": [
+        326.44601119808226,
+        451.1270467767897,
+        544.7782669009046,
+        669.459302479612
+      ],
+      "publicImage": "/images/menu/black-mango.webp",
+      "width": 259,
+      "height": 289,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "black-cranberry",
+      "sourcePage": 25,
+      "sourceObject": "X16",
+      "sourceFile": "raw/p25-X16.png",
+      "bbox": [
+        24.98303919903999,
+        556.7850023743747,
+        243.31529490186227,
+        775.117258077197
+      ],
+      "publicImage": "/images/menu/black-cranberry.webp",
+      "width": 272,
+      "height": 312,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "chocolate-hot",
+      "sourcePage": 26,
+      "sourceObject": "X8",
+      "sourceFile": "raw/p26-X8.png",
+      "bbox": [
+        21.362427189898828,
+        1.0958391280908018,
+        301.2178835292543,
+        280.95129546744636
+      ],
+      "publicImage": "/images/menu/chocolate-hot.webp",
+      "width": 513,
+      "height": 380,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "matcha-hot",
+      "sourcePage": 26,
+      "sourceObject": "X16",
+      "sourceFile": "raw/p26-X16.png",
+      "bbox": [
+        294.849947714585,
+        138.00862622339105,
+        544.6940677044129,
+        387.852746213219
+      ],
+      "publicImage": "/images/menu/matcha-hot.webp",
+      "width": 559,
+      "height": 432,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "tea-hot-ice",
+      "sourcePage": 26,
+      "sourceObject": "X18",
+      "sourceFile": "raw/p26-X18.png",
+      "bbox": [
+        40.5871591088683,
+        290.06752708760337,
+        265.671948930335,
+        515.15231690907
+      ],
+      "publicImage": "/images/menu/tea-hot-ice.webp",
+      "width": 309,
+      "height": 325,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "air-mineral",
+      "sourcePage": 26,
+      "sourceObject": "X20",
+      "sourceFile": "raw/p26-X20.png",
+      "bbox": [
+        320.2082098579907,
+        442.8148007231334,
+        507.0286012738074,
+        629.6351921389501
+      ],
+      "publicImage": "/images/menu/air-mineral.webp",
+      "width": 153,
+      "height": 401,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "artisan-tea",
+      "sourcePage": 26,
+      "sourceObject": "X23",
+      "sourceFile": "raw/p26-X23.png",
+      "bbox": [
+        33.871858828672494,
+        521.6869622367932,
+        283.7159788185004,
+        771.531082226621
+      ],
+      "publicImage": "/images/menu/artisan-tea.webp",
+      "width": 643,
+      "height": 393,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "strawberry-velvet",
+      "sourcePage": 28,
+      "sourceObject": "X16",
+      "sourceFile": "raw/p28-X16.png",
+      "bbox": [
+        28.49092225287819,
+        -6.4944533556470105,
+        290.3395825425169,
+        386.6536846631799
+      ],
+      "publicImage": "/images/menu/strawberry-velvet.webp",
+      "width": 386,
+      "height": 617,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "matcha-berry",
+      "sourcePage": 28,
+      "sourceObject": "X12",
+      "sourceFile": "raw/p28-X12.png",
+      "bbox": [
+        338.3667915013831,
+        218.870793254134,
+        613.7205200283106,
+        632.276536028894
+      ],
+      "publicImage": "/images/menu/matcha-berry.webp",
+      "width": 384,
+      "height": 551,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "choco-berry",
+      "sourcePage": 28,
+      "sourceObject": "X14",
+      "sourceFile": "raw/p28-X14.png",
+      "bbox": [
+        19.0287040071373,
+        415.1930626740391,
+        280.877364296776,
+        808.341200692866
+      ],
+      "publicImage": "/images/menu/choco-berry.webp",
+      "width": 385,
+      "height": 607,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "sunkist-berry",
+      "sourcePage": 29,
+      "sourceObject": "X18",
+      "sourceFile": "raw/p29-X18.png",
+      "bbox": [
+        2.212946691793884,
+        32.57749701635498,
+        294.82320729969916,
+        325.1877576242603
+      ],
+      "publicImage": "/images/menu/sunkist-berry.webp",
+      "width": 286,
+      "height": 434,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "sweet-berry",
+      "sourcePage": 29,
+      "sourceObject": "X8",
+      "sourceFile": "raw/p29-X8.png",
+      "bbox": [
+        283.9569889684583,
+        177.0650245960411,
+        590.8226105823902,
+        483.930646209973
+      ],
+      "publicImage": "/images/menu/sweet-berry.webp",
+      "width": 281,
+      "height": 430,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "pink-lady",
+      "sourcePage": 29,
+      "sourceObject": "X10",
+      "sourceFile": "raw/p29-X10.png",
+      "bbox": [
+        -13.76991878625336,
+        326.95150795077075,
+        331.36011563332795,
+        672.081542370352
+      ],
+      "publicImage": "/images/menu/pink-lady.webp",
+      "width": 284,
+      "height": 431,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "green-land",
+      "sourcePage": 29,
+      "sourceObject": "X20",
+      "sourceFile": "raw/p29-X20.png",
+      "bbox": [
+        271.9116390703479,
+        465.54132617619473,
+        599.7851702089501,
+        793.414857314797
+      ],
+      "publicImage": "/images/menu/green-land.webp",
+      "width": 287,
+      "height": 437,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "strawberry-breeze",
+      "sourcePage": 30,
+      "sourceObject": "X20",
+      "sourceFile": "raw/p30-X20.png",
+      "bbox": [
+        295.6125452828101,
+        117.48862227839129,
+        639.2419941649158,
+        461.118071160497
+      ],
+      "publicImage": "/images/menu/strawberry-breeze.webp",
+      "width": 383,
+      "height": 557,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "blue-hawaii",
+      "sourcePage": 30,
+      "sourceObject": "X13",
+      "sourceFile": "raw/p30-X13.png",
+      "bbox": [
+        1.71915520836853,
+        57.86640876265028,
+        355.8525876528082,
+        411.99984120709
+      ],
+      "publicImage": "/images/menu/blue-hawaii.webp",
+      "width": 351,
+      "height": 536,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "little-sunshine",
+      "sourcePage": 30,
+      "sourceObject": "X31",
+      "sourceFile": "raw/p30-X31.png",
+      "bbox": [
+        5.09033906790253,
+        233.10509666103815,
+        380.2316810370126,
+        796.56742518344
+      ],
+      "publicImage": "/images/menu/little-sunshine.webp",
+      "width": 285,
+      "height": 362,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    },
+    {
+      "id": "mazagran",
+      "sourcePage": 30,
+      "sourceObject": "X11",
+      "sourceFile": "raw/p30-X11.png",
+      "bbox": [
+        146.3915267003528,
+        280.9458546676731,
+        662.5859771922499,
+        797.1403051595701
+      ],
+      "publicImage": "/images/menu/mazagran.webp",
+      "width": 347,
+      "height": 460,
+      "alphaPreserved": true,
+      "rightsStatus": "pending_permission",
+      "publishable": false
+    }
+  ]
+}

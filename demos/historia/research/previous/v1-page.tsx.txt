@@ -1,0 +1,40 @@
+import Image from "next/image";
+import { ArrowDown, ArrowDownRight, ArrowUpRight, Clock3, MapPin } from "lucide-react";
+import { Reveal } from "../components/motion";
+import { Menu } from "../components/menu";
+import { MobileNav } from "../components/mobile-nav";
+
+const instagram = "https://www.instagram.com/historiacoffee.co/";
+const menu = "https://drive.google.com/drive/folders/1uH8VRzMIt49nCWVGRUP5SShpQ4K9-Lhy";
+const contact = "https://wa.me/6282130468241";
+const maps = "https://www.google.com/maps/search/?api=1&query=Historia+Coffee+%26+Eatery+Jl.+Cimanuk+305+Garut";
+
+export default function Home() {
+  return <>
+    <a className="skip-link" href="#main">Lewati ke konten</a>
+    <div className="demo-notice">Konsep website independen oleh Tampiloka. Bukan situs resmi Historia.</div>
+    <header className="site-header"><div className="header-inner wrap">
+      <a className="wordmark" href="#" aria-label="Historia, kembali ke awal">historia<span>coffee & eatery</span></a>
+      <nav className="desktop-nav" aria-label="Navigasi utama"><a href="#menu">Menu</a><a href="#suasana">Suasana</a><a href="#acara">Acara</a><a href="#kunjungi">Kunjungi</a></nav>
+      <a className="header-cta" href={contact} target="_blank" rel="noopener noreferrer">Hubungi Historia <ArrowUpRight size={16} /></a>
+      <MobileNav />
+    </div></header>
+    <main id="main">
+      <section className="hero wrap" aria-labelledby="hero-title">
+        <Reveal className="hero-copy"><h1 id="hero-title" className="type-display-xl">Kopi, makan,<br />dan <span>cerita.</span></h1><p className="hero-description">Untuk obrolan yang belum selesai,<br className="desktop-break" /> dan waktu bersama yang ingin diulang.</p><div className="hero-actions"><a className="button" href="#menu">Jelajahi menu <ArrowUpRight size={18} /></a><a className="text-link" href="#kunjungi">Mampir ke Historia <ArrowDownRight size={18} /></a></div><div className="hero-facts"><p><MapPin size={17} /> Jl. Cimanuk 305, Garut</p><p><Clock3 size={17} /> Setiap hari, 09.00–23.00</p></div></Reveal>
+        <Reveal className="hero-visual" delay={0.12}><div className="hero-photo"><Image src="/images/interior.webp" alt="Interior Historia dengan lengkung kayu, dinding hijau lembut, dan meja untuk berkumpul" fill sizes="(max-width: 767px) 100vw, 55vw" preload /></div><div className="photo-caption"><span>Satu tempat, banyak cerita.</span><a href="#suasana" aria-label="Jelajahi suasana Historia"><ArrowDown size={20} /></a></div></Reveal>
+      </section>
+
+      <section className="intro wrap" id="tentang"><Reveal><h2 className="type-heading-2">Meja untuk bertemu.<br /><span>Rasa untuk diingat.</span></h2></Reveal><Reveal delay={0.08}><p>Singgah untuk kopi pagi, makan bersama, atau merayakan momen kecil. Di Historia, ada ruang untuk semuanya.</p><a className="text-link" href={instagram} target="_blank" rel="noopener noreferrer">Kenal lebih dekat <ArrowUpRight size={17} /></a></Reveal></section>
+
+      <section id="menu" className="menu-section section-space"><div className="wrap"><Reveal className="section-heading"><h2 className="type-heading-2">Mulai dari yang kamu suka.</h2><a className="text-link" href={menu} target="_blank" rel="noopener noreferrer">Buka menu lengkap <ArrowUpRight size={17} /></a></Reveal><div className="menu-layout"><Reveal className="menu-photos"><figure className="food-photo"><Image src="/images/food.webp" alt="Pilihan hidangan Historia berupa quesadilla, pasta, dan spring rolls" width={768} height={768} sizes="(max-width: 767px) 100vw, 40vw" /><figcaption>Untuk makan bersama.</figcaption></figure><figure className="coffee-photo"><Image src="/images/coffee.webp" alt="Es Kopi Susu Historia dalam gelas bermerek Historia" width={720} height={1280} sizes="(max-width: 767px) 50vw, 20vw" /><figcaption>Atau sekadar ngopi.</figcaption></figure></Reveal><Reveal><Menu /></Reveal></div></div></section>
+
+      <section id="suasana" className="atmosphere wrap section-space"><Reveal className="section-heading"><h2 className="type-heading-2">Pilih sudutmu.</h2><p>Obrolan santai, jeda di sela hari,<br />atau duduk sedikit lebih lama.</p></Reveal><div className="gallery"><Reveal className="gallery-tall"><figure><div className="gallery-image"><Image src="/images/doorway.webp" alt="Pintu masuk area duduk Historia dengan perabot rotan dan tanaman hijau" fill sizes="(max-width: 767px) 100vw, 48vw" /></div><figcaption>Datang dan temukan tempatmu.</figcaption></figure></Reveal><Reveal className="gallery-short" delay={0.1}><figure><div className="gallery-image"><Image src="/images/room.webp" alt="Dinding galeri Historia dengan bingkai karya seni dan panel hijau" fill sizes="(max-width: 767px) 100vw, 40vw" /></div><figcaption>Ruang yang mengundang untuk tinggal.</figcaption></figure><a className="text-link" href={instagram} target="_blank" rel="noopener noreferrer">Lihat keseharian Historia <ArrowUpRight size={17} /></a></Reveal></div></section>
+
+      <section id="acara" className="events"><div className="wrap events-inner"><Reveal><h2 className="type-heading-2">Ada yang ingin<br />dirayakan?</h2><p>Dari makan malam di rooftop hingga perayaan dan pertemuan. Ceritakan rencanamu langsung kepada tim Historia.</p><a className="button button-light" href={contact} target="_blank" rel="noopener noreferrer">Tanya tempat & acara <ArrowUpRight size={18} /></a></Reveal><Reveal className="event-list" delay={0.08}><div><h3 className="type-heading-4">Makan malam di rooftop</h3><p>Waktu berdua, dengan suasana yang berbeda.</p></div><div><h3 className="type-heading-4">Perayaan bersama</h3><p>Ulang tahun dan momen yang ingin dibagi.</p></div><div><h3 className="type-heading-4">Pertemuan & gathering</h3><p>Ruang untuk ide, obrolan, dan kebersamaan.</p></div></Reveal></div></section>
+
+      <section id="kunjungi" className="visit wrap section-space"><Reveal className="visit-copy"><h2 className="type-heading-2">Sampai ketemu<br />di Historia.</h2><address>Jl. Cimanuk No. 305, Pataruman<br />Tarogong Kidul, Garut, Jawa Barat<br /><span>Di samping Dealer Toyota Garut.</span></address><div className="visit-hours"><span>Setiap hari</span><strong>09.00–23.00 WIB</strong></div><div className="visit-actions"><a className="button" href={maps} target="_blank" rel="noopener noreferrer">Buka petunjuk arah <ArrowUpRight size={18} /></a><a className="text-link" href={contact} target="_blank" rel="noopener noreferrer">WhatsApp Historia <ArrowUpRight size={17} /></a></div><p className="visit-note">Untuk ketersediaan tempat dan informasi terbaru, hubungi tim Historia sebelum berkunjung.</p></Reveal><Reveal className="location-art" delay={0.1}><a href={maps} target="_blank" rel="noopener noreferrer" aria-label="Lihat lokasi Historia Coffee & Eatery di Google Maps"><Image src="/images/location.webp" alt="Papan nama Historia Coffee & Eatery di Jalan Cimanuk, Garut" fill sizes="(max-width: 767px) 100vw, 45vw" /><span>Lihat di Google Maps <ArrowUpRight size={18} /></span></a></Reveal></section>
+    </main>
+    <footer className="site-footer wrap"><div className="footer-top"><a className="wordmark" href="#">historia<span>coffee & eatery</span></a><p>Dari rasa jadi cerita.</p><a className="text-link" href={instagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={16} /></a></div><div className="footer-bottom"><p>Konsep independen oleh <a href="https://tampiloka.adihnursyam.com/" target="_blank" rel="noopener noreferrer">Tampiloka</a>. Bukan situs resmi.</p><p>Foto: Historia & kontributor · Preview untuk peninjauan internal.</p></div></footer>
+  </>;
+}

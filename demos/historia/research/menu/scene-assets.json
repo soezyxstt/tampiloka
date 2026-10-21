@@ -1,0 +1,44 @@
+[
+  {
+    "publicImage": "/images/menu/table-spread.webp",
+    "sourcePage": 8,
+    "sourceObject": "X4",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/shared-table.webp",
+    "sourcePage": 14,
+    "sourceObject": "X4",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/coffee-scene.webp",
+    "sourcePage": 19,
+    "sourceObject": "X4",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/frappe-scene.webp",
+    "sourcePage": 23,
+    "sourceObject": "X4",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/strawberry-scene.webp",
+    "sourcePage": 27,
+    "sourceObject": "X4",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  },
+  {
+    "publicImage": "/images/menu/pasta-scene.webp",
+    "sourcePage": 12,
+    "sourceObject": "X4",
+    "rightsStatus": "pending_permission",
+    "publishable": false
+  }
+]
