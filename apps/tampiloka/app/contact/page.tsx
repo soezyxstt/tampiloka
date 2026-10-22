@@ -2,16 +2,48 @@ import Link from "next/link";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
-import { createPageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { CONTACT, absoluteSiteUrl, createPageMetadata, webPageSchema } from "@/lib/seo";
+
+const pageTitle = "Kontak";
+const pageDescription =
+  "Hubungi Tampiloka untuk membahas website, produk digital, branding, atau kebutuhan pengembangan digital untuk bisnis Anda.";
 
 export const metadata = createPageMetadata({
   path: "/contact",
-  title: "Kontak",
-  description:
-    "Hubungi Tampiloka untuk membahas website, produk digital, branding, atau kebutuhan pengembangan digital untuk bisnis Anda.",
+  title: pageTitle,
+  description: pageDescription,
   imageAlt: "Ruang kerja dengan laptop dan contoh rancangan website.",
   imagePath: "/images/studio-workspace.webp",
 });
+
+const contactPointId = `${absoluteSiteUrl("/contact")}#contact-point`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      ...webPageSchema({
+        path: "/contact",
+        title: `${pageTitle} | Tampiloka`,
+        description: pageDescription,
+        type: "ContactPage",
+        imagePath: "/images/studio-workspace.webp",
+      }),
+      mainEntity: { "@id": contactPointId },
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": contactPointId,
+      contactType: "sales",
+      telephone: CONTACT.telephone,
+      email: CONTACT.email,
+      url: CONTACT.whatsapp,
+      availableLanguage: ["id"],
+      areaServed: "ID",
+    },
+  ],
+};
 
 const contactLinks = [
   { label: "Email", href: "mailto:soezyxst@gmail.com" },
@@ -23,6 +55,7 @@ const contactLinks = [
 export default function ContactPage() {
   return (
     <div className="inner-page inner-page--contact">
+      <JsonLd data={structuredData} />
       <section className="inner-page__hero inner-page__hero--split" aria-labelledby="contact-title">
         <div className="inner-page__intro" data-reveal>
           <h1 id="contact-title" className="type-display-xl">Ada rencana untuk web Anda?</h1>

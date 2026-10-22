@@ -2,14 +2,18 @@ import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
+import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
-import { createPageMetadata } from "@/lib/seo";
+import { absoluteSiteUrl, createPageMetadata, itemListSchema, webPageSchema } from "@/lib/seo";
+
+const pageTitle = "Layanan Website dan Produk Digital";
+const pageDescription =
+  "Layanan desain dan pengembangan website, produk digital, branding, serta undangan pernikahan digital melalui Temura.";
 
 export const metadata = createPageMetadata({
   path: "/layanan",
-  title: "Layanan Website dan Produk Digital",
-  description:
-    "Layanan desain dan pengembangan website, produk digital, branding, serta undangan pernikahan digital melalui Temura.",
+  title: pageTitle,
+  description: pageDescription,
   imageAlt: "Konsep website hijau ditampilkan pada laptop di meja desain.",
   imagePath: "/images/service-overview.webp",
 });
@@ -62,9 +66,32 @@ const services: Service[] = [
   },
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    webPageSchema({
+      path: "/layanan",
+      title: `${pageTitle} | Tampiloka`,
+      description: pageDescription,
+      imagePath: "/images/service-overview.webp",
+    }),
+    itemListSchema(
+      "Layanan Tampiloka",
+      services.map((service) => ({
+        name: service.title,
+        description: service.description,
+        url: `${absoluteSiteUrl("/layanan")}#${service.imageKey}`,
+        image: `/images/${service.imageKey}.webp`,
+        itemType: "Service",
+      })),
+    ),
+  ],
+};
+
 export default function LayananPage() {
   return (
     <div className="inner-page inner-page--services">
+      <JsonLd data={structuredData} />
       <section className="inner-page__hero inner-page__hero--split" aria-labelledby="services-title">
         <div className="inner-page__intro" data-reveal>
           <h1 id="services-title" className="type-display-xl">Dari ide hingga siap diluncurkan.</h1>
@@ -98,5 +125,3 @@ export default function LayananPage() {
     </div>
   );
 }
-
-

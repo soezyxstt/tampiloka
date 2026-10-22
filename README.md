@@ -20,6 +20,15 @@ pnpm dev
 
 Each Vercel project should use its app folder as the project root (`apps/tampiloka` or `apps/temura`). Set `NEXT_PUBLIC_SITE_URL` separately for each deployment. `NEXT_PUBLIC_TEMURA_URL` on Tampiloka may override the default Temura destination.
 
+## SEO
+
+- Tampiloka sitemap: https://tampiloka.site/sitemap.xml
+- Temura sitemap: https://temura.tampiloka.site/sitemap.xml
+- Each app serves `robots.txt` at its origin root and references its sitemap.
+- Search Console verification uses `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` per Vercel project.
+
+See [docs/seo.md](docs/seo.md) for verification steps, indexing rules, and structured-data coverage.
+
 ## Shared brand system
 
 `packages/brand-system/styles.css` owns the shared Tailwind theme mappings, color tokens, base styles, and all `type-*` utilities. Each app loads Inter 400/600 and Manrope 600/700 in its own root layout and imports this stylesheet. Keep those font families, weights, CSS variable names, and breakpoints aligned.

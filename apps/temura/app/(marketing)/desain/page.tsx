@@ -1,16 +1,59 @@
-import type { Metadata } from "next";
 import { DesignShowcase } from "@/components/design-showcase";
 import { PortfolioSection } from "@/components/marketing-sections";
-const title = "Desain undangan digital";
-const description = "Lihat pilihan desain undangan digital Temura dan buka preview untuk membandingkan tampilannya.";
-const socialImage = { url: "/images/wedding-hero.webp", alt: "Pasangan pengantin di lokasi pernikahan dengan dekorasi bunga" };
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: "/desain" },
-  openGraph: { title, description, url: "/desain", type: "website", siteName: "Temura", locale: "id_ID", images: [socialImage] },
-  twitter: { card: "summary_large_image", title, description, images: [socialImage.url] },
+import { JsonLd } from "@/components/json-ld";
+import { TEMPLATE_CATALOG } from "@/lib/template-catalog";
+import {
+  createPageMetadata,
+  temuraItemListSchema,
+  temuraWebPageSchema,
+} from "@/lib/seo";
+
+const pageTitle = "Desain undangan digital";
+const pageDescription =
+  "Lihat pilihan desain undangan digital Temura dan buka preview untuk membandingkannya.";
+
+export const metadata = createPageMetadata({
+  path: "/desain",
+  title: pageTitle,
+  description: pageDescription,
+});
+
+// The catalog defaults to the "adat" category, so the structured data mirrors
+// the designs that are visible on first paint.
+const visibleDesigns = TEMPLATE_CATALOG.filter(
+  (item) => item.categoryId === "adat" && item.assetStatus === "ready",
+);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    temuraWebPageSchema({
+      path: "/desain",
+      title: `${pageTitle} | Temura`,
+      description: pageDescription,
+      type: "CollectionPage",
+    }),
+    temuraItemListSchema(
+      "Desain undangan pernikahan Temura",
+      visibleDesigns.map((design) => ({
+        name: design.name,
+        description: design.description,
+        image: design.coverImage?.replace(".webp", "-480.webp"),
+        itemType: "CreativeWork",
+      })),
+    ),
+  ],
 };
+
 export default function DesignsPage() {
-  return <div className="temura-site"><section className="temura-section temura-container temura-page-intro"><h1 className="type-display">Desain</h1><div className="temura-page-description"><DesignShowcase /></div></section><PortfolioSection /></div>;
+  return (
+    <div className="temura-site">
+      <JsonLd data={structuredData} />
+      <section className="temura-section temura-container temura-page-intro">
+        <h1 className="type-display">Desain</h1>
+        <div className="temura-page-description"><DesignShowcase /></div>
+      </section>
+      <PortfolioSection />
+    </div>
+  );
 }

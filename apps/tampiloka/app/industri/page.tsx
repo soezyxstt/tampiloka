@@ -2,14 +2,18 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IndustryPreview } from "@/components/industry-preview";
+import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
-import { createPageMetadata } from "@/lib/seo";
+import { absoluteSiteUrl, createPageMetadata, itemListSchema, webPageSchema } from "@/lib/seo";
+
+const pageTitle = "Website untuk Berbagai Industri";
+const pageDescription =
+  "Website dan pengalaman digital untuk kuliner, fashion, portofolio, UMKM, teknologi, bisnis B2B, serta kebutuhan pernikahan.";
 
 export const metadata = createPageMetadata({
   path: "/industri",
-  title: "Website untuk Berbagai Industri",
-  description:
-    "Website dan pengalaman digital untuk kuliner, fashion, portofolio, UMKM, teknologi, bisnis B2B, serta kebutuhan pernikahan.",
+  title: pageTitle,
+  description: pageDescription,
   imageAlt: "Koleksi benda dan material yang mewakili beragam bidang usaha.",
   imagePath: "/images/industry-overview.webp",
 });
@@ -34,9 +38,32 @@ const industries: Industry[] = [
   { name: "Pernikahan & undangan", description: "Undangan digital dengan tautan personal untuk setiap tamu, rincian acara terintegrasi, dan pencatatan konfirmasi kehadiran langsung.", id: "industry-wedding", kind: "wedding", uses: ["Tautan nama tamu personal", "Jadwal & panduan lokasi", "Konfirmasi kehadiran (RSVP)", "Buku tamu digital"], ctaHref: TEMURA_URL, ctaLabel: "Jelajahi Temura" },
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    webPageSchema({
+      path: "/industri",
+      title: `${pageTitle} | Tampiloka`,
+      description: pageDescription,
+      type: "CollectionPage",
+      imagePath: "/images/industry-overview.webp",
+    }),
+    itemListSchema(
+      "Industri yang dilayani Tampiloka",
+      industries.map((industry) => ({
+        name: industry.name,
+        description: industry.description,
+        url: `${absoluteSiteUrl("/industri")}#${industry.id}`,
+        itemType: "Service",
+      })),
+    ),
+  ],
+};
+
 export default function IndustriPage() {
   return (
     <div className="inner-page inner-page--industries">
+      <JsonLd data={structuredData} />
       <section className="industry-intro" aria-labelledby="industries-title">
         <div className="inner-page__intro" data-reveal>
           <h1 id="industries-title" className="type-display-xl">Website yang mengerti bisnis Anda.</h1>

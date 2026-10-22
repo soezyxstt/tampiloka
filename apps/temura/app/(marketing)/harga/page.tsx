@@ -1,13 +1,40 @@
-import type { Metadata } from "next";
 import { PricingSection } from "@/components/marketing-sections";
-const title = "Harga undangan digital";
-const description = "Bandingkan paket undangan digital Temura dan lihat fitur sesuai desain serta tingkat kustomisasi.";
-const socialImage = { url: "/images/wedding-hero.webp", alt: "Pasangan pengantin di lokasi pernikahan dengan dekorasi bunga" };
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: "/harga" },
-  openGraph: { title, description, url: "/harga", type: "website", siteName: "Temura", locale: "id_ID", images: [socialImage] },
-  twitter: { card: "summary_large_image", title, description, images: [socialImage.url] },
+import { JsonLd } from "@/components/json-ld";
+import {
+  createPageMetadata,
+  temuraOfferCatalogSchema,
+  temuraProductSchema,
+  temuraWebPageSchema,
+} from "@/lib/seo";
+
+const pageTitle = "Harga undangan digital";
+const pageDescription =
+  "Bandingkan paket undangan digital Temura dan lihat fitur sesuai desain serta tingkat kustomisasi.";
+
+export const metadata = createPageMetadata({
+  path: "/harga",
+  title: pageTitle,
+  description: pageDescription,
+});
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    temuraWebPageSchema({
+      path: "/harga",
+      title: `${pageTitle} | Temura`,
+      description: pageDescription,
+    }),
+    temuraProductSchema(),
+    temuraOfferCatalogSchema(),
+  ],
 };
-export default function PricingPage(){return <div className="temura-site temura-page-intro"><PricingSection headingLevel="h1"/></div>}
+
+export default function PricingPage() {
+  return (
+    <div className="temura-site temura-page-intro">
+      <JsonLd data={structuredData} />
+      <PricingSection headingLevel="h1" />
+    </div>
+  );
+}

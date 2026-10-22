@@ -3,21 +3,40 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ProjectShowcase from "@/components/project-showcase";
 import { StudioSections } from "@/components/studio-sections";
 import { Button } from "@/components/ui/button";
-import { createPageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { FAQ_ITEMS } from "@/lib/faq";
+import { createPageMetadata, faqPageSchema, webPageSchema } from "@/lib/seo";
 
 import { HeroBackdrop } from "@/components/hero-backdrop";
 
+const pageTitle = "Studio Web untuk Brand dan Bisnis";
+const pageDescription =
+  "Studio web independen untuk brand dan bisnis. Tampiloka merancang website, produk digital, branding, dan undangan pernikahan digital melalui Temura.";
+
 export const metadata = createPageMetadata({
   path: "/",
-  title: "Studio Web untuk Brand dan Bisnis",
-  description:
-    "Studio web independen untuk brand dan bisnis. Tampiloka merancang website, produk digital, branding, dan undangan pernikahan digital melalui Temura.",
+  title: pageTitle,
+  description: pageDescription,
   imageAlt: "Rancangan website dengan antarmuka hijau di layar laptop dan contoh palet warna.",
   imagePath: "/images/service-overview.webp",
 });
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    webPageSchema({
+      path: "/",
+      title: `${pageTitle} | Tampiloka`,
+      description: pageDescription,
+      imagePath: "/images/service-overview.webp",
+    }),
+    faqPageSchema(FAQ_ITEMS),
+  ],
+};
+
 export default function Home() {
   return <>
+    <JsonLd data={structuredData} />
     <section className="studio-hero" aria-labelledby="hero-title">
       <HeroBackdrop />
       <div className="hero-glow" aria-hidden="true" />

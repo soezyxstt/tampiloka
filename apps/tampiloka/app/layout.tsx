@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Manrope, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./marketing.css";
@@ -8,39 +8,28 @@ import "./inner-pages.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteFaq } from "@/components/site-faq";
+import { JsonLd } from "@/components/json-ld";
 import SiteMotion from "@/components/site-motion";
-import { absoluteSiteUrl, SITE_METADATA_BASE, SITE_ORIGIN } from "@/lib/seo";
+import {
+  DEFAULT_ROBOTS,
+  DEFAULT_SOCIAL_IMAGE,
+  DEFAULT_SOCIAL_IMAGE_URL,
+  SITE_DESCRIPTION,
+  SITE_METADATA_BASE,
+  SITE_NAME,
+  SITE_ORIGIN,
+  SOCIAL_HANDLE,
+  organizationSchema,
+  siteVerification,
+  websiteSchema,
+} from "@/lib/seo";
 
-const siteDescription =
-  "Studio web independen untuk brand dan bisnis. Tampiloka merancang website, produk digital, branding, dan undangan pernikahan digital melalui Temura.";
 const defaultSocialTitle = "Tampiloka | Studio Web";
-const defaultSocialImage = absoluteSiteUrl("/images/service-overview.webp");
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${SITE_ORIGIN}/#organization`,
-      name: "Tampiloka",
-      url: SITE_ORIGIN,
-      description: siteDescription,
-      logo: {
-        "@type": "ImageObject",
-        url: absoluteSiteUrl("/brand/social/light/tampiloka-profile-light.png"),
-      },
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_ORIGIN}/#website`,
-      url: SITE_ORIGIN,
-      name: "Tampiloka",
-      inLanguage: "id-ID",
-      publisher: { "@id": `${SITE_ORIGIN}/#organization` },
-    },
-  ],
+  "@graph": [organizationSchema(), websiteSchema()],
 };
-const structuredDataJson = JSON.stringify(structuredData).replace(/</g, "\\u003c");
 
 const inter = Inter({
   variable: "--font-inter",
@@ -61,31 +50,61 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  colorScheme: "light",
+  themeColor: "#22C55E",
+};
+
 export const metadata: Metadata = {
   title: { default: defaultSocialTitle, template: "%s | Tampiloka" },
-  description: siteDescription,
+  description: SITE_DESCRIPTION,
   metadataBase: SITE_METADATA_BASE,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_ORIGIN }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "design",
+  robots: DEFAULT_ROBOTS,
+  verification: siteVerification(),
   openGraph: {
     type: "website",
     locale: "id_ID",
-    siteName: "Tampiloka",
+    siteName: SITE_NAME,
     title: defaultSocialTitle,
-    description: siteDescription,
+    description: SITE_DESCRIPTION,
+    url: SITE_ORIGIN,
     images: [{
-      url: defaultSocialImage,
-      alt: "Rancangan website dengan antarmuka hijau di layar laptop dan contoh palet warna.",
+      url: DEFAULT_SOCIAL_IMAGE_URL,
+      alt: DEFAULT_SOCIAL_IMAGE.alt,
+      width: DEFAULT_SOCIAL_IMAGE.width,
+      height: DEFAULT_SOCIAL_IMAGE.height,
+      type: DEFAULT_SOCIAL_IMAGE.type,
     }],
   },
   twitter: {
     card: "summary_large_image",
+    site: SOCIAL_HANDLE,
+    creator: SOCIAL_HANDLE,
     title: defaultSocialTitle,
-    description: siteDescription,
-    images: [defaultSocialImage],
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_SOCIAL_IMAGE_URL],
   },
   manifest: "/site.webmanifest",
   icons: {
-    icon: { url: "/favicon.ico", type: "image/x-icon" },
+    icon: [
+      { url: "/favicon.ico", sizes: "256x256", type: "image/x-icon" },
+      { url: "/brand/icons/light/tampiloka-favicon-32-light.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/brand/icons/light/tampiloka-apple-touch-light.png", sizes: "180x180", type: "image/png" }],
   },
+  appleWebApp: {
+    capable: true,
+    title: SITE_NAME,
+    statusBarStyle: "default",
+  },
+  formatDetection: { telephone: false, address: false, email: false },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -96,7 +115,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className={`${inter.variable} ${manrope.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataJson }} />
+        <JsonLd data={structuredData} />
         <SiteMotion><div className="marketing-site" id="top"><a className="skip-link type-label" href="#main-content">Langsung ke konten</a><SiteHeader /><main id="main-content">{children}<SiteFaq /></main><SiteFooter /></div></SiteMotion>
       </body>
     </html>

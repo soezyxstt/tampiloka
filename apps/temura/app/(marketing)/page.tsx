@@ -5,11 +5,37 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "cn";
 import { DesignShowcase } from "@/components/design-showcase";
 import { PortfolioSection, PricingSection, ProductSections } from "@/components/marketing-sections";
+import { JsonLd } from "@/components/json-ld";
 import { TEMPLATE_TIERS } from "@/lib/template-catalog";
+import { createPageMetadata, temuraProductSchema, temuraWebPageSchema } from "@/lib/seo";
+
+const pageTitle = "Undangan Pernikahan Digital";
+const pageDescription =
+  "Pilih desain undangan, bagikan kepada tamu, dan kelola kehadiran. Undangan digital oleh Tampiloka.";
+
+export const metadata = createPageMetadata({
+  path: "/",
+  title: pageTitle,
+  description: pageDescription,
+});
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    temuraWebPageSchema({
+      path: "/",
+      title: `${pageTitle} | Temura`,
+      description: pageDescription,
+      imagePath: "/images/wedding-hero.webp",
+    }),
+    temuraProductSchema(),
+  ],
+};
 
 export default function LandingPage() {
   return (
     <div className="temura-site">
+      <JsonLd data={structuredData} />
       <section className="temura-hero">
         <Image className="temura-hero-background" src="/images/wedding-hero.webp" alt="" fill priority sizes="100vw" />
         <div className="temura-container temura-hero-inner">

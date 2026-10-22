@@ -1,0 +1,86 @@
+import { TEMURA_DEMO_URL } from "@/lib/temura-url";
+
+export const PROJECTS = [
+  {
+    id: "pagi-roti",
+    name: "Pagi & Roti",
+    category: "Kuliner",
+    description: "Konsep kedai roti dan kopi di Yogyakarta.",
+    url: "https://demo-cafe-1.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#cerita", "#nuansa", "#menu", "#suasana", "#lokasi"],
+  },
+  {
+    id: "syahril-mc",
+    name: "Syahril MC",
+    category: "Portfolio",
+    description: "Website MC pernikahan dengan portfolio dan pilihan paket.",
+    url: "https://syahril-mc.vercel.app/",
+    scrollStops: ["", "#about", "#karakter", "#portfolio", "#faq"],
+  },
+  {
+    id: "zyx-academy",
+    name: "Zyx Academy",
+    category: "Edukasi",
+    description: "Platform belajar untuk mahasiswa tahun pertama dan kedua ITB.",
+    url: "https://www.zyxacademy.com/",
+    scrollStops: ["", "#pricing"],
+  },
+  {
+    id: "tepi-sagara",
+    name: "Tepi Sagara",
+    category: "Kuliner",
+    description: "Konsep restoran pesisir di Labuan Bajo.",
+    url: "https://demo-fnb-2.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#suasana", "#menu", "#galeri", "#tentang", "#lokasi", "#kabar"],
+  },
+  {
+    id: "sela-rasa",
+    name: "Sela Rasa",
+    category: "Kuliner",
+    description: "Konsep restoran dan ruang berkumpul di Malang.",
+    url: "https://demo-fnb-1.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#menu", "#pilihan", "#acara", "#ruang-kumpul", "#tentang", "#lokasi"],
+  },
+  {
+    id: "rona-forma",
+    name: "Rona Forma",
+    category: "Katalog",
+    description: "Konsep katalog sepatu, tas, dan aksesori.",
+    url: "https://demo-katalog-1.tampiloka.adihnursyam.com/",
+    scrollStops: ["", "#editor-picks", "#everyday-edit", "#10003", "#10001", "#10005", "#top"],
+  },
+  {
+    id: "ginalist",
+    name: "Ginalist",
+    category: "Portfolio",
+    description: "Portfolio model Gina Listya Nuraini.",
+    url: "https://ginalist.vercel.app/",
+    scrollStops: ["", "#work", "#runway", "#about", "#journal", "#contact"],
+  },
+  {
+    id: "iam-itb",
+    name: "IAM ITB",
+    category: "Organisasi",
+    description: "Website Ikatan Alumni Mahasiswa Teknik Mesin ITB.",
+    url: "https://iamitb.org/",
+    scrollStops: [""],
+  },
+  {
+    id: "pamoka",
+    name: "PAMOKA",
+    category: "Organisasi",
+    description: "Situs resmi Paguyuban Mojang Jajaka.",
+    url: "https://www.pamokagarut.com/",
+    scrollStops: ["", "#filosofi-tema", "#rangkaian-kegiatan", "#partisipasi"],
+  },
+  {
+    id: "temura-nara-aruna",
+    name: "Nara & Aruna",
+    category: "Undangan digital",
+    description: "Konsep undangan pernikahan digital dari Temura.",
+    url: TEMURA_DEMO_URL,
+    scrollStops: [""],
+  },
+] as const;
+
+export type Project = (typeof PROJECTS)[number];

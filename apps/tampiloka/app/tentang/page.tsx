@@ -2,16 +2,33 @@ import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
-import { createPageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { createPageMetadata, webPageSchema } from "@/lib/seo";
+
+const pageTitle = "Tentang Studio Web Independen";
+const pageDescription =
+  "Tampiloka adalah studio web independen yang menghubungkan strategi, desain, dan teknologi untuk membantu bisnis tampil lebih baik secara digital.";
 
 export const metadata = createPageMetadata({
   path: "/tentang",
-  title: "Tentang Studio Web Independen",
-  description:
-    "Tampiloka adalah studio web independen yang menghubungkan strategi, desain, dan teknologi untuk membantu bisnis tampil lebih baik secara digital.",
+  title: pageTitle,
+  description: pageDescription,
   imageAlt: "Ruang kerja dengan sketsa desain di papan inspirasi.",
   imagePath: "/images/about-studio.webp",
 });
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    webPageSchema({
+      path: "/tentang",
+      title: `${pageTitle} | Tampiloka`,
+      description: pageDescription,
+      type: "AboutPage",
+      imagePath: "/images/about-studio.webp",
+    }),
+  ],
+};
 
 const principles = [
   "Mulai dari kebutuhan bisnis",
@@ -23,6 +40,7 @@ const principles = [
 export default function TentangPage() {
   return (
     <div className="inner-page inner-page--about">
+      <JsonLd data={structuredData} />
       <section className="inner-page__hero inner-page__hero--split" aria-labelledby="about-title">
         <div className="inner-page__intro" data-reveal>
           <h1 id="about-title" className="type-display-xl">Detail kecil, dampak yang terasa.</h1>

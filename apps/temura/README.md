@@ -21,6 +21,8 @@ Required environment variables:
 
 Optional: `UPLOADTHING_TOKEN` for uploads, `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` for map embeds, `FONNTE_TOKEN` for automatic RSVP notifications.
 
+For search engines: set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` with the Search Console HTML-tag token, then redeploy. Optional Bing and Yandex tokens are `NEXT_PUBLIC_BING_SITE_VERIFICATION` and `NEXT_PUBLIC_YANDEX_SITE_VERIFICATION`. The public sitemap is `/sitemap.xml`; `/robots.txt` points to it. Invitation pages, previews, studio, dashboard, and admin routes are `noindex`. See `docs/seo.md` in the repository root.
+
 No database migration is needed for the rebrand against the existing database. Do not run schema push or demo seed against an existing production database. A new database must be provisioned separately. The optional demo seed now requires `SEED_ADMIN_USERNAME` and a `SEED_ADMIN_PASSWORD` of at least 12 characters; it skips existing invitations and does not reset existing users' passwords.
 
 ## Verification
