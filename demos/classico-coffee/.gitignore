@@ -1,0 +1,10 @@
+research/
+research-bundle.json
+run-state.json
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+.env*

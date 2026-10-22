@@ -1,0 +1,2008 @@
+[
+  {
+    "id": "kopi-susu",
+    "name": "Kopi Susu Classico",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "Kopi signature dengan fresh milk.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 16,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "cioccolato",
+    "name": "Cioccolato Cafe",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "Kopi, cokelat, dan gula aren.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 34000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cioccolato",
+    "sourcePage": 16,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "hot-latte",
+    "name": "Hot Cafe Latte",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "Espresso dan susu hangat.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "hot-latte",
+    "sourcePage": 16,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "espresso",
+    "name": "Espresso",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "long-black-hot",
+    "name": "Hot Long Black",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "long-black-ice",
+    "name": "Ice Long Black",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "americano-lemon",
+    "name": "Americano Lemon",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "mochacino",
+    "name": "Mochacino",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "Pilihan hot / ice.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 34000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "cappucino",
+    "name": "Cappucino",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "Pilihan hot / ice.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "ice-latte",
+    "name": "Ice Cafe Latte",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "ice-latte",
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "coffee-cream",
+    "name": "Ice Coffee Cream",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 32000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "coffee-cream",
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "cookiemond",
+    "name": "Ice Cookiemond",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cookiemond",
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "chocomond",
+    "name": "Ice Chocomond",
+    "kind": "product",
+    "category": "Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "chocomond",
+    "sourcePage": 17,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "matcha",
+    "name": "Ice Hikari Matcha",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "matcha",
+    "sourcePage": 18,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "de-mango",
+    "name": "De Mango",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 34000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "de-mango",
+    "sourcePage": 18,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "thai-tea",
+    "name": "Roasted Thai Tea Popcorn",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "thai-tea",
+    "sourcePage": 18,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "chocolate",
+    "name": "Chocolate",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "Pilihan hot / ice.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 34000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "hot-matcha",
+    "name": "Hot Hikari Matcha",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 40000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "lychee-tea",
+    "name": "Lychee Tea",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "pandan-tea",
+    "name": "Ice Tea Pandan",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 24000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "water",
+    "name": "Mineral Water",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 18000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "milk-tea",
+    "name": "Milk Tea",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "milk-tea",
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "cookies-shake",
+    "name": "Milkshake Cookies",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cookies-shake",
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "oreo-shake",
+    "name": "Milkshake Oreo",
+    "kind": "product",
+    "category": "Non Coffee",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "oreo-shake",
+    "sourcePage": 19,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "green-detox",
+    "name": "Green Detox",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 33000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 6,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "orange-juice",
+    "name": "Fresh Orange Juice",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 6,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "egypt",
+    "name": "Egypt Honeydew",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 32000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 6,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "blackberry",
+    "name": "Blackberry Smoothies Float",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 7,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "orange-lychee",
+    "name": "Orange Lychee Juice",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 31000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 7,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "manggo",
+    "name": "Manggo Tanggo",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 7,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "stralymon",
+    "name": "Stralymon",
+    "kind": "product",
+    "category": "Fresh Drinks",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": 7,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "fries",
+    "name": "Classico French Fries",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "fries",
+    "sourcePage": 8,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "platter",
+    "name": "Mix Platter",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "Sosis, kentang, onion ring, dan nugget.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 42000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "platter",
+    "sourcePage": 8,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "bitter-ballen",
+    "name": "Bitter Ballen",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 42000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "bitter-ballen",
+    "sourcePage": 8,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "tofu",
+    "name": "Tahu Cabe Lada Garam",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "tofu",
+    "sourcePage": 9,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "udang-keju",
+    "name": "Udang Keju",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "udang-keju",
+    "sourcePage": 9,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "popcorn",
+    "name": "Chicken Popcorn",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "popcorn",
+    "sourcePage": 9,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "wonton",
+    "name": "Wonton",
+    "kind": "product",
+    "category": "Light Meals",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "wonton",
+    "sourcePage": 9,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "salad",
+    "name": "Grilled Chicken Salad",
+    "kind": "product",
+    "category": "Salad & Sandwich",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "salad",
+    "sourcePage": 10,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "tuna-sandwich",
+    "name": "Egg Tuna Mayo Sandwich",
+    "kind": "product",
+    "category": "Salad & Sandwich",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 27000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "tuna-sandwich",
+    "sourcePage": 11,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "ham-sandwich",
+    "name": "Ham Cheese Sandwich",
+    "kind": "product",
+    "category": "Salad & Sandwich",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "ham-sandwich",
+    "sourcePage": 11,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "jimbaran",
+    "name": "Jimbaran Platter",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 68000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "jimbaran",
+    "sourcePage": 2,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "nasi-bali",
+    "name": "Nasi Campur Bali",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 54000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "nasi-bali",
+    "sourcePage": 2,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "fried-rice-udang",
+    "name": "Nasi Goreng Udang",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 58000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "fried-rice-udang",
+    "sourcePage": 12,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "fried-rice",
+    "name": "Nasi Goreng Classico",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "fried-rice",
+    "sourcePage": 12,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "katsu-citrus",
+    "name": "Jimbaran Katsu Bliss with Citrus Leaf Rice",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 54000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "katsu-citrus",
+    "sourcePage": 13,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "asam-manis",
+    "name": "Ayam Asam Manis",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 62000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "asam-manis",
+    "sourcePage": 13,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "katsu-butter",
+    "name": "Spicy Katsu Bliss with Creamy Butter Rice",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 62000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "katsu-butter",
+    "sourcePage": 13,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "bistik",
+    "name": "Nasi Goreng Ayam Bistik",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 68000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "bistik",
+    "sourcePage": 13,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "rice-chicken",
+    "name": "Ricebowl Ayam Lada Garam",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 62000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "rice-chicken",
+    "sourcePage": 14,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "rice-udang",
+    "name": "Ricebowl Udang Cabe Garam",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 60000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "rice-udang",
+    "sourcePage": 14,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "rice-mayo",
+    "name": "Ricebowl Udang Mayonaise",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 58000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "rice-mayo",
+    "sourcePage": 14,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "tomyam",
+    "name": "Tomyam Soup",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "tomyam",
+    "sourcePage": 14,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "prawn-pasta",
+    "name": "Chilli Prawn Pasta",
+    "kind": "product",
+    "category": "Pasta & Pizza",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 54000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "prawn-pasta",
+    "sourcePage": 15,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "carbonara",
+    "name": "Spaghetti Carbonara",
+    "kind": "product",
+    "category": "Pasta & Pizza",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 42000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "carbonara",
+    "sourcePage": 15,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "tuna-pasta",
+    "name": "Spaghetti Aglio e Olio Tuna",
+    "kind": "product",
+    "category": "Pasta & Pizza",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 42000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "tuna-pasta",
+    "sourcePage": 15,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "cheesecake",
+    "name": "Original Cheesecake",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 34000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cheesecake",
+    "sourcePage": 20,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "blueberry-cake",
+    "name": "Blueberry Cheesecake",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "blueberry-cake",
+    "sourcePage": 20,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "strawberry-cake",
+    "name": "Strawberry Cheesecake",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "strawberry-cake",
+    "sourcePage": 20,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "matcha-cake",
+    "name": "Matcha Cheesecake",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "matcha-cake",
+    "sourcePage": 21,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "pudding",
+    "name": "Pudding Caramel Ice Cream",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 20000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "pudding",
+    "sourcePage": 21,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "choco-croissant",
+    "name": "Chocolatte Croissant",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "choco-croissant",
+    "sourcePage": 22,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "butter-croissant",
+    "name": "Butter Croissant",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "butter-croissant",
+    "sourcePage": 22,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "plain-croissant",
+    "name": "Plain Croissant",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 20000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "plain-croissant",
+    "sourcePage": 22,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "cookie",
+    "name": "Cookie",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 13000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cookie",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "less-sugar-cookie",
+    "name": "Cookie Less Sugar",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "less-sugar-cookie",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "red-velvet-cookie",
+    "name": "Red Velvet Cookie",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "red-velvet-cookie",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "matcha-cookie",
+    "name": "Matcha Cookie",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "matcha-cookie",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "croffle",
+    "name": "Croffle",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 20000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "croffle",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "srikaya",
+    "name": "Srikaya Toast Bread",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "Tambahan ice cream Rp5.000.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 18000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "srikaya",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "srikaya-pandan",
+    "name": "Srikaya Pandan Toast Bread",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "Tambahan ice cream Rp5.000.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 22000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "srikaya-pandan",
+    "sourcePage": 23,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "bomboloni",
+    "name": "Bomboloni",
+    "kind": "product",
+    "category": "Cake & Pastry",
+    "description": "Pilihan Nutella, strawberry, atau blueberry.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "bomboloni",
+    "sourcePage": 24,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "pepperoni-pizza",
+    "name": "Classico’s Pepperoni Pizza",
+    "kind": "product",
+    "category": "Pasta & Pizza",
+    "description": "",
+    "sourceIds": [
+      "pizza"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 75000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "pizza"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "pepperoni-pizza",
+    "sourcePage": null,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "supreme-pizza",
+    "name": "Classico’s Supreme Pizza",
+    "kind": "product",
+    "category": "Pasta & Pizza",
+    "description": "",
+    "sourceIds": [
+      "pizza"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 65000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "pizza"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "supreme-pizza",
+    "sourcePage": null,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "korean-pizza",
+    "name": "Classico’s Korean BBQ Pizza",
+    "kind": "product",
+    "category": "Pasta & Pizza",
+    "description": "",
+    "sourceIds": [
+      "pizza"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 65000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "pizza"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "korean-pizza",
+    "sourcePage": null,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "taichan",
+    "name": "Ricebowl Taichan",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "rice"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 62000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "rice"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": null,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "belacan",
+    "name": "Ricebowl Belacan",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "rice"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 60000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "rice"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": null,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "sei",
+    "name": "Ricebowl Sei Ayam",
+    "kind": "product",
+    "category": "Main Dish",
+    "description": "",
+    "sourceIds": [
+      "rice"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 65000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "rice"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null,
+    "sourcePage": null,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "breakfast-a",
+    "name": "Breakfast Set A",
+    "kind": "product",
+    "category": "Breakfast",
+    "description": "Telur kampung, kopi hitam, dan srikaya butter toast.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 52000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [
+      {
+        "id": "a-black",
+        "name": "Kopi hitam",
+        "price": {
+          "amount": 52000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "a-milk",
+        "name": "Kopi susu",
+        "price": {
+          "amount": 56000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ],
+    "imageId": "breakfast-a",
+    "sourcePage": 3,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "breakfast-b",
+    "name": "Breakfast Set B",
+    "kind": "product",
+    "category": "Breakfast",
+    "description": "Telur kampung, kopi hitam, dan siomay.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 68000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "breakfast-b",
+    "sourcePage": 4,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  },
+  {
+    "id": "breakfast-c",
+    "name": "Breakfast Set C",
+    "kind": "product",
+    "category": "Breakfast",
+    "description": "Pilih pasangan kopi dan sarapan.",
+    "sourceIds": [
+      "menu"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "promo": null,
+    "variants": [
+      {
+        "id": "c-black",
+        "name": "Kopi hitam + srikaya butter toast",
+        "price": {
+          "amount": 38000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "c-milk",
+        "name": "Kopi susu + srikaya butter toast",
+        "price": {
+          "amount": 42000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "c-siomay",
+        "name": "Kopi hitam + siomay",
+        "price": {
+          "amount": 54000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ],
+    "imageId": "breakfast-c",
+    "sourcePage": 5,
+    "priceLimitation": "Transcribed source price; current validity and tax inclusion not confirmed."
+  }
+]

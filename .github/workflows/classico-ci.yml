@@ -1,0 +1,38 @@
+name: Classico CI
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - demos/classico-coffee/**
+      - .github/workflows/classico-ci.yml
+  pull_request:
+    paths:
+      - demos/classico-coffee/**
+      - .github/workflows/classico-ci.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: classico-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: demos/classico-coffee
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: demos/classico-coffee/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
