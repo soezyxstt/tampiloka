@@ -22,7 +22,7 @@ Dua origin produksi:
    | Vercel project | Variable | Nilai |
    | --- | --- | --- |
    | `tampiloka` (root `apps/tampiloka`) | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | token dari Search Console |
-   | `temura` (root `apps/temura`) | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | token dari Search Console |
+   | `e-invitation` (root `apps/temura`) | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | token dari Search Console |
 
    Token berbeda untuk setiap property. Jangan memakai satu token untuk dua origin.
 5. Klik **Verify**. Tag akan muncul di `<head>` semua halaman setelah deploy.
