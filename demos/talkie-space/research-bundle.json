@@ -1,0 +1,3585 @@
+{
+  "schemaVersion": 2,
+  "profile": {
+    "prospectId": "talkie-space-garut",
+    "name": "Talkie Space",
+    "branch": null,
+    "sources": [
+      {
+        "id": "font-source",
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap",
+        "accessedAt": "2026-10-22",
+        "locator": "Google Fonts CSS",
+        "summary": "DM Sans open font distribution; OFL license retained",
+        "evidencePath": "research/sources/font.css",
+        "fingerprint": "79ee97520a9699b87686af32699e7847e0a941edab874d0f14248fbad1f25ded"
+      },
+      {
+        "id": "official",
+        "url": "https://talkiespace.carrd.co/",
+        "accessedAt": "2026-10-22",
+        "locator": "bio links",
+        "summary": "Official hub with PDF, map and contact",
+        "evidencePath": "research/sources/official.html",
+        "fingerprint": "c8c5df348e076ca1bd344a32241b629fce095bb84315d0e429dc26c0f8da8944"
+      },
+      {
+        "id": "instagram",
+        "url": "https://www.instagram.com/talkie.space/",
+        "accessedAt": "2026-10-22",
+        "locator": "bio and posts",
+        "summary": "Name, hours, breakfast offer",
+        "evidencePath": "research/sources/research-notes.txt",
+        "fingerprint": "2c872850d9686b0ee3539e18fb3bc1f086a61b3b52c4db8de6882436ffcffa5b"
+      },
+      {
+        "id": "facade-source",
+        "url": "https://talkiespace.carrd.co/assets/images/bg.jpg",
+        "accessedAt": "2026-10-22",
+        "locator": "background",
+        "summary": "Official facade",
+        "evidencePath": "research/sources/facade.jpg",
+        "fingerprint": "ff281a85f217fa683bb87c08d91fb1bfccfb058b3bd8f98f32a4f372a24e9b21"
+      },
+      {
+        "id": "menu-1",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 1",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-2",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 2",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-3",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 3",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-4",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 4",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-5",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 5",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-6",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 6",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-7",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 7",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-8",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 8",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-9",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 9",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-10",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 10",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-11",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 11",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-12",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 12",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-13",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 13",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-14",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 14",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-15",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 15",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-16",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 16",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-17",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 17",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-18",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 18",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-19",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 19",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-20",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 20",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-21",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 21",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-22",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 22",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-23",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 23",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      },
+      {
+        "id": "menu-24",
+        "url": "https://drive.google.com/file/d/14aJvhI_h2H1cFMZw3bNQBRYLU06YcZb-/view",
+        "accessedAt": "2026-10-22",
+        "locator": "page 24",
+        "summary": "Official linked menu; visual transcription and crop",
+        "evidencePath": "research/sources/menu.pdf",
+        "fingerprint": "56b1e784a6a3b663ccd21019bb25651a8bf63c8e9d61c1af2f75e3423cfa4499"
+      }
+    ],
+    "facts": [
+      {
+        "id": "name",
+        "field": "name",
+        "value": "Talkie Space",
+        "sourceIds": [
+          "instagram",
+          "official"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; availability not independently owner-confirmed."
+      },
+      {
+        "id": "address",
+        "field": "address",
+        "value": "Jl. Suherman No.52, Tarogong Kidul, Garut",
+        "sourceIds": [
+          "menu-24"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; availability not independently owner-confirmed."
+      },
+      {
+        "id": "hours",
+        "field": "hours",
+        "value": "08.00–22.00",
+        "sourceIds": [
+          "instagram"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; availability not independently owner-confirmed."
+      },
+      {
+        "id": "contact",
+        "field": "contact",
+        "value": "6282130445909",
+        "sourceIds": [
+          "official",
+          "menu-24"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; availability not independently owner-confirmed."
+      },
+      {
+        "id": "concept",
+        "field": "concept",
+        "value": "Japanese–Scandinavian",
+        "sourceIds": [
+          "official"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; availability not independently owner-confirmed."
+      },
+      {
+        "id": "breakfast",
+        "field": "breakfast",
+        "value": "08.00–11.00, mulai Rp15.000",
+        "sourceIds": [
+          "menu-2",
+          "instagram"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; availability not independently owner-confirmed."
+      }
+    ]
+  },
+  "offerings": {
+    "items": [
+      {
+        "id": "nasi-telur-pontianak",
+        "name": "Nasi Telur Pontianak",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-daun-jeruk",
+        "name": "Nasi Daun Jeruk",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-goreng-bawang",
+        "name": "Nasi Goreng Bawang",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-kuah-kari",
+        "name": "Nasi Kuah Kari",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "roti-bakar-kaya-coklat",
+        "name": "Roti Bakar Kaya / Coklat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "wijen-salad-chicken-grill",
+        "name": "Wijen Salad Chicken Grill",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "caesar-salad-chicken-grill",
+        "name": "Caesar Salad Chicken Grill",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tersedia pukul 08.00–11.00.",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-2"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-schnitzel",
+        "name": "Chicken Schnitzel",
+        "kind": "product",
+        "category": "Western",
+        "description": "",
+        "sourceIds": [
+          "menu-3"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-3"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "schnitzel"
+      },
+      {
+        "id": "chicken-bbq-steak",
+        "name": "Chicken BBQ Steak",
+        "kind": "product",
+        "category": "Western",
+        "description": "",
+        "sourceIds": [
+          "menu-3"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-3"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "bbq"
+      },
+      {
+        "id": "hot-garlic-fried-chicken",
+        "name": "Hot Garlic Fried Chicken",
+        "kind": "product",
+        "category": "Asian",
+        "description": "",
+        "sourceIds": [
+          "menu-4"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 33000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-4"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-creamy-mushroom",
+        "name": "Chicken Creamy Mushroom",
+        "kind": "product",
+        "category": "Asian",
+        "description": "",
+        "sourceIds": [
+          "menu-4"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-4"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-katsu-kare",
+        "name": "Chicken Katsu Kare",
+        "kind": "product",
+        "category": "Asian",
+        "description": "",
+        "sourceIds": [
+          "menu-4"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-4"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-ayam-goreng-crunchy",
+        "name": "Nasi Ayam Goreng Crunchy",
+        "kind": "product",
+        "category": "Nusantara",
+        "description": "",
+        "sourceIds": [
+          "menu-5"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-5"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "crunchy"
+      },
+      {
+        "id": "nasi-sei-sapi",
+        "name": "Nasi Sei Sapi",
+        "kind": "product",
+        "category": "Nusantara",
+        "description": "",
+        "sourceIds": [
+          "menu-5"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-5"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "sei"
+      },
+      {
+        "id": "nasi-oseng-cumi-sambal-ijo",
+        "name": "Nasi Oseng Cumi Sambal Ijo",
+        "kind": "product",
+        "category": "Nusantara",
+        "description": "",
+        "sourceIds": [
+          "menu-5"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-5"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "cumi"
+      },
+      {
+        "id": "nasi-oseng-sapi-mercon",
+        "name": "Nasi Oseng Sapi Mercon",
+        "kind": "product",
+        "category": "Nusantara",
+        "description": "",
+        "sourceIds": [
+          "menu-6"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-6"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "mercon"
+      },
+      {
+        "id": "nasi-oseng-sapi-gongso",
+        "name": "Nasi Oseng Sapi Gongso",
+        "kind": "product",
+        "category": "Nusantara",
+        "description": "",
+        "sourceIds": [
+          "menu-6"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-6"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "gongso"
+      },
+      {
+        "id": "nasi-sop-daging-sapi",
+        "name": "Nasi Sop Daging Sapi",
+        "kind": "product",
+        "category": "Nusantara",
+        "description": "",
+        "sourceIds": [
+          "menu-6"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-6"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "sop"
+      },
+      {
+        "id": "nasi-goreng-kecombrang",
+        "name": "Nasi Goreng Kecombrang",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "",
+        "sourceIds": [
+          "menu-7"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-7"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-goreng-rempah",
+        "name": "Nasi Goreng Rempah",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "",
+        "sourceIds": [
+          "menu-7"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-7"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-goreng-smoky",
+        "name": "Nasi Goreng Smoky",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "",
+        "sourceIds": [
+          "menu-7"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-7"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "nasi-goreng-cumi-sambal-ijo",
+        "name": "Nasi Goreng Cumi Sambal Ijo",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "",
+        "sourceIds": [
+          "menu-7"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-7"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-salted-egg",
+        "name": "Chicken Salted Egg",
+        "kind": "product",
+        "category": "Rice bowl",
+        "description": "",
+        "sourceIds": [
+          "menu-8"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-8"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-cabe-garam",
+        "name": "Chicken Cabe Garam",
+        "kind": "product",
+        "category": "Rice bowl",
+        "description": "",
+        "sourceIds": [
+          "menu-8"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-8"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-teriyaki",
+        "name": "Chicken Teriyaki",
+        "kind": "product",
+        "category": "Rice bowl",
+        "description": "",
+        "sourceIds": [
+          "menu-8"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-8"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "beef-gyudon",
+        "name": "Beef Gyudon",
+        "kind": "product",
+        "category": "Rice bowl",
+        "description": "",
+        "sourceIds": [
+          "menu-8"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-8"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "gyudon"
+      },
+      {
+        "id": "mie-kuah-ayam-creamy",
+        "name": "Mie Kuah Ayam Creamy",
+        "kind": "product",
+        "category": "Mie",
+        "description": "",
+        "sourceIds": [
+          "menu-9"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-9"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "mie-kuah-sapi-shoyu",
+        "name": "Mie Kuah Sapi Shoyu",
+        "kind": "product",
+        "category": "Mie",
+        "description": "",
+        "sourceIds": [
+          "menu-9"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-9"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "mie-goreng-jawa",
+        "name": "Mie Goreng Jawa",
+        "kind": "product",
+        "category": "Mie",
+        "description": "",
+        "sourceIds": [
+          "menu-9"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-9"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "aglio-olio",
+        "name": "Aglio Olio",
+        "kind": "product",
+        "category": "Pasta",
+        "description": "",
+        "sourceIds": [
+          "menu-10"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-10"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "creamy-mushroom",
+        "name": "Creamy Mushroom",
+        "kind": "product",
+        "category": "Pasta",
+        "description": "",
+        "sourceIds": [
+          "menu-10"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-10"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "creamy-carbonara",
+        "name": "Creamy Carbonara",
+        "kind": "product",
+        "category": "Pasta",
+        "description": "",
+        "sourceIds": [
+          "menu-10"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-10"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "french-fries",
+        "name": "French Fries",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "talkie-platter",
+        "name": "Talkie Platter",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "tahu-salted-egg",
+        "name": "Tahu Salted Egg",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "tahu-cabe-garam",
+        "name": "Tahu Cabe Garam",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "cireng-rujak",
+        "name": "Cireng Rujak",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-wings-bbq",
+        "name": "Chicken Wings BBQ",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 33000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "chicken-wings-parmesan",
+        "name": "Chicken Wings Parmesan",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "pisang-wijen",
+        "name": "Pisang Wijen",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "dimsum-ayam",
+        "name": "Dimsum Ayam",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "bola-bola-mochi",
+        "name": "Bola-bola Mochi",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "tahu-aci",
+        "name": "Tahu Aci",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-11"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "quesadillas-beef",
+        "name": "Quesadillas Beef",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-12"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-12"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "quesadilla-beef"
+      },
+      {
+        "id": "quesadillas-banana",
+        "name": "Quesadillas Banana",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu-12"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-12"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "quesadilla-banana"
+      },
+      {
+        "id": "roti-gandum-kaya-toast",
+        "name": "Roti Gandum Kaya Toast",
+        "kind": "product",
+        "category": "Toast",
+        "description": "",
+        "sourceIds": [
+          "menu-13"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-13"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "roti-gandum-choco-toast",
+        "name": "Roti Gandum Choco Toast",
+        "kind": "product",
+        "category": "Toast",
+        "description": "",
+        "sourceIds": [
+          "menu-13"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-13"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "toast-bread-ice-cream",
+        "name": "Toast Bread Ice Cream",
+        "kind": "product",
+        "category": "Toast",
+        "description": "",
+        "sourceIds": [
+          "menu-13"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-13"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "lava-toast-bread",
+        "name": "Lava Toast Bread",
+        "kind": "product",
+        "category": "Toast",
+        "description": "",
+        "sourceIds": [
+          "menu-13"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-13"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "espresso",
+        "name": "Espresso",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "long-black",
+        "name": "Long Black",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "cappucino",
+        "name": "Cappucino",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "cafe-latte",
+        "name": "Cafe Latte",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 33000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "magic",
+        "name": "Magic",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 33000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "spanish-latte",
+        "name": "Spanish Latte",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "split-shot",
+        "name": "Split Shot",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "dirty-latte",
+        "name": "Dirty Latte",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "alcapone",
+        "name": "AlCapone",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "papa-brown",
+        "name": "Papa Brown",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "papa-butterscotch",
+        "name": "Papa Butterscotch",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "papa-salted-caramel",
+        "name": "Papa Salted Caramel",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-14"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "local",
+        "name": "Local",
+        "kind": "product",
+        "category": "Filter coffee",
+        "description": "",
+        "sourceIds": [
+          "menu-15"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-15"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "seasonal",
+        "name": "Seasonal",
+        "kind": "product",
+        "category": "Filter coffee",
+        "description": "",
+        "sourceIds": [
+          "menu-15"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-15"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "import",
+        "name": "Import",
+        "kind": "product",
+        "category": "Filter coffee",
+        "description": "Pilihan biji kopi, tanyakan kepada barista.",
+        "sourceIds": [
+          "menu-15"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": null,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-15"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "mont-blanc",
+        "name": "Mont Blanc",
+        "kind": "product",
+        "category": "Mocktail black",
+        "description": "",
+        "sourceIds": [
+          "menu-16"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-16"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "sanctuary",
+        "name": "Sanctuary",
+        "kind": "product",
+        "category": "Mocktail black",
+        "description": "",
+        "sourceIds": [
+          "menu-16"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-16"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "black-lemonade",
+        "name": "Black Lemonade",
+        "kind": "product",
+        "category": "Mocktail black",
+        "description": "",
+        "sourceIds": [
+          "menu-16"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 33000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-16"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "black-tamarind",
+        "name": "Black Tamarind",
+        "kind": "product",
+        "category": "Mocktail black",
+        "description": "",
+        "sourceIds": [
+          "menu-16"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-16"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "koffie-talkie",
+        "name": "Koffie Talkie",
+        "kind": "product",
+        "category": "Mocktail black",
+        "description": "",
+        "sourceIds": [
+          "menu-16"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-16"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "coco-lime",
+        "name": "Coco Lime",
+        "kind": "product",
+        "category": "Mocktail",
+        "description": "",
+        "sourceIds": [
+          "menu-17"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-17"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "red-rose",
+        "name": "Red Rose",
+        "kind": "product",
+        "category": "Mocktail",
+        "description": "",
+        "sourceIds": [
+          "menu-17"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-17"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "red-rox",
+        "name": "Red Rox",
+        "kind": "product",
+        "category": "Mocktail",
+        "description": "",
+        "sourceIds": [
+          "menu-17"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-17"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "matcha-latte",
+        "name": "Matcha Latte",
+        "kind": "product",
+        "category": "Matcha",
+        "description": "",
+        "sourceIds": [
+          "menu-18"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-18"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "matcha-coco",
+        "name": "Matcha Coco",
+        "kind": "product",
+        "category": "Matcha",
+        "description": "",
+        "sourceIds": [
+          "menu-18"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-18"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "matcha-berry",
+        "name": "Matcha Berry",
+        "kind": "product",
+        "category": "Matcha",
+        "description": "",
+        "sourceIds": [
+          "menu-18"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-18"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "dirty-matcha",
+        "name": "Dirty Matcha",
+        "kind": "product",
+        "category": "Matcha",
+        "description": "",
+        "sourceIds": [
+          "menu-18"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-18"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "cheese-latte",
+        "name": "Cheese Latte",
+        "kind": "product",
+        "category": "Cheese series",
+        "description": "",
+        "sourceIds": [
+          "menu-19"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-19"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "cheese-latte"
+      },
+      {
+        "id": "matcha-cheese",
+        "name": "Matcha Cheese",
+        "kind": "product",
+        "category": "Cheese series",
+        "description": "",
+        "sourceIds": [
+          "menu-19"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-19"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "matcha-cheese"
+      },
+      {
+        "id": "choco-cheese",
+        "name": "Choco Cheese",
+        "kind": "product",
+        "category": "Cheese series",
+        "description": "",
+        "sourceIds": [
+          "menu-19"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-19"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "choco-cheese"
+      },
+      {
+        "id": "chocolate-latte",
+        "name": "Chocolate Latte",
+        "kind": "product",
+        "category": "Non-coffee",
+        "description": "",
+        "sourceIds": [
+          "menu-20"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-20"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "chocolate"
+      },
+      {
+        "id": "chocolate-caramel",
+        "name": "Chocolate Caramel",
+        "kind": "product",
+        "category": "Non-coffee",
+        "description": "",
+        "sourceIds": [
+          "menu-20"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-20"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "choco-caramel"
+      },
+      {
+        "id": "milky-mango",
+        "name": "Milky Mango",
+        "kind": "product",
+        "category": "Non-coffee",
+        "description": "",
+        "sourceIds": [
+          "menu-20"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-20"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "milky-mango"
+      },
+      {
+        "id": "frappe-matcha",
+        "name": "Frappe Matcha",
+        "kind": "product",
+        "category": "Frappe",
+        "description": "",
+        "sourceIds": [
+          "menu-21"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 38000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-21"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "frappe-choco",
+        "name": "Frappe Choco",
+        "kind": "product",
+        "category": "Frappe",
+        "description": "",
+        "sourceIds": [
+          "menu-21"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 38000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-21"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "frappucino",
+        "name": "Frappucino",
+        "kind": "product",
+        "category": "Frappe",
+        "description": "",
+        "sourceIds": [
+          "menu-21"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 38000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-21"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "green-organic",
+        "name": "Green Organic",
+        "kind": "product",
+        "category": "Healthy",
+        "description": "",
+        "sourceIds": [
+          "menu-22"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-22"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "honey-purple",
+        "name": "Honey Purple",
+        "kind": "product",
+        "category": "Healthy",
+        "description": "",
+        "sourceIds": [
+          "menu-22"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-22"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "pine-berry",
+        "name": "Pine Berry",
+        "kind": "product",
+        "category": "Healthy",
+        "description": "",
+        "sourceIds": [
+          "menu-22"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-22"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "artisan-tea",
+        "name": "Artisan Tea",
+        "kind": "product",
+        "category": "Teh & refreshment",
+        "description": "",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "lychee-tea",
+        "name": "Lychee Tea",
+        "kind": "product",
+        "category": "Teh & refreshment",
+        "description": "",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "peach-tea",
+        "name": "Peach Tea",
+        "kind": "product",
+        "category": "Teh & refreshment",
+        "description": "",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "lemon-tea",
+        "name": "Lemon Tea",
+        "kind": "product",
+        "category": "Teh & refreshment",
+        "description": "",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "java-root-beer",
+        "name": "Java Root Beer",
+        "kind": "product",
+        "category": "Teh & refreshment",
+        "description": "",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "mineral-water",
+        "name": "Mineral Water",
+        "kind": "product",
+        "category": "Teh & refreshment",
+        "description": "",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "option-1",
+            "name": "Pilihan 10K",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu-23"
+              ]
+            }
+          },
+          {
+            "id": "option-2",
+            "name": "Pilihan 15K",
+            "price": {
+              "amount": 15000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu-23"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      }
+    ]
+  },
+  "assets": {
+    "items": [
+      {
+        "id": "asian",
+        "kind": "image",
+        "subject": "asian",
+        "sourceIds": [
+          "menu-4"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/asian.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1299
+      },
+      {
+        "id": "bbq",
+        "kind": "image",
+        "subject": "bbq",
+        "sourceIds": [
+          "menu-3"
+        ],
+        "productIds": [
+          "chicken-bbq-steak"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/bbq.webp",
+        "embedUrl": null,
+        "width": 806,
+        "height": 702
+      },
+      {
+        "id": "breakfast",
+        "kind": "image",
+        "subject": "breakfast",
+        "sourceIds": [
+          "menu-2"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "breakfast"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/breakfast.webp",
+        "embedUrl": null,
+        "width": 1190,
+        "height": 1262
+      },
+      {
+        "id": "brewing",
+        "kind": "image",
+        "subject": "brewing",
+        "sourceIds": [
+          "menu-15"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "story"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/brewing.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1299
+      },
+      {
+        "id": "cheese-latte",
+        "kind": "image",
+        "subject": "cheese-latte",
+        "sourceIds": [
+          "menu-19"
+        ],
+        "productIds": [
+          "cheese-latte"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/cheese-latte.webp",
+        "embedUrl": null,
+        "width": 385,
+        "height": 527
+      },
+      {
+        "id": "choco-caramel",
+        "kind": "image",
+        "subject": "choco-caramel",
+        "sourceIds": [
+          "menu-20"
+        ],
+        "productIds": [
+          "chocolate-caramel"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/choco-caramel.webp",
+        "embedUrl": null,
+        "width": 397,
+        "height": 632
+      },
+      {
+        "id": "choco-cheese",
+        "kind": "image",
+        "subject": "choco-cheese",
+        "sourceIds": [
+          "menu-19"
+        ],
+        "productIds": [
+          "choco-cheese"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/choco-cheese.webp",
+        "embedUrl": null,
+        "width": 397,
+        "height": 526
+      },
+      {
+        "id": "chocolate",
+        "kind": "image",
+        "subject": "chocolate",
+        "sourceIds": [
+          "menu-20"
+        ],
+        "productIds": [
+          "chocolate-latte"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/chocolate.webp",
+        "embedUrl": null,
+        "width": 508,
+        "height": 790
+      },
+      {
+        "id": "coffee",
+        "kind": "image",
+        "subject": "coffee",
+        "sourceIds": [
+          "menu-14"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/coffee.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1053
+      },
+      {
+        "id": "crunchy",
+        "kind": "image",
+        "subject": "crunchy",
+        "sourceIds": [
+          "menu-5"
+        ],
+        "productIds": [
+          "nasi-ayam-goreng-crunchy"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/crunchy.webp",
+        "embedUrl": null,
+        "width": 508,
+        "height": 368
+      },
+      {
+        "id": "cumi",
+        "kind": "image",
+        "subject": "cumi",
+        "sourceIds": [
+          "menu-5"
+        ],
+        "productIds": [
+          "nasi-oseng-cumi-sambal-ijo"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/cumi.webp",
+        "embedUrl": null,
+        "width": 484,
+        "height": 403
+      },
+      {
+        "id": "facade",
+        "kind": "image",
+        "subject": "facade",
+        "sourceIds": [
+          "facade-source"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "visit"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/facade.webp",
+        "embedUrl": null,
+        "width": 647,
+        "height": 735
+      },
+      {
+        "id": "frappe",
+        "kind": "image",
+        "subject": "frappe",
+        "sourceIds": [
+          "menu-21"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/frappe.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1103
+      },
+      {
+        "id": "fried-rice",
+        "kind": "image",
+        "subject": "fried-rice",
+        "sourceIds": [
+          "menu-7"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/fried-rice.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1299
+      },
+      {
+        "id": "gongso",
+        "kind": "image",
+        "subject": "gongso",
+        "sourceIds": [
+          "menu-6"
+        ],
+        "productIds": [
+          "nasi-oseng-sapi-gongso"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/gongso.webp",
+        "embedUrl": null,
+        "width": 496,
+        "height": 421
+      },
+      {
+        "id": "gyudon",
+        "kind": "image",
+        "subject": "gyudon",
+        "sourceIds": [
+          "menu-8"
+        ],
+        "productIds": [
+          "beef-gyudon"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/gyudon.webp",
+        "embedUrl": null,
+        "width": 546,
+        "height": 509
+      },
+      {
+        "id": "healthy",
+        "kind": "image",
+        "subject": "healthy",
+        "sourceIds": [
+          "menu-22"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/healthy.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 865
+      },
+      {
+        "id": "hero-coffee",
+        "kind": "image",
+        "subject": "hero-coffee",
+        "sourceIds": [
+          "menu-1"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/hero-coffee.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 950
+      },
+      {
+        "id": "logo",
+        "kind": "logo",
+        "subject": "logo",
+        "sourceIds": [
+          "menu-1"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/logo.webp",
+        "embedUrl": null,
+        "width": 779,
+        "height": 121
+      },
+      {
+        "id": "matcha-cheese",
+        "kind": "image",
+        "subject": "matcha-cheese",
+        "sourceIds": [
+          "menu-19"
+        ],
+        "productIds": [
+          "matcha-cheese"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/matcha-cheese.webp",
+        "embedUrl": null,
+        "width": 360,
+        "height": 527
+      },
+      {
+        "id": "matcha",
+        "kind": "image",
+        "subject": "matcha",
+        "sourceIds": [
+          "menu-18"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/matcha.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1171
+      },
+      {
+        "id": "mercon",
+        "kind": "image",
+        "subject": "mercon",
+        "sourceIds": [
+          "menu-6"
+        ],
+        "productIds": [
+          "nasi-oseng-sapi-mercon"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/mercon.webp",
+        "embedUrl": null,
+        "width": 533,
+        "height": 386
+      },
+      {
+        "id": "milky-mango",
+        "kind": "image",
+        "subject": "milky-mango",
+        "sourceIds": [
+          "menu-20"
+        ],
+        "productIds": [
+          "milky-mango"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/milky-mango.webp",
+        "embedUrl": null,
+        "width": 459,
+        "height": 614
+      },
+      {
+        "id": "mocktail-black",
+        "kind": "image",
+        "subject": "mocktail-black",
+        "sourceIds": [
+          "menu-16"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/mocktail-black.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 849
+      },
+      {
+        "id": "mocktail",
+        "kind": "image",
+        "subject": "mocktail",
+        "sourceIds": [
+          "menu-17"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/mocktail.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 950
+      },
+      {
+        "id": "noodles",
+        "kind": "image",
+        "subject": "noodles",
+        "sourceIds": [
+          "menu-9"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/noodles.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1069
+      },
+      {
+        "id": "pasta",
+        "kind": "image",
+        "subject": "pasta",
+        "sourceIds": [
+          "menu-10"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/pasta.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 968
+      },
+      {
+        "id": "quesadilla-banana",
+        "kind": "image",
+        "subject": "quesadilla-banana",
+        "sourceIds": [
+          "menu-12"
+        ],
+        "productIds": [
+          "quesadillas-banana"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/quesadilla-banana.webp",
+        "embedUrl": null,
+        "width": 1128,
+        "height": 632
+      },
+      {
+        "id": "quesadilla-beef",
+        "kind": "image",
+        "subject": "quesadilla-beef",
+        "sourceIds": [
+          "menu-12"
+        ],
+        "productIds": [
+          "quesadillas-beef"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/quesadilla-beef.webp",
+        "embedUrl": null,
+        "width": 843,
+        "height": 439
+      },
+      {
+        "id": "ricebowl",
+        "kind": "image",
+        "subject": "ricebowl",
+        "sourceIds": [
+          "menu-8"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ricebowl.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1171
+      },
+      {
+        "id": "schnitzel",
+        "kind": "image",
+        "subject": "schnitzel",
+        "sourceIds": [
+          "menu-3"
+        ],
+        "productIds": [
+          "chicken-schnitzel"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/schnitzel.webp",
+        "embedUrl": null,
+        "width": 732,
+        "height": 825
+      },
+      {
+        "id": "sei",
+        "kind": "image",
+        "subject": "sei",
+        "sourceIds": [
+          "menu-5"
+        ],
+        "productIds": [
+          "nasi-sei-sapi"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/sei.webp",
+        "embedUrl": null,
+        "width": 508,
+        "height": 315
+      },
+      {
+        "id": "snacks",
+        "kind": "image",
+        "subject": "snacks",
+        "sourceIds": [
+          "menu-11"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/snacks.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1103
+      },
+      {
+        "id": "sop",
+        "kind": "image",
+        "subject": "sop",
+        "sourceIds": [
+          "menu-6"
+        ],
+        "productIds": [
+          "nasi-sop-daging-sapi"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/sop.webp",
+        "embedUrl": null,
+        "width": 446,
+        "height": 403
+      },
+      {
+        "id": "tea",
+        "kind": "image",
+        "subject": "tea",
+        "sourceIds": [
+          "menu-23"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/tea.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1035
+      },
+      {
+        "id": "toast",
+        "kind": "image",
+        "subject": "toast",
+        "sourceIds": [
+          "menu-13"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space; official linked menu/Carrd",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/toast.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 1035
+      },
+      {
+        "id": "dm-sans-bold",
+        "kind": "font",
+        "subject": "DM Sans, OFL substitute",
+        "sourceIds": [
+          "font-source"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero",
+          "story",
+          "breakfast",
+          "catalogue",
+          "visit"
+        ],
+        "authenticity": "illustration",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [
+          "public/fonts/OFL.txt"
+        ],
+        "attribution": "DM Sans authors / SIL OFL",
+        "deliveryMethod": "file",
+        "runtimePath": "public/fonts/dm-sans-bold.ttf",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      },
+      {
+        "id": "dm-sans-regular",
+        "kind": "font",
+        "subject": "DM Sans, OFL substitute",
+        "sourceIds": [
+          "font-source"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero",
+          "story",
+          "breakfast",
+          "catalogue",
+          "visit"
+        ],
+        "authenticity": "illustration",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [
+          "public/fonts/OFL.txt"
+        ],
+        "attribution": "DM Sans authors / SIL OFL",
+        "deliveryMethod": "file",
+        "runtimePath": "public/fonts/dm-sans-regular.ttf",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      },
+      {
+        "id": "favicon",
+        "kind": "logo",
+        "subject": "Original wordmark on square canvas",
+        "sourceIds": [
+          "menu-1"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Talkie Space",
+        "deliveryMethod": "file",
+        "runtimePath": "public/favicon.ico",
+        "embedUrl": null,
+        "width": 128,
+        "height": 128
+      }
+    ]
+  },
+  "pagePlan": {
+    "prospectId": "talkie-space-garut",
+    "primaryGoal": "Browse menu and plan a visit or ask for a reservation",
+    "features": {
+      "catalogue": true,
+      "categoryFilter": true,
+      "search": true,
+      "stickyToolbar": false,
+      "loadMore": false,
+      "productDialog": false,
+      "carousel": false,
+      "accordion": false,
+      "location": true
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "features": []
+      },
+      {
+        "id": "story",
+        "features": []
+      },
+      {
+        "id": "breakfast",
+        "features": []
+      },
+      {
+        "id": "catalogue",
+        "features": [
+          "catalogue",
+          "categoryFilter",
+          "search"
+        ]
+      },
+      {
+        "id": "visit",
+        "features": [
+          "location"
+        ]
+      }
+    ],
+    "media": [
+      {
+        "assetId": "asian",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "breakfast",
+        "productId": null,
+        "sectionId": "breakfast"
+      },
+      {
+        "assetId": "brewing",
+        "productId": null,
+        "sectionId": "story"
+      },
+      {
+        "assetId": "coffee",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "facade",
+        "productId": null,
+        "sectionId": "visit"
+      },
+      {
+        "assetId": "frappe",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "fried-rice",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "healthy",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "hero-coffee",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "logo",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "matcha",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "mocktail-black",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "mocktail",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "noodles",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "pasta",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "ricebowl",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "snacks",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "tea",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "toast",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "favicon",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "bbq",
+        "productId": "chicken-bbq-steak",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "cheese-latte",
+        "productId": "cheese-latte",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "choco-caramel",
+        "productId": "chocolate-caramel",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "choco-cheese",
+        "productId": "choco-cheese",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "chocolate",
+        "productId": "chocolate-latte",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "crunchy",
+        "productId": "nasi-ayam-goreng-crunchy",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "cumi",
+        "productId": "nasi-oseng-cumi-sambal-ijo",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "gongso",
+        "productId": "nasi-oseng-sapi-gongso",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "gyudon",
+        "productId": "beef-gyudon",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "matcha-cheese",
+        "productId": "matcha-cheese",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "mercon",
+        "productId": "nasi-oseng-sapi-mercon",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "milky-mango",
+        "productId": "milky-mango",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "quesadilla-banana",
+        "productId": "quesadillas-banana",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "quesadilla-beef",
+        "productId": "quesadillas-beef",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "schnitzel",
+        "productId": "chicken-schnitzel",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "sei",
+        "productId": "nasi-sei-sapi",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "sop",
+        "productId": "nasi-sop-daging-sapi",
+        "sectionId": "catalogue"
+      }
+    ],
+    "layoutSignature": {
+      "hero": "split-product",
+      "sequence": "story-to-offer",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "product-craft"
+    },
+    "candidates": [
+      {
+        "id": "A",
+        "layoutSignature": {
+          "hero": "split-product",
+          "sequence": "story-to-offer",
+          "catalogue": "compact-rows",
+          "media": "alternating-scenes",
+          "narrative": "product-craft"
+        },
+        "rationale": "Rendered hero splits oversized copy with a large authentic coffee product photograph; brewing story leads to breakfast and complete menu."
+      },
+      {
+        "id": "B",
+        "layoutSignature": {
+          "hero": "split-product",
+          "sequence": "product-first",
+          "catalogue": "open-grid",
+          "media": "minimal",
+          "narrative": "curated-selection"
+        },
+        "rationale": "Rejected: too few unambiguous individual photos for full product grid."
+      }
+    ],
+    "selectedCandidate": "A",
+    "contentCoverage": "Verified 2026-10-22 via Chrome: official Instagram @talkie.space links Carrd. Bio hours 08.00–22.00. Carrd links only menu PDF, location and WhatsApp 6282130445909. PDF page 24 matches address/contact. All 24 pages rendered; 22 product pages manually transcribed. Prices reflect linked menu accessed today, not owner confirmation of current availability. Mineral Water has two prices without named sizes, retained as unnamed price options. Import filter coffee: ask barista, no invented price.\nBrand: PDF black/white, heavy sans headings, condensed category accents, warm food imagery. DM Sans is an open-license optical substitute, not a claim of official font. Original white logo cropped from p1 artwork. No invented facilities, reviews, capacities.\nBio coverage: PDF -> complete catalogue; Maps -> visit; WhatsApp -> reservation CTA; Instagram breakfast Sept 22 -> breakfast section with hours and from 15K; cupping Oct 21 -> past event, no upcoming booking claim; special-day reel -> ask admin, no invented package. Blue matcha carousel -> omitted as price/variant absent in linked menu.\nAsset routes: Instagram profile/posts reviewed, PDF supplied sufficient full resolution food photography; downloader unnecessary for food already in official PDF. Google Images searched in Chrome and source Instagram C9md_4Uy2p6 identified but third-party interior not reused (avoid unneeded rights exposure). GoFood merchant opened, Safety check blocked; no bypass, PDF is stronger dine-in source. Official Carrd facade downloaded. No stock or AI food. PDF flattened images require crops; group compositions used as section images, ambiguous SKU images remain null.\nAlternative A initially type-led; final render classified split-product/story-to-offer/compact-rows/alternating-scenes/product-craft after visual review: visible bold type, coffee spread, breakfast then complete catalogue and visit. Alternative B split-product/product-first/open-grid/minimal/curated-selection rejected: sparse confidently identifiable SKU photos would create many empty cards. Mobile: headline then coffee image, stacked breakfast, filter and magnifier same row, two-column menu rows collapse to one; no sticky toolbar or carousel needed. All 94 offerings remain discoverable without pagination.\nRights: official media authentic, republication rights pending; local concept only, noindex. No push, deploy or outreach authorized.\n",
+    "mediaCoverage": {
+      "sourcePages": 24,
+      "offerings": 94,
+      "exactSkuImages": 17,
+      "limitations": "Group photos remain section photography; no speculative SKU mapping."
+    },
+    "brand": {
+      "palette": [
+        "#151515",
+        "#f5f3ed",
+        "#c9a885"
+      ],
+      "font": "Local DM Sans regular/bold, optical substitute to PDF heavy sans"
+    },
+    "componentProvenance": "shadcn Base UI Button and Select copied as primitives from Historia; no landing composition imports",
+    "mobile": "Stacked scenes; category/search inline with animated mobile input; 320/390/768 checks",
+    "historyComparison": "Final rendered classification: split-product/story-to-offer/compact-rows/alternating-scenes/product-craft. 5 axes from Historia, 3 from newly recorded Duduk Gembira. Coffee photo is half of hero, not a type-only composition. Narrative follows brewing and food before visit."
+  }
+}

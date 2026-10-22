@@ -1,0 +1,1978 @@
+{
+  "schemaVersion": 2,
+  "profile": {
+    "prospectId": "duduk-gembira-garut",
+    "name": "Warung Kopi Duduk Gembira",
+    "branch": null,
+    "sources": [
+      {
+        "id": "profile",
+        "url": "https://www.instagram.com/warkopdudukgembira/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome profile: Warung Kopi Duduk Gembira; 06.30–23.00, Friday/Saturday 06.30–00.00; WhatsApp 6282286360621. Logo cream/red/green. Bio has one WhatsApp link, no Linktree or external PDF.",
+        "evidencePath": "research/sources/profile.md",
+        "summary": "Chrome profile: Warung Kopi Duduk Gembira; 06.30–23.00, Friday/Saturday 06.30–00.00; WhatsApp 6282286360621. Logo cream/red/green. Bio has one WhatsApp link, no Linktree or external PDF.",
+        "fingerprint": "434c4dfa06866a96b87ada6c1ea6d21719f4a97c0373e8d58d39810180ac5348"
+      },
+      {
+        "id": "menu",
+        "url": "https://www.instagram.com/stories/highlights/17963400506681484/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome paused MENU highlight, one menu page, marked 43w. Text and prices manually reconciled against research/raw/menu.png. 43 base items, roti bakar four flavors. Prices supported by source, not reconfirmed by owner for today.",
+        "evidencePath": "research/sources/menu.md",
+        "summary": "Chrome paused MENU highlight, one menu page, marked 43w. Text and prices manually reconciled against research/raw/menu.png. 43 base items, roti bakar four flavors. Prices supported by source, not reconfirmed by owner for today.",
+        "fingerprint": "605d6c5f8f3212bfbc80514dfbcfcea178d136de6a6e70a9489405d358845a11"
+      },
+      {
+        "id": "new-menu",
+        "url": "https://www.instagram.com/warkopdudukgembira/p/DWNgbA5AYc7/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome carousel: slide 2 Nasi Cumi Ijo, 3 Nasi Cumi Matah, 4 Nasi Ayam Matah, 5 Nasi Ayam Ijo. Caption corroborates names. No prices published on these slides.",
+        "evidencePath": "research/sources/new-menu.md",
+        "summary": "Chrome carousel: slide 2 Nasi Cumi Ijo, 3 Nasi Cumi Matah, 4 Nasi Ayam Matah, 5 Nasi Ayam Ijo. Caption corroborates names. No prices published on these slides.",
+        "fingerprint": "600a5f4d531c453cc480ae3940280530eed956bd9378538e80e5e17e44344c62"
+      },
+      {
+        "id": "place",
+        "url": "https://www.instagram.com/infogarut/p/DAuhgAnS6ZI/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome inspected opening carousel: slide 2 terrace, red crates, green framed sign; slide 3 interior wooden table and rattan seats. Caption address Jalan Otista 275B. Opening hours here are historical and superseded by current official profile. Photo publisher infogarut, reuse rights pending.",
+        "evidencePath": "research/sources/place.md",
+        "summary": "Chrome inspected opening carousel: slide 2 terrace, red crates, green framed sign; slide 3 interior wooden table and rattan seats. Caption address Jalan Otista 275B. Opening hours here are historical and superseded by current official profile. Photo publisher infogarut, reuse rights pending.",
+        "fingerprint": "6ab1637c415a7245542f4d1ab7c805f0473be6f46d3334e2259a653568804aa9"
+      },
+      {
+        "id": "kelas",
+        "url": "https://www.instagram.com/stories/highlights/18269290681302399/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome Kelas Gembira highlight marked 72w: student promo 17000, four food/drink combinations. Address Jl. Otista No.275B on official creative. Current validity and terms not established; omitted active promotion.",
+        "evidencePath": "research/sources/kelas.md",
+        "summary": "Chrome Kelas Gembira highlight marked 72w: student promo 17000, four food/drink combinations. Address Jl. Otista No.275B on official creative. Current validity and terms not established; omitted active promotion.",
+        "fingerprint": "c6d45f69574c6aac2eba3696e8c6d82e66debbe703fc266edaa678642ee26fe9"
+      },
+      {
+        "id": "bukber",
+        "url": "https://www.instagram.com/stories/highlights/17893961820087456/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome Bukber highlight marked 82w: 20000 packages A nasi tutug oncom, B nasi ayam cabe-cabean, C cuanki komplit, each with es teh manis. Ramadan promotion old; omitted active offer.",
+        "evidencePath": "research/sources/bukber.md",
+        "summary": "Chrome Bukber highlight marked 82w: 20000 packages A nasi tutug oncom, B nasi ayam cabe-cabean, C cuanki komplit, each with es teh manis. Ramadan promotion old; omitted active offer.",
+        "fingerprint": "6db1c9da8f620c175d70c308060e0c6959ad02fcfa0f11881112b98df3b0e199"
+      },
+      {
+        "id": "discovery",
+        "url": "https://www.google.com/search?tbm=isch&q=Warkop+Duduk+Gembira+Garut",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome Google Images identified original infogarut carousel and exact GoFood merchant. Opened original carousel before acquisition. No search thumbnails used. GoFood merchant opened in Chrome but stopped at Safety check; no bypass, product imagery unavailable through that route. Direct post media transfer used instead of a third-party downloader; no cookies or account data exported.",
+        "evidencePath": "research/sources/discovery.md",
+        "summary": "Chrome Google Images identified original infogarut carousel and exact GoFood merchant. Opened original carousel before acquisition. No search thumbnails used. GoFood merchant opened in Chrome but stopped at Safety check; no bypass, product imagery unavailable through that route. Direct post media transfer used instead of a third-party downloader; no cookies or account data exported.",
+        "fingerprint": "b56a5ede05c86844fdcad5610de9f2817eb357e3fac93c11a4fac237ac980a69"
+      },
+      {
+        "id": "maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Warung+Kopi+Duduk+Gembira+Jl.+Otista+275B+Garut",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome destination resolved to Warung Kopi Duduk Gembira, coordinates -7.1980518,107.8872226, Otista No.275 Sukagalih Tarogong Kidul, phone 082286360621. Listing menu link https://drive.google.com/file/d/1SpygWnmM5OYBkdTDXT7r-NOWm4eIXiUZ/view?usp=sharing was opened in Chrome and returned Page Not Found. No new menu obtained; official Instagram menu remains the catalogue source. Public reviews not reused as testimonial claims.",
+        "evidencePath": "research/sources/maps.md",
+        "summary": "Chrome destination resolved to Warung Kopi Duduk Gembira, coordinates -7.1980518,107.8872226, Otista No.275 Sukagalih Tarogong Kidul, phone 082286360621. Listing menu link https://drive.google.com/file/d/1SpygWnmM5OYBkdTDXT7r-NOWm4eIXiUZ/view?usp=sharing was opened in Chrome and returned Page Not Found. No new menu obtained; official Instagram menu remains the catalogue source. Public reviews not reused as testimonial claims.",
+        "fingerprint": "e3bfaf4fab7982bf5a80ec81d81d564f43de06722ed08c3a6a30e1a0f82ff808"
+      },
+      {
+        "id": "font-display",
+        "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/breeserif/BreeSerif-Regular.ttf",
+        "accessedAt": "2026-10-22",
+        "locator": "Google Fonts ofl/breeserif",
+        "summary": "Bree Serif licensed display adaptation for user-requested retro warung direction; not original wordmark font.",
+        "evidencePath": "research/sources/font-bree-serif.md",
+        "fingerprint": "fcd787ce259fc6d18a6dc9a0ef304f741142ef2fcfb56feaeffc49fddc503a71"
+      },
+      {
+        "id": "font-body",
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400..700&display=swap",
+        "accessedAt": "2026-10-22",
+        "locator": "Google Fonts CSS variable family",
+        "summary": "Local variable font from Google Fonts; SIL OFL family.",
+        "evidencePath": "research/sources/font-body.md",
+        "fingerprint": "7958a4f97fdecefcdce250162bc0609e00615fbd0f146398f2a28471e7d5842c"
+      }
+    ],
+    "facts": [
+      {
+        "id": "name",
+        "field": "name",
+        "value": "Warung Kopi Duduk Gembira",
+        "sourceIds": [
+          "profile"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; owner confirmation and publication permission remain pending."
+      },
+      {
+        "id": "hours",
+        "field": "hours",
+        "value": {
+          "regular": "06.30–23.00",
+          "fridaySaturday": "06.30–00.00"
+        },
+        "sourceIds": [
+          "profile"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; owner confirmation and publication permission remain pending."
+      },
+      {
+        "id": "contact",
+        "field": "contact",
+        "value": "6282286360621",
+        "sourceIds": [
+          "profile"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; owner confirmation and publication permission remain pending."
+      },
+      {
+        "id": "address",
+        "field": "address",
+        "value": "Jl. Otista No. 275 B, Tarogong Kidul, Garut",
+        "sourceIds": [
+          "kelas",
+          "place"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; owner confirmation and publication permission remain pending."
+      },
+      {
+        "id": "style",
+        "field": "style",
+        "value": "Krem, merah, hijau; tipografi menu sans tebal dan signage vintage.",
+        "sourceIds": [
+          "profile",
+          "menu",
+          "place"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Public source checked; owner confirmation and publication permission remain pending."
+      }
+    ]
+  },
+  "offerings": {
+    "items": [
+      {
+        "id": "item-1",
+        "name": "Kopi Item",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "Kopi hitam pekat. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-1-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 8000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-1-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 8000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-2",
+        "name": "Kopi Susu Gembira",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "Kopi susu dengan gula aren. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-2-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 12000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-2-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 12000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-3",
+        "name": "Kopi Susu Butter",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "Kopi susu dengan sentuhan butter. Panas.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-3-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 15000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-4",
+        "name": "Kopi Muda - Mudi",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "Kopi susu creamy dengan gula aren. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-4-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 15000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-4-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 15000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-5",
+        "name": "Kopi Bir",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "Kopi soda berkaramel. Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-5-t0",
+            "name": "Dingin",
+            "price": {
+              "amount": 15000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-6",
+        "name": "Kopi Lemon Jadul",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "Kopi hitam dengan perasan lemon. Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-6-t0",
+            "name": "Dingin",
+            "price": {
+              "amount": 15000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-7",
+        "name": "Coklat Jadul",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Coklat susu manis & gurih. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-7-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-7-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-8",
+        "name": "Hijau Manis",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Teh hijau dengan susu. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-8-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 12000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-8-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 12000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-9",
+        "name": "Jamuan Gembira",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Minuman rempah. Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-9-t0",
+            "name": "Dingin",
+            "price": {
+              "amount": 12000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-10",
+        "name": "Josu",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Extra joss susu creamy. Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-10-t0",
+            "name": "Dingin",
+            "price": {
+              "amount": 8000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-11",
+        "name": "Lemon Peras",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Perasan lemon segar. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 7000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-11-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 7000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-11-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 7000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-12",
+        "name": "Lemon Soda",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Perasan lemon dengan sensasi soda. Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-12-t0",
+            "name": "Dingin",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-13",
+        "name": "Teh Manis",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-13-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 6000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-13-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 6000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-14",
+        "name": "Teh Sereh Lemon",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-14-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 8000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-14-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 8000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-15",
+        "name": "Teh Tarik",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "Teh hitam dengan susu creamy. Panas / Dingin.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-15-t0",
+            "name": "Panas",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-15-t1",
+            "name": "Dingin",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-16",
+        "name": "Air Mineral",
+        "kind": "product",
+        "category": "Non-kopi",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 5000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-17",
+        "name": "Cuanki Biasa",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-18",
+        "name": "Cuanki Komplit",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-19",
+        "name": "Indomie Polos",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "Indomie tanpa topping.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-20",
+        "name": "Indomie Gembira",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-21",
+        "name": "Mie Bangladesh",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-22",
+        "name": "Mie Tektek",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-23",
+        "name": "Sate Ayam Pedas",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-24",
+        "name": "Sate Jando Manis",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-25",
+        "name": "Nasi Ayam Cabe-cabean",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-26",
+        "name": "Nasi Goreng Bawang",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 14000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-27",
+        "name": "Nasi Goreng Kecombrang",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-28",
+        "name": "Nasi Kuning Gembira",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-29",
+        "name": "Nasi Telur Gulai",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-30",
+        "name": "Nasi Telur Pontianak",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-31",
+        "name": "Nasi Tutug Oncom",
+        "kind": "product",
+        "category": "Makanan berat",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-32",
+        "name": "Cireng Bumbu Kacang",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-33",
+        "name": "Gehu Cikur",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-34",
+        "name": "Gorengan Tempe",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-35",
+        "name": "Pangsit Chili Oil",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-36",
+        "name": "Pisang Keju Susu",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-37",
+        "name": "Pisang Goreng",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-38",
+        "name": "Piscok Goreng",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-39",
+        "name": "Roti Bakar",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "Coklat, pindakas, blueberry, strawberry, atau milkcrust.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "item-39-v0",
+            "name": "Coklat",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-39-v1",
+            "name": "Pindakas",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-39-v2",
+            "name": "Blueberry",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-39-v3",
+            "name": "Strawberry",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          },
+          {
+            "id": "item-39-v4",
+            "name": "Milkcrust",
+            "price": {
+              "amount": 10000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "menu"
+              ]
+            }
+          }
+        ],
+        "imageId": null
+      },
+      {
+        "id": "item-40",
+        "name": "Ketan Eskrim",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-41",
+        "name": "Ketan Susu Keju",
+        "kind": "product",
+        "category": "Camilan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-42",
+        "name": "Nasi Putih",
+        "kind": "product",
+        "category": "Tambahan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 5000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "item-43",
+        "name": "Telur",
+        "kind": "product",
+        "category": "Tambahan",
+        "description": "",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 5000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "cumi-ijo",
+        "name": "Nasi Cumi Ijo",
+        "kind": "product",
+        "category": "Nasi cumi & ayam",
+        "description": "",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": null,
+          "currency": "IDR",
+          "checkedAt": null,
+          "sourceIds": []
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "cumi-ijo"
+      },
+      {
+        "id": "cumi-matah",
+        "name": "Nasi Cumi Matah",
+        "kind": "product",
+        "category": "Nasi cumi & ayam",
+        "description": "",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": null,
+          "currency": "IDR",
+          "checkedAt": null,
+          "sourceIds": []
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "cumi-matah"
+      },
+      {
+        "id": "ayam-matah",
+        "name": "Nasi Ayam Matah",
+        "kind": "product",
+        "category": "Nasi cumi & ayam",
+        "description": "",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": null,
+          "currency": "IDR",
+          "checkedAt": null,
+          "sourceIds": []
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ayam-matah"
+      },
+      {
+        "id": "ayam-ijo",
+        "name": "Nasi Ayam Ijo",
+        "kind": "product",
+        "category": "Nasi cumi & ayam",
+        "description": "",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": null,
+          "currency": "IDR",
+          "checkedAt": null,
+          "sourceIds": []
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ayam-ijo"
+      }
+    ]
+  },
+  "assets": {
+    "items": [
+      {
+        "id": "logo",
+        "kind": "logo",
+        "subject": "logo",
+        "sourceIds": [
+          "profile"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero",
+          "footer"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Warung Kopi Duduk Gembira",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/logo.webp",
+        "embedUrl": null,
+        "width": 150,
+        "height": 61
+      },
+      {
+        "id": "terrace",
+        "kind": "image",
+        "subject": "terrace",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero",
+          "atmosphere",
+          "location"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "infogarut",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/terrace.webp",
+        "embedUrl": null,
+        "width": 1152,
+        "height": 1439
+      },
+      {
+        "id": "interior",
+        "kind": "image",
+        "subject": "interior",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "atmosphere"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "infogarut",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/interior.webp",
+        "embedUrl": null,
+        "width": 1152,
+        "height": 1439
+      },
+      {
+        "id": "cumi-ijo",
+        "kind": "image",
+        "subject": "cumi-ijo",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "productIds": [
+          "cumi-ijo"
+        ],
+        "sectionIds": [
+          "dishes"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Warung Kopi Duduk Gembira",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/cumi-ijo.webp",
+        "embedUrl": null,
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "id": "cumi-matah",
+        "kind": "image",
+        "subject": "cumi-matah",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "productIds": [
+          "cumi-matah"
+        ],
+        "sectionIds": [
+          "dishes"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Warung Kopi Duduk Gembira",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/cumi-matah.webp",
+        "embedUrl": null,
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "id": "ayam-matah",
+        "kind": "image",
+        "subject": "ayam-matah",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "productIds": [
+          "ayam-matah"
+        ],
+        "sectionIds": [
+          "dishes"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Warung Kopi Duduk Gembira",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ayam-matah.webp",
+        "embedUrl": null,
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "id": "ayam-ijo",
+        "kind": "image",
+        "subject": "ayam-ijo",
+        "sourceIds": [
+          "new-menu"
+        ],
+        "productIds": [
+          "ayam-ijo"
+        ],
+        "sectionIds": [
+          "dishes"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Warung Kopi Duduk Gembira",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ayam-ijo.webp",
+        "embedUrl": null,
+        "width": 720,
+        "height": 900
+      },
+      {
+        "id": "font-display",
+        "kind": "font",
+        "subject": "Bree Serif display adaptation",
+        "sourceIds": [
+          "font-display"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [
+          "public/fonts/bree-serif-OFL.txt"
+        ],
+        "attribution": "Google Fonts / font authors",
+        "deliveryMethod": "file",
+        "runtimePath": "public/fonts/bree-serif.ttf",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      },
+      {
+        "id": "font-body",
+        "kind": "font",
+        "subject": "body",
+        "sourceIds": [
+          "font-body"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [
+          "public/fonts/body-OFL.txt"
+        ],
+        "attribution": "Google Fonts / font authors",
+        "deliveryMethod": "file",
+        "runtimePath": "public/fonts/body.woff2",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "pagePlan": {
+    "prospectId": "duduk-gembira-garut",
+    "primaryGoal": "Help visitors explore food, find opening hours and visit or contact the cafe.",
+    "features": {
+      "catalogue": true,
+      "categoryFilter": true,
+      "search": true,
+      "stickyToolbar": false,
+      "loadMore": false,
+      "productDialog": false,
+      "carousel": false,
+      "accordion": false,
+      "location": true
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "features": []
+      },
+      {
+        "id": "atmosphere",
+        "features": []
+      },
+      {
+        "id": "dishes",
+        "features": []
+      },
+      {
+        "id": "catalogue",
+        "features": [
+          "catalogue",
+          "categoryFilter",
+          "search"
+        ]
+      },
+      {
+        "id": "location",
+        "features": [
+          "location"
+        ]
+      },
+      {
+        "id": "footer",
+        "features": []
+      }
+    ],
+    "media": [
+      {
+        "assetId": "logo",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "logo",
+        "productId": null,
+        "sectionId": "footer"
+      },
+      {
+        "assetId": "terrace",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "interior",
+        "productId": null,
+        "sectionId": "atmosphere"
+      },
+      {
+        "assetId": "cumi-ijo",
+        "productId": "cumi-ijo",
+        "sectionId": "dishes"
+      },
+      {
+        "assetId": "cumi-matah",
+        "productId": "cumi-matah",
+        "sectionId": "dishes"
+      },
+      {
+        "assetId": "ayam-matah",
+        "productId": "ayam-matah",
+        "sectionId": "dishes"
+      },
+      {
+        "assetId": "ayam-ijo",
+        "productId": "ayam-ijo",
+        "sectionId": "dishes"
+      },
+      {
+        "assetId": "font-display",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "font-body",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "terrace",
+        "productId": null,
+        "sectionId": "location"
+      }
+    ],
+    "layoutSignature": {
+      "hero": "full-photo",
+      "sequence": "place-first",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "destination"
+    },
+    "candidates": [
+      {
+        "id": "a",
+        "layoutSignature": {
+          "hero": "full-photo",
+          "sequence": "place-first",
+          "catalogue": "compact-rows",
+          "media": "alternating-scenes",
+          "narrative": "destination"
+        },
+        "rationale": "Photo-first terrace with retro sign composition, exact SKU dish selector, and a green menu board replacing repeated product cards."
+      },
+      {
+        "id": "b",
+        "layoutSignature": {
+          "hero": "split-product",
+          "sequence": "product-first",
+          "catalogue": "open-grid",
+          "media": "mosaic",
+          "narrative": "curated-selection"
+        },
+        "rationale": "Rejected: complete grid implies item photography unavailable for most of the menu; place identity is more distinctive."
+      }
+    ],
+    "selectedCandidate": "a",
+    "brand": {
+      "colors": [
+        "#faf5df",
+        "#b6251b",
+        "#234b37"
+      ],
+      "fontRationale": "Bree Serif licensed display adaptation for the explicit retro warung direction; DM Sans controls/body; actual logo image retained. Not claimed as original logo font."
+    },
+    "desktop": "Photo-first terrace hero with framed serif sign, scene story, one product spotlight with protein/sambal radio controls, green dashed menu board with category/search, practical visit rows.",
+    "mobile": "Full-width terrace scene and sign, one dish photo and radio options instead of repeated 2x2 grid, default Kopi subset and expandable inline search across all47 records.",
+    "motion": "MotionConfig reducedMotion=user; reduced-motion-aware hero and product crossfade; search expansion respects prefers-reduced-motion; shadcn Select transition.",
+    "componentProvenance": "Official shadcn base-nova RadioGroup registry (research/radio-group-registry.json), local official Input copy, existing Button/Select; @base-ui/react primitives retained.",
+    "featureNotes": {
+      "stickyToolbar": "Unnecessary for a short category-at-a-time text catalogue; no simulated transactions.",
+      "loadMore": "Unnecessary for a short category-at-a-time text catalogue; no simulated transactions.",
+      "productDialog": "Unnecessary for a short category-at-a-time text catalogue; no simulated transactions.",
+      "carousel": "Unnecessary for a short category-at-a-time text catalogue; no simulated transactions.",
+      "accordion": "Unnecessary for a short category-at-a-time text catalogue; no simulated transactions."
+    },
+    "contentCoverage": [
+      {
+        "finding": "Name, hours, contact",
+        "sourceIds": [
+          "profile"
+        ],
+        "placement": "hero, location, footer"
+      },
+      {
+        "finding": "43 menu items + 4 named rice dishes",
+        "sourceIds": [
+          "menu",
+          "new-menu"
+        ],
+        "placement": "dishes + catalogue"
+      },
+      {
+        "finding": "Address and vintage setting",
+        "sourceIds": [
+          "kelas",
+          "place"
+        ],
+        "placement": "atmosphere, location"
+      },
+      {
+        "finding": "Kelas Gembira and Bukber promos",
+        "sourceIds": [
+          "kelas",
+          "bukber"
+        ],
+        "placement": "omitted",
+        "reason": "Old promotions without confirmed current terms or validity; WhatsApp contact remains available."
+      },
+      {
+        "finding": "Moment, Sobat Gembira, Nobar, Event Musik, Sahur, Sehabis Terawih",
+        "sourceIds": [
+          "profile"
+        ],
+        "placement": "Instagram link in story and footer",
+        "reason": "Historical social/event highlights do not establish any upcoming event schedule or bookable package. No active schedule asserted."
+      }
+    ],
+    "mediaCoverage": {
+      "exactProductPhotos": 4,
+      "totalProducts": 47,
+      "placePhotos": 2,
+      "logo": 1,
+      "gap": "No exact photos for 43 base menu items. Render these as text rows rather than borrow photos. GoFood safety check prevented access; direct official carousel supplied rice photos. No PDF or Linktree in official bio. Original menu is a story screenshot; no downloaded PDF claimed.",
+      "contactSheet": "research/contact-sheet.jpg"
+    },
+    "historyComparison": "All five axes differ from accepted Historia baseline.",
+    "redesignStatus": "Implemented locally. Existing historical QA files were not rewritten; current visual and interaction review is pending parent browser QA.",
+    "mapEmbed": "Google Maps iframe queried with the same verified business/address as the existing directions link; genuine local terrace image is separate from Google imagery."
+  }
+}

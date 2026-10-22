@@ -1,0 +1,124 @@
+[
+  {
+    "prospectId": "historia-garut",
+    "name": "Historia Coffee & Eatery Garut",
+    "status": "accepted",
+    "date": "2026-10-21",
+    "signature": {
+      "hero": "full-photo",
+      "sequence": "product-first",
+      "catalogue": "featured-to-grid",
+      "media": "horizontal-strip",
+      "narrative": "shared-moments"
+    },
+    "sectionOrder": [
+      "hero",
+      "moving-words",
+      "featured-dishes",
+      "catalogue",
+      "atmosphere",
+      "events",
+      "location",
+      "contact"
+    ],
+    "evidence": "User accepted result after single-classification sticky toolbar and inline carousel CTA revisions in the Historia session. Baseline of one accepted demo, not proof of a larger portfolio."
+  },
+  {
+    "prospectId": "duduk-gembira-garut",
+    "name": "Warung Kopi Duduk Gembira",
+    "status": "built",
+    "date": "2026-10-22",
+    "signature": {
+      "hero": "brand-typographic",
+      "sequence": "place-first",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "destination"
+    },
+    "sectionOrder": [
+      "hero",
+      "atmosphere",
+      "dishes",
+      "catalogue",
+      "location",
+      "footer"
+    ],
+    "evidence": "duduk-gembira/research/quality/evidence/desktop-full.png",
+    "revision": "2026-10-22 brand and information architecture revision",
+    "visualDirection": "terrace photo hero; retro menu board; interactive protein-sambal spotlight",
+    "revisionEvidence": "../artifacts/demo-redesign/review.md"
+  },
+  {
+    "prospectId": "talkie-space-garut",
+    "name": "Talkie Space",
+    "status": "built",
+    "date": "2026-10-22",
+    "signature": {
+      "hero": "split-product",
+      "sequence": "story-to-offer",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "product-craft"
+    },
+    "sectionOrder": [
+      "hero",
+      "story",
+      "breakfast",
+      "catalogue",
+      "visit"
+    ],
+    "evidence": "talkie-space/research/quality/evidence/1440.png",
+    "revision": "2026-10-22 brand and information architecture revision",
+    "visualDirection": "dark contour hero; quiet sections; active-category sidebar",
+    "revisionEvidence": "../artifacts/demo-redesign/review.md"
+  },
+  {
+    "prospectId": "gulapadi-garut",
+    "name": "Gulapadi Garut",
+    "status": "built",
+    "date": "2026-10-22",
+    "signature": {
+      "hero": "photo-collage",
+      "sequence": "essentials-first",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "quick-visit"
+    },
+    "sectionOrder": [
+      "hero",
+      "hours",
+      "donat",
+      "catalogue",
+      "buffet",
+      "location"
+    ],
+    "evidence": "gulapadi/review/evidence/view-1440.png",
+    "revision": "2026-10-22 brand and information architecture revision",
+    "visualDirection": "red photo collage; compact paginated catalogue; comparative buffet table",
+    "revisionEvidence": "../artifacts/demo-redesign/review.md"
+  },
+  {
+    "prospectId": "bumi-upi-garut",
+    "name": "Bumi Upi",
+    "status": "built",
+    "date": "2026-10-22",
+    "signature": {
+      "hero": "split-product",
+      "sequence": "place-first",
+      "catalogue": "photo-rows",
+      "media": "mosaic",
+      "narrative": "destination"
+    },
+    "sectionOrder": [
+      "hero",
+      "suasana",
+      "menu",
+      "together",
+      "kunjungi"
+    ],
+    "evidence": "bumi-upi/research/quality/evidence/desktop-full.png",
+    "revision": "2026-10-22 brand and information architecture revision",
+    "visualDirection": "house photo print; recipe-book spreads; venue memory album",
+    "revisionEvidence": "../artifacts/demo-redesign/review.md"
+  }
+]

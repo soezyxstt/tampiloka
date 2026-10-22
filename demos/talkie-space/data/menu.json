@@ -1,0 +1,2095 @@
+[
+  {
+    "id": "nasi-telur-pontianak",
+    "name": "Nasi Telur Pontianak",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-daun-jeruk",
+    "name": "Nasi Daun Jeruk",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 20000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-goreng-bawang",
+    "name": "Nasi Goreng Bawang",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 20000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-kuah-kari",
+    "name": "Nasi Kuah Kari",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 20000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "roti-bakar-kaya-coklat",
+    "name": "Roti Bakar Kaya / Coklat",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "wijen-salad-chicken-grill",
+    "name": "Wijen Salad Chicken Grill",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "caesar-salad-chicken-grill",
+    "name": "Caesar Salad Chicken Grill",
+    "kind": "product",
+    "category": "Sarapan",
+    "description": "Tersedia pukul 08.00–11.00.",
+    "sourceIds": [
+      "menu-2"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-2"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-schnitzel",
+    "name": "Chicken Schnitzel",
+    "kind": "product",
+    "category": "Western",
+    "description": "",
+    "sourceIds": [
+      "menu-3"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-3"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "schnitzel"
+  },
+  {
+    "id": "chicken-bbq-steak",
+    "name": "Chicken BBQ Steak",
+    "kind": "product",
+    "category": "Western",
+    "description": "",
+    "sourceIds": [
+      "menu-3"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 40000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-3"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "bbq"
+  },
+  {
+    "id": "hot-garlic-fried-chicken",
+    "name": "Hot Garlic Fried Chicken",
+    "kind": "product",
+    "category": "Asian",
+    "description": "",
+    "sourceIds": [
+      "menu-4"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 33000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-4"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-creamy-mushroom",
+    "name": "Chicken Creamy Mushroom",
+    "kind": "product",
+    "category": "Asian",
+    "description": "",
+    "sourceIds": [
+      "menu-4"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-4"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-katsu-kare",
+    "name": "Chicken Katsu Kare",
+    "kind": "product",
+    "category": "Asian",
+    "description": "",
+    "sourceIds": [
+      "menu-4"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-4"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-ayam-goreng-crunchy",
+    "name": "Nasi Ayam Goreng Crunchy",
+    "kind": "product",
+    "category": "Nusantara",
+    "description": "",
+    "sourceIds": [
+      "menu-5"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-5"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "crunchy"
+  },
+  {
+    "id": "nasi-sei-sapi",
+    "name": "Nasi Sei Sapi",
+    "kind": "product",
+    "category": "Nusantara",
+    "description": "",
+    "sourceIds": [
+      "menu-5"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-5"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "sei"
+  },
+  {
+    "id": "nasi-oseng-cumi-sambal-ijo",
+    "name": "Nasi Oseng Cumi Sambal Ijo",
+    "kind": "product",
+    "category": "Nusantara",
+    "description": "",
+    "sourceIds": [
+      "menu-5"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-5"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cumi"
+  },
+  {
+    "id": "nasi-oseng-sapi-mercon",
+    "name": "Nasi Oseng Sapi Mercon",
+    "kind": "product",
+    "category": "Nusantara",
+    "description": "",
+    "sourceIds": [
+      "menu-6"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-6"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "mercon"
+  },
+  {
+    "id": "nasi-oseng-sapi-gongso",
+    "name": "Nasi Oseng Sapi Gongso",
+    "kind": "product",
+    "category": "Nusantara",
+    "description": "",
+    "sourceIds": [
+      "menu-6"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-6"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "gongso"
+  },
+  {
+    "id": "nasi-sop-daging-sapi",
+    "name": "Nasi Sop Daging Sapi",
+    "kind": "product",
+    "category": "Nusantara",
+    "description": "",
+    "sourceIds": [
+      "menu-6"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-6"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "sop"
+  },
+  {
+    "id": "nasi-goreng-kecombrang",
+    "name": "Nasi Goreng Kecombrang",
+    "kind": "product",
+    "category": "Nasi goreng",
+    "description": "",
+    "sourceIds": [
+      "menu-7"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-7"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-goreng-rempah",
+    "name": "Nasi Goreng Rempah",
+    "kind": "product",
+    "category": "Nasi goreng",
+    "description": "",
+    "sourceIds": [
+      "menu-7"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-7"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-goreng-smoky",
+    "name": "Nasi Goreng Smoky",
+    "kind": "product",
+    "category": "Nasi goreng",
+    "description": "",
+    "sourceIds": [
+      "menu-7"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-7"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "nasi-goreng-cumi-sambal-ijo",
+    "name": "Nasi Goreng Cumi Sambal Ijo",
+    "kind": "product",
+    "category": "Nasi goreng",
+    "description": "",
+    "sourceIds": [
+      "menu-7"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-7"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-salted-egg",
+    "name": "Chicken Salted Egg",
+    "kind": "product",
+    "category": "Rice bowl",
+    "description": "",
+    "sourceIds": [
+      "menu-8"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-8"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-cabe-garam",
+    "name": "Chicken Cabe Garam",
+    "kind": "product",
+    "category": "Rice bowl",
+    "description": "",
+    "sourceIds": [
+      "menu-8"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-8"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-teriyaki",
+    "name": "Chicken Teriyaki",
+    "kind": "product",
+    "category": "Rice bowl",
+    "description": "",
+    "sourceIds": [
+      "menu-8"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-8"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "beef-gyudon",
+    "name": "Beef Gyudon",
+    "kind": "product",
+    "category": "Rice bowl",
+    "description": "",
+    "sourceIds": [
+      "menu-8"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-8"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "gyudon"
+  },
+  {
+    "id": "mie-kuah-ayam-creamy",
+    "name": "Mie Kuah Ayam Creamy",
+    "kind": "product",
+    "category": "Mie",
+    "description": "",
+    "sourceIds": [
+      "menu-9"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-9"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "mie-kuah-sapi-shoyu",
+    "name": "Mie Kuah Sapi Shoyu",
+    "kind": "product",
+    "category": "Mie",
+    "description": "",
+    "sourceIds": [
+      "menu-9"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-9"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "mie-goreng-jawa",
+    "name": "Mie Goreng Jawa",
+    "kind": "product",
+    "category": "Mie",
+    "description": "",
+    "sourceIds": [
+      "menu-9"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-9"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "aglio-olio",
+    "name": "Aglio Olio",
+    "kind": "product",
+    "category": "Pasta",
+    "description": "",
+    "sourceIds": [
+      "menu-10"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-10"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "creamy-mushroom",
+    "name": "Creamy Mushroom",
+    "kind": "product",
+    "category": "Pasta",
+    "description": "",
+    "sourceIds": [
+      "menu-10"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-10"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "creamy-carbonara",
+    "name": "Creamy Carbonara",
+    "kind": "product",
+    "category": "Pasta",
+    "description": "",
+    "sourceIds": [
+      "menu-10"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 40000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-10"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "french-fries",
+    "name": "French Fries",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "talkie-platter",
+    "name": "Talkie Platter",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 40000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "tahu-salted-egg",
+    "name": "Tahu Salted Egg",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "tahu-cabe-garam",
+    "name": "Tahu Cabe Garam",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "cireng-rujak",
+    "name": "Cireng Rujak",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-wings-bbq",
+    "name": "Chicken Wings BBQ",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 33000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "chicken-wings-parmesan",
+    "name": "Chicken Wings Parmesan",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "pisang-wijen",
+    "name": "Pisang Wijen",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "dimsum-ayam",
+    "name": "Dimsum Ayam",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "bola-bola-mochi",
+    "name": "Bola-bola Mochi",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "tahu-aci",
+    "name": "Tahu Aci",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-11"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-11"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "quesadillas-beef",
+    "name": "Quesadillas Beef",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-12"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-12"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "quesadilla-beef"
+  },
+  {
+    "id": "quesadillas-banana",
+    "name": "Quesadillas Banana",
+    "kind": "product",
+    "category": "Camilan",
+    "description": "",
+    "sourceIds": [
+      "menu-12"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 40000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-12"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "quesadilla-banana"
+  },
+  {
+    "id": "roti-gandum-kaya-toast",
+    "name": "Roti Gandum Kaya Toast",
+    "kind": "product",
+    "category": "Toast",
+    "description": "",
+    "sourceIds": [
+      "menu-13"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-13"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "roti-gandum-choco-toast",
+    "name": "Roti Gandum Choco Toast",
+    "kind": "product",
+    "category": "Toast",
+    "description": "",
+    "sourceIds": [
+      "menu-13"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-13"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "toast-bread-ice-cream",
+    "name": "Toast Bread Ice Cream",
+    "kind": "product",
+    "category": "Toast",
+    "description": "",
+    "sourceIds": [
+      "menu-13"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-13"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "lava-toast-bread",
+    "name": "Lava Toast Bread",
+    "kind": "product",
+    "category": "Toast",
+    "description": "",
+    "sourceIds": [
+      "menu-13"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-13"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "espresso",
+    "name": "Espresso",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "long-black",
+    "name": "Long Black",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "cappucino",
+    "name": "Cappucino",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "cafe-latte",
+    "name": "Cafe Latte",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 33000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "magic",
+    "name": "Magic",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 33000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "spanish-latte",
+    "name": "Spanish Latte",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "split-shot",
+    "name": "Split Shot",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "dirty-latte",
+    "name": "Dirty Latte",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "alcapone",
+    "name": "AlCapone",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "papa-brown",
+    "name": "Papa Brown",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "papa-butterscotch",
+    "name": "Papa Butterscotch",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "papa-salted-caramel",
+    "name": "Papa Salted Caramel",
+    "kind": "product",
+    "category": "Kopi",
+    "description": "",
+    "sourceIds": [
+      "menu-14"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-14"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "local",
+    "name": "Local",
+    "kind": "product",
+    "category": "Filter coffee",
+    "description": "",
+    "sourceIds": [
+      "menu-15"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-15"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "seasonal",
+    "name": "Seasonal",
+    "kind": "product",
+    "category": "Filter coffee",
+    "description": "",
+    "sourceIds": [
+      "menu-15"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-15"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "import",
+    "name": "Import",
+    "kind": "product",
+    "category": "Filter coffee",
+    "description": "Pilihan biji kopi, tanyakan kepada barista.",
+    "sourceIds": [
+      "menu-15"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": null,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-15"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "mont-blanc",
+    "name": "Mont Blanc",
+    "kind": "product",
+    "category": "Mocktail black",
+    "description": "",
+    "sourceIds": [
+      "menu-16"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-16"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "sanctuary",
+    "name": "Sanctuary",
+    "kind": "product",
+    "category": "Mocktail black",
+    "description": "",
+    "sourceIds": [
+      "menu-16"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-16"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "black-lemonade",
+    "name": "Black Lemonade",
+    "kind": "product",
+    "category": "Mocktail black",
+    "description": "",
+    "sourceIds": [
+      "menu-16"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 33000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-16"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "black-tamarind",
+    "name": "Black Tamarind",
+    "kind": "product",
+    "category": "Mocktail black",
+    "description": "",
+    "sourceIds": [
+      "menu-16"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-16"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "koffie-talkie",
+    "name": "Koffie Talkie",
+    "kind": "product",
+    "category": "Mocktail black",
+    "description": "",
+    "sourceIds": [
+      "menu-16"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-16"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "coco-lime",
+    "name": "Coco Lime",
+    "kind": "product",
+    "category": "Mocktail",
+    "description": "",
+    "sourceIds": [
+      "menu-17"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-17"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "red-rose",
+    "name": "Red Rose",
+    "kind": "product",
+    "category": "Mocktail",
+    "description": "",
+    "sourceIds": [
+      "menu-17"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-17"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "red-rox",
+    "name": "Red Rox",
+    "kind": "product",
+    "category": "Mocktail",
+    "description": "",
+    "sourceIds": [
+      "menu-17"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-17"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "matcha-latte",
+    "name": "Matcha Latte",
+    "kind": "product",
+    "category": "Matcha",
+    "description": "",
+    "sourceIds": [
+      "menu-18"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-18"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "matcha-coco",
+    "name": "Matcha Coco",
+    "kind": "product",
+    "category": "Matcha",
+    "description": "",
+    "sourceIds": [
+      "menu-18"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-18"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "matcha-berry",
+    "name": "Matcha Berry",
+    "kind": "product",
+    "category": "Matcha",
+    "description": "",
+    "sourceIds": [
+      "menu-18"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-18"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "dirty-matcha",
+    "name": "Dirty Matcha",
+    "kind": "product",
+    "category": "Matcha",
+    "description": "",
+    "sourceIds": [
+      "menu-18"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 45000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-18"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "cheese-latte",
+    "name": "Cheese Latte",
+    "kind": "product",
+    "category": "Cheese series",
+    "description": "",
+    "sourceIds": [
+      "menu-19"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-19"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "cheese-latte"
+  },
+  {
+    "id": "matcha-cheese",
+    "name": "Matcha Cheese",
+    "kind": "product",
+    "category": "Cheese series",
+    "description": "",
+    "sourceIds": [
+      "menu-19"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-19"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "matcha-cheese"
+  },
+  {
+    "id": "choco-cheese",
+    "name": "Choco Cheese",
+    "kind": "product",
+    "category": "Cheese series",
+    "description": "",
+    "sourceIds": [
+      "menu-19"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-19"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "choco-cheese"
+  },
+  {
+    "id": "chocolate-latte",
+    "name": "Chocolate Latte",
+    "kind": "product",
+    "category": "Non-coffee",
+    "description": "",
+    "sourceIds": [
+      "menu-20"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-20"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "chocolate"
+  },
+  {
+    "id": "chocolate-caramel",
+    "name": "Chocolate Caramel",
+    "kind": "product",
+    "category": "Non-coffee",
+    "description": "",
+    "sourceIds": [
+      "menu-20"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-20"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "choco-caramel"
+  },
+  {
+    "id": "milky-mango",
+    "name": "Milky Mango",
+    "kind": "product",
+    "category": "Non-coffee",
+    "description": "",
+    "sourceIds": [
+      "menu-20"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-20"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": "milky-mango"
+  },
+  {
+    "id": "frappe-matcha",
+    "name": "Frappe Matcha",
+    "kind": "product",
+    "category": "Frappe",
+    "description": "",
+    "sourceIds": [
+      "menu-21"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-21"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "frappe-choco",
+    "name": "Frappe Choco",
+    "kind": "product",
+    "category": "Frappe",
+    "description": "",
+    "sourceIds": [
+      "menu-21"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-21"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "frappucino",
+    "name": "Frappucino",
+    "kind": "product",
+    "category": "Frappe",
+    "description": "",
+    "sourceIds": [
+      "menu-21"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 38000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-21"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "green-organic",
+    "name": "Green Organic",
+    "kind": "product",
+    "category": "Healthy",
+    "description": "",
+    "sourceIds": [
+      "menu-22"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-22"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "honey-purple",
+    "name": "Honey Purple",
+    "kind": "product",
+    "category": "Healthy",
+    "description": "",
+    "sourceIds": [
+      "menu-22"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-22"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "pine-berry",
+    "name": "Pine Berry",
+    "kind": "product",
+    "category": "Healthy",
+    "description": "",
+    "sourceIds": [
+      "menu-22"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 35000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-22"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "artisan-tea",
+    "name": "Artisan Tea",
+    "kind": "product",
+    "category": "Teh & refreshment",
+    "description": "",
+    "sourceIds": [
+      "menu-23"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 28000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-23"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "lychee-tea",
+    "name": "Lychee Tea",
+    "kind": "product",
+    "category": "Teh & refreshment",
+    "description": "",
+    "sourceIds": [
+      "menu-23"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-23"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "peach-tea",
+    "name": "Peach Tea",
+    "kind": "product",
+    "category": "Teh & refreshment",
+    "description": "",
+    "sourceIds": [
+      "menu-23"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-23"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "lemon-tea",
+    "name": "Lemon Tea",
+    "kind": "product",
+    "category": "Teh & refreshment",
+    "description": "",
+    "sourceIds": [
+      "menu-23"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 25000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-23"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "java-root-beer",
+    "name": "Java Root Beer",
+    "kind": "product",
+    "category": "Teh & refreshment",
+    "description": "",
+    "sourceIds": [
+      "menu-23"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 30000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-23"
+      ]
+    },
+    "promo": null,
+    "variants": [],
+    "imageId": null
+  },
+  {
+    "id": "mineral-water",
+    "name": "Mineral Water",
+    "kind": "product",
+    "category": "Teh & refreshment",
+    "description": "",
+    "sourceIds": [
+      "menu-23"
+    ],
+    "status": "verified",
+    "price": {
+      "amount": 10000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu-23"
+      ]
+    },
+    "promo": null,
+    "variants": [
+      {
+        "id": "option-1",
+        "name": "Pilihan 10K",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        }
+      },
+      {
+        "id": "option-2",
+        "name": "Pilihan 15K",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu-23"
+          ]
+        }
+      }
+    ],
+    "imageId": null
+  }
+]

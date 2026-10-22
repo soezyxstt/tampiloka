@@ -1,0 +1,6642 @@
+{
+  "schemaVersion": 2,
+  "profile": {
+    "prospectId": "bumi-upi-garut",
+    "name": "Bumi Upi",
+    "branch": null,
+    "sources": [
+      {
+        "id": "profile",
+        "url": "https://www.instagram.com/bumiupi/",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome official profile: Rumah Tamah; Garut; daily 07.00-23.00; linked official bio hub.",
+        "summary": "Chrome official profile: Rumah Tamah; Garut; daily 07.00-23.00; linked official bio hub.",
+        "evidencePath": "research/sources.md",
+        "fingerprint": "20a8cdd7c5cdb2255abf63e061d3ef249d539a29427e5942cfc84f225cb44b1e"
+      },
+      {
+        "id": "hub",
+        "url": "https://linktr.ee/bumiupi",
+        "accessedAt": "2026-10-22",
+        "locator": "Chrome bio hub: two PDF menus, address, Instagram, TikTok and verified WhatsApp destination.",
+        "summary": "Chrome bio hub: two PDF menus, address, Instagram, TikTok and verified WhatsApp destination.",
+        "evidencePath": "research/sources.md",
+        "fingerprint": "20a8cdd7c5cdb2255abf63e061d3ef249d539a29427e5942cfc84f225cb44b1e"
+      },
+      {
+        "id": "sarapan",
+        "url": "https://ugc.production.linktr.ee/3b867c63-2791-46f3-ac53-1d5e1ea38437_MENU-SARAPAN.pdf",
+        "accessedAt": "2026-10-22",
+        "locator": "Official linked breakfast menu, 2 raster pages rendered and visually transcribed.",
+        "summary": "Official linked breakfast menu, 2 raster pages rendered and visually transcribed.",
+        "evidencePath": "research/raw/sarapan.pdf",
+        "fingerprint": "74456541f8eb22a563ed4df747fdb5cafbc61ee21c0cbf11ed7fdc8bf720a005"
+      },
+      {
+        "id": "reguler",
+        "url": "https://ugc.production.linktr.ee/b757f7b3-1c06-45fd-ba3a-ec64b4ebe149_MENU-REGULER-BUMI-UPI.pdf",
+        "accessedAt": "2026-10-22",
+        "locator": "Official linked regular menu, 4 raster pages rendered and visually transcribed.",
+        "summary": "Official linked regular menu, 4 raster pages rendered and visually transcribed.",
+        "evidencePath": "research/raw/reguler.pdf",
+        "fingerprint": "27bb22727b487b56e15436d900c22b32eeb552801b41ca537ab3bddb795f6b11"
+      },
+      {
+        "id": "place",
+        "url": "https://momopururu.com/kuliner/bumi-upi-garut/",
+        "accessedAt": "2026-10-22",
+        "locator": "First-person visit May 2026 with original captioned exterior, indoor, courtyard and photobooth images. Rights pending; original watermark retained.",
+        "summary": "First-person visit May 2026 with original captioned exterior, indoor, courtyard and photobooth images. Rights pending; original watermark retained.",
+        "evidencePath": "research/raw/place.html",
+        "fingerprint": "298d49c5ce1bc472939475657df370536470bbb8e232d80e29e32f27ba3c7a24"
+      },
+      {
+        "id": "booth",
+        "url": "https://www.instagram.com/maripoto.id/reel/Ddbn-FAx_ii/",
+        "accessedAt": "2026-10-22",
+        "locator": "Official Bumi Upi grid links Maripoto booth reel; caption confirms booth in Garut.",
+        "summary": "Official Bumi Upi grid links Maripoto booth reel; caption confirms booth in Garut.",
+        "evidencePath": "research/sources.md",
+        "fingerprint": "20a8cdd7c5cdb2255abf63e061d3ef249d539a29427e5942cfc84f225cb44b1e"
+      },
+      {
+        "id": "fonts",
+        "url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Archivo+Black&display=swap",
+        "accessedAt": "2026-10-22",
+        "locator": "Google Fonts open license typeface distributions; substitute hierarchy, not original brand webfonts.",
+        "summary": "Google Fonts open license typeface distributions; substitute hierarchy, not original brand webfonts.",
+        "evidencePath": "research/raw/fonts.css",
+        "fingerprint": "23fa76e6ef0d728c5d13eaa132effe9310f9de3f026f5e599b17a719397210ad"
+      }
+    ],
+    "facts": [
+      {
+        "id": "name",
+        "field": "name",
+        "value": "Bumi Upi",
+        "sourceIds": [
+          "profile",
+          "hub"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported; not reconfirmed by owner."
+      },
+      {
+        "id": "hours",
+        "field": "hours",
+        "value": "Setiap hari 07.00-23.00 WIB",
+        "sourceIds": [
+          "profile"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported; not reconfirmed by owner."
+      },
+      {
+        "id": "address",
+        "field": "address",
+        "value": "Jl. Cimanuk No.312, Pataruman, Tarogong Kidul, Garut 44150",
+        "sourceIds": [
+          "hub"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported; not reconfirmed by owner."
+      },
+      {
+        "id": "contact",
+        "field": "contact",
+        "value": "62895412055152",
+        "sourceIds": [
+          "hub"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported; not reconfirmed by owner."
+      },
+      {
+        "id": "daily",
+        "field": "daily_menu",
+        "value": "Prasmanan dan menu spesial harian, tanyakan pramusaji",
+        "sourceIds": [
+          "reguler"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported; not reconfirmed by owner."
+      },
+      {
+        "id": "photobooth",
+        "field": "photobooth",
+        "value": true,
+        "sourceIds": [
+          "booth",
+          "place"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported; not reconfirmed by owner."
+      }
+    ]
+  },
+  "offerings": {
+    "items": [
+      {
+        "id": "menu-001",
+        "name": "Sate Aci",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Sate vegetarian dengan bumbu kacang.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 14000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-001"
+      },
+      {
+        "id": "menu-002",
+        "name": "Pagordas",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Pangsit goreng mini dengan chili oil.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-002"
+      },
+      {
+        "id": "menu-003",
+        "name": "Bakso Yang Ditukar",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Bakso tusuk bakar.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-003"
+      },
+      {
+        "id": "menu-004",
+        "name": "Pisang Goreng",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Pisang goreng dengan taburan gula palem.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-004"
+      },
+      {
+        "id": "menu-005",
+        "name": "Kentang Sosis",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Sosis dan kentang goreng.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-005"
+      },
+      {
+        "id": "menu-006",
+        "name": "Dimsum Ekonomis",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Dimsum ayam isi 5.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-006"
+      },
+      {
+        "id": "menu-007",
+        "name": "Dimsum Sejahtera",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Dimsum udang isi 3.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-007"
+      },
+      {
+        "id": "menu-008",
+        "name": "Pisang Kukus",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Pisang tanduk kukus dengan cocolan gula palem.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-008"
+      },
+      {
+        "id": "menu-009",
+        "name": "Gorengan Darmaji",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Gorengan dalam satu porsi.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-009"
+      },
+      {
+        "id": "menu-010",
+        "name": "Lumpia Vietnam",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Lumpia sayuran.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-010"
+      },
+      {
+        "id": "menu-011",
+        "name": "Tuangeun Bocil",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Nugget, sosis, sop, dan kentang/nasi. Tambah es coklat Rp7.000.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-011"
+      },
+      {
+        "id": "menu-012",
+        "name": "Cireng Ayah Ojak",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Cireng dengan bumbu uyah dan rujak.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-012"
+      },
+      {
+        "id": "menu-013",
+        "name": "Tahu Cabe Rewel",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Tahu goreng bumbu cabe garam.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-013"
+      },
+      {
+        "id": "menu-014",
+        "name": "Cireng Tahu Gejrot",
+        "kind": "product",
+        "category": "Cemilan",
+        "description": "Tahu dan cireng dengan kuah tahu gejrot.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-014"
+      },
+      {
+        "id": "menu-015",
+        "name": "Pepes Ayam Kampung",
+        "kind": "product",
+        "category": "Pepes",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 48000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-015"
+      },
+      {
+        "id": "menu-016",
+        "name": "Pepes Goreng Ayam Kampung",
+        "kind": "product",
+        "category": "Pepes",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 48000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-016"
+      },
+      {
+        "id": "menu-017",
+        "name": "Pepes Ayam Bule",
+        "kind": "product",
+        "category": "Pepes",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 59000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-017"
+      },
+      {
+        "id": "menu-018",
+        "name": "Pepes Goreng Ayam Bule",
+        "kind": "product",
+        "category": "Pepes",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 59000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-018"
+      },
+      {
+        "id": "menu-019",
+        "name": "Pepes Ikan Mas",
+        "kind": "product",
+        "category": "Pepes",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-019"
+      },
+      {
+        "id": "menu-020",
+        "name": "Mie Kasep",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Mie goreng.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-020"
+      },
+      {
+        "id": "menu-021",
+        "name": "Mie Racing",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Mie kuah gurih dan creamy.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-021"
+      },
+      {
+        "id": "menu-022",
+        "name": "Mie Ebroh",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Mie goreng sambal ulek dengan telur ceplok.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-022"
+      },
+      {
+        "id": "menu-023",
+        "name": "Mie Ayam",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Mie ayam dengan bakso.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-023"
+      },
+      {
+        "id": "menu-024",
+        "name": "Mie Chili Oil",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Mie pedas dengan chili oil dan bakso/pangsit goreng sesuai stok.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-024"
+      },
+      {
+        "id": "menu-025",
+        "name": "Mie Anak Sekolah",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Mie goreng bukan mie instan, tanpa MSG.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 27000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-025"
+      },
+      {
+        "id": "menu-026",
+        "name": "Mie Nostalgia",
+        "kind": "product",
+        "category": "Mie",
+        "description": "Bakmi atau yamin; tersedia cabe atau chili oil.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-026"
+      },
+      {
+        "id": "menu-027",
+        "name": "Nasi Ayam Ajep-Ajep",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi ayam jejepangan, chicken karaage.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-027"
+      },
+      {
+        "id": "menu-028",
+        "name": "Nasi Ayam Omongan Tetangga",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi ayam dengan minyak cabe pedas.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-028"
+      },
+      {
+        "id": "menu-029",
+        "name": "Nasi Ayam Sambal Bali",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi ayam tepung dengan sambal matah.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-029"
+      },
+      {
+        "id": "menu-030",
+        "name": "Nasi Ayam Kalasan",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi ayam goreng manis, lalapan, dan sambal.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 32000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-030"
+      },
+      {
+        "id": "menu-031",
+        "name": "Nasi Kulit Serundeng",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Kulit goreng, serundeng, lalapan, dan sambal.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-031"
+      },
+      {
+        "id": "menu-032",
+        "name": "Bebek Sambel Hejo",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi dan bebek goreng sambal hejo.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-032"
+      },
+      {
+        "id": "menu-033",
+        "name": "Nasi Galo Bumi Upi",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi, beef, sambal bawang, dan pelengkap. Aduk sebelum disantap.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 39000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-033"
+      },
+      {
+        "id": "menu-034",
+        "name": "Nasi Paru Serundeng",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Paru goreng, serundeng, lalapan, dan sambal.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-034"
+      },
+      {
+        "id": "menu-035",
+        "name": "Nasi Dangdutan",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Kulit dan paru goreng, telur dadar crispy, serundeng, lalapan, sambal.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 36000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-035"
+      },
+      {
+        "id": "menu-036",
+        "name": "Nasi Buntut Rewel",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi dengan buntut sapi tumis pedas.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-036"
+      },
+      {
+        "id": "menu-037",
+        "name": "Nasi Buntut Kebakaran",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi dengan buntut bakar dan sop sayuran.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-037"
+      },
+      {
+        "id": "menu-038",
+        "name": "Nasi Ghewlaa",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Nasi dengan sosis, bakso, dan sayur.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 29000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-038"
+      },
+      {
+        "id": "menu-039",
+        "name": "Lidah Sambel Hejo",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Lidah sapi bersambal hejo dengan nasi.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 47000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-039"
+      },
+      {
+        "id": "menu-040",
+        "name": "Buntut Goreng Sambal Hejo",
+        "kind": "product",
+        "category": "Nasi & lauk",
+        "description": "Buntut sapi sambal hejo dengan nasi.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 45000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-040"
+      },
+      {
+        "id": "menu-041",
+        "name": "Nasi Goreng Upiwan",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "Nasi goreng kecap.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-041"
+      },
+      {
+        "id": "menu-042",
+        "name": "Nasi Goreng Upiwati",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "Nasi goreng merah.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 26000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-042"
+      },
+      {
+        "id": "menu-043",
+        "name": "Nasi Goreng Cumi Upi",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "Nasi goreng cumi dengan cabe, pedas.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-043"
+      },
+      {
+        "id": "menu-044",
+        "name": "Nasi Goreng Bunda Kornet",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "Nasi goreng kornet.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 27000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-044"
+      },
+      {
+        "id": "menu-045",
+        "name": "Nasi Goreng Peda Kemangi",
+        "kind": "product",
+        "category": "Nasi goreng",
+        "description": "Nasi goreng dengan peda dan kemangi.",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 27000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-045"
+      },
+      {
+        "id": "menu-046",
+        "name": "Es Cincau Jadoel",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-046-0",
+            "name": "M",
+            "price": {
+              "amount": 19000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-046-1",
+            "name": "L",
+            "price": {
+              "amount": 24000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-046"
+      },
+      {
+        "id": "menu-047",
+        "name": "Es Limun",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-047"
+      },
+      {
+        "id": "menu-048",
+        "name": "Es Soda Gembira",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-048"
+      },
+      {
+        "id": "menu-049",
+        "name": "Es Cincau Hijau",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-049"
+      },
+      {
+        "id": "menu-050",
+        "name": "Es Jeruk",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-050"
+      },
+      {
+        "id": "menu-051",
+        "name": "Es Kelapa Muda",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-051"
+      },
+      {
+        "id": "menu-052",
+        "name": "Es Kelapa Jeruk",
+        "kind": "product",
+        "category": "Minuman",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-052"
+      },
+      {
+        "id": "menu-053",
+        "name": "Es ABC",
+        "kind": "product",
+        "category": "Es-esan",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-053"
+      },
+      {
+        "id": "menu-054",
+        "name": "Es Krim Bumi Upi",
+        "kind": "product",
+        "category": "Es-esan",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-054"
+      },
+      {
+        "id": "menu-055",
+        "name": "Teh Tawar Jumbo",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-055"
+      },
+      {
+        "id": "menu-056",
+        "name": "Teh Manis Jumbo",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-056"
+      },
+      {
+        "id": "menu-057",
+        "name": "Teh Manis",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 13000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-057"
+      },
+      {
+        "id": "menu-058",
+        "name": "Teh Lemon",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-058-0",
+            "name": "M",
+            "price": {
+              "amount": 20000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-058-1",
+            "name": "L",
+            "price": {
+              "amount": 25000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-058"
+      },
+      {
+        "id": "menu-059",
+        "name": "Teh Sereh",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-059"
+      },
+      {
+        "id": "menu-060",
+        "name": "Es Cokelat Malt Dinosaurus",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-060-0",
+            "name": "M",
+            "price": {
+              "amount": 20000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-060-1",
+            "name": "L",
+            "price": {
+              "amount": 25000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-060"
+      },
+      {
+        "id": "menu-061",
+        "name": "Cokelat Malt Panas",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-061"
+      },
+      {
+        "id": "menu-062",
+        "name": "Es Goyobod Alun-Alun",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-062"
+      },
+      {
+        "id": "menu-063",
+        "name": "Teh Susu Tolak Angin",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-063-0",
+            "name": "M",
+            "price": {
+              "amount": 23000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-063-1",
+            "name": "L",
+            "price": {
+              "amount": 25000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-063"
+      },
+      {
+        "id": "menu-064",
+        "name": "Teh Tarik",
+        "kind": "product",
+        "category": "Teh & susu",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-064-0",
+            "name": "M",
+            "price": {
+              "amount": 20000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-064-1",
+            "name": "L",
+            "price": {
+              "amount": 25000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-064"
+      },
+      {
+        "id": "menu-065",
+        "name": "Es Beras Kencur",
+        "kind": "product",
+        "category": "Jejamuan",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-065"
+      },
+      {
+        "id": "menu-066",
+        "name": "Es Kunyit Asem",
+        "kind": "product",
+        "category": "Jejamuan",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-066"
+      },
+      {
+        "id": "menu-067",
+        "name": "Es Beras Kencur Jeruk",
+        "kind": "product",
+        "category": "Jejamuan",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-067"
+      },
+      {
+        "id": "menu-068",
+        "name": "Kopi Hitam",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-068-0",
+            "name": "M",
+            "price": {
+              "amount": 17000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-068-1",
+            "name": "L",
+            "price": {
+              "amount": 22000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-068"
+      },
+      {
+        "id": "menu-069",
+        "name": "Kopi Susu",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-069-0",
+            "name": "M",
+            "price": {
+              "amount": 22000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-069-1",
+            "name": "L",
+            "price": {
+              "amount": 27000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-069"
+      },
+      {
+        "id": "menu-070",
+        "name": "Kopi Susu Butter",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-070"
+      },
+      {
+        "id": "menu-071",
+        "name": "Kopi Susu Santan",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-071-0",
+            "name": "M",
+            "price": {
+              "amount": 25000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-071-1",
+            "name": "L",
+            "price": {
+              "amount": 27000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-071"
+      },
+      {
+        "id": "menu-072",
+        "name": "Kopi Susu Kecap",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-072-0",
+            "name": "M",
+            "price": {
+              "amount": 22000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          },
+          {
+            "id": "menu-072-1",
+            "name": "L",
+            "price": {
+              "amount": 27000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-072"
+      },
+      {
+        "id": "menu-073",
+        "name": "Kopi Krim Soda",
+        "kind": "product",
+        "category": "Kopi",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-073"
+      },
+      {
+        "id": "menu-074",
+        "name": "Jus Tomat",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-074"
+      },
+      {
+        "id": "menu-075",
+        "name": "Jus Sirsak",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-075"
+      },
+      {
+        "id": "menu-076",
+        "name": "Jus Semangka",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-076"
+      },
+      {
+        "id": "menu-077",
+        "name": "Jus Mangga",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-077"
+      },
+      {
+        "id": "menu-078",
+        "name": "Jus Alpukat",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-078"
+      },
+      {
+        "id": "menu-079",
+        "name": "Jus Tapo",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-079"
+      },
+      {
+        "id": "menu-080",
+        "name": "Jus Stroberi",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-080"
+      },
+      {
+        "id": "menu-081",
+        "name": "Jus Jambu",
+        "kind": "product",
+        "category": "Jus",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-081"
+      },
+      {
+        "id": "menu-082",
+        "name": "Roti Bakar Cokelat",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-082"
+      },
+      {
+        "id": "menu-083",
+        "name": "Roti Bakar Nanas",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-083"
+      },
+      {
+        "id": "menu-084",
+        "name": "Roti Bakar Keju",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-084"
+      },
+      {
+        "id": "menu-085",
+        "name": "Roti Bakar Srikaya",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-085"
+      },
+      {
+        "id": "menu-086",
+        "name": "Roti Bakar Gula Klasik",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-086"
+      },
+      {
+        "id": "menu-087",
+        "name": "Burger Gulai Upi",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-087"
+      },
+      {
+        "id": "menu-088",
+        "name": "Roti Bakar Telur",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-088"
+      },
+      {
+        "id": "menu-089",
+        "name": "Roti Bakar Kornet Telur Keju",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-089"
+      },
+      {
+        "id": "menu-090",
+        "name": "Roti Bakar Telur Keju",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-090"
+      },
+      {
+        "id": "menu-091",
+        "name": "Roti Bakar Kornet Telur",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-091"
+      },
+      {
+        "id": "menu-092",
+        "name": "Roti Bakar Kornet",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-092"
+      },
+      {
+        "id": "menu-093",
+        "name": "Roti Bakar Kornet Keju",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "Harga sarapan Rp26.000; harga reguler Rp22.000.",
+        "sourceIds": [
+          "reguler",
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler",
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [
+          {
+            "id": "menu-093-0",
+            "name": "Reguler",
+            "price": {
+              "amount": 22000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "reguler",
+                "sarapan"
+              ]
+            }
+          },
+          {
+            "id": "menu-093-1",
+            "name": "Sarapan",
+            "price": {
+              "amount": 26000,
+              "currency": "IDR",
+              "checkedAt": "2026-10-22",
+              "sourceIds": [
+                "sarapan"
+              ]
+            }
+          }
+        ],
+        "imageId": "image-menu-093"
+      },
+      {
+        "id": "menu-094",
+        "name": "Roti Bakar 2 Rasa",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-094"
+      },
+      {
+        "id": "menu-095",
+        "name": "Roti Bakar Mocca Nougat",
+        "kind": "product",
+        "category": "Roti & burger",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-095"
+      },
+      {
+        "id": "menu-096",
+        "name": "Pisang Bakar Cokelat",
+        "kind": "product",
+        "category": "Pisang bakar",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-096"
+      },
+      {
+        "id": "menu-097",
+        "name": "Pisang Bakar Cokelat Keju",
+        "kind": "product",
+        "category": "Pisang bakar",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-097"
+      },
+      {
+        "id": "menu-098",
+        "name": "Pisang Bakar Keju",
+        "kind": "product",
+        "category": "Pisang bakar",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-098"
+      },
+      {
+        "id": "menu-099",
+        "name": "Pisang Bakar Double Cokelat",
+        "kind": "product",
+        "category": "Pisang bakar",
+        "description": "",
+        "sourceIds": [
+          "reguler"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "reguler"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-099"
+      },
+      {
+        "id": "menu-100",
+        "name": "Tahu Cocol Kerupuk",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Tahu kuning rebus dengan kecap dan kerupuk aci.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-100"
+      },
+      {
+        "id": "menu-101",
+        "name": "B5 (Bala Bala Banjur)",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Bala-bala dengan bumbu kacang dan sayuran.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-101"
+      },
+      {
+        "id": "menu-102",
+        "name": "Nasi Goreng Omah",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi goreng kunyit.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-102"
+      },
+      {
+        "id": "menu-103",
+        "name": "Nasi Goreng Kecombrang",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi goreng kecombrang.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-103"
+      },
+      {
+        "id": "menu-104",
+        "name": "Nasi Kuning Langsai",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi kuning, telur dadar iris, tempe orek, abon, dan sambal kacang.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-104"
+      },
+      {
+        "id": "menu-105",
+        "name": "Nasi Udukwati",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi uduk dengan pelengkap.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-105"
+      },
+      {
+        "id": "menu-106",
+        "name": "Nasi Kuning Ningrat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi kuning, paru, perkedel, telur gimbal, dan pelengkap.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-106"
+      },
+      {
+        "id": "menu-107",
+        "name": "Nasi Udukwati Ningrat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi uduk, paru, telur gimbal, perkedel, dan pelengkap.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-107"
+      },
+      {
+        "id": "menu-108",
+        "name": "Lontong Cap Gomeh",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Lontong kuah gurih dengan sambal goreng kentang.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-108"
+      },
+      {
+        "id": "menu-109",
+        "name": "Nasi Pecelawati",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi pecel sayuran.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-109"
+      },
+      {
+        "id": "menu-110",
+        "name": "Risoles",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Risoles ragout sayuran isi 3.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-110"
+      },
+      {
+        "id": "menu-111",
+        "name": "Pastel",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Pastel sayuran isi 3.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-111"
+      },
+      {
+        "id": "menu-113",
+        "name": "Nasi Telor Sederhana",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Nasi dengan telur ceplok atau dadar.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-113"
+      },
+      {
+        "id": "menu-114",
+        "name": "Leupeut Banjur",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Leupeut dengan bumbu oncom.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-114"
+      },
+      {
+        "id": "menu-115",
+        "name": "Ketan Kinca",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Ketan, kelapa, dan kinca gula aren cair.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-115"
+      },
+      {
+        "id": "menu-116",
+        "name": "Ketan Oncom",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "Ketan dengan serundeng dan sambal oncom.",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-116"
+      },
+      {
+        "id": "menu-117",
+        "name": "Burger Original",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": "",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 27000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "sarapan"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "image-menu-117"
+      }
+    ]
+  },
+  "assets": {
+    "items": [
+      {
+        "id": "image-menu-001",
+        "kind": "image",
+        "subject": "Sate Aci",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-001"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-001.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-002",
+        "kind": "image",
+        "subject": "Pagordas",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-002"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-002.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-003",
+        "kind": "image",
+        "subject": "Bakso Yang Ditukar",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-003"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-003.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-004",
+        "kind": "image",
+        "subject": "Pisang Goreng",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-004"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-004.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-005",
+        "kind": "image",
+        "subject": "Kentang Sosis",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-005"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-005.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-006",
+        "kind": "image",
+        "subject": "Dimsum Ekonomis",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-006"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-006.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-007",
+        "kind": "image",
+        "subject": "Dimsum Sejahtera",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-007"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-007.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-008",
+        "kind": "image",
+        "subject": "Pisang Kukus",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-008"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-008.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-009",
+        "kind": "image",
+        "subject": "Gorengan Darmaji",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-009"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-009.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-010",
+        "kind": "image",
+        "subject": "Lumpia Vietnam",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-010"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-010.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-011",
+        "kind": "image",
+        "subject": "Tuangeun Bocil",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-011"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-011.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-012",
+        "kind": "image",
+        "subject": "Cireng Ayah Ojak",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-012"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-012.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-013",
+        "kind": "image",
+        "subject": "Tahu Cabe Rewel",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-013"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-013.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-014",
+        "kind": "image",
+        "subject": "Cireng Tahu Gejrot",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-014"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-014.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-015",
+        "kind": "image",
+        "subject": "Pepes Ayam Kampung",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-015"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-015.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-016",
+        "kind": "image",
+        "subject": "Pepes Goreng Ayam Kampung",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-016"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-016.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-017",
+        "kind": "image",
+        "subject": "Pepes Ayam Bule",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-017"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-017.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-018",
+        "kind": "image",
+        "subject": "Pepes Goreng Ayam Bule",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-018"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-018.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-019",
+        "kind": "image",
+        "subject": "Pepes Ikan Mas",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-019"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-019.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-020",
+        "kind": "image",
+        "subject": "Mie Kasep",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-020"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-020.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-021",
+        "kind": "image",
+        "subject": "Mie Racing",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-021"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-021.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-022",
+        "kind": "image",
+        "subject": "Mie Ebroh",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-022"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-022.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-023",
+        "kind": "image",
+        "subject": "Mie Ayam",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-023"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-023.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-024",
+        "kind": "image",
+        "subject": "Mie Chili Oil",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-024"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-024.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-025",
+        "kind": "image",
+        "subject": "Mie Anak Sekolah",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-025"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-025.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-026",
+        "kind": "image",
+        "subject": "Mie Nostalgia",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-026"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-026.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-027",
+        "kind": "image",
+        "subject": "Nasi Ayam Ajep-Ajep",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-027"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-027.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-028",
+        "kind": "image",
+        "subject": "Nasi Ayam Omongan Tetangga",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-028"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-028.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-029",
+        "kind": "image",
+        "subject": "Nasi Ayam Sambal Bali",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-029"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-029.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-030",
+        "kind": "image",
+        "subject": "Nasi Ayam Kalasan",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-030"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-030.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-031",
+        "kind": "image",
+        "subject": "Nasi Kulit Serundeng",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-031"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-031.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-032",
+        "kind": "image",
+        "subject": "Bebek Sambel Hejo",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-032"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-032.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-033",
+        "kind": "image",
+        "subject": "Nasi Galo Bumi Upi",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-033"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-033.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-034",
+        "kind": "image",
+        "subject": "Nasi Paru Serundeng",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-034"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-034.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-035",
+        "kind": "image",
+        "subject": "Nasi Dangdutan",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-035"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-035.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-036",
+        "kind": "image",
+        "subject": "Nasi Buntut Rewel",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-036"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-036.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-037",
+        "kind": "image",
+        "subject": "Nasi Buntut Kebakaran",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-037"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-037.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-038",
+        "kind": "image",
+        "subject": "Nasi Ghewlaa",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-038"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-038.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-039",
+        "kind": "image",
+        "subject": "Lidah Sambel Hejo",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-039"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-039.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-040",
+        "kind": "image",
+        "subject": "Buntut Goreng Sambal Hejo",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-040"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-040.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-041",
+        "kind": "image",
+        "subject": "Nasi Goreng Upiwan",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-041"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-041.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-042",
+        "kind": "image",
+        "subject": "Nasi Goreng Upiwati",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-042"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-042.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-043",
+        "kind": "image",
+        "subject": "Nasi Goreng Cumi Upi",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-043"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-043.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-044",
+        "kind": "image",
+        "subject": "Nasi Goreng Bunda Kornet",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-044"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-044.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-045",
+        "kind": "image",
+        "subject": "Nasi Goreng Peda Kemangi",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-045"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-045.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-046",
+        "kind": "image",
+        "subject": "Es Cincau Jadoel",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-046"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-046.webp",
+        "embedUrl": null,
+        "width": 94,
+        "height": 113
+      },
+      {
+        "id": "image-menu-047",
+        "kind": "image",
+        "subject": "Es Limun",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-047"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-047.webp",
+        "embedUrl": null,
+        "width": 92,
+        "height": 112
+      },
+      {
+        "id": "image-menu-048",
+        "kind": "image",
+        "subject": "Es Soda Gembira",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-048"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-048.webp",
+        "embedUrl": null,
+        "width": 91,
+        "height": 112
+      },
+      {
+        "id": "image-menu-049",
+        "kind": "image",
+        "subject": "Es Cincau Hijau",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-049"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-049.webp",
+        "embedUrl": null,
+        "width": 92,
+        "height": 112
+      },
+      {
+        "id": "image-menu-050",
+        "kind": "image",
+        "subject": "Es Jeruk",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-050"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-050.webp",
+        "embedUrl": null,
+        "width": 93,
+        "height": 112
+      },
+      {
+        "id": "image-menu-051",
+        "kind": "image",
+        "subject": "Es Kelapa Muda",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-051"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-051.webp",
+        "embedUrl": null,
+        "width": 90,
+        "height": 112
+      },
+      {
+        "id": "image-menu-052",
+        "kind": "image",
+        "subject": "Es Kelapa Jeruk",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-052"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-052.webp",
+        "embedUrl": null,
+        "width": 98,
+        "height": 112
+      },
+      {
+        "id": "image-menu-053",
+        "kind": "image",
+        "subject": "Es ABC",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-053"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-053.webp",
+        "embedUrl": null,
+        "width": 163,
+        "height": 106
+      },
+      {
+        "id": "image-menu-054",
+        "kind": "image",
+        "subject": "Es Krim Bumi Upi",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-054"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-054.webp",
+        "embedUrl": null,
+        "width": 121,
+        "height": 121
+      },
+      {
+        "id": "image-menu-055",
+        "kind": "image",
+        "subject": "Teh Tawar Jumbo",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-055"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-055.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-056",
+        "kind": "image",
+        "subject": "Teh Manis Jumbo",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-056"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-056.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-057",
+        "kind": "image",
+        "subject": "Teh Manis",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-057"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-057.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-058",
+        "kind": "image",
+        "subject": "Teh Lemon",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-058"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-058.webp",
+        "embedUrl": null,
+        "width": 100,
+        "height": 109
+      },
+      {
+        "id": "image-menu-059",
+        "kind": "image",
+        "subject": "Teh Sereh",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-059"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-059.webp",
+        "embedUrl": null,
+        "width": 104,
+        "height": 109
+      },
+      {
+        "id": "image-menu-060",
+        "kind": "image",
+        "subject": "Es Cokelat Malt Dinosaurus",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-060"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-060.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 105
+      },
+      {
+        "id": "image-menu-061",
+        "kind": "image",
+        "subject": "Cokelat Malt Panas",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-061"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-061.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-062",
+        "kind": "image",
+        "subject": "Es Goyobod Alun-Alun",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-062"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-062.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-063",
+        "kind": "image",
+        "subject": "Teh Susu Tolak Angin",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-063"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-063.webp",
+        "embedUrl": null,
+        "width": 117,
+        "height": 107
+      },
+      {
+        "id": "image-menu-064",
+        "kind": "image",
+        "subject": "Teh Tarik",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-064"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-064.webp",
+        "embedUrl": null,
+        "width": 90,
+        "height": 105
+      },
+      {
+        "id": "image-menu-065",
+        "kind": "image",
+        "subject": "Es Beras Kencur",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-065"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-065.webp",
+        "embedUrl": null,
+        "width": 100,
+        "height": 122
+      },
+      {
+        "id": "image-menu-066",
+        "kind": "image",
+        "subject": "Es Kunyit Asem",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-066"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-066.webp",
+        "embedUrl": null,
+        "width": 100,
+        "height": 122
+      },
+      {
+        "id": "image-menu-067",
+        "kind": "image",
+        "subject": "Es Beras Kencur Jeruk",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-067"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-067.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 122
+      },
+      {
+        "id": "image-menu-068",
+        "kind": "image",
+        "subject": "Kopi Hitam",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-068"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-068.webp",
+        "embedUrl": null,
+        "width": 106,
+        "height": 108
+      },
+      {
+        "id": "image-menu-069",
+        "kind": "image",
+        "subject": "Kopi Susu",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-069"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-069.webp",
+        "embedUrl": null,
+        "width": 98,
+        "height": 108
+      },
+      {
+        "id": "image-menu-070",
+        "kind": "image",
+        "subject": "Kopi Susu Butter",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-070"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-070.webp",
+        "embedUrl": null,
+        "width": 109,
+        "height": 108
+      },
+      {
+        "id": "image-menu-071",
+        "kind": "image",
+        "subject": "Kopi Susu Santan",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-071"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-071.webp",
+        "embedUrl": null,
+        "width": 102,
+        "height": 110
+      },
+      {
+        "id": "image-menu-072",
+        "kind": "image",
+        "subject": "Kopi Susu Kecap",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-072"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-072.webp",
+        "embedUrl": null,
+        "width": 109,
+        "height": 113
+      },
+      {
+        "id": "image-menu-073",
+        "kind": "image",
+        "subject": "Kopi Krim Soda",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-073"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-073.webp",
+        "embedUrl": null,
+        "width": 97,
+        "height": 113
+      },
+      {
+        "id": "image-menu-074",
+        "kind": "image",
+        "subject": "Jus Tomat",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-074"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-074.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-075",
+        "kind": "image",
+        "subject": "Jus Sirsak",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-075"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-075.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-076",
+        "kind": "image",
+        "subject": "Jus Semangka",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-076"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-076.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-077",
+        "kind": "image",
+        "subject": "Jus Mangga",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-077"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-077.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-078",
+        "kind": "image",
+        "subject": "Jus Alpukat",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-078"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-078.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-079",
+        "kind": "image",
+        "subject": "Jus Tapo",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-079"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-079.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-080",
+        "kind": "image",
+        "subject": "Jus Stroberi",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-080"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-080.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-081",
+        "kind": "image",
+        "subject": "Jus Jambu",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-081"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-081.webp",
+        "embedUrl": null,
+        "width": 125,
+        "height": 150
+      },
+      {
+        "id": "image-menu-082",
+        "kind": "image",
+        "subject": "Roti Bakar Cokelat",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-082"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-082.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-083",
+        "kind": "image",
+        "subject": "Roti Bakar Nanas",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-083"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-083.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-084",
+        "kind": "image",
+        "subject": "Roti Bakar Keju",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-084"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-084.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-085",
+        "kind": "image",
+        "subject": "Roti Bakar Srikaya",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-085"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-085.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-086",
+        "kind": "image",
+        "subject": "Roti Bakar Gula Klasik",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-086"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-086.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-087",
+        "kind": "image",
+        "subject": "Burger Gulai Upi",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-087"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-087.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-088",
+        "kind": "image",
+        "subject": "Roti Bakar Telur",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-088"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-088.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-089",
+        "kind": "image",
+        "subject": "Roti Bakar Kornet Telur Keju",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-089"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-089.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-090",
+        "kind": "image",
+        "subject": "Roti Bakar Telur Keju",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-090"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-090.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-091",
+        "kind": "image",
+        "subject": "Roti Bakar Kornet Telur",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-091"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-091.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-092",
+        "kind": "image",
+        "subject": "Roti Bakar Kornet",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-092"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-092.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-093",
+        "kind": "image",
+        "subject": "Roti Bakar Kornet Keju",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-093"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-093.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-094",
+        "kind": "image",
+        "subject": "Roti Bakar 2 Rasa",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-094"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-094.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-095",
+        "kind": "image",
+        "subject": "Roti Bakar Mocca Nougat",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-095"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-095.webp",
+        "embedUrl": null,
+        "width": 185,
+        "height": 110
+      },
+      {
+        "id": "image-menu-096",
+        "kind": "image",
+        "subject": "Pisang Bakar Cokelat",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-096"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-096.webp",
+        "embedUrl": null,
+        "width": 190,
+        "height": 110
+      },
+      {
+        "id": "image-menu-097",
+        "kind": "image",
+        "subject": "Pisang Bakar Cokelat Keju",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-097"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-097.webp",
+        "embedUrl": null,
+        "width": 190,
+        "height": 110
+      },
+      {
+        "id": "image-menu-098",
+        "kind": "image",
+        "subject": "Pisang Bakar Keju",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-098"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-098.webp",
+        "embedUrl": null,
+        "width": 190,
+        "height": 110
+      },
+      {
+        "id": "image-menu-099",
+        "kind": "image",
+        "subject": "Pisang Bakar Double Cokelat",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [
+          "menu-099"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-099.webp",
+        "embedUrl": null,
+        "width": 190,
+        "height": 110
+      },
+      {
+        "id": "image-menu-100",
+        "kind": "image",
+        "subject": "Tahu Cocol Kerupuk",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-100"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-100.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-101",
+        "kind": "image",
+        "subject": "B5 (Bala Bala Banjur)",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-101"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-101.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-102",
+        "kind": "image",
+        "subject": "Nasi Goreng Omah",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-102"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-102.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-103",
+        "kind": "image",
+        "subject": "Nasi Goreng Kecombrang",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-103"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-103.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-104",
+        "kind": "image",
+        "subject": "Nasi Kuning Langsai",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-104"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-104.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-105",
+        "kind": "image",
+        "subject": "Nasi Udukwati",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-105"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-105.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-106",
+        "kind": "image",
+        "subject": "Nasi Kuning Ningrat",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-106"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-106.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-107",
+        "kind": "image",
+        "subject": "Nasi Udukwati Ningrat",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-107"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-107.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-108",
+        "kind": "image",
+        "subject": "Lontong Cap Gomeh",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-108"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-108.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-109",
+        "kind": "image",
+        "subject": "Nasi Pecelawati",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-109"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-109.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-110",
+        "kind": "image",
+        "subject": "Risoles",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-110"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-110.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-111",
+        "kind": "image",
+        "subject": "Pastel",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-111"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-111.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-113",
+        "kind": "image",
+        "subject": "Nasi Telor Sederhana",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-113"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-113.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-114",
+        "kind": "image",
+        "subject": "Leupeut Banjur",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-114"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-114.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-115",
+        "kind": "image",
+        "subject": "Ketan Kinca",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-115"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-115.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-116",
+        "kind": "image",
+        "subject": "Ketan Oncom",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-116"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-116.webp",
+        "embedUrl": null,
+        "width": 105,
+        "height": 60
+      },
+      {
+        "id": "image-menu-117",
+        "kind": "image",
+        "subject": "Burger Original",
+        "sourceIds": [
+          "sarapan"
+        ],
+        "productIds": [
+          "menu-117"
+        ],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/menu-117.webp",
+        "embedUrl": null,
+        "width": 190,
+        "height": 110
+      },
+      {
+        "id": "logo",
+        "kind": "image",
+        "subject": "Original Bumi Upi logo raster crop",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/logo.webp",
+        "embedUrl": null,
+        "width": 254,
+        "height": 83
+      },
+      {
+        "id": "motif",
+        "kind": "image",
+        "subject": "Original menu four-petal pattern crop",
+        "sourceIds": [
+          "reguler"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "menu"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Bumi Upi official menu",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/motif.webp",
+        "embedUrl": null,
+        "width": 90,
+        "height": 75
+      },
+      {
+        "id": "place-17",
+        "kind": "image",
+        "subject": "Bumi Upi photograph 17",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Momopururu / Istiana Sutanti",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/place-17.webp",
+        "embedUrl": null,
+        "width": 676,
+        "height": 1200
+      },
+      {
+        "id": "place-16",
+        "kind": "image",
+        "subject": "Bumi Upi photograph 16",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "suasana"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Momopururu / Istiana Sutanti",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/place-16.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 675
+      },
+      {
+        "id": "place-02",
+        "kind": "image",
+        "subject": "Bumi Upi photograph 02",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "suasana"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Momopururu / Istiana Sutanti",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/place-02.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 676
+      },
+      {
+        "id": "place-07",
+        "kind": "image",
+        "subject": "Bumi Upi photograph 07",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "together"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Momopururu / Istiana Sutanti",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/place-07.webp",
+        "embedUrl": null,
+        "width": 676,
+        "height": 1200
+      },
+      {
+        "id": "place-11",
+        "kind": "image",
+        "subject": "Bumi Upi photograph 11",
+        "sourceIds": [
+          "place"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "suasana"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Momopururu / Istiana Sutanti",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/place-11.webp",
+        "embedUrl": null,
+        "width": 1200,
+        "height": 676
+      },
+      {
+        "id": "archivo-black",
+        "kind": "font",
+        "subject": "archivo-black",
+        "sourceIds": [
+          "fonts"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [],
+        "attribution": "Google Fonts",
+        "deliveryMethod": "file",
+        "runtimePath": "public/fonts/archivo-black.ttf",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      },
+      {
+        "id": "dm-sans",
+        "kind": "font",
+        "subject": "dm-sans",
+        "sourceIds": [
+          "fonts"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [],
+        "attribution": "Google Fonts",
+        "deliveryMethod": "file",
+        "runtimePath": "public/fonts/dm-sans.ttf",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      }
+    ]
+  },
+  "pagePlan": {
+    "prospectId": "bumi-upi-garut",
+    "primaryGoal": "Explore real menu and plan a visit or ask via official WhatsApp.",
+    "features": {
+      "catalogue": true,
+      "categoryFilter": true,
+      "search": true,
+      "stickyToolbar": false,
+      "loadMore": true,
+      "productDialog": false,
+      "carousel": false,
+      "accordion": false,
+      "location": true
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "features": []
+      },
+      {
+        "id": "suasana",
+        "features": []
+      },
+      {
+        "id": "menu",
+        "features": [
+          "catalogue",
+          "categoryFilter",
+          "search",
+          "loadMore"
+        ]
+      },
+      {
+        "id": "together",
+        "features": []
+      },
+      {
+        "id": "kunjungi",
+        "features": [
+          "location"
+        ]
+      }
+    ],
+    "media": [
+      {
+        "assetId": "image-menu-001",
+        "productId": "menu-001",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-002",
+        "productId": "menu-002",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-003",
+        "productId": "menu-003",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-004",
+        "productId": "menu-004",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-005",
+        "productId": "menu-005",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-006",
+        "productId": "menu-006",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-007",
+        "productId": "menu-007",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-008",
+        "productId": "menu-008",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-009",
+        "productId": "menu-009",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-010",
+        "productId": "menu-010",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-011",
+        "productId": "menu-011",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-012",
+        "productId": "menu-012",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-013",
+        "productId": "menu-013",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-014",
+        "productId": "menu-014",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-015",
+        "productId": "menu-015",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-016",
+        "productId": "menu-016",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-017",
+        "productId": "menu-017",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-018",
+        "productId": "menu-018",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-019",
+        "productId": "menu-019",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-020",
+        "productId": "menu-020",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-021",
+        "productId": "menu-021",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-022",
+        "productId": "menu-022",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-023",
+        "productId": "menu-023",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-024",
+        "productId": "menu-024",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-025",
+        "productId": "menu-025",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-026",
+        "productId": "menu-026",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-027",
+        "productId": "menu-027",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-028",
+        "productId": "menu-028",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-029",
+        "productId": "menu-029",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-030",
+        "productId": "menu-030",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-031",
+        "productId": "menu-031",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-032",
+        "productId": "menu-032",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-033",
+        "productId": "menu-033",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-034",
+        "productId": "menu-034",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-035",
+        "productId": "menu-035",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-036",
+        "productId": "menu-036",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-037",
+        "productId": "menu-037",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-038",
+        "productId": "menu-038",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-039",
+        "productId": "menu-039",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-040",
+        "productId": "menu-040",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-041",
+        "productId": "menu-041",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-042",
+        "productId": "menu-042",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-043",
+        "productId": "menu-043",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-044",
+        "productId": "menu-044",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-045",
+        "productId": "menu-045",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-046",
+        "productId": "menu-046",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-047",
+        "productId": "menu-047",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-048",
+        "productId": "menu-048",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-049",
+        "productId": "menu-049",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-050",
+        "productId": "menu-050",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-051",
+        "productId": "menu-051",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-052",
+        "productId": "menu-052",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-053",
+        "productId": "menu-053",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-054",
+        "productId": "menu-054",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-055",
+        "productId": "menu-055",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-056",
+        "productId": "menu-056",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-057",
+        "productId": "menu-057",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-058",
+        "productId": "menu-058",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-059",
+        "productId": "menu-059",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-060",
+        "productId": "menu-060",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-061",
+        "productId": "menu-061",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-062",
+        "productId": "menu-062",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-063",
+        "productId": "menu-063",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-064",
+        "productId": "menu-064",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-065",
+        "productId": "menu-065",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-066",
+        "productId": "menu-066",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-067",
+        "productId": "menu-067",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-068",
+        "productId": "menu-068",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-069",
+        "productId": "menu-069",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-070",
+        "productId": "menu-070",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-071",
+        "productId": "menu-071",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-072",
+        "productId": "menu-072",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-073",
+        "productId": "menu-073",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-074",
+        "productId": "menu-074",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-075",
+        "productId": "menu-075",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-076",
+        "productId": "menu-076",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-077",
+        "productId": "menu-077",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-078",
+        "productId": "menu-078",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-079",
+        "productId": "menu-079",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-080",
+        "productId": "menu-080",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-081",
+        "productId": "menu-081",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-082",
+        "productId": "menu-082",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-083",
+        "productId": "menu-083",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-084",
+        "productId": "menu-084",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-085",
+        "productId": "menu-085",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-086",
+        "productId": "menu-086",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-087",
+        "productId": "menu-087",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-088",
+        "productId": "menu-088",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-089",
+        "productId": "menu-089",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-090",
+        "productId": "menu-090",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-091",
+        "productId": "menu-091",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-092",
+        "productId": "menu-092",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-093",
+        "productId": "menu-093",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-094",
+        "productId": "menu-094",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-095",
+        "productId": "menu-095",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-096",
+        "productId": "menu-096",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-097",
+        "productId": "menu-097",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-098",
+        "productId": "menu-098",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-099",
+        "productId": "menu-099",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-100",
+        "productId": "menu-100",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-101",
+        "productId": "menu-101",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-102",
+        "productId": "menu-102",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-103",
+        "productId": "menu-103",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-104",
+        "productId": "menu-104",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-105",
+        "productId": "menu-105",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-106",
+        "productId": "menu-106",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-107",
+        "productId": "menu-107",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-108",
+        "productId": "menu-108",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-109",
+        "productId": "menu-109",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-110",
+        "productId": "menu-110",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-111",
+        "productId": "menu-111",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-113",
+        "productId": "menu-113",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-114",
+        "productId": "menu-114",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-115",
+        "productId": "menu-115",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-116",
+        "productId": "menu-116",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "image-menu-117",
+        "productId": "menu-117",
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "logo",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "motif",
+        "productId": null,
+        "sectionId": "menu"
+      },
+      {
+        "assetId": "place-17",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "place-16",
+        "productId": null,
+        "sectionId": "suasana"
+      },
+      {
+        "assetId": "place-02",
+        "productId": null,
+        "sectionId": "suasana"
+      },
+      {
+        "assetId": "place-07",
+        "productId": null,
+        "sectionId": "together"
+      },
+      {
+        "assetId": "place-11",
+        "productId": null,
+        "sectionId": "suasana"
+      },
+      {
+        "assetId": "archivo-black",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "dm-sans",
+        "productId": null,
+        "sectionId": "hero"
+      }
+    ],
+    "layoutSignature": {
+      "hero": "split-product",
+      "sequence": "place-first",
+      "catalogue": "photo-rows",
+      "media": "mosaic",
+      "narrative": "destination"
+    },
+    "candidates": [
+      {
+        "id": "place-first",
+        "layoutSignature": {
+          "hero": "split-product",
+          "sequence": "place-first",
+          "catalogue": "photo-rows",
+          "media": "mosaic",
+          "narrative": "destination"
+        },
+        "rationale": "Authentic house facade and indoor/courtyard photography communicate Rumah Tamah; compact photo rows suit small PDF crop resolution."
+      },
+      {
+        "id": "menu-direct",
+        "layoutSignature": {
+          "hero": "brand-typographic",
+          "sequence": "product-first",
+          "catalogue": "compact-rows",
+          "media": "single-story-image",
+          "narrative": "quick-visit"
+        },
+        "rationale": "Feasible with raster menus but rejected because it underrepresents the house and destination atmosphere."
+      }
+    ],
+    "selectedCandidate": "place-first",
+    "brand": {
+      "colors": [
+        "#faf4e7",
+        "#51582d",
+        "#a13223",
+        "#edbe50"
+      ],
+      "type": "Archivo Black for heavy sans menu hierarchy, DM Sans body; weblicensed substitutes. Original logo raster."
+    },
+    "mobile": "Hero text then facade, stacked room photographs, one column catalogue, inline expanding search.",
+    "componentProvenance": "Official shadcn Button, Input, Select copied locally; Base UI behavior preserved.",
+    "contentCoverage": [
+      {
+        "finding": "identity and hours",
+        "sectionIds": [
+          "hero"
+        ],
+        "sourceIds": [
+          "profile"
+        ]
+      },
+      {
+        "finding": "all unique PDF offerings and price variants",
+        "sectionIds": [
+          "menu"
+        ],
+        "sourceIds": [
+          "reguler",
+          "sarapan"
+        ]
+      },
+      {
+        "finding": "daily specials note",
+        "sectionIds": [
+          "menu"
+        ],
+        "sourceIds": [
+          "reguler"
+        ]
+      },
+      {
+        "finding": "photobooth",
+        "sectionIds": [
+          "together"
+        ],
+        "sourceIds": [
+          "booth",
+          "place"
+        ]
+      },
+      {
+        "finding": "address and contact",
+        "sectionIds": [
+          "kunjungi"
+        ],
+        "sourceIds": [
+          "hub"
+        ]
+      }
+    ],
+    "mediaCoverage": {
+      "productImages": 116,
+      "products": 116,
+      "placePhotos": 5,
+      "limitations": "Raster source crops are small; use compact thumbnails. Original source photographs retain watermark and pending rights. No AI food images."
+    },
+    "visualIdentity": {
+      "confidence": "medium",
+      "observations": [
+        {
+          "aspect": "palette",
+          "sourceId": "profile",
+          "evidencePath": "research/raw/brand-feed.png",
+          "observation": "Recurring olive grounds with cream uppercase text; campaigns add mustard and red, while partner sports posters use blue.",
+          "translation": "Cream reading ground, olive CTA and full-width booth section, red headline accents and mustard frame. Partner blue excluded."
+        },
+        {
+          "aspect": "typography",
+          "sourceId": "reguler",
+          "evidencePath": "research/raw/reguler-full-2.png",
+          "observation": "MENU is broad block sans; category headings are dense bold sans, body is compact and rounded; wordmark has distinctive rounded strokes.",
+          "translation": "Original wordmark image retained. Archivo Black broad low-contrast block strokes fit MENU/BERBAGI headlines better than Inter/Manrope; DM Sans handles small body and controls. Exact poster font is unknown."
+        },
+        {
+          "aspect": "composition",
+          "sourceId": "profile",
+          "evidencePath": "research/raw/brand-feed.png",
+          "observation": "Posters frame products and people with large compact headline blocks, cutout dishes and source color grounds.",
+          "translation": "Split facade plus compact multi-line title, a three-photo room mosaic, and dense small catalogue photo rows rather than huge repeated cards."
+        },
+        {
+          "aspect": "imagery",
+          "sourceId": "reguler",
+          "evidencePath": "research/raw/reguler-full-2.png",
+          "observation": "Named dishes are isolated on patterned plates, set on paper; place sources show warm wood, vintage furniture and greenery.",
+          "translation": "Keep exact plate crops for SKU, small enough for source resolution. Original warm facade and room photography, watermark retained, no stock food."
+        },
+        {
+          "aspect": "graphicLanguage",
+          "sourceId": "reguler",
+          "evidencePath": "research/raw/reguler-full-2.png",
+          "observation": "Four-petal wallpaper motif, paper texture, olive/mustard/red inset frames repeat through menu pages.",
+          "translation": "Olive and mustard double frame on hero, source-cropped four-petal detail at kitchen note, restrained cream surfaces. No decorative pills or eyebrow labels."
+        }
+      ],
+      "retained": [
+        "Original rounded wordmark, olive grounds, heavy sans title hierarchy and warm vintage imagery.",
+        "Retro inset-frame vocabulary and source four-petal motif."
+      ],
+      "adapted": [
+        "Print texture simplified for reading; source frame retained as hero border.",
+        "Exact menu font not established; Archivo Black broad block shapes compared with official MENU and Instagram uppercase headlines.",
+        "Initial arch experiment replaced with source-led inset frame; room photos become mosaic on desktop and stack on mobile."
+      ],
+      "avoidedDefaults": [
+        "No copied Historia full-width hero or featured carousel.",
+        "No giant typographic collage like Duduk Gembira, no all-category unbounded list like Talkie Space.",
+        "No generic arch masks; paper and frame treatment follows official menu."
+      ]
+    }
+  }
+}

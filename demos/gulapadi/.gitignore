@@ -1,0 +1,7 @@
+node_modules/
+.next/
+*.tsbuildinfo
+bun-failed-cache/
+research/originals/
+research/page-*.png
+research/detail-*.png

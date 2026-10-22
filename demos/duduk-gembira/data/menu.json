@@ -1,0 +1,1110 @@
+[
+  {
+    "id": "item-1",
+    "name": "Kopi Item",
+    "category": "Kopi",
+    "description": "Kopi hitam pekat. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 8000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-1-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-1-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-2",
+    "name": "Kopi Susu Gembira",
+    "category": "Kopi",
+    "description": "Kopi susu dengan gula aren. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-2-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-2-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-3",
+    "name": "Kopi Susu Butter",
+    "category": "Kopi",
+    "description": "Kopi susu dengan sentuhan butter. Panas.",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-3-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-4",
+    "name": "Kopi Muda - Mudi",
+    "category": "Kopi",
+    "description": "Kopi susu creamy dengan gula aren. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-4-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-4-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-5",
+    "name": "Kopi Bir",
+    "category": "Kopi",
+    "description": "Kopi soda berkaramel. Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-5-t0",
+        "name": "Dingin",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-6",
+    "name": "Kopi Lemon Jadul",
+    "category": "Kopi",
+    "description": "Kopi hitam dengan perasan lemon. Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-6-t0",
+        "name": "Dingin",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-7",
+    "name": "Coklat Jadul",
+    "category": "Non-kopi",
+    "description": "Coklat susu manis & gurih. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 10000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-7-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-7-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-8",
+    "name": "Hijau Manis",
+    "category": "Non-kopi",
+    "description": "Teh hijau dengan susu. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-8-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-8-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-9",
+    "name": "Jamuan Gembira",
+    "category": "Non-kopi",
+    "description": "Minuman rempah. Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-9-t0",
+        "name": "Dingin",
+        "price": {
+          "amount": 12000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-10",
+    "name": "Josu",
+    "category": "Non-kopi",
+    "description": "Extra joss susu creamy. Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 8000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-10-t0",
+        "name": "Dingin",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-11",
+    "name": "Lemon Peras",
+    "category": "Non-kopi",
+    "description": "Perasan lemon segar. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 7000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-11-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 7000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-11-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 7000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-12",
+    "name": "Lemon Soda",
+    "category": "Non-kopi",
+    "description": "Perasan lemon dengan sensasi soda. Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 10000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-12-t0",
+        "name": "Dingin",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-13",
+    "name": "Teh Manis",
+    "category": "Non-kopi",
+    "description": "Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 6000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-13-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-13-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-14",
+    "name": "Teh Sereh Lemon",
+    "category": "Non-kopi",
+    "description": "Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 8000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-14-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-14-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-15",
+    "name": "Teh Tarik",
+    "category": "Non-kopi",
+    "description": "Teh hitam dengan susu creamy. Panas / Dingin.",
+    "imageId": null,
+    "price": {
+      "amount": 10000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-15-t0",
+        "name": "Panas",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-15-t1",
+        "name": "Dingin",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-16",
+    "name": "Air Mineral",
+    "category": "Non-kopi",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 5000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-17",
+    "name": "Cuanki Biasa",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-18",
+    "name": "Cuanki Komplit",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-19",
+    "name": "Indomie Polos",
+    "category": "Makanan berat",
+    "description": "Indomie tanpa topping.",
+    "imageId": null,
+    "price": {
+      "amount": 8000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-20",
+    "name": "Indomie Gembira",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-21",
+    "name": "Mie Bangladesh",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 17000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-22",
+    "name": "Mie Tektek",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 17000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-23",
+    "name": "Sate Ayam Pedas",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-24",
+    "name": "Sate Jando Manis",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-25",
+    "name": "Nasi Ayam Cabe-cabean",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-26",
+    "name": "Nasi Goreng Bawang",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 14000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-27",
+    "name": "Nasi Goreng Kecombrang",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-28",
+    "name": "Nasi Kuning Gembira",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-29",
+    "name": "Nasi Telur Gulai",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-30",
+    "name": "Nasi Telur Pontianak",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-31",
+    "name": "Nasi Tutug Oncom",
+    "category": "Makanan berat",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-32",
+    "name": "Cireng Bumbu Kacang",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 10000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-33",
+    "name": "Gehu Cikur",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 6000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-34",
+    "name": "Gorengan Tempe",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 8000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-35",
+    "name": "Pangsit Chili Oil",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-36",
+    "name": "Pisang Keju Susu",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-37",
+    "name": "Pisang Goreng",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-38",
+    "name": "Piscok Goreng",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-39",
+    "name": "Roti Bakar",
+    "category": "Camilan",
+    "description": "Coklat, pindakas, blueberry, strawberry, atau milkcrust.",
+    "imageId": null,
+    "price": {
+      "amount": 10000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": [
+      {
+        "id": "item-39-v0",
+        "name": "Coklat",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-39-v1",
+        "name": "Pindakas",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-39-v2",
+        "name": "Blueberry",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-39-v3",
+        "name": "Strawberry",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      },
+      {
+        "id": "item-39-v4",
+        "name": "Milkcrust",
+        "price": {
+          "amount": 10000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "item-40",
+    "name": "Ketan Eskrim",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 15000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-41",
+    "name": "Ketan Susu Keju",
+    "category": "Camilan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 12000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-42",
+    "name": "Nasi Putih",
+    "category": "Tambahan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 5000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "item-43",
+    "name": "Telur",
+    "category": "Tambahan",
+    "description": "",
+    "imageId": null,
+    "price": {
+      "amount": 5000,
+      "currency": "IDR",
+      "checkedAt": "2026-10-22",
+      "sourceIds": [
+        "menu"
+      ]
+    },
+    "variants": []
+  },
+  {
+    "id": "cumi-ijo",
+    "name": "Nasi Cumi Ijo",
+    "category": "Nasi cumi & ayam",
+    "description": "",
+    "imageId": "cumi-ijo",
+    "price": {
+      "amount": null,
+      "currency": "IDR",
+      "checkedAt": null,
+      "sourceIds": []
+    },
+    "variants": []
+  },
+  {
+    "id": "cumi-matah",
+    "name": "Nasi Cumi Matah",
+    "category": "Nasi cumi & ayam",
+    "description": "",
+    "imageId": "cumi-matah",
+    "price": {
+      "amount": null,
+      "currency": "IDR",
+      "checkedAt": null,
+      "sourceIds": []
+    },
+    "variants": []
+  },
+  {
+    "id": "ayam-matah",
+    "name": "Nasi Ayam Matah",
+    "category": "Nasi cumi & ayam",
+    "description": "",
+    "imageId": "ayam-matah",
+    "price": {
+      "amount": null,
+      "currency": "IDR",
+      "checkedAt": null,
+      "sourceIds": []
+    },
+    "variants": []
+  },
+  {
+    "id": "ayam-ijo",
+    "name": "Nasi Ayam Ijo",
+    "category": "Nasi cumi & ayam",
+    "description": "",
+    "imageId": "ayam-ijo",
+    "price": {
+      "amount": null,
+      "currency": "IDR",
+      "checkedAt": null,
+      "sourceIds": []
+    },
+    "variants": []
+  }
+]

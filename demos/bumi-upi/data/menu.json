@@ -1,0 +1,2064 @@
+[
+  {
+    "id": "menu-001",
+    "name": "Sate Aci",
+    "category": "Cemilan",
+    "price": 14000,
+    "description": "Sate vegetarian dengan bumbu kacang.",
+    "image": "/images/menu-001.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      355,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-002",
+    "name": "Pagordas",
+    "category": "Cemilan",
+    "price": 20000,
+    "description": "Pangsit goreng mini dengan chili oil.",
+    "image": "/images/menu-002.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      430,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-003",
+    "name": "Bakso Yang Ditukar",
+    "category": "Cemilan",
+    "price": 20000,
+    "description": "Bakso tusuk bakar.",
+    "image": "/images/menu-003.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      500,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-004",
+    "name": "Pisang Goreng",
+    "category": "Cemilan",
+    "price": 20000,
+    "description": "Pisang goreng dengan taburan gula palem.",
+    "image": "/images/menu-004.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      575,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-005",
+    "name": "Kentang Sosis",
+    "category": "Cemilan",
+    "price": 22000,
+    "description": "Sosis dan kentang goreng.",
+    "image": "/images/menu-005.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      640,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-006",
+    "name": "Dimsum Ekonomis",
+    "category": "Cemilan",
+    "price": 15000,
+    "description": "Dimsum ayam isi 5.",
+    "image": "/images/menu-006.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      715,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-007",
+    "name": "Dimsum Sejahtera",
+    "category": "Cemilan",
+    "price": 20000,
+    "description": "Dimsum udang isi 3.",
+    "image": "/images/menu-007.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      805,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-008",
+    "name": "Pisang Kukus",
+    "category": "Cemilan",
+    "price": 17000,
+    "description": "Pisang tanduk kukus dengan cocolan gula palem.",
+    "image": "/images/menu-008.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      350,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-009",
+    "name": "Gorengan Darmaji",
+    "category": "Cemilan",
+    "price": 17000,
+    "description": "Gorengan dalam satu porsi.",
+    "image": "/images/menu-009.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      425,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-010",
+    "name": "Lumpia Vietnam",
+    "category": "Cemilan",
+    "price": 22000,
+    "description": "Lumpia sayuran.",
+    "image": "/images/menu-010.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      495,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-011",
+    "name": "Tuangeun Bocil",
+    "category": "Cemilan",
+    "price": 25000,
+    "description": "Nugget, sosis, sop, dan kentang/nasi. Tambah es coklat Rp7.000.",
+    "image": "/images/menu-011.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      570,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-012",
+    "name": "Cireng Ayah Ojak",
+    "category": "Cemilan",
+    "price": 17000,
+    "description": "Cireng dengan bumbu uyah dan rujak.",
+    "image": "/images/menu-012.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      660,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-013",
+    "name": "Tahu Cabe Rewel",
+    "category": "Cemilan",
+    "price": 22000,
+    "description": "Tahu goreng bumbu cabe garam.",
+    "image": "/images/menu-013.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      740,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-014",
+    "name": "Cireng Tahu Gejrot",
+    "category": "Cemilan",
+    "price": 18000,
+    "description": "Tahu dan cireng dengan kuah tahu gejrot.",
+    "image": "/images/menu-014.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      490,
+      820,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-015",
+    "name": "Pepes Ayam Kampung",
+    "category": "Pepes",
+    "price": 48000,
+    "description": "",
+    "image": "/images/menu-015.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      958,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-016",
+    "name": "Pepes Goreng Ayam Kampung",
+    "category": "Pepes",
+    "price": 48000,
+    "description": "",
+    "image": "/images/menu-016.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      1035,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-017",
+    "name": "Pepes Ayam Bule",
+    "category": "Pepes",
+    "price": 59000,
+    "description": "",
+    "image": "/images/menu-017.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      110,
+      1115,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-018",
+    "name": "Pepes Goreng Ayam Bule",
+    "category": "Pepes",
+    "price": 59000,
+    "description": "",
+    "image": "/images/menu-018.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      510,
+      990,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-019",
+    "name": "Pepes Ikan Mas",
+    "category": "Pepes",
+    "price": 40000,
+    "description": "",
+    "image": "/images/menu-019.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      510,
+      1075,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-020",
+    "name": "Mie Kasep",
+    "category": "Mie",
+    "price": 24000,
+    "description": "Mie goreng.",
+    "image": "/images/menu-020.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      180,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-021",
+    "name": "Mie Racing",
+    "category": "Mie",
+    "price": 25000,
+    "description": "Mie kuah gurih dan creamy.",
+    "image": "/images/menu-021.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      250,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-022",
+    "name": "Mie Ebroh",
+    "category": "Mie",
+    "price": 25000,
+    "description": "Mie goreng sambal ulek dengan telur ceplok.",
+    "image": "/images/menu-022.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      320,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-023",
+    "name": "Mie Ayam",
+    "category": "Mie",
+    "price": 25000,
+    "description": "Mie ayam dengan bakso.",
+    "image": "/images/menu-023.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      390,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-024",
+    "name": "Mie Chili Oil",
+    "category": "Mie",
+    "price": 24000,
+    "description": "Mie pedas dengan chili oil dan bakso/pangsit goreng sesuai stok.",
+    "image": "/images/menu-024.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      460,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-025",
+    "name": "Mie Anak Sekolah",
+    "category": "Mie",
+    "price": 27000,
+    "description": "Mie goreng bukan mie instan, tanpa MSG.",
+    "image": "/images/menu-025.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      535,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-026",
+    "name": "Mie Nostalgia",
+    "category": "Mie",
+    "price": 28000,
+    "description": "Bakmi atau yamin; tersedia cabe atau chili oil.",
+    "image": "/images/menu-026.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      610,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-027",
+    "name": "Nasi Ayam Ajep-Ajep",
+    "category": "Nasi & lauk",
+    "price": 24000,
+    "description": "Nasi ayam jejepangan, chicken karaage.",
+    "image": "/images/menu-027.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      780,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-028",
+    "name": "Nasi Ayam Omongan Tetangga",
+    "category": "Nasi & lauk",
+    "price": 24000,
+    "description": "Nasi ayam dengan minyak cabe pedas.",
+    "image": "/images/menu-028.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      847,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-029",
+    "name": "Nasi Ayam Sambal Bali",
+    "category": "Nasi & lauk",
+    "price": 25000,
+    "description": "Nasi ayam tepung dengan sambal matah.",
+    "image": "/images/menu-029.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      920,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-030",
+    "name": "Nasi Ayam Kalasan",
+    "category": "Nasi & lauk",
+    "price": 32000,
+    "description": "Nasi ayam goreng manis, lalapan, dan sambal.",
+    "image": "/images/menu-030.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      988,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-031",
+    "name": "Nasi Kulit Serundeng",
+    "category": "Nasi & lauk",
+    "price": 22000,
+    "description": "Kulit goreng, serundeng, lalapan, dan sambal.",
+    "image": "/images/menu-031.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      1060,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-032",
+    "name": "Bebek Sambel Hejo",
+    "category": "Nasi & lauk",
+    "price": 45000,
+    "description": "Nasi dan bebek goreng sambal hejo.",
+    "image": "/images/menu-032.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1005,
+      1130,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-033",
+    "name": "Nasi Galo Bumi Upi",
+    "category": "Nasi & lauk",
+    "price": 39000,
+    "description": "Nasi, beef, sambal bawang, dan pelengkap. Aduk sebelum disantap.",
+    "image": "/images/menu-033.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      195,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-034",
+    "name": "Nasi Paru Serundeng",
+    "category": "Nasi & lauk",
+    "price": 25000,
+    "description": "Paru goreng, serundeng, lalapan, dan sambal.",
+    "image": "/images/menu-034.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      268,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-035",
+    "name": "Nasi Dangdutan",
+    "category": "Nasi & lauk",
+    "price": 36000,
+    "description": "Kulit dan paru goreng, telur dadar crispy, serundeng, lalapan, sambal.",
+    "image": "/images/menu-035.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      345,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-036",
+    "name": "Nasi Buntut Rewel",
+    "category": "Nasi & lauk",
+    "price": 45000,
+    "description": "Nasi dengan buntut sapi tumis pedas.",
+    "image": "/images/menu-036.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      425,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-037",
+    "name": "Nasi Buntut Kebakaran",
+    "category": "Nasi & lauk",
+    "price": 40000,
+    "description": "Nasi dengan buntut bakar dan sop sayuran.",
+    "image": "/images/menu-037.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      500,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-038",
+    "name": "Nasi Ghewlaa",
+    "category": "Nasi & lauk",
+    "price": 29000,
+    "description": "Nasi dengan sosis, bakso, dan sayur.",
+    "image": "/images/menu-038.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      590,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-039",
+    "name": "Lidah Sambel Hejo",
+    "category": "Nasi & lauk",
+    "price": 47000,
+    "description": "Lidah sapi bersambal hejo dengan nasi.",
+    "image": "/images/menu-039.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      665,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-040",
+    "name": "Buntut Goreng Sambal Hejo",
+    "category": "Nasi & lauk",
+    "price": 45000,
+    "description": "Buntut sapi sambal hejo dengan nasi.",
+    "image": "/images/menu-040.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      740,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-041",
+    "name": "Nasi Goreng Upiwan",
+    "category": "Nasi goreng",
+    "price": 25000,
+    "description": "Nasi goreng kecap.",
+    "image": "/images/menu-041.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      870,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-042",
+    "name": "Nasi Goreng Upiwati",
+    "category": "Nasi goreng",
+    "price": 26000,
+    "description": "Nasi goreng merah.",
+    "image": "/images/menu-042.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      935,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-043",
+    "name": "Nasi Goreng Cumi Upi",
+    "category": "Nasi goreng",
+    "price": 28000,
+    "description": "Nasi goreng cumi dengan cabe, pedas.",
+    "image": "/images/menu-043.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      1000,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-044",
+    "name": "Nasi Goreng Bunda Kornet",
+    "category": "Nasi goreng",
+    "price": 27000,
+    "description": "Nasi goreng kornet.",
+    "image": "/images/menu-044.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      1068,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-045",
+    "name": "Nasi Goreng Peda Kemangi",
+    "category": "Nasi goreng",
+    "price": 27000,
+    "description": "Nasi goreng dengan peda dan kemangi.",
+    "image": "/images/menu-045.webp",
+    "source": "reguler",
+    "page": 2,
+    "crop": [
+      1380,
+      1130,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-046",
+    "name": "Es Cincau Jadoel",
+    "category": "Minuman",
+    "price": 19000,
+    "description": "",
+    "image": "/images/menu-046.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      156,
+      314,
+      94,
+      113
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 19000
+      },
+      {
+        "name": "L",
+        "price": 24000
+      }
+    ]
+  },
+  {
+    "id": "menu-047",
+    "name": "Es Limun",
+    "category": "Minuman",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-047.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      278,
+      314,
+      92,
+      112
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-048",
+    "name": "Es Soda Gembira",
+    "category": "Minuman",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-048.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      393,
+      314,
+      91,
+      112
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-049",
+    "name": "Es Cincau Hijau",
+    "category": "Minuman",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-049.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      518,
+      314,
+      92,
+      112
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-050",
+    "name": "Es Jeruk",
+    "category": "Minuman",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-050.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      187,
+      500,
+      93,
+      112
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-051",
+    "name": "Es Kelapa Muda",
+    "category": "Minuman",
+    "price": 10000,
+    "description": "",
+    "image": "/images/menu-051.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      320,
+      500,
+      90,
+      112
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-052",
+    "name": "Es Kelapa Jeruk",
+    "category": "Minuman",
+    "price": 12000,
+    "description": "",
+    "image": "/images/menu-052.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      452,
+      500,
+      98,
+      112
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-053",
+    "name": "Es ABC",
+    "category": "Es-esan",
+    "price": 28000,
+    "description": "",
+    "image": "/images/menu-053.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      700,
+      316,
+      163,
+      106
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-054",
+    "name": "Es Krim Bumi Upi",
+    "category": "Es-esan",
+    "price": 22000,
+    "description": "",
+    "image": "/images/menu-054.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      712,
+      480,
+      121,
+      121
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-055",
+    "name": "Teh Tawar Jumbo",
+    "category": "Teh & susu",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-055.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      185,
+      745,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-056",
+    "name": "Teh Manis Jumbo",
+    "category": "Teh & susu",
+    "price": 22000,
+    "description": "",
+    "image": "/images/menu-056.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      350,
+      745,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-057",
+    "name": "Teh Manis",
+    "category": "Teh & susu",
+    "price": 13000,
+    "description": "",
+    "image": "/images/menu-057.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      510,
+      745,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-058",
+    "name": "Teh Lemon",
+    "category": "Teh & susu",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-058.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      620,
+      746,
+      100,
+      109
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 20000
+      },
+      {
+        "name": "L",
+        "price": 25000
+      }
+    ]
+  },
+  {
+    "id": "menu-059",
+    "name": "Teh Sereh",
+    "category": "Teh & susu",
+    "price": 17000,
+    "description": "",
+    "image": "/images/menu-059.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      752,
+      746,
+      104,
+      109
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-060",
+    "name": "Es Cokelat Malt Dinosaurus",
+    "category": "Teh & susu",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-060.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      180,
+      940,
+      105,
+      105
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 20000
+      },
+      {
+        "name": "L",
+        "price": 25000
+      }
+    ]
+  },
+  {
+    "id": "menu-061",
+    "name": "Cokelat Malt Panas",
+    "category": "Teh & susu",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-061.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      315,
+      935,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-062",
+    "name": "Es Goyobod Alun-Alun",
+    "category": "Teh & susu",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-062.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      450,
+      935,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-063",
+    "name": "Teh Susu Tolak Angin",
+    "category": "Teh & susu",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-063.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      597,
+      937,
+      117,
+      107
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 23000
+      },
+      {
+        "name": "L",
+        "price": 25000
+      }
+    ]
+  },
+  {
+    "id": "menu-064",
+    "name": "Teh Tarik",
+    "category": "Teh & susu",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-064.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      760,
+      940,
+      90,
+      105
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 20000
+      },
+      {
+        "name": "L",
+        "price": 25000
+      }
+    ]
+  },
+  {
+    "id": "menu-065",
+    "name": "Es Beras Kencur",
+    "category": "Jejamuan",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-065.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1180,
+      213,
+      100,
+      122
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-066",
+    "name": "Es Kunyit Asem",
+    "category": "Jejamuan",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-066.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1320,
+      213,
+      100,
+      122
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-067",
+    "name": "Es Beras Kencur Jeruk",
+    "category": "Jejamuan",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-067.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1460,
+      213,
+      105,
+      122
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-068",
+    "name": "Kopi Hitam",
+    "category": "Kopi",
+    "price": 17000,
+    "description": "",
+    "image": "/images/menu-068.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1038,
+      500,
+      106,
+      108
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 17000
+      },
+      {
+        "name": "L",
+        "price": 22000
+      }
+    ]
+  },
+  {
+    "id": "menu-069",
+    "name": "Kopi Susu",
+    "category": "Kopi",
+    "price": 22000,
+    "description": "",
+    "image": "/images/menu-069.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1152,
+      500,
+      98,
+      108
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 22000
+      },
+      {
+        "name": "L",
+        "price": 27000
+      }
+    ]
+  },
+  {
+    "id": "menu-070",
+    "name": "Kopi Susu Butter",
+    "category": "Kopi",
+    "price": 22000,
+    "description": "",
+    "image": "/images/menu-070.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1276,
+      500,
+      109,
+      108
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-071",
+    "name": "Kopi Susu Santan",
+    "category": "Kopi",
+    "price": 25000,
+    "description": "",
+    "image": "/images/menu-071.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1390,
+      495,
+      102,
+      110
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 25000
+      },
+      {
+        "name": "L",
+        "price": 27000
+      }
+    ]
+  },
+  {
+    "id": "menu-072",
+    "name": "Kopi Susu Kecap",
+    "category": "Kopi",
+    "price": 22000,
+    "description": "",
+    "image": "/images/menu-072.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1523,
+      495,
+      109,
+      113
+    ],
+    "variants": [
+      {
+        "name": "M",
+        "price": 22000
+      },
+      {
+        "name": "L",
+        "price": 27000
+      }
+    ]
+  },
+  {
+    "id": "menu-073",
+    "name": "Kopi Krim Soda",
+    "category": "Kopi",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-073.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1655,
+      495,
+      97,
+      113
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-074",
+    "name": "Jus Tomat",
+    "category": "Jus",
+    "price": 17000,
+    "description": "",
+    "image": "/images/menu-074.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1055,
+      790,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-075",
+    "name": "Jus Sirsak",
+    "category": "Jus",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-075.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1195,
+      790,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-076",
+    "name": "Jus Semangka",
+    "category": "Jus",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-076.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1340,
+      790,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-077",
+    "name": "Jus Mangga",
+    "category": "Jus",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-077.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1480,
+      790,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-078",
+    "name": "Jus Alpukat",
+    "category": "Jus",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-078.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1620,
+      790,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-079",
+    "name": "Jus Tapo",
+    "category": "Jus",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-079.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1055,
+      980,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-080",
+    "name": "Jus Stroberi",
+    "category": "Jus",
+    "price": 24000,
+    "description": "",
+    "image": "/images/menu-080.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1195,
+      980,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-081",
+    "name": "Jus Jambu",
+    "category": "Jus",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-081.webp",
+    "source": "reguler",
+    "page": 3,
+    "crop": [
+      1340,
+      980,
+      125,
+      150
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-082",
+    "name": "Roti Bakar Cokelat",
+    "category": "Roti & burger",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-082.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      155,
+      305,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-083",
+    "name": "Roti Bakar Nanas",
+    "category": "Roti & burger",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-083.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      155,
+      465,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-084",
+    "name": "Roti Bakar Keju",
+    "category": "Roti & burger",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-084.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      375,
+      305,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-085",
+    "name": "Roti Bakar Srikaya",
+    "category": "Roti & burger",
+    "price": 18000,
+    "description": "",
+    "image": "/images/menu-085.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      375,
+      465,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-086",
+    "name": "Roti Bakar Gula Klasik",
+    "category": "Roti & burger",
+    "price": 15000,
+    "description": "",
+    "image": "/images/menu-086.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      575,
+      305,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-087",
+    "name": "Burger Gulai Upi",
+    "category": "Roti & burger",
+    "price": 30000,
+    "description": "",
+    "image": "/images/menu-087.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      575,
+      465,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-088",
+    "name": "Roti Bakar Telur",
+    "category": "Roti & burger",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-088.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      145,
+      740,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-089",
+    "name": "Roti Bakar Kornet Telur Keju",
+    "category": "Roti & burger",
+    "price": 24000,
+    "description": "",
+    "image": "/images/menu-089.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      145,
+      940,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-090",
+    "name": "Roti Bakar Telur Keju",
+    "category": "Roti & burger",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-090.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      400,
+      740,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-091",
+    "name": "Roti Bakar Kornet Telur",
+    "category": "Roti & burger",
+    "price": 24000,
+    "description": "",
+    "image": "/images/menu-091.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      400,
+      940,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-092",
+    "name": "Roti Bakar Kornet",
+    "category": "Roti & burger",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-092.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      650,
+      740,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-093",
+    "name": "Roti Bakar Kornet Keju",
+    "category": "Roti & burger",
+    "price": 22000,
+    "description": "Harga sarapan Rp26.000; harga reguler Rp22.000.",
+    "image": "/images/menu-093.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      650,
+      940,
+      185,
+      110
+    ],
+    "variants": [
+      {
+        "name": "Reguler",
+        "price": 22000
+      },
+      {
+        "name": "Sarapan",
+        "price": 26000
+      }
+    ]
+  },
+  {
+    "id": "menu-094",
+    "name": "Roti Bakar 2 Rasa",
+    "category": "Roti & burger",
+    "price": 21000,
+    "description": "",
+    "image": "/images/menu-094.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      1040,
+      325,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-095",
+    "name": "Roti Bakar Mocca Nougat",
+    "category": "Roti & burger",
+    "price": 21000,
+    "description": "",
+    "image": "/images/menu-095.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      1290,
+      325,
+      185,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-096",
+    "name": "Pisang Bakar Cokelat",
+    "category": "Pisang bakar",
+    "price": 20000,
+    "description": "",
+    "image": "/images/menu-096.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      1110,
+      600,
+      190,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-097",
+    "name": "Pisang Bakar Cokelat Keju",
+    "category": "Pisang bakar",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-097.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      1110,
+      750,
+      190,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-098",
+    "name": "Pisang Bakar Keju",
+    "category": "Pisang bakar",
+    "price": 21000,
+    "description": "",
+    "image": "/images/menu-098.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      1440,
+      600,
+      190,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-099",
+    "name": "Pisang Bakar Double Cokelat",
+    "category": "Pisang bakar",
+    "price": 23000,
+    "description": "",
+    "image": "/images/menu-099.webp",
+    "source": "reguler",
+    "page": 4,
+    "crop": [
+      1440,
+      750,
+      190,
+      110
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-100",
+    "name": "Tahu Cocol Kerupuk",
+    "category": "Sarapan",
+    "price": 10000,
+    "description": "Tahu kuning rebus dengan kecap dan kerupuk aci.",
+    "image": "/images/menu-100.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1030,
+      640,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-101",
+    "name": "B5 (Bala Bala Banjur)",
+    "category": "Sarapan",
+    "price": 15000,
+    "description": "Bala-bala dengan bumbu kacang dan sayuran.",
+    "image": "/images/menu-101.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1030,
+      710,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-102",
+    "name": "Nasi Goreng Omah",
+    "category": "Sarapan",
+    "price": 21000,
+    "description": "Nasi goreng kunyit.",
+    "image": "/images/menu-102.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1040,
+      870,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-103",
+    "name": "Nasi Goreng Kecombrang",
+    "category": "Sarapan",
+    "price": 21000,
+    "description": "Nasi goreng kecombrang.",
+    "image": "/images/menu-103.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1040,
+      945,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-104",
+    "name": "Nasi Kuning Langsai",
+    "category": "Sarapan",
+    "price": 20000,
+    "description": "Nasi kuning, telur dadar iris, tempe orek, abon, dan sambal kacang.",
+    "image": "/images/menu-104.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      305,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-105",
+    "name": "Nasi Udukwati",
+    "category": "Sarapan",
+    "price": 20000,
+    "description": "Nasi uduk dengan pelengkap.",
+    "image": "/images/menu-105.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      370,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-106",
+    "name": "Nasi Kuning Ningrat",
+    "category": "Sarapan",
+    "price": 25000,
+    "description": "Nasi kuning, paru, perkedel, telur gimbal, dan pelengkap.",
+    "image": "/images/menu-106.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      440,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-107",
+    "name": "Nasi Udukwati Ningrat",
+    "category": "Sarapan",
+    "price": 25000,
+    "description": "Nasi uduk, paru, telur gimbal, perkedel, dan pelengkap.",
+    "image": "/images/menu-107.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      515,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-108",
+    "name": "Lontong Cap Gomeh",
+    "category": "Sarapan",
+    "price": 23000,
+    "description": "Lontong kuah gurih dengan sambal goreng kentang.",
+    "image": "/images/menu-108.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      585,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-109",
+    "name": "Nasi Pecelawati",
+    "category": "Sarapan",
+    "price": 17000,
+    "description": "Nasi pecel sayuran.",
+    "image": "/images/menu-109.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      650,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-110",
+    "name": "Risoles",
+    "category": "Sarapan",
+    "price": 10000,
+    "description": "Risoles ragout sayuran isi 3.",
+    "image": "/images/menu-110.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      720,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-111",
+    "name": "Pastel",
+    "category": "Sarapan",
+    "price": 10000,
+    "description": "Pastel sayuran isi 3.",
+    "image": "/images/menu-111.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      785,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-113",
+    "name": "Nasi Telor Sederhana",
+    "category": "Sarapan",
+    "price": 12000,
+    "description": "Nasi dengan telur ceplok atau dadar.",
+    "image": "/images/menu-113.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      925,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-114",
+    "name": "Leupeut Banjur",
+    "category": "Sarapan",
+    "price": 12000,
+    "description": "Leupeut dengan bumbu oncom.",
+    "image": "/images/menu-114.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      995,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-115",
+    "name": "Ketan Kinca",
+    "category": "Sarapan",
+    "price": 24500,
+    "description": "Ketan, kelapa, dan kinca gula aren cair.",
+    "image": "/images/menu-115.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      1070,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-116",
+    "name": "Ketan Oncom",
+    "category": "Sarapan",
+    "price": 22000,
+    "description": "Ketan dengan serundeng dan sambal oncom.",
+    "image": "/images/menu-116.webp",
+    "source": "sarapan",
+    "page": 1,
+    "crop": [
+      1400,
+      1140,
+      105,
+      60
+    ],
+    "variants": []
+  },
+  {
+    "id": "menu-117",
+    "name": "Burger Original",
+    "category": "Sarapan",
+    "price": 27000,
+    "description": "",
+    "image": "/images/menu-117.webp",
+    "source": "sarapan",
+    "page": 2,
+    "crop": [
+      630,
+      425,
+      190,
+      110
+    ],
+    "variants": []
+  }
+]

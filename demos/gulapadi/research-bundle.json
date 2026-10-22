@@ -1,0 +1,6046 @@
+{
+  "schemaVersion": 2,
+  "profile": {
+    "prospectId": "gulapadi-garut",
+    "name": "Gulapadi",
+    "branch": "Garut",
+    "sources": [
+      {
+        "id": "official",
+        "url": "https://linktr.ee/Gulapadiwarungmakan",
+        "accessedAt": "2026-10-22",
+        "locator": "Official bio hub inspected in Chrome: Garut location, WhatsApp, menu and buffet.",
+        "summary": "Official bio hub inspected in Chrome: Garut location, WhatsApp, menu and buffet.",
+        "evidencePath": "research/notes.md",
+        "fingerprint": "48ebc82017cc889fc75a86473787d3aace4d06d368a58822fdf43212c0503b80"
+      },
+      {
+        "id": "instagram",
+        "url": "https://www.instagram.com/gulapadi/",
+        "accessedAt": "2026-10-22",
+        "locator": "Official profile inspected in Chrome: Garut opening hours 06.00–23.00.",
+        "summary": "Official profile inspected in Chrome: Garut opening hours 06.00–23.00.",
+        "evidencePath": "research/notes.md",
+        "fingerprint": "48ebc82017cc889fc75a86473787d3aace4d06d368a58822fdf43212c0503b80"
+      },
+      {
+        "id": "menu",
+        "url": "https://drive.google.com/file/d/1aiCGiIheXC5jQPjhT68IZpOvMyX2Mx7t/view",
+        "accessedAt": "2026-10-22",
+        "locator": "Official 16-page Garut Tasik menu visually reviewed, pages 1–16.",
+        "summary": "Official 16-page Garut Tasik menu visually reviewed, pages 1–16.",
+        "evidencePath": "research/originals/menu.pdf",
+        "fingerprint": "b0d6e3d4a9159415f9290d869f984eb7ca9bfd4125e977508b5fd3a90d7ff3c6"
+      },
+      {
+        "id": "buffet-1",
+        "url": "https://drive.google.com/file/d/1vadmuMjn7mR6_ESQ-_rfkrN84Z-t3eGu/view",
+        "accessedAt": "2026-10-22",
+        "locator": "Official buffet document 1, all content visually inspected. Branch applicability requires confirmation.",
+        "summary": "Official buffet document 1, all content visually inspected. Branch applicability requires confirmation.",
+        "evidencePath": "research/originals/buffet-1.jpg",
+        "fingerprint": "36a94b8ccd9095c958ec5c9e891194ae852c407e20233bc85150441c5fc277af"
+      },
+      {
+        "id": "buffet-2",
+        "url": "https://drive.google.com/file/d/16jZS_31oMQWToNTPoupHn29xrxJgo-Ob/view",
+        "accessedAt": "2026-10-22",
+        "locator": "Official buffet document 2, all content visually inspected. Branch applicability requires confirmation.",
+        "summary": "Official buffet document 2, all content visually inspected. Branch applicability requires confirmation.",
+        "evidencePath": "research/originals/buffet-2.jpg",
+        "fingerprint": "44d0569286b6843482cf3d6947c968fb878eca119e31d87da949cb4ef4d128c7"
+      },
+      {
+        "id": "buffet-3",
+        "url": "https://drive.google.com/file/d/1-6925MPDEikmh8B0UeRhpgRhm7CyH6HO/view",
+        "accessedAt": "2026-10-22",
+        "locator": "Official buffet document 3, all content visually inspected. Branch applicability requires confirmation.",
+        "summary": "Official buffet document 3, all content visually inspected. Branch applicability requires confirmation.",
+        "evidencePath": "research/originals/buffet-3.jpg",
+        "fingerprint": "a1e175dc52f5519df544809c3fd5e20741e71c1afd4898d56dbdf569512a598a"
+      },
+      {
+        "id": "buffet-4",
+        "url": "https://drive.google.com/file/d/17I12om2pPcXPE2K3HEKFDIEqwVDEkmPH/view",
+        "accessedAt": "2026-10-22",
+        "locator": "Official buffet document 4, all content visually inspected. Branch applicability requires confirmation.",
+        "summary": "Official buffet document 4, all content visually inspected. Branch applicability requires confirmation.",
+        "evidencePath": "research/originals/buffet-4.jpg",
+        "fingerprint": "7915926f95db82a56e40fc4430d486d1fa69231478287f2531c55e5b04551769"
+      },
+      {
+        "id": "font",
+        "url": "https://github.com/sharanda/manrope",
+        "accessedAt": "2026-10-22",
+        "locator": "Manrope open-license local font substitute; exact menu font unknown.",
+        "summary": "Manrope open-license local font substitute; exact menu font unknown.",
+        "evidencePath": "app/fonts/manrope-latin.woff2",
+        "fingerprint": "e310b55a7fd9677f5e3555e6c6c4d064fa1f1d24393f0ddbe217cea12a8c432f"
+      }
+    ],
+    "facts": [
+      {
+        "id": "name",
+        "field": "name",
+        "value": "Gulapadi",
+        "sourceIds": [
+          "official"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported, owner confirmation for current operation not obtained."
+      },
+      {
+        "id": "branch",
+        "field": "branch",
+        "value": "Garut",
+        "sourceIds": [
+          "official"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported, owner confirmation for current operation not obtained."
+      },
+      {
+        "id": "address",
+        "field": "address",
+        "value": "Jl. Bank, Paminggir, Garut Kota, Jawa Barat 44112",
+        "sourceIds": [
+          "official"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported, owner confirmation for current operation not obtained."
+      },
+      {
+        "id": "contact",
+        "field": "contact",
+        "value": "6281111113081",
+        "sourceIds": [
+          "official"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported, owner confirmation for current operation not obtained."
+      },
+      {
+        "id": "hours",
+        "field": "hours",
+        "value": "06.00–23.00",
+        "sourceIds": [
+          "instagram"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported, owner confirmation for current operation not obtained."
+      },
+      {
+        "id": "menu-hours",
+        "field": "menu-hours",
+        "value": "Sarapan 06.00–10.30; reguler 10.30–23.00",
+        "sourceIds": [
+          "menu"
+        ],
+        "checkedAt": "2026-10-22",
+        "status": "verified",
+        "used": true,
+        "limitation": "Source-supported, owner confirmation for current operation not obtained."
+      }
+    ]
+  },
+  "offerings": {
+    "items": [
+      {
+        "id": "menu-1",
+        "name": "Nasi Uduk",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-2",
+        "name": "Nasi Uduk Ayam",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-3",
+        "name": "Nasi Telur",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-4",
+        "name": "Nasi Tahu Telur",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-5",
+        "name": "Nasi Pecel",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-6",
+        "name": "Nasi Kulit",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-7",
+        "name": "Nasi Tutug Oncom",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-8",
+        "name": "Bubur Gulapadi",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-9",
+        "name": "Nasi Goreng Cumi Sambal Ijo",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-10",
+        "name": "Nasi Goreng Kambing",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 32000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-11",
+        "name": "Nasi Goreng Babat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-12",
+        "name": "Nasi Goreng Kampung",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-13",
+        "name": "Lontong Kari Ayam",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-14",
+        "name": "Lontong Kari Ayam dengan Kroket",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-15",
+        "name": "Lontong Kari Sapi",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 32000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-16",
+        "name": "Lumpia Semarang",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-17",
+        "name": "Gehu",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-18",
+        "name": "Bala-bala",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-19",
+        "name": "Keju Aroma",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-20",
+        "name": "Pisang Goreng",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-21",
+        "name": "Pisang Aroma",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-22",
+        "name": "Pisang Goreng Keju",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-23",
+        "name": "Bakwan Pontianak",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-24",
+        "name": "Ubi Goreng",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-25",
+        "name": "Tempe Mendoan",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-26",
+        "name": "Roti Bakar Coklat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-27",
+        "name": "Roti Bakar Coklat Kacang",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-28",
+        "name": "Roti Bakar Keju Susu",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-29",
+        "name": "Roti Bakar Roombutter",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-30",
+        "name": "Serabi Solo Original",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-31",
+        "name": "Serabi Solo Coklat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-32",
+        "name": "Serabi Solo Keju",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-33",
+        "name": "Colenak",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 2.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-34",
+        "name": "Es Semangka",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-35",
+        "name": "Es Kelapa Jeruk",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-36",
+        "name": "Es Kelapa Muda",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-37",
+        "name": "Es Jeruk Nipis",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-38",
+        "name": "Es Jeruk",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-39",
+        "name": "Es Kopi Susu",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-40",
+        "name": "Es Kopi Hitam",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-41",
+        "name": "Es Kopi Alpukat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-42",
+        "name": "Es Kopi Susu Pisang",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-43",
+        "name": "Es Kopi Susu Caramel",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-44",
+        "name": "Es Kopi Susu Tiramisu",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-45",
+        "name": "Kopi Susu Panas",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-46",
+        "name": "Kopi Hitam Panas",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-47",
+        "name": "Jahe Susu",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-48",
+        "name": "Rempah TKJ",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-49",
+        "name": "Rempah Susu",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-50",
+        "name": "Teh Rimpang",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-51",
+        "name": "Bir Pletok",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 14000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-52",
+        "name": "Seruni",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 14000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-53",
+        "name": "Sumur Gula Aren Panas/Dingin",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-54",
+        "name": "Sumur Vanila Panas/Dingin",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-55",
+        "name": "Es Teh Hijau",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-56",
+        "name": "Teh Tarik",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-57",
+        "name": "Teh Lemon",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-58",
+        "name": "Teh Sereh",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-59",
+        "name": "Coklat Panas/Dingin",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-60",
+        "name": "Susu Milo Panas/Dingin",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-61",
+        "name": "Teh Manis Panas/Dingin",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-62",
+        "name": "Jus Alpukat",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-63",
+        "name": "Jus Mangga",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-64",
+        "name": "Jus Strawberry",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-65",
+        "name": "Es Kulkul Strawberry (1 pcs)",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-66",
+        "name": "Es Kulkul Pisang (1 pcs)",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-67",
+        "name": "Jus Kacang Hijau",
+        "kind": "product",
+        "category": "Sarapan",
+        "description": " Periode 06.00–10.30; halaman 3.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-68",
+        "name": "Ayam Goreng Asin",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": "Termasuk sambal. Bebas pilih varian sambal. Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ayam-asin"
+      },
+      {
+        "id": "menu-69",
+        "name": "Kulit Goreng Asin",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": "Termasuk sambal. Bebas pilih varian sambal. Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "kulit-asin"
+      },
+      {
+        "id": "menu-70",
+        "name": "Nasi Pedas",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 7000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-71",
+        "name": "Nasi Putih (Menu Asin)",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 5000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-72",
+        "name": "Nasi Jeruk",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 7000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-73",
+        "name": "Nasi Rempah",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 7000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-74",
+        "name": "Ekstra Sambal Dadak",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 2000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-75",
+        "name": "Ekstra Sambal Ijo",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 5.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 2000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-76",
+        "name": "Es Campur Durian",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 6.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "durian"
+      },
+      {
+        "id": "menu-77",
+        "name": "Pepes Ayam Goreng",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": "Nasi timbel, ayam pepes goreng, lalaban, dan sambal. Periode 10.30–23.00; halaman 7.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 39000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "pepes"
+      },
+      {
+        "id": "menu-78",
+        "name": "Ketan Susu",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 8.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ketan"
+      },
+      {
+        "id": "menu-79",
+        "name": "Cipuk Ayam",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 8.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "cipuk-ayam"
+      },
+      {
+        "id": "menu-80",
+        "name": "Ulen Ketan",
+        "kind": "product",
+        "category": "Menu Baru",
+        "description": " Periode 10.30–23.00; halaman 8.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ulen"
+      },
+      {
+        "id": "menu-81",
+        "name": "Nasi Goreng Ikan Cakalang Asap",
+        "kind": "product",
+        "category": "Menu Spesial",
+        "description": " Periode 10.30–23.00; halaman 9.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 33000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "cakalang"
+      },
+      {
+        "id": "menu-82",
+        "name": "Nasi Goreng Ayam Asap",
+        "kind": "product",
+        "category": "Menu Spesial",
+        "description": " Periode 10.30–23.00; halaman 9.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 32000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ayam-asap"
+      },
+      {
+        "id": "menu-83",
+        "name": "Nasi Ayam Asap Cabe Ijo",
+        "kind": "product",
+        "category": "Menu Spesial",
+        "description": " Periode 10.30–23.00; halaman 9.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 32000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "ayam-cabe"
+      },
+      {
+        "id": "menu-84",
+        "name": "Mie Goreng Ayam Asap",
+        "kind": "product",
+        "category": "Menu Spesial",
+        "description": " Periode 10.30–23.00; halaman 9.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "mie-asap"
+      },
+      {
+        "id": "menu-85",
+        "name": "Ayam Goreng Pejantan",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 35000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-86",
+        "name": "Ayam Goreng Broiler",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 26000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-87",
+        "name": "Ayam Bakar Pejantan",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 36000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-88",
+        "name": "Ayam Bakar Broiler",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 26000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-89",
+        "name": "Ayam Serundeng",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 27000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-90",
+        "name": "Ayam Gotep Sambal Ijo",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-91",
+        "name": "Ayam Gotep Rica Rica",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-92",
+        "name": "Nasi Kulit Usus Ayam",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-93",
+        "name": "Mercon Ayam",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-94",
+        "name": "Mercon Usus Kulit",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-95",
+        "name": "Cumi Asam Manis",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 29000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-96",
+        "name": "Cumi Goreng Tepung",
+        "kind": "product",
+        "category": "Ayam & Cumi",
+        "description": " Periode 10.30–23.00; halaman 10.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 29000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-97",
+        "name": "Iga Bakar Cobek",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 58000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-98",
+        "name": "Iga Garang Asam",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 58000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-99",
+        "name": "Sop Iga",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 50000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-100",
+        "name": "Sop Buntut",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 50000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-101",
+        "name": "Mercon Sapi",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 39000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-102",
+        "name": "Mercon Jando",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-103",
+        "name": "Nasi Rawon",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 40000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-104",
+        "name": "Nasi Goreng Cumi Sambal Ijo",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-105",
+        "name": "Nasi Goreng Kambing",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 32000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-106",
+        "name": "Nasi Goreng Babat",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 30000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-107",
+        "name": "Nasi Goreng Kampung",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-108",
+        "name": "Nasi Pindang Suwir",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-109",
+        "name": "Nasi Ayam Suwir",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-110",
+        "name": "Nasi Radar Sunda",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-111",
+        "name": "Nasi Gudeg",
+        "kind": "product",
+        "category": "Sapi & Nasi",
+        "description": " Periode 10.30–23.00; halaman 11.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 25000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-112",
+        "name": "Mie Aceh",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 28000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-113",
+        "name": "Kwetiaw Goreng",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-114",
+        "name": "Mie Dokdok",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 23000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-115",
+        "name": "Telur Dadar",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-116",
+        "name": "Nasi Putih",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-117",
+        "name": "Kol Goreng",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-118",
+        "name": "Sambal Ijo",
+        "kind": "product",
+        "category": "Mie & Tambahan",
+        "description": " Periode 10.30–23.00; halaman 12.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 3000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-119",
+        "name": "Gehu",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-120",
+        "name": "Tahu Cabe Garam",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-121",
+        "name": "Bala-bala",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-122",
+        "name": "Lumpia Semarang",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-123",
+        "name": "Cipuk Banjur",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-124",
+        "name": "Cipuk Ori",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-125",
+        "name": "Cipuk Mozarella",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-126",
+        "name": "Cireng",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-127",
+        "name": "Tempe Mendoan",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-128",
+        "name": "Bakwan Pontianak",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-129",
+        "name": "Keju Aroma",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-130",
+        "name": "Pisang Goreng",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-131",
+        "name": "Pisang Aroma",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-132",
+        "name": "Pisang Goreng Keju",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-133",
+        "name": "Ubi Goreng",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-134",
+        "name": "Colenak",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-135",
+        "name": "Nangka Goreng",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-136",
+        "name": "Roti Bakar Coklat",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-137",
+        "name": "Roti Bakar Coklat Kacang",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-138",
+        "name": "Roti Bakar Keju Susu",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-139",
+        "name": "Roti Bakar Roombutter",
+        "kind": "product",
+        "category": "Gorengan & Roti",
+        "description": " Periode 10.30–23.00; halaman 13.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-140",
+        "name": "Jus Alpukat",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-141",
+        "name": "Jus Mangga",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-142",
+        "name": "Jus Strawberry",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-143",
+        "name": "Jus Kacang Hijau",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-144",
+        "name": "Soda Gembira",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-145",
+        "name": "Seruni",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 14000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-146",
+        "name": "Jahe Susu",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-147",
+        "name": "Rempah TKJ",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-148",
+        "name": "Teh Rimpang",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-149",
+        "name": "Rempah Susu",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-150",
+        "name": "Es Goyobod",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-151",
+        "name": "Es Asam Jawa",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-152",
+        "name": "Bir Pletok",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 14000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-153",
+        "name": "Es Campur",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-154",
+        "name": "Es Semangka",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-155",
+        "name": "Es Kelapa Jeruk",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-156",
+        "name": "Es Kelapa Muda",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-157",
+        "name": "Es Jeruk Nipis",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 17000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-158",
+        "name": "Es Jeruk",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 16000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-159",
+        "name": "Es Jelly Yakult",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 21000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-160",
+        "name": "Es Pisang Hijau",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-161",
+        "name": "Es Kulkul Strawberry (1 pcs)",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-162",
+        "name": "Es Kulkul Pisang (1 pcs)",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 4500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-163",
+        "name": "Teh Manis",
+        "kind": "product",
+        "category": "Minuman Segar",
+        "description": " Periode 10.30–23.00; halaman 14.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-164",
+        "name": "Es Kopi Susu",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 20000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-165",
+        "name": "Es Kopi Hitam",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-166",
+        "name": "Es Kopi Alpukat",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-167",
+        "name": "Es Kopi Susu Pisang",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-168",
+        "name": "Es Kopi Susu Caramel",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-169",
+        "name": "Es Kopi Susu Tiramisu",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 24000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-170",
+        "name": "Kopi Susu Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 22000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-171",
+        "name": "Kopi Hitam Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 18000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-172",
+        "name": "Es Teh Hijau",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-173",
+        "name": "Es Teh Lemon",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-174",
+        "name": "Teh Tarik Dingin",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-175",
+        "name": "Teh Sereh Dingin",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-176",
+        "name": "Teh Lemon Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-177",
+        "name": "Teh Tarik Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-178",
+        "name": "Teh Sereh Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 15000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-179",
+        "name": "Sumur Vanila Dingin",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-180",
+        "name": "Sumur Gula Aren Dingin",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-181",
+        "name": "Sumur Gula Aren Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-182",
+        "name": "Sumur Vanila Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-183",
+        "name": "Coklat Dingin",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-184",
+        "name": "Susu Millo Dingin",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-185",
+        "name": "Coklat Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-186",
+        "name": "Susu Millo Panas",
+        "kind": "product",
+        "category": "Kopi, Teh & Susu",
+        "description": " Periode 10.30–23.00; halaman 15.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 19000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "menu-187",
+        "name": "Meses",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-0"
+      },
+      {
+        "id": "menu-188",
+        "name": "Keju",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-1"
+      },
+      {
+        "id": "menu-189",
+        "name": "Meses Rainbow",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-2"
+      },
+      {
+        "id": "menu-190",
+        "name": "Gula Aren",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-3"
+      },
+      {
+        "id": "menu-191",
+        "name": "Gula Halus",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-4"
+      },
+      {
+        "id": "menu-192",
+        "name": "Dancow",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-5"
+      },
+      {
+        "id": "menu-193",
+        "name": "Avocado",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-6"
+      },
+      {
+        "id": "menu-194",
+        "name": "Kacang",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-7"
+      },
+      {
+        "id": "menu-195",
+        "name": "Tiramisu",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-8"
+      },
+      {
+        "id": "menu-196",
+        "name": "Oreo",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-9"
+      },
+      {
+        "id": "menu-197",
+        "name": "Regal",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-10"
+      },
+      {
+        "id": "menu-198",
+        "name": "Cappucino",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-11"
+      },
+      {
+        "id": "menu-199",
+        "name": "Red Velvet",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-12"
+      },
+      {
+        "id": "menu-200",
+        "name": "Green Tea Almond",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-13"
+      },
+      {
+        "id": "menu-201",
+        "name": "Hazelnut",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-14"
+      },
+      {
+        "id": "menu-202",
+        "name": "Chocomaltine",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 6500,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-15"
+      },
+      {
+        "id": "menu-203",
+        "name": "Bombolini Keju",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-16"
+      },
+      {
+        "id": "menu-204",
+        "name": "Bombolini Coklat",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-17"
+      },
+      {
+        "id": "menu-205",
+        "name": "Bombolini Vanilla",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-18"
+      },
+      {
+        "id": "menu-206",
+        "name": "Abon",
+        "kind": "product",
+        "category": "Donat",
+        "description": " Periode Reguler; halaman 16.",
+        "sourceIds": [
+          "menu"
+        ],
+        "status": "verified",
+        "price": {
+          "amount": 8000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "menu"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": "donat-19"
+      },
+      {
+        "id": "paket-1",
+        "name": "Paket Buffet 80K",
+        "kind": "service",
+        "category": "Buffet",
+        "description": "Harga pada dokumen; unit harga, minimum peserta, pajak dan ketersediaan Garut perlu konfirmasi.",
+        "sourceIds": [
+          "buffet-1"
+        ],
+        "status": "unverified",
+        "price": {
+          "amount": 80000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "buffet-1"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "paket-2",
+        "name": "Paket Buffet 99K",
+        "kind": "service",
+        "category": "Buffet",
+        "description": "Harga pada dokumen; unit harga, minimum peserta, pajak dan ketersediaan Garut perlu konfirmasi.",
+        "sourceIds": [
+          "buffet-1"
+        ],
+        "status": "unverified",
+        "price": {
+          "amount": 99000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "buffet-1"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "paket-3",
+        "name": "Paket Buffet 125K",
+        "kind": "service",
+        "category": "Buffet",
+        "description": "Harga pada dokumen; unit harga, minimum peserta, pajak dan ketersediaan Garut perlu konfirmasi.",
+        "sourceIds": [
+          "buffet-1"
+        ],
+        "status": "unverified",
+        "price": {
+          "amount": 125000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "buffet-1"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      },
+      {
+        "id": "paket-4",
+        "name": "Paket Buffet 150K",
+        "kind": "service",
+        "category": "Buffet",
+        "description": "Harga pada dokumen; unit harga, minimum peserta, pajak dan ketersediaan Garut perlu konfirmasi.",
+        "sourceIds": [
+          "buffet-1"
+        ],
+        "status": "unverified",
+        "price": {
+          "amount": 150000,
+          "currency": "IDR",
+          "checkedAt": "2026-10-22",
+          "sourceIds": [
+            "buffet-1"
+          ]
+        },
+        "promo": null,
+        "variants": [],
+        "imageId": null
+      }
+    ]
+  },
+  "assets": {
+    "items": [
+      {
+        "id": "ayam-asap",
+        "kind": "image",
+        "subject": "ayam-asap",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-82"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ayam-asap.webp",
+        "embedUrl": null,
+        "width": 700,
+        "height": 449
+      },
+      {
+        "id": "ayam-asin",
+        "kind": "image",
+        "subject": "ayam-asin",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-68"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ayam-asin.webp",
+        "embedUrl": null,
+        "width": 500,
+        "height": 349
+      },
+      {
+        "id": "ayam-cabe",
+        "kind": "image",
+        "subject": "ayam-cabe",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-83"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ayam-cabe.webp",
+        "embedUrl": null,
+        "width": 700,
+        "height": 480
+      },
+      {
+        "id": "buffet",
+        "kind": "image",
+        "subject": "buffet",
+        "sourceIds": [
+          "buffet-4"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "buffet"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/buffet.webp",
+        "embedUrl": null,
+        "width": 1024,
+        "height": 432
+      },
+      {
+        "id": "cakalang",
+        "kind": "image",
+        "subject": "cakalang",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-81"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/cakalang.webp",
+        "embedUrl": null,
+        "width": 700,
+        "height": 452
+      },
+      {
+        "id": "cipuk-ayam",
+        "kind": "image",
+        "subject": "cipuk-ayam",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-79"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/cipuk-ayam.webp",
+        "embedUrl": null,
+        "width": 600,
+        "height": 398
+      },
+      {
+        "id": "donat-0",
+        "kind": "image",
+        "subject": "donat-0",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-187"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-0.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-1",
+        "kind": "image",
+        "subject": "donat-1",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-188"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-1.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-10",
+        "kind": "image",
+        "subject": "donat-10",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-197"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-10.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-11",
+        "kind": "image",
+        "subject": "donat-11",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-198"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-11.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-12",
+        "kind": "image",
+        "subject": "donat-12",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-199"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-12.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-13",
+        "kind": "image",
+        "subject": "donat-13",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-200"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-13.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 258
+      },
+      {
+        "id": "donat-14",
+        "kind": "image",
+        "subject": "donat-14",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-201"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-14.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-15",
+        "kind": "image",
+        "subject": "donat-15",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-202"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-15.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-16",
+        "kind": "image",
+        "subject": "donat-16",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-203"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-16.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-17",
+        "kind": "image",
+        "subject": "donat-17",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-204"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-17.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-18",
+        "kind": "image",
+        "subject": "donat-18",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-205"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-18.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-19",
+        "kind": "image",
+        "subject": "donat-19",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-206"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-19.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-2",
+        "kind": "image",
+        "subject": "donat-2",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-189"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-2.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-3",
+        "kind": "image",
+        "subject": "donat-3",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-190"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-3.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 258
+      },
+      {
+        "id": "donat-4",
+        "kind": "image",
+        "subject": "donat-4",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-191"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-4.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-5",
+        "kind": "image",
+        "subject": "donat-5",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-192"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-5.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-6",
+        "kind": "image",
+        "subject": "donat-6",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-193"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-6.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-7",
+        "kind": "image",
+        "subject": "donat-7",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-194"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-7.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "donat-8",
+        "kind": "image",
+        "subject": "donat-8",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-195"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-8.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 257
+      },
+      {
+        "id": "donat-9",
+        "kind": "image",
+        "subject": "donat-9",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-196"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "donat",
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/donat-9.webp",
+        "embedUrl": null,
+        "width": 260,
+        "height": 256
+      },
+      {
+        "id": "durian",
+        "kind": "image",
+        "subject": "durian",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-76"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/durian.webp",
+        "embedUrl": null,
+        "width": 900,
+        "height": 748
+      },
+      {
+        "id": "ketan",
+        "kind": "image",
+        "subject": "ketan",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-78"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ketan.webp",
+        "embedUrl": null,
+        "width": 600,
+        "height": 356
+      },
+      {
+        "id": "kulit-asin",
+        "kind": "image",
+        "subject": "kulit-asin",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-69"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/kulit-asin.webp",
+        "embedUrl": null,
+        "width": 500,
+        "height": 343
+      },
+      {
+        "id": "logo",
+        "kind": "logo",
+        "subject": "logo",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero",
+          "location"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/logo.webp",
+        "embedUrl": null,
+        "width": 480,
+        "height": 318
+      },
+      {
+        "id": "mie-asap",
+        "kind": "image",
+        "subject": "mie-asap",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-84"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/mie-asap.webp",
+        "embedUrl": null,
+        "width": 700,
+        "height": 478
+      },
+      {
+        "id": "pepes",
+        "kind": "image",
+        "subject": "pepes",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-77"
+        ],
+        "sectionIds": [
+          "catalogue",
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/pepes.webp",
+        "embedUrl": null,
+        "width": 1100,
+        "height": 615
+      },
+      {
+        "id": "ulen",
+        "kind": "image",
+        "subject": "ulen",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [
+          "menu-80"
+        ],
+        "sectionIds": [
+          "catalogue"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi; official linked menu artwork",
+        "deliveryMethod": "file",
+        "runtimePath": "public/images/ulen.webp",
+        "embedUrl": null,
+        "width": 600,
+        "height": 507
+      },
+      {
+        "id": "manrope",
+        "kind": "font",
+        "subject": "Manrope OFL sans substitute",
+        "sourceIds": [
+          "font"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero",
+          "catalogue",
+          "donat",
+          "buffet",
+          "location",
+          "hours"
+        ],
+        "authenticity": "illustration",
+        "rightsStatus": "licensed",
+        "rightsEvidence": [
+          "research/notes.md"
+        ],
+        "attribution": "Manrope contributors, SIL OFL",
+        "deliveryMethod": "file",
+        "runtimePath": "app/fonts/manrope-latin.woff2",
+        "embedUrl": null,
+        "width": null,
+        "height": null
+      },
+      {
+        "id": "favicon",
+        "kind": "logo",
+        "subject": "Original logo scaled proportionally into icon canvas",
+        "sourceIds": [
+          "menu"
+        ],
+        "productIds": [],
+        "sectionIds": [
+          "hero"
+        ],
+        "authenticity": "verified",
+        "rightsStatus": "pending",
+        "rightsEvidence": [],
+        "attribution": "Gulapadi",
+        "deliveryMethod": "file",
+        "runtimePath": "public/favicon.ico",
+        "embedUrl": null,
+        "width": 64,
+        "height": 64
+      }
+    ]
+  },
+  "pagePlan": {
+    "prospectId": "gulapadi-garut",
+    "primaryGoal": "Lihat menu Garut, pilih waktu kunjungan dan hubungi cabang yang tepat.",
+    "features": {
+      "catalogue": true,
+      "categoryFilter": true,
+      "search": true,
+      "stickyToolbar": false,
+      "loadMore": true,
+      "productDialog": false,
+      "carousel": false,
+      "accordion": true,
+      "location": true
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "features": []
+      },
+      {
+        "id": "hours",
+        "features": []
+      },
+      {
+        "id": "donat",
+        "features": []
+      },
+      {
+        "id": "catalogue",
+        "features": [
+          "catalogue",
+          "categoryFilter",
+          "search",
+          "loadMore"
+        ]
+      },
+      {
+        "id": "buffet",
+        "features": [
+          "accordion"
+        ]
+      },
+      {
+        "id": "location",
+        "features": [
+          "location"
+        ]
+      }
+    ],
+    "media": [
+      {
+        "assetId": "ayam-asap",
+        "productId": "menu-82",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "ayam-asin",
+        "productId": "menu-68",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "ayam-cabe",
+        "productId": "menu-83",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "buffet",
+        "productId": null,
+        "sectionId": "buffet"
+      },
+      {
+        "assetId": "cakalang",
+        "productId": "menu-81",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "cipuk-ayam",
+        "productId": "menu-79",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-0",
+        "productId": "menu-187",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-0",
+        "productId": "menu-187",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-1",
+        "productId": "menu-188",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-1",
+        "productId": "menu-188",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-10",
+        "productId": "menu-197",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-10",
+        "productId": "menu-197",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-11",
+        "productId": "menu-198",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-11",
+        "productId": "menu-198",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-12",
+        "productId": "menu-199",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-12",
+        "productId": "menu-199",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-13",
+        "productId": "menu-200",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-13",
+        "productId": "menu-200",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-14",
+        "productId": "menu-201",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-14",
+        "productId": "menu-201",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-15",
+        "productId": "menu-202",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-15",
+        "productId": "menu-202",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-16",
+        "productId": "menu-203",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-16",
+        "productId": "menu-203",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-17",
+        "productId": "menu-204",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-17",
+        "productId": "menu-204",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-18",
+        "productId": "menu-205",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-18",
+        "productId": "menu-205",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-19",
+        "productId": "menu-206",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-19",
+        "productId": "menu-206",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-2",
+        "productId": "menu-189",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-2",
+        "productId": "menu-189",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-3",
+        "productId": "menu-190",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-3",
+        "productId": "menu-190",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-4",
+        "productId": "menu-191",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-4",
+        "productId": "menu-191",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-5",
+        "productId": "menu-192",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-5",
+        "productId": "menu-192",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-6",
+        "productId": "menu-193",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-6",
+        "productId": "menu-193",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-7",
+        "productId": "menu-194",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-7",
+        "productId": "menu-194",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-8",
+        "productId": "menu-195",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-8",
+        "productId": "menu-195",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-9",
+        "productId": "menu-196",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "donat-9",
+        "productId": "menu-196",
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "donat-9",
+        "productId": "menu-196",
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "durian",
+        "productId": "menu-76",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "durian",
+        "productId": "menu-76",
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "ketan",
+        "productId": "menu-78",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "kulit-asin",
+        "productId": "menu-69",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "logo",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "logo",
+        "productId": null,
+        "sectionId": "location"
+      },
+      {
+        "assetId": "mie-asap",
+        "productId": "menu-84",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "pepes",
+        "productId": "menu-77",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "pepes",
+        "productId": "menu-77",
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "ulen",
+        "productId": "menu-80",
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "favicon",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "manrope",
+        "productId": null,
+        "sectionId": "hero"
+      },
+      {
+        "assetId": "manrope",
+        "productId": null,
+        "sectionId": "hours"
+      },
+      {
+        "assetId": "manrope",
+        "productId": null,
+        "sectionId": "donat"
+      },
+      {
+        "assetId": "manrope",
+        "productId": null,
+        "sectionId": "catalogue"
+      },
+      {
+        "assetId": "manrope",
+        "productId": null,
+        "sectionId": "buffet"
+      },
+      {
+        "assetId": "manrope",
+        "productId": null,
+        "sectionId": "location"
+      }
+    ],
+    "layoutSignature": {
+      "hero": "photo-collage",
+      "sequence": "essentials-first",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "quick-visit"
+    },
+    "candidates": [
+      {
+        "id": "direct-product",
+        "layoutSignature": {
+          "hero": "photo-collage",
+          "sequence": "essentials-first",
+          "catalogue": "compact-rows",
+          "media": "alternating-scenes",
+          "narrative": "quick-visit"
+        },
+        "rationale": "Foto hidangan resmi kuat; menu panjang paling terbaca sebagai rows dan informasi jam lebih dahulu."
+      },
+      {
+        "id": "graphic-grid",
+        "layoutSignature": {
+          "hero": "brand-typographic",
+          "sequence": "product-first",
+          "catalogue": "open-grid",
+          "media": "mosaic",
+          "narrative": "curated-selection"
+        },
+        "rationale": "Ditolak: mayoritas 206 entri tanpa foto individual, grid akan terlalu panjang dan repetitif."
+      }
+    ],
+    "selectedCandidate": "direct-product",
+    "contentCoverage": {
+      "menu": "catalogue: all 206 Garut applicable entries",
+      "buffet": "buffet: four packages, choices, contact and confirmation limitations",
+      "address-contact-hours": "hero/hours/location",
+      "other-branches": "omitted as irrelevant",
+      "expired-promotion": "omitted, ended 18 October and another branch"
+    },
+    "mediaCoverage": {
+      "productPhotos": 31,
+      "catalogueEntries": 206,
+      "sourcesChecked": [
+        "Instagram profile",
+        "official menu PDF",
+        "official buffet Drive",
+        "Google Images Chrome",
+        "GoFood discovery"
+      ],
+      "gaps": "No interior photo with sufficient branch/source confidence; no speculative SKU mapping."
+    },
+    "brand": {
+      "colors": [
+        "#b13523",
+        "#f5edcf",
+        "#38291f"
+      ],
+      "font": "Manrope local OFL substitute; exact font unknown"
+    },
+    "componentProvenance": "Local copies of shadcn Base UI Button, Input, Select and Accordion from existing demo; same primitives retained.",
+    "mobile": "Hero text then image; two-column donut grid; one-column menu rows; inline search; vertical buffet; no sticky toolbar.",
+    "historyComparison": "Differs on all five signature axes from accepted Historia baseline."
+  }
+}
