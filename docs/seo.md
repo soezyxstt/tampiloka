@@ -67,7 +67,7 @@ Halaman privat tetap dapat di-crawl agar Google membaca `noindex`; jangan menamb
 
 ## 3. Yang sudah disiapkan di kode
 
-- `app/sitemap.ts` dengan `lastModified`, `changeFrequency`, `priority`, dan image sitemap.
+- `app/sitemap.xml/route.ts` dengan `lastmod`, `changefreq`, `priority`, dan image sitemap. XML disusun manual karena route `sitemap.ts` bawaan Next.js menaruh `image:image` sebelum `lastmod`; urutan itu melanggar skema sitemap dan membuat Search Console menolak file. Elemen standar harus lebih dulu, ekstensi image setelahnya.
 - `app/robots.ts` dengan referensi sitemap.
 - Metadata per halaman: title, description, canonical absolut, Open Graph, Twitter Card, dan gambar 1200×630.
 - Metadata global: `robots` (`max-image-preview:large`, `max-snippet:-1`), `theme-color`, ikon Apple, manifest, `appleWebApp`.
