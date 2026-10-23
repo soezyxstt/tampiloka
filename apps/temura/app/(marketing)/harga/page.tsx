@@ -9,7 +9,7 @@ import {
 
 const pageTitle = "Harga undangan digital";
 const pageDescription =
-  "Bandingkan paket undangan digital Temura dan lihat fitur sesuai desain serta tingkat kustomisasi.";
+  "Bandingkan harga paket undangan digital Temura berdasarkan pilihan desain dan penyesuaiannya.";
 
 export const metadata = createPageMetadata({
   path: "/harga",

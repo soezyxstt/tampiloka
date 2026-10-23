@@ -34,7 +34,7 @@ export function SiteHeader() {
       transparentOnTop={pathname === "/"}
       links={links}
       action={{
-        label: "Hubungi",
+        label: "Hubungi kami",
         href: contact,
       }}
       mobileTitle="Navigasi Temura"

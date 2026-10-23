@@ -10,7 +10,7 @@ import {
 
 const pageTitle = "Desain undangan digital";
 const pageDescription =
-  "Lihat pilihan desain undangan digital Temura dan buka preview untuk membandingkannya.";
+  "Pilih desain undangan pernikahan Temura dan lihat contohnya sebelum menentukan pilihan.";
 
 export const metadata = createPageMetadata({
   path: "/desain",

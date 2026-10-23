@@ -11,7 +11,7 @@ import { createPageMetadata, temuraProductSchema, temuraWebPageSchema } from "@/
 
 const pageTitle = "Undangan Pernikahan Digital";
 const pageDescription =
-  "Pilih desain undangan, bagikan kepada tamu, dan kelola kehadiran. Undangan digital oleh Tampiloka.";
+  "Pilih desain undangan pernikahan, sesuaikan isi, dan bagikan tautannya kepada tamu. Temura, undangan digital oleh Tampiloka.";
 
 export const metadata = createPageMetadata({
   path: "/",
@@ -41,7 +41,7 @@ export default function LandingPage() {
         <div className="temura-container temura-hero-inner">
           <div className="temura-hero-copy">
             <h1 className="type-display-xl" data-reveal>Undangan<br /><span>pernikahan digital.</span></h1>
-            <p className="type-body-lg temura-intro" data-reveal>Pilih desain, sesuaikan, lalu bagikan.</p>
+            <p className="type-body-lg temura-intro" data-reveal>Pilih desain, lengkapi cerita kalian, lalu bagikan tautannya.</p>
             <div className="temura-actions" data-reveal>
               <a
                 href="#desain"
@@ -51,7 +51,7 @@ export default function LandingPage() {
                 <ArrowUpRight size={16} />
               </a>
               <Link href="/fitur" className="temura-text-link type-label">
-                Fitur
+                Lihat fitur
                 <ArrowUpRight size={16} />
               </Link>
             </div>
@@ -60,7 +60,7 @@ export default function LandingPage() {
         </div>
       </section>
       <section id="desain" className="temura-section temura-container">
-        <div className="temura-section-heading"><h2 className="type-display">Desain</h2><Link className="temura-inline-link type-label" href="/desain">Semua desain<ArrowUpRight size={18} /></Link></div>
+        <div className="temura-section-heading"><h2 className="type-display">Desain</h2><Link className="temura-inline-link type-label" href="/desain">Lihat semua desain<ArrowUpRight size={18} /></Link></div>
         <DesignShowcase />
       </section>
       <PortfolioSection />

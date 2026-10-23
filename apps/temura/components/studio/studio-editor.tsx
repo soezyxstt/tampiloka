@@ -42,7 +42,7 @@ export function StudioEditor() {
   const [selected, setSelected] = useState<string | null>("names");
   const [past, setPast] = useState<Document[]>([]);
   const [future, setFuture] = useState<Document[]>([]);
-  const [message, setMessage] = useState("Draf lokal · Belum disimpan");
+  const [message, setMessage] = useState("Perubahan belum disimpan");
   const [mobilePanel, setMobilePanel] = useState("assets");
   const canvas = useRef<HTMLDivElement>(null);
   const importInput = useRef<HTMLInputElement>(null);
@@ -51,13 +51,13 @@ export function StudioEditor() {
   const active = document.elements.find((element) => element.id === selected);
   function commit(next: Document) {
     if (JSON.stringify(next) === JSON.stringify(document)) return;
-    setPast((history) => [...history.slice(-49), document]); setFuture([]); setDocument(next); setMessage("Draf lokal · Belum disimpan");
+    setPast((history) => [...history.slice(-49), document]); setFuture([]); setDocument(next); setMessage("Perubahan belum disimpan");
   }
   function update(patch: Partial<Element>) {
     commit({ ...document, elements: document.elements.map((e) => e.id === selected ? { ...e, ...patch } : e) });
   }
   function add(kind: Kind, x = 140, y = 180) {
-    if (document.elements.length >= 100) { setMessage("Draf demo maksimal 100 elemen."); return; }
+    if (document.elements.length >= 100) { setMessage("Batas 100 elemen tercapai. Hapus elemen sebelum menambah yang baru."); return; }
     const element: Element = { id: crypto.randomUUID(), kind, text: "Tulis cerita kalian", x: Math.max(0, Math.min(280, x)), y: Math.max(0, Math.min(540, y)), width: kind === "text" ? 240 : 100, height: kind === "text" ? 60 : kind === "line" ? 15 : 100, color: "#416853", rotation: 0, fontSize: 24, font: "heading" };
     commit({ ...document, elements: [...document.elements, element] }); setSelected(element.id); setMobilePanel("properties");
   }
@@ -67,18 +67,18 @@ export function StudioEditor() {
     [elements[index], elements[next]] = [elements[next], elements[index]]; commit({ ...document, elements });
   }
   function undo() {
-    if (!past.length) return; setFuture((history) => [document, ...history]); setDocument(past[past.length - 1]); setPast(past.slice(0, -1)); setMessage("Draf lokal · Belum disimpan");
+    if (!past.length) return; setFuture((history) => [document, ...history]); setDocument(past[past.length - 1]); setPast(past.slice(0, -1)); setMessage("Perubahan belum disimpan");
   }
   function redo() {
-    if (!future.length) return; setPast((history) => [...history, document]); setDocument(future[0]); setFuture(future.slice(1)); setMessage("Draf lokal · Belum disimpan");
+    if (!future.length) return; setPast((history) => [...history, document]); setDocument(future[0]); setFuture(future.slice(1)); setMessage("Perubahan belum disimpan");
   }
   function save() {
-    try { localStorage.setItem(storageKey, JSON.stringify(document)); setMessage("Draf lokal · Tersimpan di browser ini"); }
+    try { localStorage.setItem(storageKey, JSON.stringify(document)); setMessage("Draf tersimpan di browser ini"); }
     catch { setMessage("Browser tidak dapat menyimpan draf. Unduh JSON sebagai cadangan."); }
   }
   function load() {
-    try { const raw = localStorage.getItem(storageKey); if (!raw) { setMessage("Belum ada draf tersimpan di browser ini."); return; } const value: unknown = JSON.parse(raw); if (!validDocument(value)) throw new Error(); commit(value); setSelected(null); setMessage("Draf lokal dibuka."); }
-    catch { setMessage("Draf lokal tidak dapat dibuka. Coba impor file JSON yang valid."); }
+    try { const raw = localStorage.getItem(storageKey); if (!raw) { setMessage("Belum ada draf tersimpan di browser ini."); return; } const value: unknown = JSON.parse(raw); if (!validDocument(value)) throw new Error(); commit(value); setSelected(null); setMessage("Draf berhasil dibuka."); }
+    catch { setMessage("Draf tidak bisa dibuka. Coba impor file JSON yang diekspor dari Studio Temura."); }
   }
   function exportDocument() {
     const url = URL.createObjectURL(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" })); const link = window.document.createElement("a"); link.href = url; link.download = "temura-studio-draf.json"; link.click(); URL.revokeObjectURL(url); setMessage("Draf JSON diunduh.");
@@ -86,7 +86,7 @@ export function StudioEditor() {
   async function importDocument(file: File | undefined) {
     if (!file) return;
     try { if (file.size > 8000000) throw new Error(); const value: unknown = JSON.parse(await file.text()); if (!validDocument(value)) throw new Error(); commit(value); setSelected(null); setMessage("Draf JSON berhasil diimpor."); }
-    catch { setMessage("File tidak valid. Gunakan JSON yang diekspor dari Studio Temura."); }
+    catch { setMessage("File tidak bisa diimpor. Gunakan JSON dari Studio Temura dengan ukuran maksimal 8 MB."); }
   }
   async function uploadImage(file: File | undefined) {
     if (!file) return;
@@ -95,7 +95,7 @@ export function StudioEditor() {
       const imageData = await new Promise<string>((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(String(reader.result)); reader.onerror = reject; reader.readAsDataURL(file); });
       const element: Element = { id: crypto.randomUUID(), kind: "image", imageData, text: file.name.slice(0, 100), x: 90, y: 180, width: 220, height: 220, rotation: 0, color: "#416853", fontSize: 24, font: "body" };
       const next = { ...document, elements: [...document.elements, element] }; if (JSON.stringify(next).length > 8000000) { setMessage("Draf terlalu besar. Hapus beberapa gambar sebelum menambah gambar baru."); return; }
-      commit(next); setSelected(element.id); setMobilePanel("properties"); setMessage("Gambar ditambahkan · Lokal di browser ini");
+      commit(next); setSelected(element.id); setMobilePanel("properties"); setMessage("Gambar ditambahkan ke draf");
     } catch { setMessage("Gambar tidak dapat dibaca. Coba file lain."); }
   }
   function startMove(event: PointerEvent<HTMLButtonElement>, element: Element) {
@@ -111,7 +111,7 @@ export function StudioEditor() {
   function finishMove(event: PointerEvent<HTMLButtonElement>) {
     const drag = gesture.current; if (!drag) return; gesture.current = null;
     if (event.type === "pointercancel") { setDocument(drag.before); return; }
-    if (JSON.stringify(document) !== JSON.stringify(drag.before)) { setPast((history) => [...history.slice(-49), drag.before]); setFuture([]); setMessage("Draf lokal · Belum disimpan"); }
+    if (JSON.stringify(document) !== JSON.stringify(drag.before)) { setPast((history) => [...history.slice(-49), drag.before]); setFuture([]); setMessage("Perubahan belum disimpan"); }
   }
   function drop(event: DragEvent) {
     event.preventDefault(); const kind = event.dataTransfer.getData("temura-element"); const rect = canvas.current?.getBoundingClientRect();
@@ -120,7 +120,7 @@ export function StudioEditor() {
   return <main className="temura-studio">
     <header className="studio-header">
       <div className="studio-brand"><Link href="/" className="studio-back" aria-label="Kembali ke Temura"><ArrowLeft size={18} /><Image src="/brand/logos/light/temura-horizontal-light.svg" alt="Temura" width={136} height={34} /></Link><span className="studio-divider" /><h1 className="type-heading-5">Studio</h1></div>
-      <div className="studio-top-actions"><button className="studio-icon" onClick={undo} disabled={!past.length} aria-label="Urungkan"><Undo2 size={18} /></button><button className="studio-icon" onClick={redo} disabled={!future.length} aria-label="Ulangi"><Redo2 size={18} /></button><button className="studio-button type-label" onClick={load}>Buka draf</button><button className="studio-button studio-primary type-label" onClick={save}><Save size={16} />Simpan lokal</button></div>
+      <div className="studio-top-actions"><button className="studio-icon" onClick={undo} disabled={!past.length} aria-label="Urungkan"><Undo2 size={18} /></button><button className="studio-icon" onClick={redo} disabled={!future.length} aria-label="Ulangi"><Redo2 size={18} /></button><button className="studio-button type-label" onClick={load}>Buka draf</button><button className="studio-button studio-primary type-label" onClick={save}><Save size={16} />Simpan draf</button></div>
     </header>
     <div className="studio-mobile-tabs" aria-label="Panel studio">{[{ id: "assets", label: "Elemen" }, { id: "properties", label: "Pengaturan" }, { id: "layers", label: "Layer" }].map((tab) => <button key={tab.id} className="type-label" aria-pressed={mobilePanel === tab.id} onClick={() => setMobilePanel(tab.id)}>{tab.label}</button>)}</div>
     <div className="studio-workspace">
@@ -129,7 +129,7 @@ export function StudioEditor() {
         <div className="studio-asset-grid">{assets.map(({ kind, label, icon: Icon }) => <button className="studio-asset type-label" key={kind} draggable onDragStart={(e) => e.dataTransfer.setData("temura-element", kind)} onClick={() => add(kind)} title="Klik atau tarik ke kanvas"><Icon size={20} strokeWidth={1.5} /><span>{label}</span></button>)}</div>
         <button className="studio-button studio-upload type-label" onClick={() => imageInput.current?.click()}><ImagePlus size={18} />Tambah gambar</button><input ref={imageInput} type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => { void uploadImage(e.target.files?.[0]); e.target.value = ""; }} /><p className="type-caption studio-muted">PNG, JPG, WebP · Maks. 2 MB per gambar</p>
         <label className="studio-field type-label">Warna kanvas<input type="color" value={document.background} onChange={(e) => commit({ ...document, background: e.target.value })} /></label>
-        <div className="studio-file-actions"><button className="studio-button type-label" onClick={exportDocument}><Download size={16} />Unduh JSON</button><button className="studio-button type-label" onClick={() => importInput.current?.click()}><Upload size={16} />Impor JSON</button><input ref={importInput} type="file" accept="application/json,.json" hidden onChange={(e) => { void importDocument(e.target.files?.[0]); e.target.value = ""; }} /></div>
+        <div className="studio-file-actions"><button className="studio-button type-label" onClick={exportDocument}><Download size={16} />Unduh draf (JSON)</button><button className="studio-button type-label" onClick={() => importInput.current?.click()}><Upload size={16} />Impor draf (JSON)</button><input ref={importInput} type="file" accept="application/json,.json" hidden onChange={(e) => { void importDocument(e.target.files?.[0]); e.target.value = ""; }} /></div>
       </aside>
       <section className="studio-stage" aria-label="Kanvas desain">
         <div className="studio-stage-caption"><span className="type-label">Kanvas</span><span className="type-caption">400 × 640</span></div>
@@ -141,15 +141,15 @@ export function StudioEditor() {
         <section className={`studio-properties ${mobilePanel === "properties" ? "studio-panel-visible" : ""}`}>
           <h2 className="type-heading-5">Pengaturan</h2>
           {active ? <><p className="type-caption studio-muted">{active.kind === "image" ? "Gambar lokal" : assets.find((a) => a.kind === active.kind)?.label}</p>
-            {active.kind === "text" && <><label className="studio-field type-label">Teks<textarea className="type-body" maxLength={2000} value={active.text} onChange={(e) => update({ text: e.target.value })} /></label><label className="studio-field type-label">Font<select className="type-body" value={active.font} onChange={(e) => update({ font: e.target.value as Element["font"] })}><option value="heading">Manrope</option><option value="body">Inter</option><option value="serif">Cormorant Garamond</option></select></label><label className="studio-field type-label">Ukuran teks<input className="type-body" type="number" min={8} max={100} value={active.fontSize} onChange={(e) => update({ fontSize: Math.max(8, Math.min(100, Number(e.target.value))) })} /></label></>}
+            {active.kind === "text" && <><label className="studio-field type-label">Teks<textarea className="type-body" maxLength={2000} value={active.text} onChange={(e) => update({ text: e.target.value })} /></label><label className="studio-field type-label">Jenis huruf<select className="type-body" value={active.font} onChange={(e) => update({ font: e.target.value as Element["font"] })}><option value="heading">Manrope</option><option value="body">Inter</option><option value="serif">Cormorant Garamond</option></select></label><label className="studio-field type-label">Ukuran teks<input className="type-body" type="number" min={8} max={100} value={active.fontSize} onChange={(e) => update({ fontSize: Math.max(8, Math.min(100, Number(e.target.value))) })} /></label></>}
             <div className="studio-transform-grid">{([{ key: "x", label: "Posisi X", min: 0, max: 390 }, { key: "y", label: "Posisi Y", min: 0, max: 630 }, { key: "width", label: "Lebar", min: 10, max: 400 }, { key: "height", label: "Tinggi", min: 10, max: 640 }, { key: "rotation", label: "Rotasi °", min: -360, max: 360 }] as const).map((field) => <label className="studio-field type-label-sm" key={field.key}>{field.label}<input className="type-body" type="number" min={field.min} max={field.max} value={active[field.key]} onChange={(e) => update({ [field.key]: Math.max(field.min, Math.min(field.max, Number(e.target.value))) })} /></label>)}</div>
             {active.kind !== "image" && <label className="studio-field type-label">Warna elemen<input type="color" value={active.color} onChange={(e) => update({ color: e.target.value })} /></label>}
-            <div className="studio-element-actions"><button className="studio-button type-label" disabled={document.elements.length >= 100} onClick={() => { const copy = { ...active, id: crypto.randomUUID(), x: Math.min(390, active.x + 15), y: Math.min(630, active.y + 15) }; commit({ ...document, elements: [...document.elements, copy] }); setSelected(copy.id); }}><Copy size={16} />Duplikat</button><button className="studio-icon studio-delete" aria-label="Hapus elemen" onClick={() => { commit({ ...document, elements: document.elements.filter((e) => e.id !== selected) }); setSelected(null); }}><Trash2 size={18} /></button></div>
-          </> : <p className="type-body-sm studio-muted">Pilih elemen.</p>}
+            <div className="studio-element-actions"><button className="studio-button type-label" disabled={document.elements.length >= 100} onClick={() => { const copy = { ...active, id: crypto.randomUUID(), x: Math.min(390, active.x + 15), y: Math.min(630, active.y + 15) }; commit({ ...document, elements: [...document.elements, copy] }); setSelected(copy.id); }}><Copy size={16} />Gandakan</button><button className="studio-icon studio-delete" aria-label="Hapus elemen" onClick={() => { commit({ ...document, elements: document.elements.filter((e) => e.id !== selected) }); setSelected(null); }}><Trash2 size={18} /></button></div>
+          </> : <p className="type-body-sm studio-muted">Pilih elemen di kanvas untuk mengaturnya.</p>}
         </section>
         <section className={`studio-layers ${mobilePanel === "layers" ? "studio-panel-visible" : ""}`}><div className="studio-layer-heading"><h2 className="type-heading-5"><Layers size={18} />Layer</h2><div><button className="studio-icon" disabled={!active || document.elements.at(-1)?.id === selected} onClick={() => reorder(1)} aria-label="Naikkan layer"><ArrowUp size={16} /></button><button className="studio-icon" disabled={!active || document.elements[0]?.id === selected} onClick={() => reorder(-1)} aria-label="Turunkan layer"><ArrowDown size={16} /></button></div></div><p className="type-caption studio-muted">Layer teratas tampil di depan.</p><div className="studio-layer-list">{[...document.elements].reverse().map((e) => <button className="studio-layer type-label" aria-pressed={selected === e.id} key={e.id} onClick={() => { setSelected(e.id); setMobilePanel("properties"); }}><span className="studio-layer-dot" style={{ background: e.color }} />{e.kind === "text" || e.kind === "image" ? e.text || "Teks kosong" : assets.find((a) => a.kind === e.kind)?.label}</button>)}{!document.elements.length && <p className="type-body-sm">Belum ada elemen. Tambahkan dari panel Elemen.</p>}</div></section>
       </aside>
     </div>
-    <footer className="studio-status"><p className="type-caption" role="status">{message}</p><Link className="type-label-sm" href="/fitur">Lihat fitur Temura</Link></footer>
+    <footer className="studio-status"><div><p className="type-caption" role="status">{message}</p><p className="type-caption">Demo · Simpan draf di browser ini. Belum terhubung ke pesanan.</p></div><Link className="type-label-sm" href="/fitur">Lihat fitur Temura</Link></footer>
   </main>;
 }

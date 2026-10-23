@@ -32,18 +32,17 @@ export default function GlobalError({
       </div>
 
       <p className="font-sans text-[10px] uppercase tracking-[0.45em] text-wood-brown/55">
-        Terjadi Kesalahan
+        Terjadi kesalahan
       </p>
 
       <h1 className="mt-3 font-serif text-3xl font-light text-wood-brown sm:text-4xl">
-        Sesuatu tidak berjalan
+        Halaman belum bisa
         <br />
-        sebagaimana mestinya
+        ditampilkan
       </h1>
 
       <p className="mx-auto mt-4 max-w-sm font-sans text-sm leading-relaxed text-wood-brown/65">
-        Kami mohon maaf atas gangguan ini. Silakan coba muat ulang halaman atau hubungi admin jika
-        masalah berlanjut.
+        Coba muat ulang halaman. Jika masih bermasalah, hubungi pengelola undangan.
       </p>
 
       {error.digest && (
@@ -64,18 +63,18 @@ export default function GlobalError({
           onClick={reset}
           className="inline-flex items-center gap-2 rounded-full border border-muted-gold/35 bg-white/90 px-7 py-3 font-sans text-sm tracking-wide text-wood-brown shadow-sm transition hover:bg-primary-cream"
         >
-          Coba Lagi
+          Coba lagi
         </button>
         <Link
           href="/"
           className="inline-flex items-center gap-2 rounded-full border border-sage-green/35 bg-sage-green px-7 py-3 font-sans text-sm tracking-wide text-white shadow-sm transition hover:bg-sage-green/90"
         >
-          Kembali ke Beranda
+          Kembali ke beranda
         </Link>
       </div>
 
       <p className="mt-12 font-sans text-[10px] tracking-widest text-wood-brown/40">
-        Temura — Undangan Digital Garut
+        Temura · Undangan digital oleh Tampiloka
       </p>
     </div>
   );

@@ -18,15 +18,15 @@ function LoginForm() {
     event.preventDefault(); setError(null); setPending(true);
     try {
       const result = await signIn("credentials", { username: username.trim(), password, redirect: false });
-      if (!result?.ok) { setError("Username atau password salah."); return; }
+      if (!result?.ok) { setError("Nama pengguna atau kata sandi salah. Periksa kembali, lalu coba lagi."); return; }
       router.push(callbackUrl); router.refresh();
-    } catch { setError("Belum dapat masuk. Silakan coba lagi."); }
+    } catch { setError("Belum bisa masuk. Silakan coba lagi."); }
     finally { setPending(false); }
   }
   return <main className="flex min-h-screen items-center justify-center bg-brand-neutral-light p-6"><div className="w-full max-w-md rounded-2xl border border-border bg-white p-8">
-    <Link href="/" aria-label="Temura beranda"><Image src="/brand/logos/light/temura-horizontal-light.svg" alt="Temura" width={176} height={44} priority /></Link>
-    <h1 className="type-heading-3 mt-8">Masuk ke dashboard</h1><p className="type-body mt-3 text-brand-neutral-mid">Kelola undangan dan kehadiran tamu.</p>
-    <form onSubmit={handleSubmit} className="mt-8 grid gap-5"><label className="grid gap-2"><span className="type-label">Username</span><input name="username" autoComplete="username" value={username} onChange={event=>setUsername(event.target.value)} className="type-body rounded-lg border border-input p-3 focus:outline-2 focus:outline-brand-primary-dark" required /></label><label className="grid gap-2"><span className="type-label">Password</span><input name="password" type="password" autoComplete="current-password" value={password} onChange={event=>setPassword(event.target.value)} className="type-body rounded-lg border border-input p-3 focus:outline-2 focus:outline-brand-primary-dark" required /></label>{error && <p className="type-body-sm text-red-700" role="alert">{error}</p>}<button type="submit" disabled={pending} className="type-label-lg rounded-full bg-brand-primary-dark p-3 text-white hover:bg-green-900 disabled:opacity-60">{pending ? "Memproses…" : "Masuk"}</button></form>
+    <Link href="/" aria-label="Beranda Temura"><Image src="/brand/logos/light/temura-horizontal-light.svg" alt="Temura" width={176} height={44} priority /></Link>
+    <h1 className="type-heading-3 mt-8">Masuk ke Temura</h1><p className="type-body mt-3 text-brand-neutral-mid">Kelola undangan dan kehadiran tamu.</p>
+    <form onSubmit={handleSubmit} className="mt-8 grid gap-5"><label className="grid gap-2"><span className="type-label">Nama pengguna</span><input name="username" autoComplete="username" value={username} onChange={event=>setUsername(event.target.value)} className="type-body rounded-lg border border-input p-3 focus:outline-2 focus:outline-brand-primary-dark" required /></label><label className="grid gap-2"><span className="type-label">Kata sandi</span><input name="password" type="password" autoComplete="current-password" value={password} onChange={event=>setPassword(event.target.value)} className="type-body rounded-lg border border-input p-3 focus:outline-2 focus:outline-brand-primary-dark" required /></label>{error && <p className="type-body-sm text-red-700" role="alert">{error}</p>}<button type="submit" disabled={pending} className="type-label-lg rounded-full bg-brand-primary-dark p-3 text-white hover:bg-green-900 disabled:opacity-60">{pending ? "Sedang masuk…" : "Masuk"}</button></form>
     <Link href="/" className="type-label mt-6 inline-block text-brand-primary-dark">← Kembali ke beranda</Link>
   </div></main>;
 }

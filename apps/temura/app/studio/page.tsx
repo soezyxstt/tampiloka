@@ -4,7 +4,7 @@ import "../studio.css";
 
 export const metadata: Metadata = {
   title: "Studio",
-  description: "Coba ruang kreasi Temura. Susun teks dan elemen, lalu simpan draf di perangkat Anda.",
+  description: "Coba Studio Temura untuk mengatur teks dan elemen undangan. Simpan draf di browser ini.",
   robots: { index: false, follow: false },
 };
 

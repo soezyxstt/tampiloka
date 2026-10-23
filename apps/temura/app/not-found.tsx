@@ -12,18 +12,17 @@ export default function NotFound() {
       </div>
 
       <p className="font-sans text-[10px] uppercase tracking-[0.45em] text-wood-brown/55">
-        404 — Halaman Tidak Ditemukan
+        404 · Halaman tidak ditemukan
       </p>
 
       <h1 className="mt-3 font-serif text-3xl font-light text-wood-brown sm:text-4xl">
-        Maaf, halaman ini
+        Halaman tidak
         <br />
-        tidak ada
+        ditemukan
       </h1>
 
       <p className="mx-auto mt-4 max-w-sm font-sans text-sm leading-relaxed text-wood-brown/65">
-        Mungkin link sudah berubah atau halaman yang Anda cari telah dipindahkan. Silakan periksa
-        alamat atau kembali ke beranda.
+        Periksa kembali alamat halaman atau kembali ke beranda Temura.
       </p>
 
       <div className="my-8 flex items-center gap-4">
@@ -36,11 +35,11 @@ export default function NotFound() {
         href="/"
         className="inline-flex items-center gap-2 rounded-full border border-muted-gold/35 bg-white/90 px-7 py-3 font-sans text-sm tracking-wide text-wood-brown shadow-sm transition hover:bg-primary-cream"
       >
-        Kembali ke Beranda
+        Kembali ke beranda
       </Link>
 
       <p className="mt-12 font-sans text-[10px] tracking-widest text-wood-brown/40">
-        Temura — Undangan Digital Garut
+        Temura · Undangan digital oleh Tampiloka
       </p>
     </div>
   );
