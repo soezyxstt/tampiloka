@@ -1,5 +1,6 @@
 import { SiteFooter as SharedSiteFooter } from "@tampiloka/brand-system/footer";
 import { TEMURA_URL } from "@/lib/temura-url";
+import { CONTACT } from "@/lib/seo";
 
 const studioLinks = [
   { label: "Karya", href: "/produk" },
@@ -33,7 +34,7 @@ const socials = [
   { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
   { label: "X", href: "https://x.com/soezyxsttt" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
-  { label: "Email", href: "mailto:soezyxst@gmail.com" },
+  { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
 ];
 
 export function SiteFooter() {

@@ -46,7 +46,7 @@ const structuredData = {
 };
 
 const contactLinks = [
-  { label: "Email", href: "mailto:soezyxst@gmail.com" },
+  { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
   { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
   { label: "X", href: "https://x.com/soezyxsttt" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
@@ -64,6 +64,7 @@ export default function ContactPage() {
             <MessageCircle aria-hidden="true" /> Hubungi lewat WhatsApp <ArrowUpRight aria-hidden="true" />
           </Button>
           <a className="contact-page__email type-body" href="https://wa.me/6282119307102" target="_blank" rel="noopener noreferrer">+62 821-1930-7102</a>
+          <a className="contact-page__email type-body" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
         </div>
         <PageVisual imageKey="contact-invitation" alt="Pasangan pengantin berbusana Jawa di taman sebagai contoh undangan digital." preload />
       </section>

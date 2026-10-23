@@ -20,10 +20,10 @@ export const SITE_DESCRIPTION =
  * Bump the matching date whenever the visible content of a public page changes.
  * Google uses lastmod in the sitemap to schedule recrawls, so inaccurate values are ignored.
  */
-export const SITE_UPDATED_AT = "2026-10-23";
+export const SITE_UPDATED_AT = "2026-10-24";
 
 export const CONTACT = {
-  email: "soezyxst@gmail.com",
+  email: "halo@tampiloka.site",
   phone: "+62 821-1930-7102",
   telephone: "+6282119307102",
   whatsapp: "https://wa.me/6282119307102",
