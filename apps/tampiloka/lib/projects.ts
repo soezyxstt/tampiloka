@@ -14,7 +14,7 @@ export const PROJECTS = [
     name: "Syahril MC",
     category: "Portfolio",
     description: "Website MC pernikahan dengan portfolio dan pilihan paket.",
-    url: "https://syahril-mc.vercel.app/",
+    url: "https://syahril.tampiloka.site/",
     scrollStops: ["", "#about", "#karakter", "#portfolio", "#faq"],
   },
   {
@@ -54,7 +54,7 @@ export const PROJECTS = [
     name: "Ginalist",
     category: "Portfolio",
     description: "Portfolio model Gina Listya Nuraini.",
-    url: "https://ginalist.vercel.app/",
+    url: "https://ginalist.tampiloka.site/",
     scrollStops: ["", "#work", "#runway", "#about", "#journal", "#contact"],
   },
   {

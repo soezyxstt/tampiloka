@@ -26,9 +26,9 @@ for (const route of routes) {
     const projectNames = [...html.matchAll(/<h3[^>]*showcase__project-name[^>]*>([^<]+)<\/h3>/g)].map(([,name]) => name);
     assert.equal(projectNames.length, 10, `${route}: ten selected works`);
     assert.equal(projectNames[1], 'Syahril MC', `${route}: Syahril MC is second`);
-    assert.ok(html.includes('href="https://syahril-mc.vercel.app/"'), `${route}: Syahril website linked`);
+    assert.ok(html.includes('href="https://syahril.tampiloka.site/"'), `${route}: Syahril website linked`);
     assert.ok(projectNames.includes('Ginalist'), `${route}: Ginalist showcased`);
-    assert.ok(html.includes('href="https://ginalist.vercel.app/"'), `${route}: Ginalist website linked`);
+    assert.ok(html.includes('href="https://ginalist.tampiloka.site/"'), `${route}: Ginalist website linked`);
     for (const url of ['https://www.zyxacademy.com/', 'https://iamitb.org/', 'https://www.pamokagarut.com/']) {
       assert.ok(html.includes(`href="${url}"`), `${route}: ${url} linked`);
     }
