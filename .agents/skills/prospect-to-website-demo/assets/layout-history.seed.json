@@ -1,0 +1,17 @@
+[
+  {
+    "prospectId": "historia-garut",
+    "name": "Historia Coffee & Eatery Garut",
+    "status": "accepted",
+    "date": "2026-10-21",
+    "signature": {
+      "hero": "full-photo",
+      "sequence": "product-first",
+      "catalogue": "featured-to-grid",
+      "media": "horizontal-strip",
+      "narrative": "shared-moments"
+    },
+    "sectionOrder": ["hero", "moving-words", "featured-dishes", "catalogue", "atmosphere", "events", "location", "contact"],
+    "evidence": "User accepted result after single-classification sticky toolbar and inline carousel CTA revisions in the Historia session. Baseline of one accepted demo, not proof of a larger portfolio."
+  }
+]

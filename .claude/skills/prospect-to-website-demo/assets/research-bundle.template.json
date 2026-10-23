@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "profile": {
+    "prospectId": "replace-with-prospect-id",
+    "name": "replace-with-business-name",
+    "branch": null,
+    "sources": [],
+    "facts": []
+  },
+  "offerings": {
+    "items": []
+  },
+  "assets": {
+    "items": []
+  },
+  "pagePlan": {
+    "prospectId": "replace-with-prospect-id",
+    "primaryGoal": "replace-with-primary-goal",
+    "features": {
+      "catalogue": null,
+      "categoryFilter": null,
+      "search": null,
+      "stickyToolbar": null,
+      "loadMore": null,
+      "productDialog": null,
+      "carousel": null,
+      "accordion": null,
+      "location": null
+    },
+    "sections": [],
+    "media": [],
+    "layoutSignature": {
+      "hero": "replace-with-canonical-id",
+      "sequence": "replace-with-canonical-id",
+      "catalogue": "replace-with-canonical-id",
+      "media": "replace-with-canonical-id",
+      "narrative": "replace-with-canonical-id"
+    },
+    "candidates": [],
+    "selectedCandidate": "replace-with-candidate-id",
+    "visualIdentity": {
+      "confidence": "low",
+      "observations": [],
+      "retained": [],
+      "adapted": [],
+      "avoidedDefaults": []
+    }
+  }
+}

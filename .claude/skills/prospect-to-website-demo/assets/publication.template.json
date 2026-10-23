@@ -1,0 +1,44 @@
+{
+  "prospectId": "replace-with-prospect-id",
+  "target": "protected-preview",
+  "checks": {
+    "factAccuracy": {
+      "status": "pending",
+      "observed": "Belum diperiksa untuk rilis ini.",
+      "checkedAt": "YYYY-MM-DD",
+      "evidencePaths": []
+    },
+    "previewAccess": {
+      "status": "pending",
+      "observed": "Belum diperiksa untuk rilis ini.",
+      "checkedAt": "YYYY-MM-DD",
+      "evidencePaths": []
+    },
+    "demoDisclosure": {
+      "status": "pending",
+      "observed": "Belum diperiksa untuk rilis ini.",
+      "checkedAt": "YYYY-MM-DD",
+      "evidencePaths": []
+    },
+    "assetInventory": {
+      "status": "pending",
+      "observed": "Belum diperiksa untuk rilis ini.",
+      "checkedAt": "YYYY-MM-DD",
+      "evidencePaths": []
+    },
+    "liveAccess": {
+      "status": "pending",
+      "observed": "Belum diperiksa untuk rilis ini.",
+      "checkedAt": "YYYY-MM-DD",
+      "evidencePaths": []
+    }
+  },
+  "authorization": {
+    "deploy": false,
+    "shareLink": false,
+    "outreach": false,
+    "instructions": ""
+  },
+  "researchSha256": "replace-with-bundle-sha256",
+  "reviewSha256": "replace-with-review-sha256"
+}

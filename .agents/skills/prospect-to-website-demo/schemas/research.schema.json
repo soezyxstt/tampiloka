@@ -1,0 +1,955 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "profile": {
+      "$ref": "#/$defs/profile"
+    },
+    "offerings": {
+      "$ref": "#/$defs/offerings"
+    },
+    "assets": {
+      "$ref": "#/$defs/assets"
+    },
+    "pagePlan": {
+      "$ref": "#/$defs/plan"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "profile",
+    "offerings",
+    "assets",
+    "pagePlan"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prospect demo research v0.2.4",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S",
+          "format": "uri"
+        },
+        "accessedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 10,
+          "pattern": "\\S"
+        },
+        "evidencePath": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "url",
+        "accessedAt",
+        "locator",
+        "summary",
+        "evidencePath",
+        "fingerprint"
+      ],
+      "additionalProperties": false
+    },
+    "fact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "field": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "value": {},
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "unverified",
+            "conflicting"
+          ]
+        },
+        "used": {
+          "type": "boolean"
+        },
+        "limitation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "field",
+        "value",
+        "sourceIds",
+        "checkedAt",
+        "status",
+        "used",
+        "limitation"
+      ],
+      "additionalProperties": false
+    },
+    "price": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "checkedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "amount",
+        "currency",
+        "checkedAt",
+        "sourceIds"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "amount": {
+                "type": "number"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "checkedAt": {
+                "type": "string",
+                "format": "date"
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "uniqueItems": true,
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "variant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "price": {
+          "$ref": "#/$defs/price"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "price"
+      ],
+      "additionalProperties": false
+    },
+    "promo": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "description",
+        "checkedAt",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "kind": {
+          "enum": [
+            "product",
+            "service"
+          ]
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "unverified",
+            "conflicting"
+          ]
+        },
+        "price": {
+          "$ref": "#/$defs/price"
+        },
+        "promo": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/promo"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/variant"
+          }
+        },
+        "imageId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "category",
+        "description",
+        "sourceIds",
+        "status",
+        "price",
+        "promo",
+        "variants",
+        "imageId"
+      ],
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "kind": {
+          "enum": [
+            "image",
+            "logo",
+            "font",
+            "video",
+            "illustration"
+          ]
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "productIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "sectionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "authenticity": {
+          "enum": [
+            "verified",
+            "illustration",
+            "unknown"
+          ]
+        },
+        "rightsStatus": {
+          "enum": [
+            "cleared",
+            "licensed",
+            "embed_only",
+            "pending",
+            "restricted"
+          ]
+        },
+        "rightsEvidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "attribution": {
+          "type": "string"
+        },
+        "deliveryMethod": {
+          "enum": [
+            "file",
+            "embed"
+          ]
+        },
+        "runtimePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "embedUrl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "subject",
+        "sourceIds",
+        "productIds",
+        "sectionIds",
+        "authenticity",
+        "rightsStatus",
+        "rightsEvidence",
+        "attribution",
+        "deliveryMethod",
+        "runtimePath",
+        "embedUrl",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "signature": {
+      "type": "object",
+      "properties": {
+        "hero": {
+          "enum": [
+            "full-photo",
+            "split-product",
+            "brand-typographic",
+            "photo-collage",
+            "cinematic",
+            "compact-direct"
+          ]
+        },
+        "sequence": {
+          "enum": [
+            "product-first",
+            "place-first",
+            "story-to-offer",
+            "essentials-first",
+            "event-first",
+            "service-first"
+          ]
+        },
+        "catalogue": {
+          "enum": [
+            "open-grid",
+            "photo-rows",
+            "compact-rows",
+            "featured-to-grid",
+            "service-rows",
+            "none"
+          ]
+        },
+        "media": {
+          "enum": [
+            "horizontal-strip",
+            "mosaic",
+            "alternating-scenes",
+            "single-story-image",
+            "process-sequence",
+            "minimal"
+          ]
+        },
+        "narrative": {
+          "enum": [
+            "product-craft",
+            "shared-moments",
+            "destination",
+            "quick-visit",
+            "expertise",
+            "curated-selection"
+          ]
+        }
+      },
+      "required": [
+        "hero",
+        "sequence",
+        "catalogue",
+        "media",
+        "narrative"
+      ],
+      "additionalProperties": false
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "catalogue": {
+          "type": "boolean"
+        },
+        "categoryFilter": {
+          "type": "boolean"
+        },
+        "search": {
+          "type": "boolean"
+        },
+        "stickyToolbar": {
+          "type": "boolean"
+        },
+        "loadMore": {
+          "type": "boolean"
+        },
+        "productDialog": {
+          "type": "boolean"
+        },
+        "carousel": {
+          "type": "boolean"
+        },
+        "accordion": {
+          "type": "boolean"
+        },
+        "location": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "catalogue",
+        "categoryFilter",
+        "search",
+        "stickyToolbar",
+        "loadMore",
+        "productDialog",
+        "carousel",
+        "accordion",
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "features"
+      ],
+      "additionalProperties": false
+    },
+    "media": {
+      "type": "object",
+      "properties": {
+        "assetId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "productId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "sectionId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "assetId",
+        "productId",
+        "sectionId"
+      ],
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "layoutSignature": {
+          "$ref": "#/$defs/signature"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 10,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "id",
+        "layoutSignature",
+        "rationale"
+      ],
+      "additionalProperties": false
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "prospectId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "primaryGoal": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          }
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          }
+        },
+        "layoutSignature": {
+          "$ref": "#/$defs/signature"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/candidate"
+          },
+          "minItems": 2
+        },
+        "selectedCandidate": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "visualIdentity": {
+          "$ref": "#/$defs/visualIdentity"
+        }
+      },
+      "required": [
+        "prospectId",
+        "primaryGoal",
+        "features",
+        "sections",
+        "media",
+        "layoutSignature",
+        "candidates",
+        "selectedCandidate",
+        "visualIdentity"
+      ],
+      "additionalProperties": true
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "prospectId": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "branch": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1
+        },
+        "facts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "contains": {
+            "type": "object",
+            "properties": {
+              "field": {
+                "const": "name"
+              },
+              "status": {
+                "const": "verified"
+              },
+              "used": {
+                "const": true
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "field",
+              "status",
+              "used",
+              "value"
+            ]
+          }
+        }
+      },
+      "required": [
+        "prospectId",
+        "name",
+        "branch",
+        "sources",
+        "facts"
+      ],
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "branch": {
+                "type": "string"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "facts": {
+                "contains": {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "const": "branch"
+                    },
+                    "status": {
+                      "const": "verified"
+                    },
+                    "used": {
+                      "const": true
+                    },
+                    "value": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "\\S"
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "status",
+                    "used",
+                    "value"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "offerings": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": true
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset"
+          }
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": true
+    },
+    "visualIdentity": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "aspect": {
+                "enum": [
+                  "palette",
+                  "typography",
+                  "composition",
+                  "imagery",
+                  "graphicLanguage"
+                ]
+              },
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidencePath": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observation": {
+                "type": "string",
+                "minLength": 10,
+                "pattern": "\\S"
+              },
+              "translation": {
+                "type": "string",
+                "minLength": 10,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "aspect",
+              "sourceId",
+              "evidencePath",
+              "observation",
+              "translation"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 5
+        },
+        "retained": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "adapted": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10,
+            "pattern": "\\S"
+          }
+        },
+        "avoidedDefaults": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "confidence",
+        "observations",
+        "retained",
+        "adapted",
+        "avoidedDefaults"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

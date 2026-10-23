@@ -1,0 +1,261 @@
+{
+  "type": "object",
+  "properties": {
+    "prospectId": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "target": {
+      "enum": [
+        "public",
+        "protected-preview"
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "factAccuracy": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "pending",
+                "fail"
+              ]
+            },
+            "observed": {
+              "type": "string",
+              "minLength": 10,
+              "pattern": "\\S"
+            },
+            "checkedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "evidencePaths": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "observed",
+            "checkedAt",
+            "evidencePaths"
+          ],
+          "additionalProperties": false
+        },
+        "previewAccess": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "pending",
+                "fail"
+              ]
+            },
+            "observed": {
+              "type": "string",
+              "minLength": 10,
+              "pattern": "\\S"
+            },
+            "checkedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "evidencePaths": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "observed",
+            "checkedAt",
+            "evidencePaths"
+          ],
+          "additionalProperties": false
+        },
+        "demoDisclosure": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "pending",
+                "fail"
+              ]
+            },
+            "observed": {
+              "type": "string",
+              "minLength": 10,
+              "pattern": "\\S"
+            },
+            "checkedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "evidencePaths": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "observed",
+            "checkedAt",
+            "evidencePaths"
+          ],
+          "additionalProperties": false
+        },
+        "assetInventory": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "pending",
+                "fail"
+              ]
+            },
+            "observed": {
+              "type": "string",
+              "minLength": 10,
+              "pattern": "\\S"
+            },
+            "checkedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "evidencePaths": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "observed",
+            "checkedAt",
+            "evidencePaths"
+          ],
+          "additionalProperties": false
+        },
+        "liveAccess": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "pass",
+                "pending",
+                "fail"
+              ]
+            },
+            "observed": {
+              "type": "string",
+              "minLength": 10,
+              "pattern": "\\S"
+            },
+            "checkedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "evidencePaths": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "required": [
+            "status",
+            "observed",
+            "checkedAt",
+            "evidencePaths"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "factAccuracy",
+        "previewAccess",
+        "demoDisclosure",
+        "assetInventory",
+        "liveAccess"
+      ],
+      "additionalProperties": false
+    },
+    "authorization": {
+      "type": "object",
+      "properties": {
+        "deploy": {
+          "type": "boolean"
+        },
+        "shareLink": {
+          "type": "boolean"
+        },
+        "outreach": {
+          "type": "boolean"
+        },
+        "instructions": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deploy",
+        "shareLink",
+        "outreach",
+        "instructions"
+      ],
+      "additionalProperties": false
+    },
+    "researchSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "prospectId",
+    "target",
+    "checks",
+    "authorization",
+    "researchSha256",
+    "reviewSha256"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

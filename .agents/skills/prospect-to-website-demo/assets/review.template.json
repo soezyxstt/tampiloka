@@ -1,0 +1,306 @@
+{
+  "prospectId": "replace-with-prospect-id",
+  "reviewId": "replace-with-review-id",
+  "reviewedAt": "replace-with-actual-date",
+  "reviewer": "replace-with-reviewer",
+  "scope": "local",
+  "features": {
+    "catalogue": null,
+    "categoryFilter": null,
+    "search": null,
+    "stickyToolbar": null,
+    "loadMore": null,
+    "productDialog": null,
+    "carousel": null,
+    "accordion": null,
+    "location": null
+  },
+  "featureNotes": {},
+  "layoutSignature": {
+    "hero": "replace-with-canonical-layout-id",
+    "sequence": "replace-with-canonical-layout-id",
+    "catalogue": "replace-with-canonical-layout-id",
+    "media": "replace-with-canonical-layout-id",
+    "narrative": "replace-with-canonical-layout-id"
+  },
+  "layoutException": "",
+  "evidence": {},
+  "gates": {
+    "identity_sources": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "authentic_content": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "explicit_design_rules": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "working_actions": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "responsive_keyboard": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "truthful_scope": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "layout_feasibility": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    }
+  },
+  "checks": {
+    "build": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "lint": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "typecheck": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "desktop_render": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "mobile_320": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "mobile_390": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "tablet_768": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "keyboard": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "contrast": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "core_links": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "images": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "console": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "reduced_motion": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "disclosure_noindex": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "reference_review": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "brand_evidence": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "content_sources": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "component_provenance": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "feature_inventory": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "catalogue_data": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "category_filter": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "search": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "search_mode_mobile": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "empty_reset": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "sticky_boundary": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "load_more": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "dialog_data": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "dialog_keyboard_exit": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "carousel_navigation": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "cta_row_320": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "accordion_single": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "accordion_motion": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "map_target": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "contact_links": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "filter_scrolled": {
+      "status": "unknown",
+      "observed": "Belum diperiksa.",
+      "evidence": []
+    },
+    "brand_translation": {
+      "status": "unknown",
+      "observed": "Belum dibandingkan secara visual.",
+      "evidence": []
+    },
+    "composition_comparison": {
+      "status": "unknown",
+      "observed": "Belum dibandingkan secara visual.",
+      "evidence": []
+    },
+    "catalogue_pacing": {
+      "status": "unknown",
+      "observed": "Belum dibandingkan secara visual.",
+      "evidence": []
+    },
+    "clean_copy": {
+      "status": "unknown",
+      "observed": "Belum ditinjau pada render desktop/mobile: kebutuhan teks, perbaikan layout dan informasi wajib.",
+      "evidence": []
+    }
+  },
+  "ratings": {
+    "brand": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "visual": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "information": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "conversion": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "interaction": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "motion": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "technical": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    },
+    "originality": {
+      "rating": null,
+      "observation": "Belum dinilai dari hasil render.",
+      "evidence": []
+    }
+  },
+  "unresolved": [],
+  "pagePlanPath": "page-plan.json"
+}

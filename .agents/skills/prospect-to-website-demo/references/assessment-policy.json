@@ -1,0 +1,202 @@
+{
+  "version": 3,
+  "threshold": 85,
+  "minimumRating": 3,
+  "criticalMinimums": {
+    "brand": 4,
+    "visual": 4,
+    "interaction": 4
+  },
+  "dimensions": {
+    "brand": {
+      "weight": 18,
+      "criterion": "Kecocokan sumber visual Instagram/menu/halaman resmi dengan hasil: proporsi warna, bentuk huruf/hierarki, komposisi, imagery dan bahasa grafis; bukan logo serta token saja."
+    },
+    "visual": {
+      "weight": 18,
+      "criterion": "Art direction khas merek, komposisi hero dan transisi section bermakna, ritme skala/crop/densitas pada desktop/mobile; dibandingkan visual dengan demo lain."
+    },
+    "information": {
+      "weight": 14,
+      "criterion": "Produk, harga/varian, lokasi dan kontak berguna, lengkap sesuai sumber, tanpa narasi riset internal. Copy hanya yang diperlukan; layout menjelaskan hubungan isi tanpa teks pengisi, informasi keputusan dan aksesibilitas tetap utuh."
+    },
+    "conversion": {
+      "weight": 12,
+      "criterion": "Satu aksi utama jelas, secondary terbedakan, ikon/destination benar, informasi menuju aksi mudah ditemukan."
+    },
+    "interaction": {
+      "weight": 14,
+      "criterion": "Shadcn asli, state/keyboard/fokus/kontras/tap target/overflow dan interaksi katalog benar."
+    },
+    "motion": {
+      "weight": 8,
+      "criterion": "Entrance, scroll dan state motion terarah; reduced motion, exit dan hydration benar."
+    },
+    "technical": {
+      "weight": 10,
+      "criterion": "Build/lint/typecheck, data dan aset valid, package mandiri, metadata dan console bersih."
+    },
+    "originality": {
+      "weight": 6,
+      "criterion": "Struktur berbeda secara bermakna dari demo terdahulu; variasi layak terhadap aset/tujuan dan tetap setia merek."
+    }
+  },
+  "gates": [
+    "identity_sources",
+    "authentic_content",
+    "explicit_design_rules",
+    "working_actions",
+    "responsive_keyboard",
+    "truthful_scope",
+    "layout_feasibility"
+  ],
+  "coreChecks": [
+    "build",
+    "lint",
+    "typecheck",
+    "desktop_render",
+    "mobile_320",
+    "mobile_390",
+    "tablet_768",
+    "keyboard",
+    "contrast",
+    "core_links",
+    "images",
+    "console",
+    "reduced_motion",
+    "disclosure_noindex",
+    "reference_review",
+    "brand_evidence",
+    "content_sources",
+    "component_provenance",
+    "feature_inventory",
+    "brand_translation",
+    "composition_comparison",
+    "clean_copy"
+  ],
+  "featureChecks": {
+    "catalogue": [
+      "catalogue_data",
+      "catalogue_pacing"
+    ],
+    "categoryFilter": [
+      "category_filter"
+    ],
+    "search": [
+      "search",
+      "search_mode_mobile",
+      "empty_reset"
+    ],
+    "stickyToolbar": [
+      "sticky_boundary"
+    ],
+    "loadMore": [
+      "load_more"
+    ],
+    "productDialog": [
+      "dialog_data",
+      "dialog_keyboard_exit"
+    ],
+    "carousel": [
+      "carousel_navigation",
+      "cta_row_320"
+    ],
+    "accordion": [
+      "accordion_single",
+      "accordion_motion"
+    ],
+    "location": [
+      "map_target",
+      "contact_links"
+    ]
+  },
+  "layoutAxes": [
+    "hero",
+    "sequence",
+    "catalogue",
+    "media",
+    "narrative"
+  ],
+  "renderWidths": {
+    "mobile_320": 320,
+    "mobile_390": 390,
+    "tablet_768": 768,
+    "cta_row_320": 320
+  },
+  "scope": "local-quality-only; no deployment, contact or asset-license authorization",
+  "featureDependencies": {
+    "categoryFilter": [
+      "catalogue"
+    ],
+    "search": [
+      "catalogue"
+    ],
+    "stickyToolbar": [
+      "catalogue"
+    ],
+    "loadMore": [
+      "catalogue"
+    ],
+    "productDialog": [
+      "catalogue"
+    ]
+  },
+  "layoutValues": {
+    "hero": [
+      "full-photo",
+      "split-product",
+      "brand-typographic",
+      "photo-collage",
+      "cinematic",
+      "compact-direct"
+    ],
+    "sequence": [
+      "product-first",
+      "place-first",
+      "story-to-offer",
+      "essentials-first",
+      "event-first",
+      "service-first"
+    ],
+    "catalogue": [
+      "open-grid",
+      "photo-rows",
+      "compact-rows",
+      "featured-to-grid",
+      "service-rows",
+      "none"
+    ],
+    "media": [
+      "horizontal-strip",
+      "mosaic",
+      "alternating-scenes",
+      "single-story-image",
+      "process-sequence",
+      "minimal"
+    ],
+    "narrative": [
+      "product-craft",
+      "shared-moments",
+      "destination",
+      "quick-visit",
+      "expertise",
+      "curated-selection"
+    ]
+  },
+  "visualEvidenceKinds": {
+    "brand_translation": [
+      "source",
+      "screenshot",
+      "review"
+    ],
+    "composition_comparison": [
+      "screenshot",
+      "review"
+    ],
+    "clean_copy": [
+      "screenshot",
+      "review"
+    ]
+  },
+  "layoutReviewDistance": 3
+}

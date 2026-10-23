@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prospect to Website Demo"
+  short_description: "Riset prospek, desain khas merek, dan QA demo website"
+  default_prompt: "Gunakan $prospect-to-website-demo untuk membuat demo website calon klien berdasarkan riset, identitas merek, dan aset asli; siapkan demo lokal beserta penilaian kualitas."
