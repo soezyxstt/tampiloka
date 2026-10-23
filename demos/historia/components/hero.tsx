@@ -15,11 +15,11 @@ export function Hero() {
       <motion.div className="hero-background" style={{ y }}><Image src="/images/menu/historia-space.webp" alt="Hidangan di meja kayu dan kursi rotan dalam ruang makan Historia, Garut" fill sizes="100vw" preload /></motion.div>
       <div className="hero-shade" />
       <div className="hero-inner wrap">
-        <h1 id="hero-title" className="type-display-xl">Dari rasa,<br />jadi cerita.</h1>
+        <h1 data-scroll-reveal="" id="hero-title" className="type-display-xl">Dari rasa,<br />jadi cerita.</h1>
         <div className="hero-actions"><Button className="hero-primary" nativeButton={false} render={<a href="#menu" />}>Lihat menu <ArrowDown size={19} /></Button></div>
         <a className="hero-venue-link" href="#acara">Coffee, dining & events <ArrowUpRight size={18} /></a>
       </div>
     </section>
-    <div className="visit-rail wrap"><a href="#kunjungi"><MapPin size={18} /> Cimanuk 305, Garut <ArrowUpRight size={16} /></a><p><Clock3 size={18} /> Setiap hari · 09.00–23.00 WIB</p></div>
+    <div className="visit-rail wrap" data-scroll-reveal=""><a href="#kunjungi"><MapPin size={18} /> Cimanuk 305, Garut <ArrowUpRight size={16} /></a><p><Clock3 size={18} /> Setiap hari · 09.00–23.00 WIB</p></div>
   </>;
 }

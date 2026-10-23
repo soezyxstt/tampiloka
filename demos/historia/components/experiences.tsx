@@ -13,12 +13,12 @@ export function FeaturedDishes({ items }: { items: Catalogue["items"] }) {
   if (!items.length) return null;
   const item = items[active];
   return <section id="rasa" className="taste-section" aria-labelledby="taste-title">
-    <div className="taste-scene"><Image src="/images/menu/table-spread.webp" alt="Hidangan Historia tersaji di meja kayu, termasuk salad dan makanan pendamping" fill sizes="(max-width: 767px) 100vw, 48vw" /><span>Di meja Historia.</span></div>
-    <div className="taste-editorial"><h2 id="taste-title" className="type-heading-2">Dari dapur<br />& bar kami.</h2>
-      <div className="taste-stage"><AnimatePresence mode="wait" initial={false}><motion.div key={item.id} className="taste-slide" initial={reduced ? false : { opacity: 0, x: 32 }} animate={{ opacity: 1, x: 0 }} exit={reduced ? undefined : { opacity: 0, x: -24 }} transition={{ duration: 0.35 }}>
+    <div className="taste-scene" data-scroll-reveal=""><Image src="/images/menu/table-spread.webp" alt="Hidangan Historia tersaji di meja kayu, termasuk salad dan makanan pendamping" fill sizes="(max-width: 767px) 100vw, 48vw" /><span>Di meja Historia.</span></div>
+    <div className="taste-editorial"><h2 data-scroll-reveal="" id="taste-title" className="type-heading-2">Dari dapur<br />& bar kami.</h2>
+      <div className="taste-stage" data-scroll-reveal=""><AnimatePresence mode="wait" initial={false}><motion.div key={item.id} className="taste-slide" initial={reduced ? false : { opacity: 0, x: 32 }} animate={{ opacity: 1, x: 0 }} exit={reduced ? undefined : { opacity: 0, x: -24 }} transition={{ duration: 0.35 }}>
         {item.image && <Image src={item.image} alt={item.name} fill sizes="(max-width: 767px) 95vw, 48vw" />}
       </motion.div></AnimatePresence></div>
-      <div className="taste-caption" aria-live="polite"><h3>{item.name}</h3><p>{item.description}</p>{item.price !== null && <span>{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(item.price)}</span>}</div>
+      <div data-scroll-reveal="" className="taste-caption" aria-live="polite"><h3>{item.name}</h3><p>{item.description}</p>{item.price !== null && <span>{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(item.price)}</span>}</div>
       <div className="taste-navigation"><a className="text-link taste-menu-link" href="#menu">Seluruh menu <ArrowDown size={18} /></a><div className="taste-controls"><Button variant="icon" aria-label="Hidangan sebelumnya" onClick={() => setActive((active + items.length - 1) % items.length)}><ArrowLeft size={20} /></Button><span>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><Button variant="icon" aria-label="Hidangan berikutnya" onClick={() => setActive((active + 1) % items.length)}><ArrowRight size={20} /></Button></div></div>
     </div></section>;
 

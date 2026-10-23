@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type RefObject } from 'react';
 import Image from 'next/image';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, animate, inView, motion, useReducedMotion } from 'motion/react';
 import { ArrowDown, ArrowUpRight, Search, X, MapPin, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -14,9 +14,50 @@ const categories=[...new Set(menu.map(p=>p.category))];
 const categoryPhotos:Record<string,{name:string;alt:string}>={'Asian':{name:'asian',alt:'Pilihan hidangan ayam Talkie Space'},'Nasi goreng':{name:'fried-rice',alt:'Rangkaian nasi goreng Talkie Space'},'Rice bowl':{name:'ricebowl',alt:'Pilihan rice bowl Talkie Space'},'Mie':{name:'noodles',alt:'Pilihan mie kuah dan mie goreng Talkie Space'},'Pasta':{name:'pasta',alt:'Pilihan pasta Talkie Space'},'Camilan':{name:'snacks',alt:'Pilihan sharing snack Talkie Space'},'Toast':{name:'toast',alt:'Rangkaian toast Talkie Space'},'Kopi':{name:'coffee',alt:'Pilihan kopi black, white, dan brown Talkie Space'},'Mocktail black':{name:'mocktail-black',alt:'Mocktail kopi Talkie Space'},'Mocktail':{name:'mocktail',alt:'Pilihan mocktail Talkie Space'},'Matcha':{name:'matcha',alt:'Rangkaian minuman matcha Talkie Space'},'Frappe':{name:'frappe',alt:'Rangkaian frappe Talkie Space'},'Healthy':{name:'healthy',alt:'Rangkaian Green Organic, Honey Purple, Pine Berry'},'Teh & refreshment':{name:'tea',alt:'Rangkaian teh Talkie Space'}};
 const currency=(n:number)=>new Intl.NumberFormat('id-ID').format(n);
 function WhatsApp(){return <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L.1 24l6.3-1.6a12 12 0 0 0 5.7 1.5H12c6.6 0 12-5.4 12-12a11.8 11.8 0 0 0-3.5-8.4ZM12 21.9a10 10 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.7-.3-.4A9.9 9.9 0 0 1 2 11.9 10 10 0 0 1 12.1 2a10 10 0 0 1 10 10c0 5.5-4.5 9.9-10 9.9Zm5.5-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.1-.1.2-.3.2-.6.1a8.1 8.1 0 0 1-4-3.5c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5H7.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.3 3.2.2.2 2.2 3.4 5.3 4.7 2 .9 2.8.9 3.8.8.6-.1 1.8-.8 2-1.5.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/></svg>}
-function Photo({name,alt,className='',priority=false}:{name:string;alt:string;className?:string;priority?:boolean}){return <div className={`photo ${className}`}><Image src={`/images/${name}.webp`} alt={alt} fill sizes="(max-width: 700px) 100vw, 50vw" preload={priority}/></div>}
+function Photo({name,alt,className='',priority=false,reveal=false}:{name:string;alt:string;className?:string;priority?:boolean;reveal?:boolean}){return <div data-scroll-reveal={reveal?'':undefined} className={`photo ${className}`}><Image src={`/images/${name}.webp`} alt={alt} fill sizes="(max-width: 700px) 100vw, 50vw" preload={priority}/></div>}
+
+function useScrollReveal(root: RefObject<HTMLElement | null>) {
+ useEffect(()=>{
+   const container=root.current;
+   if(!container)return;
+   const preference=window.matchMedia('(prefers-reduced-motion: reduce)');
+   const targets=new Set<HTMLElement>();
+   const stops=new Map<HTMLElement,()=>void>();
+   const animations=new Map<HTMLElement,ReturnType<typeof animate>>();
+   const show=(target:HTMLElement)=>{
+     stops.get(target)?.();
+     animations.get(target)?.stop();
+     target.style.opacity='1';target.style.transform='none';
+     target.dataset.scrollRevealed='true';
+   };
+   const register=(target:HTMLElement)=>{
+     if(targets.has(target))return;
+     targets.add(target);
+     const rect=target.getBoundingClientRect();
+     // SSR/no-JS and the first visible viewport remain visible.
+     if(preference.matches||rect.top<innerHeight&&rect.bottom>0||!('IntersectionObserver' in window)){show(target);return;}
+     target.style.opacity='0';target.style.transform='translateY(32px)';
+     stops.set(target,inView(target,()=>{
+       if(preference.matches){show(target);return;}
+       stops.get(target)?.();
+       target.dataset.scrollRevealed='true';
+       const controls=animate(target,{opacity:[0,1],y:[32,0]},{duration:.75,ease:[.19,1,.22,1],delay:Number(target.dataset.revealOrder||0)*.08});
+       animations.set(target,controls);
+     },{amount:.12}));
+   };
+   container.querySelectorAll<HTMLElement>('[data-scroll-reveal]').forEach(register);
+   const onPreference=()=>{if(preference.matches)targets.forEach(show)};
+   const onFocus=(event:FocusEvent)=>{const target=(event.target as HTMLElement).closest<HTMLElement>('[data-scroll-reveal]');if(target)show(target)};
+   preference.addEventListener('change',onPreference);
+   container.addEventListener('focusin',onFocus);
+   return ()=>{stops.forEach(stop=>stop());animations.forEach(animation=>animation.stop());targets.forEach(show);preference.removeEventListener('change',onPreference);container.removeEventListener('focusin',onFocus)};
+ },[root]);
+}
+
 export default function Talkie(){
  const reduced=useReducedMotion();
+ const main=useRef<HTMLElement>(null);
+ useScrollReveal(main);
  const [category,setCategory]=useState('Kopi');
  const [query,setQuery]=useState('');
  const [page,setPage]=useState(0);
@@ -35,7 +76,6 @@ export default function Talkie(){
  const pagedItems=filtered.slice(page*pageSize,(page+1)*pageSize);
  const pageCount=Math.ceil(filtered.length/pageSize);
  const visibleCategories=searching?categories.filter(c=>pagedItems.some(p=>p.category===c)):[category];
- const reveal={initial:false as const,whileInView:{y:reduced?0:[14,0],opacity:1},viewport:{once:true,amount:.15},transition:{duration:reduced?0:.65}};
  useEffect(()=>{
    const screen=window.matchMedia('(min-width: 900px)');
    const update=()=>setDesktop(screen.matches);
@@ -71,14 +111,14 @@ export default function Talkie(){
  <a href="#main" className="skip-link">Langsung ke konten</a>
  <div className="concept">Konsep website independen oleh Tampiloka · Demo lokal</div>
  <header className="header wrap"><a href="#main" aria-label="Talkie Space beranda" className="brand"><Image src="/images/logo.webp" alt="talkie space" width={180} height={28} preload/></a><nav aria-label="Navigasi utama"><a href="#menu">Menu</a><a href="#space">Ruang</a><a href="#visit">Lokasi</a></nav><a href={WA} className="button header-cta" aria-label="Reservasi via WhatsApp"><WhatsApp/><span>Reservasi</span></a></header>
- <main id="main">
+ <main id="main" ref={main}>
  <section className="hero-shell" aria-labelledby="hero-title"><div className="wrap coffee-workbench">
- <motion.div className="masthead" initial={false} animate={{y:reduced?0:[18,0]}} transition={{duration:reduced?0:.7}}><h1 id="hero-title">Coffee &<br/>Roastery.</h1><div className="masthead-info"><p>Jl. Suherman 52, Garut<br/>Setiap hari, 08.00–22.00</p><a href="#menu" className="menu-link">Lihat menu <ArrowDown size={20}/></a></div></motion.div>
- <div className="coffee-stage"><motion.div className="stage-main" initial={false} animate={{scale:reduced?1:[1.025,1]}} transition={{duration:reduced?0:1}}><Photo name="hero-coffee" alt="Latte dan kemasan kopi Talkie Space" priority/></motion.div><div className="stage-rail"><a href="#space" className="stage-window"><Photo name="brewing" alt="Barista Talkie Space menyeduh filter coffee"/><span>Di balik bar <ArrowDown size={18}/></span></a><a href="#breakfast" className="stage-window"><Photo name="breakfast" alt="Pilihan sarapan pagi Talkie Space"/><span>Sarapan pagi <ArrowDown size={18}/></span></a></div></div>
- <section className="breakfast" id="breakfast" aria-labelledby="breakfast-title"><h2 id="breakfast-title">SAPA<br/><span>Sarapan Pagi</span></h2><p>Setiap hari<br/>08.00–11.00 WIB</p><div><strong>Mulai Rp15.000</strong><a href="#menu" onClick={()=>chooseCategory('Sarapan')} className="text-link">Pilih sarapan <ArrowDown size={18}/></a></div></section>
+ <div className="masthead"><h1 data-scroll-reveal id="hero-title">Coffee &<br/>Roastery.</h1><div data-scroll-reveal data-reveal-order="1" className="masthead-info"><p>Jl. Suherman 52, Garut<br/>Setiap hari, 08.00–22.00</p><a href="#menu" className="menu-link">Lihat menu <ArrowDown size={20}/></a></div></div>
+ <div className="coffee-stage"><div data-scroll-reveal className="stage-main"><Photo name="hero-coffee" alt="Latte dan kemasan kopi Talkie Space" priority/></div><div className="stage-rail"><a href="#space" data-scroll-reveal data-reveal-order="1" className="stage-window"><Photo name="brewing" alt="Barista Talkie Space menyeduh filter coffee"/><span>Di balik bar <ArrowDown size={18}/></span></a><a href="#breakfast" data-scroll-reveal data-reveal-order="2" className="stage-window"><Photo name="breakfast" alt="Pilihan sarapan pagi Talkie Space"/><span>Sarapan pagi <ArrowDown size={18}/></span></a></div></div>
+ <section className="breakfast" id="breakfast" aria-labelledby="breakfast-title"><h2 data-scroll-reveal id="breakfast-title">SAPA<br/><span>Sarapan Pagi</span></h2><p data-scroll-reveal data-reveal-order="1">Setiap hari<br/>08.00–11.00 WIB</p><div data-scroll-reveal data-reveal-order="2"><strong>Mulai Rp15.000</strong><a href="#menu" onClick={()=>chooseCategory('Sarapan')} className="text-link">Pilih sarapan <ArrowDown size={18}/></a></div></section>
  </div></section>
  <section id="menu" className="catalogue section" aria-labelledby="menu-title"><div className="wrap">
-   <div className="section-top"><h2 id="menu-title">Menu</h2><p>Harga termasuk PPN.<br/>Ketersediaan dapat berubah.</p></div>
+   <div className="section-top"><h2 data-scroll-reveal id="menu-title">Menu</h2><p data-scroll-reveal data-reveal-order="1">Harga termasuk PPN.<br/>Ketersediaan dapat berubah.</p></div>
    <Tabs value={active} orientation={desktop?'vertical':'horizontal'} onValueChange={value=>{if(typeof value==='string'&&value!=='__search__')chooseCategory(value)}} className="menu-explorer">
      <div className="category-navigation">
        <div className={`catalogue-search ${searchOpen?'search-open':''}`}>
@@ -108,8 +148,8 @@ export default function Talkie(){
      </div>
    </Tabs>
  </div></section>
- <section id="space" className="space-section wrap"><motion.div {...reveal} className="space-title"><h2>Di balik bar.</h2><p>Kopi dari Talkie,<br/>diseduh di ruang kami.</p></motion.div><motion.div {...reveal} className="process-view"><Photo name="brewing" alt="Proses penyeduhan filter coffee di bar Talkie Space"/></motion.div><div className="space-address"><h3>Talkie Space<br/>Garut</h3><div className="visit-row"><MapPin size={20}/><p>Jl. Suherman No. 52<br/>Tarogong Kidul, Garut<br/>Jawa Barat 44151</p></div><div className="visit-row"><Clock size={20}/><p>Setiap hari<br/>08.00–22.00 WIB</p></div><a href={WA} className="text-link"><WhatsApp/>Tanya & reservasi <ArrowUpRight size={18}/></a></div></section>
- <section className="visit wrap" id="visit" aria-labelledby="visit-title"><div className="visit-top"><h2 id="visit-title">Kunjungi kami.</h2><a href={MAP} className="text-link">Petunjuk arah <ArrowUpRight size={19}/></a></div><div className="place-preview"><Photo name="facade" alt="Fasad Talkie Space di Jalan Suherman Garut"/><iframe className="venue-map" title="Lokasi Talkie Space di Jalan Suherman 52, Garut" src={MAP_EMBED} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/></div></section>
+ <section id="space" className="space-section wrap"><div className="space-title"><h2 data-scroll-reveal>Di balik bar.</h2><p data-scroll-reveal data-reveal-order="1">Kopi dari Talkie,<br/>diseduh di ruang kami.</p></div><div data-scroll-reveal data-reveal-order="1" className="process-view"><Photo name="brewing" alt="Proses penyeduhan filter coffee di bar Talkie Space"/></div><div data-scroll-reveal data-reveal-order="2" className="space-address"><h3>Talkie Space<br/>Garut</h3><div className="visit-row"><MapPin size={20}/><p>Jl. Suherman No. 52<br/>Tarogong Kidul, Garut<br/>Jawa Barat 44151</p></div><div className="visit-row"><Clock size={20}/><p>Setiap hari<br/>08.00–22.00 WIB</p></div><a href={WA} className="text-link"><WhatsApp/>Tanya & reservasi <ArrowUpRight size={18}/></a></div></section>
+ <section className="visit wrap" id="visit" aria-labelledby="visit-title"><div className="visit-top"><h2 data-scroll-reveal id="visit-title">Kunjungi kami.</h2><a data-scroll-reveal data-reveal-order="1" href={MAP} className="text-link">Petunjuk arah <ArrowUpRight size={19}/></a></div><div className="place-preview"><Photo name="facade" reveal alt="Fasad Talkie Space di Jalan Suherman Garut"/><iframe className="venue-map" title="Lokasi Talkie Space di Jalan Suherman 52, Garut" src={MAP_EMBED} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/></div></section>
  </main><footer className="wrap"><a href="#main" className="brand" aria-label="Kembali ke atas"><Image src="/images/logo.webp" alt="Talkie Space" width={180} height={28}/></a><span>Jl. Suherman 52, Garut</span><a href="https://www.instagram.com/talkie.space/">Instagram <ArrowUpRight size={16}/></a></footer></>
 }
 

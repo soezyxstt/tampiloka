@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, MotionConfig, useReducedMotion } from "motion/react";
 import { ArrowDown, ArrowUpRight, ArrowLeft, ArrowRight, Search, X, Wifi, Plug, LockKeyhole, GlassWater } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import rawMenu from "@/data/menu.json";
+import { useScrollReveal } from "@/components/scroll-reveal";
 
 const WA="https://wa.me/6282318188371";
 const MAP="https://maps.app.goo.gl/xSi1EuSNYsEpgtYW7";
@@ -30,10 +31,8 @@ function ChatLink({children,className=""}:{children:React.ReactNode;className?:s
 }
 
 export default function Classico(){
- const reduced=useReducedMotion();
- const [loaded,setLoaded]=useState(false);
+ const revealRoot=useScrollReveal();
  const [shortcut,setShortcut]=useState<{category:string;version:number}|null>(null);
- useEffect(()=>{const frame=requestAnimationFrame(()=>setLoaded(true));return()=>cancelAnimationFrame(frame);},[]);
  return <MotionConfig reducedMotion="user">
   <a className="skip" href="#main">Langsung ke konten</a>
   <div className="concept">Konsep website independen untuk Classico Coffee & Bake.</div>
@@ -42,11 +41,11 @@ export default function Classico(){
    <nav aria-label="Navigasi utama"><a href="#menu">Menu</a><a href="#breakfast">Sarapan</a><a href="#space">Suasana</a><a href="#location">Kunjungi</a></nav>
    <ChatLink className="header-action">Reservasi</ChatLink>
   </header>
-  <main id="main">
+  <main id="main" ref={revealRoot}>
    <section className="cover" aria-labelledby="hero-title">
-    <div className="cover-heading"><motion.h1 id="hero-title" initial={false} animate={loaded?{y:0}:{y:reduced?0:12}} transition={{duration:reduced?0:.7,ease:[.22,1,.36,1]}}>Coffee & bake.</motion.h1></div>
+    <div className="cover-heading"><h1 id="hero-title">Coffee & bake.</h1></div>
     <div className="storefront">
-     {[{name:"hot-latte",label:"Coffee",category:"Coffee",alt:"Hot Latte Classico dalam cangkir bersimbol asli"},{name:"supreme-pizza",label:"Kitchen",category:"Pasta & Pizza",alt:"Supreme Pizza Classico"},{name:"butter-croissant",label:"Bake",category:"Cake & Pastry",alt:"Butter Croissant Classico"}].map((item,index)=><motion.a key={item.label} href="#menu" className="store-door" onClick={()=>setShortcut(previous=>({category:item.category,version:(previous?.version??0)+1}))} initial={false} animate={loaded?{y:0}:{y:reduced?0:15+index*7}} transition={{duration:reduced?0:.65,delay:reduced?0:index*.06}}><Photo name={item.name} alt={item.alt} priority/><span>{item.label}<ArrowDown size={24}/></span></motion.a>)}
+     {[{name:"hot-latte",label:"Coffee",category:"Coffee",alt:"Hot Latte Classico dalam cangkir bersimbol asli"},{name:"supreme-pizza",label:"Kitchen",category:"Pasta & Pizza",alt:"Supreme Pizza Classico"},{name:"butter-croissant",label:"Bake",category:"Cake & Pastry",alt:"Butter Croissant Classico"}].map(item=><a key={item.label} href="#menu" className="store-door" onClick={()=>setShortcut(previous=>({category:item.category,version:(previous?.version??0)+1}))}><Photo name={item.name} alt={item.alt} priority/><span>{item.label}<ArrowDown size={24}/></span></a>)}
     </div>
     <div className="cover-visit"><a href={MAP} target="_blank" rel="noreferrer">Sukaresmi 19A, Bandung <ArrowUpRight size={17}/></a><p>Senin 11.00–23.00 <span>/</span> Selasa–Minggu 07.30–23.00 WIB</p><a href="#menu" className="menu-jump">Semua menu <ArrowDown size={18}/></a></div>
    </section>

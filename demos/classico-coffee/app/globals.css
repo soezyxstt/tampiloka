@@ -17,3 +17,8 @@
 @media(max-width:350px){.cover,.section-pad{padding-left:16px;padding-right:16px}.store-door>img{height:165px}.store-door>span{font-size:22px;padding:11px 8px}.store-door>span svg{width:13px}.storefront{gap:6px}.cover-visit>a{font-size:11px}.cover-visit p{font-size:10px}.menu-grid{column-gap:12px}.product-heading h3{font-size:15px}.breakfast-caption h2{font-size:54px}.space-title h2{font-size:52px}.community-intro{grid-template-columns:1fr 70px}.community-intro>img{width:70px}.community h2{font-size:44px}.location h2{font-size:52px}}
 @keyframes search-expand{from{clip-path:inset(0 90% 0 0)}to{clip-path:inset(0 0 0 0)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.menu-item:hover img,.store-door:hover>img,.store-door:focus-visible>img,.store-door:hover>span svg{transform:none}}
+
+/* Only JavaScript-registered offscreen groups are concealed; SSR/no-JS stays visible. */
+[data-scroll-reveal][data-reveal-state="pending"]{opacity:0;transform:translateY(32px)}
+[data-scroll-reveal]:focus-within{opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){[data-scroll-reveal]{opacity:1!important;transform:none!important}}

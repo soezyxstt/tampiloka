@@ -112,3 +112,6 @@ em { font-style:normal; font-weight:inherit; }
 }
 @media(max-width:360px) { .taste-stage { height:270px; } .taste-editorial { padding-inline:16px; } .taste-menu-link { font-size:13px; } .gallery-bottom { padding-inline:16px; } .gallery-controls { gap:6px; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } .hero-background { transform:none!important; } }
+
+[data-scroll-reveal]:focus-within { opacity:1!important; transform:none!important; }
+@media(prefers-reduced-motion:reduce) { [data-scroll-reveal] { opacity:1!important; transform:none!important; } }

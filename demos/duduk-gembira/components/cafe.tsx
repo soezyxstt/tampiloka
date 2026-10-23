@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion, MotionConfig, useReducedMotion } from 'motion/react';
+import { AnimatePresence, animate, motion, MotionConfig, useReducedMotion } from 'motion/react';
 import { ArrowDown, ArrowUpRight, MapPin, Clock3, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -26,8 +26,84 @@ function Instagram({ size = 20 }: { size?: number }) {
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" /></svg>;
 }
 
-function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <motion.div className={className} initial={false} whileInView={{ y: [20, 0], opacity: [0.65, 1] }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.6 }}>{children}</motion.div>;
+// Enhance existing leaves, keeping server HTML and the initial viewport fully visible.
+function ScrollReveals() {
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const pending = new Set<HTMLElement>();
+    const registered = new WeakSet<HTMLElement>();
+    const running = new Map<HTMLElement, () => void>();
+    const originalStyles = new Map<HTMLElement, { opacity: string; transform: string }>();
+    const show = (element: HTMLElement, immediate = false) => {
+      pending.delete(element);
+      observer?.unobserve(element);
+      running.get(element)?.();
+      element.dataset.scrollRevealed = 'true';
+      if (immediate || media.matches) {
+        element.style.opacity = '1';
+        element.style.transform = 'none';
+        running.delete(element);
+        return;
+      }
+      const siblings = element.parentElement
+        ? Array.from(element.parentElement.children).filter(sibling => sibling.hasAttribute('data-scroll-reveal'))
+        : [element];
+      const delay = (Math.max(0, siblings.indexOf(element)) % 6) * .08;
+      const animation = animate(element, { opacity: [0, 1], y: [32, 0] }, {
+        duration: .75, delay, ease: [.19, 1, .22, 1],
+      });
+      running.set(element, () => animation.stop());
+    };
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) show(entry.target as HTMLElement);
+      });
+    }, { threshold: .12 }) : null;
+    const register = (element: HTMLElement) => {
+      if (registered.has(element)) return;
+      registered.add(element);
+      originalStyles.set(element, { opacity: element.style.opacity, transform: element.style.transform });
+      const bounds = element.getBoundingClientRect();
+      if (media.matches || !observer || bounds.width === 0 || bounds.height === 0 ||
+          (bounds.bottom > 0 && bounds.top < window.innerHeight) ||
+          element.contains(document.activeElement)) {
+        element.dataset.scrollRevealed = 'true';
+        return;
+      }
+      pending.add(element);
+      element.dataset.scrollRevealed = 'false';
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(32px)';
+      observer.observe(element);
+    };
+    const scan = () => document.querySelectorAll<HTMLElement>('[data-scroll-reveal]').forEach(register);
+    const focus = (event: FocusEvent) => {
+      const target = event.target instanceof HTMLElement
+        ? event.target.closest<HTMLElement>('[data-scroll-reveal]') : null;
+      if (target && (pending.has(target) || running.has(target))) show(target, true);
+    };
+    const preferenceChanged = () => {
+      if (media.matches) new Set([...pending, ...running.keys()]).forEach(element => show(element, true));
+    };
+    scan();
+    const mutations = new MutationObserver(scan);
+    mutations.observe(document.querySelector('main')!, { childList: true, subtree: true });
+    document.addEventListener('focusin', focus);
+    media.addEventListener('change', preferenceChanged);
+    return () => {
+      observer?.disconnect();
+      mutations.disconnect();
+      document.removeEventListener('focusin', focus);
+      media.removeEventListener('change', preferenceChanged);
+      running.forEach(stop => stop());
+      originalStyles.forEach((style, element) => {
+        element.style.opacity = style.opacity;
+        element.style.transform = style.transform;
+        delete element.dataset.scrollRevealed;
+      });
+    };
+  }, []);
+  return null;
 }
 
 export function Cafe() {
@@ -55,6 +131,7 @@ export function Cafe() {
   }
 
   return <MotionConfig reducedMotion="user">
+    <ScrollReveals />
     <a className="skip" href="#main">Langsung ke konten</a>
     <div className="concept">Demo konsep independen · bukan situs resmi</div>
     <header className="header wrap">
@@ -65,31 +142,31 @@ export function Cafe() {
 
     <main id="main">
       <section className="hero wrap" aria-labelledby="hero-title">
-        <h1 id="hero-title"><span>Warung kopi</span>Duduk Gembira</h1>
-        <div className="hero-counter"><div className="hero-address"><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href="#menu">Lihat menu <ArrowDown size={20} /></a><a className="text-link" href="#mampir">Petunjuk jalan <ArrowUpRight size={18} /></a></div><div className="hero-scene"><Image src="/images/terrace.webp" alt="Teras Duduk Gembira, papan nama hijau dan tempat duduk peti merah" width={1152} height={1439} priority sizes="(max-width: 700px) 100vw, 55vw" /></div><div className="hero-hours"><Clock3 size={24} /><p>Buka setiap hari<br /><strong>06.30 WIB</strong></p><a href="#mampir">Lihat jam buka ↓</a></div></div>
+        <h1 id="hero-title" data-scroll-reveal><span>Warung kopi</span>Duduk Gembira</h1>
+        <div className="hero-counter"><div className="hero-address" data-scroll-reveal><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href="#menu">Lihat menu <ArrowDown size={20} /></a><a className="text-link" href="#mampir">Petunjuk jalan <ArrowUpRight size={18} /></a></div><div className="hero-scene" data-scroll-reveal><Image src="/images/terrace.webp" alt="Teras Duduk Gembira, papan nama hijau dan tempat duduk peti merah" width={1152} height={1439} priority sizes="(max-width: 700px) 100vw, 55vw" /></div><div className="hero-hours" data-scroll-reveal><Clock3 size={24} /><p>Buka setiap hari<br /><strong>06.30 WIB</strong></p><a href="#mampir">Lihat jam buka ↓</a></div></div>
       </section>
 
       <section className="dishes" aria-labelledby="dishes-title">
-        <div className="dish-spotlight wrap"><div className="dish-photo"><AnimatePresence mode="wait" initial={false}><motion.div key={selectedDish.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reducedMotion ? 0 : .18 }}><Image src={`/images/${selectedDish.imageId}.webp`} alt={selectedDish.name} width={1080} height={1350} sizes="(max-width: 700px) 90vw, 46vw" /></motion.div></AnimatePresence></div><div className="dish-choice"><h2 id="dishes-title">Nasi + lauk<br />+ sambal.</h2><fieldset><legend>Lauknya</legend><RadioGroup value={protein} onValueChange={setProtein} aria-label="Pilih lauk" className="dish-options">{[['cumi', 'Cumi'], ['ayam', 'Ayam']].map(([value, label]) => <div className="dish-option" key={value}><RadioGroupItem value={value} id={`protein-${value}`} aria-labelledby={`protein-${value}-label`} /><label id={`protein-${value}-label`} htmlFor={`protein-${value}`}>{label}</label></div>)}</RadioGroup></fieldset><fieldset><legend>Sambalnya</legend><RadioGroup value={sambal} onValueChange={setSambal} aria-label="Pilih sambal" className="dish-options">{[['ijo', 'Ijo'], ['matah', 'Matah']].map(([value, label]) => <div className="dish-option" key={value}><RadioGroupItem value={value} id={`sambal-${value}`} aria-labelledby={`sambal-${value}-label`} /><label id={`sambal-${value}-label`} htmlFor={`sambal-${value}`}>{label}</label></div>)}</RadioGroup></fieldset><div className="dish-summary"><div className="dish-selection" aria-live="polite"><h3>{selectedDish.name}</h3><p>{price(selectedDish.price.amount)}</p></div><a className="text-link" href={wa} target="_blank" rel="noreferrer">Tanya ketersediaan <WhatsApp /></a></div></div></div>
+        <div className="dish-spotlight wrap"><div className="dish-photo" data-scroll-reveal><AnimatePresence mode="wait" initial={false}><motion.div key={selectedDish.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reducedMotion ? 0 : .18 }}><Image src={`/images/${selectedDish.imageId}.webp`} alt={selectedDish.name} width={1080} height={1350} sizes="(max-width: 700px) 90vw, 46vw" /></motion.div></AnimatePresence></div><div className="dish-choice"><h2 id="dishes-title" data-scroll-reveal>Nasi + lauk<br />+ sambal.</h2><fieldset data-scroll-reveal><legend>Lauknya</legend><RadioGroup value={protein} onValueChange={setProtein} aria-label="Pilih lauk" className="dish-options">{[['cumi', 'Cumi'], ['ayam', 'Ayam']].map(([value, label]) => <div className="dish-option" key={value}><RadioGroupItem value={value} id={`protein-${value}`} aria-labelledby={`protein-${value}-label`} /><label id={`protein-${value}-label`} htmlFor={`protein-${value}`}>{label}</label></div>)}</RadioGroup></fieldset><fieldset data-scroll-reveal><legend>Sambalnya</legend><RadioGroup value={sambal} onValueChange={setSambal} aria-label="Pilih sambal" className="dish-options">{[['ijo', 'Ijo'], ['matah', 'Matah']].map(([value, label]) => <div className="dish-option" key={value}><RadioGroupItem value={value} id={`sambal-${value}`} aria-labelledby={`sambal-${value}-label`} /><label id={`sambal-${value}-label`} htmlFor={`sambal-${value}`}>{label}</label></div>)}</RadioGroup></fieldset><div className="dish-summary" data-scroll-reveal><div className="dish-selection" aria-live="polite"><h3>{selectedDish.name}</h3><p>{price(selectedDish.price.amount)}</p></div><a className="text-link" href={wa} target="_blank" rel="noreferrer">Tanya ketersediaan <WhatsApp /></a></div></div></div>
       </section>
 
       <section id="menu" className="catalogue" aria-labelledby="menu-title">
-        <div className="wrap menu-board"><div className="menu-heading"><h2 id="menu-title">Papan menu</h2><p>{menu.length} pilihan makanan & minuman</p></div>
+        <div className="wrap menu-board"><div className="menu-heading"><h2 id="menu-title" data-scroll-reveal>Papan menu</h2><p data-scroll-reveal>{menu.length} pilihan makanan & minuman</p></div>
           <div className="menu-layout"><nav className="category-nav" aria-label="Kategori menu">{categories.map(name => <Button key={name} variant="ghost" aria-pressed={category === name} onClick={() => { setCategory(name); setQuery(''); setPage(0); }}>{name}</Button>)}</nav>
           <div className="menu-results"><div className={`menu-toolbar ${searchOpen ? 'search-open' : ''}`}><h3>{query ? 'Hasil pencarian' : category}</h3><div className="menu-search"><Search size={18} /><Input id="menu-query" ref={input} aria-label="Cari seluruh menu" placeholder="Cari seluruh menu…" value={query} onKeyDown={event => { if (event.key === 'Escape') closeSearch(); }} onChange={event => { setQuery(event.target.value); setCategory('Semua menu'); setPage(0); }} />{(query || searchOpen) && <Button variant="ghost" size="icon" aria-label="Tutup pencarian" onClick={closeSearch}><X size={18} /></Button>}</div><Button ref={searchToggle} variant="outline" size="icon" className="menu-search-toggle" aria-label="Buka pencarian" aria-expanded={searchOpen} aria-controls="menu-query" onClick={() => setSearchOpen(true)}><Search size={18} /></Button></div>
           <div className="menu-meta"><span aria-live="polite">{visible.length} pilihan</span><span>Harga dalam rupiah</span></div>
-          <motion.ul className="menu-items" key={`${category}-${query}-${page}`} initial={{ y: reducedMotion ? 0 : 6 }} animate={{ y: 0 }} transition={{duration:.18}}>{pageItems.map(item => <li key={item.id}><div><h4>{item.name}</h4>{item.description && <p>{item.description}</p>}</div><span className={item.price.amount === null ? 'ask-price' : ''}>{price(item.price.amount)}</span></li>)}</motion.ul>
+          <motion.ul className="menu-items" key={`${category}-${query}-${page}`} initial={{ y: reducedMotion ? 0 : 6 }} animate={{ y: 0 }} transition={{duration:.18}}>{pageItems.map(item => <li key={item.id} data-scroll-reveal><div><h4>{item.name}</h4>{item.description && <p>{item.description}</p>}</div><span className={item.price.amount === null ? 'ask-price' : ''}>{price(item.price.amount)}</span></li>)}</motion.ul>
           {visible.length === 0 && <p className="empty-menu">Menu “{query}” belum ditemukan. Coba kata lain.</p>}
           {pageCount > 1 && <nav className="pagination" aria-label="Halaman menu"><Button variant="outline" disabled={page === 0} onClick={() => setPage(page - 1)}>Sebelumnya</Button><span>{page + 1} / {pageCount}</span><Button variant="outline" disabled={page + 1 >= pageCount} onClick={() => setPage(page + 1)}>Berikutnya</Button></nav>}
           <p className="price-note">Harga dan ketersediaan dapat berubah. Konfirmasi sebelum memesan.</p></div></div>
         </div>
       </section>
 
-      <section id="suasana" className="atmosphere wrap"><Image src="/images/interior.webp" alt="Meja kayu dan kursi rotan di dalam Duduk Gembira" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 60vw" /><div><h2>Di dalam<br />Duduk Gembira.</h2><a className="text-link" href={ig} target="_blank" rel="noreferrer">Lihat Instagram <Instagram size={19} /></a></div></section>
+      <section id="suasana" className="atmosphere wrap"><Image data-scroll-reveal src="/images/interior.webp" alt="Meja kayu dan kursi rotan di dalam Duduk Gembira" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 60vw" /><div data-scroll-reveal><h2>Di dalam<br />Duduk Gembira.</h2><a className="text-link" href={ig} target="_blank" rel="noreferrer">Lihat Instagram <Instagram size={19} /></a></div></section>
 
-      <section id="mampir" className="visit wrap"><Reveal><h2>Kunjungi Duduk Gembira.</h2></Reveal><div className="visit-grid"><div className="address"><MapPin size={28} /><h3>Alamat</h3><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href={maps} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={20} /></a></div><div className="schedule"><Clock3 size={28} /><h3>Buka setiap hari.</h3><dl><div><dt>Minggu–Kamis</dt><dd>06.30–23.00</dd></div><div><dt>Jumat & Sabtu</dt><dd>06.30–00.00</dd></div></dl><p>Jam dalam WIB.</p><a className="text-link" href={wa} target="_blank" rel="noreferrer"><WhatsApp /> Hubungi kami <ArrowUpRight size={18} /></a></div></div><div className="visit-location"><figure className="visit-venue"><Image src="/images/terrace.webp" alt="Teras Warkop Duduk Gembira dan papan namanya di Jalan Otista" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 30vw" /><figcaption>Warkop Duduk Gembira</figcaption></figure><div className="map-frame"><iframe title="Peta lokasi Warkop Duduk Gembira di Jalan Otista, Garut" src={mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><p>Jl. Otista No. 275 B, Tarogong Kidul, Garut</p></div></div></section>
+      <section id="mampir" className="visit wrap"><h2 data-scroll-reveal>Kunjungi Duduk Gembira.</h2><div className="visit-grid"><div className="address" data-scroll-reveal><MapPin size={28} /><h3>Alamat</h3><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href={maps} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={20} /></a></div><div className="schedule" data-scroll-reveal><Clock3 size={28} /><h3>Buka setiap hari.</h3><dl><div><dt>Minggu–Kamis</dt><dd>06.30–23.00</dd></div><div><dt>Jumat & Sabtu</dt><dd>06.30–00.00</dd></div></dl><p>Jam dalam WIB.</p><a className="text-link" href={wa} target="_blank" rel="noreferrer"><WhatsApp /> Hubungi kami <ArrowUpRight size={18} /></a></div></div><div className="visit-location"><figure className="visit-venue" data-scroll-reveal><Image src="/images/terrace.webp" alt="Teras Warkop Duduk Gembira dan papan namanya di Jalan Otista" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 30vw" /><figcaption>Warkop Duduk Gembira</figcaption></figure><div className="map-frame"><iframe title="Peta lokasi Warkop Duduk Gembira di Jalan Otista, Garut" src={mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><p>Jl. Otista No. 275 B, Tarogong Kidul, Garut</p></div></div></section>
     </main>
-    <footer><div className="wrap footer-top"><a href="#top" className="logo"><Image src="/images/logo.webp" alt="Warkop Duduk Gembira" width={150} height={61} /></a><p>Jl. Otista No. 275 B<br />Garut</p><a href={ig} className="text-link" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={18} /></a></div><div className="wrap footer-bottom"><span>Warung Kopi Duduk Gembira · Garut</span><a href="#top">Kembali ke atas ↑</a></div></footer>
+    <footer><div className="wrap footer-top"><a data-scroll-reveal href="#top" className="logo"><Image src="/images/logo.webp" alt="Warkop Duduk Gembira" width={150} height={61} /></a><p data-scroll-reveal>Jl. Otista No. 275 B<br />Garut</p><a data-scroll-reveal href={ig} className="text-link" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={18} /></a></div><div className="wrap footer-bottom"><span>Warung Kopi Duduk Gembira · Garut</span><a href="#top">Kembali ke atas ↑</a></div></footer>
   </MotionConfig>;
 }
 
