@@ -8,7 +8,7 @@ export const TEMURA_METADATA_BASE = new URL(TEMURA_ORIGIN);
 export const TEMURA_LANGUAGE = "id-ID";
 export const TEMURA_LOCALE = "id_ID";
 export const TEMURA_DESCRIPTION =
-  "Pilih desain undangan, bagikan kepada tamu, dan kelola kehadiran. Undangan digital oleh Tampiloka.";
+  "Pilih desain undangan pernikahan, sesuaikan isi, dan bagikan tautannya kepada tamu. Temura, undangan digital oleh Tampiloka.";
 export const TEMURA_PARENT_NAME = "Tampiloka";
 export const TEMURA_PARENT_ORIGIN = "https://tampiloka.site";
 

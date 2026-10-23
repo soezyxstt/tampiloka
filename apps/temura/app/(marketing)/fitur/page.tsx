@@ -20,9 +20,9 @@ export const metadata = createPageMetadata({
 });
 
 const groups = [
-  { name: "Undangan", rows: [["Detail acara", "Nama pasangan, keluarga, tanggal, dan lokasi."], ["Maps", "Tautan peta lokasi acara."], ["Sambutan", "Salam pembuka yang bisa disesuaikan."], ["Musik & galeri", "Lagu pilihan, foto, dan cerita pasangan."], ["Hadiah", "Transfer atau QRIS dengan ucapan."]] },
-  { name: "Tamu", rows: [["Tautan personal", "Bagikan undangan dengan nama tamu."], ["RSVP", "Konfirmasi kehadiran dan jumlah tamu."], ["Ucapan", "Doa dan pesan dari keluarga dan sahabat."]] },
-  { name: "Pengelolaan", rows: [["Dashboard", "Detail acara, daftar tamu, RSVP, dan ucapan."], ["Studio", "Susun teks dan elemen dengan drag & drop."]] },
+  { name: "Undangan", rows: [["Detail acara", "Nama pasangan, keluarga, tanggal, dan lokasi."], ["Peta lokasi", "Bantu tamu menemukan lokasi acara lewat tautan peta."], ["Sambutan", "Sesuaikan salam pembuka untuk tamu."], ["Musik & galeri", "Lagu pilihan, foto, dan cerita pasangan."], ["Hadiah", "Tampilkan pilihan hadiah lewat transfer atau QRIS, beserta ucapan terima kasih."]] },
+  { name: "Tamu", rows: [["Tautan personal", "Cantumkan nama tamu pada tautan undangan."], ["RSVP", "Tamu dapat mengonfirmasi kehadiran dan jumlah orang yang datang."], ["Ucapan", "Doa dan pesan dari keluarga dan sahabat."]] },
+  { name: "Pengelolaan", rows: [["Dashboard", "Detail acara, daftar tamu, RSVP, dan ucapan."], ["Studio", "Atur teks dan elemen dengan menggesernya di kanvas."]] },
 ];
 
 const structuredData = {
@@ -69,7 +69,7 @@ export default function FeaturesPage() {
       <JsonLd data={structuredData} />
       <section className="temura-section temura-container temura-page-intro">
         <h1 className="type-display">Fitur</h1>
-        <p className="type-body temura-muted temura-page-description">Ketersediaan mengikuti paket dan tahap pengembangan.</p>
+        <p className="type-body temura-muted temura-page-description">Fitur tersedia sesuai paket dan tahap pengembangan. Hubungi kami untuk memastikan kebutuhan kalian.</p>
         <div className="temura-feature-groups">
           {groups.map((group) => (
             <section key={group.name}>
@@ -81,7 +81,7 @@ export default function FeaturesPage() {
                     <dd className="type-body temura-muted">
                       {description}
                       {title === "Sambutan" && <WelcomeExample />}
-                      {(title === "Studio" || title === "Dashboard") && <Link className="temura-inline-link type-label" href={`/${title.toLowerCase()}`}>Buka demo ↗</Link>}
+                      {(title === "Studio" || title === "Dashboard") && <Link className="temura-inline-link type-label" href={`/${title.toLowerCase()}`}>Coba demo ↗</Link>}
                     </dd>
                   </div>
                 ))}

@@ -6,8 +6,8 @@
 export const TEMURA_CATEGORIES = [
   { id: "adat", label: "Adat", tagline: "Sentuhan tradisi dari berbagai daerah di Indonesia." },
   { id: "game-kartun", label: "Game & kartun", tagline: "Dunia ceria untuk cerita kalian." },
-  { id: "minimalist", label: "Minimalist", tagline: "Ruang lapang, detail kecil, dan rasa yang dekat." },
-  { id: "islamic", label: "Islamic", tagline: "Tenang, hangat, dan tetap khidmat." },
+  { id: "minimalist", label: "Minimalis", tagline: "Ruang lapang, detail kecil, dan rasa yang dekat." },
+  { id: "islamic", label: "Islami", tagline: "Tenang, hangat, dan tetap khidmat." },
   { id: "retro-nostalgia", label: "Retro & nostalgia", tagline: "Kenangan lama dengan cerita baru." },
 ] as const;
 
@@ -19,19 +19,19 @@ export const TEMPLATE_TIERS = {
     label: "Essential",
     priceIdr: 125_000,
     originalPriceIdr: 175_000,
-    note: "Islamic & minimalist. Penyesuaian dasar.",
+    note: "Desain islami dan minimalis dengan penyesuaian dasar.",
   },
   standard: {
     label: "Standard",
     priceIdr: 149_000,
     originalPriceIdr: 199_000,
-    note: "Adat, retro, game & kartun. Penyesuaian desain dan ornamen.",
+    note: "Desain adat, retro, game, dan kartun dengan penyesuaian desain serta ornamen.",
   },
   studio: {
     label: "Custom",
     priceIdr: 249_000,
     originalPriceIdr: 349_000,
-    note: "Desain custom sesuai kebutuhan kalian.",
+    note: "Desain khusus sesuai kebutuhan kalian.",
   },
 } as const;
 

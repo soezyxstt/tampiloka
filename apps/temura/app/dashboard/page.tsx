@@ -3,7 +3,7 @@ import { CustomerDashboard } from "@/components/customer-dashboard/customer-dash
 import "../dashboard.css";
 
 export const metadata: Metadata = {
-  title: "Dashboard demo",
+  title: "Demo dashboard",
   robots: { index: false, follow: false },
 };
 
