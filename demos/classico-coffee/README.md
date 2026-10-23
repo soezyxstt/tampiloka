@@ -15,4 +15,8 @@ UI provenance: official shadcn base-nova registry, Base UI primitives. Registry 
 
 Revision v2: source-based copper menu cover and unequal photographic composition. Local QA 86/100 (self-review), 29 required checks passed; user acceptance pending. See research/quality/qa-report.json and research/design-brief.md.
 
-Deployment uses GitHub repository soezyxstt/tampiloka, branch master, root demos/classico-coffee. Classico CI runs npm ci, lint, typecheck and build; the linked Vercel project also builds and validates source from the same commit. Do not upload out/ manually. Vercel project classico-coffee; custom domain https://classico.tampiloka.site. Research archives remain local.
+Source uses GitHub repository soezyxstt/tampiloka, branch master, root demos/classico-coffee. Classico CI runs npm ci, lint, typecheck and build. Hosting uses the existing Cloudflare Pages Direct Upload project `classico-coffee`, production branch `master`, custom domain `https://classico.tampiloka.site`; the old Vercel project was removed during migration. Deploy the verified static `out/` artifact. Research archives remain local.
+
+Revision 2026-10-23: see [the parent comparison and validation report](../prospect-to-web-review.md) and this package’s `design-brief.md` / `reference-selection.json` for the current composition, actual checks and source-evidence limits. The new revision is built; user acceptance and a complete source-gate pass are not claimed.
+
+Cloudflare deployment target: `classico-coffee`, production branch `master`, existing domain https://classico.tampiloka.site. See [deployment record](../../docs/demo-redesign-deployment-2026-10-23.md) for the current push/deploy status; earlier local-only notes describe setup history.

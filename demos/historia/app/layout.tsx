@@ -12,6 +12,7 @@ const poppins = localFont({ src: [
 export const metadata: Metadata = {
   title: "Historia Coffee & Eatery — Konsep Website oleh Tampiloka",
   description: "Konsep independen untuk Historia Coffee & Eatery, Garut. Jelajahi pilihan menu, suasana, dan informasi kunjungan. Bukan situs resmi.",
+  icons: { icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/images/menu/historia-logo.png", type: "image/png" }], apple: "/images/menu/historia-logo.png" },
   robots: { index: false, follow: false, googleBot: { index: false, follow: false, noimageindex: true } },
 };
 

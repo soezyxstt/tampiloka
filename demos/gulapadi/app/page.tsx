@@ -40,11 +40,9 @@ function WhatsApp() {
 function Chat({ children = "Reservasi via WhatsApp", className="" }: {children?:React.ReactNode;className?:string}) {
   return <a className={`action ${className}`} href={WA} target="_blank" rel="noopener noreferrer"><WhatsApp/>{children}</a>;
 }
-function Reveal({children,className=""}:{children:React.ReactNode;className?:string}) {
-  return <motion.div className={className} initial={false} whileInView={{y:[15,0],opacity:[.75,1]}} transition={{duration:.55}} viewport={{once:true,amount:.1}}>{children}</motion.div>;
-}
 export default function Home() {
   const [category,setCategory]=useState("Semua Menu");
+  const [donutIndex,setDonutIndex]=useState(9);
   const [query,setQuery]=useState("");
   const [page,setPage]=useState(1);
   const [searchOpen,setSearchOpen]=useState(false);
@@ -61,7 +59,7 @@ export default function Home() {
     if(searchOpen) input.current?.focus();
     else if(restoreSearchFocus.current){searchButton.current?.focus();restoreSearchFocus.current=false;}
   },[searchOpen]);
-  const results=sortedMenu.filter(i=>(category==="Semua Menu"||i.category===category)&&i.name.toLocaleLowerCase("id").includes(query.trim().toLocaleLowerCase("id")));
+  const results=sortedMenu.filter(i=>(category==="Semua Menu"||i.category===category)&&`${i.name} ${i.category} ${i.description??""}`.toLocaleLowerCase("id").includes(query.trim().toLocaleLowerCase("id")));
   const pagination=paginateMenu(results,page);
   const scrollToMenu=()=>requestAnimationFrame(()=>menuToolbar.current?.scrollIntoView({block:"start",behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}));
   const choose=(value:string)=>{interacted.current=true;setCategory(value);setQuery("");setPage(1);scrollToMenu();};
@@ -76,25 +74,39 @@ export default function Home() {
       <Chat className="header-chat">Hubungi kami</Chat>
     </header>
     <main>
-      <section id="beranda" className="hero wrap">
-        <div className="hero-copy">
-          <motion.h1 initial={false} animate={{y:[12,0],opacity:[.8,1]}} transition={{duration:.6}}>Mampir pagi.<br/><span>Betah sampai<br/>malam.</span></motion.h1>
-          <p>Sepiring masakan Nusantara, obrolan hangat, dan yang manis untuk dibawa pulang.</p>
-          <div className="hero-actions"><Chat/><a className="text-link" href="#menu" onClick={()=>{interacted.current=true;}}>Lihat menu <ArrowDown size={18}/></a></div>
-          <div className="hero-address"><MapPin size={18}/><a href={MAP} target="_blank" rel="noopener noreferrer">Jl. Bank, Garut Kota <ArrowUpRight size={16}/></a></div>
-        </div>
-        <div className="hero-collage"><motion.figure className="hero-visual" initial={false} animate={{rotate:0}} whileHover={{rotate:-1}} transition={{duration:.35}}>
-          <Image src="/images/pepes.webp" alt="Pepes Ayam Goreng Gulapadi dengan nasi timbel, lalaban dan sambal" width={1100} height={614} priority sizes="(max-width: 767px) 92vw, 48vw"/>
-          <figcaption><span>Pepes Ayam Goreng</span><strong>Rp39.000</strong></figcaption>
-        </motion.figure><div className="hero-pair"><figure><Image src="/images/donat-9.webp" alt="Donat Oreo Gulapadi" width={260} height={257} priority/><figcaption>Donat Oreo <strong>Rp6.500</strong></figcaption></figure><figure><Image src="/images/durian.webp" alt="Es Campur Durian Gulapadi" width={900} height={748} priority/><figcaption>Es Campur Durian <strong>Rp30.000</strong></figcaption></figure></div></div>
+      <section id="beranda" className="market-opening">
+        <div className="food-portals wrap"><motion.figure initial={false} animate={{opacity:[.8,1]}} transition={{duration:.7}}><div className="portal-photo"><Image src="/images/pepes.webp" alt="Pepes Ayam Goreng dengan nasi timbel, lalaban dan sambal" width={1100} height={614} priority sizes="(max-width: 767px) 100vw, 65vw"/></div><figcaption><a href="#menu" onClick={()=>choose("Menu Baru")}>Pepes Ayam Goreng <ArrowDown size={14}/></a><strong>Rp39.000</strong></figcaption></motion.figure><figure><div className="portal-photo"><Image src="/images/ayam-asap.webp" alt="Nasi Goreng Ayam Asap Gulapadi" width={900} height={650} priority sizes="(max-width: 767px) 100vw, 35vw"/></div><figcaption><a href="#menu" onClick={()=>choose("Menu Spesial")}>Nasi Goreng Ayam Asap <ArrowDown size={14}/></a><strong>Rp32.000</strong></figcaption></figure></div>
+        <div className="wrap market-title"><motion.h1 initial={false} animate={{y:[10,0]}} transition={{duration:.6}}><span>Warung makan</span><br/><em>Nusantara.</em></motion.h1><div className="opening-info"><p>Gulapadi Garut<br/>Jl. Bank, Paminggir</p><p>Setiap hari 06.00–23.00<br/>Sarapan 06.00–10.30</p><a className="action opening-cta" href="#menu">Lihat menu <ArrowDown size={18}/></a></div></div>
       </section>
-      <section className="hours" aria-label="Jam kunjungan"><div className="wrap hours-inner"><p><Clock3 size={22}/><span>Setiap hari <strong>06.00–23.00</strong></span></p><div><span>Sarapan</span><strong>06.00–10.30</strong></div><div><span>Menu reguler</span><strong>10.30–23.00</strong></div><a href="#kunjungi">Mampir ke Garut <ArrowDown size={18}/></a></div></section>
       <section className="donat wrap" id="donat">
-        <Reveal className="section-heading"><div><h2>Sisakan ruang<br/>untuk yang manis.</h2><p>Donat untuk teman ngopi. Atau buah tangan<br className="desktop-break"/> buat yang menunggu di rumah.</p></div><a className="text-link" href="#menu" onClick={()=>choose("Donat")}>Lihat 20 pilihan donat <ArrowDown size={18}/></a></Reveal>
-        <div className="donut-grid">{[0,1,5,9,12,16].map((index)=><motion.article key={index} whileHover={{y:-7}} transition={{duration:.25}}><Image src={`/images/donat-${index}.webp`} alt={`Donat ${donuts[index].name} Gulapadi`} width={260} height={257} sizes="(max-width: 600px) 42vw, 16vw"/><div><h3>{donuts[index].name}</h3><span>{money(donuts[index].amount)}</span></div></motion.article>)}</div>
+        <div className="donut-intro"><h2>20 pilihan<br/><em>donat.</em></h2><a className="text-link" href="#menu" onClick={()=>choose("Donat")}>Semua pilihan donat <ArrowDown size={18}/></a></div>
+        <div className="donut-display"><AnimatePresence mode="wait" initial={false}><motion.div key={donutIndex} className="donut-main" initial={{opacity:.5,rotate:-3}} animate={{opacity:1,rotate:0}} exit={{opacity:0}} transition={{duration:.2}}><Image src={`/images/donat-${donutIndex}.webp`} alt={`Donat ${donuts[donutIndex].name}`} width={520} height={514} sizes="(max-width: 767px) 80vw, 35vw"/><h3>{donuts[donutIndex].name}</h3><strong>{money(donuts[donutIndex].amount)}</strong></motion.div></AnimatePresence></div>
+        <div className="donut-choices" aria-label="Pilihan donat">{[0,1,5,9,12,16].map(index=><Button variant="ghost" key={index} aria-pressed={donutIndex===index} onClick={()=>setDonutIndex(index)}><Image src={`/images/donat-${index}.webp`} alt="" width={85} height={84}/><span>{donuts[index].name}</span><ArrowUpRight size={16}/></Button>)}</div>
+      </section>
+      <section id="buffet" className="buffet wrap">
+        <div className="buffet-intro"><div><h2>Paket <em>buffet.</em></h2><p>Empat pilihan dengan lauk ikan, ayam, sapi, dan donat.</p><Chat>Tanyakan paket buffet</Chat></div><Image src="/images/buffet.webp" alt="Pilihan sajian buffet pada materi resmi Gulapadi" width={1024} height={432} sizes="(max-width: 767px) 90vw, 50vw"/></div>
+        <p className="table-scroll-hint">Geser untuk membandingkan 4 paket <ArrowRight size={16}/></p>
+        <div className="package-comparison" role="region" aria-label="Perbandingan paket buffet" tabIndex={0}>
+          <Table><TableCaption>Empat pilihan buffet, dibedakan dari isi sajiannya.</TableCaption>
+            <TableHeader><TableRow><TableHead scope="col">Isi paket</TableHead>{packages.map(p=><TableHead key={p.price} scope="col"><span>{p.name}</span><h3>{p.title}</h3><strong>{money(p.price)}</strong></TableHead>)}</TableRow></TableHeader>
+            <TableBody>
+              {[
+                ["Lauk utama","1 lauk ikan","1 lauk ayam","1 lauk ayam","1 lauk ayam + 1 lauk sapi"],
+                ["Nasi","Termasuk","Termasuk","Termasuk","Termasuk"],
+                ["Mie / sayur","1 mie","1 mie","1 mie","1 mie / sayur"],
+                ["Gorengan & sup","Masing-masing 1","Masing-masing 1","Masing-masing 1","Masing-masing 1"],
+                ["Dessert","1 pilihan","1 pilihan","1 pilihan","2 pilihan"],
+                ["Donat","—","—","1 pilihan","1 pilihan"],
+                ["Minuman","Termasuk","Termasuk","Termasuk","Termasuk"],
+              ].map(([label,...values])=><TableRow key={label}><TableHead scope="row">{label}</TableHead>{values.map((value,index)=><TableCell key={index}>{value}</TableCell>)}</TableRow>)}
+            </TableBody>
+          </Table>
+        </div>
+        <p className="package-note">Tanyakan satuan harga, minimum peserta, pajak, pilihan menu, dan ketersediaan paket di cabang Garut sebelum reservasi.</p>
+        <Accordion className="buffet-options" multiple={false}>{buffetChoices.map(([title,detail])=><AccordionItem key={title}><AccordionTrigger>{title}</AccordionTrigger><AccordionContent><p>{detail}</p></AccordionContent></AccordionItem>)}</Accordion>
       </section>
       <section id="menu" className="catalogue"><div className="wrap">
-        <div className="section-heading"><h2>Mau makan apa,<br/>Wargi?</h2><p>Sarapan hangat, makan siang, atau donat.<br/>Ada waktunya untuk setiap selera.</p></div>
+        <div className="section-heading"><h2>Menu Gulapadi.</h2><p>Sarapan 06.00–10.30<br/>Menu reguler 10.30–23.00</p></div>
         <div ref={menuToolbar} className={`toolbar ${searchOpen?'search-open':''}`}>
           <div className="category-control"><Select value={category} onValueChange={(v)=>choose(v??"Semua Menu")}><SelectTrigger aria-label="Kategori menu"><SelectValue>{category}</SelectValue></SelectTrigger><SelectContent alignItemWithTrigger={false}>{categories.map(c=><SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent></Select></div>
           <div className="search-field"><Search size={19}/><Input id="menu-search" ref={input} aria-label="Cari menu" placeholder="Cari nasi, kopi, donat…" value={query} onChange={e=>{interacted.current=true;if(!query)scrollToMenu();setQuery(e.target.value);setCategory("Semua Menu");setPage(1);}} onKeyDown={e=>{if(e.key==="Escape")closeSearch();}}/>{(query||searchOpen)&&<Button className="clear-search" variant="ghost" size="icon" aria-label="Tutup pencarian" onClick={closeSearch}><X/></Button>}</div>
@@ -119,28 +131,7 @@ export default function Home() {
         </div>}
 
       </div></section>
-      <section id="buffet" className="buffet wrap">
-        <div className="buffet-intro"><div><h2>Meja panjang.<br/>Cerita lebih banyak.</h2><p>Dari lauk ikan sampai ayam dan sapi. Bandingkan isi sajiannya, lalu ceritakan rencana arisan, reuni, atau kumpul komunitasmu kepada tim Gulapadi.</p><Chat>Tanyakan paket buffet</Chat></div><Image src="/images/buffet.webp" alt="Pilihan sajian buffet pada materi resmi Gulapadi" width={1024} height={432} sizes="(max-width: 767px) 90vw, 50vw"/></div>
-        <div className="package-comparison" role="region" aria-label="Perbandingan paket buffet" tabIndex={0}>
-          <Table><TableCaption>Empat pilihan buffet, dibedakan dari isi sajiannya.</TableCaption>
-            <TableHeader><TableRow><TableHead scope="col">Isi paket</TableHead>{packages.map(p=><TableHead key={p.price} scope="col"><span>{p.name}</span><h3>{p.title}</h3><strong>{money(p.price)}</strong></TableHead>)}</TableRow></TableHeader>
-            <TableBody>
-              {[
-                ["Lauk utama","1 lauk ikan","1 lauk ayam","1 lauk ayam","1 lauk ayam + 1 lauk sapi"],
-                ["Nasi","Termasuk","Termasuk","Termasuk","Termasuk"],
-                ["Mie / sayur","1 mie","1 mie","1 mie","1 mie / sayur"],
-                ["Gorengan & sup","Masing-masing 1","Masing-masing 1","Masing-masing 1","Masing-masing 1"],
-                ["Dessert","1 pilihan","1 pilihan","1 pilihan","2 pilihan"],
-                ["Donat","—","—","1 pilihan","1 pilihan"],
-                ["Minuman","Termasuk","Termasuk","Termasuk","Termasuk"],
-              ].map(([label,...values])=><TableRow key={label}><TableHead scope="row">{label}</TableHead>{values.map((value,index)=><TableCell key={index}>{value}</TableCell>)}</TableRow>)}
-            </TableBody>
-          </Table>
-        </div>
-        <p className="package-note">Tanyakan satuan harga, minimum peserta, pajak, pilihan menu, dan ketersediaan paket di cabang Garut sebelum reservasi.</p>
-        <Accordion className="buffet-options" multiple={false}>{buffetChoices.map(([title,detail])=><AccordionItem key={title}><AccordionTrigger>{title}</AccordionTrigger><AccordionContent><p>{detail}</p></AccordionContent></AccordionItem>)}</Accordion>
-      </section>
-      <section id="kunjungi" className="visit"><div className="wrap visit-grid"><div><h2>Sampai ketemu<br/>di Gulapadi.</h2><p>Untuk sarapan, makan dan minum,<br/>nongkrong, atau sekadar mampir.</p><Chat/></div><div className="visit-details"><div><MapPin/><div><h3>Gulapadi Garut</h3><p>Jl. Bank, Paminggir, Kec. Garut Kota,<br/>Kabupaten Garut, Jawa Barat 44112.</p><a href={MAP} className="text-link" target="_blank" rel="noopener noreferrer">Buka Google Maps <ArrowUpRight size={18}/></a></div></div><div><Clock3/><div><h3>Setiap hari, 06.00–23.00</h3><p>Sarapan 06.00–10.30<br/>Menu reguler 10.30–23.00</p></div></div></div></div><figure className="visit-map wrap"><div className="map-frame"><iframe src={MAP_EMBED} title="Lokasi Gulapadi Garut, Jalan Bank" width="1200" height="380" loading="eager" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div><figcaption><span>Gulapadi Garut · Jalan Bank, Paminggir</span><a href={MAP} target="_blank" rel="noopener noreferrer">Buka petunjuk arah <ArrowUpRight size={16}/></a></figcaption></figure></section>
+      <section id="kunjungi" className="visit"><div className="wrap visit-grid"><div><h2>Gulapadi<br/><em>Garut.</em></h2><Chat/></div><div className="visit-details"><div><MapPin/><div><h3>Gulapadi Garut</h3><p>Jl. Bank, Paminggir, Kec. Garut Kota,<br/>Kabupaten Garut, Jawa Barat 44112.</p><a href={MAP} className="text-link" target="_blank" rel="noopener noreferrer">Buka Google Maps <ArrowUpRight size={18}/></a></div></div><div><Clock3/><div><h3>Setiap hari, 06.00–23.00</h3><p>Sarapan 06.00–10.30<br/>Menu reguler 10.30–23.00</p></div></div></div></div><figure className="visit-map wrap"><div className="map-frame"><iframe src={MAP_EMBED} title="Lokasi Gulapadi Garut, Jalan Bank" width="1200" height="380" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div><figcaption><span>Gulapadi Garut · Jalan Bank, Paminggir</span><a href={MAP} target="_blank" rel="noopener noreferrer">Buka petunjuk arah <ArrowUpRight size={16}/></a></figcaption></figure></section>
     </main>
     <footer className="wrap"><span>Gulapadi · Warung Makan Nusantara</span><a href="https://www.instagram.com/gulapadi/" target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#beranda">Kembali ke atas ↑</a></footer>
   </MotionConfig>;

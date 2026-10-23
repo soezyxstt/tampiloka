@@ -5697,7 +5697,7 @@
         ],
         "productIds": [],
         "sectionIds": [
-          "suasana"
+          "kenangan"
         ],
         "authenticity": "verified",
         "rightsStatus": "pending",
@@ -5718,7 +5718,7 @@
         ],
         "productIds": [],
         "sectionIds": [
-          "suasana"
+          "kenangan"
         ],
         "authenticity": "verified",
         "rightsStatus": "pending",
@@ -5739,7 +5739,7 @@
         ],
         "productIds": [],
         "sectionIds": [
-          "together"
+          "kenangan"
         ],
         "authenticity": "verified",
         "rightsStatus": "pending",
@@ -5760,7 +5760,7 @@
         ],
         "productIds": [],
         "sectionIds": [
-          "suasana"
+          "kenangan"
         ],
         "authenticity": "verified",
         "rightsStatus": "pending",
@@ -5824,7 +5824,7 @@
       "categoryFilter": true,
       "search": true,
       "stickyToolbar": false,
-      "loadMore": true,
+      "loadMore": false,
       "productDialog": false,
       "carousel": false,
       "accordion": false,
@@ -5836,20 +5836,15 @@
         "features": []
       },
       {
-        "id": "suasana",
-        "features": []
-      },
-      {
         "id": "menu",
         "features": [
           "catalogue",
           "categoryFilter",
-          "search",
-          "loadMore"
+          "search"
         ]
       },
       {
-        "id": "together",
+        "id": "kenangan",
         "features": []
       },
       {
@@ -6458,22 +6453,22 @@
       {
         "assetId": "place-16",
         "productId": null,
-        "sectionId": "suasana"
+        "sectionId": "kenangan"
       },
       {
         "assetId": "place-02",
         "productId": null,
-        "sectionId": "suasana"
+        "sectionId": "kenangan"
       },
       {
         "assetId": "place-07",
         "productId": null,
-        "sectionId": "together"
+        "sectionId": "kenangan"
       },
       {
         "assetId": "place-11",
         "productId": null,
-        "sectionId": "suasana"
+        "sectionId": "kenangan"
       },
       {
         "assetId": "archivo-black",
@@ -6487,26 +6482,26 @@
       }
     ],
     "layoutSignature": {
-      "hero": "split-product",
-      "sequence": "place-first",
-      "catalogue": "photo-rows",
+      "hero": "brand-typographic",
+      "sequence": "product-first",
+      "catalogue": "compact-rows",
       "media": "mosaic",
       "narrative": "destination"
     },
     "candidates": [
       {
-        "id": "place-first",
+        "id": "house-album",
         "layoutSignature": {
-          "hero": "split-product",
-          "sequence": "place-first",
-          "catalogue": "photo-rows",
+          "hero": "brand-typographic",
+          "sequence": "product-first",
+          "catalogue": "compact-rows",
           "media": "mosaic",
           "narrative": "destination"
         },
-        "rationale": "Authentic house facade and indoor/courtyard photography communicate Rumah Tamah; compact photo rows suit small PDF crop resolution."
+        "rationale": "House-centered olive album has a visible relationship to real location photography and memory booth."
       },
       {
-        "id": "menu-direct",
+        "id": "menu-cover",
         "layoutSignature": {
           "hero": "brand-typographic",
           "sequence": "product-first",
@@ -6514,10 +6509,10 @@
           "media": "single-story-image",
           "narrative": "quick-visit"
         },
-        "rationale": "Feasible with raster menus but rejected because it underrepresents the house and destination atmosphere."
+        "rationale": "Product-first typographic book cover rejected because real crop resolution cannot carry a large opening and house becomes secondary."
       }
     ],
-    "selectedCandidate": "place-first",
+    "selectedCandidate": "house-album",
     "brand": {
       "colors": [
         "#faf4e7",
@@ -6525,9 +6520,9 @@
         "#a13223",
         "#edbe50"
       ],
-      "type": "Archivo Black for heavy sans menu hierarchy, DM Sans body; weblicensed substitutes. Original logo raster."
+      "type": "Archivo Black source-compatible broad sans heading, DM Sans body; retained original raster wordmark. Exact official font unconfirmed."
     },
-    "mobile": "Hero text then facade, stacked room photographs, one column catalogue, inline expanding search.",
+    "mobile": "Centered title and facade with overlapping side prints; compact menu pages, wide room and interactive memory album, stacked practical location.",
     "componentProvenance": "Official shadcn Button, Input, Select copied locally; Base UI behavior preserved.",
     "contentCoverage": [
       {
@@ -6561,7 +6556,7 @@
       {
         "finding": "photobooth",
         "sectionIds": [
-          "together"
+          "kenangan"
         ],
         "sourceIds": [
           "booth",
@@ -6592,51 +6587,65 @@
           "sourceId": "profile",
           "evidencePath": "research/raw/brand-feed.png",
           "observation": "Recurring olive grounds with cream uppercase text; campaigns add mustard and red, while partner sports posters use blue.",
-          "translation": "Cream reading ground, olive CTA and full-width booth section, red headline accents and mustard frame. Partner blue excluded."
+          "translation": "Olive opening, near-white reading surface and light-green practical location. Archived palette statement not newly live verified."
         },
         {
           "aspect": "typography",
           "sourceId": "reguler",
           "evidencePath": "research/raw/reguler-full-2.png",
           "observation": "MENU is broad block sans; category headings are dense bold sans, body is compact and rounded; wordmark has distinctive rounded strokes.",
-          "translation": "Original wordmark image retained. Archivo Black broad low-contrast block strokes fit MENU/BERBAGI headlines better than Inter/Manrope; DM Sans handles small body and controls. Exact poster font is unknown."
+          "translation": "Archivo Black provides broad block heading strokes with DM Sans body and original logo; exact source font unconfirmed."
         },
         {
           "aspect": "composition",
           "sourceId": "profile",
           "evidencePath": "research/raw/brand-feed.png",
           "observation": "Posters frame products and people with large compact headline blocks, cutout dishes and source color grounds.",
-          "translation": "Split facade plus compact multi-line title, a three-photo room mosaic, and dense small catalogue photo rows rather than huge repeated cards."
+          "translation": "Oversized centered title above facade-dominant album and two smaller real place prints. Intentionally adapts poster density to a responsive photo narrative."
         },
         {
           "aspect": "imagery",
           "sourceId": "reguler",
           "evidencePath": "research/raw/reguler-full-2.png",
           "observation": "Named dishes are isolated on patterned plates, set on paper; place sources show warm wood, vintage furniture and greenery.",
-          "translation": "Keep exact plate crops for SKU, small enough for source resolution. Original warm facade and room photography, watermark retained, no stock food."
+          "translation": "Real door/interior/booth images carry opening and room narrative; exact low-resolution crops remain compact in book leaves."
         },
         {
           "aspect": "graphicLanguage",
           "sourceId": "reguler",
           "evidencePath": "research/raw/reguler-full-2.png",
           "observation": "Four-petal wallpaper motif, paper texture, olive/mustard/red inset frames repeat through menu pages.",
-          "translation": "Olive and mustard double frame on hero, source-cropped four-petal detail at kitchen note, restrained cream surfaces. No decorative pills or eyebrow labels."
+          "translation": "Original motif beside the menu heading, square print borders and restrained book rules; no arch or decorative pill."
         }
       ],
       "retained": [
-        "Original rounded wordmark, olive grounds, heavy sans title hierarchy and warm vintage imagery.",
-        "Retro inset-frame vocabulary and source four-petal motif."
+        "Unaltered rounded raster wordmark; archived olive palette; broad sans print hierarchy.",
+        "Actual wooden interiors, green door, source four-petal motif and exact dish crops."
       ],
       "adapted": [
-        "Print texture simplified for reading; source frame retained as hero border.",
-        "Exact menu font not established; Archivo Black broad block shapes compared with official MENU and Instagram uppercase headlines.",
-        "Initial arch experiment replaced with source-led inset frame; room photos become mosaic on desktop and stack on mobile."
+        "House photographs arranged as an album rather than old split hero.",
+        "Archivo Black and DM Sans retained open-license substitutes; exact brand font is unknown.",
+        "Menu rendered as bounded two-leaf pages with eight items, not unbounded repeated cards."
       ],
       "avoidedDefaults": [
-        "No copied Historia full-width hero or featured carousel.",
-        "No giant typographic collage like Duduk Gembira, no all-category unbounded list like Talkie Space.",
-        "No generic arch masks; paper and frame treatment follows official menu."
+        "Cream plus Georgia serif split hero removed.",
+        "No arch masks, decorative pills or eyebrows.",
+        "No duplicated slogan or invented reviews."
       ]
-    }
+    },
+    "catalogueDesign": {
+      "audience": "Visitors deciding what to eat and planning a visit",
+      "initialItemCount": 8,
+      "access": "Category Select, global text search, replaceable pagination",
+      "sharedMetadata": [
+        "Price/availability caveat once below pagination",
+        "Daily prasmanan note once below menu"
+      ],
+      "variants": "All original size/name/price variants retained beneath parent item",
+      "categoryNavigation": "One Base UI Select; no duplicate categories",
+      "timeRules": "No invented breakfast service hours",
+      "relationship": "Bounded catalogue precedes room/booth and practical location"
+    },
+    "revisionNote": "2026-10-23 layout revision; source access remains archived 2026-10-22. Original research binaries absent; no new live verification."
   }
 }

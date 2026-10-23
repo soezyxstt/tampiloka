@@ -1,0 +1,104 @@
+{
+  "libraryManifestSha256": "eea04305a40b70f382caea1c28f54147ae1e14e4afcc973b58d302f45872985e",
+  "queries": [
+    {
+      "section": "01",
+      "query": "tipografi",
+      "limit": 6
+    },
+    {
+      "section": "03",
+      "limit": 5
+    },
+    {
+      "section": "01",
+      "query": "bakery",
+      "limit": 4
+    }
+  ],
+  "viewedIds": [
+    "template-kreme-01",
+    "template-crumb-02",
+    "template-crumb-04",
+    "template-streetwok-02"
+  ],
+  "primaryReference": {
+    "referenceIds": [
+      "template-kreme-01"
+    ],
+    "wholePageRelationships": "Oversized sign, useful image browsing field and concise visit information; alternating dense and open bands.",
+    "retainedProperties": [
+      "condensed headline scale",
+      "sign above images",
+      "compact utility edges"
+    ]
+  },
+  "supplementalReferences": [
+    {
+      "referenceIds": [
+        "template-crumb-02"
+      ],
+      "problem": "Masthead and ruled compact navigation"
+    },
+    {
+      "referenceIds": [
+        "template-crumb-04"
+      ],
+      "problem": "Photographic catalogue scale and compact name-price grouping"
+    },
+    {
+      "referenceIds": [
+        "template-streetwok-02"
+      ],
+      "problem": "Associate real food with concise set summary"
+    }
+  ],
+  "sections": [
+    {
+      "section": "opening",
+      "referenceIds": [
+        "template-kreme-01",
+        "template-crumb-02"
+      ],
+      "mechanism": "Sign above equal image doors with ruled visit edge",
+      "adaptation": "Actual Classico latte, pizza and croissant; copper cream and condensed typography",
+      "rejected": "Pills, yellow-green palette, crest, serif newspaper",
+      "mobile": "Three compact doors remain adjacent below the sign"
+    },
+    {
+      "section": "catalogue",
+      "referenceIds": [
+        "template-crumb-04"
+      ],
+      "mechanism": "Large source photographs and grouped names/prices with rules",
+      "adaptation": "Six-SKU contact sheet, category Select, search and replacing pagination",
+      "rejected": "Editorial preambles, copied serif styling",
+      "mobile": "Two columns; variants remain below their SKU"
+    },
+    {
+      "section": "breakfast",
+      "referenceIds": [
+        "template-streetwok-02"
+      ],
+      "mechanism": "Image beside concise order summary",
+      "adaptation": "Dark green set counter, real source photos and tabs",
+      "rejected": "Neon, fake tickets, split opening",
+      "mobile": "Photo followed by selector and full set details"
+    }
+  ],
+  "comparison": {
+    "historyPaths": [
+      "demos/layout-history.json"
+    ],
+    "closestDemo": "Previous Classico and concurrently revised Duduk",
+    "structuralDifferences": [
+      "Equal storefront doors replace staggered copper cover",
+      "Breakfast leads into catalogue",
+      "Large photographic contact sheet replaces thumbnail rows"
+    ],
+    "exceptions": [
+      "Authentic copper cream palette retained",
+      "Final actual-render six-demo comparison pending parent reviewer"
+    ]
+  }
+}

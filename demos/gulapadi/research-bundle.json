@@ -4790,7 +4790,8 @@
           "menu-82"
         ],
         "sectionIds": [
-          "catalogue"
+          "catalogue",
+          "hero"
         ],
         "authenticity": "verified",
         "rightsStatus": "pending",
@@ -5571,8 +5572,7 @@
           "catalogue",
           "donat",
           "buffet",
-          "location",
-          "hours"
+          "location"
         ],
         "authenticity": "illustration",
         "rightsStatus": "licensed",
@@ -5616,8 +5616,8 @@
       "catalogue": true,
       "categoryFilter": true,
       "search": true,
-      "stickyToolbar": false,
-      "loadMore": true,
+      "stickyToolbar": true,
+      "loadMore": false,
       "productDialog": false,
       "carousel": false,
       "accordion": true,
@@ -5629,12 +5629,14 @@
         "features": []
       },
       {
-        "id": "hours",
+        "id": "donat",
         "features": []
       },
       {
-        "id": "donat",
-        "features": []
+        "id": "buffet",
+        "features": [
+          "accordion"
+        ]
       },
       {
         "id": "catalogue",
@@ -5642,13 +5644,7 @@
           "catalogue",
           "categoryFilter",
           "search",
-          "loadMore"
-        ]
-      },
-      {
-        "id": "buffet",
-        "features": [
-          "accordion"
+          "stickyToolbar"
         ]
       },
       {
@@ -5957,11 +5953,6 @@
       {
         "assetId": "manrope",
         "productId": null,
-        "sectionId": "hours"
-      },
-      {
-        "assetId": "manrope",
-        "productId": null,
         "sectionId": "donat"
       },
       {
@@ -5978,40 +5969,45 @@
         "assetId": "manrope",
         "productId": null,
         "sectionId": "location"
+      },
+      {
+        "assetId": "ayam-asap",
+        "productId": "menu-82",
+        "sectionId": "hero"
       }
     ],
     "layoutSignature": {
       "hero": "photo-collage",
-      "sequence": "essentials-first",
+      "sequence": "product-first",
       "catalogue": "compact-rows",
       "media": "alternating-scenes",
-      "narrative": "quick-visit"
+      "narrative": "curated-selection"
     },
     "candidates": [
       {
-        "id": "direct-product",
+        "id": "market-masthead",
         "layoutSignature": {
           "hero": "photo-collage",
-          "sequence": "essentials-first",
+          "sequence": "product-first",
           "catalogue": "compact-rows",
           "media": "alternating-scenes",
-          "narrative": "quick-visit"
-        },
-        "rationale": "Foto hidangan resmi kuat; menu panjang paling terbaca sebagai rows dan informasi jam lebih dahulu."
-      },
-      {
-        "id": "graphic-grid",
-        "layoutSignature": {
-          "hero": "brand-typographic",
-          "sequence": "product-first",
-          "catalogue": "open-grid",
-          "media": "mosaic",
           "narrative": "curated-selection"
         },
-        "rationale": "Ditolak: mayoritas 206 entri tanpa foto individual, grid akan terlalu panjang dan repetitif."
+        "rationale": "Selected and revised after six-demo render comparison: two food panels immediately beneath header, then lower red masthead and functional essentials; donut selection and buffet comparison precede catalogue. Initial candidate boards retained with documented revision."
+      },
+      {
+        "id": "menu-side-index",
+        "layoutSignature": {
+          "hero": "brand-typographic",
+          "sequence": "essentials-first",
+          "catalogue": "open-grid",
+          "media": "mosaic",
+          "narrative": "quick-visit"
+        },
+        "rationale": "Rejected: persistent red side-index and menu-first cream grid reduces primary food scale and hides buffet comparison on mobile."
       }
     ],
-    "selectedCandidate": "direct-product",
+    "selectedCandidate": "market-masthead",
     "contentCoverage": {
       "menu": "catalogue: all 206 Garut applicable entries",
       "buffet": "buffet: four packages, choices, contact and confirmation limitations",
@@ -6029,7 +6025,8 @@
         "Google Images Chrome",
         "GoFood discovery"
       ],
-      "gaps": "No interior photo with sufficient branch/source confidence; no speculative SKU mapping."
+      "gaps": "No interior photo with sufficient branch/source confidence; no speculative SKU mapping.",
+      "revisionLimits": "2026-10-23: original research PDFs/screenshots are absent from this checkout. Existing sources/dates retained as historical provenance; no new live verification or source re-download claimed. Viewed retained logo, pepes, buffet, donut image."
     },
     "brand": {
       "colors": [
@@ -6041,6 +6038,81 @@
     },
     "componentProvenance": "Local copies of shadcn Base UI Button, Input, Select and Accordion from existing demo; same primitives retained.",
     "mobile": "Hero text then image; two-column donut grid; one-column menu rows; inline search; vertical buffet; no sticky toolbar.",
-    "historyComparison": "Differs on all five signature axes from accepted Historia baseline."
+    "historyComparison": "Parent six-demo render review found title-left/essentials-right above wide photos converged with Talkie. Revised actual DOM to food images first, masthead second on desktop and mobile. Shared final comparison maintained by parent.",
+    "catalogueDesign": {
+      "audiences": [
+        "Daily Garut diners",
+        "Donut buyers",
+        "Buffet planners"
+      ],
+      "initialItems": 12,
+      "completeInventory": "206 items with category, global search and replacement pagination; all 20 donuts searchable.",
+      "sharedMetadata": [
+        "Breakfast 06.00–10.30",
+        "Regular 10.30–23.00",
+        "Tax and availability caveat"
+      ],
+      "variants": "Original source SKU names and prices preserved; donut selector highlights six distinct flavours without merging records.",
+      "categoryNavigation": "Base UI Select; animated mobile search replaces select; selecting category clears search; searching resets category. Search matches names, descriptions and categories, so donat finds all twenty flavours.",
+      "relationship": "Buffet comparison appears before compact catalogue; map/contact follow catalogue so pagination avoids burying them."
+    },
+    "visualIdentity": {
+      "confidence": "medium",
+      "observations": [
+        {
+          "aspect": "palette",
+          "sourceId": "menu",
+          "evidencePath": "public/images/pepes.webp",
+          "observation": "Retained official food crop has saturated red ground with green food contrast. Full raw PDF missing.",
+          "translation": "Large red opening, warm paper information fields, deep red buffet."
+        },
+        {
+          "aspect": "typography",
+          "sourceId": "official",
+          "evidencePath": "public/images/logo.webp",
+          "observation": "Retained logo uses heavy outlined uppercase sans and narrower hand-drawn warung caption. Exact fonts unknown.",
+          "translation": "Retain actual logo; heavy uppercase local Manrope for opening line. Georgia italic is a documented editorial contrast, not claimed original font."
+        },
+        {
+          "aspect": "composition",
+          "sourceId": "menu",
+          "evidencePath": "public/images/pepes.webp",
+          "observation": "Retained crop frames a plate very close with minimal background. Full source layouts unavailable.",
+          "translation": "Broad rectangular close food panels; no decorative crop frames."
+        },
+        {
+          "aspect": "imagery",
+          "sourceId": "buffet-1",
+          "evidencePath": "public/images/buffet.webp",
+          "observation": "Retained buffet photograph uses close warm-lit trays. Branch applicability still requires confirmation.",
+          "translation": "Use photograph above original package comparison; preserve branch/unit confirmation caveat."
+        },
+        {
+          "aspect": "graphicLanguage",
+          "sourceId": "official",
+          "evidencePath": "public/images/logo.webp",
+          "observation": "Actual logo includes rice stalk and radiating lines; limited retained source does not establish further repeated motifs.",
+          "translation": "Preserve logo intact. Fine functional rules organize menu and packages; avoid invented rice patterns."
+        }
+      ],
+      "retained": [
+        "Actual cream/red logo",
+        "Red food-ground colour",
+        "Close food photography"
+      ],
+      "adapted": [
+        "Heavy local Manrope approximates logo weight",
+        "Georgia italic adds editorial contrast; exact original font unknown",
+        "Responsive table scrolls on narrow screens"
+      ],
+      "avoidedDefaults": [
+        "No arch photograph",
+        "No photo-card collage",
+        "No detached opening hours strip",
+        "No slogan headline",
+        "No repeated six-card donut gallery"
+      ]
+    },
+    "parentCompositionReview": "2026-10-23: canonical signature reconciled against actual desktop/mobile output; descriptive visual comparison is in ../../demos/prospect-to-web-review.md. ID distance does not decide creativity."
   }
 }

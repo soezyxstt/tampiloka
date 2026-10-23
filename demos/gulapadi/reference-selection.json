@@ -1,0 +1,88 @@
+{
+  "libraryManifestSha256": "eea04305a40b70f382caea1c28f54147ae1e14e4afcc973b58d302f45872985e",
+  "queries": [
+    "01 food limit5",
+    "03 limit5",
+    "01 tipografi limit4"
+  ],
+  "viewedIds": [
+    "template-sorimi-03",
+    "template-sorimi-02",
+    "template-crumb-04",
+    "template-streetwok-03"
+  ],
+  "primaryReference": {
+    "referenceIds": [
+      "template-sorimi-03",
+      "template-sorimi-02"
+    ],
+    "wholePageRelationships": "Two large photographic food experiences lead immediately below navigation. Lower red masthead and essentials consolidate their shared Warung Makan identity, followed by the smaller donut selection, dark buffet comparison, compact catalogue and location.",
+    "retainedProperties": [
+      "photo-led opening",
+      "parallel food experiences with direct menu links",
+      "large type secondary to food",
+      "distinct mobile photo-first sequence"
+    ]
+  },
+  "supplementalReferences": [
+    {
+      "referenceIds": [
+        "template-crumb-04"
+      ],
+      "problem": "high density catalogue"
+    },
+    {
+      "referenceIds": [
+        "template-streetwok-03"
+      ],
+      "problem": "food plus price emphasis"
+    }
+  ],
+  "sections": [
+    {
+      "section": "opening",
+      "referenceIds": [
+        "template-sorimi-03",
+        "template-sorimi-02"
+      ],
+      "mechanism": "Photo-led two-experience opening with shared typographic identity lower in the spread.",
+      "adaptation": "Red food-market ground; large Pepes plate and smaller Nasi Goreng Ayam Asap side by side, followed by lower red masthead/essentials. Food captions link original categories and retain verified prices.",
+      "rejected": "Pills, blue palette, title on photographs, invented lunch/dinner experiences.",
+      "mobile": "Large Pepes photograph \u2192 smaller Nasi Goreng Ayam Asap photograph/price \u2192 lower masthead and essentials/CTA; explicitly food before headline."
+    },
+    {
+      "section": "buffet",
+      "referenceIds": [
+        "template-streetwok-03"
+      ],
+      "mechanism": "Large product view followed by an immediately readable pricing structure.",
+      "adaptation": "Actual buffet photograph and four-column composition comparison with original A/B names plus contents.",
+      "rejected": "Builder, neon, ticket edges, fake order flow.",
+      "mobile": "Horizontal comparison with native scrolling and focusable region."
+    },
+    {
+      "section": "catalogue",
+      "referenceIds": [
+        "template-crumb-04"
+      ],
+      "mechanism": "Featured photograph next to a compact name-price inventory and strong dividers.",
+      "adaptation": "Category-specific spotlight where matching product photo exists; compact paginated inventory maintains all 206 source records.",
+      "rejected": "Newspaper identity, uppercase microcopy, decorative overlines.",
+      "mobile": "Spotlight becomes wide image; one column item list and animated search."
+    }
+  ],
+  "comparison": {
+    "historyPaths": [
+      "demos/layout-history.json"
+    ],
+    "closestDemo": "Talkie (initial title/essentials/photos convergence corrected after parent six-demo review)",
+    "structuralDifferences": [
+      "food panorama before lower masthead on desktop and mobile",
+      "buffet comparison precedes compact catalogue",
+      "interactive large donut selection rather than repeated showcase cards"
+    ],
+    "exceptions": [
+      "Shared business hours and menu controls are functional requirements; parent compares all six actual renders."
+    ]
+  }
+}

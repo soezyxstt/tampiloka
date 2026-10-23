@@ -1,0 +1,97 @@
+{
+  "libraryManifestSha256": "eea04305a40b70f382caea1c28f54147ae1e14e4afcc973b58d302f45872985e",
+  "queries": [
+    {
+      "section": "01",
+      "query": "coffee",
+      "result": "none"
+    },
+    {
+      "section": "01",
+      "query": "gelap"
+    },
+    {
+      "section": "03",
+      "query": ""
+    },
+    {
+      "section": "05",
+      "query": ""
+    }
+  ],
+  "viewedIds": [
+    "template-qitchen-02",
+    "template-qitchen-01",
+    "template-qitchen-05",
+    "schulhaus_07"
+  ],
+  "primaryReference": {
+    "referenceIds": [
+      "template-qitchen-02",
+      "template-qitchen-01",
+      "template-qitchen-05"
+    ],
+    "wholePageRelationships": "Dark visual workbench: one dominant stage plus narrow evidence rail, category-photo-plus-list catalogue, factual visit index. Typography spans the whole opening before images.",
+    "retainedProperties": [
+      "Unequal photographic scale",
+      "Dense navigation beside larger content",
+      "Consistent dark frame"
+    ]
+  },
+  "supplementalReferences": [
+    {
+      "referenceIds": [
+        "schulhaus_07"
+      ],
+      "problem": "Vary image scale and juxtaposition without another symmetric photo-text split"
+    }
+  ],
+  "sections": [
+    {
+      "section": "opening",
+      "referenceIds": [
+        "template-qitchen-02"
+      ],
+      "mechanism": "Dominant coffee image with secondary image navigation, all within one dark stage",
+      "adaptation": "Oversized heavy sans sits above coffee rather than covering food; breakfast and brewing form evidence rail",
+      "rejected": "Serif type, sushi assets, pill navigation, complex corner cutouts",
+      "mobile": "Masthead then coffee stage then paired small rail; no split hero stacking"
+    },
+    {
+      "section": "catalogue",
+      "referenceIds": [
+        "template-qitchen-01"
+      ],
+      "mechanism": "Large category photo accompanies close name-price list",
+      "adaptation": "20-category Base UI sidebar; category photos remain correctly attributed group photos; 8-result replacing pagination",
+      "rejected": "Tiny repeated thumbnails when only category photo exists; sticky full-height image",
+      "mobile": "Plain category tabs and expanding search; category photo above compact results"
+    },
+    {
+      "section": "visit",
+      "referenceIds": [
+        "template-qitchen-05",
+        "schulhaus_07"
+      ],
+      "mechanism": "Unequal image scales and dense information index instead of repeated equal split scenes",
+      "adaptation": "One small brewing view, factual address rows, broad facade/map composition",
+      "rejected": "Invented editorial articles, dates, stats and hospitality claims",
+      "mobile": "Address and actions before full-width map; smaller process image shares heading row"
+    }
+  ],
+  "comparison": {
+    "historyPaths": [
+      "demos/layout-history.json"
+    ],
+    "closestDemo": "Previous Talkie; Classico dark source palette may remain similar",
+    "structuralDifferences": [
+      "Full-width masthead above image matrix, no left-copy/right-photo hero",
+      "Breakfast embedded in opening workbench",
+      "Catalogue appears before place narrative",
+      "Asymmetric map/address index closes page"
+    ],
+    "exceptions": [
+      "Brand black/white and DM Sans preserved; palette cannot establish distinction"
+    ]
+  }
+}

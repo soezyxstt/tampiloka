@@ -32,6 +32,7 @@ function ChatLink({children,className=""}:{children:React.ReactNode;className?:s
 export default function Classico(){
  const reduced=useReducedMotion();
  const [loaded,setLoaded]=useState(false);
+ const [shortcut,setShortcut]=useState<{category:string;version:number}|null>(null);
  useEffect(()=>{const frame=requestAnimationFrame(()=>setLoaded(true));return()=>cancelAnimationFrame(frame);},[]);
  return <MotionConfig reducedMotion="user">
   <a className="skip" href="#main">Langsung ke konten</a>
@@ -43,32 +44,30 @@ export default function Classico(){
   </header>
   <main id="main">
    <section className="cover" aria-labelledby="hero-title">
-    <div className="cover-heading"><motion.h1 id="hero-title" initial={false} animate={loaded?{y:0}:{y:reduced?0:12}} transition={{duration:reduced?0:.7,ease:[.22,1,.36,1]}}>Coffee & bake.</motion.h1><p>Kopi, hidangan hangat,<br/>dan udara Bandung.</p></div>
-    <div className="cover-spread">
-     <motion.figure className="cover-coffee" initial={false} animate={loaded?{y:0}:{y:reduced?0:20}} transition={{duration:reduced?0:.8}}><Photo name="hot-latte" alt="Hot Latte dalam cangkir dengan simbol asli Classico" priority/><figcaption>Dari coffee bar.</figcaption></motion.figure>
-     <figure className="cover-bake"><Photo name="butter-croissant" alt="Butter Croissant Classico di atas piring hitam" priority/><figcaption>Dari oven.</figcaption></figure>
-     <figure className="cover-place"><Photo name="terrace" alt="Teras Classico dengan meja kayu dan pepohonan" priority/><figcaption>Untuk dinikmati di sini.</figcaption><a href="#menu" className="menu-jump">Jelajahi menu <ArrowDown size={22}/></a></figure>
+    <div className="cover-heading"><motion.h1 id="hero-title" initial={false} animate={loaded?{y:0}:{y:reduced?0:12}} transition={{duration:reduced?0:.7,ease:[.22,1,.36,1]}}>Coffee & bake.</motion.h1></div>
+    <div className="storefront">
+     {[{name:"hot-latte",label:"Coffee",category:"Coffee",alt:"Hot Latte Classico dalam cangkir bersimbol asli"},{name:"supreme-pizza",label:"Kitchen",category:"Pasta & Pizza",alt:"Supreme Pizza Classico"},{name:"butter-croissant",label:"Bake",category:"Cake & Pastry",alt:"Butter Croissant Classico"}].map((item,index)=><motion.a key={item.label} href="#menu" className="store-door" onClick={()=>setShortcut(previous=>({category:item.category,version:(previous?.version??0)+1}))} initial={false} animate={loaded?{y:0}:{y:reduced?0:15+index*7}} transition={{duration:reduced?0:.65,delay:reduced?0:index*.06}}><Photo name={item.name} alt={item.alt} priority/><span>{item.label}<ArrowDown size={24}/></span></motion.a>)}
     </div>
-    <div className="cover-visit"><a href={MAP} target="_blank" rel="noreferrer">Sukaresmi 19A, Bandung <ArrowUpRight size={17}/></a><p>Senin 11.00–23.00 <span>/</span> Selasa–Minggu 07.30–23.00 WIB</p></div>
+    <div className="cover-visit"><a href={MAP} target="_blank" rel="noreferrer">Sukaresmi 19A, Bandung <ArrowUpRight size={17}/></a><p>Senin 11.00–23.00 <span>/</span> Selasa–Minggu 07.30–23.00 WIB</p><a href="#menu" className="menu-jump">Semua menu <ArrowDown size={18}/></a></div>
    </section>
-   <Catalogue/>
    <Breakfast/>
+   <Catalogue key={shortcut?.version??0} shortcut={shortcut}/>
    <section id="space" className="space-section section-pad" aria-labelledby="space-title">
-    <div className="space-spread"><figure className="space-main"><Photo name="interior" alt="Ruang dalam Classico dengan furnitur kayu dan kursi santai"/><figcaption>Di dalam, dengan suasana hangat.</figcaption></figure><div className="space-title"><h2 id="space-title">Work from<br/>Classico.</h2><p>Bawa laptopmu. Pilih sudut untuk fokus, lalu pesan sesuatu untuk menemani.</p></div><figure className="space-work"><Photo name="wfc-wide" alt="Pengunjung bekerja dengan laptop di meja kayu Classico"/><figcaption>Atau satu meja bersama teman.</figcaption></figure></div>
+    <div className="space-spread"><figure className="space-main"><Photo name="interior" alt="Ruang dalam Classico dengan furnitur kayu dan kursi santai"/></figure><div className="space-title"><h2 id="space-title">Work from Classico.</h2><p>Wi-Fi, stopkontak, air minum gratis, dan loker.</p></div><figure className="space-work"><Photo name="wfc-wide" alt="Pengunjung bekerja dengan laptop di meja kayu Classico"/></figure></div>
     <div className="space-details"><div className="amenities"><span><Wifi/>Wi-Fi</span><span><Plug/>Stopkontak</span><span><GlassWater/>Air minum gratis</span><span><LockKeyhole/>Loker</span></div><ChatLink className="outline">Tanya area & ketersediaan</ChatLink></div>
    </section>
    <section className="community section-pad" id="community" aria-labelledby="community-title">
-    <div className="community-intro"><h2 id="community-title">Satu meja,<br/>banyak rencana.</h2><Photo name="sharing" alt="Pizza untuk dinikmati bersama dari materi sharing package Classico"/><p>Dari sharing package sampai acara komunitas. Bicarakan rencanamu bersama tim Classico.</p><ChatLink>Tanya sharing package</ChatLink></div>
+    <div className="community-intro"><h2 id="community-title">Acara & kolaborasi.</h2><Photo name="sharing" alt="Pizza untuk dinikmati bersama dari materi sharing package Classico"/><p>Sharing package, acara komunitas, dan kolaborasi bersama Classico.</p><ChatLink>Tanya sharing package</ChatLink></div>
     <div className="community-links"><a href="https://forms.gle/Sh8GyUW4sfxu612FA" target="_blank" rel="noreferrer"><span><strong>Acara & komunitas</strong><small>Ajukan konsep kolaborasimu.</small></span><ArrowUpRight/></a><a href="https://forms.gle/9dA2QaGrrxVMbtF1A" target="_blank" rel="noreferrer"><span><strong>Live music talent</strong><small>Portofolio tampil aktif & akun sosial publik.</small></span><ArrowUpRight/></a><a href="https://forms.gle/Q9pAbvMzq2on7VEJ8" target="_blank" rel="noreferrer"><span><strong>Creator & KOL</strong><small>Lebih dari 3.000 followers & Instagram publik.</small></span><ArrowUpRight/></a></div>
    </section>
-   <section id="location" className="location section-pad" aria-labelledby="location-title"><div className="location-heading"><h2 id="location-title">Sampai ketemu<br/>di Sukaresmi.</h2><ChatLink>Reservasi via WhatsApp</ChatLink></div><div className="location-info"><address>Jl. Sukaresmi No. 19A<br/>Ciumbuleuit, Cidadap, Bandung</address><dl><div><dt>Senin</dt><dd>11.00–23.00 WIB</dd></div><div><dt>Selasa–Minggu</dt><dd>07.30–23.00 WIB</dd></div></dl><a className="text-link" href={MAP} target="_blank" rel="noreferrer">Petunjuk arah <ArrowUpRight size={18}/></a></div><div className="map-frame"><iframe title="Lokasi Classico Coffee & Bake, Jl. Sukaresmi No.19A Bandung" src="https://maps.google.com/maps?q=Classico%20Coffee%20%26%20Bake%20Jl.%20Sukaresmi%2019A%20Bandung&z=16&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/><p>Peta tidak tampil? <a href={MAP} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={14}/></a></p></div></section>
+   <section id="location" className="location section-pad" aria-labelledby="location-title"><div className="location-heading"><h2 id="location-title">Sukaresmi 19A.</h2><ChatLink>Reservasi via WhatsApp</ChatLink></div><div className="location-info"><address>Jl. Sukaresmi No. 19A<br/>Ciumbuleuit, Cidadap, Bandung</address><dl><div><dt>Senin</dt><dd>11.00–23.00 WIB</dd></div><div><dt>Selasa–Minggu</dt><dd>07.30–23.00 WIB</dd></div></dl><a className="text-link" href={MAP} target="_blank" rel="noreferrer">Petunjuk arah <ArrowUpRight size={18}/></a></div><div className="map-frame"><iframe title="Lokasi Classico Coffee & Bake, Jl. Sukaresmi No.19A Bandung" src="https://maps.google.com/maps?q=Classico%20Coffee%20%26%20Bake%20Jl.%20Sukaresmi%2019A%20Bandung&z=16&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/><p>Peta tidak tampil? <a href={MAP} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={14}/></a></p></div></section>
   </main>
   <footer className="footer"><a href="#" className="brand"><Image src="/images/symbol.png" alt="" width={30} height={40}/><span>classico<span className="brand-sub">coffee & bake</span></span></a><a href="https://www.instagram.com/classicoidn/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#">Kembali ke atas ↑</a></footer>
  </MotionConfig>;
 }
 
-function Catalogue(){
- const [category,setCategory]=useState("Semua menu"); const [query,setQuery]=useState(""); const [page,setPage]=useState(0); const [searchOpen,setSearchOpen]=useState(false);
+function Catalogue({shortcut}:{shortcut:{category:string}|null}){
+ const [category,setCategory]=useState(shortcut?.category??"Semua menu"); const [query,setQuery]=useState(""); const [page,setPage]=useState(0); const [searchOpen,setSearchOpen]=useState(false);
  const searchRef=useRef<HTMLInputElement>(null);const toggleRef=useRef<HTMLButtonElement>(null);const anchorRef=useRef<HTMLDivElement>(null);
  const reduced=useReducedMotion();
  const filtered=useMemo(()=>ordered.filter(i=>(query?`${i.name} ${i.category} ${i.description}`.toLowerCase().includes(query.trim().toLowerCase()):category==="Semua menu"||i.category===category)),[category,query]);
@@ -76,7 +75,7 @@ function Catalogue(){
  function closeSearch(){setSearchOpen(false);setQuery("");setPage(0);requestAnimationFrame(()=>toggleRef.current?.focus());}
  function changePage(n:number){setPage(n);anchorRef.current?.scrollIntoView({behavior:reduced?"instant":"smooth",block:"start"});}
  return <section id="menu" className="catalogue section-pad" aria-labelledby="menu-title">
-  <div className="section-heading"><h2 id="menu-title">Menu.</h2><p>Mulai dari secangkir kopi.<br/>Lanjutkan dengan yang kamu suka.</p></div>
+  <div className="section-heading"><h2 id="menu-title">Menu.</h2><a href="#location" className="text-link">Kunjungi Classico <ArrowUpRight size={18}/></a></div>
   <div className={`catalogue-tools ${searchOpen?"search-open":""}`} ref={anchorRef}>
    <div className="category-control"><Select items={categories.map(c=>({label:c,value:c}))} value={category} onValueChange={v=>{setCategory(v??"Semua menu");setQuery("");setPage(0);}}><SelectTrigger aria-label="Kategori menu"><SelectValue/></SelectTrigger><SelectContent alignItemWithTrigger={false}>{categories.map(c=><SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent></Select></div>
    <motion.div id="menu-search" className="search-box" initial={false} animate={{flexGrow:searchOpen?1:0}} transition={{duration:reduced?0:.25}}><Search size={19}/><Input ref={searchRef} aria-label="Cari menu di semua kategori" placeholder="Cari kopi, pasta, pastry…" value={query} onChange={e=>{setQuery(e.target.value);setCategory("Semua menu");setPage(0);}} onKeyDown={e=>{if(e.key==="Escape")closeSearch();}}/>{searchOpen?<Button variant="ghost" size="icon" aria-label="Tutup pencarian" onClick={closeSearch}><X size={19}/></Button>:null}</motion.div>
@@ -99,7 +98,7 @@ function Breakfast(){
  const [active,setActive]=useState("breakfast-a");const reduced=useReducedMotion();
  return <section className="breakfast section-pad" id="breakfast" aria-labelledby="breakfast-title">
   <Tabs value={active} onValueChange={v=>setActive(String(v))} className="breakfast-tabs">
-   <div className="breakfast-art"><Photo name="breakfast-table" alt="Kopi dan toast di meja sarapan Classico"/><div className="breakfast-caption"><h2 id="breakfast-title">Sarapan<br/>ala Classico.</h2><p>Telur kampung, kopi, dan toast atau siomay.</p></div></div>
+   <div className="breakfast-art"><Photo name="breakfast-table" alt="Kopi dan toast di meja sarapan Classico"/><div className="breakfast-caption"><h2 id="breakfast-title">Set sarapan.</h2></div></div>
    <div className="breakfast-copy"><TabsList variant="line" aria-label="Pilihan paket sarapan">{sets.map((s,i)=><TabsTrigger value={s.id} key={s.id}>Set {String.fromCharCode(65+i)}</TabsTrigger>)}</TabsList>
     <AnimatePresence mode="wait" initial={false}><motion.div className="set-art" key={active} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:reduced?0:.15}}><Photo name={active} alt={`Pilihan ${sets.find(s=>s.id===active)?.name}`}/></motion.div></AnimatePresence>
     {sets.map(s=><TabsContent value={s.id} key={s.id}><div className="breakfast-panel"><h3>{s.name}</h3>{s.variants.length?<ul>{s.variants.map(v=><li key={v.id}><span>{v.name}{s.id==='breakfast-a'?" + telur kampung & srikaya butter toast":""}</span><strong>{money(v.price.amount)}</strong></li>)}</ul>:<><p>{s.description}</p><strong className="set-price">{money(s.price.amount)}</strong></>}</div></TabsContent>)}

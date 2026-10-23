@@ -12,8 +12,8 @@ export function Location() {
     <section className="location-section" id="kunjungi" aria-labelledby="location-title">
       <div className="location-layout">
         <div className="location-details">
-          <h2 id="location-title">Temui kami<br />di Cimanuk.</h2>
-          <p className="location-intro">Kopi pagi atau makan malam. Kami menunggu di tengah Garut.</p>
+          <h2 id="location-title">Cimanuk 305,<br />Garut.</h2>
+
           <address className="location-address">
             <MapPin size={20} aria-hidden="true" />
             <div>Jl. Cimanuk No. 305, Pataruman<br />Tarogong Kidul, Garut, Jawa Barat<span>Di samping Dealer Toyota Garut.</span></div>

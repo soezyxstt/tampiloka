@@ -1,0 +1,27 @@
+# Duduk Gembira: papan warung dan meja pesan
+
+Arah: huruf Bree merah berukuran papan warung berada di bidang krem sendiri, disusul teras asli serta blok jam merah; meja pemilih nasi hijau mengantar langsung ke katalog bergaris.
+
+## Bukti dan batasnya
+Data/foto dipakai ulang dari riset arsip 22 Oktober 2026. Tidak ada verifikasi live baru. Teras yang benar-benar dilihat menampilkan papan berbingkai hijau, huruf merah berbayang hijau, peti merah, dan percakapan di meja. Foto nasi resmi menampilkan piring bunga di meja kayu dengan nama produk tertulis di dalam foto. Aset interior, logo, dan empat foto makanan tetap autentik. Biner screenshot profil/menu arsip tidak ada di checkout; catatan provenance lama bukan pengganti pemeriksaan feed baru. Harga menu lama tidak diklaim kini; empat menu nasi tidak memiliki harga publik. Hak publikasi foto tempat pihak ketiga belum dikonfirmasi. Demo tetap noindex dan memiliki disclosure.
+
+Palette krem dominan, hijau untuk satu permukaan kerja makanan, merah untuk judul/jam/aksi. Bree adalah padanan display berkarakter kurva dan serif lunak papan nama, bukan font logo persis; DM untuk baca/kontrol. Logo asli tidak direka ulang. Foto tidak dibungkus arch atau frame polaroid. Garis menu berasal dari fungsi papan harga; tidak ditambahkan motif palsu.
+
+## Dua kandidat terlihat
+`candidate-a.png` dan `candidate-b.png` masing-masing menunjukkan pembuka, section utama, contoh menu, desktop dan mobile dengan aset asli yang sama. Papan ini adalah studi komposisi, bukan screenshot implementasi. A dipilih: judul faktual menjadi fokus pertama, teras tetap berdiri sendiri, komposisi berakhir sebagai meja kerja pemilih varian. B ditolak: foto nasi mendominasi pembuka dan venue ganda menjadi section berikutnya; pola ini terlalu mudah mendekati demo makanan lain dan menunda pengenalan tempat.
+
+A mempertahankan relasi tipe–foto–jam pada mobile; B menjadi foto makanan dulu lalu slogan. Keduanya berbeda fokus, skala gambar dan urutan baca, bukan hanya kiri/kanan. Contoh papan memakai harga dari katalog arsip dan bukan konfirmasi terkini.
+
+## Sistem implementasi
+Urutan: identitas/alamat/teras/jam → nasi dengan pilihan lauk & sambal → katalog → interior singkat → kunjungan/peta → footer. Tidak perlu section cerita generik sebelum makanan. Judul pembuka menyatakan nama dan jenis usaha, bukan slogan. Semua copy generik percakapan/pulang/cerita dipangkas. Judul, alamat, jam, harga, pilihan, disclosure dan label aksesibel tetap ada.
+
+Desktop: foto varian di tengah, pilihan di kiri, SKU/harga di kanan pada permukaan hijau. Mobile: judul, foto, dua kelompok radio sejajar, SKU. Tidak ada checkout fiktif. Category sidebar desktop berubah menjadi rail teks mobile; pencarian lintas semua data, kategori satu-satunya klasifikasi. Maksimal sepuluh menu tampil; pagination mengganti subset sehingga lokasi tetap terjangkau. Sticky sidebar berakhir bersama katalog. Search mobile beranimasi, Escape mengembalikan fokus; radio memakai Base UI; crossfade foto menyatakan perubahan produk, transisi hasil menyatakan subset berganti. MotionConfig dan CSS menghormati reduced motion.
+
+## Matriks referensi
+- opening + venue: template-kreme-01. Mekanisme: Large independent type field followed by venue and useful opening information. Adaptasi: Actual Bree lettering echoes the red/green sign; one real terrace scene anchored to an address counter and red hours slab. Ditolak: Floating tiny photos, decorative pills, oversized imitation wordmark, opening-hour labels scattered on photography. Mobile: Factual title, useful-scale venue image, address + action, narrow hours row.
+- rice selection: template-streetwok-04, template-brasa-01. Mekanisme: Choices, central food and exact selection summary share one counter; hard green boundary marks the change of task. Adaptasi: Only four real protein/sambal combinations, original photos and unknown price remain truthful; Base UI radio groups. Ditolak: Invented ingredient builder, neon, receipt price totals, pills, illustrations and decorative marquee. Mobile: Photo precedes two adjacent choice groups, then live SKU summary.
+- catalogue: template-crumb-04. Mekanisme: Ruled compact menu and independent category navigation; featured food is separate from SKU list. Adaptasi: Cream/green menu with red active category, six real groups, 47 records searchable, subset max ten replaced through pagination. Ditolak: Newspaper fiction, all-caps overlines, invented food photography and one large card per SKU. Mobile: Plain horizontally scrollable category rail; animated search replaces title; menu rows keep names and prices together.
+- interior + visit: template-kreme-01. Mekanisme: Venue photograph and operational information are distinct readable regions. Adaptasi: Original interior band followed by actual Garut address, sourced hours, terrace recognition and Google embed. Ditolak: Decorative opening-hour labels placed on photographs. Mobile: Interior image and short heading, then address/hours and map.
+
+## Perbandingan portofolio
+Arah enam demo diselaraskan parent: Historia fotografi dining, Talkie kopi teknis gelap, Gulapadi pasar merah, Bumi album rumah, Classico urban monokrom. Duduk membawa papan warung factual dan meja pemilih tiga kolom, bukan hero editorial foto penuh atau album. Krem/serif mungkin tetap mirip Bumi pada token, sehingga pembandingan final harus menilai hubungan elemen dan mobile, bukan warna. Parent menyimpan satu history bersama dan melakukan penilaian render independen. Belum ada klaim lulus visual final di dokumen ini.

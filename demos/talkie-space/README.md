@@ -29,3 +29,7 @@ On this Windows host Bun scripts may fail within the sandbox. Use the available 
 - Original PDF stays local and is gitignored. `scripts/prepare-research.py` documents crop coordinates and visual transcription; it requires PyMuPDF and Pillow and regenerates the bundle. `scripts/check-demo.mjs` checks SKU count, IDs, files, unknown price and variants.
 
 Concept disclosure and noindex are enabled. This demo is local only. Prices and availability reflect the source accessed on the research date; owner confirmation and publication rights remain pending. No deployment, push or outreach was performed.
+
+Revision 2026-10-23: see [the parent comparison and validation report](../prospect-to-web-review.md) and this package’s `design-brief.md` / `reference-selection.json` for the current composition, actual checks and source-evidence limits. The new revision is built; user acceptance and a complete source-gate pass are not claimed.
+
+Cloudflare deployment target: `talkie-space-demo`, production branch `master`, existing domain https://talkie.tampiloka.site. See [deployment record](../../docs/demo-redesign-deployment-2026-10-23.md) for the current push/deploy status; earlier local-only notes describe setup history.

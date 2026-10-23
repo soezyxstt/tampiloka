@@ -30,7 +30,7 @@ This is a local, independent design concept, not Historia's official website. No
 
 For a separate deployment, select this directory as the project root, install its dependencies, build it, and configure its own subdomain. Set `NEXT_PUBLIC_SITE_URL` only to that verified origin if sharing metadata uses it.
 
-The configured Vercel target is `historia-demo` in `soezyxst-projects`, connected to `soezyxstt/tampiloka` on production branch `master`. Root Directory: `demos/historia`; install: `bun install --frozen-lockfile`; build: `bun run build --webpack`; Node.js 24.x. Custom domain: `https://historia.tampiloka.site`.
+Hosting uses the existing Cloudflare Pages Direct Upload project `historia-demo`, production branch `master`, custom domain `https://historia.tampiloka.site`. The old Vercel project was removed during migration. Upload the verified static `out/` artifact; do not create a new project or change the domain.
 
 Original PDFs, research media and screenshots stay local and are ignored by Git. The source URL, SHA-256 fingerprint, product data and image provenance are committed. To repeat PDF-level extraction checks, download the source recorded in `data/menu.json` to its documented research path. Catalogue and runtime-asset checks also work without that original file.
 
@@ -51,3 +51,7 @@ Feature components consume these primitives rather than depending on Tampiloka o
 Run `node scripts/check-catalogue.mjs` for category/search checks and `node scripts/check-demo.mjs http://localhost:3004` for local HTML/image checks. These complement browser interaction checks; they do not establish owner approval or current availability.
 
 WhatsApp CTA icon: Simple Icons, https://github.com/simple-icons/simple-icons/blob/develop/icons/whatsapp.svg (CC0 collection). It identifies the existing WhatsApp destination; no message is sent by the site.
+
+Revision 2026-10-23: see [the parent comparison and validation report](../prospect-to-web-review.md) and this package’s `design-brief.md` / `reference-selection.json` for the current composition, actual checks and source-evidence limits. The new revision is built; user acceptance and a complete source-gate pass are not claimed.
+
+Cloudflare deployment target: `historia-demo`, production branch `master`, existing domain https://historia.tampiloka.site. See [deployment record](../../docs/demo-redesign-deployment-2026-10-23.md) for the current push/deploy status; earlier local-only notes describe setup history.

@@ -1787,10 +1787,6 @@
         "features": []
       },
       {
-        "id": "atmosphere",
-        "features": []
-      },
-      {
         "id": "dishes",
         "features": []
       },
@@ -1801,6 +1797,10 @@
           "categoryFilter",
           "search"
         ]
+      },
+      {
+        "id": "atmosphere",
+        "features": []
       },
       {
         "id": "location",
@@ -1871,8 +1871,8 @@
       }
     ],
     "layoutSignature": {
-      "hero": "full-photo",
-      "sequence": "place-first",
+      "hero": "brand-typographic",
+      "sequence": "product-first",
       "catalogue": "compact-rows",
       "media": "alternating-scenes",
       "narrative": "destination"
@@ -1881,8 +1881,8 @@
       {
         "id": "a",
         "layoutSignature": {
-          "hero": "full-photo",
-          "sequence": "place-first",
+          "hero": "brand-typographic",
+          "sequence": "product-first",
           "catalogue": "compact-rows",
           "media": "alternating-scenes",
           "narrative": "destination"
@@ -1910,9 +1910,9 @@
       ],
       "fontRationale": "Bree Serif licensed display adaptation for the explicit retro warung direction; DM Sans controls/body; actual logo image retained. Not claimed as original logo font."
     },
-    "desktop": "Photo-first terrace hero with framed serif sign, scene story, one product spotlight with protein/sambal radio controls, green dashed menu board with category/search, practical visit rows.",
-    "mobile": "Full-width terrace scene and sign, one dish photo and radio options instead of repeated 2x2 grid, default Kopi subset and expandable inline search across all47 records.",
-    "motion": "MotionConfig reducedMotion=user; reduced-motion-aware hero and product crossfade; search expansion respects prefers-reduced-motion; shadcn Select transition.",
+    "desktop": "Factual large Bree masthead; asymmetric terrace/address/hours counter; green three-column variant choice; cream menu sidebar and bounded ruled rows; compact interior/visit.",
+    "mobile": "Large standalone type then venue, address/action, hours; photo then two choice groups beside each other; category text rail and single-column bounded menu.",
+    "motion": "MotionConfig reducedMotion=user; exact variant photo crossfade and results transition; mobile search expansion CSS; reduced motion fallback.",
     "componentProvenance": "Official shadcn base-nova RadioGroup registry (research/radio-group-registry.json), local official Input copy, existing Button/Select; @base-ui/react primitives retained.",
     "featureNotes": {
       "stickyToolbar": "Unnecessary for a short category-at-a-time text catalogue; no simulated transactions.",
@@ -1972,7 +1972,20 @@
       "contactSheet": "research/contact-sheet.jpg"
     },
     "historyComparison": "All five axes differ from accepted Historia baseline.",
-    "redesignStatus": "Implemented locally. Existing historical QA files were not rewritten; current visual and interaction review is pending parent browser QA.",
-    "mapEmbed": "Google Maps iframe queried with the same verified business/address as the existing directions link; genuine local terrace image is separate from Google imagery."
+    "redesignStatus": "2026-10-23 ready for local review: lint/typecheck/build and dev browser interactions passed; map embed blank under network; independent parent comparison separate",
+    "mapEmbed": "Google Maps iframe queried with the same verified business/address as the existing directions link; genuine local terrace image is separate from Google imagery.",
+    "catalogueDesign": {
+      "initialCategory": "Kopi",
+      "initialItemCount": 6,
+      "maximumVisibleItems": 10,
+      "allItemsAccess": "Six categories, all-menu category, cross-category search and replacing pagination",
+      "sharedMetadata": [
+        "price caveat",
+        "currency"
+      ],
+      "navigation": "Plain category sidebar on desktop, horizontal text rail on mobile",
+      "variants": "Four source-backed rice SKUs matched by protein and sambal; missing prices remain null"
+    },
+    "parentCompositionReview": "2026-10-23: canonical signature reconciled against actual desktop/mobile output; descriptive visual comparison is in ../../demos/prospect-to-web-review.md. ID distance does not decide creativity."
   }
 }

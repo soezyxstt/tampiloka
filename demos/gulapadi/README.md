@@ -21,3 +21,7 @@ For this session, dependencies reuse a local node_modules junction after the ins
 Source archives are intentionally ignored. Website serves optimized local WebP directly, under 1 MB total. Photo and logo publication rights remain pending; menu prices are source snapshots and need owner confirmation before public use. Buffet unit prices, minimum participants, tax and Garut availability are not specified by the supplied documents; the visitor flow asks the Garut team.
 
 No push, deployment, outreach, reservation, or message has been performed.
+
+Revision 2026-10-23: see [the parent comparison and validation report](../prospect-to-web-review.md) and this package’s `design-brief.md` / `reference-selection.json` for the current composition, actual checks and source-evidence limits. The new revision is built; user acceptance and a complete source-gate pass are not claimed.
+
+Cloudflare deployment target: `gulapadi-demo`, production branch `master`, existing domain https://gulapadi.tampiloka.site. See [deployment record](../../docs/demo-redesign-deployment-2026-10-23.md) for the current push/deploy status; earlier local-only notes describe setup history.

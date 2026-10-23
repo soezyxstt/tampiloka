@@ -1,0 +1,125 @@
+{
+  "libraryManifestSha256": "eea04305a40b70f382caea1c28f54147ae1e14e4afcc973b58d302f45872985e",
+  "queries": [
+    {
+      "section": "01",
+      "query": "photo",
+      "result": "0"
+    },
+    {
+      "section": "01",
+      "query": "Whisk",
+      "limit": 3
+    },
+    {
+      "section": "03",
+      "query": "",
+      "limit": 6
+    },
+    {
+      "section": "06",
+      "query": "",
+      "limit": 4
+    }
+  ],
+  "shortlistIds": [
+    "template-whisk-02",
+    "template-whisk-03",
+    "template-crumb-04",
+    "template-mello-02",
+    "schulhaus_07",
+    "template-sorimi-01"
+  ],
+  "viewedIds": [
+    "template-whisk-03",
+    "template-crumb-04",
+    "template-mello-02",
+    "schulhaus_07"
+  ],
+  "primaryReference": {
+    "referenceIds": [
+      "template-whisk-03"
+    ],
+    "wholePageRelationships": "Broad sans opening -> authentic photographic story -> smaller personal photo album; menu and practical location inserted as distinct reading surfaces.",
+    "retainedProperties": [
+      "Large text leads above images",
+      "One dominant image with secondary print-scale photos",
+      "Strong shift between photographic atmosphere and compact reading"
+    ]
+  },
+  "supplementalReferences": [
+    {
+      "referenceIds": [
+        "template-crumb-04",
+        "template-mello-02"
+      ],
+      "problem": "Pacing 116 genuine items while preserving compact source photo resolution"
+    },
+    {
+      "referenceIds": [
+        "schulhaus_07"
+      ],
+      "problem": "Asymmetric photo/text relationship for room story"
+    }
+  ],
+  "sections": [
+    {
+      "section": "Opening",
+      "referenceIds": [
+        "template-whisk-03"
+      ],
+      "mechanism": "Oversized broad sans heading establishes hierarchy; smaller photographic prints make a personal album beneath it.",
+      "adaptation": "Olive source palette and authentic house/interior/booth photographs, not barista imagery. The facade is central with smaller surrounding room views.",
+      "rejected": "Black surface, slogan, duplicated light/dark design, eyebrows and circular arrows.",
+      "mobile": "One-line factual Rumah tamah heading; central facade stays primary with overlapping smaller room/booth prints."
+    },
+    {
+      "section": "Menu",
+      "referenceIds": [
+        "template-crumb-04",
+        "template-mello-02"
+      ],
+      "mechanism": "A bounded reading sheet, strong rules, two dense columns and compact name/price groups.",
+      "adaptation": "8 products per replaceable page, shadcn Select and animated search over all 116 items; actual PDF dish crops remain small due to source resolution.",
+      "rejected": "Newspaper serif/masthead, fake featured claim, bright green, decorative heart and excessive taxonomy.",
+      "mobile": "Single leaf, same price/variant groups; search expands inline and Escape restores focus."
+    },
+    {
+      "section": "Room and memory album",
+      "referenceIds": [
+        "schulhaus_07",
+        "template-whisk-03"
+      ],
+      "mechanism": "Image scale contrast followed by an interactive stack of photo prints.",
+      "adaptation": "One wide actual dining-room image, then small original booth/courtyard/vintage-furniture photographs with clickable thumbnail navigation.",
+      "rejected": "Long editorial prose, coral palette and invented testimonials; reference interactions are not verified.",
+      "mobile": "Wide room first, short factual heading next, then album beneath its action."
+    },
+    {
+      "section": "Location",
+      "referenceIds": [
+        "template-mello-02"
+      ],
+      "mechanism": "Restrained light/green surface transition gives the final practical information its own space.",
+      "adaptation": "Exact archived address, hours, WhatsApp, actual facade and Google Maps iframe.",
+      "rejected": "Decorative motif strips and unrelated mood-match feature.",
+      "mobile": "Address and hours above full-width map and fallback direction link."
+    }
+  ],
+  "comparison": {
+    "historyPaths": [
+      "demos/layout-history.json"
+    ],
+    "closestDemo": "Existing Bumi Upi demo; Duduk Gembira shares broad source-backed sans",
+    "structuralDifferences": [
+      "Centered house album replaces serif split-product opening",
+      "Menu immediately follows opening; room and booth grouped after catalogue",
+      "Hero photo hierarchy is facade + side prints, not immersive photo hero or coffee-lab graphic panel",
+      "No arch or rounded default"
+    ],
+    "exceptions": [
+      "Catalogue retains small product photos because original raster crops are around 105x60; names and prices remain dominant"
+    ],
+    "limitation": "Parent orchestrator owns full six-demo final render comparison. No claim this source inspection is visual comparison of all final demos."
+  }
+}

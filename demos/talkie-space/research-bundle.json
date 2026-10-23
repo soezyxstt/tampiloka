@@ -287,7 +287,7 @@
       {
         "id": "hours",
         "field": "hours",
-        "value": "08.00–22.00",
+        "value": "08.00\u201322.00",
         "sourceIds": [
           "instagram"
         ],
@@ -312,7 +312,7 @@
       {
         "id": "concept",
         "field": "concept",
-        "value": "Japanese–Scandinavian",
+        "value": "Japanese\u2013Scandinavian",
         "sourceIds": [
           "official"
         ],
@@ -324,7 +324,7 @@
       {
         "id": "breakfast",
         "field": "breakfast",
-        "value": "08.00–11.00, mulai Rp15.000",
+        "value": "08.00\u201311.00, mulai Rp15.000",
         "sourceIds": [
           "menu-2",
           "instagram"
@@ -343,7 +343,7 @@
         "name": "Nasi Telur Pontianak",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -365,7 +365,7 @@
         "name": "Nasi Daun Jeruk",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -387,7 +387,7 @@
         "name": "Nasi Goreng Bawang",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -409,7 +409,7 @@
         "name": "Nasi Kuah Kari",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -431,7 +431,7 @@
         "name": "Roti Bakar Kaya / Coklat",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -453,7 +453,7 @@
         "name": "Wijen Salad Chicken Grill",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -475,7 +475,7 @@
         "name": "Caesar Salad Chicken Grill",
         "kind": "product",
         "category": "Sarapan",
-        "description": "Tersedia pukul 08.00–11.00.",
+        "description": "Tersedia pukul 08.00\u201311.00.",
         "sourceIds": [
           "menu-2"
         ],
@@ -3309,7 +3309,7 @@
       "catalogue": true,
       "categoryFilter": true,
       "search": true,
-      "stickyToolbar": false,
+      "stickyToolbar": true,
       "loadMore": false,
       "productDialog": false,
       "carousel": false,
@@ -3322,10 +3322,6 @@
         "features": []
       },
       {
-        "id": "story",
-        "features": []
-      },
-      {
         "id": "breakfast",
         "features": []
       },
@@ -3334,8 +3330,13 @@
         "features": [
           "catalogue",
           "categoryFilter",
-          "search"
+          "search",
+          "stickyToolbar"
         ]
+      },
+      {
+        "id": "space",
+        "features": []
       },
       {
         "id": "visit",
@@ -3358,7 +3359,7 @@
       {
         "assetId": "brewing",
         "productId": null,
-        "sectionId": "story"
+        "sectionId": "space"
       },
       {
         "assetId": "coffee",
@@ -3532,38 +3533,38 @@
       }
     ],
     "layoutSignature": {
-      "hero": "split-product",
-      "sequence": "story-to-offer",
-      "catalogue": "compact-rows",
-      "media": "alternating-scenes",
+      "hero": "photo-collage",
+      "sequence": "essentials-first",
+      "catalogue": "photo-rows",
+      "media": "mosaic",
       "narrative": "product-craft"
     },
     "candidates": [
       {
         "id": "A",
         "layoutSignature": {
-          "hero": "split-product",
-          "sequence": "story-to-offer",
-          "catalogue": "compact-rows",
-          "media": "alternating-scenes",
+          "hero": "photo-collage",
+          "sequence": "essentials-first",
+          "catalogue": "photo-rows",
+          "media": "mosaic",
           "narrative": "product-craft"
         },
-        "rationale": "Rendered hero splits oversized copy with a large authentic coffee product photograph; brewing story leads to breakfast and complete menu."
+        "rationale": "Selected: masthead over coffee workbench, paired evidence rail and integrated breakfast; direct photo/list catalogue before place."
       },
       {
         "id": "B",
         "layoutSignature": {
-          "hero": "split-product",
-          "sequence": "product-first",
-          "catalogue": "open-grid",
-          "media": "minimal",
-          "narrative": "curated-selection"
+          "hero": "brand-typographic",
+          "sequence": "service-first",
+          "catalogue": "compact-rows",
+          "media": "horizontal-strip",
+          "narrative": "quick-visit"
         },
-        "rationale": "Rejected: too few unambiguous individual photos for full product grid."
+        "rationale": "Rejected after visible HTML comparison: tall type and thin photo strip weaken food evidence and approach Duduk type hierarchy."
       }
     ],
     "selectedCandidate": "A",
-    "contentCoverage": "Verified 2026-10-22 via Chrome: official Instagram @talkie.space links Carrd. Bio hours 08.00–22.00. Carrd links only menu PDF, location and WhatsApp 6282130445909. PDF page 24 matches address/contact. All 24 pages rendered; 22 product pages manually transcribed. Prices reflect linked menu accessed today, not owner confirmation of current availability. Mineral Water has two prices without named sizes, retained as unnamed price options. Import filter coffee: ask barista, no invented price.\nBrand: PDF black/white, heavy sans headings, condensed category accents, warm food imagery. DM Sans is an open-license optical substitute, not a claim of official font. Original white logo cropped from p1 artwork. No invented facilities, reviews, capacities.\nBio coverage: PDF -> complete catalogue; Maps -> visit; WhatsApp -> reservation CTA; Instagram breakfast Sept 22 -> breakfast section with hours and from 15K; cupping Oct 21 -> past event, no upcoming booking claim; special-day reel -> ask admin, no invented package. Blue matcha carousel -> omitted as price/variant absent in linked menu.\nAsset routes: Instagram profile/posts reviewed, PDF supplied sufficient full resolution food photography; downloader unnecessary for food already in official PDF. Google Images searched in Chrome and source Instagram C9md_4Uy2p6 identified but third-party interior not reused (avoid unneeded rights exposure). GoFood merchant opened, Safety check blocked; no bypass, PDF is stronger dine-in source. Official Carrd facade downloaded. No stock or AI food. PDF flattened images require crops; group compositions used as section images, ambiguous SKU images remain null.\nAlternative A initially type-led; final render classified split-product/story-to-offer/compact-rows/alternating-scenes/product-craft after visual review: visible bold type, coffee spread, breakfast then complete catalogue and visit. Alternative B split-product/product-first/open-grid/minimal/curated-selection rejected: sparse confidently identifiable SKU photos would create many empty cards. Mobile: headline then coffee image, stacked breakfast, filter and magnifier same row, two-column menu rows collapse to one; no sticky toolbar or carousel needed. All 94 offerings remain discoverable without pagination.\nRights: official media authentic, republication rights pending; local concept only, noindex. No push, deploy or outreach authorized.\n",
+    "contentCoverage": "Verified 2026-10-22 via Chrome: official Instagram @talkie.space links Carrd. Bio hours 08.00\u201322.00. Carrd links only menu PDF, location and WhatsApp 6282130445909. PDF page 24 matches address/contact. All 24 pages rendered; 22 product pages manually transcribed. Prices reflect linked menu accessed today, not owner confirmation of current availability. Mineral Water has two prices without named sizes, retained as unnamed price options. Import filter coffee: ask barista, no invented price.\nBrand: PDF black/white, heavy sans headings, condensed category accents, warm food imagery. DM Sans is an open-license optical substitute, not a claim of official font. Original white logo cropped from p1 artwork. No invented facilities, reviews, capacities.\nBio coverage: PDF -> complete catalogue; Maps -> visit; WhatsApp -> reservation CTA; Instagram breakfast Sept 22 -> breakfast section with hours and from 15K; cupping Oct 21 -> past event, no upcoming booking claim; special-day reel -> ask admin, no invented package. Blue matcha carousel -> omitted as price/variant absent in linked menu.\nAsset routes: Instagram profile/posts reviewed, PDF supplied sufficient full resolution food photography; downloader unnecessary for food already in official PDF. Google Images searched in Chrome and source Instagram C9md_4Uy2p6 identified but third-party interior not reused (avoid unneeded rights exposure). GoFood merchant opened, Safety check blocked; no bypass, PDF is stronger dine-in source. Official Carrd facade downloaded. No stock or AI food. PDF flattened images require crops; group compositions used as section images, ambiguous SKU images remain null.\nAlternative A initially type-led; final render classified split-product/story-to-offer/compact-rows/alternating-scenes/product-craft after visual review: visible bold type, coffee spread, breakfast then complete catalogue and visit. Alternative B split-product/product-first/open-grid/minimal/curated-selection rejected: sparse confidently identifiable SKU photos would create many empty cards. Mobile: headline then coffee image, stacked breakfast, filter and magnifier same row, two-column menu rows collapse to one; no sticky toolbar or carousel needed. All 94 offerings remain discoverable without pagination.\nRights: official media authentic, republication rights pending; local concept only, noindex. No push, deploy or outreach authorized.\n\n2026-10-23 revision: archived 2026-10-22 source facts/assets retained, not newly reverified. Source feed screenshots and PDF are missing from checkout; public crops are present and viewed. All 94 items remain reachable through category tabs, cross-category search and replacing 8-item pagination. User explicitly authorized Codex cloud build override via parent. No publication or outreach.",
     "mediaCoverage": {
       "sourcePages": 24,
       "offerings": 94,
@@ -3579,7 +3580,76 @@
       "font": "Local DM Sans regular/bold, optical substitute to PDF heavy sans"
     },
     "componentProvenance": "shadcn Base UI Button and Select copied as primitives from Historia; no landing composition imports",
-    "mobile": "Stacked scenes; category/search inline with animated mobile input; 320/390/768 checks",
-    "historyComparison": "Final rendered classification: split-product/story-to-offer/compact-rows/alternating-scenes/product-craft. 5 axes from Historia, 3 from newly recorded Duduk Gembira. Coffee photo is half of hero, not a type-only composition. Narrative follows brewing and food before visit."
+    "mobile": "Title-first masthead, coffee stage then paired image rail and compact SAPA ribbon; horizontal category tabs, expanded search and category photo then 8-item list; address then map.",
+    "historyComparison": "All six demos in shared history are comparison scope; actual render comparison pending parent. Talkie redesign targets photo-collage masthead workbench, integrated breakfast and direct catalogue. Closest dark surface overlap is Classico; actual composition comparison must judge more than palette.",
+    "catalogueDesign": {
+      "visitors": "Coffee, breakfast and food visitors planning a visit",
+      "initialItemCount": 8,
+      "allItemsAccess": "20 category tabs and replacing 8-item pagination; cross-category search",
+      "sharedMetadata": [
+        "Harga termasuk PPN",
+        "Ketersediaan dapat berubah"
+      ],
+      "timeRules": "SAPA 08.00\u201311.00 displayed once; all breakfast items remain accessible without automatic time switching",
+      "variants": "Original mineral-water unnamed prices retained; no inferred size labels",
+      "navigation": "Vertical Base UI category tabs on desktop; plain horizontal tabs on mobile. Animated mobile search.",
+      "placement": "Catalogue immediately follows integrated opening and breakfast; precedes process and visit"
+    },
+    "visualIdentity": {
+      "confidence": "medium",
+      "observations": [
+        {
+          "aspect": "palette",
+          "sourceId": "menu-1",
+          "evidencePath": "public/images/hero-coffee.webp",
+          "observation": "Black branded coffee packaging and white lettering surround warm coffee.",
+          "translation": "Dark majority surfaces; warm actual photos provide color."
+        },
+        {
+          "aspect": "typography",
+          "sourceId": "menu-1",
+          "evidencePath": "public/images/logo.webp",
+          "observation": "Compact heavy white lettering and hard geometric mark. Exact font unconfirmed.",
+          "translation": "Licensed local DM Sans bold at broad masthead scale, regular readable list."
+        },
+        {
+          "aspect": "composition",
+          "sourceId": "menu-1",
+          "evidencePath": "public/images/hero-coffee.webp",
+          "observation": "Source photo composes one central cup among repeated packaging at varied angles.",
+          "translation": "Central dominant coffee stage with secondary evidence windows; no decorative rotation of whole photograph."
+        },
+        {
+          "aspect": "imagery",
+          "sourceId": "menu-1",
+          "evidencePath": "public/images/brewing.webp",
+          "observation": "Warm close process photograph puts brewing hardware and coffee in foreground.",
+          "translation": "Substantial process imagery and large category photographs without invented exact SKU mapping."
+        },
+        {
+          "aspect": "graphicLanguage",
+          "sourceId": "facade-source",
+          "evidencePath": "public/images/facade.webp",
+          "observation": "Signage and perforated facade use strong grid and directional arrows.",
+          "translation": "Square black gutters and functional arrow links; former unsupported contour removed."
+        }
+      ],
+      "retained": [
+        "Black/white identity",
+        "Heavy sans hierarchy",
+        "Warm real coffee and food images"
+      ],
+      "adapted": [
+        "Readable local open font substitute",
+        "Mixed-scale image stage for responsive web",
+        "Pale SAPA ribbon ties to official light food composition"
+      ],
+      "avoidedDefaults": [
+        "Split hero",
+        "Repeated alternating image/story sections",
+        "Generic relaxation slogan",
+        "Unverified contour motif"
+      ]
+    }
   }
 }

@@ -1,0 +1,112 @@
+{
+  "libraryManifestSha256": "eea04305a40b70f382caea1c28f54147ae1e14e4afcc973b58d302f45872985e",
+  "queries": [
+    {
+      "section": "01",
+      "query": "tipografi",
+      "limit": 6
+    },
+    {
+      "section": "03",
+      "query": "",
+      "limit": 5
+    }
+  ],
+  "viewedIds": [
+    "template-kreme-01",
+    "template-brasa-01",
+    "template-streetwok-04",
+    "template-crumb-04"
+  ],
+  "contactSheet": "evidence/reference-shortlist.jpg",
+  "primaryReference": {
+    "referenceIds": [
+      "template-kreme-01"
+    ],
+    "wholePageRelationships": "Independent expressive masthead → place photograph + functional information → compact operational menu; varied scale survives mobile.",
+    "retainedProperties": [
+      "type field independent of photography",
+      "venue and hours separate but adjacent",
+      "large media punctuates compact functional information"
+    ]
+  },
+  "supplementalReferences": [
+    {
+      "referenceIds": [
+        "template-streetwok-04"
+      ],
+      "problem": "Four similar dish photos should become one exact choice spotlight."
+    },
+    {
+      "referenceIds": [
+        "template-brasa-01"
+      ],
+      "problem": "Food section needs a substantial surface transition and product scale."
+    },
+    {
+      "referenceIds": [
+        "template-crumb-04"
+      ],
+      "problem": "Dense text-only menu needs hierarchy without repetitive cards."
+    }
+  ],
+  "sections": [
+    {
+      "section": "opening + venue",
+      "referenceIds": [
+        "template-kreme-01"
+      ],
+      "mechanism": "Large independent type field followed by venue and useful opening information.",
+      "adaptation": "Actual Bree lettering echoes the red/green sign; one real terrace scene anchored to an address counter and red hours slab.",
+      "rejected": "Floating tiny photos, decorative pills, oversized imitation wordmark, opening-hour labels scattered on photography.",
+      "mobile": "Factual title, useful-scale venue image, address + action, narrow hours row."
+    },
+    {
+      "section": "rice selection",
+      "referenceIds": [
+        "template-streetwok-04",
+        "template-brasa-01"
+      ],
+      "mechanism": "Choices, central food and exact selection summary share one counter; hard green boundary marks the change of task.",
+      "adaptation": "Only four real protein/sambal combinations, original photos and unknown price remain truthful; Base UI radio groups.",
+      "rejected": "Invented ingredient builder, neon, receipt price totals, pills, illustrations and decorative marquee.",
+      "mobile": "Photo precedes two adjacent choice groups, then live SKU summary."
+    },
+    {
+      "section": "catalogue",
+      "referenceIds": [
+        "template-crumb-04"
+      ],
+      "mechanism": "Ruled compact menu and independent category navigation; featured food is separate from SKU list.",
+      "adaptation": "Cream/green menu with red active category, six real groups, 47 records searchable, subset max ten replaced through pagination.",
+      "rejected": "Newspaper fiction, all-caps overlines, invented food photography and one large card per SKU.",
+      "mobile": "Plain horizontally scrollable category rail; animated search replaces title; menu rows keep names and prices together."
+    },
+    {
+      "section": "interior + visit",
+      "referenceIds": [
+        "template-kreme-01"
+      ],
+      "mechanism": "Venue photograph and operational information are distinct readable regions.",
+      "adaptation": "Original interior band followed by actual Garut address, sourced hours, terrace recognition and Google embed.",
+      "rejected": "Decorative opening-hour labels placed on photographs.",
+      "mobile": "Interior image and short heading, then address/hours and map."
+    }
+  ],
+  "comparison": {
+    "historyPaths": [
+      "demos/layout-history.json"
+    ],
+    "closestDemo": "Bumi Upi in prior light/serif atmosphere treatment; parent compares final six renders",
+    "structuralDifferences": [
+      "Duduk factual typographic sign has no hero photo overlay",
+      "green three-column selection counter immediately follows opening",
+      "menu category rail and ruled bounded rows instead of image tiles",
+      "mobile keeps working controls beside each other"
+    ],
+    "exceptions": [
+      "Cream and expressive serif are tied to brand sign; retained despite some palette/type overlap.",
+      "Cross-demo final screenshot comparison is pending parent review."
+    ]
+  }
+}

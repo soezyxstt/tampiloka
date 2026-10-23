@@ -120,5 +120,151 @@
     "revision": "2026-10-22 brand and information architecture revision",
     "visualDirection": "house photo print; recipe-book spreads; venue memory album",
     "revisionEvidence": "../artifacts/demo-redesign/review.md"
+  },
+  {
+    "prospectId": "historia-garut",
+    "name": "Historia Coffee & Eatery Garut",
+    "status": "built",
+    "date": "2026-10-23",
+    "signature": {
+      "hero": "full-photo",
+      "sequence": "product-first",
+      "catalogue": "featured-to-grid",
+      "media": "alternating-scenes",
+      "narrative": "shared-moments"
+    },
+    "sectionOrder": [
+      "hero",
+      "visit-rail",
+      "taste",
+      "events",
+      "menu",
+      "kunjungi",
+      "footer"
+    ],
+    "evidence": "../artifacts/prospect-to-web-2026-10-23/historia/parent-evidence/1440-full.png",
+    "visualDirection": "Uninterrupted dining panorama; asymmetric room/product diptych; event accordion and room gallery before a six-item cutout product grid. Unlike Classico, photographs establish the venue before the catalogue; mobile retains an immersive opening.",
+    "revisionEvidence": "prospect-to-web-review.md"
+  },
+  {
+    "prospectId": "duduk-gembira-garut",
+    "name": "Warung Kopi Duduk Gembira",
+    "status": "built",
+    "date": "2026-10-23",
+    "signature": {
+      "hero": "brand-typographic",
+      "sequence": "product-first",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "destination"
+    },
+    "sectionOrder": [
+      "hero",
+      "dishes",
+      "catalogue",
+      "atmosphere",
+      "location",
+      "footer"
+    ],
+    "evidence": "../artifacts/prospect-to-web-2026-10-23/duduk-gembira/parent-evidence/1440-full.png",
+    "visualDirection": "Separate red Bree warung sign, terrace counter with address/hours, then exact protein/sambal radio builder and a ruled category sidebar menu. Closest Bumi shares a typographic identity and compact list, but uses no print album/book layout.",
+    "revisionEvidence": "prospect-to-web-review.md"
+  },
+  {
+    "prospectId": "talkie-space-garut",
+    "name": "Talkie Space",
+    "status": "built",
+    "date": "2026-10-23",
+    "signature": {
+      "hero": "photo-collage",
+      "sequence": "essentials-first",
+      "catalogue": "photo-rows",
+      "media": "mosaic",
+      "narrative": "product-craft"
+    },
+    "sectionOrder": [
+      "hero",
+      "breakfast",
+      "catalogue",
+      "space",
+      "visit",
+      "footer"
+    ],
+    "evidence": "../artifacts/prospect-to-web-2026-10-23/talkie-space/parent-evidence/1440-full.png",
+    "visualDirection": "Dark photographic coffee workbench with one main image and two narrow evidence windows, SAPA band, then category photograph beside a compact price list. The original top-title overlap with Gulapadi was resolved by making Gulapadi food-first.",
+    "revisionEvidence": "prospect-to-web-review.md"
+  },
+  {
+    "prospectId": "gulapadi-garut",
+    "name": "Gulapadi Garut",
+    "status": "built",
+    "date": "2026-10-23",
+    "signature": {
+      "hero": "photo-collage",
+      "sequence": "product-first",
+      "catalogue": "compact-rows",
+      "media": "alternating-scenes",
+      "narrative": "curated-selection"
+    },
+    "sectionOrder": [
+      "food-panels",
+      "masthead",
+      "donat",
+      "buffet",
+      "catalogue",
+      "location",
+      "footer"
+    ],
+    "evidence": "../artifacts/prospect-to-web-2026-10-23/gulapadi/parent-evidence/1440-full.png",
+    "visualDirection": "Food panels precede the factual masthead on BOTH desktop and mobile; donut choice follows, buffet comparison comes before the complete compact catalogue. Red source identity retained. This corrected the first-round overlap with Talkie.",
+    "revisionEvidence": "prospect-to-web-review.md"
+  },
+  {
+    "prospectId": "bumi-upi-garut",
+    "name": "Bumi Upi",
+    "status": "built",
+    "date": "2026-10-23",
+    "signature": {
+      "hero": "brand-typographic",
+      "sequence": "product-first",
+      "catalogue": "compact-rows",
+      "media": "mosaic",
+      "narrative": "destination"
+    },
+    "sectionOrder": [
+      "hero",
+      "menu",
+      "kenangan",
+      "kunjungi",
+      "footer"
+    ],
+    "evidence": "../artifacts/prospect-to-web-2026-10-23/bumi-upi/parent-evidence/1440-full.png",
+    "visualDirection": "Centered house/room/booth prints at different scales, two-leaf book catalogue immediately next, then room band and selectable memory album. Unlike Duduk, the photographic album and page spread govern both desktop and mobile.",
+    "revisionEvidence": "prospect-to-web-review.md"
+  },
+  {
+    "prospectId": "classico-coffee-bandung",
+    "name": "Classico Coffee & Bake",
+    "status": "built",
+    "date": "2026-10-23",
+    "signature": {
+      "hero": "brand-typographic",
+      "sequence": "product-first",
+      "catalogue": "open-grid",
+      "media": "horizontal-strip",
+      "narrative": "product-craft"
+    },
+    "sectionOrder": [
+      "storefront",
+      "breakfast",
+      "menu",
+      "wfc",
+      "community",
+      "location",
+      "footer"
+    ],
+    "evidence": "../artifacts/prospect-to-web-2026-10-23/classico-coffee/parent-evidence/1440-full.png",
+    "visualDirection": "Condensed storefront sign above three equal direct category doors, breakfast counter before a large-photo contact-sheet catalogue, then WFC/community. Shares Kreme discovery with Duduk but differs in proportions, hierarchy, direct image navigation and mobile order.",
+    "revisionEvidence": "prospect-to-web-review.md"
   }
 ]

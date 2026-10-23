@@ -32,3 +32,7 @@ Artefak:
 Foto teras/interior diterbitkan infogarut; foto nasi dan logo berasal dari akun usaha. Autentisitas tidak berarti izin publikasi sudah diberikan. Hak publikasi foto/logo dan harga terkini masih memerlukan konfirmasi pemilik. Listing Maps juga menunjuk menu Drive yang saat diperiksa mengembalikan Page Not Found. GoFood berhenti pada Safety check; tidak dilewati. Tidak ada klaim menu Drive berhasil diperoleh.
 
 Status hanya demo lokal: tidak dipush, dideploy, dikirim ke prospek, atau diterima pemilik. Banner konsep dan noindex aktif. Kualitas lokal, izin publikasi dan acceptance pengguna terpisah.
+
+Revision 2026-10-23: see [the parent comparison and validation report](../prospect-to-web-review.md) and this package’s `design-brief.md` / `reference-selection.json` for the current composition, actual checks and source-evidence limits. The new revision is built; user acceptance and a complete source-gate pass are not claimed.
+
+Cloudflare deployment target: `duduk-gembira-demo`, production branch `master`, existing domain https://dudukgembira.tampiloka.site. See [deployment record](../../docs/demo-redesign-deployment-2026-10-23.md) for the current push/deploy status; earlier local-only notes describe setup history.

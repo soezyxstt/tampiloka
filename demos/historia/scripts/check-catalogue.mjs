@@ -22,7 +22,7 @@ const all = filterMenuItems(catalogue.items, "all", "");
 assert.equal(all.length, catalogue.items.length);
 assert.equal(new Set(all.map(item => item.id)).size, catalogue.items.length);
 assert.equal(new Set(all.slice(0, 12).map(item => item.category)).size, 12, "Default first 12 should offer distinct source categories");
-assert.ok(all.slice(0, 12).some(item => item.category === "coffee"), "Coffee must be discoverable in the initial selection");
+assert.ok(all.slice(0, 6).some(item => item.category === "coffee"), "Coffee must be discoverable in the initial six-item selection");
 for (const group of menuGroups) {
   const result = filterMenuItems(catalogue.items, group.id, "");
   assert.ok(result.length > 0 && result.every(item => group.categories.includes(item.category)));

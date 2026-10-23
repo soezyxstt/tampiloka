@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowDown, ArrowUpRight, Search, X } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
@@ -40,6 +40,8 @@ export function filterMenuItems(items: MenuItem[], group: string, query: string)
   const search = query.trim().toLocaleLowerCase("id-ID");
   const allowed = menuGroups.find(option => option.id === group)?.categories;
   const ranks = new Map<string, number>();
+  const firstCategories = ["main-course", "coffee", "sushi", "appetizer", "non-coffee", "dessert"];
+  const categoryRank = (category: string) => { const index = firstCategories.indexOf(category); return index < 0 ? firstCategories.length : index; };
   return items.filter(item =>
     (group === "all" || allowed?.includes(item.category)) &&
     (!search || `${item.name} ${item.description}`.toLocaleLowerCase("id-ID").includes(search))
@@ -47,7 +49,7 @@ export function filterMenuItems(items: MenuItem[], group: string, query: string)
     const rank = ranks.get(item.category) ?? 0;
     ranks.set(item.category, rank + 1);
     return { item, rank };
-  }).sort((a, b) => a.rank - b.rank).map(entry => entry.item);
+  }).sort((a, b) => a.rank - b.rank || (group === "all" ? categoryRank(a.item.category) - categoryRank(b.item.category) : 0)).map(entry => entry.item);
 }
 
 function Price({ item }: { item: MenuItem }) {
@@ -62,7 +64,8 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
   const catalogueRoot = useRef<HTMLDivElement>(null);
   const searchInput = useRef<HTMLInputElement>(null);
   const searchToggle = useRef<HTMLButtonElement>(null);
-  const [limit, setLimit] = useState(12);
+  const [page, setPage] = useState(0);
+  const pageSize = 6;
   const [selected, setSelected] = useState<MenuItem | null>(null);
   const [detailOpen, setDetailOpen] = useState(false);
   const reduced = useReducedMotion();
@@ -74,7 +77,8 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
   function showResults() {
     requestAnimationFrame(() => catalogueRoot.current?.scrollIntoView({ block: "start", behavior: "instant" }));
   }
-  const visible = filtered.slice(0, limit);
+  const visible = filtered.slice(page * pageSize, (page + 1) * pageSize);
+  const pageCount = Math.ceil(filtered.length / pageSize);
   const pictured = visible.filter(item => item.image);
   const textOnly = visible.filter(item => !item.image);
 
@@ -82,7 +86,7 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
     setGroup("all");
     setQuery("");
     setSearchOpen(false);
-    setLimit(12);
+    setPage(0);
   }
 
   function open(item: MenuItem) {
@@ -93,18 +97,18 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
   return <div className="menu-catalogue" ref={catalogueRoot}>
     <div className="menu-catalogue-toolbar">
       <div className="menu-refinements" data-search-open={searchOpen}>
-        <div className="menu-subcategory"><span id="menu-kind-label" className="sr-only">Kategori menu</span><Select value={group} onValueChange={value => { setGroup(value ?? "all"); setQuery(""); setSearchOpen(false); setLimit(12); showResults(); }} items={categories}><SelectTrigger aria-labelledby="menu-kind-label"><SelectValue /></SelectTrigger><SelectContent align="start" alignItemWithTrigger={false}>{categories.map(option => <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>)}</SelectContent></Select></div>
+        <div className="menu-subcategory"><span id="menu-kind-label" className="sr-only">Kategori menu</span><Select value={group} onValueChange={value => { setGroup(value ?? "all"); setQuery(""); setSearchOpen(false); setPage(0); showResults(); }} items={categories}><SelectTrigger aria-labelledby="menu-kind-label"><SelectValue /></SelectTrigger><SelectContent align="start" alignItemWithTrigger={false}>{categories.map(option => <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>)}</SelectContent></Select></div>
         <div className="menu-search">
           <Search className="menu-search-decoration" size={18} aria-hidden="true" />
-          <Button ref={searchToggle} variant="ghost" size="icon" className="menu-search-toggle" aria-label={searchOpen ? "Kembali ke kategori menu" : "Buka pencarian menu"} aria-expanded={searchOpen} aria-controls="menu-search-field" onClick={() => { if (searchOpen) reset(); else { setGroup("all"); setLimit(12); setSearchOpen(true); } }}><Search size={20} aria-hidden="true" /></Button>
+          <Button ref={searchToggle} variant="ghost" size="icon" className="menu-search-toggle" aria-label={searchOpen ? "Kembali ke kategori menu" : "Buka pencarian menu"} aria-expanded={searchOpen} aria-controls="menu-search-field" onClick={() => { if (searchOpen) reset(); else { setGroup("all"); setPage(0); setSearchOpen(true); } }}><Search size={20} aria-hidden="true" /></Button>
           <div className="menu-search-field" id="menu-search-field">
-            <label className="sr-only" htmlFor="historia-menu-search">Cari menu Historia</label><Input type="search" id="historia-menu-search" ref={searchInput} placeholder="Cari menu favoritmu" value={query} onChange={event => { setQuery(event.target.value); setSearchOpen(true); setGroup("all"); setLimit(12); showResults(); }} onKeyDown={event => { if (event.key === "Escape") { reset(); searchToggle.current?.focus(); } }} />
+            <label className="sr-only" htmlFor="historia-menu-search">Cari menu Historia</label><Input type="search" id="historia-menu-search" ref={searchInput} placeholder="Cari menu favoritmu" value={query} onChange={event => { setQuery(event.target.value); setSearchOpen(true); setGroup("all"); setPage(0); showResults(); }} onKeyDown={event => { if (event.key === "Escape") { reset(); searchToggle.current?.focus(); } }} />
             <Button variant="ghost" size="icon" className="menu-search-close" aria-label="Tutup pencarian menu" onClick={() => { reset(); searchToggle.current?.focus(); }}><X size={18} aria-hidden="true" /></Button>
           </div>
         </div>
       </div>
       <div className="menu-catalogue-status">
-        <p role="status" aria-live="polite">{filtered.length ? `${visible.length} dari ${filtered.length} pilihan` : "Tidak ada menu yang cocok"}</p>
+        <p role="status" aria-live="polite">{filtered.length ? `${page * pageSize + 1}–${page * pageSize + visible.length} dari ${filtered.length} pilihan` : "Tidak ada menu yang cocok"}</p>
         {(group !== "all" || query) && <Button variant="ghost" type="button" onClick={() => { reset(); if (searchOpen) searchToggle.current?.focus(); }}>Tampilkan semua <X size={14} aria-hidden="true" /></Button>}
       </div>
     </div>
@@ -126,7 +130,7 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
       </motion.div>
     </AnimatePresence>
 
-    {visible.length < filtered.length && <div className="menu-load-more"><Button variant="ghost" type="button" onClick={() => setLimit(value => value + 12)}>Lihat pilihan lainnya <ArrowDown size={18} aria-hidden="true" /></Button></div>}
+    {pageCount > 1 && <nav className="menu-pagination" aria-label="Halaman menu"><Button variant="ghost" disabled={page === 0} aria-label="Halaman menu sebelumnya" onClick={() => { setPage(value => value - 1); showResults(); }}><ArrowLeft size={18} /> Sebelumnya</Button><span aria-live="polite">{page + 1} / {pageCount}</span><Button variant="ghost" disabled={page + 1 === pageCount} aria-label="Halaman menu berikutnya" onClick={() => { setPage(value => value + 1); showResults(); }}>Berikutnya <ArrowRight size={18} /></Button></nav>}
     <p className="menu-catalogue-source">Harga dan ketersediaan menu dapat berubah.</p>
 
     <Dialog open={detailOpen} onOpenChange={setDetailOpen} onOpenChangeComplete={open => { if (!open) setSelected(null); }}>

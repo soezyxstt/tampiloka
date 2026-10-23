@@ -1,0 +1,124 @@
+{
+  "libraryManifestSha256": "eea04305a40b70f382caea1c28f54147ae1e14e4afcc973b58d302f45872985e",
+  "queries": [
+    {
+      "section": "00",
+      "query": "restaurant",
+      "result": "none; broadened to unfiltered 6"
+    },
+    {
+      "section": "01",
+      "query": "foto",
+      "limit": 4
+    },
+    {
+      "section": "04",
+      "limit": 3
+    },
+    {
+      "section": "08",
+      "limit": 2
+    }
+  ],
+  "shortlistIds": [
+    "schulhaus_19",
+    "template-crumb-01",
+    "template-mello-01",
+    "template-kreme-01",
+    "live-locavore-artwork",
+    "template-streetwok-03"
+  ],
+  "viewedIds": [
+    "schulhaus_19",
+    "template-crumb-01",
+    "template-mello-01",
+    "live-locavore-artwork"
+  ],
+  "primaryReference": {
+    "referenceIds": [
+      "schulhaus_19",
+      "template-crumb-01"
+    ],
+    "wholePageRelationships": "Crumb supplies the uninterrupted opening; Schulhaus supplies changing photograph-to-copy scale rather than repeated card grids. Neither supplies visitor facts or assets.",
+    "retainedProperties": [
+      "photographic opening",
+      "alternation of full scene and close product",
+      "open editorial sections"
+    ],
+    "reasonForCombination": "No single selected reference demonstrates an atmospheric venue opening with a 71-item practical catalogue."
+  },
+  "supplementalReferences": [
+    {
+      "referenceIds": [
+        "template-mello-01"
+      ],
+      "problem": "Product scale within a photo-led brand"
+    },
+    {
+      "referenceIds": [
+        "live-locavore-artwork"
+      ],
+      "problem": "Show room and dishes as one dining experience; content artwork only, no interaction inferred"
+    }
+  ],
+  "sections": [
+    {
+      "section": "opening",
+      "referenceIds": [
+        "template-crumb-01"
+      ],
+      "mechanism": "Center title inside one uninterrupted dining photograph; compact utility rail outside image",
+      "adaptation": "Use authentic Historia menu photography, Poppins, cream/orange and square framing.",
+      "rejected": "Reference logos, photos, copy, decorative badges, excessive grid, foreign palettes and serif.",
+      "mobile": "Opening remains image-led and centered; showcase becomes product then scene; event context follows its accordion; catalogue uses two columns."
+    },
+    {
+      "section": "featured",
+      "referenceIds": [
+        "schulhaus_19",
+        "template-mello-01"
+      ],
+      "mechanism": "Contrasting scene photograph and cutout product at intentionally different scales",
+      "adaptation": "Use authentic Historia menu photography, Poppins, cream/orange and square framing.",
+      "rejected": "Reference logos, photos, copy, decorative badges, excessive grid, foreign palettes and serif.",
+      "mobile": "Opening remains image-led and centered; showcase becomes product then scene; event context follows its accordion; catalogue uses two columns."
+    },
+    {
+      "section": "events",
+      "referenceIds": [
+        "schulhaus_19",
+        "live-locavore-artwork"
+      ],
+      "mechanism": "Room/food pair as spatial context for practical event options",
+      "adaptation": "Use authentic Historia menu photography, Poppins, cream/orange and square framing.",
+      "rejected": "Reference logos, photos, copy, decorative badges, excessive grid, foreign palettes and serif.",
+      "mobile": "Opening remains image-led and centered; showcase becomes product then scene; event context follows its accordion; catalogue uses two columns."
+    },
+    {
+      "section": "catalogue",
+      "referenceIds": [
+        "template-mello-01"
+      ],
+      "mechanism": "Legible product photographs with names, prices and bounded results",
+      "adaptation": "Use authentic Historia menu photography, Poppins, cream/orange and square framing.",
+      "rejected": "Reference logos, photos, copy, decorative badges, excessive grid, foreign palettes and serif.",
+      "mobile": "Opening remains image-led and centered; showcase becomes product then scene; event context follows its accordion; catalogue uses two columns."
+    }
+  ],
+  "comparison": {
+    "historyPaths": [
+      "/workspace/tampiloka/demos/layout-history.json"
+    ],
+    "closestDemo": "Historia previous accepted version",
+    "structuralDifferences": [
+      "Removed marquee and product orbit",
+      "Centered uninterrupted panorama, utility visit rail",
+      "Dining-photo/product diptych",
+      "Events before bounded catalogue",
+      "Three-column catalogue pagination replaces growing 4-column grid"
+    ],
+    "exceptions": [
+      "Full-photo opening and Poppins remain authentic to Historia; parent reviews all six rendered demos"
+    ]
+  }
+}
