@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { absoluteSiteUrl, createPageMetadata, itemListSchema, webPageSchema } from "@/lib/seo";
 
-const pageTitle = "Website untuk Berbagai Industri";
+const pageTitle = "Website untuk Berbagai Bidang Usaha";
 const pageDescription =
-  "Website dan pengalaman digital untuk kuliner, fashion, portofolio, UMKM, teknologi, bisnis B2B, serta kebutuhan pernikahan.";
+  "Contoh kebutuhan website untuk kuliner, fashion, portofolio, UMKM, teknologi, layanan bisnis, dan undangan pernikahan.";
 
 export const metadata = createPageMetadata({
   path: "/industri",
@@ -29,13 +29,13 @@ type Industry = {
 };
 
 const industries: Industry[] = [
-  { name: "Food & beverage", description: "Dari menu hingga reservasi, pengalaman yang mengundang pelanggan datang.", id: "industry-food", kind: "food", uses: ["Restoran & kafe", "Menu digital", "Reservasi", "Pemesanan"] },
-  { name: "Fashion", description: "Ruang untuk koleksi, cerita, dan karakter brand Anda.", id: "industry-fashion", kind: "fashion", uses: ["Label fashion", "Toko online", "Lookbook", "Koleksi musiman"] },
-  { name: "Portfolio", description: "Karya menjadi pusat perhatian. Pengalaman tersusun dengan jelas.", id: "industry-portfolio-architecture", kind: "portfolio", uses: ["Arsitektur", "Fotografi", "Desain", "Profesional independen"] },
-  { name: "UMKM", description: "Produk mudah dikenal, mudah dipilih, dan mudah dipesan.", id: "industry-small-business", kind: "small-business", uses: ["Katalog produk", "Usaha lokal", "Produk kerajinan", "Pemesanan langsung"] },
-  { name: "Elektronik & teknologi", description: "Produk dan spesifikasi hadir dalam pengalaman yang mudah dipahami.", id: "industry-technology", kind: "technology", uses: ["Elektronik", "Gadget", "Peluncuran produk", "Katalog teknologi"] },
-  { name: "B2B & enterprise", description: "Layanan kompleks, disampaikan dengan jelas untuk keputusan bisnis.", id: "industry-enterprise", kind: "enterprise", uses: ["Company profile", "Layanan bisnis", "Platform digital", "Produk SaaS"] },
-  { name: "Pernikahan & undangan", description: "Undangan digital dengan tautan personal untuk setiap tamu, rincian acara terintegrasi, dan pencatatan konfirmasi kehadiran langsung.", id: "industry-wedding", kind: "wedding", uses: ["Tautan nama tamu personal", "Jadwal & panduan lokasi", "Konfirmasi kehadiran (RSVP)", "Buku tamu digital"], ctaHref: TEMURA_URL, ctaLabel: "Jelajahi Temura" },
+  { name: "Kuliner", description: "Website untuk menampilkan menu, lokasi, jam buka, serta cara reservasi atau memesan.", id: "industry-food", kind: "food", uses: ["Restoran & kafe", "Menu digital", "Reservasi", "Pemesanan"] },
+  { name: "Fashion", description: "Katalog koleksi, foto produk, dan informasi pembelian untuk label fashion.", id: "industry-fashion", kind: "fashion", uses: ["Label fashion", "Toko online", "Lookbook", "Koleksi musiman"] },
+  { name: "Portofolio", description: "Tampilkan karya, profil profesional, dan kontak dalam satu website.", id: "industry-portfolio-architecture", kind: "portfolio", uses: ["Arsitektur", "Fotografi", "Desain", "Profesional independen"] },
+  { name: "UMKM", description: "Katalog produk dan informasi usaha dengan tautan pemesanan langsung.", id: "industry-small-business", kind: "small-business", uses: ["Katalog produk", "Usaha lokal", "Produk kerajinan", "Pemesanan langsung"] },
+  { name: "Elektronik & teknologi", description: "Sajikan spesifikasi, foto produk, dan informasi pembelian.", id: "industry-technology", kind: "technology", uses: ["Elektronik", "Gadget", "Peluncuran produk", "Katalog teknologi"] },
+  { name: "Layanan bisnis", description: "Jelaskan layanan, profil perusahaan, dan cara menghubungi tim Anda.", id: "industry-enterprise", kind: "enterprise", uses: ["Profil perusahaan", "Layanan bisnis", "Platform digital", "Produk SaaS"] },
+  { name: "Undangan pernikahan", description: "Undangan Temura dengan tautan nama tamu, jadwal, lokasi, dan konfirmasi kehadiran.", id: "industry-wedding", kind: "wedding", uses: ["Tautan nama tamu", "Jadwal & lokasi", "Konfirmasi kehadiran (RSVP)", "Buku tamu digital"], ctaHref: TEMURA_URL, ctaLabel: "Lihat undangan di Temura" },
 ];
 
 const structuredData = {
@@ -66,8 +66,8 @@ export default function IndustriPage() {
       <JsonLd data={structuredData} />
       <section className="industry-intro" aria-labelledby="industries-title">
         <div className="inner-page__intro" data-reveal>
-          <h1 id="industries-title" className="type-display-xl">Website yang mengerti bisnis Anda.</h1>
-          <p className="type-body-lg">Pengalaman digital yang dirancang sesuai cara bisnis Anda bekerja.</p>
+          <h1 id="industries-title" className="type-display-xl">Website untuk bidang usaha Anda.</h1>
+          <p className="type-body-lg">Lihat contoh kebutuhan dan tampilan website untuk setiap bidang.</p>
         </div>
       </section>
 
@@ -81,19 +81,18 @@ export default function IndustriPage() {
                 {uses.map(use => <li key={use}>{use}</li>)}
               </ul>
               <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href={ctaHref ?? "/contact"} target={ctaHref ? "_blank" : undefined} rel={ctaHref ? "noopener noreferrer" : undefined} />}>
-                {ctaLabel ?? "Diskusikan proyek"} <ArrowUpRight aria-hidden="true" />
+                {ctaLabel ?? "Diskusikan kebutuhan"} <ArrowUpRight aria-hidden="true" />
               </Button>
             </div>
             <div className="industry-row__visual" data-reveal><IndustryPreview kind={kind} /></div>
           </section>
         ))}
       </div>
-      <p className="industry-disclosure type-caption" data-reveal>Preview konsep untuk ilustrasi, bukan proyek klien.</p>
+      <p className="industry-disclosure type-caption" data-reveal>Contoh tampilan untuk ilustrasi, bukan proyek klien.</p>
 
       <div className="inner-page__end-link" data-reveal>
-        <p className="type-body-lg">Punya kebutuhan yang berbeda?</p>
         <Button className="inner-page__cta" nativeButton={false} render={<Link href="/contact" />}>
-          Ceritakan rencana Anda <ArrowUpRight aria-hidden="true" />
+          Diskusikan kebutuhan <ArrowUpRight aria-hidden="true" />
         </Button>
       </div>
     </div>

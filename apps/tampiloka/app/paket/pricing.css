@@ -1,0 +1,179 @@
+.pricing-page { --pricing-ink:#203b2c; --pricing-green:#24613d; --pricing-line:#dfe5df; max-width:1440px; margin:auto; padding:0 5%; color:var(--pricing-ink); }
+.pricing-page a { text-decoration:none; }
+.marketing-site:has(.pricing-page) { background:#fcfdfb; }
+.marketing-site:has(.pricing-page) .header-contact-link,.marketing-site:has(.pricing-page) .header-menu-trigger { border-radius:6px; box-shadow:none; }
+.marketing-site:has(.pricing-page) .footer-invitation>a { border-radius:6px; }
+.pricing-hero { display:flex; align-items:flex-end; justify-content:space-between; gap:32px; padding:80px 0 48px; }
+.pricing-hero h1 { margin:0; }
+.pricing-hero p { margin:20px 0 0; }
+.pricing-text-link { display:inline-flex; align-items:center; gap:12px; border-bottom:1px solid #9daf9f; padding:10px 0; flex:none; }
+.pricing-text-link:hover { color:var(--pricing-green); }
+.pricing-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border:1px solid var(--pricing-line); }
+.pricing-card { display:flex; flex-direction:column; min-width:0; padding:30px 24px 24px; }
+.pricing-card+.pricing-card { border-left:1px solid var(--pricing-line); }
+.pricing-card h2 { margin:0; }
+.pricing-card--featured { background:#f0f5ed; }
+.pricing-card__price { display:flex; flex-direction:column; justify-content:flex-end; min-height:108px; margin:25px 0; gap:10px; }
+.pricing-card__price>p { margin:0; white-space:nowrap; }
+.pricing-card__price>p.type-heading-2 { font-size:36px; }
+.pricing-card__price--custom>p { font-size:25px; line-height:1.2; max-width:210px; white-space:normal; }
+.pricing-card__original { color:#647267; }
+.pricing-page .pricing-action { min-height:44px; padding:11px 16px; border-radius:6px; box-shadow:none; }
+.pricing-card .pricing-button { width:100%; justify-content:space-between; border-color:#ced8ce; background:transparent; color:var(--pricing-ink); }
+.pricing-card .pricing-button:hover { background:#e7eee4; }
+.pricing-card--featured .pricing-button { background:#24613d; border-color:#24613d; color:#fff; }
+.pricing-card--featured .pricing-button:hover { background:#1c4c30; }
+.pricing-card__features { display:grid; align-content:start; gap:14px; margin:28px 0; padding:0; list-style:none; flex:1; }
+.pricing-card__features li { display:flex; align-items:flex-start; gap:9px; font-size:14px; }
+.pricing-card__features svg { flex:none; color:var(--pricing-green); margin-top:4px; }
+.pricing-card__meta { padding-top:20px; margin:0; border-top:1px solid var(--pricing-line); }
+.pricing-included { margin:0; padding:24px 0; border-bottom:1px solid var(--pricing-line); }
+.pricing-section { position:relative; padding-top:88px; scroll-margin-top:28px; }
+.pricing-anchor { position:absolute; top:0; scroll-margin-top:28px; }
+.pricing-section-heading { margin-bottom:30px; }
+.pricing-section-heading h2 { margin:0; }
+.estimate-calculator { display:grid; grid-template-columns:1.14fr 1fr; border:1px solid var(--pricing-line); border-radius:8px; overflow:hidden; background:#fff; align-items:start; }
+.estimate-options { padding:28px 32px 32px; min-width:0; }
+.estimate-options__top { display:flex; justify-content:flex-end; margin-bottom:14px; }
+.estimate-reset { padding:6px 0 6px 12px; cursor:pointer; color:var(--pricing-green); }
+.estimate-reset:hover { text-decoration:underline; text-underline-offset:4px; }
+.estimate-packages { border:0; padding:0; margin:0 0 24px; }
+.estimate-packages legend { margin-bottom:12px; }
+.estimate-package-options { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.estimate-package { position:relative; border:1px solid var(--pricing-line); border-radius:5px; padding:14px 12px; cursor:pointer; text-align:center; transition:background .2s,border-color .2s; }
+.estimate-package input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer; }
+.estimate-package:has(:focus-visible) { outline:2px solid var(--pricing-green); outline-offset:3px; }
+.estimate-package.is-selected { background:#edf4e9; border-color:#638564; }
+.estimate-selects { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.estimate-field { min-width:0; }
+.estimate-field>label { display:block; margin-bottom:10px; }
+.estimate-select { position:relative; }
+.estimate-select select { appearance:none; width:100%; min-height:48px; border:1px solid var(--pricing-line); border-radius:5px; background:#fff; padding:11px 32px 11px 12px; cursor:pointer; text-overflow:ellipsis; }
+.estimate-select svg { position:absolute; right:10px; top:17px; pointer-events:none; }
+.estimate-domain-note { margin:16px 0 0; }
+.estimate-addons { margin-top:30px; }
+.estimate-addons__heading { margin:0 0 9px; }
+.estimate-addon-group { border-bottom:1px solid var(--pricing-line); }
+.estimate-addon-group summary { list-style:none; display:flex; justify-content:space-between; align-items:center; min-height:54px; cursor:pointer; padding:16px 0; }
+.estimate-addon-group summary::-webkit-details-marker { display:none; }
+.estimate-addon-group summary>svg { transition:transform .2s; }
+.estimate-addon-group[open] summary>svg { transform:rotate(180deg); }
+.estimate-addon-group>div { padding-bottom:12px; }
+.estimate-addon { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:12px 0; }
+.estimate-addon>label { display:grid; gap:4px; cursor:pointer; }
+.estimate-addon--disabled { opacity:.6; }
+.estimate-addon>input { width:19px; height:19px; flex:none; accent-color:var(--pricing-green); cursor:pointer; }
+.estimate-stepper { display:flex; align-items:center; flex:none; border:1px solid var(--pricing-line); border-radius:4px; }
+.estimate-stepper button { display:grid; place-items:center; height:34px; width:30px; cursor:pointer; }
+.estimate-stepper button:hover { background:#edf4e9; }
+.estimate-stepper button:disabled { color:#a3afa5; cursor:default; }
+.estimate-stepper input { width:26px; border:0; text-align:center; appearance:textfield; padding:0; background:transparent; }
+.estimate-stepper input::-webkit-inner-spin-button,.estimate-stepper input::-webkit-outer-spin-button { -webkit-appearance:none; margin:0; }
+.estimate-summary { padding:32px; background:#f0f5ed; border-left:1px solid var(--pricing-line); min-width:0; align-self:stretch; }
+.estimate-summary__total { display:grid; gap:16px; padding:0 0 25px; border-bottom:1px solid #d4dfd1; }
+.estimate-summary__total>p { margin:0; }
+.estimate-total { display:block; color:var(--pricing-green); font-size:clamp(32px,3.5vw,48px); font-variant-numeric:tabular-nums; animation:estimate-number-in .3s ease both; }
+.estimate-breakdown { display:grid; gap:16px; margin:24px 0; }
+.estimate-breakdown>div { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; }
+.estimate-breakdown dd { flex:none; margin:0; text-align:right; font-variant-numeric:tabular-nums; }
+.estimate-breakdown__saving { color:var(--pricing-green); }
+.estimate-renewal { padding:22px 0; margin-bottom:24px; border-block:1px solid #d4dfd1; }
+.estimate-renewal>div { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.estimate-renewal output>span { margin-left:4px; }
+.estimate-summary .estimate-cta { width:100%; justify-content:space-between; background:#24613d; color:#fff; }
+.estimate-summary .estimate-cta:hover { background:#1c4c30; }
+.estimate-summary .estimate-copy { display:flex; width:100%; margin-top:8px; color:var(--pricing-ink); }
+.estimate-terms { margin-top:20px; border-top:1px solid #d4dfd1; padding-top:18px; }
+.estimate-terms summary { cursor:pointer; }
+.estimate-terms p { margin:16px 0 0; }
+.estimate-copy-fallback textarea { width:100%; min-height:160px; margin-top:10px; border:1px solid #b9c9b6; padding:10px; border-radius:5px; background:white; }
+.pricing-comparison-wrap { overflow-x:auto; }
+.pricing-comparison { width:100%; min-width:650px; border-collapse:collapse; }
+.pricing-comparison th,.pricing-comparison td { text-align:center; border-bottom:1px solid var(--pricing-line); padding:18px 16px; width:21%; }
+.pricing-comparison th:first-child { text-align:left; width:37%; padding-left:0; }
+.pricing-comparison tbody th { font-weight:400; }
+.pricing-comparison td:nth-child(3),.pricing-comparison thead th:nth-child(3) { background:#f0f5ed; }
+.pricing-comparison td>svg { display:inline-block; vertical-align:middle; color:var(--pricing-green); }
+.pricing-comparison td>svg.lucide-minus { color:#829184; }
+.pricing-note { margin:24px 0 0; max-width:950px; }
+.pricing-infrastructure { display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+.pricing-infrastructure h3 { margin:0 0 22px; }
+.pricing-infrastructure dl { margin:0; }
+.pricing-infrastructure dl>div { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:16px 0; border-bottom:1px solid var(--pricing-line); }
+.pricing-infrastructure dd { margin:0; flex:none; }
+.pricing-infrastructure p { margin:24px 0 0; }
+.pricing-check-list { display:grid; gap:14px; margin:24px 0; padding:0; list-style:none; }
+.pricing-check-list>li { display:flex; align-items:center; gap:10px; }
+.pricing-check-list svg { color:var(--pricing-green); flex:none; }
+.pricing-care-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-block:1px solid var(--pricing-line); }
+.pricing-care-card { padding:30px 28px; }
+.pricing-care-card:first-child { padding-left:0; }
+.pricing-care-card+.pricing-care-card { border-left:1px solid var(--pricing-line); }
+.pricing-care-card h3 { margin:0; }
+.pricing-care-card__price { margin:28px 0 22px; }
+.pricing-care-card__price>span { margin-left:5px; }
+.pricing-care-card>p.type-body { margin:14px 0 0; }
+.pricing-back-link { margin-top:30px; }
+.pricing-page + .faq-section { border-top:1px solid var(--pricing-line); margin-top:88px; }
+@keyframes estimate-number-in { from { opacity:.5; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+@media(min-width:1450px) { .pricing-page { padding-inline:72px; } }
+@media(max-width:1150px) {
+  .pricing-card { padding-inline:18px; }
+  .pricing-card__price>p.type-heading-2 { font-size:32px; }
+  .pricing-card__price--custom>p { font-size:23px; }
+  .estimate-selects { grid-template-columns:1fr; }
+  .estimate-options,.estimate-summary { padding:26px; }
+  .pricing-infrastructure { gap:40px; }
+}
+@media(max-width:950px) {
+  .pricing-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pricing-card { padding:28px; }
+  .pricing-card:nth-child(3) { border-left:0; }
+  .pricing-card:nth-child(n+3) { border-top:1px solid var(--pricing-line); }
+  .pricing-hero { align-items:flex-start; flex-direction:column; gap:24px; }
+  .estimate-package { padding-inline:8px; }
+  .estimate-package .type-label { font-size:12px; }
+  .estimate-renewal>div { flex-wrap:wrap; }
+  .pricing-care-card { padding-inline:20px; }
+  .pricing-care-card__price { font-size:30px; }
+}
+@media(max-width:700px) {
+  .pricing-page { padding-inline:6%; }
+  .pricing-hero { padding:44px 0 32px; gap:18px; }
+  .pricing-hero h1 { font-size:40px; }
+  .pricing-hero p { margin-top:18px; font-size:16px; }
+  .pricing-section { padding-top:60px; }
+  .pricing-section-heading { margin-bottom:25px; }
+  .estimate-calculator { grid-template-columns:1fr; }
+  .estimate-options,.estimate-summary { padding:24px; }
+  .estimate-summary { border-left:0; border-top:1px solid var(--pricing-line); }
+  .estimate-package { padding:14px 8px; }
+  .estimate-total { font-size:40px; }
+  .estimate-breakdown { font-size:14px; }
+  .estimate-addon>label>.type-body { font-size:14px; }
+  .pricing-infrastructure { grid-template-columns:1fr; gap:40px; }
+  .pricing-infrastructure dt,.pricing-infrastructure dd { font-size:14px; }
+  .pricing-infrastructure dt { overflow-wrap:anywhere; }
+  .pricing-comparison { min-width:600px; font-size:14px; }
+  .pricing-care-grid { grid-template-columns:1fr; }
+  .pricing-care-card,.pricing-care-card:first-child { padding:28px 0; }
+  .pricing-care-card+.pricing-care-card { border-left:0; border-top:1px solid var(--pricing-line); }
+  .pricing-page + .faq-section { margin-top:60px; }
+}
+@media(max-width:530px) {
+  .pricing-grid { grid-template-columns:1fr; }
+  .pricing-card { padding:26px; }
+  .pricing-card+.pricing-card { border-left:0; border-top:1px solid var(--pricing-line); }
+  .pricing-card__features li { font-size:16px; }
+  .pricing-card__price { min-height:96px; margin:20px 0 24px; }
+  .pricing-card__price>p.type-heading-2 { font-size:36px; }
+}
+@media(max-width:370px) {
+  .pricing-hero h1 { font-size:36px; }
+  .estimate-options,.estimate-summary { padding-inline:18px; }
+  .estimate-package .type-label { font-size:11px; }
+  .estimate-renewal>div { align-items:flex-start; flex-direction:column; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .pricing-page *,.pricing-page *::before,.pricing-page *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+}

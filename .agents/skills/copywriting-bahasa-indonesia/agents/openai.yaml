@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting Bahasa Indonesia"
+  short_description: "Copy Indonesia alami, jelas, dan sesuai suara merek"
+  default_prompt: "Gunakan $copywriting-bahasa-indonesia untuk menulis atau menyunting copy sesuai audiens, kanal, fakta produk, dan suara merek saya."

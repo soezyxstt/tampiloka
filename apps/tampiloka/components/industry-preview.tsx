@@ -93,12 +93,12 @@ function SmallBusinessPreview() {
       <div className="industry-preview__small-hero">
         <div className="industry-preview__small-copy">
           <span className="industry-preview__title">Keramik<br />meja.</span>
-          <span className="industry-preview__description">Stoneware buatan tangan untuk rumah.</span>
+          <span className="industry-preview__description">Keramik buatan tangan untuk rumah.</span>
           <ButtonLabel>Lihat katalog</ButtonLabel>
         </div>
         <Photo kind="small-business" />
       </div>
-      <div className="industry-preview__shop-row"><span>PRODUK</span><span>Cangkir Seduh &nbsp;·&nbsp; Mangkok Saji &nbsp;·&nbsp; Teko Saring</span></div>
+      <div className="industry-preview__shop-row"><span>PRODUK</span><span>Cangkir Seduh &nbsp;·&nbsp; Mangkuk Saji &nbsp;·&nbsp; Teko Saring</span></div>
     </div>
   );
 }
@@ -110,8 +110,8 @@ function TechnologyPreview() {
       <div className="industry-preview__tech-main">
         <div className="industry-preview__tech-copy">
           <span className="industry-preview__title">Audio.<br />Tanpa kabel.</span>
-          <span className="industry-preview__description">Driver kustom 40mm dan peredam bising aktif.</span>
-          <div className="industry-preview__tech-buy"><ButtonLabel>Lihat produk</ButtonLabel><strong>Mulai Rp 1,8 jt</strong></div>
+          <span className="industry-preview__description">Driver khusus 40 mm dan peredam bising aktif.</span>
+          <div className="industry-preview__tech-buy"><ButtonLabel>Lihat produk</ButtonLabel><strong>Mulai Rp1,8 juta</strong></div>
         </div>
         <Photo kind="technology" />
       </div>
@@ -151,7 +151,7 @@ function WeddingPreview() {
         <div className="industry-preview__wedding-copy">
           <span className="industry-preview__title">Nara<br /><em>&amp;</em> Aruna</span>
           <span className="industry-preview__description">Sabtu, 14 November 2026 · Jakarta.</span>
-          <ButtonLabel>Konfirmasi RSVP</ButtonLabel>
+          <ButtonLabel>Konfirmasi kehadiran</ButtonLabel>
         </div>
         <Photo kind="wedding" className="industry-preview__wedding-photo" />
       </div>

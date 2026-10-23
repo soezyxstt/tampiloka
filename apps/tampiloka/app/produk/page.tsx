@@ -5,7 +5,7 @@ import { createPageMetadata, itemListSchema, webPageSchema } from "@/lib/seo";
 
 const pageTitle = "Contoh Website dan Undangan Digital";
 const pageDescription =
-  "Jelajahi website Syahril MC, konsep website kuliner dan katalog, serta undangan digital Temura.";
+  "Lihat website, katalog, platform belajar, dan undangan digital dalam pilihan karya Tampiloka. Konsep demo ditandai terpisah dari proyek klien.";
 
 export const metadata = createPageMetadata({
   path: "/produk",

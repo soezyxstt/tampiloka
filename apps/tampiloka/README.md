@@ -2,6 +2,14 @@
 
 The public studio site for Tampiloka, built with Next.js App Router and the shared brand system.
 
+## Indonesian copy
+
+The user-provided `copywriting-bahasa-indonesia` skill is installed at
+`.agents/skills/copywriting-bahasa-indonesia/` in the repository root.
+`.claude/skills/copywriting-bahasa-indonesia` links to the same package.
+Read its `SKILL.md` and relevant references when editing public copy; the site's
+voice and presentation constraints are recorded in this app's `AGENTS.md`.
+
 ## Environment variables
 
 | Variable | Description | Default |

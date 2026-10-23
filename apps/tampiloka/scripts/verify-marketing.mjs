@@ -34,7 +34,7 @@ for (const route of routes) {
     }
   }
 }
-assert.match(pages.get('/contact'), /<a[^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*>[\s\S]*?Hubungi via WhatsApp/, 'WhatsApp is the main contact CTA');
+assert.match(pages.get('/contact'), /<a[^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*>[\s\S]*?Hubungi lewat WhatsApp/, 'WhatsApp is the main contact CTA');
 const notFoundResponse = await fetch(new URL('/halaman-tidak-tersedia', origin));
 assert.equal(notFoundResponse.status, 404, 'Unknown routes return 404');
 const notFoundHtml = await notFoundResponse.text();
@@ -44,7 +44,7 @@ assert.match(notFoundHtml, /name="robots" content="[^"]*noindex/, '404 is exclud
 const industryPage = pages.get('/industri');
 assert.equal((industryPage.match(/class="industry-row"/g) || []).length, 7, 'Seven editorial industry sections');
 assert.ok(!industryPage.includes('industry-card'), 'Industries use editorial sections');
-assert.ok(industryPage.includes('Preview konsep untuk ilustrasi'), 'Industry previews disclose concept status');
+assert.ok(industryPage.includes('Contoh tampilan untuk ilustrasi'), 'Industry previews disclose concept status');
 for (const [,html] of pages) {
   for (const [,href] of html.matchAll(/href="(\/(?:layanan|industri)#[^"]+)"/g)) {
     const [route,id] = href.split('#');
