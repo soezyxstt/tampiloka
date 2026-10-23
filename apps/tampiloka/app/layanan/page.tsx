@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { absoluteSiteUrl, createPageMetadata, itemListSchema, webPageSchema } from "@/lib/seo";
 
-const pageTitle = "Layanan Website dan Produk Digital";
+const pageTitle = "Layanan Desain dan Pengembangan Web";
 const pageDescription =
-  "Layanan desain dan pengembangan website, produk digital, branding, serta undangan pernikahan digital melalui Temura.";
+  "Desain website, aplikasi web, identitas visual, dan undangan digital. Lihat cakupan layanan Tampiloka dan diskusikan kebutuhan bisnis Anda.";
 
 export const metadata = createPageMetadata({
   path: "/layanan",
@@ -30,36 +30,36 @@ type Service = {
 const services: Service[] = [
   {
     title: "Website",
-    description: "Website yang memperkenalkan brand dan memudahkan pelanggan mengenal produk Anda.",
-    items: ["Company profile", "Toko online", "Landing page"],
+    description: "Website untuk menampilkan profil usaha, produk, dan cara menghubungi bisnis Anda.",
+    items: ["Profil perusahaan", "Toko online", "Landing page"],
     imageKey: "service-website",
     imageAlt: "Contoh katalog produk pada layar laptop dan ponsel.",
   },
   {
     title: "Produk digital",
-    description: "Pengalaman digital yang dirancang agar jelas, nyaman, dan mudah digunakan.",
-    items: ["Riset kebutuhan", "UX & UI design", "Prototype"],
+    description: "Rancangan aplikasi web, dashboard, dan portal untuk pelanggan atau tim.",
+    items: ["Riset kebutuhan", "Desain antarmuka", "Prototipe"],
     imageKey: "service-digital-product",
     imageAlt: "Tampilan jadwal dan data pada tablet dan ponsel.",
   },
   {
     title: "Pengembangan",
-    description: "Implementasi yang cepat, responsif, dan siap berkembang bersama bisnis.",
-    items: ["Frontend development", "Integrasi", "Pemeliharaan"],
+    description: "Pembuatan aplikasi web, integrasi sistem, dan perawatan teknis sesuai lingkup proyek.",
+    items: ["Pengembangan antarmuka", "Integrasi sistem", "Perawatan teknis"],
     imageKey: "service-development",
     imageAlt: "Pengembang mengetik kode di keyboard dengan monitor di hadapannya.",
   },
   {
-    title: "Branding",
-    description: "Identitas visual yang konsisten dari kesan pertama hingga setiap titik interaksi.",
-    items: ["Arah visual", "Identitas brand", "Panduan penggunaan"],
+    title: "Identitas visual",
+    description: "Logo, warna, tipografi, dan panduan agar identitas usaha konsisten.",
+    items: ["Logo", "Warna & tipografi", "Panduan penggunaan"],
     imageKey: "service-branding",
     imageAlt: "Contoh identitas visual berupa kemasan, kartu, dan amplop berwarna hijau.",
   },
   {
     title: "Undangan digital",
-    description: "Undangan pernikahan digital yang personal, mudah dibagikan, dan memuat seluruh detail acara dalam satu tautan.",
-    items: ["Desain undangan personal", "Detail acara & lokasi", "Konfirmasi kehadiran"],
+    description: "Undangan pernikahan dari Temura dengan jadwal, lokasi, dan konfirmasi kehadiran.",
+    items: ["Desain undangan", "Jadwal & lokasi", "Konfirmasi kehadiran"],
     imageKey: "service-digital-invitation",
     imageAlt: "Pasangan pengantin berbusana Jawa di taman pernikahan.",
     href: TEMURA_URL,
@@ -94,10 +94,10 @@ export default function LayananPage() {
       <JsonLd data={structuredData} />
       <section className="inner-page__hero inner-page__hero--split" aria-labelledby="services-title">
         <div className="inner-page__intro" data-reveal>
-          <h1 id="services-title" className="type-display-xl">Dari ide hingga siap diluncurkan.</h1>
-          <p className="type-body-lg">Desain, teknologi, dan brand yang bekerja bersama.</p>
+          <h1 id="services-title" className="type-display-xl">Layanan Tampiloka.</h1>
+          <p className="type-body-lg">Website, aplikasi web, identitas visual, dan undangan digital.</p>
           <Button className="inner-page__cta" size="lg" nativeButton={false} render={<Link href="/contact" />}>
-            Mulai proyek <ArrowUpRight aria-hidden="true" />
+            Diskusikan kebutuhan <ArrowUpRight aria-hidden="true" />
           </Button>
         </div>
         <PageVisual imageKey="service-overview" alt="Rancangan website dengan antarmuka hijau di layar laptop." preload />
@@ -112,7 +112,8 @@ export default function LayananPage() {
               <ul className="service-row__list type-body-sm">
                 {service.items.map((item) => <li key={item}>{item}</li>)}
               </ul>
-              {service.href && <a className="service-row__cta type-label" href={service.href} target="_blank" rel="noopener noreferrer">Jelajahi undangan di Temura <ArrowUpRight aria-hidden="true" /></a>}
+              {service.href && <a className="service-row__cta type-label" href={service.href} target="_blank" rel="noopener noreferrer">Lihat undangan di Temura <ArrowUpRight aria-hidden="true" /></a>}
+              {service.imageKey === "service-website" && <Link className="service-row__cta type-label" href="/paket">Lihat paket website kafe <ArrowUpRight aria-hidden="true" /></Link>}
             </div>
               <PageVisual imageKey={service.imageKey} alt={service.imageAlt} />
           </article>
@@ -120,7 +121,7 @@ export default function LayananPage() {
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label-lg" href="/contact">Ada yang ingin dibuat? <ArrowDownRight aria-hidden="true" /></Link>
+        <Link className="type-label-lg" href="/contact">Diskusikan kebutuhan <ArrowDownRight aria-hidden="true" /></Link>
       </div>
     </div>
   );

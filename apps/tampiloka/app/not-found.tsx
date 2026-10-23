@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="inner-page__intro">
           <p className="type-label text-brand-primary-dark">404</p>
           <h1 id="not-found-title" className="type-display-xl">Halaman tidak ditemukan.</h1>
-          <p className="type-body-lg">Alamatnya mungkin berubah atau halaman ini sudah tidak tersedia.</p>
+          <p className="type-body-lg">Periksa alamat yang Anda buka, atau kembali ke beranda.</p>
           <Button
             className="inner-page__cta"
             size="pill"
@@ -19,7 +19,7 @@ export default function NotFound() {
             <ArrowLeft aria-hidden="true" /> Kembali ke beranda
           </Button>
           <Link className="contact-page__email type-body" href="/produk">
-            Lihat karya pilihan <ArrowUpRight className="inline size-4" aria-hidden="true" />
+            Lihat karya <ArrowUpRight className="inline size-4" aria-hidden="true" />
           </Link>
         </div>
       </section>

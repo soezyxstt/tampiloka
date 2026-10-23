@@ -24,7 +24,7 @@ import {
   websiteSchema,
 } from "@/lib/seo";
 
-const defaultSocialTitle = "Tampiloka | Studio Web";
+const defaultSocialTitle = "Tampiloka | Desain dan Pembuatan Website";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -116,7 +116,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <body className="min-h-full flex flex-col">
         <JsonLd data={structuredData} />
-        <SiteMotion><div className="marketing-site" id="top"><a className="skip-link type-label" href="#main-content">Langsung ke konten</a><SiteHeader /><main id="main-content">{children}<SiteFaq /></main><SiteFooter /></div></SiteMotion>
+        <SiteMotion><div className="marketing-site" id="top"><a className="skip-link type-label" href="#main-content">Langsung ke isi halaman</a><SiteHeader /><main id="main-content">{children}<SiteFaq /></main><SiteFooter /></div></SiteMotion>
       </body>
     </html>
   );

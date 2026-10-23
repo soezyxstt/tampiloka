@@ -14,13 +14,13 @@ export const SITE_METADATA_BASE = new URL(SITE_ORIGIN);
 export const SITE_LANGUAGE = "id-ID";
 export const SITE_LOCALE = "id_ID";
 export const SITE_DESCRIPTION =
-  "Studio web independen untuk brand dan bisnis. Tampiloka merancang website, produk digital, branding, dan undangan pernikahan digital melalui Temura.";
+  "Tampiloka merancang dan membangun website, aplikasi web, serta identitas visual untuk bisnis. Undangan pernikahan digital tersedia melalui Temura.";
 
 /**
  * Bump the matching date whenever the visible content of a public page changes.
  * Google uses lastmod in the sitemap to schedule recrawls, so inaccurate values are ignored.
  */
-export const SITE_UPDATED_AT = "2026-10-22";
+export const SITE_UPDATED_AT = "2026-10-23";
 
 export const CONTACT = {
   email: "soezyxst@gmail.com",
@@ -39,7 +39,7 @@ export const SOCIAL_HANDLE = "@soezyxsttt";
 
 export const DEFAULT_SOCIAL_IMAGE = {
   path: "/brand/social/light/tampiloka-og-image-light.png",
-  alt: "Tampiloka, studio web untuk brand dan bisnis.",
+  alt: "Tampiloka, studio desain dan pengembangan website.",
   width: 1200,
   height: 630,
   type: "image/png",
@@ -55,6 +55,7 @@ export const LOGO_URL = absoluteSiteUrl("/brand/social/light/tampiloka-profile-l
 export const PUBLIC_PAGE_PATHS = [
   "/",
   "/layanan",
+  "/paket",
   "/produk",
   "/industri",
   "/tentang",
@@ -71,6 +72,11 @@ type PageSitemapDetails = {
 };
 
 export const PUBLIC_PAGES: Record<PublicPagePath, PageSitemapDetails> = {
+  "/paket": {
+    priority: 0.9,
+    changeFrequency: "monthly",
+    updatedAt: "2026-10-23",
+  },
   "/": {
     priority: 1,
     changeFrequency: "monthly",
@@ -240,7 +246,7 @@ export function organizationSchema(): JsonLdNode {
       "Desain website",
       "Pengembangan website",
       "Produk digital",
-      "Branding",
+      "Identitas visual",
       "Undangan pernikahan digital",
     ],
     contactPoint: [

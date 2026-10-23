@@ -2,8 +2,9 @@ import { SiteFooter as SharedSiteFooter } from "@tampiloka/brand-system/footer";
 import { TEMURA_URL } from "@/lib/temura-url";
 
 const studioLinks = [
-  { label: "Produk", href: "/produk" },
+  { label: "Karya", href: "/produk" },
   { label: "Layanan", href: "/layanan" },
+  { label: "Paket website", href: "/paket" },
   { label: "Industri", href: "/industri" },
   { label: "Tentang", href: "/tentang" },
   { label: "Kontak", href: "/contact" },
@@ -13,18 +14,18 @@ const serviceLinks = [
   { label: "Website", href: "/layanan#service-website" },
   { label: "Produk digital", href: "/layanan#service-digital-product" },
   { label: "Pengembangan", href: "/layanan#service-development" },
-  { label: "Branding", href: "/layanan#service-branding" },
+  { label: "Identitas visual", href: "/layanan#service-branding" },
   { label: "Undangan digital", href: TEMURA_URL, external: true },
 ];
 
 const industryLinks = [
-  { label: "Food & beverage", href: "/industri#industry-food" },
+  { label: "Kuliner", href: "/industri#industry-food" },
   { label: "Fashion", href: "/industri#industry-fashion" },
-  { label: "Portfolio", href: "/industri#industry-portfolio-architecture" },
+  { label: "Portofolio", href: "/industri#industry-portfolio-architecture" },
   { label: "UMKM", href: "/industri#industry-small-business" },
   { label: "Elektronik & teknologi", href: "/industri#industry-technology" },
-  { label: "B2B & enterprise", href: "/industri#industry-enterprise" },
-  { label: "Wedding", href: "/industri#industry-wedding" },
+  { label: "Layanan bisnis", href: "/industri#industry-enterprise" },
+  { label: "Undangan pernikahan", href: "/industri#industry-wedding" },
 ];
 
 const socials = [
@@ -40,8 +41,8 @@ export function SiteFooter() {
     <SharedSiteFooter
       watermarkSrc="/symbol-green.svg"
       ctaHeading={{
-        prefix: "Mari",
-        highlight: "bicara.",
+        prefix: "Hubungi",
+        highlight: "kami.",
       }}
       ctaLink={{
         label: "+62 821-1930-7102",

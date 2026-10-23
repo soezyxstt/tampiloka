@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "check:brand": "node scripts/verify-brand.mjs",
     "verify:marketing": "node scripts/verify-marketing.mjs",
+    "verify:pricing": "node scripts/verify-pricing.mjs",
     "prepare:images": "node scripts/prepare-images.mjs"
   },
   "dependencies": {

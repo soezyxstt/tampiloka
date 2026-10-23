@@ -5,9 +5,9 @@ import { PageVisual } from "@/components/page-visual";
 import { JsonLd } from "@/components/json-ld";
 import { createPageMetadata, webPageSchema } from "@/lib/seo";
 
-const pageTitle = "Tentang Studio Web Independen";
+const pageTitle = "Tentang Tampiloka";
 const pageDescription =
-  "Tampiloka adalah studio web independen yang menghubungkan strategi, desain, dan teknologi untuk membantu bisnis tampil lebih baik secara digital.";
+  "Tampiloka adalah studio web independen untuk desain website, pengembangan web, dan identitas visual bisnis.";
 
 export const metadata = createPageMetadata({
   path: "/tentang",
@@ -31,10 +31,10 @@ const structuredData = {
 };
 
 const principles = [
-  "Mulai dari kebutuhan bisnis",
-  "Desain yang nyaman dipakai",
-  "Proses kerja yang jelas",
-  "Siap dikembangkan kemudian",
+  "Kebutuhan bisnis sebagai titik awal",
+  "Informasi yang mudah ditemukan",
+  "Tampilan untuk ponsel dan komputer",
+  "Lingkup dan tahapan yang disepakati",
 ];
 
 export default function TentangPage() {
@@ -43,10 +43,10 @@ export default function TentangPage() {
       <JsonLd data={structuredData} />
       <section className="inner-page__hero inner-page__hero--split" aria-labelledby="about-title">
         <div className="inner-page__intro" data-reveal>
-          <h1 id="about-title" className="type-display-xl">Detail kecil, dampak yang terasa.</h1>
-          <p className="type-body-lg">Tampiloka adalah studio web independen yang menghubungkan strategi, desain, dan teknologi untuk membantu bisnis tampil lebih baik secara digital.</p>
-          <Button className="inner-page__cta" size="lg" nativeButton={false} render={<Link href="/contact" />}>
-            Kenali cara kerja kami <ArrowUpRight aria-hidden="true" />
+          <h1 id="about-title" className="type-display-xl">Tentang Tampiloka.</h1>
+          <p className="type-body-lg">Tampiloka adalah studio web independen untuk desain website, pengembangan web, dan identitas visual bisnis.</p>
+          <Button className="inner-page__cta" size="lg" nativeButton={false} render={<Link href="#cara-kerja" />}>
+            Lihat cara kerja <ArrowUpRight aria-hidden="true" />
           </Button>
         </div>
         <PageVisual imageKey="about-studio" alt="Sketsa antarmuka pada papan inspirasi di ruang kerja." preload />
@@ -54,24 +54,24 @@ export default function TentangPage() {
 
       <section className="about-note">
         <div data-reveal>
-          <h2 className="type-heading-1">Dibuat dengan tujuan.</h2>
-          <p className="type-body-lg">Setiap keputusan desain punya alasan. Setiap baris kode membantu pengalaman terasa lebih mudah.</p>
+          <h2 className="type-heading-1">Yang kami utamakan.</h2>
+          <p className="type-body-lg">Tujuan website, isi halaman, dan cara pengunjung menggunakannya menjadi dasar rancangan.</p>
         </div>
         <ul className="about-principles type-body" data-reveal>
           {principles.map((principle) => <li key={principle}><Check aria-hidden="true" />{principle}</li>)}
         </ul>
       </section>
 
-      <section className="about-visual-section" aria-label="Cara kerja Tampiloka">
+      <section className="about-visual-section" id="cara-kerja" aria-label="Cara kerja Tampiloka">
         <PageVisual imageKey="creative-process" alt="Tangan menata sketsa antarmuka website dan ponsel di atas meja." />
         <div data-reveal>
-          <h2 className="type-heading-1">Rapi di layar. Siap dipakai.</h2>
-          <p className="type-body-lg">Dari struktur informasi hingga detail visual, pengalaman dibangun agar tetap jelas di ponsel maupun desktop.</p>
+          <h2 className="type-heading-1">Dari rancangan hingga tayang.</h2>
+          <p className="type-body-lg">Kami menyusun struktur halaman, merancang tampilan, lalu membangun dan menguji website di ponsel serta komputer.</p>
         </div>
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label-lg" href="/contact">Mari mulai percakapan <ArrowUpRight aria-hidden="true" /></Link>
+        <Link className="type-label-lg" href="/contact">Diskusikan kebutuhan <ArrowUpRight aria-hidden="true" /></Link>
       </div>
     </div>
   );

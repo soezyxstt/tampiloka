@@ -10,7 +10,7 @@ import { PROJECTS, type Project } from "@/lib/projects";
 const projects = PROJECTS;
 
 type Filter = "Semua" | Project["category"];
-const filters: Filter[] = ["Semua", "Kuliner", "Portfolio", "Katalog", "Edukasi", "Organisasi", "Undangan digital"];
+const filters: Filter[] = ["Semua", "Kuliner", "Portofolio", "Katalog", "Edukasi", "Organisasi", "Undangan digital"];
 
 function ProjectPreview({ project, paused }: { project: Project; paused: boolean }) {
   const [stopIndex, setStopIndex] = useState(0);
@@ -29,7 +29,7 @@ function ProjectPreview({ project, paused }: { project: Project; paused: boolean
   return (
     <div className="showcase__site" aria-hidden="true">
       <iframe
-        title={`Preview ${project.name}`}
+        title={`Pratinjau website ${project.name}`}
         src={`${project.url}${project.scrollStops[stopIndex]}`}
         loading="lazy"
         tabIndex={-1}
@@ -87,11 +87,11 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
       <div className="showcase__inner">
         <header className="showcase__header" data-reveal>
           <Heading className={`${page ? "type-display-xl" : "type-display"} showcase__heading`} id="showcase-heading">
-            {page ? "Contoh website dan undangan digital." : "Karya pilihan."}
+            {page ? "Website & undangan digital." : "Karya pilihan."}
           </Heading>
           <div className="showcase__controls">
             {page ? (
-              <div className="showcase__filters" role="group" aria-label="Filter karya">
+              <div className="showcase__filters" role="group" aria-label="Saring karya">
                 {filters.map((item) => (
                   <Button
                     key={item}
@@ -104,14 +104,12 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                   </Button>
                 ))}
               </div>
-            ) : (
-              <p className="type-body showcase__intro-copy">Sembilan situs dan satu undangan digital.</p>
-            )}
+            ) : null}
             <Button
               className="showcase__motion-toggle"
               variant="ghost"
               type="button"
-              aria-label={isPaused ? "Lanjutkan animasi preview" : "Jeda animasi preview"}
+              aria-label={isPaused ? "Lanjutkan pratinjau" : "Jeda pratinjau"}
               aria-pressed={isPaused}
               onClick={() => setIsPaused((paused) => !paused)}
             >
@@ -122,7 +120,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
         </header>
 
         <p className="type-body-sm showcase__concept-disclosure">
-          Situsnya dapat dijelajahi langsung. Pagi &amp; Roti, Tepi Sagara, Sela Rasa, Rona Forma, dan Nara &amp; Aruna adalah konsep, bukan proyek klien.
+          Pagi &amp; Roti, Tepi Sagara, Sela Rasa, Rona Forma, dan Nara &amp; Aruna adalah konsep demo, bukan proyek klien.
         </p>
 
         <div className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
@@ -140,7 +138,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                 <button
                   className="showcase__open"
                   type="button"
-                  aria-label={`Buka preview situs ${project.name}`}
+                  aria-label={`Lihat pratinjau ${project.name}`}
                   aria-haspopup="dialog"
                   onClick={() => {
                     setDragOffset(0);
@@ -180,7 +178,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
             <>
               <SheetClose
                 className="showcase-sheet__handle"
-                aria-label="Tutup preview atau tarik ke bawah untuk menutup"
+                aria-label="Tutup pratinjau atau tarik ke bawah"
                 onPointerDown={startDrag}
                 onPointerMove={moveDrag}
                 onPointerUp={endDrag}
@@ -195,8 +193,8 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                   <p className="type-caption showcase-sheet__category">{activeProject.category}</p>
                 </div>
                 <SheetClose
-                  aria-label="Tutup preview"
-                  render={<Button variant="ghost" size="icon" aria-label="Tutup preview" />}
+                  aria-label="Tutup pratinjau"
+                  render={<Button variant="ghost" size="icon" aria-label="Tutup pratinjau" />}
                 >
                   <X aria-hidden="true" />
                 </SheetClose>
