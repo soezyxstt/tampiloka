@@ -1,11 +1,14 @@
 "use client";
 
 import { SiteMotion as SharedSiteMotion } from "@tampiloka/brand-system/motion";
+import { useLocale } from "next-intl";
+import type { Locale } from "@/i18n/routing";
 import type { ReactNode } from "react";
 
 function LogoLoader() {
+  const locale = useLocale() as Locale;
   return (
-    <div className="site-loader" role="status" aria-label="Memuat Tampiloka">
+    <div className="site-loader" role="status" aria-label={locale === "en" ? "Loading Tampiloka" : "Memuat Tampiloka"}>
       <svg
         className="site-loader__symbol"
         viewBox="0 0 111 105"

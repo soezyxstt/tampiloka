@@ -1,6 +1,5 @@
 "use client";
 
-import type { ComponentProps } from "react";
 import type { VariantProps } from "class-variance-authority";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,3 +8,4 @@ import { cn } from "@/lib/utils";
 export function PricingLink({ className, variant = "outline", ...props }: ComponentProps<"a"> & Pick<VariantProps<typeof buttonVariants>, "variant">) {
   return <a {...props} className={cn(buttonVariants({ variant, size: "lg" }), "pricing-action", className)} />;
 }
+import type { ComponentProps } from "react";

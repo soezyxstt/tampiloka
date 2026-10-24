@@ -1,62 +1,60 @@
+import { getLocale } from "next-intl/server";
 import { SiteFooter as SharedSiteFooter } from "@tampiloka/brand-system/footer";
+import { Link, toLocalizedHref } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { shellCopy } from "@/i18n/shell-copy";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { CONTACT } from "@/lib/seo";
 
-const studioLinks = [
-  { label: "Karya", href: "/produk" },
-  { label: "Layanan", href: "/layanan" },
-  { label: "Paket website", href: "/paket" },
-  { label: "Industri", href: "/industri" },
-  { label: "Tentang", href: "/tentang" },
-  { label: "Kontak", href: "/contact" },
-];
+export async function SiteFooter() {
+  const locale = (await getLocale()) as Locale;
+  const copy = shellCopy(locale);
 
-const serviceLinks = [
-  { label: "Website", href: "/layanan#service-website" },
-  { label: "Produk digital", href: "/layanan#service-digital-product" },
-  { label: "Pengembangan", href: "/layanan#service-development" },
-  { label: "Identitas visual", href: "/layanan#service-branding" },
-  { label: "Undangan digital", href: TEMURA_URL, external: true },
-];
+  const studioLinks = [
+    { label: copy.nav.work, href: "/produk" },
+    { label: copy.nav.services, href: "/layanan" },
+    { label: locale === "en" ? "Website pricing" : "Paket website", href: "/paket" },
+    { label: copy.nav.industries, href: "/industri" },
+    { label: copy.nav.about, href: "/tentang" },
+    { label: copy.nav.contact, href: "/contact" },
+  ];
 
-const industryLinks = [
-  { label: "Kuliner", href: "/industri#industry-food" },
-  { label: "Fashion", href: "/industri#industry-fashion" },
-  { label: "Portofolio", href: "/industri#industry-portfolio-architecture" },
-  { label: "UMKM", href: "/industri#industry-small-business" },
-  { label: "Elektronik & teknologi", href: "/industri#industry-technology" },
-  { label: "Layanan bisnis", href: "/industri#industry-enterprise" },
-  { label: "Undangan pernikahan", href: "/industri#industry-wedding" },
-];
+  const serviceLinks = [
+    { label: copy.footer.website, href: "/layanan#service-website" },
+    { label: copy.footer.digitalProducts, href: "/layanan#service-digital-product" },
+    { label: copy.footer.development, href: "/layanan#service-development" },
+    { label: copy.footer.visualIdentity, href: "/layanan#service-branding" },
+    { label: copy.footer.digitalInvitations, href: TEMURA_URL, external: true },
+  ];
 
-const socials = [
-  { label: "WhatsApp", href: "https://wa.me/6282119307102" },
-  { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
-  { label: "X", href: "https://x.com/soezyxsttt" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
-  { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
-];
+  const industryLinks = [
+    { label: copy.footer.food, href: "/industri#industry-food" },
+    { label: copy.footer.fashion, href: "/industri#industry-fashion" },
+    { label: copy.footer.portfolio, href: "/industri#industry-portfolio-architecture" },
+    { label: copy.footer.smallBusiness, href: "/industri#industry-small-business" },
+    { label: copy.footer.technology, href: "/industri#industry-technology" },
+    { label: copy.footer.businessServices, href: "/industri#industry-enterprise" },
+    { label: copy.footer.weddingInvitations, href: "/industri#industry-wedding" },
+  ];
 
-export function SiteFooter() {
+  const socials = [
+    { label: "WhatsApp", href: "https://wa.me/6282119307102" },
+    { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
+    { label: "X", href: "https://x.com/soezyxsttt" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
+    { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
+  ];
+
   return (
     <SharedSiteFooter
       watermarkSrc="/symbol-green.svg"
-      ctaHeading={{
-        prefix: "Hubungi",
-        highlight: "kami.",
-      }}
-      ctaLink={{
-        label: "+62 821-1930-7102",
-        href: "https://wa.me/6282119307102",
-      }}
+      ctaHeading={locale === "en" ? { prefix: "Get in", highlight: "touch." } : { prefix: "Hubungi", highlight: "kami." }}
+      ctaLink={{ label: "+62 821-1930-7102", href: "https://wa.me/6282119307102" }}
       directoryGroups={[
-        { title: "Studio", items: studioLinks },
-        { title: "Layanan", items: serviceLinks },
+        { title: copy.footer.studio, items: studioLinks },
+        { title: copy.footer.services, items: serviceLinks },
       ]}
-      wideGroup={{
-        title: "Industri",
-        items: industryLinks,
-      }}
+      wideGroup={{ title: copy.footer.industries, items: industryLinks }}
       logo={{
         src: "/brand/logos/light/tampiloka-horizontal-light.svg",
         alt: "Tampiloka",
@@ -66,6 +64,12 @@ export function SiteFooter() {
       }}
       socials={socials}
       copyright={`© ${new Date().getFullYear()} Tampiloka`}
+      socialsLabel={copy.footer.footerLinks}
+      renderInternalLink={({ href, children, className, ariaLabel }) => (
+        <Link href={toLocalizedHref(href)} className={className} aria-label={ariaLabel}>
+          {children}
+        </Link>
+      )}
     />
   );
 }

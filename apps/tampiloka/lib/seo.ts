@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultLocale, localePath, type Locale } from "@/i18n/routing";
 
 const DEFAULT_SITE_ORIGIN = "https://tampiloka.site";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_ORIGIN;
@@ -15,6 +16,10 @@ export const SITE_LANGUAGE = "id-ID";
 export const SITE_LOCALE = "id_ID";
 export const SITE_DESCRIPTION =
   "Tampiloka merancang dan membangun website, aplikasi web, serta identitas visual untuk bisnis. Undangan pernikahan digital tersedia melalui Temura.";
+export const SITE_DESCRIPTIONS: Record<Locale, string> = {
+  id: SITE_DESCRIPTION,
+  en: "Tampiloka designs and builds websites, web apps, and visual identities for businesses. Digital wedding invitations are available through Temura.",
+};
 
 /**
  * Bump the matching date whenever the visible content of a public page changes.
@@ -47,6 +52,26 @@ export const DEFAULT_SOCIAL_IMAGE = {
 
 export function absoluteSiteUrl(path: string): string {
   return new URL(path, SITE_METADATA_BASE).toString();
+}
+
+export function localizedSiteUrl(locale: Locale, path: string): string {
+  const match = path.match(/^([^?#]*)([?#].*)?$/);
+  const pathname = match?.[1] || "/";
+  const suffix = match?.[2] || "";
+  const localizedPath = localePath(locale, pathname as PublicPagePath);
+  return absoluteSiteUrl(`${localizedPath}${suffix}`);
+}
+
+export function localeLanguage(locale: Locale): "id-ID" | "en" {
+  return locale === "en" ? "en" : "id-ID";
+}
+
+export function localeOpenGraph(locale: Locale): "id_ID" | "en_US" {
+  return locale === "en" ? "en_US" : "id_ID";
+}
+
+export function siteDescription(locale: Locale = defaultLocale): string {
+  return SITE_DESCRIPTIONS[locale];
 }
 
 export const DEFAULT_SOCIAL_IMAGE_URL = absoluteSiteUrl(DEFAULT_SOCIAL_IMAGE.path);
@@ -160,6 +185,7 @@ export function siteVerification(): Metadata["verification"] {
 
 type PageMetadataOptions = {
   path: PublicPagePath;
+  locale?: Locale;
   title: string;
   description: string;
   imageAlt: string;
@@ -170,6 +196,7 @@ type PageMetadataOptions = {
 
 export function createPageMetadata({
   path,
+  locale = defaultLocale,
   title,
   description,
   imageAlt,
@@ -177,7 +204,12 @@ export function createPageMetadata({
   imageWidth = 1800,
   imageHeight = 1005,
 }: PageMetadataOptions): Metadata {
-  const canonicalUrl = absoluteSiteUrl(path);
+  const canonicalUrl = localizedSiteUrl(locale, path);
+  const languageAlternates = {
+    id: localizedSiteUrl("id", path),
+    en: localizedSiteUrl("en", path),
+    "x-default": localizedSiteUrl(defaultLocale, path),
+  };
   const socialTitle = `${title} | ${SITE_NAME}`;
   const image = imagePath
     ? {
@@ -198,10 +230,10 @@ export function createPageMetadata({
   return {
     title: { absolute: socialTitle },
     description,
-    alternates: { canonical: canonicalUrl },
+    alternates: { canonical: canonicalUrl, languages: languageAlternates },
     openGraph: {
       type: "website",
-      locale: SITE_LOCALE,
+      locale: localeOpenGraph(locale),
       siteName: SITE_NAME,
       title: socialTitle,
       description,
@@ -224,13 +256,14 @@ type JsonLdNode = Record<string, unknown>;
 export const ORGANIZATION_ID = `${SITE_ORIGIN}/#organization`;
 export const WEBSITE_ID = `${SITE_ORIGIN}/#website`;
 
-export function organizationSchema(): JsonLdNode {
+export function organizationSchema(locale: Locale = defaultLocale): JsonLdNode {
   return {
     "@type": "Organization",
     "@id": ORGANIZATION_ID,
     name: SITE_NAME,
     url: SITE_ORIGIN,
-    description: SITE_DESCRIPTION,
+    description: siteDescription(locale),
+    inLanguage: localeLanguage(locale),
     logo: {
       "@type": "ImageObject",
       url: LOGO_URL,
@@ -242,7 +275,13 @@ export function organizationSchema(): JsonLdNode {
     telephone: CONTACT.telephone,
     sameAs: SOCIAL_PROFILES,
     areaServed: { "@type": "Country", name: "Indonesia" },
-    knowsAbout: [
+    knowsAbout: locale === "en" ? [
+      "Website design",
+      "Web development",
+      "Digital products",
+      "Visual identity",
+      "Digital wedding invitations",
+    ] : [
       "Desain website",
       "Pengembangan website",
       "Produk digital",
@@ -262,32 +301,34 @@ export function organizationSchema(): JsonLdNode {
   };
 }
 
-export function websiteSchema(): JsonLdNode {
+export function websiteSchema(locale: Locale = defaultLocale): JsonLdNode {
   return {
     "@type": "WebSite",
     "@id": WEBSITE_ID,
     url: SITE_ORIGIN,
     name: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    inLanguage: SITE_LANGUAGE,
+    description: siteDescription(locale),
+    inLanguage: localeLanguage(locale),
     publisher: { "@id": ORGANIZATION_ID },
   };
 }
 
 export function webPageSchema({
   path,
+  locale = defaultLocale,
   title,
   description,
   type = "WebPage",
   imagePath,
 }: {
   path: PublicPagePath;
+  locale?: Locale;
   title: string;
   description: string;
   type?: "WebPage" | "AboutPage" | "ContactPage" | "CollectionPage";
   imagePath?: string;
 }): JsonLdNode {
-  const url = absoluteSiteUrl(path);
+  const url = localizedSiteUrl(locale, path);
 
   return {
     "@type": type,
@@ -295,7 +336,7 @@ export function webPageSchema({
     url,
     name: title,
     description,
-    inLanguage: SITE_LANGUAGE,
+    inLanguage: localeLanguage(locale),
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORGANIZATION_ID },
     dateModified: PUBLIC_PAGES[path].updatedAt,
@@ -310,9 +351,13 @@ export function webPageSchema({
   };
 }
 
-export function faqPageSchema(items: readonly { question: string; answer: string }[]): JsonLdNode {
+export function faqPageSchema(
+  items: readonly { question: string; answer: string }[],
+  locale: Locale = defaultLocale,
+): JsonLdNode {
   return {
     "@type": "FAQPage",
+    inLanguage: localeLanguage(locale),
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -324,6 +369,8 @@ export function faqPageSchema(items: readonly { question: string; answer: string
   };
 }
 
+export const faqSchema = faqPageSchema;
+
 export function itemListSchema(
   name: string,
   items: readonly {
@@ -333,10 +380,12 @@ export function itemListSchema(
     image?: string;
     itemType?: string;
   }[],
+  locale: Locale = defaultLocale,
 ): JsonLdNode {
   return {
     "@type": "ItemList",
     name,
+    inLanguage: localeLanguage(locale),
     numberOfItems: items.length,
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
@@ -345,7 +394,7 @@ export function itemListSchema(
         "@type": item.itemType ?? "CreativeWork",
         name: item.name,
         ...(item.description ? { description: item.description } : {}),
-        ...(item.url ? { url: item.url } : {}),
+        ...(item.url ? { url: item.url.startsWith("/") ? localizedSiteUrl(locale, item.url as PublicPagePath) : item.url } : {}),
         ...(item.image ? { image: absoluteSiteUrl(item.image) } : {}),
       },
     })),
@@ -356,18 +405,20 @@ export function serviceSchema({
   name,
   description,
   path = "/layanan",
+  locale = defaultLocale,
 }: {
   name: string;
   description: string;
   path?: PublicPagePath;
+  locale?: Locale;
 }): JsonLdNode {
   return {
     "@type": "Service",
     name,
     description,
-    url: absoluteSiteUrl(path),
+    url: localizedSiteUrl(locale, path),
     provider: { "@id": ORGANIZATION_ID },
     areaServed: { "@type": "Country", name: "Indonesia" },
-    availableLanguage: SITE_LANGUAGE,
+    inLanguage: localeLanguage(locale),
   };
 }

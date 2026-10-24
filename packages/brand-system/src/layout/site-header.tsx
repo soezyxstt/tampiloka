@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { Fragment, type ReactElement, type ReactNode } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
@@ -36,6 +37,22 @@ export interface SiteHeaderProps {
   mobileTitle?: string;
   className?: string;
   transparentOnTop?: boolean;
+  /** Optional app-specific internal link renderer, for example a localized router. */
+  renderInternalLink?: (props: {
+    href: string;
+    children?: ReactNode;
+    className?: string;
+    ariaLabel?: string;
+    ariaCurrent?: "page";
+    onClick?: () => void;
+  }) => ReactNode;
+  /** Optional localized language control rendered in desktop and mobile navigation. */
+  localization?: ReactNode;
+  navigationLabel?: string;
+  homeLabel?: string;
+  openMenuLabel?: string;
+  closeMenuLabel?: string;
+  currentPath?: string;
 }
 
 function navigationLinkClass(pathname: string, href: string) {
@@ -51,8 +68,16 @@ export function SiteHeader({
   mobileTitle = "Navigasi",
   className = "",
   transparentOnTop = false,
+  renderInternalLink,
+  localization,
+  navigationLabel = "Navigasi utama",
+  homeLabel = "beranda",
+  openMenuLabel = "Buka navigasi",
+  closeMenuLabel = "Tutup navigasi",
+  currentPath,
 }: SiteHeaderProps) {
   const pathname = usePathname();
+  const activePathname = currentPath ?? pathname;
   const [hiddenFor, setHiddenFor] = useState<string | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -123,6 +148,20 @@ export function SiteHeader({
   }, [pathname, transparentOnTop]);
 
   const homeHref = logo.href ?? "/";
+  const logoContent = transparentOnTop && darkLogo ? (
+    <>
+      <Image src={darkLogo.src} alt={darkLogo.alt} width={darkLogo.width ?? 800} height={darkLogo.height ?? 200} priority={darkLogo.priority ?? true} className="header-brand__dark" />
+      <Image src={logo.src} alt={logo.alt} width={logo.width ?? 800} height={logo.height ?? 200} priority={logo.priority ?? true} className="header-brand__light" />
+    </>
+  ) : (
+    <Image src={logo.src} alt={logo.alt} width={logo.width ?? 800} height={logo.height ?? 200} priority={logo.priority ?? true} />
+  );
+  const renderLink = (props: { href: string; children: ReactNode; className?: string; ariaLabel?: string; ariaCurrent?: "page"; onClick?: () => void }) =>
+    renderInternalLink ? renderInternalLink(props) : (
+      <Link href={props.href} className={props.className} aria-label={props.ariaLabel} aria-current={props.ariaCurrent} onClick={props.onClick}>
+        {props.children}
+      </Link>
+    );
   const headerClassNames = [
     "site-header",
     "site-header--primary",
@@ -139,53 +178,17 @@ export function SiteHeader({
       data-hidden={hiddenFor === pathname && !sheetOpen ? "true" : undefined}
       data-scrolled={transparentOnTop ? (isScrolled ? "true" : "false") : undefined}
     >
-      <Link href={homeHref} aria-label={`${logo.alt}, beranda`} className="header-brand">
-        {transparentOnTop && darkLogo ? (
-          <>
-            <Image
-              src={darkLogo.src}
-              alt={darkLogo.alt}
-              width={darkLogo.width ?? 800}
-              height={darkLogo.height ?? 200}
-              priority={darkLogo.priority ?? true}
-              className="header-brand__dark"
-            />
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={logo.width ?? 800}
-              height={logo.height ?? 200}
-              priority={logo.priority ?? true}
-              className="header-brand__light"
-            />
-          </>
-        ) : (
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={logo.width ?? 800}
-            height={logo.height ?? 200}
-            priority={logo.priority ?? true}
-          />
-        )}
-      </Link>
+      {renderLink({ href: homeHref, ariaLabel: `${logo.alt}, ${homeLabel}`, className: "header-brand", children: logoContent })}
 
-      <nav className="header-desktop-nav type-label" aria-label="Navigasi utama">
+      <nav className="header-desktop-nav type-label" aria-label={navigationLabel}>
         {links.map(({ label, href }) => {
-          const isCurrent = pathname === href;
+          const isCurrent = activePathname === href;
           return href.startsWith("#") ? (
             <a key={href} className="header-nav-link" href={href}>
               {label}
             </a>
           ) : (
-            <Link
-              key={href}
-              className={navigationLinkClass(pathname, href)}
-              href={href}
-              aria-current={isCurrent ? "page" : undefined}
-            >
-              {label}
-            </Link>
+            <Fragment key={href}>{renderLink({ href, className: navigationLinkClass(activePathname, href), ariaCurrent: isCurrent ? "page" : undefined, children: label })}</Fragment>
           );
         })}
         {action && (
@@ -198,15 +201,17 @@ export function SiteHeader({
               className="header-contact-link"
               size="lg"
               nativeButton={false}
-              render={<Link href={action.href} aria-current={pathname === action.href ? "page" : undefined} />}
+              render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-contact-link", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}
             >
               {action.label} <ArrowUpRight aria-hidden="true" />
             </Button>
           )
         )}
+        {localization}
       </nav>
 
       <div className="header-mobile-actions">
+        {localization}
         {action && (
           action.href.startsWith("http") || action.href.startsWith("mailto:") || action.href.startsWith("#") ? (
             <a className="header-contact-link header-contact-link--mobile" href={action.href}>
@@ -217,7 +222,7 @@ export function SiteHeader({
               className="header-contact-link header-contact-link--mobile"
               size="lg"
               nativeButton={false}
-              render={<Link href={action.href} aria-current={pathname === action.href ? "page" : undefined} />}
+              render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-contact-link header-contact-link--mobile", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}
             >
               {action.label}
             </Button>
@@ -231,16 +236,16 @@ export function SiteHeader({
           }}
         >
           <SheetTrigger
-            aria-label="Buka navigasi"
+            aria-label={openMenuLabel}
             className="header-menu-trigger"
-            render={<Button variant="ghost" size="icon" aria-label="Buka navigasi" />}
+            render={<Button variant="ghost" size="icon" aria-label={openMenuLabel} />}
           >
             <Menu aria-hidden="true" />
           </SheetTrigger>
           <SheetContent className="header-sheet">
             <div className="header-sheet__top">
               <SheetTitle className="sr-only">{mobileTitle}</SheetTitle>
-              <SheetClose nativeButton={false} render={<Link href={homeHref} aria-label={`${logo.alt}, beranda`} className="header-brand" />}>
+              <SheetClose nativeButton={false} render={renderInternalLink ? renderInternalLink({ href: homeHref, ariaLabel: `${logo.alt}, ${homeLabel}`, className: "header-brand" }) as ReactElement : <Link href={homeHref} aria-label={`${logo.alt}, ${homeLabel}`} className="header-brand" />}>
                 <Image
                   src={logo.src}
                   alt={logo.alt}
@@ -249,32 +254,20 @@ export function SiteHeader({
                 />
               </SheetClose>
               <SheetClose
-                aria-label="Tutup navigasi"
-                render={<Button variant="ghost" size="icon" aria-label="Tutup navigasi" />}
+                aria-label={closeMenuLabel}
+                render={<Button variant="ghost" size="icon" aria-label={closeMenuLabel} />}
               >
                 <X aria-hidden="true" />
               </SheetClose>
             </div>
-            <nav className="header-sheet__nav type-heading-3" aria-label="Navigasi utama">
+            <nav className="header-sheet__nav type-heading-3" aria-label={navigationLabel}>
               {links.map(({ label, href }) =>
                 href.startsWith("#") ? (
                   <SheetClose nativeButton={false} key={href} render={<a className="header-nav-link" href={href} />}>
                     {label}
                   </SheetClose>
                 ) : (
-                  <SheetClose
-                    key={href}
-                    nativeButton={false}
-                    render={
-                      <Link
-                        className={navigationLinkClass(pathname, href)}
-                        href={href}
-                        aria-current={pathname === href ? "page" : undefined}
-                      />
-                    }
-                  >
-                    {label}
-                  </SheetClose>
+                  <Fragment key={href}>{renderLink({ href, className: navigationLinkClass(activePathname, href), ariaCurrent: activePathname === href ? "page" : undefined, onClick: () => setSheetOpen(false), children: label })}</Fragment>
                 )
               )}
               {action && (
@@ -286,16 +279,7 @@ export function SiteHeader({
                     {action.label} <ArrowUpRight aria-hidden="true" />
                   </SheetClose>
                 ) : (
-                  <SheetClose
-                    nativeButton={false}
-                    render={
-                      <Link
-                        className="header-sheet__contact"
-                        href={action.href}
-                        aria-current={pathname === action.href ? "page" : undefined}
-                      />
-                    }
-                  >
+                  <SheetClose nativeButton={false} render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-sheet__contact", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link className="header-sheet__contact" href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}>
                     {action.label} <ArrowUpRight aria-hidden="true" />
                   </SheetClose>
                 )

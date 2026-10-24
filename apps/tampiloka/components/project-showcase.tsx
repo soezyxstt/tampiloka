@@ -6,13 +6,24 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sheet, SheetClose, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { PROJECTS, type Project } from "@/lib/projects";
+import { useLocale } from "next-intl";
+import type { Locale } from "@/i18n/routing";
+import { showcaseCopy } from "@/lib/showcase-copy";
 
 const projects = PROJECTS;
 
-type Filter = "Semua" | Project["category"];
-const filters: Filter[] = ["Semua", "Kuliner", "Portofolio", "Katalog", "Edukasi", "Organisasi", "Undangan digital"];
+type Filter = "all" | "food" | "portfolio" | "catalog" | "education" | "organization" | "invitation";
+const filters: Filter[] = ["all", "food", "portfolio", "catalog", "education", "organization", "invitation"];
+const projectFilter: Record<Project["category"], Exclude<Filter, "all">> = {
+  Kuliner: "food",
+  Portofolio: "portfolio",
+  Katalog: "catalog",
+  Edukasi: "education",
+  Organisasi: "organization",
+  "Undangan digital": "invitation",
+};
 
-function ProjectPreview({ project, paused }: { project: Project; paused: boolean }) {
+function ProjectPreview({ project, paused, locale }: { project: Project; paused: boolean; locale: Locale }) {
   const [stopIndex, setStopIndex] = useState(0);
   const stopCount = project.scrollStops.length;
 
@@ -29,7 +40,7 @@ function ProjectPreview({ project, paused }: { project: Project; paused: boolean
   return (
     <div className="showcase__site" aria-hidden="true">
       <iframe
-        title={`Pratinjau website ${project.name}`}
+        title={showcaseCopy[locale].previewSite(project.name)}
         src={`${project.url}${project.scrollStops[stopIndex]}`}
         loading="lazy"
         tabIndex={-1}
@@ -38,16 +49,19 @@ function ProjectPreview({ project, paused }: { project: Project; paused: boolean
   );
 }
 
-export default function ProjectShowcase({ page = false }: { page?: boolean }) {
+export default function ProjectShowcase({ page = false, locale: requestedLocale }: { page?: boolean; locale?: Locale }) {
+  const contextLocale = useLocale() as Locale;
+  const locale = requestedLocale ?? contextLocale;
+  const copy = showcaseCopy[locale];
   const [isPaused, setIsPaused] = useState(false);
-  const [filter, setFilter] = useState<Filter>("Semua");
+  const [filter, setFilter] = useState<Filter>("all");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [dragOffset, setDragOffset] = useState(0);
   const dragStart = useRef<number | null>(null);
   const dragDistance = useRef(0);
-  const visibleProjects = filter === "Semua"
+  const visibleProjects = filter === "all"
     ? projects
-    : projects.filter((project) => project.category === filter);
+    : projects.filter((project) => projectFilter[project.category] === filter);
 
   const startDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
     dragStart.current = event.clientY;
@@ -87,11 +101,11 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
       <div className="showcase__inner">
         <header className="showcase__header" data-reveal>
           <Heading className={`${page ? "type-display-xl" : "type-display"} showcase__heading`} id="showcase-heading">
-            {page ? "Website & undangan digital." : "Karya pilihan."}
+            {page ? copy.projectHeading : copy.featuredHeading}
           </Heading>
           <div className="showcase__controls">
             {page ? (
-              <div className="showcase__filters" role="group" aria-label="Saring karya">
+              <div className="showcase__filters" role="group" aria-label={copy.filterLabel}>
                 {filters.map((item) => (
                   <Button
                     key={item}
@@ -100,7 +114,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                     aria-pressed={filter === item}
                     onClick={() => setFilter(item)}
                   >
-                    {item}
+                    {copy.filters[item]}
                   </Button>
                 ))}
               </div>
@@ -109,18 +123,18 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
               className="showcase__motion-toggle"
               variant="ghost"
               type="button"
-              aria-label={isPaused ? "Lanjutkan pratinjau" : "Jeda pratinjau"}
+              aria-label={isPaused ? copy.resumePreview : copy.pausePreview}
               aria-pressed={isPaused}
               onClick={() => setIsPaused((paused) => !paused)}
             >
               {isPaused ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}
-              {isPaused ? "Putar" : "Jeda"}
+              {isPaused ? copy.play : copy.pause}
             </Button>
           </div>
         </header>
 
         <p className="type-body-sm showcase__concept-disclosure">
-          Pagi &amp; Roti, Tepi Sagara, Sela Rasa, Rona Forma, dan Nara &amp; Aruna adalah konsep demo, bukan proyek klien.
+          {copy.conceptDisclosure}
         </p>
 
         <div className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
@@ -133,12 +147,12 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
             >
               <div className="showcase__preview-shell">
                 <span className="showcase__screen" aria-hidden="true">
-                  <ProjectPreview project={project} paused={isPaused || activeProject !== null} />
+                  <ProjectPreview project={project} paused={isPaused || activeProject !== null} locale={locale} />
                 </span>
                 <button
                   className="showcase__open"
                   type="button"
-                  aria-label={`Lihat pratinjau ${project.name}`}
+                  aria-label={copy.viewPreview(project.name)}
                   aria-haspopup="dialog"
                   onClick={() => {
                     setDragOffset(0);
@@ -150,14 +164,14 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Buka situs ${project.name} di tab baru`}
+                  aria-label={copy.openSite(project.name)}
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
               </div>
               <div className="showcase__project-meta">
                 <h3 className="type-heading-4 showcase__project-name">{project.name}</h3>
-                <p className="showcase__project-category">{project.category}</p>
+                <p className="showcase__project-category">{copy.categories[project.category]}</p>
               </div>
             </Card>
           ))}
@@ -178,7 +192,7 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
             <>
               <SheetClose
                 className="showcase-sheet__handle"
-                aria-label="Tutup pratinjau atau tarik ke bawah"
+                aria-label={copy.closeOrDrag}
                 onPointerDown={startDrag}
                 onPointerMove={moveDrag}
                 onPointerUp={endDrag}
@@ -190,11 +204,11 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
               <header className="showcase-sheet__header">
                 <div className="showcase-sheet__heading">
                   <SheetTitle className="type-heading-4 showcase-sheet__title">{activeProject.name}</SheetTitle>
-                  <p className="type-caption showcase-sheet__category">{activeProject.category}</p>
+                  <p className="type-caption showcase-sheet__category">{copy.categories[activeProject.category]}</p>
                 </div>
                 <SheetClose
-                  aria-label="Tutup pratinjau"
-                  render={<Button variant="ghost" size="icon" aria-label="Tutup pratinjau" />}
+                  aria-label={copy.closePreview}
+                  render={<Button variant="ghost" size="icon" aria-label={copy.closePreview} />}
                 >
                   <X aria-hidden="true" />
                 </SheetClose>
@@ -205,14 +219,14 @@ export default function ProjectShowcase({ page = false }: { page?: boolean }) {
                   href={activeProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Buka situs ${activeProject.name} di tab baru`}
+                  aria-label={copy.openSite(activeProject.name)}
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
                 <iframe
                   key={activeProject.id}
                   className="showcase-sheet__frame"
-                  title={`Situs ${activeProject.name}`}
+                  title={copy.site(activeProject.name)}
                   src={activeProject.url}
                 />
               </div>

@@ -1,57 +1,118 @@
+import type { Locale } from "@/i18n/routing";
+import { addonCopy, careLabel, domainLabel, launchDiscountLabel, planLabel, pricingCopy } from "@/i18n/pricing-copy";
+
 export const LAUNCH_DISCOUNT = 0.4;
 export const HOSTING_ANNUAL = 299_000;
+export const ON_DEMAND_REQUEST_PRICE = 119_000;
+export const CARE_REQUEST_MENU_LIMIT = 5;
+export const TECHNICAL_FIX_WINDOW_DAYS = 30;
+export const PROJECT_DEPOSIT_PERCENT = 50;
 
-const rupiah = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 });
-export const formatRupiah = (value: number) => rupiah.format(value).replace(/\s/g, "");
-export const formatPromoPrice = (value: number) => `Rp${new Intl.NumberFormat("id-ID").format(value / 1_000)}k`;
+export const formatCurrency = (value: number, locale: Locale = "id") => new Intl.NumberFormat(locale === "id" ? "id-ID" : "en-US", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(value).replace(locale === "id" ? /\s/g : /\u00a0/g, locale === "id" ? "" : " ");
+export const formatRupiah = (value: number) => formatCurrency(value, "id");
+export const formatPromoPrice = (value: number, locale: Locale = "id") => locale === "id"
+  ? `Rp${new Intl.NumberFormat("id-ID").format(value / 1_000)}k`
+  : `${formatCurrency(value, locale)}`;
 // The brief supplies promotional prices. Round their pre-discount equivalents to rupiah.
 export const normalPrice = (price: number) => Math.round(price / (1 - LAUNCH_DISCOUNT));
 
 export const WEBSITE_PLANS = [
-  { id: "essential", name: "Essential", price: 999_000, features: ["1 halaman, hingga 5 bagian", "6 menu unggulan", "Galeri, lokasi & jam buka", "Tautan Instagram & WhatsApp"], revisions: 1, timeline: "3–5 hari kerja" },
-  { id: "menu", name: "Menu", price: 1_699_000, features: ["Katalog hingga 30 item", "Kategori, foto & harga menu", "Pencarian menu sederhana", "Berkas QR menu digital"], revisions: 2, timeline: "5–8 hari kerja" },
-  { id: "signature", name: "Signature", price: 2_499_000, features: ["Katalog hingga 60 item", "1 halaman tambahan", "Formulir reservasi ke WhatsApp", "Pilihan tampilan lebih luas"], revisions: 2, timeline: "7–12 hari kerja" },
+  { id: "essential", price: 999_000, pages: 1, sections: 5, featuredItems: 6, catalogItems: 0, additionalPages: 0, revisions: 1, durationDays: [3, 5], menuSearch: false, digitalQr: false, reservation: false, layout: "limited" },
+  { id: "menu", price: 1_699_000, pages: 1, sections: 5, featuredItems: 6, catalogItems: 30, additionalPages: 0, revisions: 2, durationDays: [5, 8], menuSearch: true, digitalQr: true, reservation: false, layout: "more" },
+  { id: "signature", price: 2_499_000, pages: 1, sections: 5, featuredItems: 6, catalogItems: 60, additionalPages: 1, revisions: 2, durationDays: [7, 12], menuSearch: true, digitalQr: true, reservation: true, layout: "flexible" },
 ] as const;
 export type PlanId = (typeof WEBSITE_PLANS)[number]["id"];
 
 export const DOMAIN_OPTIONS = [
-  { id: "subdomain", name: "Subdomain Tampiloka", example: "namakafe.tampiloka.site", price: 0 },
-  { id: "com", name: "Domain .com", example: "namakafe.com", price: 299_000 },
-  { id: "id", name: "Domain .id", example: "namakafe.id", price: 299_000 },
-  { id: "co-id", name: "Domain .co.id", example: "namakafe.co.id", price: 399_000 },
-  { id: "own", name: "Domain milik Anda", example: "Koneksi awal standar gratis", price: 0 },
+  { id: "subdomain", example: "namakafe.tampiloka.site", price: 0 },
+  { id: "com", example: "namakafe.com", price: 299_000 },
+  { id: "id", example: "namakafe.id", price: 299_000 },
+  { id: "co-id", example: "namakafe.co.id", price: 399_000 },
+  { id: "own", example: "Koneksi awal standar gratis", price: 0 },
 ] as const;
 export type DomainId = (typeof DOMAIN_OPTIONS)[number]["id"];
 
 export const CARE_PLANS = [
-  { id: "none", name: "On-demand", price: 0, requests: "Tanpa langganan bulanan", description: "Rp119.000 untuk setiap permintaan perubahan kecil.", time: "Sesuai kesepakatan" },
-  { id: "care", name: "Care", price: 79_000, requests: "1 permintaan per bulan", description: "Untuk pembaruan isi website sesekali.", time: "Maksimal 3 hari kerja" },
-  { id: "plus", name: "Care Plus", price: 179_000, requests: "3 permintaan per bulan", description: "Untuk menu dan informasi yang lebih sering berubah.", time: "Maksimal 2 hari kerja" },
+  { id: "none", price: 0, requestsPerMonth: 0, durationDays: null },
+  { id: "care", price: 79_000, requestsPerMonth: 1, durationDays: 3 },
+  { id: "plus", price: 179_000, requestsPerMonth: 3, durationDays: 2 },
 ] as const;
 export type CareId = (typeof CARE_PLANS)[number]["id"];
 
-export const ADDON_GROUPS = ["Fitur website", "Konten & tampilan"] as const;
+export const ADDON_GROUPS = ["website", "content"] as const;
 export const ADDONS = [
-  { id: "section", group: "Fitur website", name: "Bagian landing page tambahan", unit: "per bagian", price: 149_000, max: 10 },
-  { id: "page", group: "Fitur website", name: "Halaman tambahan", unit: "per halaman, tata letak standar", price: 349_000, max: 10 },
-  { id: "reservation", group: "Fitur website", name: "Formulir reservasi ke WhatsApp", unit: "sekali bayar", price: 249_000, max: 1 },
-  { id: "cart", group: "Fitur website", name: "Keranjang pesanan ke WhatsApp", unit: "sekali bayar", price: 499_000, max: 1 },
-  { id: "branch", group: "Fitur website", name: "Informasi cabang tambahan", unit: "per cabang", price: 199_000, max: 10 },
-  { id: "english", group: "Fitur website", name: "Tambahan bahasa Inggris", unit: "per halaman", price: 399_000, max: 10 },
-  { id: "revision", group: "Fitur website", name: "Putaran revisi tambahan", unit: "per putaran", price: 149_000, max: 10 },
-  { id: "catalog", group: "Konten & tampilan", name: "Tambahan 10 item katalog", unit: "per 10 item saat pembuatan", price: 99_000, max: 10 },
-  { id: "photos", group: "Konten & tampilan", name: "Olah 10 foto produk", unit: "per 10 foto yang sudah tersedia", price: 149_000, max: 10 },
-  { id: "copy", group: "Konten & tampilan", name: "Penulisan teks landing page", unit: "dari bahan Anda", price: 199_000, max: 1 },
-  { id: "wordmark", group: "Konten & tampilan", name: "Desain logo teks sederhana", unit: "sekali bayar", price: 299_000, max: 1 },
-  { id: "business", group: "Konten & tampilan", name: "Penataan Google Business Profile", unit: "sekali bayar", price: 199_000, max: 1 },
-  { id: "qr", group: "Konten & tampilan", name: "Desain QR dengan identitas kafe", unit: "berkas siap cetak; biaya cetak terpisah", price: 149_000, max: 1 },
+  { id: "section", group: "website", price: 149_000, max: 10 },
+  { id: "page", group: "website", price: 349_000, max: 10 },
+  { id: "reservation", group: "website", price: 249_000, max: 1, unavailablePlans: ["signature"] },
+  { id: "cart", group: "website", price: 499_000, max: 1 },
+  { id: "branch", group: "website", price: 199_000, max: 10 },
+  { id: "english", group: "website", price: 399_000, max: 10 },
+  { id: "revision", group: "website", price: 149_000, max: 10 },
+  { id: "catalog", group: "content", price: 99_000, max: 10, unitQuantity: 10, unavailablePlans: ["essential"] },
+  { id: "photos", group: "content", price: 149_000, max: 10, unitQuantity: 10 },
+  { id: "copy", group: "content", price: 199_000, max: 1 },
+  { id: "wordmark", group: "content", price: 299_000, max: 1 },
+  { id: "business", group: "content", price: 199_000, max: 1 },
+  { id: "qr", group: "content", price: 149_000, max: 1 },
 ] as const;
 export type AddonId = (typeof ADDONS)[number]["id"];
 export type AddonQuantities = Partial<Record<AddonId, number>>;
 
-export function addonAvailability(id: AddonId, plan: PlanId): string | undefined {
-  if (id === "reservation" && plan === "signature") return "Sudah termasuk Signature";
-  if (id === "catalog" && plan === "essential") return "Tersedia untuk Menu & Signature";
+export function formatBusinessDays(days: readonly [number, number], locale: Locale): string {
+  return locale === "id" ? `${days[0]}–${days[1]} hari kerja` : `${days[0]}–${days[1]} business days`;
+}
+
+export function readEstimateUrl(url: URL) {
+  const validPlan = WEBSITE_PLANS.find((item) => item.id === url.searchParams.get("plan"))?.id;
+  const hashPlan = url.hash.startsWith("#estimasi-")
+    ? WEBSITE_PLANS.find((item) => item.id === url.hash.slice("#estimasi-".length))?.id
+    : undefined;
+  const domain = DOMAIN_OPTIONS.find((item) => item.id === url.searchParams.get("domain"))?.id;
+  const care = CARE_PLANS.find((item) => item.id === url.searchParams.get("care"))?.id;
+  const quantities: AddonQuantities = {};
+  const serialized = url.searchParams.get("addons");
+  if (serialized && serialized.length <= 160) {
+    for (const pair of serialized.split(",")) {
+      const [rawId, rawQuantity, ...extra] = pair.split(":");
+      const addon = ADDONS.find((item) => item.id === rawId);
+      if (!addon || extra.length || !/^\d{1,2}$/.test(rawQuantity ?? "")) continue;
+      const quantity = Number(rawQuantity);
+      if (quantity > 0 && quantity <= addon.max) quantities[addon.id] = quantity;
+    }
+  }
+  const planId = hashPlan ?? validPlan ?? WEBSITE_PLANS[1].id;
+  for (const addon of ADDONS) if (!isAddonAvailable(addon.id, planId)) delete quantities[addon.id];
+  return {
+    planId,
+    domainId: domain ?? DOMAIN_OPTIONS[1].id,
+    careId: care ?? CARE_PLANS[0].id,
+    quantities,
+  };
+}
+
+export function writeEstimateUrl(url: URL, estimate: { planId: PlanId; domainId: DomainId; careId: CareId; quantities: AddonQuantities }) {
+  url.searchParams.set("plan", estimate.planId);
+  url.searchParams.set("domain", estimate.domainId);
+  url.searchParams.set("care", estimate.careId);
+  const addons = ADDONS.flatMap((addon) => {
+    const quantity = Math.min(addon.max, Math.max(0, Math.floor(estimate.quantities[addon.id] ?? 0)));
+    return quantity && isAddonAvailable(addon.id, estimate.planId) ? [`${addon.id}:${quantity}`] : [];
+  }).join(",");
+  if (addons) url.searchParams.set("addons", addons);
+  else url.searchParams.delete("addons");
+  if (url.hash === "#estimasi" || url.hash.startsWith("#estimasi-")) {
+    url.hash = estimate.planId === "menu" ? "estimasi" : `estimasi-${estimate.planId}`;
+  }
+  return url;
+}
+
+export function isAddonAvailable(id: AddonId, plan: PlanId): boolean {
+  const addon = ADDONS.find((item) => item.id === id)!;
+  return !("unavailablePlans" in addon && (addon.unavailablePlans as readonly PlanId[] | undefined)?.includes(plan));
+}
+
+export function addonAvailability(id: AddonId, plan: PlanId, locale: Locale = "id"): string | undefined {
+  return isAddonAvailable(id, plan) ? undefined : addonCopy(locale, id).disabled?.[plan];
 }
 
 export function calculateEstimate(planId: PlanId, domainId: DomainId, careId: CareId, quantities: AddonQuantities) {
@@ -59,7 +120,7 @@ export function calculateEstimate(planId: PlanId, domainId: DomainId, careId: Ca
   const domain = DOMAIN_OPTIONS.find((item) => item.id === domainId)!;
   const care = CARE_PLANS.find((item) => item.id === careId)!;
   const addons = ADDONS.flatMap((addon) => {
-    const quantity = addonAvailability(addon.id, planId) ? 0 : Math.min(addon.max, Math.max(0, Math.floor(quantities[addon.id] || 0)));
+    const quantity = isAddonAvailable(addon.id, planId) ? Math.min(addon.max, Math.max(0, Math.floor(quantities[addon.id] || 0))) : 0;
     return quantity ? [{ ...addon, quantity, total: quantity * addon.price }] : [];
   });
   const addonTotal = addons.reduce((sum, item) => sum + item.total, 0);
@@ -68,30 +129,36 @@ export function calculateEstimate(planId: PlanId, domainId: DomainId, careId: Ca
   return { plan, domain, care, addons, addonTotal, annualCare, savings, firstYear: plan.price + domain.price + annualCare + addonTotal, secondYear: HOSTING_ANNUAL + domain.price + annualCare };
 }
 
-export function estimateText(estimate: ReturnType<typeof calculateEstimate>) {
+export function estimateText(estimate: ReturnType<typeof calculateEstimate>, locale: Locale = "id") {
+  const copy = pricingCopy(locale).estimate;
   const { plan, domain, care, addons, firstYear, secondYear, savings } = estimate;
+  const domainName = domainLabel(locale, domain.id);
+  const careName = careLabel(locale, care.id);
+  const planName = planLabel(locale, plan.id);
   return [
-    "Estimasi website kafe — Tampiloka",
-    `Paket ${plan.name}: ${formatRupiah(plan.price)} (promo peluncuran 40%; hemat ${formatRupiah(savings)})`,
-    `Domain: ${domain.name} — ${domain.price ? `${formatRupiah(domain.price)}/tahun` : domain.id === "own" ? "koneksi awal standar gratis" : "termasuk selama layanan aktif"}`,
-    domain.id === "own" ? "Perpanjangan domain milik Anda dibayar langsung ke penyedia, di luar estimasi." : domain.example,
-    ...(care.price ? [`Perawatan: ${care.name} — ${formatRupiah(care.price)}/bulan.`, `Dihitung untuk 12 bulan; dibayar ${formatRupiah(care.price * 3)} setiap 3 bulan.`] : ["Perawatan: tanpa langganan. Perubahan kecil Rp119.000/permintaan, di luar estimasi."]),
-    ...addons.map((addon) => `${addon.name} × ${addon.quantity}: ${formatRupiah(addon.total)} (sekali bayar)`),
-    "Hosting & SSL: termasuk selama 12 bulan pertama, lalu Rp299.000/tahun.",
-    `Total tahun pertama: ${formatRupiah(firstYear)}`,
-    `Total tahun kedua: ${formatRupiah(secondYear)}`,
-    "Estimasi belum termasuk pajak yang mungkin berlaku. Biaya perpanjangan dihitung dengan tarif saat ini. Harga akhir mengikuti lingkup yang disepakati.",
+    locale === "id" ? "Estimasi website kafe — Tampiloka" : "Café website estimate — Tampiloka",
+    `${locale === "id" ? "Paket" : "Package"} ${planName}: ${formatCurrency(plan.price, locale)} (${launchDiscountLabel(locale, Math.round(LAUNCH_DISCOUNT * 100))}; ${locale === "id" ? "hemat" : "save"} ${formatCurrency(savings, locale)})`,
+    `${locale === "id" ? "Domain" : "Domain"}: ${domainName} — ${domain.price ? `${formatCurrency(domain.price, locale)}${copy.timeSuffix}` : domain.id === "own" ? copy.ownDomainEstimate : copy.includedWhileActive}`,
+    domain.id === "own" ? copy.ownRenewalOutside : domain.example,
+    ...(care.price ? [`${copy.careLine(careName)} — ${formatCurrency(care.price, locale)}/${locale === "id" ? "bulan" : "month"}.`, `${copy.calculatedForYear} ${formatCurrency(care.price * 3, locale)} ${copy.paidEvery}`] : [copy.noCare(formatCurrency(ON_DEMAND_REQUEST_PRICE, locale))]),
+    ...addons.map((addon) => `${addonCopy(locale, addon.id, "unitQuantity" in addon ? addon.unitQuantity : 1).name} × ${addon.quantity}: ${formatCurrency(addon.total, locale)} (${locale === "id" ? "sekali bayar" : "one-time"})`),
+    copy.hostingTermsText(formatCurrency(HOSTING_ANNUAL, locale)),
+    `${locale === "id" ? "Total tahun pertama" : "First-year total"}: ${formatCurrency(firstYear, locale)}`,
+    `${locale === "id" ? "Total tahun kedua" : "Second-year total"}: ${formatCurrency(secondYear, locale)}`,
+    copy.estimateDisclaimer,
   ].join("\n");
 }
 
-export const PRICING_FAQS = [
-  { question: "Apa yang mendapat diskon peluncuran 40%?", answer: "Diskon 40% berlaku untuk pembuatan Essential, Menu, dan Signature. Harga yang ditampilkan sudah termasuk diskon; harga normal dibulatkan ke rupiah terdekat. Domain, tambahan, hosting tahun berikutnya, dan Care memakai tarif masing-masing. Custom mengikuti penawaran." },
-  { question: "Apakah saya harus berlangganan Care?", answer: "Tidak. Anda bisa membayar Rp119.000 per permintaan perubahan kecil tanpa langganan. Care membantu pembaruan isi website. Perbaikan gangguan teknis dari sistem Tampiloka tetap tercakup selama hosting aktif." },
-  { question: "Apakah menu bisa saya ubah sendiri?", answer: "Essential, Menu, dan Signature tidak memiliki dashboard untuk mengubah konten sendiri. Kami memasukkan isi awal dari bahan Anda. Pembaruan berikutnya bisa dibayar per permintaan atau melalui Care dan Care Plus. Dashboard dan sistem pesanan dibahas dalam paket Custom." },
-  { question: "Bagaimana proses dan pembayarannya?", answer: "Pengerjaan dimulai setelah DP 50% dan bahan lengkap: logo, foto, menu, harga, serta informasi usaha. Estimasi waktu dihitung sejak bahan lengkap. Satu putaran revisi adalah satu daftar perubahan yang dikumpulkan sekaligus. Pelunasan dilakukan sebelum website tayang. Perubahan besar setelah desain disetujui dikenakan biaya tambahan. Kunjungan langsung tidak termasuk Essential." },
-  { question: "Apakah Signature berarti desain dari nol?", answer: "Signature memakai komponen dan struktur Tampiloka yang sudah tersedia. Pilihan penempatan foto, warna, tipografi, dan susunan halamannya lebih luas. Desain dari nol atau sistem di luar paket dibahas melalui penawaran Custom." },
-  { question: "Siapa pemilik domain dan bagaimana perpanjangannya?", answer: "Domain didaftarkan atas nama usaha Anda dan bisa dipindahkan jika berhenti memakai Tampiloka. Tagihan dikirim sebelum masa aktif berakhir. Tidak ada debit otomatis tanpa persetujuan Anda. Harga domain mencakup pendaftaran atau perpanjangan dan pengelolaan DNS; domain premium tidak termasuk. Kode dasar dan template tetap milik Tampiloka. Hak penggunaan website dan ketentuan ekspor dijelaskan dalam perjanjian." },
-  { question: "Apa yang termasuk satu perubahan kecil?", answer: "Satu permintaan mencakup maksimal 5 item menu (harga, teks, atau foto), satu banner dengan bahan siap pakai, atau satu perubahan teks pada bagian yang sudah ada. Kuota Care tidak dibawa ke bulan berikutnya. Halaman baru, perubahan besar tata letak, fitur baru, penulisan dari nol, dan pemotretan tidak termasuk. Target waktu dihitung setelah bahan lengkap." },
-  { question: "Apa bedanya keranjang WhatsApp dengan sistem Custom?", answer: "Keranjang WhatsApp menyusun daftar pesanan untuk dikirim ke nomor kafe. Fitur ini tidak mencatat pesanan otomatis, menampilkan status, atau menerima pembayaran. QR per meja, dashboard, kasir, pembayaran digital, stok, dan laporan masuk penawaran Custom. Biaya operasional dan biaya layanan pembayaran dihitung terpisah." },
-  { question: "Bagaimana jika ada gangguan setelah website tayang?", answer: "Kesalahan teknis awal diperbaiki tanpa biaya selama 30 hari. Setelah itu, hosting aktif mencakup SSL, pengawasan dasar, cadangan berkas, dan perbaikan gangguan dari sistem Tampiloka. Layanan teknis ini tetap berlaku tanpa Care." },
-];
+export function pricingFaqs(locale: Locale) {
+  const replacements: Record<string, string> = {
+    discountPercent: String(Math.round(LAUNCH_DISCOUNT * 100)),
+    onDemandPrice: formatCurrency(ON_DEMAND_REQUEST_PRICE, locale),
+    depositPercent: String(PROJECT_DEPOSIT_PERCENT),
+    careMenuLimit: String(CARE_REQUEST_MENU_LIMIT),
+    fixWindowDays: String(TECHNICAL_FIX_WINDOW_DAYS),
+  };
+  return pricingCopy(locale).faqs.map((faq) => ({
+    question: faq.question.replace(/\{([^}]+)\}/g, (_, key: string) => replacements[key] ?? ""),
+    answer: faq.answer.replace(/\{([^}]+)\}/g, (_, key: string) => replacements[key] ?? ""),
+  }));
+}

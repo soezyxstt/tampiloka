@@ -30,6 +30,10 @@
 .header-contact-link:hover { background: #116d35; color: #fff; }
 .header-contact-link svg { width: 16px; height: 16px; }
 .header-mobile-actions { display: none; }
+.language-switcher { display: inline-flex; align-items: center; gap: 2px; flex: none; }
+.language-switcher a { display: inline-flex; min-width: 38px; min-height: 38px; align-items: center; justify-content: center; border-radius: 999px; color: #36463d; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: .02em; transition: color .2s ease, background-color .2s ease; }
+.language-switcher a:hover, .language-switcher a[aria-current="page"] { color: #15803d; background: rgba(21, 128, 61, .08); }
+.language-switcher a:focus-visible { outline: 2px solid #15803d; outline-offset: 2px; }
 .header-menu-trigger {
   display: none;
   align-items: center;
@@ -99,6 +103,7 @@
   .site-header--primary { min-height: 72px; padding-block: 12px; }
   .header-desktop-nav { display: none; }
   .header-mobile-actions { display: flex; align-items: center; gap: 12px; }
+  .header-mobile-actions .language-switcher { margin-right: 2px; }
   .header-contact-link--mobile { min-height: 42px; padding-inline: 18px; }
   .header-contact-link--mobile svg { display: none; }
   .header-menu-trigger {
@@ -118,6 +123,7 @@
   .site-header--primary { padding-inline: 6%; }
   .site-header--primary .header-brand { width: min(175px, 43vw); }
   .header-mobile-actions { gap: 8px; }
+  .header-mobile-actions .language-switcher a { min-width: 34px; min-height: 38px; }
   .header-contact-link--mobile { min-height: 40px; padding-inline: 16px; }
   .header-menu-trigger { width: 42px; height: 42px; }
   .header-menu-trigger svg { width: 20px; height: 20px; }

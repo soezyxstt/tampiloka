@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
 export interface FooterLinkItem {
   label: string;
@@ -47,9 +47,17 @@ export interface SiteFooterProps {
   };
   copyright?: string;
   extraBottom?: ReactNode;
+  socialsLabel?: string;
+  /** Optional renderer for internal routes, useful for localized route maps. */
+  renderInternalLink?: (props: {
+    href: string;
+    children: ReactNode;
+    className?: string;
+    ariaLabel?: string;
+  }) => ReactNode;
 }
 
-function FooterGroup({ title, items, className = "" }: FooterGroupProps) {
+function FooterGroup({ title, items, className = "", renderInternalLink }: FooterGroupProps & Pick<SiteFooterProps, "renderInternalLink">) {
   return (
     <nav className={`footer-group ${className}`} aria-label={title}>
       <h3 className="type-overline">{title}</h3>
@@ -64,6 +72,8 @@ function FooterGroup({ title, items, className = "" }: FooterGroupProps) {
             >
               {label}
             </a>
+          ) : renderInternalLink ? (
+            <Fragment key={label + href}>{renderInternalLink({ href, children: label })}</Fragment>
           ) : (
             <Link key={label + href} href={href}>
               {label}
@@ -86,6 +96,8 @@ export function SiteFooter({
   pendingNotice,
   copyright,
   extraBottom,
+  socialsLabel = "Tautan footer",
+  renderInternalLink,
 }: SiteFooterProps) {
   const currentYear = new Date().getFullYear();
 
@@ -110,15 +122,15 @@ export function SiteFooter({
         <div className="footer-directory" data-reveal>
           <div className="footer-directory__top">
             {directoryGroups.map((group) => (
-              <FooterGroup key={group.title} {...group} />
+              <FooterGroup key={group.title} {...group} renderInternalLink={renderInternalLink} />
             ))}
           </div>
-          {wideGroup && <FooterGroup {...wideGroup} className="footer-industries" />}
+          {wideGroup && <FooterGroup {...wideGroup} className="footer-industries" renderInternalLink={renderInternalLink} />}
         </div>
       </div>
 
       <div className="footer-bottom" data-reveal>
-        <Link href={logo.href ?? "/"} aria-label={logo.alt}>
+        {renderInternalLink ? renderInternalLink({ href: logo.href ?? "/", ariaLabel: logo.alt, children: (
           <Image
             src={logo.src}
             alt={logo.alt}
@@ -126,8 +138,16 @@ export function SiteFooter({
             height={logo.height ?? 200}
             className="footer-logo"
           />
-        </Link>
-        <div className="footer-socials type-label" aria-label="Tautan footer">
+        ) }) : <Link href={logo.href ?? "/"} aria-label={logo.alt}>
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            width={logo.width ?? 800}
+            height={logo.height ?? 200}
+            className="footer-logo"
+          />
+        </Link>}
+        <div className="footer-socials type-label" aria-label={socialsLabel}>
           {socials.map(({ label, href, external }) => (
             <a
               key={label}

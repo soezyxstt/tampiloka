@@ -54,7 +54,8 @@ Setelah property terverifikasi:
 
 Sitemap hanya memuat halaman publik yang boleh diindeks:
 
-- Tampiloka: `/`, `/layanan`, `/produk`, `/industri`, `/tentang`, `/contact`
+- Tampiloka (Indonesia): `/`, `/layanan`, `/paket`, `/produk`, `/industri`, `/tentang`, `/contact`
+- Tampiloka (English): `/en`, `/en/services`, `/en/pricing`, `/en/work`, `/en/industries`, `/en/about`, `/en/contact`
 - Temura: `/`, `/desain`, `/harga`, `/fitur`
 
 Halaman privat sengaja tidak dimasukkan dan memakai `noindex`:
@@ -70,6 +71,8 @@ Halaman privat tetap dapat di-crawl agar Google membaca `noindex`; jangan menamb
 - `app/sitemap.xml/route.ts` dengan `lastmod`, `changefreq`, `priority`, dan image sitemap. XML disusun manual karena route `sitemap.ts` bawaan Next.js menaruh `image:image` sebelum `lastmod`; urutan itu melanggar skema sitemap dan membuat Search Console menolak file. Elemen standar harus lebih dulu, ekstensi image setelahnya.
 - `app/robots.ts` dengan referensi sitemap.
 - Metadata per halaman: title, description, canonical absolut, Open Graph, Twitter Card, dan gambar 1200×630.
+- Tampiloka memiliki halaman Indonesia dan Inggris. Indonesia tetap tanpa prefix; halaman Inggris memakai `/work`, `/services`, `/industries`, `/pricing`, `/about`, dan `/contact` (beranda `/en`). Tiap pasangan halaman memakai canonical sendiri dan tautan hreflang timbal balik `id`, `en`, serta `x-default`.
+- Sitemap Tampiloka berisi 14 entri URL (tujuh per bahasa) dengan alternates hreflang timbal balik dan citra yang sama untuk tiap pasangan. Urutan XML mempertahankan elemen standar sebelum ekstensi gambar.
 - Metadata global: `robots` (`max-image-preview:large`, `max-snippet:-1`), `theme-color`, ikon Apple, manifest, `appleWebApp`.
 - JSON-LD:
   - Tampiloka: `Organization`, `WebSite`, `WebPage`/`AboutPage`/`ContactPage`/`CollectionPage`, `FAQPage`, `ItemList`, `Service`, `ContactPoint`.
@@ -88,6 +91,13 @@ Halaman privat tetap dapat di-crawl agar Google membaca `noindex`; jangan menamb
   - `https://tampiloka.site/robots.txt` dan `https://temura.tampiloka.site/robots.txt`
   - [Rich Results Test](https://search.google.com/test/rich-results) untuk halaman utama dan `/layanan`, `/harga`, `/desain`
   - Tab **Page indexing** di Search Console untuk melihat alasan halaman belum diindeks.
+
+### Pemeliharaan konten bilingual Tampiloka
+
+- Saat menambah halaman publik, tambahkan route Indonesia dan Inggris di `apps/tampiloka/i18n/routing.ts`, salinan SEO per bahasa, dan tanggal / gambar di `apps/tampiloka/lib/seo.ts`. Pastikan kedua metadata canonical memakai route masing-masing dan hreflang menyebut pasangan yang sama.
+- Saat mengganti rute Inggris, ubah satu mapping yang dipakai tautan, canonical, sitemap, dan language switcher. Hindari redirect dari rute Inggris yang ada ke versi Indonesia.
+- Terjemahkan title, description, FAQ, teks alternatif gambar, dan data terstruktur bersama isi halaman. `inLanguage` harus sama dengan bahasa isi halaman; jangan menambahkan klaim bahwa layanan pelanggan tersedia dalam bahasa Inggris tanpa kepastian operasional.
+- Jalankan `pnpm --filter @tampiloka/web verify:marketing` dengan server lokal aktif. Script memeriksa 14 respons halaman, canonical, hreflang timbal balik, locale dokumen, navigasi, dan sitemap. `pnpm --filter @tampiloka/web verify:bilingual-browser` juga menguji ganti bahasa, kalkulator harga, tautan keyboard, dan lebar ponsel dengan Playwright.
 
 ## 5. Catatan domain
 

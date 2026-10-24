@@ -1,16 +1,24 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { SiteHeader as SharedSiteHeader } from "@tampiloka/brand-system/header";
-
-const links = [
-  { label: "Karya", href: "/produk" },
-  { label: "Layanan", href: "/layanan" },
-  { label: "Industri", href: "/industri" },
-  { label: "Paket", href: "/paket" },
-  { label: "Tentang", href: "/tentang" },
-] as const;
+import { Link, toLocalizedHref, usePathname } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { shellCopy } from "@/i18n/shell-copy";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function SiteHeader() {
+  const locale = useLocale() as Locale;
+  const pathname = usePathname();
+  const copy = shellCopy(locale);
+  const links = [
+    { label: copy.nav.work, href: "/produk" },
+    { label: copy.nav.services, href: "/layanan" },
+    { label: copy.nav.industries, href: "/industri" },
+    { label: copy.nav.pricing, href: "/paket" },
+    { label: copy.nav.about, href: "/tentang" },
+  ] as const;
+
   return (
     <SharedSiteHeader
       logo={{
@@ -22,10 +30,26 @@ export function SiteHeader() {
       }}
       links={links}
       action={{
-        label: "Kontak",
+        label: copy.nav.contact,
         href: "/contact",
       }}
-      mobileTitle="Navigasi Tampiloka"
+      mobileTitle={copy.nav.mobileNavigation}
+      navigationLabel={copy.nav.primaryNavigation}
+      homeLabel={copy.nav.home}
+      openMenuLabel={copy.nav.openNavigation}
+      closeMenuLabel={copy.nav.closeNavigation}
+      currentPath={pathname}
+      localization={<LanguageSwitcher />}
+      renderInternalLink={({ href, children, className, ariaLabel, ariaCurrent, onClick }) => {
+        const props = {
+          href: toLocalizedHref(href),
+          className,
+          "aria-label": ariaLabel,
+          "aria-current": ariaCurrent,
+          onClick,
+        };
+        return children === undefined ? <Link {...props} /> : <Link {...props}>{children}</Link>;
+      }}
     />
   );
 }
