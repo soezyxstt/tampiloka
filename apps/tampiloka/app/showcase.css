@@ -159,6 +159,10 @@
   pointer-events: none;
 }
 
+.showcase__poster { object-fit: cover; object-position: top; }
+.showcase__live { opacity: 0; }
+.showcase__live--loaded { opacity: 1; }
+
 .showcase__project-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1rem 0.2rem 0; }
 .showcase__project-name { margin: 0; font-family: var(--font-manrope), sans-serif; font-size: clamp(1.15rem, 1.65vw, 1.55rem); font-weight: 600; letter-spacing: -0.025em; }
 .showcase__project-category { margin: 0; color: var(--showcase-muted); font-size: 0.86rem; }

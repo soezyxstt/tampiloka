@@ -9,6 +9,7 @@ import { PROJECTS, type Project } from "@/lib/projects";
 import { useLocale } from "next-intl";
 import type { Locale } from "@/i18n/routing";
 import { showcaseCopy } from "@/lib/showcase-copy";
+import Image from "next/image";
 
 const projects = PROJECTS;
 
@@ -23,28 +24,108 @@ const projectFilter: Record<Project["category"], Exclude<Filter, "all">> = {
   "Undangan digital": "invitation",
 };
 
-function ProjectPreview({ project, paused, locale }: { project: Project; paused: boolean; locale: Locale }) {
+// One owner for all embedded demos. Lazy loading alone does not stop an iframe's
+// scripts after it leaves the viewport, so inactive frames must be unmounted.
+function usePreviewScheduler(blocked: boolean, filter: Filter) {
+  const grid = useRef<HTMLDivElement>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [documentVisible, setDocumentVisible] = useState(true);
+
+  useEffect(() => {
+    const container = grid.current;
+    if (!container) return;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const candidates = new Set<Element>();
+    let idleTimer: number | undefined;
+
+    const suspend = () => {
+      window.clearTimeout(idleTimer);
+      setActiveId(null);
+    };
+    const schedule = () => {
+      suspend();
+      setDocumentVisible(!document.hidden);
+      if (blocked || document.hidden || motion.matches) return;
+      // Do layout reads only once scrolling has settled, never per scroll event.
+      idleTimer = window.setTimeout(() => {
+        let bestId: string | null = null;
+        let bestArea = 0;
+        for (const candidate of candidates) {
+          const rect = candidate.getBoundingClientRect();
+          const height = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+          const width = Math.max(0, Math.min(rect.right, window.innerWidth) - Math.max(rect.left, 0));
+          const area = height * width;
+          if (area > bestArea) {
+            bestArea = area;
+            bestId = candidate.getAttribute("data-preview-id");
+          }
+        }
+        setActiveId(bestId);
+      }, 300);
+    };
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) candidates.add(entry.target);
+        else candidates.delete(entry.target);
+      }
+      schedule();
+    });
+    container.querySelectorAll("[data-preview-id]").forEach((target) => observer.observe(target));
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule, { passive: true });
+    document.addEventListener("visibilitychange", schedule);
+    motion.addEventListener("change", schedule);
+    schedule();
+    return () => {
+      window.clearTimeout(idleTimer);
+      observer.disconnect();
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      document.removeEventListener("visibilitychange", schedule);
+      motion.removeEventListener("change", schedule);
+    };
+  }, [blocked, filter]);
+
+  return { grid, activeId: blocked ? null : activeId, documentVisible };
+}
+
+function LiveProjectPreview({ project, locale }: { project: Project; locale: Locale }) {
   const [stopIndex, setStopIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const stopCount = project.scrollStops.length;
 
   useEffect(() => {
-    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (stopCount < 2) return;
 
     const interval = window.setInterval(() => {
       setStopIndex((current) => (current + 1) % stopCount);
     }, 6500);
 
     return () => window.clearInterval(interval);
-  }, [paused, stopCount]);
+  }, [stopCount]);
 
   return (
-    <div className="showcase__site" aria-hidden="true">
-      <iframe
-        title={showcaseCopy[locale].previewSite(project.name)}
-        src={`${project.url}${project.scrollStops[stopIndex]}`}
-        loading="lazy"
-        tabIndex={-1}
+    <iframe
+      title={showcaseCopy[locale].previewSite(project.name)}
+      src={`${project.url}${project.scrollStops[stopIndex]}`}
+      className={loaded ? "showcase__live showcase__live--loaded" : "showcase__live"}
+      onLoad={() => setLoaded(true)}
+      tabIndex={-1}
+    />
+  );
+}
+
+function ProjectPreview({ project, active, locale }: { project: Project; active: boolean; locale: Locale }) {
+  return (
+    <div className="showcase__site" data-preview-id={project.id} aria-hidden="true">
+      <Image
+        className="showcase__poster"
+        src={`/images/projects/${project.id}.webp`}
+        alt=""
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
+      {active && <LiveProjectPreview project={project} locale={locale} />}
     </div>
   );
 }
@@ -56,6 +137,7 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
   const [isPaused, setIsPaused] = useState(false);
   const [filter, setFilter] = useState<Filter>("all");
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const { grid, activeId, documentVisible } = usePreviewScheduler(isPaused || activeProject !== null, filter);
   const [dragOffset, setDragOffset] = useState(0);
   const dragStart = useRef<number | null>(null);
   const dragDistance = useRef(0);
@@ -137,7 +219,7 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
           {copy.conceptDisclosure}
         </p>
 
-        <div className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
+        <div ref={grid} className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
           {visibleProjects.map((project, index) => (
             <Card
               className={`showcase__project showcase__project--${project.id}`}
@@ -147,7 +229,7 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
             >
               <div className="showcase__preview-shell">
                 <span className="showcase__screen" aria-hidden="true">
-                  <ProjectPreview project={project} paused={isPaused || activeProject !== null} locale={locale} />
+                  <ProjectPreview project={project} active={activeId === project.id} locale={locale} />
                 </span>
                 <button
                   className="showcase__open"
@@ -223,12 +305,14 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
-                <iframe
-                  key={activeProject.id}
-                  className="showcase-sheet__frame"
-                  title={copy.site(activeProject.name)}
-                  src={activeProject.url}
-                />
+                {documentVisible && (
+                  <iframe
+                    key={activeProject.id}
+                    className="showcase-sheet__frame"
+                    title={copy.site(activeProject.name)}
+                    src={activeProject.url}
+                  />
+                )}
               </div>
             </>
           )}
