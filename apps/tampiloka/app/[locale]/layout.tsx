@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: Pick<LocalizedLayoutProps, "p
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "256x256", type: "image/x-icon" },
-        { url: "/brand/icons/light/tampiloka-favicon-32-light.png", sizes: "32x32", type: "image/png" },
+        { url: "/brand/logos/light/tampiloka-symbol-light@1x.png", sizes: "256x256", type: "image/png" },
       ],
       apple: [{ url: "/brand/icons/light/tampiloka-apple-touch-light.png", sizes: "180x180", type: "image/png" }],
     },
