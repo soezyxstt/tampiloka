@@ -51,8 +51,6 @@ export type PrimaryPageCopy = {
     title: string;
     description: string;
     cta: string;
-    socialTitle: string;
-    homeCta: string;
     imageAlt: string;
   };
   studio: {
@@ -125,8 +123,6 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       title: "Bicarakan proyek Anda.",
       description: "Sampaikan jenis usaha, kebutuhan, dan waktu pengerjaan yang Anda harapkan.",
       cta: "Hubungi lewat WhatsApp",
-      socialTitle: "Email & media sosial.",
-      homeCta: "Kembali ke beranda",
       imageAlt: "Pasangan pengantin berbusana Jawa di taman sebagai contoh undangan digital.",
     },
     studio: {
@@ -201,8 +197,6 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       title: "Let’s talk about your project.",
       description: "Tell us about your business, what you need, and your preferred timeline.",
       cta: "Contact us on WhatsApp",
-      socialTitle: "Email & social media.",
-      homeCta: "Back to home",
       imageAlt: "A couple in Javanese wedding attire in a garden, shown as an example of a digital invitation.",
     },
     studio: {

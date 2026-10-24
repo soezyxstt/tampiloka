@@ -131,6 +131,9 @@
   .faq-trigger { min-height: 72px; gap: 14px; padding-block: 19px; }
   .faq-answer { padding-right: 10px; }
 }
+@media (max-width: 480px) {
+  .header-mobile-actions .header-contact-link--mobile { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   .site-header--primary { transition-duration: .01ms; }
   .header-nav-link, .header-sheet, .header-sheet__nav a, .sheet-backdrop, .faq-icon, .faq-panel { transition-duration: .01ms; }

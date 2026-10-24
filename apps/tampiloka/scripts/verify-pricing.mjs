@@ -48,7 +48,10 @@ try {
   assert.equal(await page.locator(".pricing-card").count(), 4);
   assert.deepEqual(await page.locator("s.pricing-card__original").allTextContents(), ["Rp1.665.000", "Rp2.831.667", "Rp4.165.000"]);
   assert.deepEqual(await page.locator(".pricing-card__price > p").allTextContents(), ["Rp999k", "Rp1.699k", "Rp2.499k", "Sesuai kebutuhan"]);
-  assert(await page.locator(".pricing-button").first().evaluate((element) => parseFloat(getComputedStyle(element).borderRadius) <= 8), "CTAs use compact corners");
+  assert(await page.locator(".pricing-button").first().evaluate((element) => {
+    const radius = getComputedStyle(element).borderRadius;
+    return radius.includes("infinity") || Number.parseFloat(radius) >= 999;
+  }), "CTAs use the shared pill button shape");
   assert.equal(await page.locator(".pricing-page .lucide-sparkles, .pricing-page .type-overline, .pricing-page .pricing-launch").count(), 0);
   const fontState = await page.evaluate(async () => { await document.fonts.ready; return [...document.fonts].filter((font) => font.status === "loaded").map((font) => font.family); });
   assert(fontState.some((name) => /Inter/.test(name)), "Inter loads");

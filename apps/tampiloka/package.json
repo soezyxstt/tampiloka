@@ -12,6 +12,7 @@
     "verify:marketing": "node scripts/verify-marketing.mjs",
     "verify:bilingual-browser": "node scripts/verify-bilingual-browser.mjs",
     "verify:showcase-browser": "node scripts/verify-showcase-browser.mjs",
+    "verify:ui-browser": "node scripts/verify-ui-consistency-browser.mjs",
     "verify:pricing": "node scripts/verify-pricing.mjs",
     "prepare:images": "node scripts/prepare-images.mjs"
   },

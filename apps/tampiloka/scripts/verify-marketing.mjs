@@ -72,6 +72,7 @@ for (let index = 0; index < routePairs.length; index += 1) {
     assert.ok(html.includes(`"inLanguage":"${locale === 'id' ? 'id-ID' : 'en'}"`), `${path}: structured data language`);
     assert.ok(html.includes('faq-section'), `${path}: FAQ available`);
     assert.ok(html.includes('href="https://wa.me/6282119307102"'), `${path}: WhatsApp contact available`);
+    assert.ok(!/\+?62[\s-]*821[\s-]*1930[\s-]*7102|0821[\s-]*1930[\s-]*7102/.test(visibleHtml.replace(/<[^>]*>/g, '')), `${path}: contact number is not displayed`);
     for (const expectedPath of localizedPaths(locale === 'id' ? 0 : 1).slice(1)) {
       assert.ok(html.includes(`href="${expectedPath}"`), `${path}: missing ${locale} navigation to ${expectedPath}`);
     }
@@ -109,8 +110,18 @@ for (let index = 0; index < routePairs.length; index += 1) {
   }
 }
 
-assert.match(pages.get('/contact'), /<a[^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*>[\s\S]*?Hubungi lewat WhatsApp/, 'WhatsApp is the main Indonesian contact CTA');
-assert.match(pages.get('/en/contact'), /<a[^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*>[\s\S]*?(WhatsApp|Contact us)/i, 'WhatsApp is the main English contact CTA');
+for (const path of ['/contact', '/en/contact']) {
+  const html = pages.get(path);
+  const whatsappLinks = [...html.matchAll(/<a\b([^>]*href="https:\/\/wa\.me\/6282119307102"[^>]*)>([\s\S]*?)<\/a>/g)];
+  assert.ok(whatsappLinks.length, `${path}: WhatsApp contact remains available`);
+  for (const [, attributes, content] of whatsappLinks) {
+    assert.match(attributes, /aria-label="[^"]*WhatsApp[^"]*"/i, `${path}: icon link has an accessible name`);
+    assert.match(content, /<svg\b/, `${path}: contact action uses an icon`);
+    assert.equal(content.replace(/<[^>]*>/g, '').trim(), '', `${path}: contact action has no visible platform text`);
+  }
+  assert.ok(!html.includes('contact-page__social'), `${path}: no separate social section`);
+  assert.ok(!html.includes('inner-page__end-link'), `${path}: no redundant home link`);
+}
 for (const [locale, path] of [['id', '/halaman-tidak-tersedia'], ['en', '/en/page-not-found']]) {
   const response = await fetch(new URL(path, origin));
   assert.equal(response.status, 404, `${path} returns a real HTTP 404`);

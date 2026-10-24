@@ -68,13 +68,13 @@
 .about-visual-section { display: grid; grid-template-columns: 1fr .8fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); padding-block: 2rem 5rem; }
 .about-visual-section .page-visual { aspect-ratio: 1.3; }
 
-.contact-page__email { display: block; width: fit-content; margin-top: 1.15rem; color: #53645a; text-decoration: underline; text-underline-offset: 4px; }
-.contact-page__social { padding-block: 2.25rem; border-top: 1px solid #e1e8e1; }
-.contact-page__social h2 { margin: 0; }
-.contact-page__links { display: flex; flex-wrap: wrap; gap: clamp(1.25rem, 4vw, 4rem); margin-top: 1.5rem; }
-.contact-page__links a { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; }
-.contact-page__links a:hover { color: #15803d; }
-.contact-page__links svg { width: 1rem; height: 1rem; }
+.contact-page__links { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: 2rem; }
+.contact-page__link { display: inline-flex; width: 2.75rem; height: 2.75rem; align-items: center; justify-content: center; border: 1px solid #d7e1d8; border-radius: 50%; color: #183e29; text-decoration: none; transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease; }
+.contact-page__link:hover { border-color: #15803d; background: #edf6ee; color: #15803d; transform: translateY(-2px); }
+.contact-page__link--primary { width: 3.5rem; height: 3.5rem; margin-right: .35rem; border-color: #183e29; background: #183e29; color: white; }
+.contact-page__link--primary:hover { border-color: #15803d; background: #15803d; color: white; }
+.contact-page__link svg { flex: none; }
+.contact-page__email { display: block; width: fit-content; margin-top: 1rem; color: #53645a; text-decoration: underline; text-underline-offset: 4px; }
 
 @media (max-width: 900px) {
   .inner-page { padding-inline: 6%; }
@@ -103,7 +103,7 @@
   .about-note, .about-visual-section { grid-template-columns: 1fr; gap: 2rem; padding-block: 3.5rem; }
   .about-visual-section .page-visual { order: 1; }
   .inner-page__end-link { flex-direction: column; gap: .9rem; padding-top: 3rem; }
-  .contact-page__links { gap: 1.4rem; }
+  .contact-page__links { gap: .65rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

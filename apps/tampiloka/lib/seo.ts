@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { defaultLocale, localePath, type Locale } from "@/i18n/routing";
+import { CONTACT, SOCIAL_PROFILES } from "@/lib/contact-links";
+
+export { CONTACT, SOCIAL_PROFILES } from "@/lib/contact-links";
 
 const DEFAULT_SITE_ORIGIN = "https://tampiloka.site";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_ORIGIN;
@@ -26,19 +29,6 @@ export const SITE_DESCRIPTIONS: Record<Locale, string> = {
  * Google uses lastmod in the sitemap to schedule recrawls, so inaccurate values are ignored.
  */
 export const SITE_UPDATED_AT = "2026-10-24";
-
-export const CONTACT = {
-  email: "halo@tampiloka.site",
-  phone: "+62 821-1930-7102",
-  telephone: "+6282119307102",
-  whatsapp: "https://wa.me/6282119307102",
-} as const;
-
-export const SOCIAL_PROFILES = [
-  "https://www.instagram.com/adihnursyam/",
-  "https://x.com/soezyxsttt",
-  "https://www.linkedin.com/in/adihnursyam/",
-] as const;
 
 export const SOCIAL_HANDLE = "@soezyxsttt";
 
@@ -272,7 +262,6 @@ export function organizationSchema(locale: Locale = defaultLocale): JsonLdNode {
     },
     image: DEFAULT_SOCIAL_IMAGE_URL,
     email: CONTACT.email,
-    telephone: CONTACT.telephone,
     sameAs: SOCIAL_PROFILES,
     areaServed: { "@type": "Country", name: "Indonesia" },
     knowsAbout: locale === "en" ? [
@@ -292,7 +281,6 @@ export function organizationSchema(locale: Locale = defaultLocale): JsonLdNode {
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        telephone: CONTACT.telephone,
         email: CONTACT.email,
         availableLanguage: ["id"],
         areaServed: "ID",

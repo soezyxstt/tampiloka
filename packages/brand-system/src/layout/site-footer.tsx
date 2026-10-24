@@ -32,6 +32,8 @@ export interface SiteFooterProps {
   ctaLink: {
     label: string;
     href: string;
+    ariaLabel?: string;
+    icon?: ReactNode;
   };
   directoryGroups: FooterGroupProps[];
   wideGroup?: FooterGroupProps;
@@ -40,6 +42,8 @@ export interface SiteFooterProps {
     label: string;
     href: string;
     external?: boolean;
+    ariaLabel?: string;
+    icon?: ReactNode;
   }>;
   pendingNotice?: {
     label: string;
@@ -114,8 +118,8 @@ export function SiteFooter({
           <h2 className="type-display">
             {ctaHeading.prefix} <span>{ctaHeading.highlight}</span>
           </h2>
-          <a className="footer-email type-heading-4" href={ctaLink.href}>
-            {ctaLink.label} <ArrowUpRight aria-hidden="true" />
+          <a className={`footer-email type-heading-4${ctaLink.icon ? " footer-email--icon" : ""}`} href={ctaLink.href} aria-label={ctaLink.ariaLabel}>
+            {ctaLink.icon ?? ctaLink.label} {!ctaLink.icon && <ArrowUpRight aria-hidden="true" />}
           </a>
         </section>
 
@@ -148,15 +152,15 @@ export function SiteFooter({
           />
         </Link>}
         <div className="footer-socials type-label" aria-label={socialsLabel}>
-          {socials.map(({ label, href, external }) => (
+          {socials.map(({ label, href, external, ariaLabel, icon }) => (
             <a
               key={label}
               href={href}
+              aria-label={ariaLabel ?? (icon ? label : undefined)}
               target={external || href.startsWith("http") ? "_blank" : undefined}
               rel={external || href.startsWith("http") ? "noopener noreferrer" : undefined}
             >
-              {label}
-              <ArrowUpRight aria-hidden="true" size={14} />
+              {icon ?? <>{label}<ArrowUpRight aria-hidden="true" size={14} /></>}
             </a>
           ))}
           {pendingNotice && (

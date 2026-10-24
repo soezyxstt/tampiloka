@@ -4,7 +4,8 @@ import { Link, toLocalizedHref } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { shellCopy } from "@/i18n/shell-copy";
 import { TEMURA_URL } from "@/lib/temura-url";
-import { CONTACT } from "@/lib/seo";
+import { ContactPlatformIcon } from "@/components/contact-icon-link";
+import { CONTACT, CONTACT_LINKS } from "@/lib/contact-links";
 
 export async function SiteFooter() {
   const locale = (await getLocale()) as Locale;
@@ -37,19 +38,23 @@ export async function SiteFooter() {
     { label: copy.footer.weddingInvitations, href: "/industri#industry-wedding" },
   ];
 
-  const socials = [
-    { label: "WhatsApp", href: "https://wa.me/6282119307102" },
-    { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
-    { label: "X", href: "https://x.com/soezyxsttt" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
-    { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
-  ];
+  const socials = CONTACT_LINKS.map((link) => ({
+    label: link.label,
+    href: link.href,
+    ariaLabel: link.label,
+    icon: <ContactPlatformIcon platform={link.platform} />,
+  }));
 
   return (
     <SharedSiteFooter
       watermarkSrc="/symbol-green.svg"
       ctaHeading={locale === "en" ? { prefix: "Get in", highlight: "touch." } : { prefix: "Hubungi", highlight: "kami." }}
-      ctaLink={{ label: "+62 821-1930-7102", href: "https://wa.me/6282119307102" }}
+      ctaLink={{
+        label: locale === "en" ? "Contact us on WhatsApp" : "Hubungi lewat WhatsApp",
+        ariaLabel: locale === "en" ? "Contact us on WhatsApp" : "Hubungi lewat WhatsApp",
+        href: CONTACT.whatsapp,
+        icon: <ContactPlatformIcon platform="whatsapp" size={24} />,
+      }}
       directoryGroups={[
         { title: copy.footer.studio, items: studioLinks },
         { title: copy.footer.services, items: serviceLinks },

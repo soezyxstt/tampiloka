@@ -1,14 +1,13 @@
-import { ArrowUpRight, MessageCircle } from "lucide-react";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import { ContactIconLink } from "@/components/contact-icon-link";
 import { PageVisual } from "@/components/page-visual";
 import { JsonLd } from "@/components/json-ld";
-import { CONTACT, createPageMetadata, localizedSiteUrl, webPageSchema } from "@/lib/seo";
+import { createPageMetadata, localizedSiteUrl, webPageSchema } from "@/lib/seo";
+import { CONTACT, CONTACT_LINKS } from "@/lib/contact-links";
 import { getPrimaryCopy } from "@/i18n/primary-copy";
-import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -19,13 +18,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const copy = pageCopy.contact;
   return createPageMetadata({ path: "/contact", locale, ...pageCopy.metadata.contact, imageAlt: copy.imageAlt, imagePath: "/images/studio-workspace.webp" });
 }
-
-const contactLinks = [
-  { label: CONTACT.email, href: `mailto:${CONTACT.email}` },
-  { label: "Instagram", href: "https://www.instagram.com/adihnursyam/" },
-  { label: "X", href: "https://x.com/soezyxsttt" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/adihnursyam/" },
-];
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: requestedLocale } = await params;
@@ -47,7 +39,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         "@type": "ContactPoint",
         "@id": contactPointId,
         contactType: "sales",
-        telephone: CONTACT.telephone,
         email: CONTACT.email,
         url: CONTACT.whatsapp,
         availableLanguage: [locale],
@@ -63,29 +54,22 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <div className="inner-page__intro" data-reveal>
           <h1 id="contact-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
-          <Button className="inner-page__cta" size="pill" nativeButton={false} render={<a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" />}>
-            <MessageCircle aria-hidden="true" /> {copy.cta} <ArrowUpRight aria-hidden="true" />
-          </Button>
-          <a className="contact-page__email type-body" href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer">{CONTACT.phone}</a>
+          <nav className="contact-page__links" aria-label={locale === "en" ? "Contact links" : "Tautan kontak"}>
+            {CONTACT_LINKS.map((link) => (
+              <ContactIconLink
+                key={link.platform}
+                className={link.platform === "whatsapp" ? "contact-page__link contact-page__link--primary" : "contact-page__link"}
+                platform={link.platform}
+                href={link.href}
+                label={link.platform === "whatsapp" ? copy.cta : link.label}
+                iconSize={link.platform === "whatsapp" ? 24 : 20}
+              />
+            ))}
+          </nav>
           <a className="contact-page__email type-body" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
         </div>
         <PageVisual imageKey="contact-invitation" alt={copy.imageAlt} preload />
       </section>
-
-      <section className="contact-page__social" aria-labelledby="social-title" data-reveal>
-        <h2 id="social-title" className="type-heading-3">{copy.socialTitle}</h2>
-        <div className="contact-page__links">
-          {contactLinks.map(({ label, href }) => (
-            <a key={label} className="type-label-lg" href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined}>
-              {label}<ArrowUpRight aria-hidden="true" />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label" href="/">{copy.homeCta} <ArrowUpRight aria-hidden="true" /></Link>
-      </div>
     </div>
   );
 }

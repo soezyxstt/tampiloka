@@ -1,7 +1,8 @@
-import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { PricingLink } from "@/components/pricing/pricing-link";
+import { PricingContactLink } from "@/components/pricing/pricing-contact-link";
 import { formatBusinessDays, formatPromoPrice, formatCurrency, normalPrice, WEBSITE_PLANS } from "@/lib/pricing";
-import { CONTACT } from "@/lib/seo";
+import { CONTACT } from "@/lib/contact-links";
 import { planLabel, pricingCopy } from "@/i18n/pricing-copy";
 import type { Locale } from "@/i18n/routing";
 
@@ -29,7 +30,7 @@ export function CustomPricingCard({ locale }: { locale: Locale }) {
   return <article className="pricing-card pricing-card--custom" aria-labelledby="plan-custom">
     <h2 id="plan-custom" className="type-heading-4">Custom</h2>
     <div className="pricing-card__price pricing-card__price--custom"><p className="type-heading-3">{copy.custom.suitable}</p></div>
-    <PricingLink className="pricing-button" href={`${CONTACT.whatsapp}?text=${encodeURIComponent(copy.estimate.customGreeting)}`} target="_blank" rel="noopener noreferrer">{copy.custom.contact} <ArrowUpRight aria-hidden="true" /></PricingLink>
+    <PricingContactLink className="pricing-button pricing-button--contact" href={`${CONTACT.whatsapp}?text=${encodeURIComponent(copy.estimate.customGreeting)}`} label={copy.custom.contact} targetBlank />
     <ul className="pricing-card__features type-body">{copy.custom.features.map((feature) => <li key={feature}><Check aria-hidden="true" size={16} /><span>{feature}</span></li>)}</ul>
     <p className="pricing-card__meta type-body-sm">{copy.custom.meta}</p>
   </article>;
