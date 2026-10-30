@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 import { chooseSelect } from './select-test-helper.mjs';
 
@@ -21,17 +21,44 @@ try {
   for (const width of [1440, 1024, 901, 768, 390, 320]) {
     const page = await browser.newPage({ viewport: { width, height: 1000 } });
     const errors = [];
+    const networkFailures = [];
+    const consoleErrors = [];
+    const fontResponses = [];
     page.on('pageerror', error => errors.push(error.message));
+    page.on('requestfailed', request => networkFailures.push({ url: request.url(), type: request.resourceType(), error: request.failure()?.errorText }));
+    page.on('response', response => {
+      const request = response.request();
+      if (request.resourceType() === 'font' || response.status() >= 400) fontResponses.push({ url: response.url(), status: response.status(), type: request.resourceType() });
+    });
+    page.on('console', message => { if (message.type() === 'error') consoleErrors.push(message.text()); });
     await page.goto(`${origin}/contact`, { waitUntil: 'networkidle' });
     const baselineHeader = await headerStyle(page);
     await page.goto(`${origin}/templates`, { waitUntil: 'networkidle' });
     await page.locator('.site-loader').waitFor({ state: 'hidden' });
     assert.deepEqual(await headerStyle(page), baselineHeader, 'Gallery uses the shared header styles');
-    assert.ok(await page.locator('h1').evaluate(async heading => {
-      const font = `700 48px ${getComputedStyle(heading).fontFamily}`;
-      await document.fonts.load(font, heading.textContent);
-      return document.fonts.check(font, heading.textContent);
-    }), 'Heading font loads');
+    const fontCheck = await page.locator('h1').evaluate(async heading => {
+      const style = getComputedStyle(heading);
+      // Loading the whole fallback stack also forces next/font's local Arial
+      // metrics face to load, which need not exist on a Linux runner.
+      const family = style.fontFamily.split(',')[0].trim();
+      const font = `${style.fontWeight} ${style.fontSize} ${family}`;
+      const describe = face => ({ family: face.family, status: face.status, weight: face.weight });
+      let loaded = [];
+      let error = null;
+      try { loaded = await document.fonts.load(font, heading.textContent); }
+      catch (failure) { error = String(failure); }
+      return {
+        ok: !error && loaded.length > 0 && loaded.every(face => face.status === 'loaded') && document.fonts.check(font, heading.textContent),
+        font, stack: style.fontFamily, loaded: loaded.map(describe), error,
+        faces: Array.from(document.fonts).map(describe),
+        resources: performance.getEntriesByType('resource').filter(resource => /\.(woff2?|ttf|otf)(?:\?|$)/i.test(resource.name)).map(resource => resource.name),
+      };
+    });
+    await writeFile(new URL(`gallery-${width}-diagnostics.json`, output), JSON.stringify({ url: page.url(), width, fontCheck, fontResponses, networkFailures, consoleErrors, errors }, null, 2));
+    if (width === 1440 || width === 390 || !fontCheck.ok) {
+      await page.screenshot({ path: new URL(`gallery-${width}-initial.png`, output).pathname.replace(/^\/([A-Z]:)/, '$1'), fullPage: true, animations: 'disabled' });
+    }
+    assert.ok(fontCheck.ok, `Heading web font loads: ${JSON.stringify(fontCheck)}; network: ${JSON.stringify(networkFailures)}`);
     assert.match(await page.locator('.templates-page__intro').evaluate(node => getComputedStyle(node).transitionDuration), /0.75s/, 'Gallery uses shared reveal motion');
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.locator('.template-gallery__item').count(), count);
