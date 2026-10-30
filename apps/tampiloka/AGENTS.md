@@ -21,6 +21,7 @@ Follow the root `AGENTS.md` section **Shared Tampiloka template discovery**. `/t
 
 # Shared UI and motion
 
+- Follow the root **Links and icon alignment** rules. CTA and text-link labels should stand on their own without repeated redirect arrows. Use the shared underlined link variant or primary button treatment; keep functional disclosure, menu, and standalone launch icons. Fix icon alignment in shared styles with symmetric padding, not route-specific offsets.
 - Every marketing route, including `/paket` and its English equivalent, uses the shared layout, `SiteHeader`, `SiteFooter`, and `SiteMotion`. Keep navigation and global contact actions identical across routes. Do not fork the header or override its controls from page CSS.
 - Use the components under `components/ui` and their brand-system implementations for buttons and form controls. Extend a shared primitive when a control is missing; avoid independently styled copies inside page components. Preserve native link, form, keyboard, disabled, and focus behavior.
 - Header and primary CTA buttons follow the brand system's `brand` variant and `pill` sizing. Compact icon links and form controls use their corresponding shared variants; this is the exception to the general prohibition on decorative pills. Page-specific classes may control layout and spacing, but must not replace shared control colors, corners, focus rings, or interaction states.
@@ -34,3 +35,4 @@ Follow the root `AGENTS.md` section **Shared Tampiloka template discovery**. `/t
 - Use reusable, recognizable icons for contact/social platform actions rather than visible platform-name text. Every icon-only link needs a descriptive `aria-label`, a visible keyboard focus state, and an adequate touch target. Decorative SVGs use `aria-hidden="true"`.
 - Share platform icons, link destinations, and contact-link styling rather than copying SVG paths or URLs into individual pages. Product descriptions may still name platforms where the name explains a feature.
 - Integrate email and social actions with the main contact content; do not create a separate sparse section just for these links. Do not add a redundant back-to-home link to the contact page; the shared navigation already provides it.
+

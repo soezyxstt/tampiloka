@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { PricingLink } from "@/components/pricing/pricing-link";
 import { PricingContactLink } from "@/components/pricing/pricing-contact-link";
 import { formatBusinessDays, formatPromoPrice, formatCurrency, normalPrice, WEBSITE_PLANS } from "@/lib/pricing";
@@ -17,7 +17,7 @@ export function PricingCard({ plan, locale }: { plan: (typeof WEBSITE_PLANS)[num
       <s className="pricing-card__original type-body">{formatCurrency(normalPrice(plan.price), locale)}</s>
       <p className="type-heading-2" aria-label={formatCurrency(plan.price, locale)}>{formatPromoPrice(plan.price, locale)}</p>
     </div>
-    <PricingLink className="pricing-button" variant={plan.id === "menu" ? "brand" : "outline"} href={`#estimasi-${plan.id}`}>{copy.estimate.packageButton(planName)} <ArrowRight aria-hidden="true" /></PricingLink>
+    <PricingLink className="pricing-button" variant={plan.id === "menu" ? "brand" : "outline"} href={`#estimasi-${plan.id}`}>{copy.estimate.packageButton(planName)}</PricingLink>
     <ul className="pricing-card__features type-body">
       {(inherited ? [inherited, ...content.features(plan)] : content.features(plan)).map((feature) => <li key={feature}><Check aria-hidden="true" size={16} /><span>{feature}</span></li>)}
     </ul>

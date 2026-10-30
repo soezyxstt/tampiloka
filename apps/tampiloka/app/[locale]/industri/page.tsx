@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IndustryPreview } from "@/components/industry-preview";
 import { JsonLd } from "@/components/json-ld";
@@ -102,16 +101,16 @@ export default async function IndustriPage({ params }: LocalizedPageProps) {
                   ? <a href={TEMURA_URL} target="_blank" rel="noopener noreferrer" />
                   : <Link href="/contact" />
                 }>
-                  {label} <ArrowUpRight aria-hidden="true" />
+                  {label}
                 </Button>
                 {["food", "fashion", "small-business", "technology"].includes(kind) && (
                   <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href="/templates" />}>
-                    {locale === "en" ? "Explore templates" : "Lihat template"} <ArrowUpRight aria-hidden="true" />
+                    {locale === "en" ? "Explore templates" : "Lihat template"}
                   </Button>
                 )}
                 {(kind === "portfolio" || kind === "enterprise") && (
                   <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href="/produk" />}>
-                    {locale === "en" ? "View our work" : "Lihat karya"} <ArrowUpRight aria-hidden="true" />
+                    {locale === "en" ? "View our work" : "Lihat karya"}
                   </Button>
                 )}
               </div>
@@ -124,7 +123,7 @@ export default async function IndustriPage({ params }: LocalizedPageProps) {
 
       <div className="inner-page__end-link" data-reveal>
         <Button className="inner-page__cta" nativeButton={false} render={<Link href="/contact" />}>
-          {copy.discussNeeds} <ArrowUpRight aria-hidden="true" />
+          {copy.discussNeeds}
         </Button>
       </div>
     </div>

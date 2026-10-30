@@ -61,6 +61,8 @@ jobs:
         run: pnpm --filter @tampiloka/web typecheck
       - name: Lint
         run: pnpm --filter @tampiloka/web lint
+      - name: Verify the shared brand assets
+        run: pnpm --filter @tampiloka/web check:brand
       - name: Verify the runtime catalog contract
         run: pnpm --filter @tampiloka/web verify:catalog
       - name: Build Tampiloka
@@ -83,6 +85,8 @@ jobs:
           exit 1
       - name: Verify gallery behavior and responsive layouts
         run: pnpm --filter @tampiloka/web verify:templates-browser
+      - name: Verify shared navigation and contact controls
+        run: pnpm --filter @tampiloka/web verify:ui-browser
       - name: Upload browser evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
@@ -92,3 +96,4 @@ jobs:
             artifacts/templates-qa
             ${{ runner.temp }}/tampiloka-next.log
           if-no-files-found: warn
+

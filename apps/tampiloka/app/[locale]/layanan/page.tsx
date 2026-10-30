@@ -1,4 +1,3 @@
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
@@ -56,7 +55,7 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
           <h1 id="services-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
           <Button className="inner-page__cta" size="lg" nativeButton={false} render={<Link href="/contact" />}>
-            {copy.contactCta} <ArrowUpRight aria-hidden="true" />
+            {copy.contactCta}
           </Button>
         </div>
         <PageVisual imageKey="service-overview" alt={copy.imageAlt} preload />
@@ -71,8 +70,8 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
               <ul className="service-row__list type-body-sm">
                 {service.items.map((item) => <li key={item}>{item}</li>)}
               </ul>
-              {service.href && <a className="service-row__cta type-label" href={service.href} target="_blank" rel="noopener noreferrer">{copy.temuraCta} <ArrowUpRight aria-hidden="true" /></a>}
-              {service.imageKey === "service-website" && <Link className="service-row__cta type-label" href="/paket">{copy.packageCta} <ArrowUpRight aria-hidden="true" /></Link>}
+              {service.href && <a className="service-row__cta type-label" href={service.href} target="_blank" rel="noopener noreferrer">{copy.temuraCta}</a>}
+              {service.imageKey === "service-website" && <Link className="service-row__cta type-label" href="/paket">{copy.packageCta}</Link>}
             </div>
             <PageVisual imageKey={service.imageKey} alt={service.imageAlt} />
           </article>
@@ -80,7 +79,7 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label-lg" href="/contact">{copy.endCta} <ArrowDownRight aria-hidden="true" /></Link>
+        <Link className="type-label-lg" href="/contact">{copy.endCta}</Link>
       </div>
     </div>
   );

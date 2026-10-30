@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Fragment, type ReactElement, type ReactNode } from "react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 
@@ -194,7 +194,7 @@ export function SiteHeader({
         {action && (
           action.href.startsWith("http") || action.href.startsWith("mailto:") || action.href.startsWith("#") ? (
             <a className="header-contact-link" href={action.href}>
-              {action.label} <ArrowUpRight aria-hidden="true" />
+              {action.label}
             </a>
           ) : (
             <Button
@@ -203,7 +203,7 @@ export function SiteHeader({
               nativeButton={false}
               render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-contact-link", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}
             >
-              {action.label} <ArrowUpRight aria-hidden="true" />
+              {action.label}
             </Button>
           )
         )}
@@ -276,11 +276,11 @@ export function SiteHeader({
                     nativeButton={false}
                     render={<a className="header-sheet__contact" href={action.href} />}
                   >
-                    {action.label} <ArrowUpRight aria-hidden="true" />
+                    {action.label}
                   </SheetClose>
                 ) : (
                   <SheetClose nativeButton={false} render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-sheet__contact", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link className="header-sheet__contact" href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}>
-                    {action.label} <ArrowUpRight aria-hidden="true" />
+                    {action.label}
                   </SheetClose>
                 )
               )}
