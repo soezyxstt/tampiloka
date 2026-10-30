@@ -40,7 +40,7 @@
 .service-row__list { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; color: #45634c; }
 .service-row__list li::before { content: ""; display: inline-block; width: 5px; height: 5px; margin: 0 .55rem .12rem 0; border-radius: 50%; background: #57a96a; }
 .service-row .page-visual { aspect-ratio: 1.34; min-height: 260px; }
-.service-row__cta { display: inline-flex; width: fit-content; align-items: center; gap: .55rem; margin-top: 1.5rem; color: #183e29; text-underline-offset: 4px; }
+.service-row__cta { display: inline-flex; width: fit-content; align-items: center; gap: .55rem; margin-top: 1.5rem; color: #183e29; text-decoration: underline; text-underline-offset: 4px; }
 .service-row__cta svg { width: 1rem; height: 1rem; }
 
 .inner-page--industries { max-width: 1320px; }
@@ -109,3 +109,4 @@
 @media (prefers-reduced-motion: reduce) {
   .page-visual__image { transition-duration: .01ms !important; }
 }
+

@@ -267,8 +267,8 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
           ))}
         </div>
         {!page && <div className="showcase__links" data-reveal>
-          <Button variant="link" nativeButton={false} render={<a href={localePath(locale, "/produk")} />}>{copy.allWork} <ArrowUpRight aria-hidden="true" /></Button>
-          <Button variant="link" nativeButton={false} render={<a href={localePath(locale, "/templates")} />}>{copy.templatesLink} <ArrowUpRight aria-hidden="true" /></Button>
+          <Button variant="link" nativeButton={false} render={<a href={localePath(locale, "/produk")} />}>{copy.allWork}</Button>
+          <Button variant="link" nativeButton={false} render={<a href={localePath(locale, "/templates")} />}>{copy.templatesLink}</Button>
         </div>}
       </div>
 

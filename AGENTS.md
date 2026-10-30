@@ -25,6 +25,13 @@ The public template demos live in `soezyxstt/tampiloka-templates`. This reposito
 
 These rules do not authorize publishing private prospect demos or changing Temura's unrelated product behavior. Changes to the public catalog belong in the templates repository; changes to marketing layout and its consumer belong here.
 
+# Links and icon alignment
+
+- Do not automatically append redirect arrows to every CTA, text link, card, or section heading. Use a clear destination label, the shared button/link variant, and visible hover/focus states. Text links may use a restrained underline; keep primary actions recognizable as buttons.
+- Reserve icons for information or a distinct action: opening/closing a menu, expanding a select or accordion, moving a carousel, or a standalone external-launch control. Removing a decorative icon must not leave an empty control. Preserve native anchors, destinations, locale/query state, accessible names, and new-tab behavior.
+- Center icon-only controls with flex/grid alignment, symmetric padding, and a nonshrinking block SVG. Give them an adequate touch target (at least 44 × 44 px for new controls). Text-link padding and typography must not leak into icon-only variants; fix the shared modifier and stylesheet cascade instead of applying per-icon translation offsets.
+- Keep shared header/footer rules in `packages/brand-system`; do not patch the same issue separately on each route. Verify icon geometry and visual centering on desktop and mobile, with hover, keyboard focus, and menu open/closed states. Check a normal marketing page and an inner page after client navigation.
+
 # Temura presentation rules
 
 For work in `apps/temura`, follow the Tampiloka website's restrained style system. Keep copy short, concrete, and functional. Omit unnecessary headings, slogans, overlines, and repeated descriptions. Do not introduce decorative pills, badges, chips, or pill-shaped tabs. Avoid card-heavy layouts; prefer open sections, rows, lists, tables, and dividers, except where equal-size template previews or a specific interaction need cards. Dashboard and studio should read as working tools with essential labels and help. Primary CTA and header buttons follow Tampiloka's reusable brand system (`size="pill"` / `rounded-full`). These rules also apply to delegated work. See `apps/temura/AGENTS.md` for the detailed rules and the asset-download gate before creating invitation previews.
@@ -72,3 +79,4 @@ For work in `apps/temura`, follow the Tampiloka website's restrained style syste
 ## Validation
 
 Use the installed Bun runtime: `bun run check:brand`, `bun run lint`, `bun run build`, and `bunx tsc --noEmit`. Check typography at desktop and mobile widths, confirm actual fonts load, and verify favicon, OG image, manifest, and public asset URLs before shipping. If this Windows host's nvm shim reports no active Node version, use an available Node executable directly for the Next.js/ESLint/TypeScript CLI; do not change machine-wide runtime settings as part of brand work. Webpack (`next build --webpack`) is a valid build verification fallback when Turbopack cannot start its Node CSS worker.
+

@@ -36,7 +36,7 @@ function Header({ brand, links, dark = false }: { brand: string; links: string[]
 }
 
 function ButtonLabel({ children }: { children: ReactNode }) {
-  return <span className="industry-preview__button">{children}<span aria-hidden="true">↗</span></span>;
+  return <span className="industry-preview__button">{children}</span>;
 }
 
 function FoodPreview({ copy }: { copy: (typeof showcaseCopy)[Locale]["preview"] }) {
@@ -84,7 +84,7 @@ function PortfolioPreview({ copy }: { copy: (typeof showcaseCopy)[Locale]["previ
         <PreviewTitle>{copy.architectureWork}</PreviewTitle>
       </div>
       <Photo kind="portfolio" className="industry-preview__portfolio-photo" />
-      <div className="industry-preview__project-line"><span>01</span><strong>{copy.homeDago}</strong><span>{copy.dago}</span><span>2025 ↗</span></div>
+      <div className="industry-preview__project-line"><span>01</span><strong>{copy.homeDago}</strong><span>{copy.dago}</span><span>2025</span></div>
     </div>
   );
 }
@@ -158,7 +158,7 @@ function WeddingPreview({ copy }: { copy: (typeof showcaseCopy)[Locale]["preview
         </div>
         <Photo kind="wedding" className="industry-preview__wedding-photo" />
       </div>
-      <div className="industry-preview__wedding-bottom"><span>{copy.ceremony}</span><span>{copy.confirmation} ↗</span></div>
+      <div className="industry-preview__wedding-bottom"><span>{copy.ceremony}</span><span>{copy.confirmation}</span></div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { Fragment, type ReactNode } from "react";
 
 export interface FooterLinkItem {
@@ -119,7 +118,7 @@ export function SiteFooter({
             {ctaHeading.prefix} <span>{ctaHeading.highlight}</span>
           </h2>
           <a className={`footer-email type-heading-4${ctaLink.icon ? " footer-email--icon" : ""}`} href={ctaLink.href} aria-label={ctaLink.ariaLabel}>
-            {ctaLink.icon ?? ctaLink.label} {!ctaLink.icon && <ArrowUpRight aria-hidden="true" />}
+            {ctaLink.icon ?? ctaLink.label}
           </a>
         </section>
 
@@ -160,7 +159,7 @@ export function SiteFooter({
               target={external || href.startsWith("http") ? "_blank" : undefined}
               rel={external || href.startsWith("http") ? "noopener noreferrer" : undefined}
             >
-              {icon ?? <>{label}<ArrowUpRight aria-hidden="true" size={14} /></>}
+              {icon ?? label}
             </a>
           ))}
           {pendingNotice && (

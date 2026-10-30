@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Check, Minus } from "lucide-react";
+import { Check, Minus } from "lucide-react";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
@@ -50,7 +50,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
     <JsonLd data={{ "@context": "https://schema.org", "@graph": [webPageSchema({ path: "/paket", locale, title: copy.schemaTitle, description: pricingSchemaDescription(locale, discountPercent) }), faqSchema(faqs, locale)] }} />
     <section className="pricing-hero" aria-labelledby="pricing-title">
       <div><h1 id="pricing-title" className="type-display">{copy.heroTitle}</h1><p className="type-body-lg">{pricingHeroDescription(locale, discountPercent)}</p></div>
-      <a href="#estimasi" className="pricing-text-link type-label">{copy.estimateJump} <ArrowDown size={16} aria-hidden="true" /></a>
+      <a href="#estimasi" className="pricing-text-link type-label">{copy.estimateJump}</a>
     </section>
 
     <section className="pricing-plans" aria-label={copy.plansLabel}>
@@ -86,7 +86,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         {care.price ? <><p className="type-body">{care.requestsPerMonth} {locale === "id" ? "permintaan per bulan" : `requests per ${copy.estimate.month}`}</p><p className="type-body">{formatCurrency(care.price * 3, locale)} {locale === "id" ? "setiap 3 bulan." : "every 3 months."}<br />{locale === "id" ? `Maksimal ${care.durationDays} hari kerja setelah bahan lengkap.` : `Within ${care.durationDays} business days after all materials are ready.`}</p></> : <p className="type-body">{copy.noSubscription}</p>}
       </article>)}</div>
       <p className="pricing-note type-body">{copy.careTerms(CARE_REQUEST_MENU_LIMIT)}</p>
-      <PricingLink className="pricing-back-link" href="#estimasi">{copy.estimateJump} <ArrowUpRight size={16} aria-hidden="true" /></PricingLink>
+      <PricingLink className="pricing-back-link" href="#estimasi">{copy.estimateJump}</PricingLink>
     </section>
   </div>;
 }

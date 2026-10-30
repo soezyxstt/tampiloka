@@ -1,4 +1,3 @@
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { localePath, type Locale } from "@/i18n/routing";
 
@@ -17,10 +16,10 @@ export function NotFoundContent({ locale }: { locale: Locale }) {
             nativeButton={false}
             render={<a href={localePath(locale, "/")} />}
           >
-            <ArrowLeft aria-hidden="true" /> {english ? "Back to home" : "Kembali ke beranda"}
+            {english ? "Back to home" : "Kembali ke beranda"}
           </Button>
           <a className="contact-page__email type-body" href={localePath(locale, "/produk")}>
-            {english ? "View our work" : "Lihat karya"} <ArrowUpRight className="inline size-4" aria-hidden="true" />
+            {english ? "View our work" : "Lihat karya"}
           </a>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
@@ -43,7 +43,7 @@ export default async function TentangPage({ params }: { params: Promise<{ locale
           <h1 id="about-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
           <Button className="inner-page__cta" size="lg" nativeButton={false} render={<a href="#cara-kerja" />}>
-            {copy.processCta} <ArrowUpRight aria-hidden="true" />
+            {copy.processCta}
           </Button>
         </div>
         <PageVisual imageKey="about-studio" alt={copy.imageAlt} preload />
@@ -68,7 +68,7 @@ export default async function TentangPage({ params }: { params: Promise<{ locale
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label-lg" href="/contact">{copy.endCta} <ArrowUpRight aria-hidden="true" /></Link>
+        <Link className="type-label-lg" href="/contact">{copy.endCta}</Link>
       </div>
     </div>
   );
