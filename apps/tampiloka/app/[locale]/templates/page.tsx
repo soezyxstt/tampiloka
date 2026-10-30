@@ -7,7 +7,10 @@ import { JsonLd } from "@/components/json-ld";
 import { locales, type Locale } from "@/i18n/routing";
 import { createPageMetadata, webPageSchema } from "@/lib/seo";
 import { templateCopy } from "@/lib/template-copy";
+import { loadTemplateCatalog } from "@/lib/template-catalog-server";
 import "../../templates.css";
+
+export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ locale: string }> };
 const path = "/templates";
@@ -25,9 +28,11 @@ export default async function TemplatesPage({ params }: Props) {
   const locale: Locale = requestedLocale;
   setRequestLocale(locale);
   const copy = templateCopy[locale];
+  const initialCatalog = await loadTemplateCatalog().catch(() => null);
   return <div className="inner-page templates-page">
     <JsonLd data={{ "@context": "https://schema.org", ...webPageSchema({ path, locale, title: `${copy.title} | Tampiloka`, description: copy.description, type: "CollectionPage" }) }} />
     <section className="templates-page__intro" data-reveal><h1 className="type-display-xl">{copy.title}</h1><p className="type-body-lg">{copy.intro}</p><p className="templates-page__disclosure type-body">{copy.disclosure}</p></section>
-    <TemplateGallery locale={locale} />
+    <TemplateGallery locale={locale} initialCatalog={initialCatalog} />
   </div>;
 }
+

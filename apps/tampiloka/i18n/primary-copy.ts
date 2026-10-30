@@ -13,6 +13,8 @@ export type PrimaryPageCopy = {
     description: string;
     contactCta: string;
     workLink: string;
+    templatesCta: string;
+    demoLink: string;
     imageAlt: string;
   };
   services: {
@@ -75,7 +77,7 @@ export type PrimaryPageCopy = {
 export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
   id: {
     metadata: {
-      home: { title: "Desain dan Pembuatan Website untuk Bisnis", description: "Tampiloka merancang dan membangun website, aplikasi web, serta identitas visual untuk bisnis. Undangan pernikahan digital tersedia melalui Temura." },
+      home: { title: "Desain dan Pembuatan Website untuk Bisnis", description: "Tampiloka membuat website dan aplikasi web untuk bisnis. Coba demo template, lalu sesuaikan desain dan fiturnya dengan kebutuhan usaha Anda." },
       services: { title: "Layanan Desain dan Pengembangan Web", description: "Desain website, aplikasi web, identitas visual, dan undangan digital. Lihat cakupan layanan Tampiloka dan diskusikan kebutuhan bisnis Anda." },
       about: { title: "Tentang Tampiloka", description: "Tampiloka adalah studio web independen untuk desain website, pengembangan web, dan identitas visual bisnis." },
       contact: { title: "Kontak", description: "Bahas kebutuhan website, aplikasi web, atau identitas visual bisnis Anda dengan Tampiloka melalui WhatsApp atau email." },
@@ -83,9 +85,11 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
     home: {
       title: "Website untuk",
       titleEmphasis: "bisnis Anda.",
-      description: "Kami merancang dan membangun website, aplikasi web, serta identitas visual. Undangan pernikahan tersedia melalui Temura.",
+      description: "Kami membuat website dan aplikasi web untuk usaha Anda. Mulai dari template atau bahas kebutuhan khusus bersama kami.",
       contactCta: "Diskusikan kebutuhan",
       workLink: "Lihat karya",
+      templatesCta: "Jelajahi template",
+      demoLink: "Lihat pilihan demo",
       imageAlt: "Rancangan website dengan antarmuka hijau di layar laptop dan contoh palet warna.",
     },
     services: {
@@ -149,7 +153,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
   },
   en: {
     metadata: {
-      home: { title: "Website Design and Development for Businesses", description: "Tampiloka designs and builds websites, web applications, and visual identities for businesses. Digital wedding invitations are available through Temura." },
+      home: { title: "Website Design and Development for Businesses", description: "Tampiloka builds websites and web apps for businesses. Try a template demo, then adapt the design and features to your needs." },
       services: { title: "Web Design and Development Services", description: "Website design, web applications, visual identity, and digital invitations. Explore Tampiloka’s services and discuss your business needs with us." },
       about: { title: "About Tampiloka", description: "Tampiloka is an independent web studio for business website design, web development, and visual identity." },
       contact: { title: "Contact", description: "Discuss your website, web application, or business visual identity needs with Tampiloka via WhatsApp or email." },
@@ -157,9 +161,11 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
     home: {
       title: "Websites for",
       titleEmphasis: "your business.",
-      description: "We design and build websites, web applications, and visual identities. Wedding invitations are available through Temura.",
+      description: "We build websites and web apps for your business. Start with a template or discuss a custom project with us.",
       contactCta: "Discuss your project",
       workLink: "View our work",
+      templatesCta: "Explore templates",
+      demoLink: "See the demo options",
       imageAlt: "A green website design on a laptop beside a sample color palette.",
     },
     services: {
@@ -226,3 +232,4 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
 export function getPrimaryCopy(locale: Locale): PrimaryPageCopy {
   return PRIMARY_COPY[locale];
 }
+
