@@ -8,6 +8,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+# Template discovery contract
+
+Follow the root `AGENTS.md` section **Shared Tampiloka template discovery**. `/templates` and the landing preview share a runtime catalog loader and schema validation. Do not reintroduce a hardcoded template list, family union, count, or per-template URL logic here. Derive filters and mode choices from the public feed, preserve `lang` when opening demos, and provide honest loading, empty, retry, and bounded stale states. Template examples must stay distinct from real client work. Use this app's shared select, buttons, header/footer, and motion components for the discovery UI.
+
 # Copy Tampiloka
 
 - Use the project-installed [copywriting-bahasa-indonesia skill](../../.agents/skills/copywriting-bahasa-indonesia/SKILL.md) for public-facing copy changes. Read the relevant references before editing.

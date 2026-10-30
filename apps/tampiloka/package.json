@@ -13,6 +13,7 @@
     "verify:bilingual-browser": "node scripts/verify-bilingual-browser.mjs",
     "verify:showcase-browser": "node scripts/verify-showcase-browser.mjs",
     "verify:templates-browser": "node scripts/verify-templates-browser.mjs",
+    "verify:catalog": "node --experimental-strip-types --test scripts/template-catalog.test.mjs",
     "verify:select-motion": "node scripts/verify-select-motion.mjs",
     "verify:ui-browser": "node scripts/verify-ui-consistency-browser.mjs",
     "verify:pricing": "node scripts/verify-pricing.mjs",
@@ -44,3 +45,4 @@
     "typescript": "^5"
   }
 }
+
