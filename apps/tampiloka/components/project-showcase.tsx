@@ -5,24 +5,17 @@ import { ArrowUpRight, Pause, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sheet, SheetClose, SheetContent, SheetTitle } from "@/components/ui/sheet";
-import { PROJECTS, type Project } from "@/lib/projects";
+import { PROJECTS, type Project, type WorkKind } from "@/lib/projects";
 import { useLocale } from "next-intl";
-import type { Locale } from "@/i18n/routing";
+import { localePath, type Locale } from "@/i18n/routing";
 import { showcaseCopy } from "@/lib/showcase-copy";
 import Image from "next/image";
 
 const projects = PROJECTS;
 
-type Filter = "all" | "food" | "portfolio" | "catalog" | "education" | "organization" | "invitation";
-const filters: Filter[] = ["all", "food", "portfolio", "catalog", "education", "organization", "invitation"];
-const projectFilter: Record<Project["category"], Exclude<Filter, "all">> = {
-  Kuliner: "food",
-  Portofolio: "portfolio",
-  Katalog: "catalog",
-  Edukasi: "education",
-  Organisasi: "organization",
-  "Undangan digital": "invitation",
-};
+type Filter = "all" | WorkKind;
+const filters: Filter[] = ["all", "portfolio", "prospect-demo", "concept"];
+const featuredIds = ["zyx-academy", "syahril-mc", "ginalist", "pagi-roti", "rona-forma"];
 
 // One owner for all embedded demos. Lazy loading alone does not stop an iframe's
 // scripts after it leaves the viewport, so inactive frames must be unmounted.
@@ -135,15 +128,33 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
   const locale = requestedLocale ?? contextLocale;
   const copy = showcaseCopy[locale];
   const [isPaused, setIsPaused] = useState(false);
-  const [filter, setFilter] = useState<Filter>("all");
+  const [filter, setFilter] = useState<Filter>("portfolio");
+  useEffect(() => {
+    if (!page) return;
+    const syncFilter = () => {
+      const value = new URLSearchParams(window.location.search).get("kind");
+      setFilter(filters.find((item) => item === value) ?? "portfolio");
+    };
+    syncFilter();
+    window.addEventListener("popstate", syncFilter);
+    return () => window.removeEventListener("popstate", syncFilter);
+  }, [page]);
+
+  const selectFilter = (item: Filter) => {
+    const url = new URL(window.location.href);
+    if (item === "portfolio") url.searchParams.delete("kind");
+    else url.searchParams.set("kind", item);
+    window.history.pushState(null, "", url);
+    setFilter(item);
+  };
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const { grid, activeId, documentVisible } = usePreviewScheduler(isPaused || activeProject !== null, filter);
   const [dragOffset, setDragOffset] = useState(0);
   const dragStart = useRef<number | null>(null);
   const dragDistance = useRef(0);
-  const visibleProjects = filter === "all"
-    ? projects
-    : projects.filter((project) => projectFilter[project.category] === filter);
+  const visibleProjects = page
+    ? filters.slice(1).flatMap((kind) => projects.filter((project) => project.kind === kind && (filter === "all" || project.kind === filter)))
+    : featuredIds.map((id) => projects.find((project) => project.id === id)!);
 
   const startDrag = (event: ReactPointerEvent<HTMLButtonElement>) => {
     dragStart.current = event.clientY;
@@ -194,9 +205,9 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
                     className="showcase__filter"
                     variant={filter === item ? "secondary" : "ghost"}
                     aria-pressed={filter === item}
-                    onClick={() => setFilter(item)}
+                    onClick={() => selectFilter(item)}
                   >
-                    {copy.filters[item]}
+                    {copy.kinds[item]}
                   </Button>
                 ))}
               </div>
@@ -214,10 +225,6 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
             </Button>
           </div>
         </header>
-
-        <p className="type-body-sm showcase__concept-disclosure">
-          {copy.conceptDisclosure}
-        </p>
 
         <div ref={grid} className="showcase__grid" id="showcase-projects" aria-live={page ? "polite" : undefined}>
           {visibleProjects.map((project, index) => (
@@ -246,18 +253,23 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={copy.openSite(project.name)}
+                  aria-label={project.kind === "portfolio" ? copy.openSite(project.name) : copy.openDemo(project.name)}
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
               </div>
               <div className="showcase__project-meta">
                 <h3 className="type-heading-4 showcase__project-name">{project.name}</h3>
-                <p className="showcase__project-category">{copy.categories[project.category]}</p>
+                <p className="type-body-sm showcase__project-category">{copy.kindDisclosure[project.kind]} / {copy.categories[project.category]}</p>
+                <p className="type-body">{copy.projectDescriptions[project.id]}</p>
               </div>
             </Card>
           ))}
         </div>
+        {!page && <div className="showcase__links" data-reveal>
+          <Button variant="link" nativeButton={false} render={<a href={localePath(locale, "/produk")} />}>{copy.allWork} <ArrowUpRight aria-hidden="true" /></Button>
+          <Button variant="link" nativeButton={false} render={<a href={localePath(locale, "/templates")} />}>{copy.templatesLink} <ArrowUpRight aria-hidden="true" /></Button>
+        </div>}
       </div>
 
       <Sheet
@@ -286,7 +298,7 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
               <header className="showcase-sheet__header">
                 <div className="showcase-sheet__heading">
                   <SheetTitle className="type-heading-4 showcase-sheet__title">{activeProject.name}</SheetTitle>
-                  <p className="type-caption showcase-sheet__category">{copy.categories[activeProject.category]}</p>
+                  <p className="type-caption showcase-sheet__category">{copy.kindDisclosure[activeProject.kind]} / {copy.categories[activeProject.category]}</p>
                 </div>
                 <SheetClose
                   aria-label={copy.closePreview}
@@ -301,7 +313,7 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
                   href={activeProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={copy.openSite(activeProject.name)}
+                  aria-label={activeProject.kind === "portfolio" ? copy.openSite(activeProject.name) : copy.openDemo(activeProject.name)}
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>

@@ -13,6 +13,7 @@ export function SiteHeader() {
   const copy = shellCopy(locale);
   const links = [
     { label: copy.nav.work, href: "/produk" },
+    { label: copy.nav.templates, href: "/templates" },
     { label: copy.nav.services, href: "/layanan" },
     { label: copy.nav.industries, href: "/industri" },
     { label: copy.nav.pricing, href: "/paket" },

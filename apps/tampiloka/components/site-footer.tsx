@@ -13,6 +13,7 @@ export async function SiteFooter() {
 
   const studioLinks = [
     { label: copy.nav.work, href: "/produk" },
+    { label: copy.nav.templates, href: "/templates" },
     { label: copy.nav.services, href: "/layanan" },
     { label: locale === "en" ? "Website pricing" : "Paket website", href: "/paket" },
     { label: copy.nav.industries, href: "/industri" },

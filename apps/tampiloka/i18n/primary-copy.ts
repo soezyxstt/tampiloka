@@ -94,7 +94,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       contactCta: "Diskusikan kebutuhan",
       endCta: "Diskusikan kebutuhan",
       ariaLabel: "Layanan Tampiloka",
-      packageCta: "Lihat paket website kafe",
+      packageCta: "Lihat paket website bisnis",
       temuraCta: "Lihat undangan di Temura",
       imageAlt: "Rancangan website dengan antarmuka hijau di layar laptop.",
       items: [
@@ -168,7 +168,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       contactCta: "Discuss your project",
       endCta: "Discuss your project",
       ariaLabel: "Tampiloka services",
-      packageCta: "See café website packages",
+      packageCta: "See business website packages",
       temuraCta: "View invitations on Temura",
       imageAlt: "A green website design displayed on a laptop.",
       items: [

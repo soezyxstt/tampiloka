@@ -104,6 +104,16 @@ export default async function IndustriPage({ params }: LocalizedPageProps) {
                 }>
                   {label} <ArrowUpRight aria-hidden="true" />
                 </Button>
+                {["food", "fashion", "small-business", "technology"].includes(kind) && (
+                  <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href="/templates" />}>
+                    {locale === "en" ? "Explore templates" : "Lihat template"} <ArrowUpRight aria-hidden="true" />
+                  </Button>
+                )}
+                {(kind === "portfolio" || kind === "enterprise") && (
+                  <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href="/produk" />}>
+                    {locale === "en" ? "View our work" : "Lihat karya"} <ArrowUpRight aria-hidden="true" />
+                  </Button>
+                )}
               </div>
               <div className="industry-row__visual" data-reveal><IndustryPreview kind={kind} /></div>
             </section>

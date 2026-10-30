@@ -67,6 +67,8 @@
 .showcase__project:nth-child(7) { grid-column: 1 / span 6; margin-top: clamp(1rem, 3vw, 2.5rem); }
 .showcase__project:nth-child(8) { grid-column: 7 / span 6; margin-top: clamp(3rem, 7vw, 6rem); }
 .showcase__project:nth-child(9) { grid-column: 1 / span 5; margin-top: 0; }
+.showcase__project:nth-child(n+11):nth-child(odd) { grid-column: 1 / span 6; margin-top: 0; }
+.showcase__project:nth-child(n+11):nth-child(even) { grid-column: 7 / span 6; margin-top: 0; }
 .showcase__project:nth-child(10) { grid-column: 7 / span 6; margin-top: clamp(2.5rem, 6vw, 5rem); }
 .showcase__project--syahril-mc .showcase__site,
 .showcase__project--temura-nara-aruna .showcase__site { aspect-ratio: 1.65 / 1; }
@@ -289,3 +291,5 @@
   .project-showcase *::before,
   .project-showcase *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+.showcase__links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }

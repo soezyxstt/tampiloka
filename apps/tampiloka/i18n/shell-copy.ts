@@ -7,6 +7,7 @@ export const SHELL_COPY = {
     },
     nav: {
       work: "Karya",
+      templates: "Template",
       services: "Layanan",
       industries: "Industri",
       pricing: "Paket",
@@ -47,6 +48,7 @@ export const SHELL_COPY = {
     },
     nav: {
       work: "Work",
+      templates: "Templates",
       services: "Services",
       industries: "Industries",
       pricing: "Pricing",

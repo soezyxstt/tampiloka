@@ -24,10 +24,10 @@ export const WEBSITE_PLANS = [
 export type PlanId = (typeof WEBSITE_PLANS)[number]["id"];
 
 export const DOMAIN_OPTIONS = [
-  { id: "subdomain", example: "namakafe.tampiloka.site", price: 0 },
-  { id: "com", example: "namakafe.com", price: 299_000 },
-  { id: "id", example: "namakafe.id", price: 299_000 },
-  { id: "co-id", example: "namakafe.co.id", price: 399_000 },
+  { id: "subdomain", example: "namausaha.tampiloka.site", price: 0 },
+  { id: "com", example: "namausaha.com", price: 299_000 },
+  { id: "id", example: "namausaha.id", price: 299_000 },
+  { id: "co-id", example: "namausaha.co.id", price: 399_000 },
   { id: "own", example: "Koneksi awal standar gratis", price: 0 },
 ] as const;
 export type DomainId = (typeof DOMAIN_OPTIONS)[number]["id"];
@@ -136,7 +136,7 @@ export function estimateText(estimate: ReturnType<typeof calculateEstimate>, loc
   const careName = careLabel(locale, care.id);
   const planName = planLabel(locale, plan.id);
   return [
-    locale === "id" ? "Estimasi website kafe — Tampiloka" : "Café website estimate — Tampiloka",
+    locale === "id" ? "Estimasi website bisnis — Tampiloka" : "Business website estimate — Tampiloka",
     `${locale === "id" ? "Paket" : "Package"} ${planName}: ${formatCurrency(plan.price, locale)} (${launchDiscountLabel(locale, Math.round(LAUNCH_DISCOUNT * 100))}; ${locale === "id" ? "hemat" : "save"} ${formatCurrency(savings, locale)})`,
     `${locale === "id" ? "Domain" : "Domain"}: ${domainName} — ${domain.price ? `${formatCurrency(domain.price, locale)}${copy.timeSuffix}` : domain.id === "own" ? copy.ownDomainEstimate : copy.includedWhileActive}`,
     domain.id === "own" ? copy.ownRenewalOutside : domain.example,

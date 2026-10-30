@@ -7,7 +7,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Berapa lama proses pengerjaannya?",
-    answer: "Waktu pengerjaan mengikuti lingkup proyek dan kelengkapan bahan. Estimasi disepakati sebelum proyek dimulai. Rincian waktu untuk website kafe tersedia di halaman Paket.",
+    answer: "Waktu pengerjaan mengikuti lingkup proyek dan kelengkapan bahan. Estimasi disepakati sebelum proyek dimulai. Rincian waktu untuk website bisnis tersedia di halaman Paket.",
   },
   {
     question: "Apakah website bisa dibuka di ponsel?",
@@ -23,7 +23,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Bagaimana jika perlu bantuan setelah website tayang?",
-    answer: "Untuk website kafe, pembaruan konten tersedia per permintaan atau melalui Care. Selama hosting aktif, perbaikan gangguan dari sistem Tampiloka tetap tercakup. Dukungan untuk proyek lain mengikuti kesepakatan.",
+    answer: "Untuk website bisnis, pembaruan konten tersedia per permintaan atau melalui Care. Selama hosting aktif, perbaikan gangguan dari sistem Tampiloka tetap tercakup. Dukungan untuk proyek lain mengikuti kesepakatan.",
   },
 ] as const;
 
@@ -34,7 +34,7 @@ export const FAQ_ITEMS_EN = [
   },
   {
     question: "How long does the work take?",
-    answer: "The timeline depends on the project scope and whether all materials are ready. We agree on an estimate before the project starts. The website package page has a timeline for café websites.",
+    answer: "The timeline depends on the project scope and whether all materials are ready. We agree on an estimate before the project starts. The website package page has a timeline for business websites.",
   },
   {
     question: "Will the website work on phones?",
@@ -50,7 +50,7 @@ export const FAQ_ITEMS_EN = [
   },
   {
     question: "What if I need help after the website goes live?",
-    answer: "For café websites, content updates are available per request or through Care. While hosting is active, fixes for issues caused by Tampiloka’s system remain covered. Support for other projects follows the agreed terms.",
+    answer: "For business websites, content updates are available per request or through Care. While hosting is active, fixes for issues caused by Tampiloka’s system remain covered. Support for other projects follows the agreed terms.",
   },
 ] as const;
 

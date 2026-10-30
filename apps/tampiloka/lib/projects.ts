@@ -3,6 +3,7 @@ import { TEMURA_DEMO_URL } from "@/lib/temura-url";
 export const PROJECTS = [
   {
     id: "pagi-roti",
+    kind: "concept",
     name: "Pagi & Roti",
     category: "Kuliner",
     url: "https://demo-cafe-1.tampiloka.adihnursyam.com/",
@@ -10,6 +11,7 @@ export const PROJECTS = [
   },
   {
     id: "syahril-mc",
+    kind: "portfolio",
     name: "Syahril MC",
     category: "Portofolio",
     url: "https://syahril.tampiloka.site/",
@@ -17,6 +19,7 @@ export const PROJECTS = [
   },
   {
     id: "zyx-academy",
+    kind: "portfolio",
     name: "Zyx Academy",
     category: "Edukasi",
     url: "https://www.zyxacademy.com/",
@@ -24,6 +27,7 @@ export const PROJECTS = [
   },
   {
     id: "tepi-sagara",
+    kind: "concept",
     name: "Tepi Sagara",
     category: "Kuliner",
     url: "https://demo-fnb-2.tampiloka.adihnursyam.com/",
@@ -31,6 +35,7 @@ export const PROJECTS = [
   },
   {
     id: "sela-rasa",
+    kind: "concept",
     name: "Sela Rasa",
     category: "Kuliner",
     url: "https://demo-fnb-1.tampiloka.adihnursyam.com/",
@@ -38,6 +43,7 @@ export const PROJECTS = [
   },
   {
     id: "rona-forma",
+    kind: "concept",
     name: "Rona Forma",
     category: "Katalog",
     url: "https://demo-katalog-1.tampiloka.adihnursyam.com/",
@@ -45,6 +51,7 @@ export const PROJECTS = [
   },
   {
     id: "ginalist",
+    kind: "portfolio",
     name: "Ginalist",
     category: "Portofolio",
     url: "https://ginalist.tampiloka.site/",
@@ -52,6 +59,7 @@ export const PROJECTS = [
   },
   {
     id: "iam-itb",
+    kind: "portfolio",
     name: "IAM ITB",
     category: "Organisasi",
     url: "https://iamitb.org/",
@@ -59,6 +67,7 @@ export const PROJECTS = [
   },
   {
     id: "pamoka",
+    kind: "portfolio",
     name: "PAMOKA",
     category: "Organisasi",
     url: "https://www.pamokagarut.com/",
@@ -66,11 +75,62 @@ export const PROJECTS = [
   },
   {
     id: "temura-nara-aruna",
+    kind: "concept",
     name: "Nara & Aruna",
     category: "Undangan digital",
     url: TEMURA_DEMO_URL,
     scrollStops: [""],
   },
+  {
+    id: "historia",
+    kind: "prospect-demo",
+    name: "Historia Coffee & Eatery",
+    category: "Kuliner",
+    url: "https://historia.tampiloka.site/",
+    scrollStops: [""],
+  },
+  {
+    id: "bumi-upi",
+    kind: "prospect-demo",
+    name: "Bumi Upi",
+    category: "Kuliner",
+    url: "https://bumiupi.tampiloka.site/",
+    scrollStops: [""],
+  },
+  {
+    id: "duduk-gembira",
+    kind: "prospect-demo",
+    name: "Duduk Gembira",
+    category: "Kuliner",
+    url: "https://dudukgembira.tampiloka.site/",
+    scrollStops: [""],
+  },
+  {
+    id: "gulapadi",
+    kind: "prospect-demo",
+    name: "Gulapadi",
+    category: "Kuliner",
+    url: "https://gulapadi.tampiloka.site/",
+    scrollStops: [""],
+  },
+  {
+    id: "talkie-space",
+    kind: "prospect-demo",
+    name: "Talkie Space",
+    category: "Kuliner",
+    url: "https://talkie.tampiloka.site/",
+    scrollStops: [""],
+  },
+  {
+    id: "classico-coffee",
+    kind: "prospect-demo",
+    name: "Classico Coffee",
+    category: "Kuliner",
+    url: "https://classico.tampiloka.site/",
+    scrollStops: [""],
+  },
 ] as const;
+
+export type WorkKind = Project["kind"];
 
 export type Project = (typeof PROJECTS)[number];

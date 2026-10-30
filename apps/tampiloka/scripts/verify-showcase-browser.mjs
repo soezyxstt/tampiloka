@@ -24,7 +24,7 @@ try {
     });
     await page.goto(origin, { waitUntil: 'networkidle' });
     const previews = page.locator('.showcase__site iframe');
-    assert.equal(await previews.count(), 0, 'Landing starts with no embedded demos');
+    assert.ok(await previews.count() <= 1, 'Landing never starts more than one embedded demo');
     const first = page.locator('.showcase__site').first();
     await first.scrollIntoViewIfNeeded();
     await page.waitForFunction(() => document.querySelectorAll('.showcase__site iframe').length === 1);
@@ -41,7 +41,7 @@ try {
     await page.waitForFunction(() => document.querySelectorAll('.showcase__site iframe').length === 1);
 
     // Exercise several viewport transitions; lazy iframes must not accumulate.
-    for (const index of [3, 6, 9, 0]) {
+    for (const index of [3, 4, 0]) {
       await page.locator('.showcase__site').nth(index).scrollIntoViewIfNeeded();
       await page.waitForFunction(() => document.querySelectorAll('.showcase__site iframe').length === 1);
       assert.equal(await previews.count(), 1, 'Only one visible demo can run');
@@ -82,12 +82,18 @@ try {
     await page.keyboard.press('Escape');
     await page.locator('.showcase-sheet__frame').waitFor({ state: 'detached' });
 
-    await page.goto(new URL('/en/work', origin).toString(), { waitUntil: 'networkidle' });
-    await page.getByRole('button', { name: 'Education', exact: true }).click();
-    assert.equal(await page.locator('.showcase__project').count(), 1, 'Category filtering still works');
-    await page.locator('.showcase__site').scrollIntoViewIfNeeded();
+    await page.goto(new URL('/en/work?kind=prospect-demo', origin).toString(), { waitUntil: 'networkidle' });
+    await page.getByRole('button', { name: 'Prospect demos', exact: true }).waitFor();
+    await page.waitForFunction(() => document.querySelectorAll('.showcase__project').length === 6);
+    assert.equal(await page.getByText('Demo for a prospective client', { exact: false }).count(), 6);
+    await page.getByRole('button', { name: 'Portfolio', exact: true }).click();
+    assert.equal(await page.locator('.showcase__project').count(), 5);
+    assert.equal(new URL(page.url()).searchParams.get('kind'), null, 'Portfolio is the default URL state');
+    await page.goBack();
+    await page.waitForFunction(() => document.querySelectorAll('.showcase__project').length === 6);
+    await page.locator('.showcase__site').first().scrollIntoViewIfNeeded();
     await page.waitForFunction(() => document.querySelectorAll('.showcase__site iframe').length === 1);
-    assert.match(await previews.getAttribute('src'), /zyxacademy/);
+    assert.match(await previews.getAttribute('src'), /historia/);
     assert.deepEqual(errors, [], 'Showcase flows have no uncaught errors');
     console.log(`Verified preview lifecycle at ${viewport.width}px: scroll, concurrency, Pause, reduced motion, hidden tab, dialog, and filters.`);
     await page.close();

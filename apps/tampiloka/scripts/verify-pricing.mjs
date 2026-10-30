@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import { chromium } from "playwright";
+import { fileURLToPath } from "node:url";
+import { chooseSelect } from "./select-test-helper.mjs";
 
 const origin = process.env.PRICING_ORIGIN || process.argv[2] || "http://127.0.0.1:3000";
 const output = new URL("../../../artifacts/pricing/", import.meta.url);
@@ -56,18 +58,45 @@ try {
   const fontState = await page.evaluate(async () => { await document.fonts.ready; return [...document.fonts].filter((font) => font.status === "loaded").map((font) => font.family); });
   assert(fontState.some((name) => /Inter/.test(name)), "Inter loads");
   assert(fontState.some((name) => /Manrope/.test(name)), "Manrope loads");
+  const socialLinks = page.locator(".footer-socials a");
+  assert.equal(await socialLinks.count(), 5, "Footer exposes all contact links");
+  for (const link of await socialLinks.all()) {
+    assert.ok(await link.getAttribute("aria-label"), "Icon link has an accessible name");
+    assert.equal(await link.locator('svg[aria-hidden="true"]').count(), 1, "Contact icon is decorative");
+  }
   record("Page, semantic landmarks, 40% promotional prices, and brand fonts render.");
+
+  assert.equal(await page.getByRole("heading", { name: "Paket website bisnis.", exact: true }).count(), 1);
+  assert.equal(await page.locator("select:visible").count(), 0, "Select controls do not expose a visible native select");
+  const careTrigger = page.locator("#estimate-care");
+  assert.equal(await careTrigger.getAttribute("role"), "combobox");
+  await careTrigger.focus();
+  await page.keyboard.press("Enter");
+  const listbox = page.getByRole("listbox");
+  await listbox.waitFor({ state: "visible" });
+  const selected = listbox.locator('[role="option"][data-value="none"]');
+  assert.equal(await selected.getAttribute("aria-selected"), "true", "Current option is selected");
+  assert.equal(await selected.locator("svg.lucide-check").count(), 1, "Selected option has a check marker");
+  await page.keyboard.press("ArrowDown");
+  await page.keyboard.press("Enter");
+  assert.equal(await careTrigger.getAttribute("data-value"), "care", "Keyboard selects an option");
+  await careTrigger.press("Enter");
+  await listbox.waitFor({ state: "visible" });
+  await page.keyboard.press("Escape");
+  await listbox.waitFor({ state: "hidden" });
+  assert.equal(await careTrigger.getAttribute("data-value"), "care", "Escape preserves the selection");
+  await page.getByRole("button", { name: "Reset", exact: true }).click();
 
   // These are the four independently specified examples in the pricing brief.
   await totals("Rp1.998.000", "Rp598.000");
-  await page.locator("#estimate-care").selectOption("care");
+  await chooseSelect(page, page.locator("#estimate-care"), "care");
   await totals("Rp2.946.000", "Rp1.546.000");
   await page.getByRole("radio", { name: /Signature/ }).check();
-  await page.locator("#estimate-care").selectOption("plus");
+  await chooseSelect(page, page.locator("#estimate-care"), "plus");
   await totals("Rp4.946.000", "Rp2.746.000");
   await page.getByRole("radio", { name: /Essential/ }).check();
-  await page.locator("#estimate-domain").selectOption("subdomain");
-  await page.locator("#estimate-care").selectOption("none");
+  await chooseSelect(page, page.locator("#estimate-domain"), "subdomain");
+  await chooseSelect(page, page.locator("#estimate-care"), "none");
   await totals("Rp999.000", "Rp299.000");
   record("All four year-one/year-two examples match the supplied brief.");
 
@@ -92,12 +121,12 @@ try {
   await totals("Rp2.495.000", "Rp598.000");
   record("Add-on quantities, one-time fees, and prevention of duplicate/incompatible features work.");
 
-  await page.locator("#estimate-domain").selectOption("co-id");
+  await chooseSelect(page, page.locator("#estimate-domain"), "co-id");
   await totals("Rp2.595.000", "Rp698.000");
-  await page.locator("#estimate-domain").selectOption("own");
+  await chooseSelect(page, page.locator("#estimate-domain"), "own");
   await totals("Rp2.196.000", "Rp299.000");
   await page.getByRole("button", { name: "Salin estimasi", exact: true }).click();
-  const copied = await page.evaluate(() => navigator.clipboard.readText());
+  const copied = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n");
   assert(copied.includes("Total tahun pertama: Rp2.196.000"));
   assert(copied.includes("di luar estimasi"));
   assert(copied.includes("Halaman tambahan × 2: Rp698.000"));
@@ -123,12 +152,12 @@ try {
   await page.waitForFunction(() => document.querySelector('input[name="paket"]:checked').value === "essential");
   assert(reloadUrl.endsWith("#estimasi-essential"));
   await page.getByRole("button", { name: "Reset", exact: true }).click();
-  await page.getByRole("button", { name: "Apakah menu bisa saya ubah sendiri?", exact: true }).click();
+  await page.getByRole("button", { name: "Apakah konten bisa saya ubah sendiri?", exact: true }).click();
   await page.getByText(/Essential, Menu, dan Signature tidak memiliki dashboard/).waitFor({ state: "visible" });
   const sitemap = await (await context.request.get(`${origin}/sitemap.xml`)).text();
   assert(sitemap.includes("/paket</loc>"));
   const services = await (await context.request.get(`${origin}/layanan`)).text();
-  assert(services.includes("Lihat paket website kafe"));
+  assert(services.includes("Lihat paket website bisnis"));
   record("Package CTAs, URL deep links, reset, package FAQ, services link, and sitemap work.");
 
   for (const width of [320, 390, 768, 1024, 1440]) {
@@ -139,22 +168,22 @@ try {
   await page.setViewportSize({ width: 1440, height: 1200 });
   await page.goto(`${origin}/paket`);
   await revealPage(page);
-  await page.screenshot({ path: new URL("laptop.png", output).pathname });
-  await page.screenshot({ path: new URL("laptop-full.png", output).pathname, fullPage: true });
+  await page.screenshot({ path: fileURLToPath(new URL("laptop.png", output)) });
+  await page.screenshot({ path: fileURLToPath(new URL("laptop-full.png", output)), fullPage: true });
   await page.locator("#estimasi").scrollIntoViewIfNeeded();
   await page.waitForTimeout(1200);
-  await page.locator(".pricing-estimate-section").screenshot({ path: new URL("laptop-calculator.png", output).pathname, style: ".site-header, .skip-link { visibility: hidden !important; }" });
+  await page.locator(".pricing-estimate-section").screenshot({ path: fileURLToPath(new URL("laptop-calculator.png", output)), style: ".site-header, .skip-link { visibility: hidden !important; }" });
 
   const mobileContext = await browser.newContext({ viewport: { width: 390, height: 1100 }, isMobile: true, deviceScaleFactor: 1 });
   const mobile = await mobileContext.newPage();
   mobile.on("pageerror", (error) => errors.push(error.message));
   await mobile.goto(`${origin}/paket`);
   await revealPage(mobile);
-  await mobile.screenshot({ path: new URL("mobile.png", output).pathname });
-  await mobile.screenshot({ path: new URL("mobile-full.png", output).pathname, fullPage: true });
+  await mobile.screenshot({ path: fileURLToPath(new URL("mobile.png", output)) });
+  await mobile.screenshot({ path: fileURLToPath(new URL("mobile-full.png", output)), fullPage: true });
   await mobile.locator("#estimasi").scrollIntoViewIfNeeded();
   await mobile.waitForTimeout(1200);
-  await mobile.locator(".pricing-estimate-section").screenshot({ path: new URL("mobile-calculator.png", output).pathname, style: ".site-header, .skip-link { visibility: hidden !important; }" });
+  await mobile.locator(".pricing-estimate-section").screenshot({ path: fileURLToPath(new URL("mobile-calculator.png", output)), style: ".site-header, .skip-link { visibility: hidden !important; }" });
   await mobile.getByRole("button", { name: "Buka navigasi", exact: true }).click();
   await mobile.locator('.header-sheet__nav a[href="/paket"]').waitFor({ state: "visible" });
   await mobile.getByRole("button", { name: "Tutup navigasi", exact: true }).click();
@@ -165,7 +194,7 @@ try {
   assert.equal(errors.length, 0, `Browser errors: ${errors.join("; ")}`);
   record("No page overflow at 320/390/768/1024/1440px; mobile navigation, reduced motion, and clean browser console verified.");
   await writeFile(new URL("verification.json", output), JSON.stringify({ origin, checks, errors, fonts: fontState }, null, 2));
-  console.log(`Screenshots: ${output.pathname}`);
+  console.log(`Screenshots: ${fileURLToPath(output)}`);
 } catch (error) {
   console.error("Browser errors:", errors);
   throw error;

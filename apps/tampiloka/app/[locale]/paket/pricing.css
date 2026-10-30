@@ -40,9 +40,6 @@
 .estimate-selects { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
 .estimate-field { min-width:0; }
 .estimate-field>label { display:block; margin-bottom:10px; }
-.estimate-select { position:relative; }
-.estimate-select select { min-height:48px; cursor:pointer; text-overflow:ellipsis; }
-.estimate-select svg { position:absolute; right:10px; top:17px; pointer-events:none; }
 .estimate-domain-note { margin:16px 0 0; }
 .estimate-addons { margin-top:30px; }
 .estimate-addons__heading { margin:0 0 9px; }

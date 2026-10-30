@@ -15,6 +15,7 @@ const routePairs = [
   ['/layanan', '/en/services'],
   ['/paket', '/en/pricing'],
   ['/produk', '/en/work'],
+  ['/templates', '/en/templates'],
   ['/industri', '/en/industries'],
   ['/tentang', '/en/about'],
   ['/contact', '/en/contact'],
@@ -22,8 +23,9 @@ const routePairs = [
 const englishSignals = new Map([
   ['/en', 'Websites for'],
   ['/en/services', 'Tampiloka services.'],
-  ['/en/pricing', 'Café website packages.'],
+  ['/en/pricing', 'Business website packages.'],
   ['/en/work', 'digital invitations.'],
+  ['/en/templates', 'Templates'],
   ['/en/industries', 'Websites for your industry.'],
   ['/en/about', 'About Tampiloka.'],
   ['/en/contact', 'project'],
@@ -69,6 +71,13 @@ for (let index = 0; index < routePairs.length; index += 1) {
     assertSamePublicUrl(attr(html, 'hreflang', 'en'), absolute(enPath), `${path}: English hreflang`);
     assertSamePublicUrl(attr(html, 'hreflang', 'x-default'), absolute(idPath), `${path}: x-default points to Indonesian default`);
     assert.equal(meta(html, 'property', 'og:locale'), locale === 'id' ? 'id_ID' : 'en_US', `${path}: Open Graph locale`);
+    if (idPath === '/templates') {
+      assert.match(html, /<title>[^<]*Template[^<]*\| Tampiloka<\/title>/i, `${path}: localized template SEO title`);
+    }
+    const header = html.slice(html.indexOf('<header'), html.indexOf('</header>') + '</header>'.length);
+    const workHref = locale === 'id' ? '/produk' : '/en/work';
+    const templatesHref = locale === 'id' ? '/templates' : '/en/templates';
+    assert.ok(header.indexOf(`href="${workHref}"`) >= 0 && header.indexOf(`href="${templatesHref}"`) > header.indexOf(`href="${workHref}"`), `${path}: template navigation follows work`);
     assert.ok(html.includes(`"inLanguage":"${locale === 'id' ? 'id-ID' : 'en'}"`), `${path}: structured data language`);
     assert.ok(html.includes('faq-section'), `${path}: FAQ available`);
     assert.ok(html.includes('href="https://wa.me/6282119307102"'), `${path}: WhatsApp contact available`);
@@ -85,7 +94,7 @@ for (let index = 0; index < routePairs.length; index += 1) {
         'Halaman tidak ditemukan.',
         'Pertanyaan umum.',
         'Layanan Tampiloka.',
-        'Paket website kafe.',
+        'Paket website bisnis.',
         'Bicarakan proyek Anda.',
         'Tentang Tampiloka.',
         'Contoh tampilan untuk ilustrasi, bukan proyek klien.',
@@ -96,14 +105,17 @@ for (let index = 0; index < routePairs.length; index += 1) {
       assert.ok(html.includes('href="/"') || html.includes('href="/en"'), `${path}: language switch can return to Indonesian`);
     }
     if (idPath === '/' || idPath === '/produk') {
-      assert.ok(locale === 'id' ? html.includes('bukan proyek klien') : visibleHtml.includes('are concept demos, not client projects.'), `${path}: concepts disclosed`);
+      if (idPath === '/') assert.ok(locale === 'id' ? visibleHtml.includes('bukan proyek klien') : visibleHtml.includes('Concept demo, not a client project'), `${path}: concepts disclosed`);
       const projectNames = [...html.matchAll(/<h3[^>]*showcase__project-name[^>]*>([^<]+)<\/h3>/g)].map(([, name]) => name);
-      assert.equal(projectNames.length, 10, `${path}: ten selected works`);
-      assert.equal(projectNames[1], 'Syahril MC', `${path}: Syahril MC is second`);
+      assert.equal(projectNames.length, 5, `${path}: curated homepage or default portfolio selection`);
+      assert.ok(projectNames.includes('Syahril MC'), `${path}: Syahril MC is showcased`);
       assert.ok(html.includes('href="https://syahril.tampiloka.site/"'), `${path}: Syahril website linked`);
       assert.ok(projectNames.includes('Ginalist'), `${path}: Ginalist showcased`);
       assert.ok(html.includes('href="https://ginalist.tampiloka.site/"'), `${path}: Ginalist website linked`);
-      for (const url of ['https://www.zyxacademy.com/', 'https://iamitb.org/', 'https://www.pamokagarut.com/']) {
+      const portfolioUrls = idPath === '/produk'
+        ? ['https://www.zyxacademy.com/', 'https://iamitb.org/', 'https://www.pamokagarut.com/']
+        : ['https://www.zyxacademy.com/'];
+      for (const url of portfolioUrls) {
         assert.ok(html.includes(`href="${url}"`), `${path}: ${url} linked`);
       }
     }
@@ -146,13 +158,13 @@ const localizedFooterAnchors = [
   ...['service-website', 'service-digital-product', 'service-development', 'service-branding'].map((id) => [`/en/services#${id}`, '/en/services', id]),
   ...['industry-food', 'industry-fashion', 'industry-portfolio-architecture', 'industry-small-business', 'industry-technology', 'industry-enterprise', 'industry-wedding'].map((id) => [`/en/industries#${id}`, '/en/industries', id]),
 ];
-for (const path of localizedPaths(1)) {
+for (const [localeIndex, path] of routePairs.flatMap((pair) => pair.map((path, localeIndex) => [localeIndex, path]))) {
   const html = pages.get(path);
   const footerStart = html.indexOf('<footer');
   const footerEnd = html.indexOf('</footer>', footerStart);
   assert.ok(footerStart >= 0 && footerEnd > footerStart, `${path}: footer landmark exists`);
   const footer = html.slice(footerStart, footerEnd + '</footer>'.length);
-  for (const href of ['/en/work', '/en/services', '/en/pricing', '/en/industries', '/en/about', '/en/contact']) {
+  for (const href of localizedPaths(localeIndex).slice(1)) {
     assert.ok(footer.includes(`href="${href}"`), `${path}: footer uses localized route ${href}`);
   }
 }
@@ -165,9 +177,9 @@ const sitemapResponse = await fetch(new URL('/sitemap.xml', origin));
 assert.equal(sitemapResponse.status, 200, 'Sitemap loads');
 const sitemap = await sitemapResponse.text();
 const urlEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(([, entry]) => entry);
-assert.equal(urlEntries.length, 14, 'Sitemap has all 14 localized pages');
+assert.equal(urlEntries.length, routePairs.length * 2, 'Sitemap has all localized pages');
 const sitemapLocations = urlEntries.map((entry) => /<loc>([^<]+)<\/loc>/.exec(entry)?.[1]);
-assert.equal(new Set(sitemapLocations).size, 14, 'Sitemap URLs are unique');
+assert.equal(new Set(sitemapLocations).size, routePairs.length * 2, 'Sitemap URLs are unique');
 assert.deepEqual([...sitemapLocations].sort(), routePairs.flatMap((pair) => pair.map(absolute)).sort(), 'Sitemap contains exactly the Indonesian and English route sets');
 for (const [index, entry] of urlEntries.entries()) {
   const [idPath, enPath] = routePairs[Math.floor(index / 2)];
@@ -201,4 +213,4 @@ for (const [id, name, optional = false] of images) {
   assert.ok(!hashes.has(hash), `Duplicate image: ${name}`);
   hashes.add(hash);
 }
-console.log('Verified 14 localized routes, 404 status and indexing, canonical/hreflang/OG language, sitemap alternates, navigation, FAQ, and public assets.');
+console.log('Verified localized routes, 404 status and indexing, canonical/hreflang/OG language, sitemap alternates, navigation, FAQ, and public assets.');

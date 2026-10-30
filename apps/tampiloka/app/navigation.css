@@ -99,7 +99,7 @@
 .site-card__description { margin: 0; color: #667168; }
 .site-card__content { padding: 18px 24px 24px; }
 .site-card__footer { display: flex; align-items: center; gap: 12px; padding: 0 24px 24px; }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .site-header--primary { min-height: 72px; padding-block: 12px; }
   .header-desktop-nav { display: none; }
   .header-mobile-actions { display: flex; align-items: center; gap: 12px; }
@@ -117,6 +117,8 @@
   }
   .header-mobile-actions .header-menu-trigger { border: 1px solid rgba(21, 36, 30, .12); background: rgba(255, 255, 255, .55); color: #15241e; }
   .header-mobile-actions .header-menu-trigger:hover { background: rgba(255, 255, 255, .9); }
+}
+@media (max-width: 900px) {
   .faq-section { grid-template-columns: 1fr; gap: 30px; }
 }
 @media (max-width: 600px) {

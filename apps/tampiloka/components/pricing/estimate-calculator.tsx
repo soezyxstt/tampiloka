@@ -1,19 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Check, ChevronDown, Copy, Minus, Plus } from "lucide-react";
 import { useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { BrandInput, BrandSelect, BrandTextarea } from "@/components/ui/form-controls";
+import { BrandInput, BrandTextarea, SelectField } from "@/components/ui/form-controls";
 import { PricingContactLink } from "@/components/pricing/pricing-contact-link";
 import { CONTACT } from "@/lib/contact-links";
 import { ADDONS, ADDON_GROUPS, CARE_PLANS, DOMAIN_OPTIONS, LAUNCH_DISCOUNT, WEBSITE_PLANS, addonAvailability, calculateEstimate, estimateText, formatCurrency, isAddonAvailable, normalPrice, readEstimateUrl, writeEstimateUrl, type AddonQuantities, type CareId, type DomainId, type PlanId } from "@/lib/pricing";
 import { addonCopy, careLabel, domainLabel, estimateTerms, launchDiscountLabel, planLabel, pricingCopy } from "@/i18n/pricing-copy";
 import type { Locale } from "@/i18n/routing";
-
-function SelectField({ id, label, value, onChange, children }: { id: string; label: string; value: string; onChange: (value: string) => void; children: ReactNode }) {
-  return <div className="estimate-field"><label className="type-label" htmlFor={id}>{label}</label><div className="estimate-select"><BrandSelect className="type-body" id={id} value={value} onChange={(event) => onChange(event.target.value)}>{children}</BrandSelect><ChevronDown size={16} aria-hidden="true" /></div></div>;
-}
 
 function AddonControl({ addon, locale, quantity, disabledReason, onChange }: { addon: (typeof ADDONS)[number]; locale: Locale; quantity: number; disabledReason?: string; onChange: (value: number) => void }) {
   const inputId = `addon-${addon.id}`;
@@ -90,7 +86,7 @@ export function EstimateCalculator() {
     <form className="estimate-options" onSubmit={(event) => event.preventDefault()} aria-label={copy.formLabel}>
       <div className="estimate-options__top"><Button type="button" variant="ghost" size="sm" className="estimate-reset type-label" onClick={reset}>{copy.reset}</Button></div>
       <fieldset className="estimate-packages"><legend className="type-label">{copy.planLabel}</legend><div className="estimate-package-options">{WEBSITE_PLANS.map((plan) => <label key={plan.id} className={`estimate-package${planId === plan.id ? " is-selected" : ""}`}><input type="radio" name="paket" value={plan.id} checked={planId === plan.id} onChange={() => selectPlan(plan.id)} /><span className="type-label">{planLabel(locale, plan.id)}</span></label>)}</div></fieldset>
-      <div className="estimate-selects"><SelectField id="estimate-domain" label={copy.address} value={domainId} onChange={(value) => setDomainId(value as DomainId)}>{DOMAIN_OPTIONS.map((domain) => <option key={domain.id} value={domain.id}>{domainLabel(locale, domain.id)} · {domain.price ? `${formatCurrency(domain.price, locale)}/${locale === "id" ? "tahun" : "year"}` : copy.free}</option>)}</SelectField><SelectField id="estimate-care" label={copy.care} value={careId} onChange={(value) => setCareId(value as CareId)}>{CARE_PLANS.map((care) => <option key={care.id} value={care.id}>{care.id === "none" ? copy.noSubscription : `${careLabel(locale, care.id)} · ${formatCurrency(care.price, locale)}/${locale === "id" ? "bulan" : "month"}`}</option>)}</SelectField></div>
+      <div className="estimate-selects"><SelectField id="estimate-domain" label={copy.address} value={domainId} onChange={(value) => setDomainId(value as DomainId)} options={DOMAIN_OPTIONS.map((domain) => ({ value: domain.id, label: `${domainLabel(locale, domain.id)} · ${domain.price ? `${formatCurrency(domain.price, locale)}/${locale === "id" ? "tahun" : "year"}` : copy.free}` }))} /><SelectField id="estimate-care" label={copy.care} value={careId} onChange={(value) => setCareId(value as CareId)} options={CARE_PLANS.map((care) => ({ value: care.id, label: care.id === "none" ? copy.noSubscription : `${careLabel(locale, care.id)} · ${formatCurrency(care.price, locale)}/${locale === "id" ? "bulan" : "month"}` }))} /></div>
       {domainId === "own" || careId !== "none" ? <p className="estimate-domain-note type-body">{domainId === "own" ? copy.ownDomainRenewal : ""}{careId !== "none" ? `${careLabel(locale, careId)}: ${formatCurrency(estimate.care.price * 3, locale)} ${copy.paidEvery}` : ""}</p> : null}
       <div className="estimate-addons"><h3 className="estimate-addons__heading type-label">{copy.addons}</h3>{ADDON_GROUPS.map((group) => <details className="estimate-addon-group" key={group}><summary className="type-label"><span>{copy.groups[group]}</span><ChevronDown size={16} aria-hidden="true" /></summary><div>{ADDONS.filter((addon) => addon.group === group).map((addon) => <AddonControl key={addon.id} addon={addon} locale={locale} quantity={addonAvailability(addon.id, planId, locale) ? 0 : quantities[addon.id] || 0} disabledReason={addonAvailability(addon.id, planId, locale)} onChange={(value) => setQuantities((current) => ({ ...current, [addon.id]: value }))} />)}</div></details>)}</div>
     </form>
