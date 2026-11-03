@@ -25,6 +25,8 @@ Matching production values are in `apps/tampiloka/.env.prod`; Git ignore and abs
 
 ## Required acceptance before release
 
+The [hosted preview check](form-builder-hosted-check.md) now records limited desktop/mobile login, keyboard and HTTP-denial checks on `7410fb9`. It does not establish the complete authenticated workflow. Both Vercel previews are READY; a gallery-select CI race is corrected in the shared test helper and awaits the next run.
+
 1. Supply Google OAuth client ID/secret and intended admin email allowlist through secure environment settings. Register the exact callback URLs described in the setup guide, then redeploy.
 2. Execute the extended isolated integration harness against the final source in an environment permitted to load development credentials. Its final live rerun was rejected by automatic execution policy; it remains unverified.
 3. Verify real authorized sessions, API/download routes, editor autosave/recovery/conflicts, image previews, public uploads/submission and response inspection in desktop/mobile browsers, including keyboard/focus and custom-theme contrast. The local app launch on port 3007 was rejected by automatic execution policy; these browser checks did not run.
