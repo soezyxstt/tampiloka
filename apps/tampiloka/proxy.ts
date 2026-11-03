@@ -11,7 +11,17 @@ function isLocalizedPublicPath(pathname: string, locale: string): boolean {
   });
 }
 
-export default function proxy(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
+  const publicForm = /^\/f\/([^/]+)\/?$/.exec(request.nextUrl.pathname);
+  if (publicForm && ["GET", "HEAD"].includes(request.method)) {
+    const { getPublicForm, FormError } = await import("@/lib/forms/service");
+    try { await getPublicForm(decodeURIComponent(publicForm[1])); }
+    catch (error) {
+      if (error instanceof FormError && error.status === 410) return new NextResponse(request.method === "HEAD" ? null : '<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Formulir ditutup | Tampiloka</title></head><body><main><h1>Formulir sudah ditutup</h1><p>Formulir ini tidak lagi menerima jawaban.</p></main></body></html>', { status: 410, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
+    }
+  }
+  if (/^\/(admin|f)(\/|$)/.test(request.nextUrl.pathname)) return NextResponse.next();
+
   const [, pathLocale, ...segments] = request.nextUrl.pathname.split("/");
   const forwardedLocale = request.headers.get("x-next-intl-locale");
   const rewrittenPathname = `/${segments.join("/")}` || "/";

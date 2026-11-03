@@ -20,6 +20,10 @@ voice and presentation constraints are recorded in this app's `AGENTS.md`.
 | `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Bing Webmaster Tools `msvalidate.01` token | empty |
 | `NEXT_PUBLIC_YANDEX_SITE_VERIFICATION` | Yandex Webmaster verification token | empty |
 
+## CMS and reusable forms
+
+See [the CMS setup and workflow](../../docs/form-builder.md) for admin routes, isolated Neon configuration, Google OAuth setup, migrations, upload policy and verification boundaries. CMS secrets use `CMS_*` variables and must never point ordinary development at the production resources in `.env.prod`.
+
 ## Local development
 
 The app serves locally on http://localhost:3000. During development, links to Temura use http://localhost:3001; production links default to `https://temura.tampiloka.site` and can be overridden with `NEXT_PUBLIC_TEMURA_URL`.

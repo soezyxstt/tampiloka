@@ -1,0 +1,1 @@
+Infrastructure lane requests `@aws-sdk/s3-presigned-post` in `apps/tampiloka`: signed POST policies enforce a content-length range at storage, unlike an unrestricted presigned PUT. Backend lane owns dependency installation.
