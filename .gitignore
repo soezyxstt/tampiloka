@@ -21,6 +21,7 @@ yarn-error.log*
 .DS_Store
 *.pem
 *.tsbuildinfo
+apps/tampiloka/.drizzle-snapshot-repair/
 
 # Temura generated Prisma client and local backups
 apps/temura/app/generated/prisma

@@ -1,0 +1,15 @@
+﻿# Public integration handoff
+
+## Parent action required: closed form HTTP status
+
+`/f/[slug]` currently renders a closed message with HTTP 200. A Next page cannot set 410, and a route handler cannot share the same route segment as `page.tsx`. Please coordinate a proxy-level response for `/f/[slug]`: query the existing public status API on the same origin with a bounded request and `cache: no-store`, return an accessible noindex HTML response with status 410 only when that API returns 410, pass other statuses through to the page, and avoid changing method or client-navigation semantics. Evaluate internal fetch/deployment behavior and failure handling; do not treat an upstream failure as closed. Validate status for direct and client navigation, limits, aliases, and reopen. This lane does not own `proxy.ts` and has not implemented this.
+
+## Implemented contract
+
+`GET /api/forms/assets/[id]` streams an admin-owned JPEG, PNG, WebP or GIF from private storage. Anonymous access requires the asset to be referenced by the current published revision of a published form. An allowlisted, authenticated owner may read their own uploaded form images for a draft preview, including a newly uploaded image not yet autosaved. Respondent upload sessions, pending/deleted assets, mismatched owners, SVG and other types are rejected. Responses use `private, no-store`, `nosniff`, restrictive CSP and inline disposition; the object size and type must match stored metadata. Storage keys and signed URLs are not returned. Uploaded bytes are not content-scanned; the existing infrastructure malware/abuse limitations still apply.
+
+The same `FormRenderer` is used by the editor and public form. File display metadata stays in the mounted renderer across section navigation, and a synchronous upload guard blocks submit/Enter while uploading. Metadata and uncertain-submission state do not survive reload. Preview clears answers on structural edits and preserves them on text edits. Colors accept only six-digit hex values, with black or white foreground selected for contrast; unsupported values use theme defaults. Dropdowns use the shared Base UI Select; the honeypot is included in submissions.
+
+## Checks and remaining work
+
+From `apps/tampiloka`: `bun test ./components/forms/asset-policy.test.ts ./components/forms/form-renderer.test.tsx` passed 5 tests; `bunx tsc --noEmit --pretty false` passed; `bun run lint` passed with 5 warnings (three image optimization warnings in the renderer, plus two in other lanes). Targeted lint after the last renderer edit passed with its three image warnings. The tests are policy and server-rendered markup checks, not browser, live-storage or end-to-end validation. Check keyboard interaction, screen-reader labels, contrast of all nested controls on custom backgrounds, color settings, preview edits, interrupted uploads/retries, and private object streaming against isolated resources. Closed HTTP 410 remains the parent action above; no proxy change was made. No provisioning, migration or production release was performed by this lane.
