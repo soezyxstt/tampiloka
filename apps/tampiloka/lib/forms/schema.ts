@@ -4,6 +4,33 @@ export const questionTypes = ["short_text", "long_text", "single_choice", "multi
 const id = z.string().min(1).max(100).regex(/^[A-Za-z0-9_-]+$/).refine(value => !["__proto__", "prototype", "constructor"].includes(value));
 const text = z.string().max(10000);
 const option = z.object({ id, label: z.string().max(500), imageAssetId: id.optional() }).strict();
+// Restrict patterns to a single repetition and no groups or alternation to bound matching work.
+function safePattern(pattern: string): boolean {
+  if (!pattern || pattern.length > 100) return false;
+  let escaped = false, inClass = false, repetitions = 0;
+  for (const char of pattern) {
+    if (escaped) { if (/[1-9]/.test(char)) return false; escaped = false; continue; }
+    if (char === "\\") { escaped = true; continue; }
+    if (char === "[") { inClass = true; continue; }
+    if (char === "]") { inClass = false; continue; }
+    if (!inClass && /[()|{}]/.test(char)) return false;
+    if (!inClass && /[*+?]/.test(char) && ++repetitions > 1) return false;
+  }
+  if (escaped) return false;
+  try { new RegExp(pattern); return true; } catch { return false; }
+}
+const rule = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("number"), operator: z.enum(["gt", "gte", "lt", "lte", "eq", "neq", "between", "not_between", "is_number", "whole"]), value: z.number().finite().optional(), secondValue: z.number().finite().optional() }).strict(),
+  z.object({ kind: z.literal("length"), operator: z.enum(["min", "max"]), value: z.number().int().min(0).max(10000) }).strict(),
+  z.object({ kind: z.literal("text"), operator: z.enum(["contains", "not_contains", "email", "url"]), value: z.string().max(500).optional() }).strict(),
+  z.object({ kind: z.literal("regex"), operator: z.enum(["matches", "not_matches"]), value: z.string().refine(safePattern, "Pola regex tidak valid atau terlalu kompleks.") }).strict(),
+]).superRefine((value, ctx) => {
+  if (value.kind === "number") {
+    if (!["is_number", "whole"].includes(value.operator) && value.value === undefined) ctx.addIssue({ code: "custom", message: "Angka batas wajib diisi." });
+    if (["between", "not_between"].includes(value.operator) && (value.secondValue === undefined || (value.value !== undefined && value.value > value.secondValue))) ctx.addIssue({ code: "custom", message: "Rentang angka tidak valid." });
+  }
+  if (value.kind === "text" && ["contains", "not_contains"].includes(value.operator) && !value.value) ctx.addIssue({ code: "custom", message: "Teks wajib diisi." });
+});
 const validation = z.object({
   minLength: z.number().int().min(0).max(10000).optional(), maxLength: z.number().int().min(0).max(10000).optional(),
   min: z.number().finite().optional(), max: z.number().finite().optional(),
@@ -11,6 +38,7 @@ const validation = z.object({
   minDate: z.string().max(30).optional(), maxDate: z.string().max(30).optional(),
   allowedTypes: z.array(z.string().min(1).max(100)).max(50).optional(), maxFileSize: z.number().int().positive().max(100_000_000).optional(), maxFiles: z.number().int().positive().max(20).optional(),
   message: z.string().max(500).optional(),
+  rule: rule.optional(),
 }).strict().default({});
 const questionSchema = z.object({
   id, type: z.enum(questionTypes), title: z.string().max(500), description: text.optional(), required: z.boolean().default(false),
@@ -42,6 +70,8 @@ export const formSchema = baseFormSchema.superRefine((form, ctx) => {
       add(q.id, [...path, "id"]);
       for (const key of ["options", "rows", "columns"] as const) q[key].forEach((item, i) => add(item.id, [...path, key, i, "id"]));
       const v = q.validation;
+      if (v.rule && !["short_text", "long_text", "number", "email", "phone", "url"].includes(q.type)) ctx.addIssue({ code: "custom", path: [...path, "validation", "rule"], message: "Validasi tidak tersedia untuk jenis pertanyaan ini." });
+      if (v.rule && q.type === "number" && v.rule.kind !== "number") ctx.addIssue({ code: "custom", path: [...path, "validation", "rule"], message: "Pertanyaan angka memerlukan validasi angka." });
       for (const [min, max] of [[v.min, v.max], [v.minLength, v.maxLength], [v.minSelections, v.maxSelections]]) {
         if (min !== undefined && max !== undefined && min > max) ctx.addIssue({ code: "custom", path: [...path, "validation"], message: "Batas minimum melebihi maksimum." });
       }
@@ -132,8 +162,33 @@ export function validateAnswers(schema: FormSchema, input: unknown): { success: 
         if (q.required) valid &&= rows.length > 0 && rows.every(row => Object.hasOwn(grid, row));
       }
     }
+    if (valid && v.rule) valid = validateRule(v.rule, value as string | number);
     if (valid) answers[q.id] = value as AnswerValue;
     else fieldErrors[q.id] = v.message || "Jawaban tidak valid.";
   }
   return { success: Object.keys(fieldErrors).length === 0, answers, fieldErrors };
+}
+
+function validateRule(rule: NonNullable<Question["validation"]["rule"]>, value: string | number): boolean {
+  const input = String(value);
+  if (rule.kind === "number") {
+    const number = typeof value === "number" ? value : input.trim() ? Number(input) : NaN;
+    if (!Number.isFinite(number)) return false;
+    const n = rule.value ?? 0, upper = rule.secondValue ?? 0;
+    switch (rule.operator) {
+      case "gt": return number > n; case "gte": return number >= n; case "lt": return number < n; case "lte": return number <= n;
+      case "eq": return number === n; case "neq": return number !== n; case "between": return number >= n && number <= upper;
+      case "not_between": return number < n || number > upper; case "whole": return Number.isInteger(number); case "is_number": return true;
+    }
+  }
+  if (rule.kind === "length") return rule.operator === "min" ? input.length >= rule.value : input.length <= rule.value;
+  if (rule.kind === "text") {
+    if (rule.operator === "contains") return input.includes(rule.value ?? "");
+    if (rule.operator === "not_contains") return !input.includes(rule.value ?? "");
+    if (rule.operator === "email") return z.string().email().max(320).safeParse(input).success;
+    try { return ["http:", "https:"].includes(new URL(input).protocol); } catch { return false; }
+  }
+  if (!safePattern(rule.value) || input.length > 1000) return false;
+  const matches = new RegExp(rule.value).test(input);
+  return rule.operator === "matches" ? matches : !matches;
 }

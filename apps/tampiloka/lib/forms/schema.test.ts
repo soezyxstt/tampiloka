@@ -78,3 +78,57 @@ test("response limits reject invalid counts and deadlines", () => {
     assert.equal(formSchema.safeParse({ ...form, settings: { ...form.settings, ...settings } }).success, false);
   }
 });
+
+test("custom rules validate answers while preserving old definitions", () => {
+  const form = createBlankForm(); const q = question("short_text", "q"); form.sections[0].questions = [q];
+  assert.equal(formSchema.safeParse(form).success, true);
+  const cases: [NonNullable<Question["validation"]["rule"]>, string, string][] = [
+    [{ kind: "number", operator: "gt", value: 5 }, "6", "5"],
+    [{ kind: "number", operator: "gte", value: 5 }, "5", "4"],
+    [{ kind: "number", operator: "lt", value: 5 }, "4", "5"],
+    [{ kind: "number", operator: "lte", value: 5 }, "5", "6"],
+    [{ kind: "number", operator: "eq", value: 5 }, "5", "6"],
+    [{ kind: "number", operator: "neq", value: 5 }, "6", "5"],
+    [{ kind: "number", operator: "between", value: 1, secondValue: 3 }, "3", "4"],
+    [{ kind: "number", operator: "not_between", value: 1, secondValue: 3 }, "4", "3"],
+    [{ kind: "number", operator: "whole" }, "-2", "2.5"],
+    [{ kind: "number", operator: "is_number" }, "2.5", "word"],
+    [{ kind: "length", operator: "min", value: 3 }, "abc", "ab"],
+    [{ kind: "length", operator: "max", value: 3 }, "abc", "abcd"],
+    [{ kind: "text", operator: "contains", value: "abc" }, "abcd", "xyz"],
+    [{ kind: "text", operator: "not_contains", value: "abc" }, "xyz", "abcd"],
+    [{ kind: "text", operator: "email" }, "a@example.com", "wrong"],
+    [{ kind: "text", operator: "url" }, "https://example.com", "javascript:alert(1)"],
+    [{ kind: "regex", operator: "matches", value: "^[0-9]+$" }, "123", "abc"],
+    [{ kind: "regex", operator: "not_matches", value: "^[0-9]+$" }, "abc", "123"],
+  ];
+  for (const [rule, good, bad] of cases) {
+    q.validation = { rule, message: "Coba lagi" };
+    assert.equal(formSchema.safeParse(form).success, true, JSON.stringify(rule));
+    assert.equal(validateAnswers(form, { q: good }).success, true, JSON.stringify(rule));
+    assert.equal(validateAnswers(form, { q: bad }).fieldErrors.q, "Coba lagi", JSON.stringify(rule));
+  }
+  q.required = false;
+  assert.equal(validateAnswers(form, {}).success, true);
+  q.validation = { rule: { kind: "regex", operator: "matches", value: "^a+$" } };
+  assert.equal(validateAnswers(form, { q: "a".repeat(1001) }).success, false);
+  q.type = "number"; q.validation = { rule: { kind: "number", operator: "gte", value: 5 } };
+  assert.equal(validateAnswers(form, { q: 5 }).success, true);
+  assert.equal(validateAnswers(form, { q: 4 }).success, false);
+});
+
+test("invalid and unsafe rules are rejected before saving", () => {
+  const form = createBlankForm(); const q = question("short_text", "q"); form.sections[0].questions = [q];
+  for (const rule of [
+    { kind: "number", operator: "between", value: 5, secondValue: 1 },
+    { kind: "number", operator: "gt" },
+    { kind: "text", operator: "contains", value: "" },
+    { kind: "regex", operator: "matches", value: "(a+)+$" },
+    { kind: "regex", operator: "matches", value: "a*a*" },
+    { kind: "regex", operator: "matches", value: "[" },
+  ]) {
+    assert.equal(formSchema.safeParse({ ...form, sections: [{ ...form.sections[0], questions: [{ ...q, validation: { rule } }] }] }).success, false, JSON.stringify(rule));
+  }
+  q.type = "single_choice"; q.validation = { rule: { kind: "number", operator: "whole" } };
+  assert.equal(formSchema.safeParse(form).success, false);
+});

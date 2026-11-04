@@ -1,13 +1,13 @@
 "use client";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { flexRender, getCoreRowModel, getFilteredRowModel, getPaginationRowModel, getSortedRowModel, useReactTable, type ColumnDef, type SortingState } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
 import { BrandInput, SelectField } from "@/components/ui/form-controls";
 import { answerLabel, questions, summarizeQuestion, type Bar, type Submission } from "@/lib/forms/response-summary";
 import type { Question } from "@/lib/forms/schema";
-import { api, post, type AdminForm } from "./api";
-import { FormNavigation } from "./form-navigation";
+import { api, post } from "./api";
+import { AdminSkeleton, useAdminConfirm } from "./admin-ui";
+import { toast } from "sonner";
 import styles from "./responses.module.css";
 
 type Tab = "Ringkasan" | "Per pertanyaan" | "Individual" | "Tabel";
@@ -26,13 +26,14 @@ function QuestionSummary({ question, rows, revisionId }: { question: Question; r
  </section>;
 }
 export function Responses({ id }: { id: string }) {
+ const confirm = useAdminConfirm();
  const [status, setStatus] = useState("active"); const [revision, setRevision] = useState(""); const [tab, setTab] = useState<Tab>("Ringkasan");
- const [busy, setBusy] = useState(false); const [form, setForm] = useState<AdminForm | null>(null); const [rows, setRows] = useState<Submission[] | null>(null); const [error, setError] = useState("");
+ const [busy, setBusy] = useState(false); const [rows, setRows] = useState<Submission[] | null>(null); const [error, setError] = useState("");
  const [query, setQuery] = useState(""); const [sorting, setSorting] = useState<SortingState>([]); const [visibility, setVisibility] = useState<Record<string, boolean>>({}); const [selectedId, setSelectedId] = useState(""); const [questionId, setQuestionId] = useState("");
  const individualHeading = useRef<HTMLHeadingElement>(null); const focusIndividual = useRef(false);
  useLayoutEffect(() => { if (tab !== "Individual" || !focusIndividual.current) return; focusIndividual.current = false; individualHeading.current?.focus(); }, [tab, selectedId]);
  function openIndividual(responseId: string) { focusIndividual.current = true; setSelectedId(responseId); setTab("Individual"); }
- const load = useCallback(async () => { try { const [f, r] = await Promise.all([api<{form: AdminForm}>(`/api/admin/forms/${encodeURIComponent(id)}`), api<{submissions: Submission[]}>(`/api/admin/forms/${encodeURIComponent(id)}/responses`)]); setForm(f.form); setRows(r.submissions); setError(""); } catch(e) { setError(e instanceof Error ? e.message : "Gagal memuat jawaban."); } }, [id]);
+ const load = useCallback(async () => { try { const r = await api<{submissions: Submission[]}>(`/api/admin/forms/${encodeURIComponent(id)}/responses`); setRows(r.submissions); setError(""); } catch(e) { setError(e instanceof Error ? e.message : "Gagal memuat jawaban."); } }, [id]);
  useEffect(() => { void load(); }, [load]);
  async function download(file: string) { try { const result = await api<{url: string}>(`/api/admin/files/${encodeURIComponent(file)}`); const url = new URL(result.url); if (url.protocol !== "https:") throw new Error("Tautan unduhan tidak valid."); window.location.assign(url.href); } catch (e) { setError(e instanceof Error ? e.message : "Gagal mengunduh berkas."); } }
  const revisions = useMemo(() => [...new Map((rows ?? []).map(row => [row.revisionId, row])).values()].sort((a, b) => b.revisionNumber - a.revisionNumber), [rows]);
@@ -43,17 +44,15 @@ export function Responses({ id }: { id: string }) {
  const questionIndex = Math.max(0, currentQuestions.findIndex(q => q.id === questionId)); const question = currentQuestions[questionIndex];
  const selectedIndex = Math.max(0, filteredRows.findIndex(row => row.id === selectedId)); const selected = filteredRows[selectedIndex];
  async function changeStatus(action: "archive" | "restore" | "delete") {
-  if (!selected || !window.confirm(action === "delete" ? "Hapus jawaban ini? Berkas tidak lagi dapat diunduh. Jawaban dan berkas dijadwalkan dihapus permanen setelah 30 hari." : action === "archive" ? "Arsipkan jawaban ini?" : "Pulihkan jawaban ini?")) return;
-  setBusy(true); setError(""); try { await api(`/api/admin/forms/${encodeURIComponent(id)}/responses/${encodeURIComponent(selected.id)}`, post({ action })); setSelectedId(""); await load(); } catch (e) { setError(e instanceof Error ? e.message : "Gagal memperbarui jawaban."); } finally { setBusy(false); }
+  if (!selected || !await confirm({ title: action === "delete" ? "Hapus jawaban?" : action === "archive" ? "Arsipkan jawaban?" : "Pulihkan jawaban?", description: action === "delete" ? "Berkas tidak lagi dapat diunduh. Jawaban dan berkas dijadwalkan dihapus permanen setelah 30 hari." : undefined, confirmLabel: action === "delete" ? "Hapus" : action === "archive" ? "Arsipkan" : "Pulihkan", destructive: action === "delete" })) return;
+  setBusy(true); setError(""); const notice = toast.loading("Memperbarui jawaban..."); try { await api(`/api/admin/forms/${encodeURIComponent(id)}/responses/${encodeURIComponent(selected.id)}`, post({ action })); setSelectedId(""); await load(); toast.success("Jawaban diperbarui.", { id: notice }); } catch (e) { const message = e instanceof Error ? e.message : "Gagal memperbarui jawaban."; setError(message); toast.error(message, { id: notice }); } finally { setBusy(false); }
  }
  const columns = useMemo<ColumnDef<Submission>[]>(() => [{ id: "createdAt", accessorFn: r => r.createdAt, header: "Dikirim", cell: ({row}) => date(row.original.createdAt) }, { id: "revisionNumber", accessorKey: "revisionNumber", header: "Revisi" }, { id: "status", accessorKey: "status", header: "Status", cell: ({row}) => row.original.status === "archived" ? "Diarsipkan" : "Aktif" }, ...currentQuestions.map(q => ({ id: q.id, header: q.title || "Pertanyaan tanpa judul", accessorFn: (r: Submission) => q.type === "file" && Array.isArray(r.answers[q.id]) ? `${(r.answers[q.id] as unknown[]).length} berkas` : answerLabel(r.answers[q.id], questions(r.revisionSchema).find(item => item.id === q.id)), cell: ({ getValue }: { getValue: () => unknown }) => <span className="line-clamp-2">{String(getValue())}</span> }))], [currentQuestions]);
  const table = useReactTable({ data: filteredRows, columns, state: { sorting, columnVisibility: visibility, globalFilter: query }, onSortingChange: setSorting, onColumnVisibilityChange: setVisibility, onGlobalFilterChange: setQuery, getCoreRowModel: getCoreRowModel(), getFilteredRowModel: getFilteredRowModel(), getSortedRowModel: getSortedRowModel(), getPaginationRowModel: getPaginationRowModel() });
  return <div className={styles.page}>
-  <Link href="/admin/forms" className={styles.back}>← Semua formulir</Link>
-  <header className={styles.header}><div><p className={styles.hint}>Jawaban formulir</p><h1 className="type-heading-1">{form?.title || "Jawaban"}</h1>{rows && <p className={styles.hint}>{filteredRows.length} jawaban {revisionRow ? `· Revisi ${revisionRow.revisionNumber}` : ""}</p>}</div></header>
-  <FormNavigation id={id} active="responses" />
+  <header className={styles.header}><div><h2 className="type-heading-3">Jawaban</h2>{rows && <p className={styles.hint}>{filteredRows.length} jawaban {revisionRow ? `? Revisi ${revisionRow.revisionNumber}` : ""}</p>}</div></header>
   {error && <div className={styles.notice} role="alert">{error} <button type="button" onClick={() => void load()}>Coba lagi</button></div>}
-  {rows === null ? !error && <p className={styles.empty}>Memuat jawaban...</p> : rows.length === 0 ? <section className={styles.surface}><h2 className="type-heading-4">Belum ada jawaban</h2><p className={styles.hint}>Jawaban yang masuk akan tampil di sini.</p></section> : <>
+  {rows === null ? !error && <AdminSkeleton variant="responses" /> : rows.length === 0 ? <section className={styles.surface}><h2 className="type-heading-4">Belum ada jawaban</h2><p className={styles.hint}>Jawaban yang masuk akan tampil di sini.</p></section> : <>
    <div className={styles.filters}><SelectField id="response-revision" label="Revisi formulir" value={revisionId} onChange={setRevision} options={revisions.map(row => ({ value: row.revisionId, label: `Revisi ${row.revisionNumber}` }))} /><SelectField id="response-status" label="Status jawaban" value={status} onChange={setStatus} options={[{value:"active",label:"Aktif"},{value:"all",label:"Aktif dan diarsipkan"},{value:"archived",label:"Diarsipkan"}]} /></div>
    <div className={styles.tabs} role="tablist" aria-label="Tampilan jawaban" onKeyDown={e => { if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return; e.preventDefault(); const next = (tabs.indexOf(tab) + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length; setTab(tabs[next]); document.getElementById(`response-tab-${next}`)?.focus(); }}>{tabs.map((item, i) => <button type="button" id={`response-tab-${i}`} key={item} role="tab" aria-selected={tab === item} aria-controls="response-panel" tabIndex={tab === item ? 0 : -1} onClick={() => setTab(item)}>{item}</button>)}</div>
    <div id="response-panel" role="tabpanel" aria-labelledby={`response-tab-${tabs.indexOf(tab)}`} className={styles.content}>
