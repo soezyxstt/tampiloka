@@ -1,4 +1,6 @@
-﻿import { betterAuth } from "better-auth";
+import { betterAuth } from "better-auth";
+import { jwt } from "better-auth/plugins";
+import { mcp } from "@better-auth/mcp";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { headers } from "next/headers";
 import { getDb } from "@/lib/db";
@@ -12,6 +14,8 @@ export function getAuth() {
   if (!CMS_DATABASE_URL || !BETTER_AUTH_SECRET || BETTER_AUTH_SECRET.length < 32 || !BETTER_AUTH_URL || !GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET || !process.env.ADMIN_EMAIL_ALLOWLIST) return null;
   return betterAuth({
     secret: BETTER_AUTH_SECRET, baseURL: BETTER_AUTH_URL,
+    disabledPaths: ["/token"],
+    plugins: [jwt(), mcp({ loginPage: "/admin/login", consentPage: "/admin/oauth/consent", resource: new URL("/api/mcp", BETTER_AUTH_URL).href, scopes: ["openid", "offline_access", "forms:manage"], allowDynamicClientRegistration: true, allowUnauthenticatedClientRegistration: true })],
     database: drizzleAdapter(getDb(), { provider: "pg", schema }),
     socialProviders: { google: { clientId: GOOGLE_CLIENT_ID, clientSecret: GOOGLE_CLIENT_SECRET } },
     databaseHooks: { user: { create: { before: async (user) => isAllowedAdmin(user.email) && user.emailVerified ? { data: user } : false } } },
