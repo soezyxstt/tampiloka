@@ -4,13 +4,18 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BrandInput, BrandTextarea, SelectField } from "@/components/ui/form-controls";
-import { Popover } from "@base-ui/react/popover";
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { ArrowDown, ArrowUp, Copy, Eye, EyeOff, Link as LinkIcon, Plus, Redo2, Trash2, Undo2, Layers, Type, GripVertical, ImagePlus } from "lucide-react";
+import { DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
+import { SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+import { toast } from "sonner";
+import { AdminIconButton, AdminSkeleton, useAdminConfirm } from "./admin-ui";
+import { FormValidationEditor } from "./form-validation-editor";
 import { FormRenderer } from "@/components/forms/form-renderer";
 import type { FormSchema, Question, Section } from "@/lib/forms/schema";
 import { cloneQuestion, copy, move, repairRouting, routingIssues, uid } from "./form-editor-helpers";
 import { FormEditorImage } from "./form-editor-image";
-import { FormNavigation } from "./form-navigation";
+import { FormNavigation, FormWorkspacePanels, useFormTab } from "./form-navigation";
 import "./form-editor.css";
 
 type FormRecord = { id: string; title: string; slug: string; status: string; draft: FormSchema; draftVersion: number; publishedRevisionId: string | null };
@@ -33,7 +38,17 @@ const newQuestion = (type: Question["type"]): Question => ({
 } as Question);
 const newSection = (): Section => ({ id: uid(), title: "Bagian baru", description: "", questions: [] } as Section);
 
+function SortableItem({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
+  const { attributes, listeners, setNodeRef, setActivatorNodeRef, transform, transition, isDragging } = useSortable({ id });
+  return <div ref={setNodeRef} style={{ transform: CSS.Transform.toString(transform), transition, opacity: isDragging ? .55 : undefined }} className="form-editor__sortable">
+    <button ref={setActivatorNodeRef} type="button" className="form-editor__drag" aria-label={label} {...attributes} {...listeners}><GripVertical size={18} aria-hidden="true" /></button>{children}
+  </div>;
+}
+
 export function FormEditor({ id }: { id: string }) {
+  const confirm = useAdminConfirm();
+  const activeTab = useFormTab();
+  const sensors = useSensors(useSensor(PointerSensor, { activationConstraint: { distance: 6 } }), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }));
   const [form, setForm] = useState<FormRecord | null>(null);
   const [draft, setDraft] = useState<FormSchema | null>(null);
   const [selection, setSelection] = useState<Selection>(null);
@@ -44,8 +59,6 @@ export function FormEditor({ id }: { id: string }) {
   const [preview, setPreview] = useState<"desktop" | "mobile">("desktop");
   const [panel, setPanel] = useState<"outline" | "canvas" | "properties">("canvas");
   const [showPreview, setShowPreview] = useState(false);
-  const [search, setSearch] = useState("");
-  const [insertSection, setInsertSection] = useState<string | null>(null);
   const [slug, setSlug] = useState("");
   const [history, setHistory] = useState<FormSchema[]>([]);
   const [future, setFuture] = useState<FormSchema[]>([]);
@@ -56,12 +69,12 @@ export function FormEditor({ id }: { id: string }) {
   const saving = useRef(false);
   const blocked = useRef(false);
   const mounted = useRef(true);
-  const propertiesRef = useRef<HTMLElement>(null);
+  const propertiesRef = useRef<HTMLDivElement>(null);
   const focusProperties = useRef(false);
   const recoveryKey = `tampiloka-form-draft:${id}`;
 
   useLayoutEffect(() => {
-    if (panel !== "properties" || !focusProperties.current) return;
+    if (!focusProperties.current) return;
     focusProperties.current = false;
     propertiesRef.current?.querySelector<HTMLElement>('input:not([type="hidden"]), textarea, [role="combobox"], button:not(:disabled)')?.focus();
   }, [panel, selection]);
@@ -78,7 +91,7 @@ export function FormEditor({ id }: { id: string }) {
         try { const stored = localStorage.getItem(recoveryKey); if (stored) { const parsed = JSON.parse(stored) as Recovery; if (JSON.stringify(parsed.draft) !== saved.current) setRecovery(parsed); else localStorage.removeItem(recoveryKey); } } catch { /* Storage can be unavailable. */ }
       }).catch(e => { if (e.name !== "AbortError") { setError(e.message); setStatus("Gagal memuat"); } });
     return () => { mounted.current = false; controller.abort(); };
-  }, [id, recoveryKey, recovery]);
+  }, [id, recoveryKey]);
 
   const edit = useCallback((change: (next: FormSchema) => void) => {
     if (!latest.current || recovery) return;
@@ -92,7 +105,7 @@ export function FormEditor({ id }: { id: string }) {
   const save = useCallback(async () => {
     if (saving.current || blocked.current || recovery || !latest.current || routingIssues(latest.current).length || JSON.stringify(latest.current) === saved.current) return;
     const snapshot = copy(latest.current); const serial = JSON.stringify(snapshot);
-    saving.current = true; setStatus("Menyimpan…"); setError("");
+    saving.current = true; setStatus("Menyimpan…"); setError(""); toast.loading("Menyimpan draf...", { id: "form-save" });
     try {
       const response = await fetch(`/api/admin/forms/${encodeURIComponent(id)}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ draft: snapshot, expectedVersion: version.current }) });
       const data = await response.json();
@@ -102,7 +115,7 @@ export function FormEditor({ id }: { id: string }) {
       if (JSON.stringify(latest.current) === serial) { try { localStorage.removeItem(recoveryKey); } catch { /* Storage can be unavailable. */ } setStatus("Tersimpan"); }
       else { try { localStorage.setItem(recoveryKey, JSON.stringify({ draft: latest.current, version: version.current })); } catch { setError("Cadangan lokal tidak tersedia. Jangan tutup halaman sebelum tersimpan."); } setStatus("Belum tersimpan"); setSaveTick(t => t + 1); }
     } catch (e) { setError(e instanceof Error ? e.message : "Draf gagal disimpan."); setStatus("Gagal menyimpan"); }
-    finally { saving.current = false; }
+    finally { saving.current = false; toast.dismiss("form-save"); }
   }, [id, recoveryKey, recovery]);
 
   useEffect(() => { if (!draft || conflict || status !== "Belum tersimpan") return; const timer = window.setTimeout(save, 1000); return () => window.clearTimeout(timer); }, [draft, conflict, save, status, saveTick]);
@@ -113,11 +126,14 @@ export function FormEditor({ id }: { id: string }) {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const link = (event.target as Element | null)?.closest("a[href]") as HTMLAnchorElement | null;
       if (!link || link.target || link.origin !== location.origin || link.pathname === location.pathname) return;
-      if ((recovery || (latest.current && JSON.stringify(latest.current) !== saved.current)) && !window.confirm("Ada perubahan yang belum tersimpan. Keluar dari editor?")) { event.preventDefault(); event.stopPropagation(); }
+      if (recovery || (latest.current && JSON.stringify(latest.current) !== saved.current)) {
+        event.preventDefault(); event.stopPropagation();
+        void confirm({ title: "Keluar dari editor?", description: "Ada perubahan yang belum tersimpan.", confirmLabel: "Keluar" }).then(ok => { if (ok) window.location.assign(link.href); });
+      }
     };
     document.addEventListener("click", guard, true);
     return () => document.removeEventListener("click", guard, true);
-  }, [recovery]);
+  }, [recovery, confirm]);
 
   const restoreHistory = (direction: "undo" | "redo") => {
     if (recovery) return;
@@ -130,13 +146,15 @@ export function FormEditor({ id }: { id: string }) {
   };
   const action = async (name: "publish" | "close" | "reopen") => {
     if (!form || recovery || blocked.current || saving.current || JSON.stringify(latest.current) !== saved.current) { setError("Simpan semua perubahan sebelum melanjutkan."); return; }
-    if (!window.confirm(name === "publish" ? "Terbitkan versi draf saat ini?" : name === "close" ? "Tutup formulir untuk respons baru?" : "Buka kembali formulir?") ) return;
-    try { const response = await fetch(`/api/admin/forms/${encodeURIComponent(id)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: name }) }); const data = await response.json(); if (!response.ok) throw new Error(data.error || "Tindakan gagal."); setForm(data.form); setError(""); } catch (e) { setError(e instanceof Error ? e.message : "Tindakan gagal."); }
+    if (!await confirm({ title: name === "publish" ? "Terbitkan versi draf saat ini?" : name === "close" ? "Tutup formulir untuk respons baru?" : "Buka kembali formulir?", confirmLabel: "Lanjutkan" })) return;
+    const toastId = toast.loading("Memperbarui status formulir...");
+    try { const response = await fetch(`/api/admin/forms/${encodeURIComponent(id)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: name }) }); const data = await response.json(); if (!response.ok) throw new Error(data.error || "Tindakan gagal."); setForm(data.form); setError(""); toast.success("Status formulir diperbarui."); } catch (e) { setError(e instanceof Error ? e.message : "Tindakan gagal."); toast.error(e instanceof Error ? e.message : "Tindakan gagal."); } finally { toast.dismiss(toastId); }
   };
   const saveSlug = async () => {
     if (!form || slug === form.slug) return;
     if (recovery || saving.current || blocked.current || JSON.stringify(latest.current) !== saved.current) { setError("Simpan draf terlebih dahulu sebelum mengubah tautan."); return; }
     saving.current = true; setStatus("Menyimpan tautan…");
+    toast.loading("Menyimpan tautan...", { id: "form-slug" });
     try {
       const response = await fetch(`/api/admin/forms/${encodeURIComponent(id)}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ slug, expectedVersion: version.current }) });
       const data = await response.json();
@@ -146,7 +164,7 @@ export function FormEditor({ id }: { id: string }) {
       if (JSON.stringify(latest.current) === saved.current) setStatus("Tersimpan");
       else { setStatus("Belum tersimpan"); setSaveTick(t => t + 1); }
     } catch (e) { setError(e instanceof Error ? e.message : "Tautan gagal disimpan."); setStatus("Gagal menyimpan tautan"); }
-    finally { saving.current = false; }
+    finally { saving.current = false; toast.dismiss("form-slug"); }
   };
   const issues = draft ? routingIssues(draft) : [];
   const section = draft?.sections.find(s => s.id === selection?.section);
@@ -155,52 +173,15 @@ export function FormEditor({ id }: { id: string }) {
   const updateQuestion = (fn: (q: Question) => void) => updateSection(s => { const q = s.questions.find(item => item.id === selection?.question); if (q) fn(q); });
   const reorderSection = (from: number, to: number) => edit(d => move(d.sections, from, to));
   const reorderQuestion = (sid: string, from: number, to: number) => edit(d => { const s = d.sections.find(item => item.id === sid); if (s) move(s.questions, from, to); });
-  const setSelectionAndPanel = (s: Selection) => { focusProperties.current = true; setSelection(s); setPanel("properties"); setShowPreview(false); };
-  if (!form || !draft) return <main className="form-editor"><p role={error ? "alert" : "status"}>{error || status}</p></main>;
+  const setSelectionAndPanel = (s: Selection) => { focusProperties.current = true; setSelection(s); setPanel("canvas"); setShowPreview(false); };
+  if (!form || !draft) return <main className="form-editor">{error ? <p role="alert">{error}</p> : <AdminSkeleton variant="editor" />}</main>;
 
-  return <main className="form-editor">
-    <header className="form-editor__top"><div><Link href="/admin">Semua formulir</Link><h1>{draft.title || "Formulir tanpa judul"}</h1><p role="status">{status} · {form.status}</p></div><div className="form-editor__actions">
-      <Button type="button" variant="outline" disabled={!!recovery || !history.length} onClick={() => restoreHistory("undo")}>Urungkan</Button><Button type="button" variant="outline" disabled={!!recovery || !future.length} onClick={() => restoreHistory("redo")}>Ulangi</Button>
-      <Button type="button" variant="outline" onClick={() => { setPanel("canvas"); setShowPreview(value => !value); }}>{showPreview ? "Kembali mengedit" : "Pratinjau"}</Button>
-      <Button type="button" variant="outline" disabled={!form.publishedRevisionId} onClick={async () => { try { await navigator.clipboard.writeText(new URL(`/f/${form.slug}`, window.location.origin).href); if (JSON.stringify(latest.current) === saved.current) setStatus("Tautan disalin"); } catch { setError("Tautan tidak dapat disalin."); } }}>Salin tautan</Button>
-      <Button type="button" variant="brand" size="pill" onClick={() => action("publish")}>Terbitkan</Button>{form.status === "published" && <Button type="button" variant="outline" onClick={() => action("close")}>Tutup</Button>}{form.status === "closed" && <Button type="button" variant="outline" onClick={() => action("reopen")}>Buka kembali</Button>}
-    </div></header>
-    <FormNavigation id={id} active="questions" />
-    {error && <div className="form-editor__notice" role="alert">{error} {!conflict && <button type="button" onClick={save}>Coba simpan lagi</button>}</div>}
-    {conflict && <div className="form-editor__notice">Cadangan perubahan tersedia di perangkat ini. <button type="button" onClick={() => window.location.reload()}>Muat versi terbaru</button></div>}
-    {issues.length > 0 && <div className="form-editor__notice" role="alert">Percabangan pada {issues.length} bagian perlu diperbaiki sebelum menyimpan. Aturan yang tidak lagi memiliki pertanyaan, pilihan, atau tujuan yang valid akan dihapus; alur berlanjut sesuai urutan. <button type="button" onClick={() => { if (window.confirm("Hapus hanya aturan percabangan yang tidak valid? Perubahan ini dapat diurungkan.")) edit(repairRouting); }}>Perbaiki aturan</button> <button type="button" onClick={() => setSelectionAndPanel({ section: issues[0] })}>Tinjau bagian</button></div>}
-    {recovery && <div className="form-editor__notice">Ada perubahan lokal yang belum tersimpan{recovery.version !== form.draftVersion ? " dari versi lama. Periksa sebelum menyimpan karena versi server sudah berubah" : ""}. <button type="button" onClick={() => { setHistory(h => [...h, draft]); latest.current = recovery.draft; setDraft(recovery.draft); setRecovery(null); setStatus("Belum tersimpan"); }}>Pulihkan perubahan lokal</button> <button type="button" onClick={() => { try { localStorage.removeItem(recoveryKey); setRecovery(null); } catch { setError("Cadangan lokal tidak dapat dihapus."); } }}>Buang cadangan</button></div>}
-    <fieldset disabled={!!recovery} className="form-editor__workspace"><nav className="form-editor__tabs" aria-label="Panel editor">{([["canvas", "Pertanyaan"], ["outline", "Susunan"], ["properties", "Pengaturan"]] as const).map(([value, label]) => <button key={value} type="button" aria-pressed={panel === value} onClick={() => setPanel(value)}>{label}</button>)}</nav>
-    <div className="form-editor__layout">
-      <aside className={`form-editor__outline ${panel === "outline" ? "is-active" : ""}`} aria-label="Susunan formulir">
-        <button type="button" className="form-editor__item" onClick={() => setSelectionAndPanel(null)}>Pengaturan formulir</button>
-        {draft.sections.map((s, si) => <div key={s.id} className="form-editor__section" draggable onDragStart={e => { e.dataTransfer.setData("application/x-section", String(si)); e.dataTransfer.effectAllowed = "move"; }} onDragOver={e => e.preventDefault()} onDrop={e => { e.preventDefault(); const from = e.dataTransfer.getData("application/x-section"); if (from !== "") reorderSection(Number(from), si); }}>
-          <div className="form-editor__row"><button type="button" className="form-editor__item" onClick={() => setSelectionAndPanel({ section: s.id })}>{s.title || "Bagian tanpa judul"}</button><button type="button" aria-label={`Pindah bagian ${s.title} ke atas`} disabled={si === 0} onClick={() => reorderSection(si, si - 1)}>↑</button><button type="button" aria-label={`Pindah bagian ${s.title} ke bawah`} disabled={si === draft.sections.length - 1} onClick={() => reorderSection(si, si + 1)}>↓</button></div>
-          {s.questions.map((q, qi) => <div className="form-editor__row form-editor__question" key={q.id} draggable onDragStart={e => { e.stopPropagation(); e.dataTransfer.setData("application/x-question", JSON.stringify({ sid: s.id, index: qi })); e.dataTransfer.effectAllowed = "move"; }} onDragOver={e => e.preventDefault()} onDrop={e => { e.preventDefault(); e.stopPropagation(); const raw = e.dataTransfer.getData("application/x-question"); if (raw) { const item = JSON.parse(raw); if (item.sid === s.id) reorderQuestion(s.id, item.index, qi); } }}><button type="button" className="form-editor__item" aria-pressed={selection?.question === q.id} onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}>{q.title || "Pertanyaan tanpa judul"}</button><button type="button" aria-label={`Pindah ${q.title} ke atas`} disabled={qi === 0} onClick={() => reorderQuestion(s.id, qi, qi - 1)}>↑</button><button type="button" aria-label={`Pindah ${q.title} ke bawah`} disabled={qi === s.questions.length - 1} onClick={() => reorderQuestion(s.id, qi, qi + 1)}>↓</button></div>)}
-          <Popover.Root open={insertSection === s.id} onOpenChange={open => { setInsertSection(open ? s.id : null); setSearch(""); }}><Popover.Trigger render={<Button type="button" variant="outline" />}>Tambah pertanyaan</Popover.Trigger><Popover.Portal><Popover.Positioner sideOffset={6} className="z-50"><Popover.Popup className="form-editor__popover"><Popover.Title>Tambah pertanyaan</Popover.Title><label>Cari jenis<BrandInput value={search} onChange={e => setSearch(e.target.value)} /></label><div className="form-editor__types">{types.filter(([, label]) => label.toLowerCase().includes(search.toLowerCase())).map(([type, label]) => <button type="button" key={type} onClick={() => { const q = newQuestion(type); edit(d => d.sections.find(item => item.id === s.id)?.questions.push(q)); setSelectionAndPanel({ section: s.id, question: q.id }); setInsertSection(null); }}>{label}</button>)}</div></Popover.Popup></Popover.Positioner></Popover.Portal></Popover.Root>
-        </div>)}
-        <Button type="button" variant="outline" onClick={() => { const s = newSection(); edit(d => d.sections.push(s)); setSelectionAndPanel({ section: s.id }); }}>Tambah bagian</Button>
-      </aside>
-      <section id="form-editor-preview" className={`form-editor__canvas ${panel === "canvas" ? "is-active" : ""} ${showPreview ? "is-preview" : ""}`} aria-label={showPreview ? "Pratinjau formulir" : "Pertanyaan formulir"}>
-        {showPreview ? <><div className="form-editor__canvas-heading"><h2 className="type-heading-4">Pratinjau formulir</h2><div className="form-editor__actions"><button type="button" aria-pressed={preview === "desktop"} onClick={() => setPreview("desktop")}>Desktop</button><button type="button" aria-pressed={preview === "mobile"} onClick={() => setPreview("mobile")}>Mobile</button></div></div><div className={preview === "mobile" ? "form-editor__mobile-preview" : ""}><FormRenderer schema={draft} preview /></div></> : <>
-          <button type="button" className={`form-editor__intro ${!selection ? "is-selected" : ""}`} onClick={() => setSelectionAndPanel(null)}><span className="type-heading-3">{draft.title || "Formulir tanpa judul"}</span><span>{draft.description || "Tambahkan deskripsi formulir"}</span><span className="form-editor__hint">Edit informasi formulir</span></button>
-          {draft.sections.map((s, si) => <div className="form-editor__canvas-section" key={s.id}>
-            <button type="button" className={`form-editor__section-title ${selection?.section === s.id && !selection.question ? "is-selected" : ""}`} onClick={() => setSelectionAndPanel({ section: s.id })}><span>Bagian {si + 1} dari {draft.sections.length}</span><strong className="type-heading-4">{s.title || "Bagian tanpa judul"}</strong>{s.description && <span>{s.description}</span>}</button>
-            {s.questions.map((q, qi) => <article key={q.id} className={`form-editor__card ${selection?.question === q.id ? "is-selected" : ""}`}>
-              <button type="button" className="form-editor__card-select" aria-pressed={selection?.question === q.id} onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}><span className="form-editor__card-type">{types.find(([type]) => type === q.type)?.[1]}</span><strong className="type-heading-5">{q.title || "Pertanyaan tanpa judul"}{q.required && <span aria-label=" wajib diisi"> *</span>}</strong>{q.description && <span>{q.description}</span>}<span className="form-editor__answer" aria-hidden="true">{choiceTypes.includes(q.type) ? q.options.map(o => <span key={o.id}><i className={q.type === "multiple_choice" ? "is-square" : ""} />{o.label || "Pilihan"}</span>) : gridTypes.includes(q.type) ? <span>{q.rows.map(r => r.label || "Baris").join(", ")} / {q.columns.map(c => c.label || "Kolom").join(", ")}</span> : <span>{({ long_text: "Teks jawaban panjang", file: "Unggah berkas", date: "Tanggal", time: "Waktu", datetime: "Tanggal dan waktu", rating: "1  2  3  4  5", linear_scale: "1  2  3  4  5", info: "" } as Record<string, string>)[q.type] ?? "Teks jawaban"}</span>}</span></button>
-              <div className="form-editor__card-actions"><button type="button" onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}>Edit</button><button type="button" aria-label={`Pindah ${q.title} ke atas`} disabled={qi === 0} onClick={() => reorderQuestion(s.id, qi, qi - 1)}><ArrowUp size={16} aria-hidden="true" /></button><button type="button" aria-label={`Pindah ${q.title} ke bawah`} disabled={qi === s.questions.length - 1} onClick={() => reorderQuestion(s.id, qi, qi + 1)}><ArrowDown size={16} aria-hidden="true" /></button><button type="button" onClick={() => { const cloned = cloneQuestion(q); edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions.splice(qi + 1, 0, cloned); }); setSelectionAndPanel({ section: s.id, question: cloned.id }); }}>Duplikat</button><button type="button" onClick={() => { if (window.confirm("Hapus pertanyaan ini?")) { edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions = target.questions.filter(item => item.id !== q.id); }); setSelectionAndPanel({ section: s.id }); } }}>Hapus</button></div>
-            </article>)}
-            <Button type="button" variant="outline" onClick={() => { const q = newQuestion("short_text"); edit(d => d.sections.find(item => item.id === s.id)?.questions.push(q)); setSelectionAndPanel({ section: s.id, question: q.id }); }}>+ Tambah pertanyaan</Button>
-          </div>)}
-          <Button type="button" variant="outline" onClick={() => { const s = newSection(); edit(d => d.sections.push(s)); setSelectionAndPanel({ section: s.id }); }}>+ Tambah bagian</Button>
-        </>}
-      </section>
-      <aside ref={propertiesRef} className={`form-editor__properties ${panel === "properties" ? "is-active" : ""}`} aria-label="Pengaturan pilihan">
-        {question && section ? <><h2>Pertanyaan</h2><SelectField id="editor-question-type" label="Jenis" value={question.type} options={types.map(([value, label]) => ({ value, label }))} onChange={value => { if (value === question.type) return; if (!window.confirm("Mengubah jenis akan mengganti pilihan dan validasi pertanyaan. Lanjutkan?")) return; updateQuestion(q => { const replacement = newQuestion(value as Question["type"]); q.type = replacement.type; q.options = replacement.options; q.rows = replacement.rows; q.columns = replacement.columns; q.validation = replacement.validation; }); }} /><label>Judul<BrandInput value={question.title} onChange={e => updateQuestion(q => { q.title = e.target.value; })} /></label><label>Penjelasan<BrandTextarea value={question.description || ""} onChange={e => updateQuestion(q => { q.description = e.target.value; })} /></label><label className="form-editor__check"><input type="checkbox" checked={question.required} onChange={e => updateQuestion(q => { q.required = e.target.checked; })} /> Wajib diisi</label>
+  const properties = <div ref={propertiesRef} className="form-editor__properties" aria-label="Pengaturan pilihan">
+        {question && section ? <><h2>Pertanyaan</h2><SelectField id="editor-question-type" label="Jenis" value={question.type} options={types.map(([value, label]) => ({ value, label }))} onChange={async value => { if (value === question.type) return; if (!await confirm({ title: "Ubah jenis pertanyaan?", description: "Pilihan dan validasi saat ini akan diganti.", confirmLabel: "Ubah" })) return; updateQuestion(q => { const replacement = newQuestion(value as Question["type"]); q.type = replacement.type; q.options = replacement.options; q.rows = replacement.rows; q.columns = replacement.columns; q.validation = replacement.validation; }); }} /><label>Judul<BrandInput value={question.title} onChange={e => updateQuestion(q => { q.title = e.target.value; })} /></label><label>Penjelasan<BrandTextarea value={question.description || ""} onChange={e => updateQuestion(q => { q.description = e.target.value; })} /></label><label className="form-editor__check"><input type="checkbox" checked={question.required} onChange={e => updateQuestion(q => { q.required = e.target.checked; })} /> Wajib diisi</label>
           <FormEditorImage key={question.id} formId={id} label="Gambar pertanyaan" value={question.imageAssetId} onChange={asset => updateQuestion(q => { if (asset) q.imageAssetId = asset; else delete q.imageAssetId; })} />
           {(choiceTypes.includes(question.type) || gridTypes.includes(question.type)) && (gridTypes.includes(question.type) ? (["rows", "columns"] as const) : (["options"] as const)).map(key => <fieldset key={key}><legend>{key === "options" ? "Pilihan" : key === "rows" ? "Baris" : "Kolom"}</legend>{question[key].map((item, i) => <div key={item.id}><div className="form-editor__row"><BrandInput aria-label={`${key} ${i + 1}`} value={item.label} onChange={e => updateQuestion(q => { const target = q[key].find(o => o.id === item.id); if (target) target.label = e.target.value; })} /><button type="button" aria-label={`Hapus ${item.label}`} onClick={() => updateQuestion(q => { q[key] = q[key].filter(o => o.id !== item.id); })}>Hapus</button></div>{key === "options" && <FormEditorImage formId={id} label={`Gambar untuk ${item.label || "pilihan"}`} value={item.imageAssetId} onChange={asset => updateQuestion(q => { const option = q.options.find(o => o.id === item.id); if (option) { if (asset) option.imageAssetId = asset; else delete option.imageAssetId; } })} />}</div>)}<button type="button" onClick={() => updateQuestion(q => { q[key].push({ id: uid(), label: "" }); })}>Tambah</button></fieldset>)}
           {choiceTypes.includes(question.type) && <label className="form-editor__check"><input type="checkbox" checked={question.allowOther || false} onChange={e => updateQuestion(q => { q.allowOther = e.target.checked; })} /> Izinkan jawaban lain</label>}
-          <fieldset><legend>Validasi</legend>{([
+          {["short_text", "long_text", "number", "email", "phone", "url"].includes(question.type) && <FormValidationEditor question={question} onChange={validation => updateQuestion(q => { q.validation = validation; })} />}<fieldset><legend>Validasi lainnya</legend>{([
             ...(["short_text", "long_text"].includes(question.type) ? [["minLength", "Panjang minimum"], ["maxLength", "Panjang maksimum"]] : []),
             ...(["number", "linear_scale", "rating"].includes(question.type) ? [["min", "Nilai minimum"], ["max", "Nilai maksimum"]] : []),
             ...(question.type === "multiple_choice" ? [["minSelections", "Pilihan minimum"], ["maxSelections", "Pilihan maksimum"]] : []),
@@ -209,11 +190,45 @@ export function FormEditor({ id }: { id: string }) {
           {["date", "datetime"].includes(question.type) && (["minDate", "maxDate"] as const).map((key, i) => <label key={key}>{i ? "Tanggal maksimum" : "Tanggal minimum"}<BrandInput type={question.type === "datetime" ? "datetime-local" : "date"} value={question.validation[key] || ""} onChange={e => updateQuestion(q => { if (e.target.value) q.validation[key] = e.target.value; else delete q.validation[key]; })} /></label>)}
           {question.type === "file" && <label>Jenis berkas yang diizinkan (pisahkan dengan koma)<BrandInput key={question.id} defaultValue={(question.validation.allowedTypes || []).join(", ")} onBlur={e => updateQuestion(q => { q.validation.allowedTypes = e.target.value.split(",").map(x => x.trim()).filter(Boolean); })} /></label>}
           <label>Pesan kesalahan<BrandInput value={question.validation.message || ""} onChange={e => updateQuestion(q => { q.validation.message = e.target.value; })} /></label></fieldset>
-          <div className="form-editor__actions"><Button type="button" variant="outline" onClick={() => { const cloned = cloneQuestion(question); updateSection(s => { const index = s.questions.findIndex(q => q.id === question.id); s.questions.splice(index + 1, 0, cloned); }); setSelection({ section: section.id, question: cloned.id }); }}>Duplikat</Button><Button type="button" variant="outline" onClick={() => { if (window.confirm("Hapus pertanyaan ini?")) { updateSection(s => { s.questions = s.questions.filter(q => q.id !== question.id); }); setSelection({ section: section.id }); } }}>Hapus</Button></div>
+          <div className="form-editor__actions"><Button type="button" variant="outline" onClick={() => { const cloned = cloneQuestion(question); updateSection(s => { const index = s.questions.findIndex(q => q.id === question.id); s.questions.splice(index + 1, 0, cloned); }); setSelection({ section: section.id, question: cloned.id }); }}>Duplikat</Button><Button type="button" variant="outline" onClick={async () => { if (await confirm({ title: "Hapus pertanyaan ini?", confirmLabel: "Hapus", destructive: true })) { updateSection(s => { s.questions = s.questions.filter(q => q.id !== question.id); }); setSelection({ section: section.id }); } }}>Hapus</Button></div>
         </> : section ? <><h2>Bagian</h2><label>Judul<BrandInput value={section.title} onChange={e => updateSection(s => { s.title = e.target.value; })} /></label><label>Penjelasan<BrandTextarea value={section.description || ""} onChange={e => updateSection(s => { s.description = e.target.value; })} /></label>
-          <fieldset><legend>Percabangan</legend><SelectField id="route-question" label="Pertanyaan penentu" value={section.routing?.questionId || ""} options={[{ value: "", label: "Lanjut sesuai urutan" }, ...section.questions.filter(q => ["single_choice", "dropdown"].includes(q.type)).map(q => ({ value: q.id, label: q.title || "Pertanyaan tanpa judul" }))]} onChange={value => { if (section.routing && value !== section.routing.questionId && !window.confirm("Mengganti pertanyaan akan menghapus aturan percabangan bagian ini. Lanjutkan?")) return; updateSection(s => { if (value) s.routing = { questionId: value, choices: {} }; else delete s.routing; }); }} />{section.routing && <>{section.questions.find(q => q.id === section.routing?.questionId)?.options.map(option => <SelectField key={option.id} id={`route-${option.id}`} label={option.label || "Pilihan tanpa judul"} value={section.routing?.choices[option.id] || ""} options={[{ value: "", label: "Lanjut sesuai urutan" }, ...draft.sections.slice(draft.sections.indexOf(section) + 1).map(s => ({ value: s.id, label: s.title || "Bagian tanpa judul" }))]} onChange={value => updateSection(s => { if (!s.routing) return; if (value) s.routing.choices[option.id] = value; else delete s.routing.choices[option.id]; })} />)}<SelectField id="route-default" label="Jika tidak ada pilihan yang cocok" value={section.routing.defaultSectionId || ""} options={[{ value: "", label: "Lanjut sesuai urutan" }, ...draft.sections.slice(draft.sections.indexOf(section) + 1).map(s => ({ value: s.id, label: s.title || "Bagian tanpa judul" }))]} onChange={value => updateSection(s => { if (!s.routing) return; if (value) s.routing.defaultSectionId = value; else delete s.routing.defaultSectionId; })} /></>}</fieldset>
-          <div className="form-editor__actions"><Button type="button" variant="outline" onClick={() => { const cloned = copy(section); cloned.id = uid(); cloned.questions = cloned.questions.map(cloneQuestion); delete cloned.routing; edit(d => { const index = d.sections.findIndex(s => s.id === section.id); d.sections.splice(index + 1, 0, cloned); }); setSelection({ section: cloned.id }); }}>Duplikat</Button><Button type="button" variant="outline" disabled={draft.sections.length <= 1} onClick={() => { if (window.confirm("Hapus bagian dan seluruh pertanyaannya?")) { edit(d => { d.sections = d.sections.filter(s => s.id !== section.id); }); setSelection(null); } }}>Hapus</Button></div></> : <><h2>Formulir</h2><label>Judul<BrandInput value={draft.title} onChange={e => edit(d => { d.title = e.target.value; })} /></label><label>Deskripsi<BrandTextarea value={draft.description || ""} onChange={e => edit(d => { d.description = e.target.value; })} /></label><label>Petunjuk awal<BrandTextarea value={draft.welcomeText || ""} onChange={e => edit(d => { d.welcomeText = e.target.value; })} /></label><FormEditorImage formId={id} label="Gambar header" value={draft.headerAssetId} onChange={asset => edit(d => { if (asset) d.headerAssetId = asset; else delete d.headerAssetId; })} /><FormEditorImage formId={id} label="Logo" value={draft.logoAssetId} onChange={asset => edit(d => { if (asset) d.logoAssetId = asset; else delete d.logoAssetId; })} /><label>Pesan setelah pengiriman<BrandTextarea value={draft.settings.confirmationMessage} onChange={e => edit(d => { d.settings.confirmationMessage = e.target.value; })} /></label><label>Alamat formulir<BrandInput value={slug} onChange={e => setSlug(e.target.value)} /></label><Button type="button" variant="outline" disabled={slug === form.slug} onClick={saveSlug}>Simpan alamat</Button><p>Perubahan alamat dapat memengaruhi tautan yang sudah dibagikan.</p><Link href={`/admin/forms/${encodeURIComponent(id)}/settings`}>Pengaturan warna dan formulir</Link></>}
-      </aside>
-    </div></fieldset>
+          <fieldset><legend>Percabangan</legend><SelectField id="route-question" label="Pertanyaan penentu" value={section.routing?.questionId || ""} options={[{ value: "", label: "Lanjut sesuai urutan" }, ...section.questions.filter(q => ["single_choice", "dropdown"].includes(q.type)).map(q => ({ value: q.id, label: q.title || "Pertanyaan tanpa judul" }))]} onChange={async value => { if (section.routing && value !== section.routing.questionId && !await confirm({ title: "Ganti pertanyaan penentu?", description: "Aturan percabangan bagian ini akan dihapus.", confirmLabel: "Ganti" })) return; updateSection(s => { if (value) s.routing = { questionId: value, choices: {} }; else delete s.routing; }); }} />{section.routing && <>{section.questions.find(q => q.id === section.routing?.questionId)?.options.map(option => <SelectField key={option.id} id={`route-${option.id}`} label={option.label || "Pilihan tanpa judul"} value={section.routing?.choices[option.id] || ""} options={[{ value: "", label: "Lanjut sesuai urutan" }, ...draft.sections.slice(draft.sections.indexOf(section) + 1).map(s => ({ value: s.id, label: s.title || "Bagian tanpa judul" }))]} onChange={value => updateSection(s => { if (!s.routing) return; if (value) s.routing.choices[option.id] = value; else delete s.routing.choices[option.id]; })} />)}<SelectField id="route-default" label="Jika tidak ada pilihan yang cocok" value={section.routing.defaultSectionId || ""} options={[{ value: "", label: "Lanjut sesuai urutan" }, ...draft.sections.slice(draft.sections.indexOf(section) + 1).map(s => ({ value: s.id, label: s.title || "Bagian tanpa judul" }))]} onChange={value => updateSection(s => { if (!s.routing) return; if (value) s.routing.defaultSectionId = value; else delete s.routing.defaultSectionId; })} /></>}</fieldset>
+          <div className="form-editor__actions"><Button type="button" variant="outline" onClick={() => { const cloned = copy(section); cloned.id = uid(); cloned.questions = cloned.questions.map(cloneQuestion); delete cloned.routing; edit(d => { const index = d.sections.findIndex(s => s.id === section.id); d.sections.splice(index + 1, 0, cloned); }); setSelection({ section: cloned.id }); }}>Duplikat</Button><Button type="button" variant="outline" disabled={draft.sections.length <= 1} onClick={async () => { if (await confirm({ title: "Hapus bagian dan seluruh pertanyaannya?", confirmLabel: "Hapus", destructive: true })) { edit(d => { d.sections = d.sections.filter(s => s.id !== section.id); }); setSelection(null); } }}>Hapus</Button></div></> : <><h2>Formulir</h2><label>Petunjuk awal<BrandTextarea value={draft.welcomeText || ""} onChange={e => edit(d => { d.welcomeText = e.target.value; })} /></label></>}
+      </div>;
+
+  return <main className="form-editor">
+    <header className="form-editor__top"><div><nav aria-label="Breadcrumb"><Link href="/admin">Formulir</Link> / <span aria-current="page">{draft.title || "Formulir tanpa judul"}</span></nav><h1>{draft.title || "Formulir tanpa judul"}</h1><p role="status">{status} · {form.status}</p></div><div className="form-editor__actions">
+      <AdminIconButton label="Urungkan" disabled={!!recovery || !history.length} onClick={() => restoreHistory("undo")}><Undo2 size={18} /></AdminIconButton><AdminIconButton label="Ulangi" disabled={!!recovery || !future.length} onClick={() => restoreHistory("redo")}><Redo2 size={18} /></AdminIconButton>
+      <AdminIconButton label={showPreview ? "Kembali mengedit" : "Pratinjau"} onClick={() => { setPanel("canvas"); setShowPreview(value => !value); }}>{showPreview ? <EyeOff size={18} /> : <Eye size={18} />}</AdminIconButton>
+      <AdminIconButton label="Salin tautan" disabled={!form.publishedRevisionId} onClick={async () => { try { await navigator.clipboard.writeText(new URL(`/f/${form.slug}`, window.location.origin).href); toast.success("Tautan disalin."); } catch { setError("Tautan tidak dapat disalin."); } }}><LinkIcon size={18} /></AdminIconButton>
+      <Button type="button" variant="brand" size="pill" onClick={() => action("publish")}>Terbitkan</Button>{form.status === "published" && <Button type="button" variant="outline" onClick={() => action("close")}>Tutup</Button>}{form.status === "closed" && <Button type="button" variant="outline" onClick={() => action("reopen")}>Buka kembali</Button>}
+    </div></header>
+    <FormNavigation id={id} active={activeTab} />
+    {error && <div className="form-editor__notice" role="alert">{error} {!conflict && <button type="button" onClick={save}>Coba simpan lagi</button>}</div>}
+    {conflict && <div className="form-editor__notice">Cadangan perubahan tersedia di perangkat ini. <button type="button" onClick={() => window.location.reload()}>Muat versi terbaru</button></div>}
+    {issues.length > 0 && <div className="form-editor__notice" role="alert">Percabangan pada {issues.length} bagian perlu diperbaiki sebelum menyimpan. Aturan yang tidak lagi memiliki pertanyaan, pilihan, atau tujuan yang valid akan dihapus; alur berlanjut sesuai urutan. <button type="button" onClick={async () => { if (await confirm({ title: "Perbaiki aturan percabangan?", description: "Hanya aturan yang tidak valid akan dihapus. Perubahan dapat diurungkan.", confirmLabel: "Perbaiki" })) edit(repairRouting); }}>Perbaiki aturan</button> <button type="button" onClick={() => setSelectionAndPanel({ section: issues[0] })}>Tinjau bagian</button></div>}
+    {recovery && <div className="form-editor__notice">Ada perubahan lokal yang belum tersimpan{recovery.version !== form.draftVersion ? " dari versi lama. Periksa sebelum menyimpan karena versi server sudah berubah" : ""}. <button type="button" onClick={() => { setHistory(h => [...h, draft]); latest.current = recovery.draft; setDraft(recovery.draft); setRecovery(null); setStatus("Belum tersimpan"); }}>Pulihkan perubahan lokal</button> <button type="button" onClick={() => { try { localStorage.removeItem(recoveryKey); setRecovery(null); } catch { setError("Cadangan lokal tidak dapat dihapus."); } }}>Buang cadangan</button></div>}
+    <div hidden={activeTab !== "questions"}>
+    <fieldset disabled={!!recovery} className="form-editor__workspace"><div className="form-editor__layout">
+      <section id="form-editor-preview" className={`form-editor__canvas ${panel === "canvas" ? "is-active" : ""} ${showPreview ? "is-preview" : ""}`} aria-label={showPreview ? "Pratinjau formulir" : "Pertanyaan formulir"}>
+        {showPreview ? <><div className="form-editor__canvas-heading"><h2 className="type-heading-4">Pratinjau formulir</h2><div className="form-editor__actions"><button type="button" aria-pressed={preview === "desktop"} onClick={() => setPreview("desktop")}>Desktop</button><button type="button" aria-pressed={preview === "mobile"} onClick={() => setPreview("mobile")}>Mobile</button></div></div><div className={preview === "mobile" ? "form-editor__mobile-preview" : ""}><FormRenderer schema={draft} preview /></div></> : <>
+          <div className="form-editor__intro"><div className="form-editor__header-image"><FormEditorImage formId={id} label="Gambar header" value={draft.headerAssetId} onChange={asset => edit(d => { if (asset) d.headerAssetId = asset; else delete d.headerAssetId; })} /></div><label>Judul formulir<BrandInput value={draft.title} onChange={e => edit(d => { d.title = e.target.value; })} /></label><label>Deskripsi<BrandTextarea value={draft.description || ""} onChange={e => edit(d => { d.description = e.target.value; })} /></label><details onToggle={e => { if (e.currentTarget.open) setSelection(null); }}><summary>Petunjuk tambahan</summary>{!selection && properties}</details></div>
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={({ active, over }) => { if (over && active.id !== over.id) reorderSection(draft.sections.findIndex(s => s.id === active.id), draft.sections.findIndex(s => s.id === over.id)); }}><SortableContext items={draft.sections.map(s => s.id)} strategy={verticalListSortingStrategy}>
+          {draft.sections.map((s, si) => <SortableItem key={s.id} id={s.id} label={`Seret bagian ${s.title || si + 1}`}><div className="form-editor__canvas-section">
+            <button type="button" className={`form-editor__section-title ${selection?.section === s.id && !selection.question ? "is-selected" : ""}`} onClick={() => setSelectionAndPanel({ section: s.id })}><span>Bagian {si + 1} dari {draft.sections.length}</span><strong className="type-heading-4">{s.title || "Bagian tanpa judul"}</strong>{s.description && <span>{s.description}</span>}</button>
+            {selection?.section === s.id && !selection.question && properties}
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={({ active, over }) => { if (over && active.id !== over.id) reorderQuestion(s.id, s.questions.findIndex(q => q.id === active.id), s.questions.findIndex(q => q.id === over.id)); }}><SortableContext items={s.questions.map(q => q.id)} strategy={verticalListSortingStrategy}>{s.questions.map((q, qi) => <SortableItem key={q.id} id={q.id} label={`Seret ${q.title || "pertanyaan"}`}><article className={`form-editor__card ${selection?.question === q.id ? "is-selected" : ""}`}>
+              <button type="button" hidden={selection?.question === q.id} className="form-editor__card-select" aria-pressed={selection?.question === q.id} onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}><span className="form-editor__card-type">{types.find(([type]) => type === q.type)?.[1]}</span><strong className="type-heading-5">{q.title || "Pertanyaan tanpa judul"}{q.required && <span aria-label=" wajib diisi"> *</span>}</strong>{q.description && <span>{q.description}</span>}<span className="form-editor__answer" aria-hidden="true">{choiceTypes.includes(q.type) ? q.options.map(o => <span key={o.id}><i className={q.type === "multiple_choice" ? "is-square" : ""} />{o.label || "Pilihan"}</span>) : gridTypes.includes(q.type) ? <span>{q.rows.map(r => r.label || "Baris").join(", ")} / {q.columns.map(c => c.label || "Kolom").join(", ")}</span> : <span>{({ long_text: "Teks jawaban panjang", file: "Unggah berkas", date: "Tanggal", time: "Waktu", datetime: "Tanggal dan waktu", rating: "1  2  3  4  5", linear_scale: "1  2  3  4  5", info: "" } as Record<string, string>)[q.type] ?? "Teks jawaban"}</span>}</span></button>
+              <div className="form-editor__card-actions"><AdminIconButton label="Edit" onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}><Type size={17} /></AdminIconButton><AdminIconButton label="Pindah ke atas" disabled={qi === 0} onClick={() => reorderQuestion(s.id, qi, qi - 1)}><ArrowUp size={17} /></AdminIconButton><AdminIconButton label="Pindah ke bawah" disabled={qi === s.questions.length - 1} onClick={() => reorderQuestion(s.id, qi, qi + 1)}><ArrowDown size={17} /></AdminIconButton><AdminIconButton label="Duplikat" onClick={() => { const cloned = cloneQuestion(q); edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions.splice(qi + 1, 0, cloned); }); setSelectionAndPanel({ section: s.id, question: cloned.id }); }}><Copy size={17} /></AdminIconButton><AdminIconButton label="Hapus" onClick={async () => { if (await confirm({ title: "Hapus pertanyaan ini?", confirmLabel: "Hapus", destructive: true })) { edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions = target.questions.filter(item => item.id !== q.id); }); setSelectionAndPanel({ section: s.id }); } }}><Trash2 size={17} /></AdminIconButton></div>
+              {selection?.question === q.id && properties}
+            </article></SortableItem>)}</SortableContext></DndContext>
+            <div className="form-editor__insert"><AdminIconButton label="Tambah pertanyaan" onClick={() => { const q = newQuestion("short_text"); edit(d => d.sections.find(item => item.id === s.id)?.questions.push(q)); setSelectionAndPanel({ section: s.id, question: q.id }); }}><Plus size={18} /></AdminIconButton><AdminIconButton label="Tambah teks" onClick={() => { const q = newQuestion("info"); q.title = "Informasi"; edit(d => d.sections.find(item => item.id === s.id)?.questions.push(q)); setSelectionAndPanel({ section: s.id, question: q.id }); }}><Type size={18} /></AdminIconButton><AdminIconButton label="Tambah gambar" onClick={() => { const q = newQuestion("info"); q.title = "Gambar"; edit(d => d.sections.find(item => item.id === s.id)?.questions.push(q)); setSelectionAndPanel({ section: s.id, question: q.id }); }}><ImagePlus size={18} /></AdminIconButton><AdminIconButton label="Pindah bagian ke atas" disabled={si === 0} onClick={() => reorderSection(si, si - 1)}><ArrowUp size={18} /></AdminIconButton><AdminIconButton label="Pindah bagian ke bawah" disabled={si === draft.sections.length - 1} onClick={() => reorderSection(si, si + 1)}><ArrowDown size={18} /></AdminIconButton></div>
+          </div></SortableItem>)}</SortableContext></DndContext>
+          <AdminIconButton label="Tambah bagian" onClick={() => { const s = newSection(); edit(d => d.sections.push(s)); setSelectionAndPanel({ section: s.id }); }}><Layers size={18} /></AdminIconButton>
+        </>}
+      </section>
+
+    </div></fieldset></div>
+    <FormWorkspacePanels id={id} activeTab={activeTab} disabled={!!recovery} draft={draft} edit={edit} slug={slug} setSlug={setSlug} savedSlug={form.slug} saveSlug={saveSlug} />
   </main>;
 }
