@@ -68,7 +68,7 @@ export default async function TentangPage({ params }: { params: Promise<{ locale
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label-lg" href="/contact">{copy.endCta}</Link>
+        <Button variant="secondary" size="lg" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
       </div>
     </div>
   );

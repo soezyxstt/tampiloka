@@ -14,7 +14,7 @@ export function StudioSections({ locale }: { locale: Locale }) {
       <div className="studio-inner studio-split-layout">
         <div className="studio-section-heading"><h2 className="type-heading-1" data-reveal>{copy.servicesTitle}</h2><Button variant="secondary" nativeButton={false} render={<Link href="/layanan" />}>{copy.servicesLink}</Button></div>
         <Accordion className="studio-service-list" defaultValue={[locale === "id" ? "Website" : "Websites"]}>
-          {copy.services.map(({ title, description, href }) => <AccordionItem className="studio-service" value={title} key={title} data-reveal><AccordionTrigger className="type-heading-3">{title}<Plus className="faq-icon" aria-hidden="true" /></AccordionTrigger><AccordionContent><p className="type-body">{description}</p>{href && <a className="studio-service__link type-label" href={TEMURA_URL} target="_blank" rel="noopener noreferrer">{copy.temuraCta}</a>}</AccordionContent></AccordionItem>)}
+          {copy.services.map(({ title, description, href }) => <AccordionItem className="studio-service" value={title} key={title} data-reveal><AccordionTrigger className="type-heading-3">{title}<Plus className="faq-icon" aria-hidden="true" /></AccordionTrigger><AccordionContent><p className="type-body">{description}</p>{href && <Button variant="secondary" className="studio-service__link" nativeButton={false} render={<a href={TEMURA_URL} target="_blank" rel="noopener noreferrer" />}>{copy.temuraCta}</Button>}</AccordionContent></AccordionItem>)}
         </Accordion>
       </div>
     </section>
