@@ -22,7 +22,7 @@ export function FormWorkspacePanels({ id, activeTab, draft, edit, slug, setSlug,
   const [visitedResponses, setVisitedResponses] = useState(false);
   if (activeTab === "responses" && !visitedResponses) setVisitedResponses(true);
   return <>
-    {(activeTab === "responses" || visitedResponses) && <div hidden={activeTab !== "responses"}><Responses id={id} /></div>}
-    <div hidden={activeTab !== "settings"}><fieldset disabled={disabled}><FormSettings draft={draft} edit={edit} slug={slug} setSlug={setSlug} savedSlug={savedSlug} saveSlug={saveSlug} /></fieldset></div>
+    {(activeTab === "responses" || visitedResponses) && <div className="form-editor__body" hidden={activeTab !== "responses"}><Responses id={id} /></div>}
+    <div className="form-editor__body" hidden={activeTab !== "settings"}><fieldset disabled={disabled}><FormSettings draft={draft} edit={edit} slug={slug} setSlug={setSlug} savedSlug={savedSlug} saveSlug={saveSlug} /></fieldset></div>
   </>;
 }
