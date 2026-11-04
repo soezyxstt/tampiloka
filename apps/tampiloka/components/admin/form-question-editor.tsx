@@ -30,18 +30,18 @@ export function FormQuestionEditor({ question: q, formId, typeOptions, change, c
   const image = <FormEditorImage formId={formId} label="Gambar pertanyaan" value={q.imageAssetId} onChange={asset => change(next => { if (asset) next.imageAssetId = asset; else delete next.imageAssetId; })} />;
   return <div className="form-editor__question-edit">
     <div className="form-editor__question-heading">
-      <BrandTextarea rows={1} className="form-editor__inline form-editor__question-title" aria-label="Judul pertanyaan" placeholder="Pertanyaan" value={q.title} maxLength={500} onChange={e => change(next => { next.title = e.target.value; })} />
+      <BrandTextarea rows={1} variant="inline" className="form-editor__question-title" aria-label="Judul pertanyaan" placeholder="Pertanyaan" value={q.title} maxLength={500} onChange={e => change(next => { next.title = e.target.value; })} />
       <div className="form-editor__question-type"><SelectField hideLabel id={`type-${q.id}`} label="Jenis pertanyaan" value={q.type} options={typeOptions} onChange={changeType} /></div>
       {!q.imageAssetId && image}
     </div>
-    {(description || q.description) && <div className="form-editor__description-row"><BrandTextarea rows={1} className="form-editor__inline form-editor__description" aria-label="Deskripsi pertanyaan" placeholder="Deskripsi (opsional)" value={q.description || ""} onChange={e => change(next => { next.description = e.target.value; })} /><AdminIconButton label="Hapus deskripsi" onClick={() => { change(next => { delete next.description; }); setDescription(false); }}><X size={16} /></AdminIconButton></div>}
+    {(description || q.description) && <div className="form-editor__description-row"><BrandTextarea rows={1} variant="inline" className="form-editor__description" aria-label="Deskripsi pertanyaan" placeholder="Deskripsi (opsional)" value={q.description || ""} onChange={e => change(next => { next.description = e.target.value; })} /><AdminIconButton label="Hapus deskripsi" onClick={() => { change(next => { delete next.description; }); setDescription(false); }}><X size={16} /></AdminIconButton></div>}
     {q.imageAssetId && image}
     {(choices || grid) && <div className={grid ? "form-editor__grid-options" : "form-editor__options"}>
       {(grid ? ["rows", "columns"] as const : ["options"] as const).map(key => <fieldset key={key}>
         {grid && <legend>{key === "rows" ? "Baris" : "Kolom"}</legend>}
         {q[key].map((item, i) => <div key={item.id} className="form-editor__option">
           <span className={`form-editor__option-marker ${q.type === "multiple_choice" ? "is-square" : ""}`} aria-hidden="true">{grid ? `${i + 1}.` : ""}</span>
-          <BrandInput className="form-editor__inline" aria-label={`${key === "options" ? "Pilihan" : key === "rows" ? "Baris" : "Kolom"} ${i + 1}`} value={item.label} placeholder="Pilihan" onChange={e => change(next => { const target = next[key].find(option => option.id === item.id); if (target) target.label = e.target.value; })} />
+          <BrandInput variant="inline" aria-label={`${key === "options" ? "Pilihan" : key === "rows" ? "Baris" : "Kolom"} ${i + 1}`} value={item.label} placeholder="Pilihan" onChange={e => change(next => { const target = next[key].find(option => option.id === item.id); if (target) target.label = e.target.value; })} />
           {key === "options" && <FormEditorImage formId={formId} label={`Gambar pilihan ${i + 1}`} value={item.imageAssetId} onChange={asset => change(next => { const target = next.options.find(option => option.id === item.id); if (target) { if (asset) target.imageAssetId = asset; else delete target.imageAssetId; } })} />}
           <AdminIconButton label={`Hapus ${key === "options" ? "pilihan" : key === "rows" ? "baris" : "kolom"} ${i + 1}`} onClick={() => change(next => { next[key] = next[key].filter(option => option.id !== item.id); })}><X size={16} /></AdminIconButton>
         </div>)}

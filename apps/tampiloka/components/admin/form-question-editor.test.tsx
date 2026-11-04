@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { renderToStaticMarkup } from "react-dom/server";
+import { BrandInput, BrandTextarea } from "@/components/ui/form-controls";
 import type { Question } from "@/lib/forms/schema";
 import { AdminConfirmProvider } from "./admin-ui";
 import { FormQuestionEditor } from "./form-question-editor";
@@ -32,4 +33,16 @@ test("saved answer rules remain visible and retain custom error text", () => {
   assert.ok(html.includes('aria-label="Angka batas"'));
   assert.ok(html.includes("Masukkan lebih dari lima."));
   assert.ok(!html.includes("Panjang minimum"));
+});
+
+test("shared inline controls keep default fields unchanged and preserve native props", () => {
+  const defaults = renderToStaticMarkup(<><BrandInput /><BrandTextarea /></>);
+  assert.ok(defaults.includes("rounded-md"));
+  assert.ok(defaults.includes("min-h-24"));
+  assert.ok(!defaults.includes("field-sizing"));
+  const inline = renderToStaticMarkup(<><BrandInput variant="inline" aria-label="Pilihan" disabled /><BrandTextarea variant="inline" rows={1} aria-label="Judul" /></>);
+  assert.equal((inline.match(/field-sizing:content/g) || []).length, 2);
+  assert.ok(inline.includes('disabled=""'));
+  assert.ok(inline.includes('aria-label="Judul"'));
+  assert.ok(!inline.includes('variant="inline"'));
 });
