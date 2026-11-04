@@ -23,3 +23,5 @@
 .studio-industry-preview { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
 .studio-industry-preview p { margin:1.5rem 0 2rem; }
 @media(max-width:767px) { .studio-section { padding:4rem 6%; } .studio-split-layout,.studio-about-intro,.studio-industry-preview { grid-template-columns:1fr; gap:2.5rem; } .studio-process-list { grid-template-columns:1fr 1fr; gap:2rem 1.5rem; } .studio-process-number { margin-bottom:1.5rem; } .studio-editorial-visual { aspect-ratio:1.3!important; } }
+.studio-service__link { padding: .7rem 1rem; border-radius: .5rem; background: #e8eee9; text-decoration: none; transition: background-color 180ms ease; }
+.studio-service__link:hover { background: #dbe6dc; }

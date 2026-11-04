@@ -97,22 +97,7 @@ export default async function IndustriPage({ params }: LocalizedPageProps) {
                 <ul className="industry-row__uses type-label">
                   {industry.uses.map(use => <li key={use}>{use}</li>)}
                 </ul>
-                <Button variant="link" className="industry-row__link" nativeButton={false} render={externalCta
-                  ? <a href={TEMURA_URL} target="_blank" rel="noopener noreferrer" />
-                  : <Link href="/contact" />
-                }>
-                  {label}
-                </Button>
-                {["food", "fashion", "small-business", "technology"].includes(kind) && (
-                  <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href="/templates" />}>
-                    {locale === "en" ? "Explore templates" : "Lihat template"}
-                  </Button>
-                )}
-                {(kind === "portfolio" || kind === "enterprise") && (
-                  <Button variant="link" className="industry-row__link" nativeButton={false} render={<Link href="/produk" />}>
-                    {locale === "en" ? "View our work" : "Lihat karya"}
-                  </Button>
-                )}
+                {externalCta && <Button variant="secondary" nativeButton={false} render={<a href={TEMURA_URL} target="_blank" rel="noopener noreferrer" />}>{label}</Button>}
               </div>
               <div className="industry-row__visual" data-reveal><IndustryPreview kind={kind} /></div>
             </section>

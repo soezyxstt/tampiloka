@@ -60,9 +60,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <div className="hero-glow" aria-hidden="true" />
       <div className="hero-composition">
         <h1 id="hero-title" className="type-display-xl" data-reveal>{copy.home.title}<br /><span className="hero-highlight">{copy.home.titleEmphasis}</span></h1>
-        <div className="hero-aside"><p className="type-body-lg" data-reveal>{copy.home.description}</p><div className="hero-actions" data-reveal><Button variant="brand" size="pill" nativeButton={false} render={<Link href="/templates" />}>{copy.home.templatesCta}</Button><Button variant="link" nativeButton={false} render={<Link href="/contact" />}>{copy.home.contactCta}</Button></div></div>
+        <div className="hero-aside"><p className="type-body-lg" data-reveal>{copy.home.description}</p><div className="hero-actions" data-reveal><Button variant="brand" size="pill" nativeButton={false} render={<Link href="/templates" />}>{copy.home.templatesCta}</Button></div></div>
       </div>
-      <div className="hero-bottom" data-reveal><a className="type-label" href="#templates">{copy.home.demoLink}</a><Link className="type-label" href="/produk">{copy.home.workLink}</Link></div>
     </section>
     <TemplateDiscovery locale={locale} />
     <ProjectShowcase locale={locale} />

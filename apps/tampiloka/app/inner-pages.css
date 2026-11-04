@@ -110,3 +110,14 @@
   .page-visual__image { transition-duration: .01ms !important; }
 }
 
+
+/* Secondary actions remain identifiable without underlines. */
+.inner-page__end-link a:not(.inner-page__cta), .service-row__cta {
+  padding: .7rem 1rem;
+  border-radius: .5rem;
+  background: #e8eee9;
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+.inner-page__end-link a:not(.inner-page__cta):hover, .service-row__cta:hover { background: #dbe6dc; }
+.contact-page__email { text-decoration: none; }
