@@ -2,6 +2,7 @@ import { describe, test } from "node:test";
 import assert from "node:assert/strict";
 import { renderToStaticMarkup } from "react-dom/server";
 import { FormRenderer } from "./form-renderer";
+import { FileUpload } from "./file-upload";
 import { createBlankForm, type Question } from "@/lib/forms/schema";
 
 describe("public form renderer", () => {
@@ -31,7 +32,22 @@ describe("public form renderer", () => {
     assert.ok(html.includes("background-color:#000000"));
     assert.ok(html.includes("color:#ffffff"));
     assert.ok(html.includes('name="website"'));
+    schema.settings.accent = "#ffff00";
+    const lightAccent = renderToStaticMarkup(<FormRenderer schema={schema} preview />);
+    assert.ok(lightAccent.includes("--form-accent:#ffff00"));
+    assert.ok(lightAccent.includes("--form-action-ink:#000000"));
+    assert.ok(lightAccent.includes("bg-[var(--form-accent,#15803d)]"));
+    assert.ok(lightAccent.includes("focus-visible:outline-[#166534]"));
     schema.settings.background = "url(https://example.com)";
     assert.ok(!renderToStaticMarkup(<FormRenderer schema={schema} preview />).includes("example.com"));
   });
+  test("upload picker shows only supported configured formats and limits", () => {
+    const question: Question = { id: "file", type: "file", title: "Berkas", required: false, options: [], rows: [], columns: [], validation: { allowedTypes: [".pdf", "image/png"], maxFiles: 2, maxFileSize: 5 * 1024 * 1024 } };
+    const html = renderToStaticMarkup(<FileUpload question={question} items={[]} setItems={() => {}} slug="test" revisionId="revision" uploadSessionId="session" value={[]} onChange={() => {}} onUploadingChange={() => {}} id="question-file" />);
+    assert.ok(html.includes('accept=".pdf,image/png"'));
+    assert.ok(html.includes("PNG, PDF. Maksimum 5 MB per berkas, 2 berkas."));
+    assert.ok(html.includes("Pilih berkas"));
+    assert.ok(!html.includes("JPEG"));
+  });
+
 });

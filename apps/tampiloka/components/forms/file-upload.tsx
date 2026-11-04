@@ -1,14 +1,16 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { FileText, UploadCloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Question } from "@/lib/forms/schema";
 import { MAX_FILE_SIZE, validateUpload } from "@/lib/storage/policy";
 
 export type UploadItem = { id: string; assetId?: string; name: string; progress: number; error?: string };
-type Props = { items: UploadItem[]; setItems: React.Dispatch<React.SetStateAction<UploadItem[]>>; question: Question; slug: string; revisionId: string; uploadSessionId: string; value: string[]; onChange: (ids: string[]) => void; onUploadingChange: (uploading: boolean) => void; disabled?: boolean; id?: string; "aria-describedby"?: string };
+type Props = { items: UploadItem[]; setItems: React.Dispatch<React.SetStateAction<UploadItem[]>>; question: Question; slug: string; revisionId: string; uploadSessionId: string; value: string[]; onChange: (ids: string[]) => void; onUploadingChange: (uploading: boolean) => void; disabled?: boolean; id?: string; "aria-describedby"?: string; "aria-invalid"?: boolean; "aria-required"?: boolean };
 
 export function FileUpload({ items, setItems, question, slug, revisionId, uploadSessionId, value, onChange, onUploadingChange, disabled, id, ...accessibility }: Props) {
+  const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
   const busy = useRef(false);
@@ -34,11 +36,29 @@ export function FileUpload({ items, setItems, question, slug, revisionId, upload
       const start = await request({ action: "start", filename: file.name, contentType: file.type, size: file.size });
       update({ assetId: start.assetId });
       await new Promise<void>((resolve, reject) => { const xhr = new XMLHttpRequest(); xhr.open("POST", start.url); xhr.upload.onprogress = event => { if (event.lengthComputable) update({ progress: Math.round(event.loaded / event.total * 100) }); }; xhr.onload = () => xhr.status >= 200 && xhr.status < 300 ? resolve() : reject(new Error("Unggah gagal")); xhr.onerror = () => reject(new Error("Koneksi terputus")); const data = new FormData(); for (const [key, val] of Object.entries(start.fields)) data.append(key, String(val)); data.append("file", file); xhr.send(data); });
+      update({ progress: 100 });
       await request({ action: "complete", assetId: start.assetId });
       setItems(current => current.map(item => item.id === localId ? { ...item, id: start.assetId, progress: 100 } : item));
       onChange([...value, start.assetId]);
     } catch { update({ error: "Unggah gagal. Pilih berkas kembali untuk mencoba lagi." }); }
     finally { busy.current = false; setUploading(false); onUploadingChange(false); }
   };
-  return <div className="space-y-3"><input {...accessibility} id={id} type="file" accept={question.validation.allowedTypes?.join(",")} disabled={disabled || uploading || value.length >= (question.validation.maxFiles ?? 1)} onChange={event => { const file = event.target.files?.[0]; event.target.value = ""; if (file) void upload(file); }} /><p className="type-caption">JPEG, PNG, GIF, WebP, atau PDF sesuai batas pertanyaan. Maksimum {Math.floor(Math.min(question.validation.maxFileSize ?? MAX_FILE_SIZE, MAX_FILE_SIZE) / 1024 / 1024)} MB per berkas.</p>{error && <p role="alert">{error}</p>}<ul className="space-y-2">{items.map(item => <li key={item.id} className="flex flex-wrap items-center gap-3"><span>{item.name}</span>{!item.error && item.progress < 100 && <progress value={item.progress} max={100} aria-label={`Mengunggah ${item.name}`} />}{item.error && <span role="alert">{item.error}</span>}<Button type="button" variant="outline" disabled={disabled || uploading} onClick={() => void remove(item)}>Hapus</Button></li>)}</ul></div>;
+  const formats = [
+    { label: "JPEG", types: ["image/jpeg", ".jpg", ".jpeg"] },
+    { label: "PNG", types: ["image/png", ".png"] },
+    { label: "GIF", types: ["image/gif", ".gif"] },
+    { label: "WebP", types: ["image/webp", ".webp"] },
+    { label: "PDF", types: ["application/pdf", ".pdf"] },
+  ].filter(format => !question.validation.allowedTypes?.length || format.types.some(type => question.validation.allowedTypes!.some(allowed => allowed.toLowerCase() === type)));
+  const limit = question.validation.maxFiles ?? 1;
+  return <div className="respondent-upload">
+    <input ref={inputRef} className="sr-only" tabIndex={-1} type="file" accept={question.validation.allowedTypes?.length ? question.validation.allowedTypes.join(",") : "image/jpeg,image/png,image/gif,image/webp,application/pdf"} disabled={disabled || uploading || value.length >= limit} onChange={event => { const file = event.target.files?.[0]; event.target.value = ""; if (file) void upload(file); }} />
+    <div className="respondent-upload-picker">
+      <UploadCloud aria-hidden="true" size={22} />
+      <div><Button {...accessibility} id={id} type="button" variant="outline" disabled={disabled || uploading || value.length >= limit} onClick={() => inputRef.current?.click()}>Pilih berkas</Button>
+        <p className="type-caption">{formats.length ? formats.map(format => format.label).join(", ") : "Tidak ada format yang didukung"}. Maksimum {Math.round(Math.min(question.validation.maxFileSize ?? MAX_FILE_SIZE, MAX_FILE_SIZE) / 1024 / 1024 * 100) / 100} MB per berkas, {limit} berkas.</p></div>
+    </div>
+    {error && <p role="alert" className="respondent-upload-error">{error}</p>}
+    <ul className="respondent-upload-list">{items.map(item => <li key={item.id} className="respondent-upload-item"><FileText aria-hidden="true" size={20} /><div className="respondent-upload-detail"><span className="respondent-upload-name">{item.name}</span>{item.error ? <span role="alert" className="respondent-upload-error">{item.error}</span> : item.progress < 100 ? <><span className="type-caption">Mengunggah {item.progress}%</span><progress value={item.progress} max={100} aria-label={`Mengunggah ${item.name}`} /></> : <span className="type-caption">{value.includes(item.id) ? "Selesai diunggah" : "Memeriksa berkas..."}</span>}</div><Button type="button" variant="outline" disabled={disabled || uploading} onClick={() => void remove(item)} aria-label={`Hapus ${item.name}`}>Hapus</Button></li>)}</ul>
+  </div>;
 }
