@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BrandInput, BrandTextarea, SelectField } from "@/components/ui/form-controls";
@@ -56,7 +56,15 @@ export function FormEditor({ id }: { id: string }) {
   const saving = useRef(false);
   const blocked = useRef(false);
   const mounted = useRef(true);
+  const propertiesRef = useRef<HTMLElement>(null);
+  const focusProperties = useRef(false);
   const recoveryKey = `tampiloka-form-draft:${id}`;
+
+  useLayoutEffect(() => {
+    if (panel !== "properties" || !focusProperties.current) return;
+    focusProperties.current = false;
+    propertiesRef.current?.querySelector<HTMLElement>('input:not([type="hidden"]), textarea, [role="combobox"], button:not(:disabled)')?.focus();
+  }, [panel, selection]);
 
   useEffect(() => {
     mounted.current = true;
@@ -147,7 +155,7 @@ export function FormEditor({ id }: { id: string }) {
   const updateQuestion = (fn: (q: Question) => void) => updateSection(s => { const q = s.questions.find(item => item.id === selection?.question); if (q) fn(q); });
   const reorderSection = (from: number, to: number) => edit(d => move(d.sections, from, to));
   const reorderQuestion = (sid: string, from: number, to: number) => edit(d => { const s = d.sections.find(item => item.id === sid); if (s) move(s.questions, from, to); });
-  const setSelectionAndPanel = (s: Selection) => { setSelection(s); setPanel("properties"); setShowPreview(false); };
+  const setSelectionAndPanel = (s: Selection) => { focusProperties.current = true; setSelection(s); setPanel("properties"); setShowPreview(false); };
   if (!form || !draft) return <main className="form-editor"><p role={error ? "alert" : "status"}>{error || status}</p></main>;
 
   return <main className="form-editor">
@@ -180,14 +188,14 @@ export function FormEditor({ id }: { id: string }) {
             <button type="button" className={`form-editor__section-title ${selection?.section === s.id && !selection.question ? "is-selected" : ""}`} onClick={() => setSelectionAndPanel({ section: s.id })}><span>Bagian {si + 1} dari {draft.sections.length}</span><strong className="type-heading-4">{s.title || "Bagian tanpa judul"}</strong>{s.description && <span>{s.description}</span>}</button>
             {s.questions.map((q, qi) => <article key={q.id} className={`form-editor__card ${selection?.question === q.id ? "is-selected" : ""}`}>
               <button type="button" className="form-editor__card-select" aria-pressed={selection?.question === q.id} onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}><span className="form-editor__card-type">{types.find(([type]) => type === q.type)?.[1]}</span><strong className="type-heading-5">{q.title || "Pertanyaan tanpa judul"}{q.required && <span aria-label=" wajib diisi"> *</span>}</strong>{q.description && <span>{q.description}</span>}<span className="form-editor__answer" aria-hidden="true">{choiceTypes.includes(q.type) ? q.options.map(o => <span key={o.id}><i className={q.type === "multiple_choice" ? "is-square" : ""} />{o.label || "Pilihan"}</span>) : gridTypes.includes(q.type) ? <span>{q.rows.map(r => r.label || "Baris").join(", ")} / {q.columns.map(c => c.label || "Kolom").join(", ")}</span> : <span>{({ long_text: "Teks jawaban panjang", file: "Unggah berkas", date: "Tanggal", time: "Waktu", datetime: "Tanggal dan waktu", rating: "1  2  3  4  5", linear_scale: "1  2  3  4  5", info: "" } as Record<string, string>)[q.type] ?? "Teks jawaban"}</span>}</span></button>
-              <div className="form-editor__card-actions"><button type="button" onClick={() => { setSelection({ section: s.id, question: q.id }); setPanel("properties"); }}>Edit</button><button type="button" aria-label={`Pindah ${q.title} ke atas`} disabled={qi === 0} onClick={() => reorderQuestion(s.id, qi, qi - 1)}><ArrowUp size={16} aria-hidden="true" /></button><button type="button" aria-label={`Pindah ${q.title} ke bawah`} disabled={qi === s.questions.length - 1} onClick={() => reorderQuestion(s.id, qi, qi + 1)}><ArrowDown size={16} aria-hidden="true" /></button><button type="button" onClick={() => { const cloned = cloneQuestion(q); edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions.splice(qi + 1, 0, cloned); }); setSelectionAndPanel({ section: s.id, question: cloned.id }); }}>Duplikat</button><button type="button" onClick={() => { if (window.confirm("Hapus pertanyaan ini?")) { edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions = target.questions.filter(item => item.id !== q.id); }); setSelectionAndPanel({ section: s.id }); } }}>Hapus</button></div>
+              <div className="form-editor__card-actions"><button type="button" onClick={() => setSelectionAndPanel({ section: s.id, question: q.id })}>Edit</button><button type="button" aria-label={`Pindah ${q.title} ke atas`} disabled={qi === 0} onClick={() => reorderQuestion(s.id, qi, qi - 1)}><ArrowUp size={16} aria-hidden="true" /></button><button type="button" aria-label={`Pindah ${q.title} ke bawah`} disabled={qi === s.questions.length - 1} onClick={() => reorderQuestion(s.id, qi, qi + 1)}><ArrowDown size={16} aria-hidden="true" /></button><button type="button" onClick={() => { const cloned = cloneQuestion(q); edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions.splice(qi + 1, 0, cloned); }); setSelectionAndPanel({ section: s.id, question: cloned.id }); }}>Duplikat</button><button type="button" onClick={() => { if (window.confirm("Hapus pertanyaan ini?")) { edit(d => { const target = d.sections.find(item => item.id === s.id); if (target) target.questions = target.questions.filter(item => item.id !== q.id); }); setSelectionAndPanel({ section: s.id }); } }}>Hapus</button></div>
             </article>)}
             <Button type="button" variant="outline" onClick={() => { const q = newQuestion("short_text"); edit(d => d.sections.find(item => item.id === s.id)?.questions.push(q)); setSelectionAndPanel({ section: s.id, question: q.id }); }}>+ Tambah pertanyaan</Button>
           </div>)}
           <Button type="button" variant="outline" onClick={() => { const s = newSection(); edit(d => d.sections.push(s)); setSelectionAndPanel({ section: s.id }); }}>+ Tambah bagian</Button>
         </>}
       </section>
-      <aside className={`form-editor__properties ${panel === "properties" ? "is-active" : ""}`} aria-label="Pengaturan pilihan">
+      <aside ref={propertiesRef} className={`form-editor__properties ${panel === "properties" ? "is-active" : ""}`} aria-label="Pengaturan pilihan">
         {question && section ? <><h2>Pertanyaan</h2><SelectField id="editor-question-type" label="Jenis" value={question.type} options={types.map(([value, label]) => ({ value, label }))} onChange={value => { if (value === question.type) return; if (!window.confirm("Mengubah jenis akan mengganti pilihan dan validasi pertanyaan. Lanjutkan?")) return; updateQuestion(q => { const replacement = newQuestion(value as Question["type"]); q.type = replacement.type; q.options = replacement.options; q.rows = replacement.rows; q.columns = replacement.columns; q.validation = replacement.validation; }); }} /><label>Judul<BrandInput value={question.title} onChange={e => updateQuestion(q => { q.title = e.target.value; })} /></label><label>Penjelasan<BrandTextarea value={question.description || ""} onChange={e => updateQuestion(q => { q.description = e.target.value; })} /></label><label className="form-editor__check"><input type="checkbox" checked={question.required} onChange={e => updateQuestion(q => { q.required = e.target.checked; })} /> Wajib diisi</label>
           <FormEditorImage key={question.id} formId={id} label="Gambar pertanyaan" value={question.imageAssetId} onChange={asset => updateQuestion(q => { if (asset) q.imageAssetId = asset; else delete q.imageAssetId; })} />
           {(choiceTypes.includes(question.type) || gridTypes.includes(question.type)) && (gridTypes.includes(question.type) ? (["rows", "columns"] as const) : (["options"] as const)).map(key => <fieldset key={key}><legend>{key === "options" ? "Pilihan" : key === "rows" ? "Baris" : "Kolom"}</legend>{question[key].map((item, i) => <div key={item.id}><div className="form-editor__row"><BrandInput aria-label={`${key} ${i + 1}`} value={item.label} onChange={e => updateQuestion(q => { const target = q[key].find(o => o.id === item.id); if (target) target.label = e.target.value; })} /><button type="button" aria-label={`Hapus ${item.label}`} onClick={() => updateQuestion(q => { q[key] = q[key].filter(o => o.id !== item.id); })}>Hapus</button></div>{key === "options" && <FormEditorImage formId={id} label={`Gambar untuk ${item.label || "pilihan"}`} value={item.imageAssetId} onChange={asset => updateQuestion(q => { const option = q.options.find(o => o.id === item.id); if (option) { if (asset) option.imageAssetId = asset; else delete option.imageAssetId; } })} />}</div>)}<button type="button" onClick={() => updateQuestion(q => { q[key].push({ id: uid(), label: "" }); })}>Tambah</button></fieldset>)}

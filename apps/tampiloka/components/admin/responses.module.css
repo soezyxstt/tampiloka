@@ -48,3 +48,5 @@
 .notice button { text-decoration: underline; }
 @media (max-width: 600px) { .header { margin-top: 12px; } .surface { padding: 20px 16px; } .filters > div { width: 100%; } .tabs { gap:0; } .tabs button { padding-inline:8px; font-size:.875rem; } }
 @media (prefers-reduced-motion: reduce) { .page * { scroll-behavior: auto; transition-duration: 0s; } }
+
+.surface h2:focus-visible { outline:2px solid #166534; outline-offset:5px; border-radius:2px; }
