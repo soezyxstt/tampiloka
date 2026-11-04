@@ -20,7 +20,7 @@
     "prepare:images": "node scripts/prepare-images.mjs",
     "db:migrate": "drizzle-kit migrate",
     "test:forms-backend": "node --experimental-strip-types --test scripts/form-backend.test.mjs && bun test ./scripts/form-auth.test.ts ./scripts/form-api.test.ts",
-    "test:forms": "bun test lib/forms lib/storage components/forms && bun test scripts/form-api.test.ts scripts/form-auth.test.ts scripts/form-proxy.test.ts scripts/form-maintenance-auth.test.ts && node --experimental-strip-types --test scripts/form-backend.test.mjs components/admin/form-editor-helpers.test.mjs scripts/purge-form-retention.test.mjs scripts/form-maintenance.test.mjs"
+    "test:forms": "bun test lib/forms lib/storage components/forms components/admin/form-question-editor.test.tsx && bun test scripts/form-api.test.ts scripts/form-auth.test.ts scripts/form-proxy.test.ts scripts/form-maintenance-auth.test.ts && node --experimental-strip-types --test scripts/form-backend.test.mjs components/admin/form-editor-helpers.test.mjs scripts/purge-form-retention.test.mjs scripts/form-maintenance.test.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1161.0",

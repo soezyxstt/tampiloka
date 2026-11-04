@@ -16,8 +16,8 @@ export function BrandInput({ className, ...props }: ComponentProps<"input">) {
   return <input {...props} className={cn(controlStyles, "rounded-md", className)} />;
 }
 
-export function SelectField({ id, label, value, onChange, options }: { id: string; label: string; value: string; onChange: (value: string) => void; options: { value: string; label: string }[] }) {
-  return <div className="min-w-0"><label className="type-label mb-2.5 block" htmlFor={id}>{label}</label><Select items={options} value={value} onValueChange={(next) => { if (next !== null) onChange(next); }}><SelectTrigger id={id} aria-label={label} data-value={value} className="type-body text-base min-h-12 w-full cursor-pointer rounded-md bg-background px-3 shadow-sm"><SelectValue /></SelectTrigger><SelectContent>{options.map((option) => <SelectItem key={option.value} value={option.value} data-value={option.value}>{option.label}</SelectItem>)}</SelectContent></Select></div>;
+export function SelectField({ id, label, value, onChange, options, hideLabel = false }: { id: string; label: string; value: string; onChange: (value: string) => void; options: { value: string; label: string }[]; hideLabel?: boolean }) {
+  return <div className="min-w-0"><label className={hideLabel ? "sr-only" : "type-label mb-2.5 block"} htmlFor={id}>{label}</label><Select items={options} value={value} onValueChange={(next) => { if (next !== null) onChange(next); }}><SelectTrigger id={id} aria-label={label} data-value={value} className="type-body text-base min-h-12 w-full cursor-pointer rounded-md bg-background px-3 shadow-sm"><SelectValue /></SelectTrigger><SelectContent>{options.map((option) => <SelectItem key={option.value} value={option.value} data-value={option.value}>{option.label}</SelectItem>)}</SelectContent></Select></div>;
 }
 
 export function SearchField({ id, label, ...props }: ComponentProps<"input"> & { id: string; label: string }) {
