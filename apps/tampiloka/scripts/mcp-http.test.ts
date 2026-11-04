@@ -2,8 +2,9 @@ import { test, expect, mock } from 'bun:test';
 mock.module('@/lib/mcp/auth', () => ({ authorizedOwner: async (subject: unknown) => subject === 'owner-1' ? 'owner-1' : null }));
 mock.module('@/lib/auth', () => ({ getAuth: () => ({}) }));
 mock.module('@better-auth/mcp', () => ({ requireMcpAuth: (_auth: unknown, handler: (request: Request, claims: { sub: string }) => Promise<Response>) => async (request: Request) => request.headers.get('authorization') === 'Bearer valid' ? handler(request, { sub: 'owner-1' }) : new Response('Unauthorized', { status: 401 }) }));
-mock.module('@/lib/forms/http', () => ({ rateLimit: async () => {} }));
-mock.module('@/lib/forms/service', () => ({ FormError: class extends Error {}, listForms: async (owner: string) => [{ owner }], getForm: async () => ({}), createForm: async () => ({}), updateForm: async () => ({}), formAction: async () => ({}), listResponses: async () => ({}), responseAction: async () => ({}) }));
+let rateCount = 1;
+mock.module('@/lib/db', () => ({ getDb: () => ({ insert: () => ({ values: () => ({ onConflictDoUpdate: () => ({ returning: async () => [{ count: rateCount }] }) }) }) }) }));
+mock.module('@/lib/forms/service', () => ({ FormError: class extends Error { constructor(message: string, public status = 400) { super(message); } }, listForms: async (owner: string) => [{ owner }], getForm: async () => ({}), createForm: async () => ({}), updateForm: async () => ({}), formAction: async () => ({}), listResponses: async () => ({}), responseAction: async () => ({}) }));
 mock.module('@/lib/storage/client', () => ({ storageClient: () => ({}) }));
 mock.module('@/lib/storage/uploads', () => ({ adminUpload: async () => ({}) }));
 const { POST } = await import('../app/api/mcp/route');
@@ -21,4 +22,15 @@ test('remote transport initializes, lists tools and enforces authorization and o
   expect((await listed.json()).result.tools.some((tool: { name: string }) => tool.name === 'list_responses')).toBe(true);
   const call = await POST(request({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'list_forms', arguments: {} } }, { 'mcp-protocol-version': '2025-06-18' }));
   expect(JSON.parse((await call.json()).result.content[0].text)).toEqual([{ owner: 'owner-1' }]);
+});
+
+test('throttled requests return 429 and are not cached', async () => {
+  process.env.BETTER_AUTH_URL = 'https://example.com';
+  rateCount = 121;
+  try {
+    const response = await POST(request({}));
+    expect(response.status).toBe(429);
+    expect(response.headers.get('cache-control')).toBe('no-store');
+    expect(await response.json()).toEqual({ error: 'Too many requests' });
+  } finally { rateCount = 1; }
 });

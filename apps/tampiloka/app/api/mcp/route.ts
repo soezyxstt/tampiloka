@@ -3,7 +3,7 @@ import { requireMcpAuth } from '@better-auth/mcp';
 import { getAuth } from '@/lib/auth';
 import { authorizedOwner } from '@/lib/mcp/auth';
 import { createMcpServer } from '@/lib/mcp/server';
-import { rateLimit } from '@/lib/forms/http';
+import { errorResponse, rateLimit } from '@/lib/forms/http';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       response.headers.set('Cache-Control', 'no-store');
       return response;
     }, { resource, requiredScopes: ['forms:manage'] })(request);
-  } catch (error) { console.error('MCP request failed', error); return new Response('Service unavailable', { status: 503, headers: { 'Cache-Control': 'no-store' } }); }
+  } catch (error) { const response = errorResponse(error); response.headers.set('Cache-Control', 'no-store'); return response; }
 }
 export async function GET() { return new Response('Method not allowed', { status: 405, headers: { Allow: 'POST' } }); }
 export async function DELETE() { return new Response('Method not allowed', { status: 405, headers: { Allow: 'POST' } }); }
