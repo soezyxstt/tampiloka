@@ -20,17 +20,21 @@
     "prepare:images": "node scripts/prepare-images.mjs",
     "db:migrate": "drizzle-kit migrate",
     "test:forms-backend": "node --experimental-strip-types --test scripts/form-backend.test.mjs && bun test ./scripts/form-auth.test.ts ./scripts/form-api.test.ts",
-    "test:forms": "bun test lib/forms lib/storage components/forms components/admin/form-question-editor.test.tsx && bun test scripts/form-api.test.ts scripts/form-auth.test.ts scripts/form-proxy.test.ts scripts/form-maintenance-auth.test.ts && node --experimental-strip-types --test scripts/form-backend.test.mjs components/admin/form-editor-helpers.test.mjs scripts/purge-form-retention.test.mjs scripts/form-maintenance.test.mjs"
+    "test:forms": "bun test lib/forms lib/storage components/forms components/admin/form-question-editor.test.tsx && bun test scripts/form-api.test.ts scripts/form-auth.test.ts scripts/form-proxy.test.ts scripts/form-maintenance-auth.test.ts && node --experimental-strip-types --test scripts/form-backend.test.mjs components/admin/form-editor-helpers.test.mjs scripts/purge-form-retention.test.mjs scripts/form-maintenance.test.mjs",
+    "test:mcp": "bun test scripts/mcp.test.ts && bun test scripts/mcp-http.test.ts && bun test scripts/mcp-auth.test.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1161.0",
     "@aws-sdk/s3-presigned-post": "^3.1161.0",
     "@aws-sdk/s3-request-presigner": "^3.1161.0",
     "@base-ui/react": "^1.8.0",
+    "@better-auth/mcp": "1.7.15",
+    "@better-auth/oauth-provider": "1.7.15",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@hookform/resolvers": "^7.0.1",
+    "@modelcontextprotocol/sdk": "^1.31.0",
     "@tampiloka/brand-system": "workspace:*",
     "@tanstack/react-table": "^8.21.3",
     "better-auth": "^1.7.15",

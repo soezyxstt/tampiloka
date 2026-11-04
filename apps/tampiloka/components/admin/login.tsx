@@ -1,6 +1,7 @@
 "use client";
 import { toast } from "sonner";
 import { useState } from "react";
+import { authClient } from "@/lib/auth/client";
 import { Button } from "@/components/ui/button";
 export function Login() {
   const [error, setError] = useState("");
@@ -8,9 +9,8 @@ export function Login() {
   async function signIn() {
     setBusy(true); setError(""); const toastId = toast.loading("Menghubungkan ke Google...");
     try {
-      const response = await fetch("/api/auth/sign-in/social", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ provider: "google", callbackURL: "/admin" }) });
-      const data = await response.json();
-      if (!response.ok || !data.url) throw new Error(data.message || "Tidak dapat memulai login.");
+      const { data, error } = await authClient.signIn.social({ provider: "google", callbackURL: "/admin" });
+      if (error || !data?.url) throw new Error(error?.message || "Tidak dapat memulai login.");
       toast.dismiss(toastId); window.location.assign(data.url);
     } catch (e) { const message = e instanceof Error ? e.message : "Tidak dapat memulai login."; setError(message); toast.error(message, { id: toastId }); setBusy(false); }
   }
