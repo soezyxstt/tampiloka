@@ -70,8 +70,8 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
               <ul className="service-row__list type-body-sm">
                 {service.items.map((item) => <li key={item}>{item}</li>)}
               </ul>
-              {service.href && <a className="service-row__cta type-label" href={service.href} target="_blank" rel="noopener noreferrer">{copy.temuraCta}</a>}
-              {service.imageKey === "service-website" && <Link className="service-row__cta type-label" href="/paket">{copy.packageCta}</Link>}
+              {service.href && <Button variant="secondary" className="service-row__cta" nativeButton={false} render={<a href={service.href} target="_blank" rel="noopener noreferrer" />}>{copy.temuraCta}</Button>}
+              {service.imageKey === "service-website" && <Button variant="secondary" className="service-row__cta" nativeButton={false} render={<Link href="/paket" />}>{copy.packageCta}</Button>}
             </div>
             <PageVisual imageKey={service.imageKey} alt={service.imageAlt} />
           </article>
@@ -79,7 +79,7 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Link className="type-label-lg" href="/contact">{copy.endCta}</Link>
+        <Button variant="secondary" size="lg" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
       </div>
     </div>
   );
