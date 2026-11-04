@@ -3,8 +3,14 @@ import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+const focusStyles = "focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-[#166534] focus-visible:outline-offset-3";
+
+export function BrandChoiceInput({ className, ...props }: ComponentProps<"input"> & { type: "checkbox" | "radio" }) {
+  return <input {...props} className={cn("size-5 shrink-0", focusStyles, className)} />;
+}
+
 const controlStyles =
-  "flex min-h-11 w-full border border-input bg-background px-3 py-2 font-sans text-base text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50";
+  `flex min-h-11 w-full border border-input bg-background px-3 py-2 font-sans text-base text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 ${focusStyles}`;
 
 export function BrandInput({ className, ...props }: ComponentProps<"input">) {
   return <input {...props} className={cn(controlStyles, "rounded-md", className)} />;

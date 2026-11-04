@@ -18,7 +18,7 @@
 .admin-shell__link { color: var(--form-muted, #64736a); font-weight: 600; }
 .admin-shell__link:hover { background: #f3f7f4; color: var(--form-ink, #172b20); }
 .admin-shell__link[aria-current="page"] { background: #e8f4eb; color: var(--form-accent, #15803d); }
-.admin-shell__link:focus-visible, .admin-page a:focus-visible, .admin-page button:focus-visible, .admin-starter:focus-within { outline: 2px solid var(--form-accent, #15803d); outline-offset: 2px; }
+.admin-shell__link:focus-visible, .admin-page a:focus-visible, .admin-page button:not([data-slot="button"]):focus-visible, .admin-starter:focus-within { outline: 2px solid var(--form-accent, #15803d); outline-offset: 2px; }
 .admin-shell__main { width: 100%; }
 .admin-page { max-width: 76rem; margin-inline: auto; }
 .admin-page.max-w-4xl { max-width: 56rem; }

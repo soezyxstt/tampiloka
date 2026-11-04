@@ -36,6 +36,8 @@ describe("public form renderer", () => {
     const lightAccent = renderToStaticMarkup(<FormRenderer schema={schema} preview />);
     assert.ok(lightAccent.includes("--form-accent:#ffff00"));
     assert.ok(lightAccent.includes("--form-action-ink:#000000"));
+    assert.ok(lightAccent.includes("bg-[var(--form-accent,#15803d)]"));
+    assert.ok(lightAccent.includes("focus-visible:outline-[#166534]"));
     schema.settings.background = "url(https://example.com)";
     assert.ok(!renderToStaticMarkup(<FormRenderer schema={schema} preview />).includes("example.com"));
   });
