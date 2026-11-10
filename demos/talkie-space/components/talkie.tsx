@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState, type RefObject } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, animate, inView, motion, useReducedMotion } from 'motion/react';
-import { ArrowDown, ArrowUpRight, Search, X, MapPin, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Search, X, MapPin, Clock, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
@@ -61,7 +61,7 @@ export default function Talkie(){
  const [category,setCategory]=useState('Kopi');
  const [query,setQuery]=useState('');
  const [page,setPage]=useState(0);
- const pageSize=8;
+ const pageSize=6;
  const [searchOpen,setSearchOpen]=useState(false);
  const [desktop,setDesktop]=useState(false);
  const input=useRef<HTMLInputElement>(null);
@@ -113,9 +113,9 @@ export default function Talkie(){
  <header className="header wrap"><a href="#main" aria-label="Talkie Space beranda" className="brand"><Image src="/images/logo.webp" alt="talkie space" width={180} height={28} preload/></a><nav aria-label="Navigasi utama"><a href="#menu">Menu</a><a href="#space">Ruang</a><a href="#visit">Lokasi</a></nav><a href={WA} className="button header-cta" aria-label="Reservasi via WhatsApp"><WhatsApp/><span>Reservasi</span></a></header>
  <main id="main" ref={main}>
  <section className="hero-shell" aria-labelledby="hero-title"><div className="wrap coffee-workbench">
- <div className="masthead"><h1 data-scroll-reveal id="hero-title">Coffee &<br/>Roastery.</h1><div data-scroll-reveal data-reveal-order="1" className="masthead-info"><p>Jl. Suherman 52, Garut<br/>Setiap hari, 08.00–22.00</p><a href="#menu" className="menu-link">Lihat menu <ArrowDown size={20}/></a></div></div>
- <div className="coffee-stage"><div data-scroll-reveal className="stage-main"><Photo name="hero-coffee" alt="Latte dan kemasan kopi Talkie Space" priority/></div><div className="stage-rail"><a href="#space" data-scroll-reveal data-reveal-order="1" className="stage-window"><Photo name="brewing" alt="Barista Talkie Space menyeduh filter coffee"/><span>Di balik bar <ArrowDown size={18}/></span></a><a href="#breakfast" data-scroll-reveal data-reveal-order="2" className="stage-window"><Photo name="breakfast" alt="Pilihan sarapan pagi Talkie Space"/><span>Sarapan pagi <ArrowDown size={18}/></span></a></div></div>
- <section className="breakfast" id="breakfast" aria-labelledby="breakfast-title"><h2 data-scroll-reveal id="breakfast-title">SAPA<br/><span>Sarapan Pagi</span></h2><p data-scroll-reveal data-reveal-order="1">Setiap hari<br/>08.00–11.00 WIB</p><div data-scroll-reveal data-reveal-order="2"><strong>Mulai Rp15.000</strong><a href="#menu" onClick={()=>chooseCategory('Sarapan')} className="text-link">Pilih sarapan <ArrowDown size={18}/></a></div></section>
+ <div className="masthead"><h1 data-scroll-reveal id="hero-title">Coffee &<br/>Roastery.</h1><div data-scroll-reveal data-reveal-order="1" className="masthead-info"><p>Kopi, roastery & sarapan.<br/>Jl. Suherman 52, Garut<br/>Setiap hari, 08.00–22.00</p><a href="#menu" className="menu-link">Lihat menu</a></div></div>
+ <div className="coffee-stage"><div data-scroll-reveal className="stage-main"><Photo name="hero-coffee" alt="Latte dan kemasan kopi Talkie Space" priority/></div><div className="stage-rail"><a href="#space" data-scroll-reveal data-reveal-order="1" className="stage-window"><Photo name="brewing" alt="Barista Talkie Space menyeduh filter coffee"/><span>Di balik bar</span></a><a href="#breakfast" data-scroll-reveal data-reveal-order="2" className="stage-window"><Photo name="breakfast" alt="Pilihan sarapan pagi Talkie Space"/><span>Sarapan pagi</span></a></div></div>
+ <section className="breakfast" id="breakfast" aria-labelledby="breakfast-title"><h2 data-scroll-reveal id="breakfast-title">SAPA<br/><span>Sarapan Pagi</span></h2><p data-scroll-reveal data-reveal-order="1">Setiap hari<br/>08.00–11.00 WIB</p><div data-scroll-reveal data-reveal-order="2"><strong>Mulai Rp15.000</strong><a href="#menu" onClick={()=>chooseCategory('Sarapan')} className="text-link">Pilih sarapan</a></div></section>
  </div></section>
  <section id="menu" className="catalogue section" aria-labelledby="menu-title"><div className="wrap">
    <div className="section-top"><h2 data-scroll-reveal id="menu-title">Menu</h2><p data-scroll-reveal data-reveal-order="1">Harga termasuk PPN.<br/>Ketersediaan dapat berubah.</p></div>
@@ -148,9 +148,9 @@ export default function Talkie(){
      </div>
    </Tabs>
  </div></section>
- <section id="space" className="space-section wrap"><div className="space-title"><h2 data-scroll-reveal>Di balik bar.</h2><p data-scroll-reveal data-reveal-order="1">Kopi dari Talkie,<br/>diseduh di ruang kami.</p></div><div data-scroll-reveal data-reveal-order="1" className="process-view"><Photo name="brewing" alt="Proses penyeduhan filter coffee di bar Talkie Space"/></div><div data-scroll-reveal data-reveal-order="2" className="space-address"><h3>Talkie Space<br/>Garut</h3><div className="visit-row"><MapPin size={20}/><p>Jl. Suherman No. 52<br/>Tarogong Kidul, Garut<br/>Jawa Barat 44151</p></div><div className="visit-row"><Clock size={20}/><p>Setiap hari<br/>08.00–22.00 WIB</p></div><a href={WA} className="text-link"><WhatsApp/>Tanya & reservasi <ArrowUpRight size={18}/></a></div></section>
- <section className="visit wrap" id="visit" aria-labelledby="visit-title"><div className="visit-top"><h2 data-scroll-reveal id="visit-title">Kunjungi kami.</h2><a data-scroll-reveal data-reveal-order="1" href={MAP} className="text-link">Petunjuk arah <ArrowUpRight size={19}/></a></div><div className="place-preview"><Photo name="facade" reveal alt="Fasad Talkie Space di Jalan Suherman Garut"/><iframe className="venue-map" title="Lokasi Talkie Space di Jalan Suherman 52, Garut" src={MAP_EMBED} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/></div></section>
- </main><footer className="wrap"><a href="#main" className="brand" aria-label="Kembali ke atas"><Image src="/images/logo.webp" alt="Talkie Space" width={180} height={28}/></a><span>Jl. Suherman 52, Garut</span><a href="https://www.instagram.com/talkie.space/">Instagram <ArrowUpRight size={16}/></a></footer></>
+ <section id="space" className="space-section wrap"><div className="space-title"><h2 data-scroll-reveal>Di balik bar.</h2><p data-scroll-reveal data-reveal-order="1">Kopi dari Talkie,<br/>diseduh di ruang kami.</p></div><div data-scroll-reveal data-reveal-order="1" className="process-view"><Photo name="brewing" alt="Proses penyeduhan filter coffee di bar Talkie Space"/></div><div data-scroll-reveal data-reveal-order="2" className="space-address"><h3>Talkie Space<br/>Garut</h3><div className="visit-row"><MapPin size={20}/><p>Jl. Suherman No. 52<br/>Tarogong Kidul, Garut<br/>Jawa Barat 44151</p></div><div className="visit-row"><Clock size={20}/><p>Setiap hari<br/>08.00–22.00 WIB</p></div><a href={WA} className="text-link"><WhatsApp/>Tanya & reservasi</a></div></section>
+ <section className="visit wrap" id="visit" aria-labelledby="visit-title"><div className="visit-top"><h2 data-scroll-reveal id="visit-title">Kunjungi kami.</h2><a data-scroll-reveal data-reveal-order="1" href={MAP} className="text-link">Petunjuk arah</a></div><div className="place-preview"><Photo name="facade" reveal alt="Fasad Talkie Space di Jalan Suherman Garut"/><iframe className="venue-map" title="Lokasi Talkie Space di Jalan Suherman 52, Garut" src={MAP_EMBED} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/></div></section>
+ </main><footer className="wrap"><a href="#main" className="brand" aria-label="Kembali ke atas"><Image src="/images/logo.webp" alt="Talkie Space" width={180} height={28}/></a><span>Jl. Suherman 52, Garut</span><a href="https://www.instagram.com/talkie.space/">Instagram</a></footer></>
 }
 
 

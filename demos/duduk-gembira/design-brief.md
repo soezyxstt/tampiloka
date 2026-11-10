@@ -25,3 +25,11 @@ Desktop: foto varian di tengah, pilihan di kiri, SKU/harga di kanan pada permuka
 
 ## Perbandingan portofolio
 Arah enam demo diselaraskan parent: Historia fotografi dining, Talkie kopi teknis gelap, Gulapadi pasar merah, Bumi album rumah, Classico urban monokrom. Duduk membawa papan warung factual dan meja pemilih tiga kolom, bukan hero editorial foto penuh atau album. Krem/serif mungkin tetap mirip Bumi pada token, sehingga pembandingan final harus menilai hubungan elemen dan mobile, bukan warna. Parent menyimpan satu history bersama dan melakukan penilaian render independen. Belum ada klaim lulus visual final di dokumen ini.
+
+## Refinement 2026-11-10
+
+Papan merek, teras, dan meja informasi dipertegas dengan penawaran kopi/nasi/lauk/sambal. Katalog menjadi enam data per halaman, seluruh 47 data tetap tersedia. Mobile mengurangi foto teras berulang dan tinggi foto interior.
+
+Identitas, aset dan data sumber arsip dipertahankan. Native anchors dan shadcn/Base UI controls tetap digunakan; panah pagination/galeri tetap fungsional. Motion gambar CSS hanya pada layar besar yang mendukung scroll timeline; fallback tetap terlihat, reveal mobile statis. Tidak ada fakta, harga atau testimoni baru. Referensi WF-08 menu ledger dilihat pada desktop/mobile untuk hubungan nama-harga dan garis pembatas, bukan untuk menyalin palet, serif, copy atau struktur seluruh halaman.
+
+Validasi source: syntax-only TSX, parsing CSS, diff whitespace, aset literal dan integritas data. **Belum diverifikasi lewat render browser**: dependensi demo tidak tersedia dan instalasi/build/typecheck dilarang oleh batas sumber daya pengguna. Screenshot full-page dan tinggi aktual sebelum/sesudah belum tersedia. Status ini tidak menggantikan penerimaan desain sebelumnya atau mengklaim lulus visual. Laporan lengkap: `/data/workspace/cafe-brand-refinement/REPORT.md`.

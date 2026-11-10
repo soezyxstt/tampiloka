@@ -266,5 +266,35 @@
     "evidence": "../artifacts/prospect-to-web-2026-10-23/classico-coffee/parent-evidence/1440-full.png",
     "visualDirection": "Condensed storefront sign above three equal direct category doors, breakfast counter before a large-photo contact-sheet catalogue, then WFC/community. Shares Kreme discovery with Duduk but differs in proportions, hierarchy, direct image navigation and mobile order.",
     "revisionEvidence": "prospect-to-web-review.md"
+  },
+  {
+    "date": "2026-11-10",
+    "status": "implemented_pending_browser_review",
+    "scope": [
+      "bumi-upi",
+      "classico-coffee",
+      "duduk-gembira",
+      "gulapadi",
+      "historia",
+      "talkie-space"
+    ],
+    "baseline": "5e8355d",
+    "decisions": {
+      "bumi-upi": "Penawaran sarapan/makan/minum dan dua aksi kini berada sebelum album. Buku menu menjadi enam data per spread, tiga per leaf, dengan akses semua 116 data. Album dan galeri mobile dipadatkan; foto booth tidak diulang di pembuka.",
+      "classico-coffee": "Etalase memberi porsi utama pada kopi, diikuti dapur dan pastry. Mobile memakai satu pintu tinggi dan dua pintu kecil bertumpuk. Foto sarapan lebar yang redundan disembunyikan di ponsel, tetapi foto set terpilih dan tabs tetap ada.",
+      "duduk-gembira": "Papan merek, teras, dan meja informasi dipertegas dengan penawaran kopi/nasi/lauk/sambal. Katalog menjadi enam data per halaman, seluruh 47 data tetap tersedia. Mobile mengurangi foto teras berulang dan tinggi foto interior.",
+      "gulapadi": "Desktop mempertahankan food spread; mobile mendahulukan judul/informasi/aksi menu, menampilkan tiga preview donat dan tautan katalog lengkap. Pagination helper menerima pageSize opsional: default desktop 12, mobile 6. Semua 206 data tetap tersedia.",
+      "historia": "Refinement minimal: panah CTA rutin dihapus, fokus hero diperjelas, sasaran sentuh tautan diperbesar. Parallax menghormati reduced motion pada sumber style. Panorama, menu, galeri, events dan urutan utama dipertahankan.",
+      "talkie-space": "Kopi tetap fokus utama workbench gelap. Aksi menu lebih jelas; mobile mengganti rail foto sekunder dengan dua tautan konteks, mengurangi foto duplikat, dan menampilkan enam hasil katalog per halaman. Seluruh 94 data dipertahankan."
+    },
+    "referenceIds": [
+      "WF-08"
+    ],
+    "evidence": "/data/workspace/cafe-brand-refinement/asset-contact-sheet.jpg",
+    "evidenceType": "retained_brand_asset_contact_sheet_not_runtime_capture",
+    "report": "/data/workspace/cafe-brand-refinement/REPORT.md",
+    "runtimeCaptures": null,
+    "pageHeightBeforeAfter": null,
+    "limits": "No demo/root node_modules; no installations, builds, typechecks or runtime browser validation. Static syntax, CSS, assets, source data and pagination checks only. No acceptance or deployment claimed."
   }
 ]

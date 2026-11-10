@@ -14,3 +14,11 @@
 /* Reveals are armed only after hydration; focused content is always visible. */
 [data-scroll-reveal]:focus-within{opacity:1!important;transform:none!important}
 @media(prefers-reduced-motion:reduce){[data-scroll-reveal]{opacity:1!important;transform:none!important}}
+
+/* A warung sign, terrace and concise order counter retain separate roles. */
+.hero-offering{font-weight:600;color:var(--red);max-width:18ch}.hero-address{justify-content:center;gap:22px}.hero-scene{overflow:hidden}.hero-scene>img{height:410px;object-position:center 40%}.hero-hours{justify-content:center;gap:28px}.menu-items h4{overflow-wrap:anywhere}.category-nav button{min-height:44px}
+@media(max-width:700px){.hero-scene>img{height:265px}.hero-address{grid-template-columns:1fr auto;gap:12px}.hero-offering{grid-column:1/-1;max-width:none;font-size:16px!important}.hero-address>.text-link{display:inline-flex;grid-column:1/-1;justify-self:start;margin:0;min-height:44px}.hero-hours{gap:18px;padding:12px 16px}.hero-hours p{display:flex;align-items:center;gap:14px}.hero-hours strong{font-size:21px}.hero h1{font-size:clamp(42px,11vw,70px)}.atmosphere{gap:24px;padding-block:42px}.atmosphere>img{height:245px;object-fit:cover}.visit-venue{display:none}.visit-location{grid-template-columns:1fr}}
+@media(max-width:350px){.hero-address{grid-template-columns:1fr}.hero-address>.primary{justify-self:start}}
+
+/* Phone reading stays still, including existing reveal wrappers. */
+@media(max-width:767px){[data-scroll-reveal],.scroll-reveal{opacity:1!important;transform:none!important}}

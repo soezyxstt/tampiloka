@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, Clock3, MapPin } from "lucide-react";
+import { Clock3, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import "./location.css";
 
@@ -20,8 +20,8 @@ export function Location() {
           </address>
           <div className="location-hours" data-scroll-reveal=""><Clock3 size={20} aria-hidden="true" /><div>Setiap hari<strong>09.00–23.00 WIB</strong></div></div>
           <div className="location-actions" data-scroll-reveal="">
-            <Button className="location-directions" nativeButton={false} render={<a href={maps} target="_blank" rel="noopener noreferrer" />}>Petunjuk arah <ArrowUpRight size={20} aria-hidden="true" /></Button>
-            <Button variant="ghost" className="location-contact" nativeButton={false} render={<a href="https://wa.me/6282130468241" target="_blank" rel="noopener noreferrer" />}><Image src="/icons/whatsapp.svg" alt="" width={20} height={20} aria-hidden="true" />Hubungi Historia<span className="sr-only"> melalui WhatsApp</span><ArrowUpRight size={18} aria-hidden="true" /></Button>
+            <Button className="location-directions" nativeButton={false} render={<a href={maps} target="_blank" rel="noopener noreferrer" />}>Petunjuk arah</Button>
+            <Button variant="ghost" className="location-contact" nativeButton={false} render={<a href="https://wa.me/6282130468241" target="_blank" rel="noopener noreferrer" />}><Image src="/icons/whatsapp.svg" alt="" width={20} height={20} aria-hidden="true" />Hubungi Historia<span className="sr-only"> melalui WhatsApp</span></Button>
           </div>
         </div>
         <div className="location-map-area">
@@ -30,7 +30,7 @@ export function Location() {
             <figcaption>Jl. Cimanuk No. 305</figcaption>
           </figure>
           <iframe className="location-map" title="Peta lokasi Historia Coffee & Eatery, Jalan Cimanuk No. 305 Garut" src={embeddedMap} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
-          <p className="location-map-note">Peta tidak terbuka? <a href={maps} target="_blank" rel="noopener noreferrer">Lihat lokasi di Google Maps <ArrowUpRight size={14} aria-hidden="true" /></a></p>
+          <p className="location-map-note">Peta tidak terbuka? <a href={maps} target="_blank" rel="noopener noreferrer">Lihat lokasi di Google Maps</a></p>
         </div>
       </div>
       <div className="location-bottom"><span>Garut, Jawa Barat</span><p>Untuk ketersediaan tempat dan informasi terbaru, hubungi tim Historia sebelum berkunjung.</p></div>

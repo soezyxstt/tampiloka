@@ -15,3 +15,11 @@ Reference matrix: see reference-selection.json for IDs, mechanisms, adaptations,
 Information plan: opening → featured dining spread → events/space context → searchable complete menu → location/map → official channels. 71 source items remain discoverable through 5 broad filter choices and cross-category search. Shared price uncertainty appears once. Six initial results, replacement pagination, precise per-product descriptions and variant pricing in dialog. Location retains real photo, map iframe and external fallback. Do not invent capacity, prices of event packages, accessibility, parking or booking confirmation.
 
 All six prospects are the comparison scope. Expected distinction: Duduk menu-board; Talkie laboratory; Gulapadi food market; Bumi Upi domestic album; Classico condensed urban type; Historia immersive dining panorama. These are constraints from parent, not claims of completed visual comparison. Closest current comparison is Historia's previous photo/marquee/orbit/grid; parent will inspect all rendered results and write shared comparison. Colour and font differences are not treated as structural evidence.
+
+## Refinement 2026-11-10
+
+Refinement minimal: panah CTA rutin dihapus, fokus hero diperjelas, sasaran sentuh tautan diperbesar. Parallax menghormati reduced motion pada sumber style. Panorama, menu, galeri, events dan urutan utama dipertahankan.
+
+Identitas, aset dan data sumber arsip dipertahankan. Native anchors dan shadcn/Base UI controls tetap digunakan; panah pagination/galeri tetap fungsional. Motion gambar CSS hanya pada layar besar yang mendukung scroll timeline; fallback tetap terlihat, reveal mobile statis. Tidak ada fakta, harga atau testimoni baru. Referensi WF-08 menu ledger dilihat pada desktop/mobile untuk hubungan nama-harga dan garis pembatas, bukan untuk menyalin palet, serif, copy atau struktur seluruh halaman.
+
+Validasi source: syntax-only TSX, parsing CSS, diff whitespace, aset literal dan integritas data. **Belum diverifikasi lewat render browser**: dependensi demo tidak tersedia dan instalasi/build/typecheck dilarang oleh batas sumber daya pengguna. Screenshot full-page dan tinggi aktual sebelum/sesudah belum tersedia. Status ini tidak menggantikan penerimaan desain sebelumnya atau mengklaim lulus visual. Laporan lengkap: `/data/workspace/cafe-brand-refinement/REPORT.md`.

@@ -6,9 +6,9 @@ export function defaultMenuCategory(now: Date): "Sarapan" | "Semua Menu" {
 
 export const MENU_PAGE_SIZE = 12;
 
-export function paginateMenu<T>(items: T[], requestedPage: number) {
-  const pages = Math.max(1, Math.ceil(items.length / MENU_PAGE_SIZE));
+export function paginateMenu<T>(items: T[], requestedPage: number, pageSize = MENU_PAGE_SIZE) {
+  const pages = Math.max(1, Math.ceil(items.length / pageSize));
   const page = Math.max(1, Math.min(requestedPage, pages));
-  const start = (page - 1) * MENU_PAGE_SIZE;
-  return {page, pages, items: items.slice(start, start + MENU_PAGE_SIZE), first: items.length ? start + 1 : 0, last: Math.min(start + MENU_PAGE_SIZE, items.length)};
+  const start = (page - 1) * pageSize;
+  return {page, pages, items: items.slice(start, start + pageSize), first: items.length ? start + 1 : 0, last: Math.min(start + pageSize, items.length)};
 }

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import {useEffect,useRef,useState,useSyncExternalStore} from 'react';
 import {AnimatePresence,motion,MotionConfig,useReducedMotion,useAnimationControls} from 'motion/react';
-import {ArrowDown,ArrowUpRight,ArrowLeft,ArrowRight,MapPin,Clock,Search,X,Camera} from 'lucide-react';
+import {ArrowLeft,ArrowRight,MapPin,Clock,Search,X,Camera} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Select,SelectTrigger,SelectValue,SelectContent,SelectItem} from '@/components/ui/select';
@@ -18,7 +18,7 @@ const memories=[
  {src:'/images/place-11.webp',alt:'Rak perabot lawas dan sudut makan di Bumi Upi',caption:'Sudut perabot lawas.'},
  {src:'/images/place-02.webp',alt:'Halaman hijau dan tempat duduk luar Bumi Upi',caption:'Halaman Bumi Upi.'},
 ];
-const PAGE_SIZE=8;
+const PAGE_SIZE=6;
 const subscribeToMount=()=>()=>{};
 function useAnimations(){const mounted=useSyncExternalStore(subscribeToMount,()=>true,()=>false);const reduced=useReducedMotion();return mounted&&reduced===false;}
 const REVEAL_EASE=[.19,1,.22,1] as const;
@@ -103,13 +103,13 @@ export default function Home(){
  <header className="site-header wrap"><a href="#top" className="logo" aria-label="Bumi Upi, beranda"><Image src="/images/logo.webp" alt="Bumi Upi Rumah Tamah" width={210} height={56} priority/></a><nav aria-label="Navigasi utama"><a href="#suasana">Rumah tamah</a><a href="#menu">Buku menu</a><a href="#kenangan">Sudut foto</a></nav><Chat/></header>
  <main>
  <section className="hero">
- <div className="wrap hero-title"><Reveal><h1>Rumah tamah.</h1></Reveal><Reveal delay={.08}><p>Jalan Cimanuk 312, Garut.</p></Reveal></div>
+ <div className="wrap hero-title"><Reveal><h1>Rumah tamah.</h1></Reveal><Reveal delay={.08}><p>Sarapan, makan, dan minum di Jalan Cimanuk 312, Garut.</p><div className="hero-actions"><Button nativeButton={false} render={<a href="#menu"/>} className="main-button">Buka buku menu</Button><a href="#kenangan">Lihat sudut rumah</a></div></Reveal></div>
  <div className="house-album wrap">
  <RevealFigure className="album-side room-side" rotate={-3} delay={0}><Image src="/images/place-16.webp" alt="Ruang makan Bumi Upi dengan perabot kayu dan lantai bermotif" width={1200} height={675} sizes="(max-width:767px) 43vw, 27vw"/><figcaption>Di dalam rumah.</figcaption></RevealFigure>
  <RevealFigure className="house-print" rotate={0} delay={0.08}><Image src="/images/place-17.webp" alt="Fasad Bumi Upi dengan pintu hijau di Jalan Cimanuk Garut" width={676} height={1200} priority sizes="(max-width:767px) 64vw, 31vw"/><figcaption>Bumi Upi, Garut.</figcaption></RevealFigure>
  <RevealFigure className="album-side booth-side" rotate={4} delay={0.16}><Image src="/images/place-07.webp" alt="Bilik photobooth Bumi Upi dengan panel kayu dan tirai merah" width={600} height={800} sizes="(max-width:767px) 32vw, 20vw"/><figcaption>Sebelum pulang.</figcaption></RevealFigure>
  </div>
- <Reveal className="hero-bottom wrap" delay={.24}><span><Clock size={17}/> Setiap hari · 07.00–23.00 WIB</span><Button nativeButton={false} render={<a href="#menu"/>} className="main-button">Buka buku menu <ArrowDown size={18}/></Button><a href="#kenangan">Lihat sudut rumah <ArrowDown size={17}/></a></Reveal>
+ <Reveal className="hero-bottom wrap" delay={.24}><span><Clock size={17}/> Setiap hari · 07.00–23.00 WIB</span></Reveal>
  </section>
  <section id="menu" className="catalogue"><div className="wrap">
   <div className="book-heading"><div><Reveal><h2>Buku menu.</h2></Reveal><Reveal delay={.08}><p>Sarapan, makan, dan minum.</p></Reveal></div><Image className="book-motif" src="/images/motif.webp" alt="" width={54} height={54}/></div>
@@ -122,7 +122,7 @@ export default function Home(){
    </div>
    <div className="results"><span role="status">{filtered.length} pilihan{query?` untuk “${query}”`:category!=='Semua menu'?` · ${category}`:''}</span>{(query||category!=='Semua menu')&&<Button variant="link" onClick={()=>choose('Semua menu')}>Lihat semua</Button>}</div>
    <AnimatePresence mode="wait" initial={false}><motion.div key={`${category}-${query}-${page}`} className="book-spread" initial={animations?{opacity:0,x:8}:false} animate={{opacity:1,x:0}} exit={animations?{opacity:0,x:-8}:{opacity:1,x:0}} transition={{duration:animations ? 0.18 : 0}}>
-    {filtered.length>0?<><div className="book-leaf">{pageItems.slice(0,4).map(recipe)}</div><div className="book-leaf">{pageItems.slice(4).map(recipe)}</div></>:<div className="empty"><h3>Belum ketemu yang dicari?</h3><p>Coba nama hidangan lain atau buka kembali semua menu.</p><Button variant="outline" onClick={()=>choose('Semua menu')}>Buka semua menu</Button></div>}
+    {filtered.length>0?<><div className="book-leaf">{pageItems.slice(0,3).map(recipe)}</div><div className="book-leaf">{pageItems.slice(3).map(recipe)}</div></>:<div className="empty"><h3>Belum ketemu yang dicari?</h3><p>Coba nama hidangan lain atau buka kembali semua menu.</p><Button variant="outline" onClick={()=>choose('Semua menu')}>Buka semua menu</Button></div>}
    </motion.div></AnimatePresence>
    <div className="book-pagination"><Button variant="ghost" onClick={()=>turnPage(page-1)} disabled={page===0} aria-label="Halaman menu sebelumnya"><ArrowLeft size={18}/><span>Sebelumnya</span></Button><span aria-live="polite">Halaman {page+1} dari {pageCount}</span><Button variant="ghost" onClick={()=>turnPage(page+1)} disabled={page+1>=pageCount} aria-label="Halaman menu berikutnya"><span>Berikutnya</span><ArrowRight size={18}/></Button></div>
    <p className="price-note">Harga dan ketersediaan dapat berubah. Konfirmasi saat memesan.</p>
@@ -137,9 +137,9 @@ export default function Home(){
    <p className="album-note">Sudut-sudut di rumah kami.</p>
   </div>
  </section>
- <section id="kunjungi" className="visit"><div className="wrap"><div className="visit-grid"><Reveal><h2>Mampir<br/>ke rumah.</h2><Chat/></Reveal><Reveal className="visit-details" delay={.08}><div><MapPin/><div><h3>Jalan Cimanuk No. 312</h3><p>Pataruman, Tarogong Kidul, Kabupaten Garut,<br/>Jawa Barat 44150. Depan favehotel Garut.</p><a className="text-link" href={MAP} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={17}/></a></div></div><div><Clock/><div><h3>Setiap hari</h3><p>07.00–23.00 WIB</p></div></div></Reveal></div>
-  <div className="visit-wayfinding"><div className="map-print"><iframe title="Lokasi Bumi Upi di Jalan Cimanuk 312, Garut" src={MAP_EMBED} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen/><a href={MAP} target="_blank" rel="noreferrer">Temukan jalan ke rumah kami <ArrowUpRight size={16}/></a></div><RevealFigure className="arrival-print" delay={.16}><Image src="/images/place-17.webp" alt="Tampak depan rumah Bumi Upi dengan pintu hijau dan papan nama Bumi Upi" width={900} height={1100} sizes="(max-width:767px) 80vw, 25vw"/><figcaption>Rumah tamah di Jalan Cimanuk.</figcaption></RevealFigure></div>
+ <section id="kunjungi" className="visit"><div className="wrap"><div className="visit-grid"><Reveal><h2>Mampir<br/>ke rumah.</h2><Chat/></Reveal><Reveal className="visit-details" delay={.08}><div><MapPin/><div><h3>Jalan Cimanuk No. 312</h3><p>Pataruman, Tarogong Kidul, Kabupaten Garut,<br/>Jawa Barat 44150. Depan favehotel Garut.</p><a className="text-link" href={MAP} target="_blank" rel="noreferrer">Buka Google Maps</a></div></div><div><Clock/><div><h3>Setiap hari</h3><p>07.00–23.00 WIB</p></div></div></Reveal></div>
+  <div className="visit-wayfinding"><div className="map-print"><iframe title="Lokasi Bumi Upi di Jalan Cimanuk 312, Garut" src={MAP_EMBED} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen/><a href={MAP} target="_blank" rel="noreferrer">Temukan jalan ke rumah kami</a></div><RevealFigure className="arrival-print" delay={.16}><Image src="/images/place-17.webp" alt="Tampak depan rumah Bumi Upi dengan pintu hijau dan papan nama Bumi Upi" width={900} height={1100} sizes="(max-width:767px) 80vw, 25vw"/><figcaption>Rumah tamah di Jalan Cimanuk.</figcaption></RevealFigure></div>
  </div></section>
- </main><footer className="wrap"><Image src="/images/logo.webp" alt="Bumi Upi Rumah Tamah" width={180} height={48}/><p>Rumah Tamah · Garut</p><a href="https://www.instagram.com/bumiupi/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#top">Kembali ke atas ↑</a></footer>
+ </main><footer className="wrap"><Image src="/images/logo.webp" alt="Bumi Upi Rumah Tamah" width={180} height={48}/><p>Rumah Tamah · Garut</p><a href="https://www.instagram.com/bumiupi/" target="_blank" rel="noreferrer">Instagram</a><a href="#top">Kembali ke atas ↑</a></footer>
  </MotionConfig>
 }

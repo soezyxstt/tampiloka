@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, MotionConfig, useAnimationControls, useReducedMotion } from "motion/react";
-import { ArrowDown, ArrowUpRight, Clock3, MapPin, Search, X, ArrowLeft, ArrowRight } from "lucide-react";
+import { Clock3, MapPin, Search, X, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -80,6 +80,14 @@ export default function Home() {
   const [donutIndex,setDonutIndex]=useState(9);
   const [query,setQuery]=useState("");
   const [page,setPage]=useState(1);
+  const [pageSize,setPageSize]=useState(12);
+  useEffect(()=>{
+    const screen=window.matchMedia("(max-width: 767px)");
+    const update=()=>{setPageSize(screen.matches?6:12);setPage(1);};
+    const frame=requestAnimationFrame(update);
+    screen.addEventListener("change",update);
+    return()=>{cancelAnimationFrame(frame);screen.removeEventListener("change",update);};
+  },[]);
   const [searchOpen,setSearchOpen]=useState(false);
   const interacted=useRef(false);
   const menuToolbar=useRef<HTMLDivElement>(null);
@@ -95,7 +103,7 @@ export default function Home() {
     else if(restoreSearchFocus.current){searchButton.current?.focus();restoreSearchFocus.current=false;}
   },[searchOpen]);
   const results=sortedMenu.filter(i=>(category==="Semua Menu"||i.category===category)&&`${i.name} ${i.category} ${i.description??""}`.toLocaleLowerCase("id").includes(query.trim().toLocaleLowerCase("id")));
-  const pagination=paginateMenu(results,page);
+  const pagination=paginateMenu(results,page,pageSize);
   const scrollToMenu=()=>requestAnimationFrame(()=>menuToolbar.current?.scrollIntoView({block:"start",behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}));
   const choose=(value:string)=>{interacted.current=true;setCategory(value);setQuery("");setPage(1);scrollToMenu();};
   const closeSearch=()=>{interacted.current=true;restoreSearchFocus.current=searchOpen;setSearchOpen(false);setQuery("");setPage(1);};
@@ -106,17 +114,17 @@ export default function Home() {
     <header className="site-header wrap">
       <a href="#beranda" aria-label="Gulapadi Garut, beranda" className="brand"><Image src="/images/logo.webp" alt="Gulapadi Warung Makan" width={136} height={90} priority/></a>
       <nav aria-label="Navigasi utama"><a href="#menu">Menu</a><a href="#buffet">Buffet</a><a href="#kunjungi">Kunjungi</a></nav>
-      <Chat className="header-chat">Hubungi kami</Chat>
+      <Chat className="header-chat">Tanya menu & reservasi</Chat>
     </header>
     <main>
       <section id="beranda" className="market-opening">
-        <div className="food-portals wrap"><ScrollReveal as="figure"><div className="portal-photo"><Image src="/images/pepes.webp" alt="Pepes Ayam Goreng dengan nasi timbel, lalaban dan sambal" width={1100} height={614} priority sizes="(max-width: 767px) 100vw, 65vw"/></div><figcaption><a href="#menu" onClick={()=>choose("Menu Baru")}>Pepes Ayam Goreng <ArrowDown size={14}/></a><strong>Rp39.000</strong></figcaption></ScrollReveal><ScrollReveal as="figure" delay={1}><div className="portal-photo"><Image src="/images/ayam-asap.webp" alt="Nasi Goreng Ayam Asap Gulapadi" width={900} height={650} priority sizes="(max-width: 767px) 100vw, 35vw"/></div><figcaption><a href="#menu" onClick={()=>choose("Menu Spesial")}>Nasi Goreng Ayam Asap <ArrowDown size={14}/></a><strong>Rp32.000</strong></figcaption></ScrollReveal></div>
-        <div className="wrap market-title"><ScrollReveal as="h1"><span>Warung makan</span><br/><em>Nusantara.</em></ScrollReveal><ScrollReveal className="opening-info" delay={1}><p>Gulapadi Garut<br/>Jl. Bank, Paminggir</p><p>Setiap hari 06.00–23.00<br/>Sarapan 06.00–10.30</p><a className="action opening-cta" href="#menu">Lihat menu <ArrowDown size={18}/></a></ScrollReveal></div>
+        <div className="food-portals wrap"><ScrollReveal as="figure"><div className="portal-photo"><Image src="/images/pepes.webp" alt="Pepes Ayam Goreng dengan nasi timbel, lalaban dan sambal" width={1100} height={614} priority sizes="(max-width: 767px) 100vw, 65vw"/></div><figcaption><a href="#menu" onClick={()=>choose("Menu Baru")}>Pepes Ayam Goreng</a><strong>Rp39.000</strong></figcaption></ScrollReveal><ScrollReveal as="figure" delay={1}><div className="portal-photo"><Image src="/images/ayam-asap.webp" alt="Nasi Goreng Ayam Asap Gulapadi" width={900} height={650} priority sizes="(max-width: 767px) 100vw, 35vw"/></div><figcaption><a href="#menu" onClick={()=>choose("Menu Spesial")}>Nasi Goreng Ayam Asap</a><strong>Rp32.000</strong></figcaption></ScrollReveal></div>
+        <div className="wrap market-title"><ScrollReveal as="h1"><span>Warung makan</span><br/><em>Nusantara.</em></ScrollReveal><ScrollReveal className="opening-info" delay={1}><p>Gulapadi Garut<br/>Jl. Bank, Paminggir</p><p>Setiap hari 06.00–23.00<br/>Sarapan 06.00–10.30</p><a className="action opening-cta" href="#menu">Lihat menu</a></ScrollReveal></div>
       </section>
       <section className="donat wrap" id="donat">
-        <ScrollReveal className="donut-intro"><h2>20 pilihan<br/><em>donat.</em></h2><a className="text-link" href="#menu" onClick={()=>choose("Donat")}>Semua pilihan donat <ArrowDown size={18}/></a></ScrollReveal>
+        <ScrollReveal className="donut-intro"><h2>20 pilihan<br/><em>donat.</em></h2><a className="text-link" href="#menu" onClick={()=>choose("Donat")}>Semua pilihan donat</a></ScrollReveal>
         <ScrollReveal className="donut-display" delay={1}><AnimatePresence mode="wait" initial={false}><motion.div key={donutIndex} className="donut-main" initial={{opacity:.5}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.2}}><Image src={`/images/donat-${donutIndex}.webp`} alt={`Donat ${donuts[donutIndex].name}`} width={520} height={514} sizes="(max-width: 767px) 80vw, 35vw"/><h3>{donuts[donutIndex].name}</h3><strong>{money(donuts[donutIndex].amount)}</strong></motion.div></AnimatePresence></ScrollReveal>
-        <ScrollReveal className="donut-choices" delay={2}>{[0,1,5,9,12,16].map(index=><Button variant="ghost" key={index} aria-pressed={donutIndex===index} onClick={()=>setDonutIndex(index)}><Image src={`/images/donat-${index}.webp`} alt="" width={85} height={84}/><span>{donuts[index].name}</span><ArrowUpRight size={16}/></Button>)}</ScrollReveal>
+        <ScrollReveal className="donut-choices" delay={2}>{[0,1,9,5,12,16].map(index=><Button variant="ghost" key={index} aria-pressed={donutIndex===index} onClick={()=>setDonutIndex(index)}><Image src={`/images/donat-${index}.webp`} alt="" width={85} height={84}/><span>{donuts[index].name}</span></Button>)}</ScrollReveal>
       </section>
       <section id="buffet" className="buffet wrap">
         <div className="buffet-intro"><ScrollReveal><h2>Paket <em>buffet.</em></h2><p>Empat pilihan dengan lauk ikan, ayam, sapi, dan donat.</p><Chat>Tanyakan paket buffet</Chat></ScrollReveal><ScrollReveal className="buffet-media" delay={1}><Image src="/images/buffet.webp" alt="Pilihan sajian buffet pada materi resmi Gulapadi" width={1024} height={432} sizes="(max-width: 767px) 90vw, 50vw"/></ScrollReveal></div>
@@ -131,7 +139,7 @@ export default function Home() {
                 ["Mie / sayur","1 mie","1 mie","1 mie","1 mie / sayur"],
                 ["Gorengan & sup","Masing-masing 1","Masing-masing 1","Masing-masing 1","Masing-masing 1"],
                 ["Dessert","1 pilihan","1 pilihan","1 pilihan","2 pilihan"],
-                ["Donat","—","—","1 pilihan","1 pilihan"],
+                ["Donat","Tidak termasuk","Tidak termasuk","1 pilihan","1 pilihan"],
                 ["Minuman","Termasuk","Termasuk","Termasuk","Termasuk"],
               ].map(([label,...values])=><TableRow key={label}><TableHead scope="row">{label}</TableHead>{values.map((value,index)=><TableCell key={index}>{value}</TableCell>)}</TableRow>)}
             </TableBody>
@@ -166,8 +174,8 @@ export default function Home() {
         </div>}
 
       </div></section>
-      <section id="kunjungi" className="visit"><div className="wrap visit-grid"><ScrollReveal><h2>Gulapadi<br/><em>Garut.</em></h2><Chat/></ScrollReveal><div className="visit-details"><ScrollReveal delay={1}><MapPin/><div><h3>Gulapadi Garut</h3><p>Jl. Bank, Paminggir, Kec. Garut Kota,<br/>Kabupaten Garut, Jawa Barat 44112.</p><a href={MAP} className="text-link" target="_blank" rel="noopener noreferrer">Buka Google Maps <ArrowUpRight size={18}/></a></div></ScrollReveal><ScrollReveal delay={2}><Clock3/><div><h3>Setiap hari, 06.00–23.00</h3><p>Sarapan 06.00–10.30<br/>Menu reguler 10.30–23.00</p></div></ScrollReveal></div></div><figure className="visit-map wrap"><div className="map-frame"><iframe src={MAP_EMBED} title="Lokasi Gulapadi Garut, Jalan Bank" width="1200" height="380" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div><figcaption><span>Gulapadi Garut · Jalan Bank, Paminggir</span><a href={MAP} target="_blank" rel="noopener noreferrer">Buka petunjuk arah <ArrowUpRight size={16}/></a></figcaption></figure></section>
+      <section id="kunjungi" className="visit"><div className="wrap visit-grid"><ScrollReveal><h2>Gulapadi<br/><em>Garut.</em></h2><Chat/></ScrollReveal><div className="visit-details"><ScrollReveal delay={1}><MapPin/><div><h3>Gulapadi Garut</h3><p>Jl. Bank, Paminggir, Kec. Garut Kota,<br/>Kabupaten Garut, Jawa Barat 44112.</p><a href={MAP} className="text-link" target="_blank" rel="noopener noreferrer">Buka Google Maps</a></div></ScrollReveal><ScrollReveal delay={2}><Clock3/><div><h3>Setiap hari, 06.00–23.00</h3><p>Sarapan 06.00–10.30<br/>Menu reguler 10.30–23.00</p></div></ScrollReveal></div></div><figure className="visit-map wrap"><div className="map-frame"><iframe src={MAP_EMBED} title="Lokasi Gulapadi Garut, Jalan Bank" width="1200" height="380" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade" /></div><figcaption><span>Gulapadi Garut · Jalan Bank, Paminggir</span><a href={MAP} target="_blank" rel="noopener noreferrer">Buka petunjuk arah</a></figcaption></figure></section>
     </main>
-    <footer className="wrap"><span>Gulapadi · Warung Makan Nusantara</span><a href="https://www.instagram.com/gulapadi/" target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#beranda">Kembali ke atas ↑</a></footer>
+    <footer className="wrap"><span>Gulapadi · Warung Makan Nusantara</span><a href="https://www.instagram.com/gulapadi/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#beranda">Kembali ke atas ↑</a></footer>
   </MotionConfig>;
 }
