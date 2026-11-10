@@ -27,3 +27,14 @@ assert.equal(paginateMenu(donuts,2).items.length,8);
 assert.equal(paginateMenu([],1).first,0);
 assert.deepEqual(paginateMenu([],1).items,[]);
 console.log("12-item pagination: all206 reachable exactly once,18 pages,filtered/empty/boundary cases passed.");
+
+const mobilePages = Array.from({length: paginateMenu(menu,1,6).pages}, (_,index)=>paginateMenu(menu,index+1,6));
+assert.equal(mobilePages.length,35);
+assert.ok(mobilePages.every(page=>page.items.length<=6));
+assert.deepEqual(mobilePages.flatMap(page=>page.items.map(item=>item.id)),menu.map(item=>item.id));
+assert.equal(mobilePages.at(-1).items.length,2);
+assert.deepEqual(paginateMenu(menu,100,6),mobilePages.at(-1));
+assert.equal(paginateMenu(menu,0,6).page,1);
+assert.equal(paginateMenu(donuts,4,6).items.length,2);
+assert.deepEqual(paginateMenu([],1,6),{page:1,pages:1,items:[],first:0,last:0});
+console.log("6-item mobile pagination: all206 reachable exactly once,35 pages,filtered/empty/boundary cases passed.");

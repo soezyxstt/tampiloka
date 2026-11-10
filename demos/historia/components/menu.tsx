@@ -117,7 +117,7 @@ export function Menu({ catalogue }: { catalogue: Catalogue }) {
       <motion.div key={group} initial={reduced ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={reduced ? undefined : { opacity: 0, y: -6 }} transition={{ duration: 0.18 }}>
         {pictured.length > 0 && <ul className="menu-product-grid">{pictured.map(item => <li key={item.id}>
           <Button variant="ghost" type="button" className="menu-product" aria-label={`Lihat detail ${item.name}`} onClick={() => open(item)}>
-            <span className="menu-product-visual"><Image src={item.image!} alt={item.name} fill sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 25vw" /><span className="menu-product-view" aria-hidden="true"></span></span>
+            <span className="menu-product-visual"><Image src={item.image!} alt={item.name} fill sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 25vw" /></span>
             <span className="menu-product-copy"><span className="menu-product-name">{item.name}</span>
             <span className="menu-product-description">{item.description}</span>
             <span className="menu-product-price"><Price item={item} /></span></span>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import { Hero } from "../components/hero";
 import { FeaturedDishes, SpaceGallery } from "../components/experiences";
 import { Location } from "../components/location";
