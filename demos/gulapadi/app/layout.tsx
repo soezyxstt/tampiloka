@@ -4,7 +4,7 @@ import "./globals.css";
 
 const manrope = localFont({ src: "./fonts/manrope-latin.woff2", variable: "--font-brand", display: "swap" });
 export const metadata: Metadata = {
-  title: "Gulapadi Garut — Warung Makan Nusantara",
+  title: "Gulapadi Garut | Warung Makan Nusantara",
   description: "Menu sarapan, masakan Nusantara, donat, dan informasi kunjungan Gulapadi Garut.",
   robots: { index: false, follow: false },
   icons: { icon: "/favicon.ico" },

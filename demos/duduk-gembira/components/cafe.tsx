@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, animate, motion, MotionConfig, useReducedMotion } from 'motion/react';
-import { ArrowDown, ArrowUpRight, MapPin, Clock3, Search, X } from 'lucide-react';
+import { MapPin, Clock3, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Input } from '@/components/ui/input';
@@ -118,7 +118,7 @@ export function Cafe() {
   const reducedMotion = useReducedMotion();
   const selectedDish = dishes.find(item => item.id === `${protein}-${sambal}`) ?? dishes[0];
   const visible = menu.filter(item => (category === 'Semua menu' || item.category === category) && `${item.name} ${item.description}`.toLocaleLowerCase('id').includes(query.trim().toLocaleLowerCase('id')));
-  const pageSize = 10;
+  const pageSize = 6;
   const pageItems = visible.slice(page * pageSize, (page + 1) * pageSize);
   const pageCount = Math.ceil(visible.length / pageSize);
   useEffect(() => { if (searchOpen) input.current?.focus(); }, [searchOpen]);
@@ -133,17 +133,17 @@ export function Cafe() {
   return <MotionConfig reducedMotion="user">
     <ScrollReveals />
     <a className="skip" href="#main">Langsung ke konten</a>
-    <div className="concept">Demo konsep independen · bukan situs resmi</div>
+    <div id="top" className="concept">Demo konsep independen · bukan situs resmi</div>
     <header className="header wrap">
       <a href="#top" aria-label="Duduk Gembira, beranda" className="logo"><Image src="/images/logo.webp" alt="Warkop Duduk Gembira" width={150} height={61} priority /></a>
       <nav aria-label="Navigasi utama"><a href="#suasana">Suasana</a><a href="#menu">Menu</a><a href="#mampir">Mampir</a></nav>
-      <a className="contact" href={wa} target="_blank" rel="noreferrer"><WhatsApp /><span>Hubungi kami</span><ArrowUpRight size={17} /></a>
+      <a className="contact" href={wa} target="_blank" rel="noreferrer"><WhatsApp /><span>Hubungi kami</span></a>
     </header>
 
     <main id="main">
       <section className="hero wrap" aria-labelledby="hero-title">
         <h1 id="hero-title" data-scroll-reveal><span>Warung kopi</span>Duduk Gembira</h1>
-        <div className="hero-counter"><div className="hero-address" data-scroll-reveal><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href="#menu">Lihat menu <ArrowDown size={20} /></a><a className="text-link" href="#mampir">Petunjuk jalan <ArrowUpRight size={18} /></a></div><div className="hero-scene" data-scroll-reveal><Image src="/images/terrace.webp" alt="Teras Duduk Gembira, papan nama hijau dan tempat duduk peti merah" width={1152} height={1439} priority sizes="(max-width: 700px) 100vw, 55vw" /></div><div className="hero-hours" data-scroll-reveal><Clock3 size={24} /><p>Buka setiap hari<br /><strong>06.30 WIB</strong></p><a href="#mampir">Lihat jam buka ↓</a></div></div>
+        <div className="hero-counter"><div className="hero-address" data-scroll-reveal><p className="hero-offering">Kopi, nasi, lauk & sambal.</p><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href="#menu">Lihat menu</a><a className="text-link" href="#mampir">Petunjuk jalan</a></div><div className="hero-scene" data-scroll-reveal><Image src="/images/terrace.webp" alt="Teras Duduk Gembira, papan nama hijau dan tempat duduk peti merah" width={1152} height={1439} priority sizes="(max-width: 700px) 100vw, 55vw" /></div><div className="hero-hours" data-scroll-reveal><Clock3 size={24} /><p>Buka setiap hari<br /><strong>06.30 WIB</strong></p><a href="#mampir">Lihat jam lengkap</a></div></div>
       </section>
 
       <section className="dishes" aria-labelledby="dishes-title">
@@ -164,9 +164,9 @@ export function Cafe() {
 
       <section id="suasana" className="atmosphere wrap"><Image data-scroll-reveal src="/images/interior.webp" alt="Meja kayu dan kursi rotan di dalam Duduk Gembira" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 60vw" /><div data-scroll-reveal><h2>Di dalam<br />Duduk Gembira.</h2><a className="text-link" href={ig} target="_blank" rel="noreferrer">Lihat Instagram <Instagram size={19} /></a></div></section>
 
-      <section id="mampir" className="visit wrap"><h2 data-scroll-reveal>Kunjungi Duduk Gembira.</h2><div className="visit-grid"><div className="address" data-scroll-reveal><MapPin size={28} /><h3>Alamat</h3><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href={maps} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={20} /></a></div><div className="schedule" data-scroll-reveal><Clock3 size={28} /><h3>Buka setiap hari.</h3><dl><div><dt>Minggu–Kamis</dt><dd>06.30–23.00</dd></div><div><dt>Jumat & Sabtu</dt><dd>06.30–00.00</dd></div></dl><p>Jam dalam WIB.</p><a className="text-link" href={wa} target="_blank" rel="noreferrer"><WhatsApp /> Hubungi kami <ArrowUpRight size={18} /></a></div></div><div className="visit-location"><figure className="visit-venue" data-scroll-reveal><Image src="/images/terrace.webp" alt="Teras Warkop Duduk Gembira dan papan namanya di Jalan Otista" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 30vw" /><figcaption>Warkop Duduk Gembira</figcaption></figure><div className="map-frame"><iframe title="Peta lokasi Warkop Duduk Gembira di Jalan Otista, Garut" src={mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><p>Jl. Otista No. 275 B, Tarogong Kidul, Garut</p></div></div></section>
+      <section id="mampir" className="visit wrap"><h2 data-scroll-reveal>Kunjungi Duduk Gembira.</h2><div className="visit-grid"><div className="address" data-scroll-reveal><MapPin size={28} /><h3>Alamat</h3><p>Jl. Otista No. 275 B<br />Tarogong Kidul, Garut</p><a className="primary" href={maps} target="_blank" rel="noreferrer">Buka Google Maps</a></div><div className="schedule" data-scroll-reveal><Clock3 size={28} /><h3>Buka setiap hari.</h3><dl><div><dt>Minggu–Kamis</dt><dd>06.30–23.00</dd></div><div><dt>Jumat & Sabtu</dt><dd>06.30–00.00</dd></div></dl><p>Jam dalam WIB.</p><a className="text-link" href={wa} target="_blank" rel="noreferrer"><WhatsApp /> Hubungi kami</a></div></div><div className="visit-location"><figure className="visit-venue" data-scroll-reveal><Image src="/images/terrace.webp" alt="Teras Warkop Duduk Gembira dan papan namanya di Jalan Otista" width={1152} height={1439} sizes="(max-width: 700px) 90vw, 30vw" /><figcaption>Warkop Duduk Gembira</figcaption></figure><div className="map-frame"><iframe title="Peta lokasi Warkop Duduk Gembira di Jalan Otista, Garut" src={mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /><p>Jl. Otista No. 275 B, Tarogong Kidul, Garut</p></div></div></section>
     </main>
-    <footer><div className="wrap footer-top"><a data-scroll-reveal href="#top" className="logo"><Image src="/images/logo.webp" alt="Warkop Duduk Gembira" width={150} height={61} /></a><p data-scroll-reveal>Jl. Otista No. 275 B<br />Garut</p><a data-scroll-reveal href={ig} className="text-link" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={18} /></a></div><div className="wrap footer-bottom"><span>Warung Kopi Duduk Gembira · Garut</span><a href="#top">Kembali ke atas ↑</a></div></footer>
+    <footer><div className="wrap footer-top"><a data-scroll-reveal href="#top" className="logo"><Image src="/images/logo.webp" alt="Warkop Duduk Gembira" width={150} height={61} /></a><p data-scroll-reveal>Jl. Otista No. 275 B<br />Garut</p><a data-scroll-reveal href={ig} className="text-link" target="_blank" rel="noreferrer">Instagram</a></div><div className="wrap footer-bottom"><span>Warung Kopi Duduk Gembira · Garut</span><a href="#top">Kembali ke atas ↑</a></div></footer>
   </MotionConfig>;
 }
 

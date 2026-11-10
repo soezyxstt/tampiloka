@@ -43,3 +43,11 @@ Mechanism: Restrained light/green surface transition gives the final practical i
 ## Comparison and limits
 
 Six-demo scope: Historia (immersive editorial dining), Duduk (retro warung/menu board), Talkie (dark coffee lab), Gulapadi (red market editorial), Classico (monochrome urban condensed), Bumi (house album + recipe book). Those are the parent-approved territories, not evidence that final renders have been reviewed. Parent handles whole-batch visual comparison and shared history. The closest existing Bumi version had a serif split-product hero, cream tilted photo cards, story then catalogue. This revision changes opening alignment, media hierarchy, typography, surface distribution and section order. Small menu photo/name groups remain a similarity driven by genuine low-resolution PDF crops; paired book leaves and restrained borders provide a specific catalogue context. Final quality status must follow actual render evidence.
+
+## Refinement 2026-11-10
+
+Penawaran sarapan/makan/minum dan dua aksi kini berada sebelum album. Buku menu menjadi enam data per spread, tiga per leaf, dengan akses semua 116 data. Album dan galeri mobile dipadatkan; foto booth tidak diulang di pembuka.
+
+Identitas, aset dan data sumber arsip dipertahankan. Native anchors dan shadcn/Base UI controls tetap digunakan; panah pagination/galeri tetap fungsional. Motion gambar CSS hanya pada layar besar yang mendukung scroll timeline; fallback tetap terlihat, reveal mobile statis. Tidak ada fakta, harga atau testimoni baru. Referensi WF-08 menu ledger dilihat pada desktop/mobile untuk hubungan nama-harga dan garis pembatas, bukan untuk menyalin palet, serif, copy atau struktur seluruh halaman.
+
+Validasi source: syntax-only TSX, parsing CSS, diff whitespace, aset literal dan integritas data. **Belum diverifikasi lewat render browser**: dependensi demo tidak tersedia dan instalasi/build/typecheck dilarang oleh batas sumber daya pengguna. Screenshot full-page dan tinggi aktual sebelum/sesudah belum tersedia. Status ini tidak menggantikan penerimaan desain sebelumnya atau mengklaim lulus visual. Laporan lengkap: `/data/workspace/cafe-brand-refinement/REPORT.md`.

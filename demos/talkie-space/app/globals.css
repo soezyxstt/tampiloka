@@ -9,3 +9,14 @@
 
 [data-scroll-reveal]:focus-within{opacity:1!important;transform:none!important}
 @media(prefers-reduced-motion:reduce){[data-scroll-reveal]{opacity:1!important;transform:none!important}}
+
+/* A coffee workbench rather than another stacked photo gallery. */
+.masthead-info .menu-link{display:inline-flex;align-items:center;justify-content:center;background:var(--foreground);color:var(--background);padding:13px 22px;min-height:48px;font-weight:700;text-decoration:none}.masthead-info .menu-link:hover{background:#d5d9c6}.stage-main{border:1px solid #43473c}.stage-window{border:1px solid #43473c}.item-copy{min-width:0}.menu-item h4{overflow-wrap:anywhere}
+@media(min-width:900px){.masthead{align-items:center}.masthead-info{border-left:1px solid #43473c;padding-left:32px}.stage-rail{grid-template-rows:1.35fr 1fr}}
+@media(max-width:600px){.masthead{padding-bottom:20px}.masthead h1{font-size:clamp(62px,17vw,100px)}.masthead-info{margin-top:18px;align-items:center}.masthead-info .menu-link{padding:12px 15px;font-size:13px}.stage-main>.photo{height:280px}.stage-rail{grid-template-rows:auto;gap:10px}.stage-window>.photo{display:none}.stage-window>span{position:static;display:flex;padding:15px 12px;background:transparent;font-size:13px}.breakfast{gap:16px;padding:21px 18px}.catalogue{padding-block:45px}.category-photo{height:210px}.process-view{display:none}.space-section{gap:22px}.place-preview>.photo{height:180px}}
+
+@supports(animation-timeline:view()){@media(min-width:900px) and (prefers-reduced-motion:no-preference){.stage-main img{animation:brand-photo-depth linear both;animation-timeline:view();animation-range:entry 0% exit 100%}}}
+@keyframes brand-photo-depth{from{transform:perspective(1200px) scale(1.025) rotateX(1deg)}to{transform:perspective(1200px) scale(1.055) rotateX(0)}}
+
+/* Phone reading stays still, including existing reveal wrappers. */
+@media(max-width:767px){[data-scroll-reveal],.scroll-reveal{opacity:1!important;transform:none!important}}

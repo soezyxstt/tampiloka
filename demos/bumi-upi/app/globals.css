@@ -9,3 +9,15 @@
 
 @media(prefers-reduced-motion:reduce){[data-scroll-reveal]{opacity:1!important;transform:none!important}}
 [data-scroll-reveal]:focus-within{opacity:1!important;transform:none!important}
+
+/* Brand refinement: a useful invitation above the house album. */
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:24px}.hero-actions>a:last-child{font-size:14px;text-decoration:underline;text-underline-offset:5px;min-height:44px;display:inline-flex;align-items:center}.hero-bottom{justify-content:center}.house-album{padding-top:30px}.book-spread{min-height:420px}.recipe-copy h3{overflow-wrap:anywhere}
+@media(max-width:767px){.hero{padding-top:26px}.hero-title p{max-width:29ch;margin-inline:auto}.hero-actions{gap:18px;margin-top:19px}.hero-actions .main-button{font-size:13px;padding:11px 13px}.hero-actions>a:last-child{font-size:12px}.house-album{height:345px;padding-top:22px}.house-print img{height:260px}.booth-side{display:none}.room-side{width:34%;top:44%;left:3%}.hero-bottom{display:flex;padding-block:14px}.book-spread{min-height:0}.memories{gap:28px;padding-bottom:55px}.memory-main{min-height:350px}.memory-main img{height:260px}.memory-intro>svg{display:none}}
+
+@supports(animation-timeline:view()){@media(min-width:900px) and (prefers-reduced-motion:no-preference){.room-wide-photo img{animation:brand-photo-depth linear both;animation-timeline:view();animation-range:entry 0% exit 100%}}}
+@keyframes brand-photo-depth{from{transform:perspective(1200px) scale(1.025) rotateX(1deg)}to{transform:perspective(1200px) scale(1.055) rotateX(0)}}
+
+/* Phone reading stays still, including existing reveal wrappers. */
+@media(max-width:767px){[data-scroll-reveal],.scroll-reveal{opacity:1!important;transform:none!important}}
+
+.room-wide-photo{overflow:hidden}

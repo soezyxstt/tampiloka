@@ -24,3 +24,11 @@ Meaningful motion: door photographs zoom subtly on hover/focus; hero baseline se
 ## Comparison and limits
 
 All six demos are being revised concurrently, so final cross-demo comparison belongs to parent reviewer. Closest earlier composition is the previous Classico staggered three-photo copper cover: now equal-height image doors on cream, direct category navigation, breakfast before the menu, and two/three-column large photographs replace two-column thumbnail rows. Avoid Historia's immersive dining hero, Duduk's terrace/red hours and protein builder, Talkie's dark laboratory, Gulapadi's red food-market editorial and Bumi's album. Fonts/palette remain source-informed. Codex cloud runtime override was explicitly approved; isolated exact dependencies were provisioned and build/lint/tsc plus static Chromium checks passed; details in implementation-review.md. No local-quality pass claimed from boards alone.
+
+## Refinement 2026-11-10
+
+Etalase memberi porsi utama pada kopi, diikuti dapur dan pastry. Mobile memakai satu pintu tinggi dan dua pintu kecil bertumpuk. Foto sarapan lebar yang redundan disembunyikan di ponsel, tetapi foto set terpilih dan tabs tetap ada.
+
+Identitas, aset dan data sumber arsip dipertahankan. Native anchors dan shadcn/Base UI controls tetap digunakan; panah pagination/galeri tetap fungsional. Motion gambar CSS hanya pada layar besar yang mendukung scroll timeline; fallback tetap terlihat, reveal mobile statis. Tidak ada fakta, harga atau testimoni baru. Referensi WF-08 menu ledger dilihat pada desktop/mobile untuk hubungan nama-harga dan garis pembatas, bukan untuk menyalin palet, serif, copy atau struktur seluruh halaman.
+
+Validasi source: syntax-only TSX, parsing CSS, diff whitespace, aset literal dan integritas data. **Belum diverifikasi lewat render browser**: dependensi demo tidak tersedia dan instalasi/build/typecheck dilarang oleh batas sumber daya pengguna. Screenshot full-page dan tinggi aktual sebelum/sesudah belum tersedia. Status ini tidak menggantikan penerimaan desain sebelumnya atau mengklaim lulus visual. Laporan lengkap: `/data/workspace/cafe-brand-refinement/REPORT.md`.

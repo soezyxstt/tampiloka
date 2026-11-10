@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, MotionConfig, useReducedMotion } from "motion/react";
-import { ArrowDown, ArrowUpRight, ArrowLeft, ArrowRight, Search, X, Wifi, Plug, LockKeyhole, GlassWater } from "lucide-react";
+import { ArrowLeft, ArrowRight, Search, X, Wifi, Plug, LockKeyhole, GlassWater } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
@@ -27,7 +27,7 @@ function Photo({name,alt,className="",priority=false}:{name:string;alt:string;cl
  return <Image className={className} src={`/images/${name}.webp`} alt={alt} width={1200} height={850} priority={priority} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 40vw"/>;
 }
 function ChatLink({children,className=""}:{children:React.ReactNode;className?:string}){
- return <a className={`action ${className}`} href={WA} target="_blank" rel="noreferrer"><WhatsApp/>{children}<ArrowUpRight size={18}/></a>;
+ return <a className={`action ${className}`} href={WA} target="_blank" rel="noreferrer"><WhatsApp/>{children}</a>;
 }
 
 export default function Classico(){
@@ -43,11 +43,11 @@ export default function Classico(){
   </header>
   <main id="main" ref={revealRoot}>
    <section className="cover" aria-labelledby="hero-title">
-    <div className="cover-heading"><h1 id="hero-title">Coffee & bake.</h1></div>
+    <div className="cover-heading"><h1 id="hero-title">Coffee & bake.</h1><div className="cover-intro"><p>Kopi, hidangan dapur, dan pastry di Ciumbuleuit.</p><a className="action" href="#menu">Lihat seluruh menu</a></div></div>
     <div className="storefront">
-     {[{name:"hot-latte",label:"Coffee",category:"Coffee",alt:"Hot Latte Classico dalam cangkir bersimbol asli"},{name:"supreme-pizza",label:"Kitchen",category:"Pasta & Pizza",alt:"Supreme Pizza Classico"},{name:"butter-croissant",label:"Bake",category:"Cake & Pastry",alt:"Butter Croissant Classico"}].map(item=><a key={item.label} href="#menu" className="store-door" onClick={()=>setShortcut(previous=>({category:item.category,version:(previous?.version??0)+1}))}><Photo name={item.name} alt={item.alt} priority/><span>{item.label}<ArrowDown size={24}/></span></a>)}
+     {[{name:"hot-latte",label:"Coffee",category:"Coffee",alt:"Hot Latte Classico dalam cangkir bersimbol asli"},{name:"supreme-pizza",label:"Kitchen",category:"Pasta & Pizza",alt:"Supreme Pizza Classico"},{name:"butter-croissant",label:"Bake",category:"Cake & Pastry",alt:"Butter Croissant Classico"}].map(item=><a key={item.label} href="#menu" className="store-door" onClick={()=>setShortcut(previous=>({category:item.category,version:(previous?.version??0)+1}))}><Photo name={item.name} alt={item.alt} priority/><span>{item.label}</span></a>)}
     </div>
-    <div className="cover-visit"><a href={MAP} target="_blank" rel="noreferrer">Sukaresmi 19A, Bandung <ArrowUpRight size={17}/></a><p>Senin 11.00–23.00 <span>/</span> Selasa–Minggu 07.30–23.00 WIB</p><a href="#menu" className="menu-jump">Semua menu <ArrowDown size={18}/></a></div>
+    <div className="cover-visit"><a href={MAP} target="_blank" rel="noreferrer">Sukaresmi 19A, Bandung</a><p>Senin 11.00–23.00 <span>/</span> Selasa–Minggu 07.30–23.00 WIB</p><a href="#menu" className="menu-jump">Semua menu</a></div>
    </section>
    <Breakfast/>
    <Catalogue key={shortcut?.version??0} shortcut={shortcut}/>
@@ -57,11 +57,11 @@ export default function Classico(){
    </section>
    <section className="community section-pad" id="community" aria-labelledby="community-title">
     <div className="community-intro"><h2 id="community-title">Acara & kolaborasi.</h2><Photo name="sharing" alt="Pizza untuk dinikmati bersama dari materi sharing package Classico"/><p>Sharing package, acara komunitas, dan kolaborasi bersama Classico.</p><ChatLink>Tanya sharing package</ChatLink></div>
-    <div className="community-links"><a href="https://forms.gle/Sh8GyUW4sfxu612FA" target="_blank" rel="noreferrer"><span><strong>Acara & komunitas</strong><small>Ajukan konsep kolaborasimu.</small></span><ArrowUpRight/></a><a href="https://forms.gle/9dA2QaGrrxVMbtF1A" target="_blank" rel="noreferrer"><span><strong>Live music talent</strong><small>Portofolio tampil aktif & akun sosial publik.</small></span><ArrowUpRight/></a><a href="https://forms.gle/Q9pAbvMzq2on7VEJ8" target="_blank" rel="noreferrer"><span><strong>Creator & KOL</strong><small>Lebih dari 3.000 followers & Instagram publik.</small></span><ArrowUpRight/></a></div>
+    <div className="community-links"><a href="https://forms.gle/Sh8GyUW4sfxu612FA" target="_blank" rel="noreferrer"><span><strong>Acara & komunitas</strong><small>Ajukan konsep kolaborasimu.</small></span></a><a href="https://forms.gle/9dA2QaGrrxVMbtF1A" target="_blank" rel="noreferrer"><span><strong>Live music talent</strong><small>Portofolio tampil aktif & akun sosial publik.</small></span></a><a href="https://forms.gle/Q9pAbvMzq2on7VEJ8" target="_blank" rel="noreferrer"><span><strong>Creator & KOL</strong><small>Lebih dari 3.000 followers & Instagram publik.</small></span></a></div>
    </section>
-   <section id="location" className="location section-pad" aria-labelledby="location-title"><div className="location-heading"><h2 id="location-title">Sukaresmi 19A.</h2><ChatLink>Reservasi via WhatsApp</ChatLink></div><div className="location-info"><address>Jl. Sukaresmi No. 19A<br/>Ciumbuleuit, Cidadap, Bandung</address><dl><div><dt>Senin</dt><dd>11.00–23.00 WIB</dd></div><div><dt>Selasa–Minggu</dt><dd>07.30–23.00 WIB</dd></div></dl><a className="text-link" href={MAP} target="_blank" rel="noreferrer">Petunjuk arah <ArrowUpRight size={18}/></a></div><div className="map-frame"><iframe title="Lokasi Classico Coffee & Bake, Jl. Sukaresmi No.19A Bandung" src="https://maps.google.com/maps?q=Classico%20Coffee%20%26%20Bake%20Jl.%20Sukaresmi%2019A%20Bandung&z=16&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/><p>Peta tidak tampil? <a href={MAP} target="_blank" rel="noreferrer">Buka Google Maps <ArrowUpRight size={14}/></a></p></div></section>
+   <section id="location" className="location section-pad" aria-labelledby="location-title"><div className="location-heading"><h2 id="location-title">Sukaresmi 19A.</h2><ChatLink>Reservasi via WhatsApp</ChatLink></div><div className="location-info"><address>Jl. Sukaresmi No. 19A<br/>Ciumbuleuit, Cidadap, Bandung</address><dl><div><dt>Senin</dt><dd>11.00–23.00 WIB</dd></div><div><dt>Selasa–Minggu</dt><dd>07.30–23.00 WIB</dd></div></dl><a className="text-link" href={MAP} target="_blank" rel="noreferrer">Petunjuk arah</a></div><div className="map-frame"><iframe title="Lokasi Classico Coffee & Bake, Jl. Sukaresmi No.19A Bandung" src="https://maps.google.com/maps?q=Classico%20Coffee%20%26%20Bake%20Jl.%20Sukaresmi%2019A%20Bandung&z=16&output=embed" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"/><p>Peta tidak tampil? <a href={MAP} target="_blank" rel="noreferrer">Buka Google Maps</a></p></div></section>
   </main>
-  <footer className="footer"><a href="#" className="brand"><Image src="/images/symbol.png" alt="" width={30} height={40}/><span>classico<span className="brand-sub">coffee & bake</span></span></a><a href="https://www.instagram.com/classicoidn/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={16}/></a><a href="#">Kembali ke atas ↑</a></footer>
+  <footer className="footer"><a href="#" className="brand"><Image src="/images/symbol.png" alt="" width={30} height={40}/><span>classico<span className="brand-sub">coffee & bake</span></span></a><a href="https://www.instagram.com/classicoidn/" target="_blank" rel="noreferrer">Instagram</a><a href="#">Kembali ke atas ↑</a></footer>
  </MotionConfig>;
 }
 
@@ -74,7 +74,7 @@ function Catalogue({shortcut}:{shortcut:{category:string}|null}){
  function closeSearch(){setSearchOpen(false);setQuery("");setPage(0);requestAnimationFrame(()=>toggleRef.current?.focus());}
  function changePage(n:number){setPage(n);anchorRef.current?.scrollIntoView({behavior:reduced?"instant":"smooth",block:"start"});}
  return <section id="menu" className="catalogue section-pad" aria-labelledby="menu-title">
-  <div className="section-heading"><h2 id="menu-title">Menu.</h2><a href="#location" className="text-link">Kunjungi Classico <ArrowUpRight size={18}/></a></div>
+  <div className="section-heading"><h2 id="menu-title">Menu.</h2><a href="#location" className="text-link">Kunjungi Classico</a></div>
   <div className={`catalogue-tools ${searchOpen?"search-open":""}`} ref={anchorRef}>
    <div className="category-control"><Select items={categories.map(c=>({label:c,value:c}))} value={category} onValueChange={v=>{setCategory(v??"Semua menu");setQuery("");setPage(0);}}><SelectTrigger aria-label="Kategori menu"><SelectValue/></SelectTrigger><SelectContent alignItemWithTrigger={false}>{categories.map(c=><SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent></Select></div>
    <motion.div id="menu-search" className="search-box" initial={false} animate={{flexGrow:searchOpen?1:0}} transition={{duration:reduced?0:.25}}><Search size={19}/><Input ref={searchRef} aria-label="Cari menu di semua kategori" placeholder="Cari kopi, pasta, pastry…" value={query} onChange={e=>{setQuery(e.target.value);setCategory("Semua menu");setPage(0);}} onKeyDown={e=>{if(e.key==="Escape")closeSearch();}}/>{searchOpen?<Button variant="ghost" size="icon" aria-label="Tutup pencarian" onClick={closeSearch}><X size={19}/></Button>:null}</motion.div>

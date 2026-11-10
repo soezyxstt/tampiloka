@@ -35,3 +35,11 @@ visit → template-qitchen-05, schulhaus_07
 ## Validation state
 
 Research data and public assets retained, rights and current availability pending. No stock or generated imagery. User explicitly authorized Codex cloud build/QA override of Novita requirement. Production webpack static export, ESLint, TypeScript and HTTP audit passed; exact out/ is served on 3018. Candidate HTML has actual desktop/mobile browser captures under evidence/candidate-*.png. These are prototype screenshots, not production screenshots. Production captures are separately named by viewport. Reference contact sheet and four original images were actually viewed. Installed Next 16.3.8 guides on server/client components, static exports and Image fill/sizes were read before code.
+
+## Refinement 2026-11-10
+
+Kopi tetap fokus utama workbench gelap. Aksi menu lebih jelas; mobile mengganti rail foto sekunder dengan dua tautan konteks, mengurangi foto duplikat, dan menampilkan enam hasil katalog per halaman. Seluruh 94 data dipertahankan.
+
+Identitas, aset dan data sumber arsip dipertahankan. Native anchors dan shadcn/Base UI controls tetap digunakan; panah pagination/galeri tetap fungsional. Motion gambar CSS hanya pada layar besar yang mendukung scroll timeline; fallback tetap terlihat, reveal mobile statis. Tidak ada fakta, harga atau testimoni baru. Referensi WF-08 menu ledger dilihat pada desktop/mobile untuk hubungan nama-harga dan garis pembatas, bukan untuk menyalin palet, serif, copy atau struktur seluruh halaman.
+
+Validasi source: syntax-only TSX, parsing CSS, diff whitespace, aset literal dan integritas data. **Belum diverifikasi lewat render browser**: dependensi demo tidak tersedia dan instalasi/build/typecheck dilarang oleh batas sumber daya pengguna. Screenshot full-page dan tinggi aktual sebelum/sesudah belum tersedia. Status ini tidak menggantikan penerimaan desain sebelumnya atau mengklaim lulus visual. Laporan lengkap: `/data/workspace/cafe-brand-refinement/REPORT.md`.

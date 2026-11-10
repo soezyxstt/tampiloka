@@ -12,3 +12,13 @@
 .food-portals figcaption a{display:inline-flex;align-items:center;gap:9px;min-height:30px}.food-portals figcaption a:hover{text-decoration:underline;text-underline-offset:4px}.food-portals figcaption strong{align-self:center}
 
 .buffet-media img{width:100%;height:100%;object-fit:cover}.scroll-reveal:focus-within{opacity:1!important;transform:none!important}@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1!important;transform:none!important}}
+
+/* Food-first desktop spread, compact orientation-first mobile edition. */
+.market-title h1{max-width:12ch}.opening-cta:hover{background:#fff8e7;color:#77281e}.food-portals figure:last-child img{height:100%;object-fit:contain;object-position:center;background:#aa3025}.food-portals figcaption a{min-height:44px}.donut-choices button[aria-pressed=true]{border-left:3px solid var(--red);padding-left:11px}.menu-item>div:last-child{min-width:0}.menu-item h3{overflow-wrap:anywhere}
+@media(max-width:767px){.market-opening{display:flex;flex-direction:column;padding-top:0}.market-title{order:-1;padding-block:25px}.market-title h1{font-size:clamp(50px,12vw,78px)}.opening-info{margin-top:18px;gap:12px}.opening-info .opening-cta{grid-column:auto;grid-row:1/3;grid-column:2;align-self:center;justify-self:end}.opening-info p{grid-column:1}.opening-info p:nth-child(2){font-size:11px}.food-portals{padding-bottom:24px;gap:16px}.portal-photo{height:235px}.food-portals figure:last-child .portal-photo{height:125px}.donut-main img{width:190px}.donut-choices{display:flex;flex-direction:row;gap:8px}.donut-choices button{flex:1;min-width:0;flex-direction:column;justify-content:center;text-align:center;border-bottom:1px solid var(--line);font-size:12px;padding:10px 4px}.donut-choices button:nth-child(n+4){display:none}.donut-choices button[aria-pressed=true]{border-left:0;border-bottom:3px solid var(--red);padding-left:4px}.buffet-media{height:150px}}
+
+@supports(animation-timeline:view()){@media(min-width:900px) and (prefers-reduced-motion:no-preference){.portal-photo img{animation:brand-photo-depth linear both;animation-timeline:view();animation-range:entry 0% exit 100%}}}
+@keyframes brand-photo-depth{from{transform:perspective(1200px) scale(1.025) rotateX(1deg)}to{transform:perspective(1200px) scale(1.055) rotateX(0)}}
+
+/* Phone reading stays still, including existing reveal wrappers. */
+@media(max-width:767px){[data-scroll-reveal],.scroll-reveal{opacity:1!important;transform:none!important}}
