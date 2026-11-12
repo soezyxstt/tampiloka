@@ -1,3 +1,9 @@
 .env*
 **/.env*
 **/.drizzle-snapshot-repair/**
+.agents/**
+.claude/**
+design-runs/**
+artifacts/**
+**/*.tsbuildinfo
+**/.turbo/**

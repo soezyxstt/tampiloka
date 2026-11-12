@@ -33,7 +33,7 @@
 .template-discovery__details { padding-top: 1.25rem; }
 .template-discovery__details p { max-width: 44ch; margin-top: .75rem; color: #53645a; }
 .template-discovery__details [data-slot="button"] { margin-top: .75rem; padding-left: 0; }
-.template-discovery__disclosure, .template-discovery__status { margin-top: 1.5rem; color: #53645a; }
+.template-discovery__status { margin-top: 1.5rem; color: #53645a; }
 @media (max-width: 767px) {
   .template-discovery { padding: 3rem 6% 3.5rem; }
   .template-discovery__heading { flex-direction: column; align-items: flex-start; gap: 1rem; }

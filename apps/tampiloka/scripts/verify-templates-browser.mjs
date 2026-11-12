@@ -115,7 +115,7 @@ try {
   }
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
   await page.goto(`${origin}/templates`, { waitUntil: 'networkidle' });
-  await page.getByRole('link', { name: 'Switch to English', exact: true }).first().click();
+  await page.getByRole('link', { name: 'EN: Switch to English', exact: true }).first().click();
   await page.waitForURL('**/en/templates');
   assert.equal(await page.locator('html').getAttribute('lang'), 'en');
   assert.equal(await page.getByRole('heading', { name: 'Website templates.', exact: true }).count(), 1);

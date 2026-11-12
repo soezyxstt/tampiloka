@@ -1,0 +1,8 @@
+{
+  "apps/tampiloka/app/[locale]/page.tsx": "cba7ad8ca3a13173dcdfc0450bbd7a488f109e169c4765ded07c4c1d2ac80758",
+  "apps/tampiloka/app/[locale]/tentang/page.tsx": "97413690474f53ffcbb6c93a93fa57425b8dc7a8e35f436ab1900172a52d7253",
+  "apps/tampiloka/app/landing.css": "25d71ca7305dbbdb6a3686472bb587abef4d1999bfd4782e9d27ca8f3dbcca9c",
+  "apps/tampiloka/components/solution-teasers.tsx": "94aa592da9f08913b48103ef61e7d016fd3f87366a65395a1ad6061f55cc1aff",
+  "apps/tampiloka/components/hero-backdrop.tsx": "b0f63b6e0ddb9e0f954e2329309f6cf6064cd802a4be6fea702626931cf10d9e",
+  "apps/tampiloka/i18n/primary-copy.ts": "d88ec591c8a63efa40379a6e1636f40ae95127221976ff9a88908777cb36f538"
+}

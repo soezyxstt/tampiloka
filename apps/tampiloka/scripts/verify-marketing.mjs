@@ -21,7 +21,7 @@ const routePairs = [
   ['/contact', '/en/contact'],
 ];
 const englishSignals = new Map([
-  ['/en', 'Websites for'],
+  ['/en', 'A web studio for'],
   ['/en/services', 'Tampiloka services.'],
   ['/en/pricing', 'Business website packages.'],
   ['/en/work', 'digital invitations.'],
@@ -105,7 +105,7 @@ for (let index = 0; index < routePairs.length; index += 1) {
       assert.ok(html.includes('href="/"') || html.includes('href="/en"'), `${path}: language switch can return to Indonesian`);
     }
     if (idPath === '/' || idPath === '/produk') {
-      if (idPath === '/') assert.ok(locale === 'id' ? visibleHtml.includes('bukan proyek klien') : visibleHtml.includes('Concept demo, not a client project'), `${path}: concepts disclosed`);
+      if (idPath === '/') assert.ok(visibleHtml.replace(/<[^>]*>/g, '').includes(locale === 'id' ? 'Konsep /' : 'Concept /'), `${path}: concise concept category retained`);
       const projectNames = [...html.matchAll(/<h3[^>]*showcase__project-name[^>]*>([^<]+)<\/h3>/g)].map(([, name]) => name);
       assert.equal(projectNames.length, 5, `${path}: curated homepage or default portfolio selection`);
       assert.ok(projectNames.includes('Syahril MC'), `${path}: Syahril MC is showcased`);

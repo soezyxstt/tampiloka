@@ -12,9 +12,7 @@ export const templateCopy = {
     noTemplates: "Belum ada template yang tersedia.", noScript: "Aktifkan JavaScript untuk mencari, memilih mode, dan memuat pembaruan.",
     home: {
       title: "Coba template website.",
-      description: "Lihat tampilan dan coba alurnya. Kami menyesuaikan desain serta fiturnya dengan kebutuhan usaha Anda.",
       browse: "Jelajahi semua template",
-      disclosure: "Demo memakai merek dan data contoh.",
     },
   },
   en: {
@@ -30,9 +28,7 @@ export const templateCopy = {
     noTemplates: "No templates are available yet.", noScript: "Enable JavaScript to search, select a mode, and load updates.",
     home: {
       title: "Try the website templates.",
-      description: "Explore the layouts and try the features. We adapt the design and features to your business.",
       browse: "Explore all templates",
-      disclosure: "Demos use sample brands and data.",
     },
   },
 } as const;

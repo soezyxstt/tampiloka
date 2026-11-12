@@ -52,7 +52,7 @@ export function LanguageSwitcher() {
             lang={targetLocale}
             hrefLang={targetLocale}
             aria-current={locale === targetLocale ? "page" : undefined}
-            aria-label={locale === targetLocale ? localeLabels[targetLocale].current : localeLabels[targetLocale].switchTo}
+            aria-label={`${localeLabels[targetLocale].visible}: ${locale === targetLocale ? localeLabels[targetLocale].current : localeLabels[targetLocale].switchTo}`}
             onClick={(event) => preserveCurrentLocation(event, targetLocale)}
           >
             <span aria-hidden="true">{localeLabels[targetLocale].visible}</span>

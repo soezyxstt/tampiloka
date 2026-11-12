@@ -64,12 +64,11 @@ export default async function TentangPage({ params }: { params: Promise<{ locale
         <div data-reveal>
           <h2 className="type-heading-1">{copy.processTitle}</h2>
           <p className="type-body-lg">{copy.processDescription}</p>
+          <div className="about-process-action">
+            <Button variant="brand" size="pill" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
+          </div>
         </div>
       </section>
-
-      <div className="inner-page__end-link" data-reveal>
-        <Button variant="secondary" size="lg" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
-      </div>
     </div>
   );
 }
