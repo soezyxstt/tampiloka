@@ -25,7 +25,7 @@ export const showcaseCopy = {
     featuredHeading: "Karya pilihan.",
     filterLabel: "Jenis karya",
     kinds: { all: "Semua", portfolio: "Portofolio", "prospect-demo": "Demo calon klien", concept: "Demo konsep" },
-    kindDisclosure: { portfolio: "Website yang digunakan", "prospect-demo": "Demo untuk calon klien", concept: "Demo konsep, bukan proyek klien" },
+    kindDisclosure: { portfolio: "Website", "prospect-demo": "Demo calon klien", concept: "Konsep" },
     allWork: "Lihat semua karya", templatesLink: "Lihat template",
     filters: {
       all: "Semua",
@@ -151,7 +151,7 @@ export const showcaseCopy = {
     featuredHeading: "Selected work.",
     filterLabel: "Work type",
     kinds: { all: "All", portfolio: "Portfolio", "prospect-demo": "Prospect demos", concept: "Concepts" },
-    kindDisclosure: { portfolio: "Website in use", "prospect-demo": "Demo for a prospective client", concept: "Concept demo, not a client project" },
+    kindDisclosure: { portfolio: "Website", "prospect-demo": "Prospect demo", concept: "Concept" },
     allWork: "View all work", templatesLink: "View templates",
     filters: {
       all: "All",

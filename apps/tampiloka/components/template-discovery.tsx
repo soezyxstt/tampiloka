@@ -15,7 +15,7 @@ export function TemplateDiscovery({ locale }: { locale: Locale }) {
   return <section className="template-discovery" id="templates" aria-labelledby="template-discovery-title">
     <div className="template-discovery__inner">
       <header className="template-discovery__heading" data-reveal>
-        <div><h2 className="type-heading-1" id="template-discovery-title">{copy.home.title}</h2><p className="type-body-lg">{copy.home.description}</p></div>
+        <div><h2 className="type-heading-1" id="template-discovery-title">{copy.home.title}</h2></div>
         <Button variant="secondary" nativeButton={false} render={<Link href="/templates" />}>{copy.home.browse}</Button>
       </header>
       {status === "loading" && <p className="template-discovery__status type-body-sm" role="status">{copy.loading}</p>}
@@ -28,7 +28,6 @@ export function TemplateDiscovery({ locale }: { locale: Locale }) {
           <div className="template-discovery__details"><h3 className="type-heading-3">{family?.name[locale] || entry.name[locale]}</h3><p className="type-body">{family?.description?.[locale] || entry.description[locale]}</p></div>
         </article>;
       })}</div>}
-      <p className="template-discovery__disclosure type-body-sm">{copy.home.disclosure}</p>
     </div>
   </section>;
 }

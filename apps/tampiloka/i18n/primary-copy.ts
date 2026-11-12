@@ -17,6 +17,12 @@ export type PrimaryPageCopy = {
     demoLink: string;
     imageAlt: string;
   };
+  solutions: {
+    title: string;
+    link: string;
+    details: string;
+    items: readonly { kind: "portfolio" | "food" | "technology"; title: string; description: string; details: string }[];
+  };
   services: {
     title: string;
     description: string;
@@ -64,7 +70,6 @@ export type PrimaryPageCopy = {
     aboutDescription: string;
     aboutLink: string;
     aboutImageAlt: string;
-    aboutCaption: string;
     processTitle: string;
     steps: readonly { title: string; description: string }[];
     industriesTitle: string;
@@ -83,14 +88,24 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       contact: { title: "Kontak", description: "Bahas kebutuhan website, aplikasi web, atau identitas visual bisnis Anda dengan Tampiloka melalui WhatsApp atau email." },
     },
     home: {
-      title: "Website untuk",
+      title: "Studio web untuk",
       titleEmphasis: "bisnis Anda.",
-      description: "Kami membuat website dan aplikasi web untuk usaha Anda. Mulai dari template atau bahas kebutuhan khusus bersama kami.",
+      description: "Website, toko online, dan aplikasi web. Mulai dari template atau rancangan khusus.",
       contactCta: "Diskusikan kebutuhan",
       workLink: "Lihat karya",
       templatesCta: "Jelajahi template",
       demoLink: "Lihat pilihan demo",
       imageAlt: "Rancangan website dengan antarmuka hijau di layar laptop dan contoh palet warna.",
+    },
+    solutions: {
+      title: "Website sesuai kebutuhan.",
+      link: "Lihat cakupan layanan",
+      details: "Contoh fiturnya",
+      items: [
+        { kind: "portfolio", title: "Profil bisnis", description: "Perkenalkan layanan dan tampilkan hasil kerja.", details: "Profil usaha, portofolio, layanan, dan formulir kontak." },
+        { kind: "food", title: "Toko online", description: "Dari katalog produk hingga alur pemesanan.", details: "Katalog, keranjang, pembayaran, dan pengelolaan pesanan sesuai kebutuhan usaha." },
+        { kind: "technology", title: "Aplikasi web", description: "Kelola data dan pekerjaan dalam satu alur.", details: "Dashboard, formulir, portal pelanggan, dan integrasi sistem." },
+      ],
     },
     services: {
       title: "Layanan Tampiloka.",
@@ -140,7 +155,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       ],
       temuraCta: "Lihat undangan di Temura",
       aboutTitle: "Tentang Tampiloka.", aboutDescription: "Anda berdiskusi langsung dengan kami, dari pembahasan kebutuhan sampai website tayang.", aboutLink: "Kenali Tampiloka",
-      aboutImageAlt: "Meja kerja dengan laptop dan sketsa rancangan website.", aboutCaption: "Ilustrasi ruang kerja.",
+      aboutImageAlt: "Meja kerja dengan laptop dan sketsa rancangan website.",
       processTitle: "Cara kerja.", steps: [
         { title: "Diskusi", description: "Tentukan tujuan, kebutuhan, dan lingkup pekerjaan." },
         { title: "Rancangan", description: "Susun halaman, konten, dan tampilan." },
@@ -159,14 +174,24 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       contact: { title: "Contact", description: "Discuss your website, web application, or business visual identity needs with Tampiloka via WhatsApp or email." },
     },
     home: {
-      title: "Websites for",
+      title: "A web studio for",
       titleEmphasis: "your business.",
-      description: "We build websites and web apps for your business. Start with a template or discuss a custom project with us.",
+      description: "Websites, online stores, and web apps. Start with a template or a custom design.",
       contactCta: "Discuss your project",
       workLink: "View our work",
       templatesCta: "Explore templates",
       demoLink: "See the demo options",
       imageAlt: "A green website design on a laptop beside a sample color palette.",
+    },
+    solutions: {
+      title: "Built around your needs.",
+      link: "Explore our services",
+      details: "Example features",
+      items: [
+        { kind: "portfolio", title: "Business websites", description: "Introduce your services and showcase your work.", details: "Business profiles, portfolios, service pages, and inquiry forms." },
+        { kind: "food", title: "Online stores", description: "From browsing products to placing an order.", details: "Catalogs, carts, payments, and order management tailored to your operations." },
+        { kind: "technology", title: "Web apps", description: "Manage data and work in one connected flow.", details: "Dashboards, forms, customer portals, and system integrations." },
+      ],
     },
     services: {
       title: "Tampiloka services.",
@@ -216,7 +241,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
       ],
       temuraCta: "View invitations on Temura",
       aboutTitle: "About Tampiloka.", aboutDescription: "You work directly with us, from discussing your needs through to your website launch.", aboutLink: "Meet Tampiloka",
-      aboutImageAlt: "A desk with a laptop and website design sketches.", aboutCaption: "Illustration of a workspace.",
+      aboutImageAlt: "A desk with a laptop and website design sketches.",
       processTitle: "Our process.", steps: [
         { title: "Discussion", description: "Set the project goals, needs, and scope." },
         { title: "Design", description: "Plan the pages, content, and visual direction." },

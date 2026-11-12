@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "check:brand": "node scripts/verify-brand.mjs",
     "verify:marketing": "node scripts/verify-marketing.mjs",
+    "verify:landing-browser": "node scripts/verify-landing-browser.mjs",
     "verify:bilingual-browser": "node scripts/verify-bilingual-browser.mjs",
     "verify:showcase-browser": "node scripts/verify-showcase-browser.mjs",
     "verify:templates-browser": "node scripts/verify-templates-browser.mjs",

@@ -47,30 +47,11 @@
     site-logo-stroke 240ms ease-in-out 760ms both;
 }
 
-.hero-sculpture span {
-  animation: hero-piece-float 5.2s ease-in-out infinite;
-}
-
-.hero-sculpture span:nth-child(1) { animation-delay: -0.4s; }
-.hero-sculpture span:nth-child(2) { animation-delay: -1.7s; }
-.hero-sculpture span:nth-child(3) { animation-delay: -2.9s; }
-.hero-sculpture span:nth-child(4) { animation-delay: -4.1s; }
-
-.hero-sculpture span:nth-child(1) { --piece-x: 10px; --piece-y: -9px; --piece-rotate: 3deg; }
-.hero-sculpture span:nth-child(2) { --piece-x: -9px; --piece-y: 3px; --piece-rotate: -3deg; }
-.hero-sculpture span:nth-child(3) { --piece-x: 11px; --piece-y: 8px; --piece-rotate: 2deg; }
-.hero-sculpture span:nth-child(4) { --piece-x: -11px; --piece-y: -3px; --piece-rotate: -2deg; }
-
 @keyframes site-logo-draw { to { stroke-dashoffset: 0; } }
 @keyframes site-logo-fill { to { fill-opacity: 1; } }
 @keyframes site-logo-stroke { to { stroke-opacity: 0; } }
 @keyframes site-loader-fade { to { opacity: 0; visibility: hidden; } }
 @keyframes site-logo-fade { to { opacity: 0; visibility: hidden; } }
-
-@keyframes hero-piece-float {
-  0%, 100% { translate: 0 0; rotate: 0deg; }
-  50% { translate: var(--piece-x) var(--piece-y); rotate: var(--piece-rotate); }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .site-loader { display: none; }
@@ -81,7 +62,6 @@
     transition: none !important;
   }
 
-  .hero-sculpture span,
   .site-loader,
   .site-loader__symbol,
   .site-loader__symbol path {
