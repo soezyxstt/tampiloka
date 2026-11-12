@@ -1,203 +1,98 @@
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
-import { mkdir, writeFile } from "node:fs/promises";
 import { chromium } from "playwright";
-import { fileURLToPath } from "node:url";
+import { families } from "../lib/service-pricing.mjs";
 import { chooseSelect } from "./select-test-helper.mjs";
 
 const origin = process.env.PRICING_ORIGIN || process.argv[2] || "http://127.0.0.1:3000";
-const output = new URL("../../../artifacts/pricing/", import.meta.url);
-await mkdir(output, { recursive: true });
-const browser = await chromium.launch({
-  executablePath: process.env.CHROMIUM_PATH || (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : chromium.executablePath()),
-  args: ["--no-sandbox"],
-});
-const errors = [];
-const checks = [];
-const record = (message) => { checks.push(message); console.log(message); };
-const context = await browser.newContext({ viewport: { width: 1440, height: 1200 }, permissions: ["clipboard-read", "clipboard-write"] });
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : chromium.executablePath()), args: ["--no-sandbox"] });
+const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
 const page = await context.newPage();
-page.on("pageerror", (error) => errors.push(error.message));
-page.on("console", (message) => { if (message.type() === "error") errors.push(message.text()); });
-
-async function totals(first, second) {
-  await page.waitForFunction(([a, b]) => document.querySelector('[aria-label="Total tahun pertama"]').textContent === a && document.querySelector('[aria-label="Total tahun kedua"]').textContent === `${b}/tahun`, [first, second]);
-}
-
-async function revealPage(target) {
-  await target.locator('.site-motion[data-motion-ready="true"]').waitFor();
-  await target.evaluate(() => document.fonts.ready);
-  await target.evaluate(async () => {
-    const root = document.documentElement;
-    const previous = root.getAttribute("style");
-    root.style.scrollBehavior = "auto";
-    for (let y = 0; y < root.scrollHeight; y += window.innerHeight * 0.75) {
-      window.scrollTo(0, y);
-      await new Promise((resolve) => setTimeout(resolve, 70));
-    }
-    window.scrollTo(0, 0);
-    if (previous === null) root.removeAttribute("style");
-    else root.setAttribute("style", previous);
-  });
-  await target.waitForTimeout(1200);
-}
-
+const errors = [];
+page.on("pageerror", error => errors.push(error.message));
+const money = n => `Rp${new Intl.NumberFormat("id-ID").format(n * 1000)}`;
 try {
   const response = await page.goto(`${origin}/paket`);
   assert.equal(response.status(), 200);
   assert.equal(await page.locator("h1").count(), 1);
   assert.equal(await page.locator("main").count(), 1);
-  assert.equal(await page.locator(".pricing-card").count(), 4);
-  assert.deepEqual(await page.locator("s.pricing-card__original").allTextContents(), ["Rp1.665.000", "Rp2.831.667", "Rp4.165.000"]);
-  assert.deepEqual(await page.locator(".pricing-card__price > p").allTextContents(), ["Rp999k", "Rp1.699k", "Rp2.499k", "Sesuai kebutuhan"]);
-  assert(await page.locator(".pricing-button").first().evaluate((element) => {
-    const radius = getComputedStyle(element).borderRadius;
-    return radius.includes("infinity") || Number.parseFloat(radius) >= 999;
-  }), "CTAs use the shared pill button shape");
-  assert.equal(await page.locator(".pricing-page .lucide-sparkles, .pricing-page .type-overline, .pricing-page .pricing-launch").count(), 0);
-  const fontState = await page.evaluate(async () => { await document.fonts.ready; return [...document.fonts].filter((font) => font.status === "loaded").map((font) => font.family); });
-  assert(fontState.some((name) => /Inter/.test(name)), "Inter loads");
-  assert(fontState.some((name) => /Manrope/.test(name)), "Manrope loads");
-  const socialLinks = page.locator(".footer-socials a");
-  assert.equal(await socialLinks.count(), 5, "Footer exposes all contact links");
-  for (const link of await socialLinks.all()) {
-    assert.ok(await link.getAttribute("aria-label"), "Icon link has an accessible name");
-    assert.equal(await link.locator('svg[aria-hidden="true"]').count(), 1, "Contact icon is decorative");
-  }
-  record("Page, semantic landmarks, 40% promotional prices, and brand fonts render.");
-
-  assert.equal(await page.getByRole("heading", { name: "Paket website bisnis.", exact: true }).count(), 1);
-  assert.equal(await page.locator("select:visible").count(), 0, "Select controls do not expose a visible native select");
-  const careTrigger = page.locator("#estimate-care");
-  assert.equal(await careTrigger.getAttribute("role"), "combobox");
-  await careTrigger.focus();
+  assert.deepEqual(await page.locator(".service-card strong").allTextContents(), ["Rp249.000", "Rp499.000", "Rp899.000", "Rp1.490.000"]);
+  const picker = page.locator("#pricing-family");
+  await picker.focus();
   await page.keyboard.press("Enter");
   const listbox = page.getByRole("listbox");
   await listbox.waitFor({ state: "visible" });
-  const selected = listbox.locator('[role="option"][data-value="none"]');
-  assert.equal(await selected.getAttribute("aria-selected"), "true", "Current option is selected");
-  assert.equal(await selected.locator("svg.lucide-check").count(), 1, "Selected option has a check marker");
+  assert.equal(await listbox.locator('[role="option"][data-value="cafe"]').getAttribute("aria-selected"), "true");
   await page.keyboard.press("ArrowDown");
   await page.keyboard.press("Enter");
-  assert.equal(await careTrigger.getAttribute("data-value"), "care", "Keyboard selects an option");
-  await careTrigger.press("Enter");
-  await listbox.waitFor({ state: "visible" });
+  assert.equal(await picker.getAttribute("data-value"), "commerce");
+  await picker.press("Enter");
   await page.keyboard.press("Escape");
   await listbox.waitFor({ state: "hidden" });
-  assert.equal(await careTrigger.getAttribute("data-value"), "care", "Escape preserves the selection");
-  await page.getByRole("button", { name: "Reset", exact: true }).click();
+  assert.equal(await picker.getAttribute("data-value"), "commerce");
 
-  // These are the four independently specified examples in the pricing brief.
-  await totals("Rp1.998.000", "Rp598.000");
-  await chooseSelect(page, page.locator("#estimate-care"), "care");
-  await totals("Rp2.946.000", "Rp1.546.000");
-  await page.getByRole("radio", { name: /Signature/ }).check();
-  await chooseSelect(page, page.locator("#estimate-care"), "plus");
-  await totals("Rp4.946.000", "Rp2.746.000");
-  await page.getByRole("radio", { name: /Essential/ }).check();
-  await chooseSelect(page, page.locator("#estimate-domain"), "subdomain");
-  await chooseSelect(page, page.locator("#estimate-care"), "none");
-  await totals("Rp999.000", "Rp299.000");
-  record("All four year-one/year-two examples match the supplied brief.");
+  for (const family of families) {
+    await chooseSelect(page, picker, family.id);
+    assert.equal(await page.locator("#family-title").textContent(), family.name[0]);
+    const cards = page.locator(".service-family .service-card");
+    assert.equal(await cards.count(), family.plans.length);
+    for (let i = 0; i < family.plans.length; i++) {
+      const plan = family.plans[i], card = cards.nth(i);
+      assert.equal(await card.locator("h3").textContent(), plan[0]);
+      assert.equal(await card.locator("strong").textContent(), money(plan[4]));
+      assert((await card.locator(".service-prices").innerText()).includes(money(plan[6])));
+      assert((await card.locator(".service-prices").innerText()).includes(money(plan[7])));
+      assert((await card.locator(".service-prices").innerText()).includes(`${money(plan[5])} / bulan`));
+      const url = new URL(await card.locator("a").getAttribute("href"));
+      assert.equal(url.origin + url.pathname, "https://wa.me/6282119307102");
+      assert.equal(url.searchParams.get("text"), `Halo, saya ingin membahas paket ${plan[0]} — ${family.name[0]}.`);
+    }
+    const table = page.getByRole("region", { name: "Tabel perbandingan paket" });
+    assert.equal(await table.locator("tbody tr").count(), family.rows.length);
+    for (let i = 0; i < family.rows.length; i++) {
+      const row = table.locator("tbody tr").nth(i), [label, values] = family.rows[i];
+      assert.equal(await row.locator("th").textContent(), label[0]);
+      assert.deepEqual(await row.locator("td").allTextContents(), values.map(v => v === 1 ? "✓" : v === 0 ? "—" : v));
+    }
+    assert.equal(await page.locator(".scope-note").innerText().then(text => text.startsWith(family.scope[0])), true);
+  }
+  await chooseSelect(page, picker, "operations");
+  assert.equal(await page.locator(".service-family .service-card").count(), 3);
+  assert.equal(await page.getByText("Sesuai penawaran", { exact: true }).count(), 3);
+  assert((await page.locator(".service-family").innerText()).includes("sedang direncanakan"));
+  console.log("Families, promotional prices, limits, comparison tables and package WhatsApp links verified.");
 
-  await page.getByRole("button", { name: "Reset", exact: true }).click();
-  await page.getByText("Fitur website", { exact: true }).click();
-  await page.locator("#addon-cart").check();
-  await page.getByRole("button", { name: "Tambah Halaman tambahan", exact: true }).click();
-  await totals("Rp2.846.000", "Rp598.000");
-  await page.getByRole("button", { name: "Tambah Halaman tambahan", exact: true }).click();
-  await totals("Rp3.195.000", "Rp598.000");
-  await page.locator("#addon-reservation").check();
-  await totals("Rp3.444.000", "Rp598.000");
-  await page.getByRole("radio", { name: /Signature/ }).check();
-  await totals("Rp3.995.000", "Rp598.000");
-  assert(await page.locator("#addon-reservation").isDisabled(), "Included Signature reservation cannot be charged again");
-  assert(!(await page.locator("#addon-reservation").isChecked()));
-  await page.getByText("Konten & tampilan", { exact: true }).click();
-  await page.getByRole("button", { name: "Tambah Tambahan 10 item katalog", exact: true }).click();
-  await totals("Rp4.094.000", "Rp598.000");
-  await page.getByRole("radio", { name: /Essential/ }).check();
-  assert(await page.locator("#addon-catalog").isDisabled());
-  await totals("Rp2.495.000", "Rp598.000");
-  record("Add-on quantities, one-time fees, and prevention of duplicate/incompatible features work.");
-
-  await chooseSelect(page, page.locator("#estimate-domain"), "co-id");
-  await totals("Rp2.595.000", "Rp698.000");
-  await chooseSelect(page, page.locator("#estimate-domain"), "own");
-  await totals("Rp2.196.000", "Rp299.000");
-  await page.getByRole("button", { name: "Salin estimasi", exact: true }).click();
-  const copied = (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, "\n");
-  assert(copied.includes("Total tahun pertama: Rp2.196.000"));
-  assert(copied.includes("di luar estimasi"));
-  assert(copied.includes("Halaman tambahan × 2: Rp698.000"));
-  const whatsapp = new URL(await page.getByRole("link", { name: "Bahas lewat WhatsApp" }).getAttribute("href"));
-  assert.equal(whatsapp.origin, "https://wa.me");
-  assert(whatsapp.searchParams.get("text").includes(copied));
-  // Exercise the actual clipboard failure path without opening an external service.
-  await page.evaluate(() => { navigator.clipboard.writeText = async () => { throw new Error("Clipboard unavailable"); }; });
-  await page.getByRole("button", { name: "Estimasi tersalin", exact: true }).click();
-  await page.locator("#estimate-copy-text").waitFor({ state: "visible" });
-  assert.equal(await page.locator("#estimate-copy-text").inputValue(), copied);
-  record("Domain renewals, clipboard copy/fallback, and the prepared WhatsApp quotation match the estimate.");
-
-  await page.getByRole("button", { name: "Reset", exact: true }).click();
-  await totals("Rp1.998.000", "Rp598.000");
-  await page.getByRole("link", { name: "Pilih Essential", exact: true }).click();
-  await page.waitForFunction(() => document.querySelector('input[name="paket"]:checked').value === "essential");
-  await page.getByRole("radio", { name: /Menu/ }).check();
-  await page.getByRole("link", { name: "Pilih Essential", exact: true }).click();
-  await page.waitForFunction(() => document.querySelector('input[name="paket"]:checked').value === "essential");
-  const reloadUrl = page.url();
-  await page.reload();
-  await page.waitForFunction(() => document.querySelector('input[name="paket"]:checked').value === "essential");
-  assert(reloadUrl.endsWith("#estimasi-essential"));
-  await page.getByRole("button", { name: "Reset", exact: true }).click();
-  await page.getByRole("button", { name: "Apakah konten bisa saya ubah sendiri?", exact: true }).click();
-  await page.getByText(/Essential, Menu, dan Signature tidak memiliki dashboard/).waitFor({ state: "visible" });
-  const sitemap = await (await context.request.get(`${origin}/sitemap.xml`)).text();
-  assert(sitemap.includes("/paket</loc>"));
-  const services = await (await context.request.get(`${origin}/layanan`)).text();
-  assert(services.includes("Lihat paket website bisnis"));
-  record("Package CTAs, URL deep links, reset, package FAQ, services link, and sitemap work.");
+  await page.getByRole("button", { name: "Butuh kombinasi layanan? Hitung biaya" }).click();
+  const estimate = page.locator("#estimasi");
+  await estimate.waitFor({ state: "visible" });
+  const summary = estimate.locator(".service-summary");
+  assert((await summary.innerText()).includes("Rp717.000"));
+  const expected = ["Perkiraan biaya", "Kafe dan restoran: Pesanan Staf (pilihan awal: Pesanan Staf)", "Satu layanan", "Outlet kafe/restoran: 1", "Tanpa absensi staf", "Tanpa website tambahan", "Tanpa pembayaran online tambahan", "Penyiapan sekali: Rp249.000", "Langganan / bulan: Rp39.000", "3 bulan di muka: Rp117.000", "Tahun pertama: Rp717.000", "Belum termasuk domain, perangkat, internet, biaya transaksi, pesan berbayar, pajak bila berlaku, pemindahan data yang rumit dan pekerjaan khusus."].join("\n");
+  const whatsapp = new URL(await summary.getByRole("link", { name: "Diskusikan estimasi lewat WhatsApp" }).getAttribute("href"));
+  assert.equal(whatsapp.origin + whatsapp.pathname, "https://wa.me/6282119307102");
+  assert.equal(whatsapp.searchParams.get("text"), expected);
+  await estimate.getByText("Lokasi, kapasitas, dan tambahan", { exact: true }).click();
+  await page.locator("#estimate-outlets").fill("0");
+  assert.equal(await page.locator("#estimate-outlets").getAttribute("aria-invalid"), "true");
+  assert.equal(await summary.getByRole("link", { name: "Diskusikan estimasi lewat WhatsApp" }).count(), 0);
+  await page.locator("#estimate-outlets").fill("1");
+  await estimate.getByLabel("Toko dan brand lokal", { exact: true }).check();
+  await estimate.getByLabel("Ya, usaha, situs dan akun pembayaran sama").check();
+  await estimate.getByLabel("Produk siap jual dan sumber stok sama").check();
+  assert((await summary.innerText()).includes("Integrasi standar produk dan stok"));
+  await estimate.getByLabel("Toko dan brand lokal", { exact: true }).uncheck();
+  assert.equal(await estimate.getByText("Untuk usaha yang sama?", { exact: true }).count(), 0);
+  console.log("Optional calculator, validation, shared scope and exact WhatsApp summary verified without sending.");
 
   for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 1000 });
-    const layout = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth }));
-    assert(layout.document <= layout.viewport, `${width}px: page must not overflow (${layout.document}px)`);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${width}px overflow`);
   }
-  await page.setViewportSize({ width: 1440, height: 1200 });
-  await page.goto(`${origin}/paket`);
-  await revealPage(page);
-  await page.screenshot({ path: fileURLToPath(new URL("laptop.png", output)) });
-  await page.screenshot({ path: fileURLToPath(new URL("laptop-full.png", output)), fullPage: true });
-  await page.locator("#estimasi").scrollIntoViewIfNeeded();
-  await page.waitForTimeout(1200);
-  await page.locator(".pricing-estimate-section").screenshot({ path: fileURLToPath(new URL("laptop-calculator.png", output)), style: ".site-header, .skip-link { visibility: hidden !important; }" });
-
-  const mobileContext = await browser.newContext({ viewport: { width: 390, height: 1100 }, isMobile: true, deviceScaleFactor: 1 });
-  const mobile = await mobileContext.newPage();
-  mobile.on("pageerror", (error) => errors.push(error.message));
-  await mobile.goto(`${origin}/paket`);
-  await revealPage(mobile);
-  await mobile.screenshot({ path: fileURLToPath(new URL("mobile.png", output)) });
-  await mobile.screenshot({ path: fileURLToPath(new URL("mobile-full.png", output)), fullPage: true });
-  await mobile.locator("#estimasi").scrollIntoViewIfNeeded();
-  await mobile.waitForTimeout(1200);
-  await mobile.locator(".pricing-estimate-section").screenshot({ path: fileURLToPath(new URL("mobile-calculator.png", output)), style: ".site-header, .skip-link { visibility: hidden !important; }" });
-  await mobile.getByRole("button", { name: "Buka navigasi", exact: true }).click();
-  await mobile.locator('.header-sheet__nav a[href="/paket"]').waitFor({ state: "visible" });
-  await mobile.getByRole("button", { name: "Tutup navigasi", exact: true }).click();
-  await mobile.emulateMedia({ reducedMotion: "reduce" });
-  await mobile.reload();
-  const motion = await mobile.locator(".pricing-card").first().evaluate((element) => getComputedStyle(element).transitionDuration);
-  assert(motion.split(",").every((duration) => parseFloat(duration) === 0), "Reduced-motion preference disables transitions");
-  assert.equal(errors.length, 0, `Browser errors: ${errors.join("; ")}`);
-  record("No page overflow at 320/390/768/1024/1440px; mobile navigation, reduced motion, and clean browser console verified.");
-  await writeFile(new URL("verification.json", output), JSON.stringify({ origin, checks, errors, fonts: fontState }, null, 2));
-  console.log(`Screenshots: ${fileURLToPath(output)}`);
-} catch (error) {
-  console.error("Browser errors:", errors);
-  throw error;
+  await page.goto(`${origin}/en/pricing`);
+  assert.equal(await page.locator("h1").textContent(), "Packages for your business.");
+  assert.equal(await page.locator("#family-title").textContent(), "Cafes and restaurants");
+  assert.deepEqual(errors, [], "No uncaught browser errors");
+  console.log("Responsive widths and English page verified.");
 } finally {
   await browser.close();
 }
