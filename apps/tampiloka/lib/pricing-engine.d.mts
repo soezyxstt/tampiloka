@@ -1,0 +1,12 @@
+export type Family = 'cafe' | 'commerce' | 'booking' | 'school' | 'website' | 'operations';
+export type Requirement = { family: Family; minLevel?: number; organization?: string; workspace?: string; data?: string; site?: string; merchant?: string; outlets?: string[]; locations?: number; cashierOutlets?: string[]; providers?: number; students?: number };
+export type PricingFlag = 'recipes' | 'offline' | 'multibrand' | 'newConnector' | 'externalIntegration' | 'complexMigration' | 'untestedCapacity' | 'dashboard' | 'bookingBranches' | 'schoolBranches';
+export type RequirementsInput = { requirements: Requirement[]; attendance?: number; membership?: boolean; gateway?: boolean; website?: boolean | 'static' | 'dynamic'; flags?: PricingFlag[] };
+export type LegacyPricingInput = { family?: string; level?: number; operations?: boolean; fnbLocations?: number; warehouses?: number; attendance?: number; website?: boolean; sameSku?: boolean; membership?: boolean; capacity?: number };
+export type PricingInput = RequirementsInput | LegacyPricingInput;
+export type NormalizedRequirement = Required<Requirement>;
+export type NormalizedPricingInput = { requirements: NormalizedRequirement[]; attendance: number; membership: boolean; gateway: boolean; website: 'static' | 'dynamic' | null; flags: PricingFlag[] };
+export type PricingResult = {version:string; savings:{setup:number;monthly:number}; lines:{id:string;setup:number;monthly:number;family?:Family;level?:number;scope?:string;families?:Family[]}[]; unknown:string[]; setup:number; monthly:number; quarterly:number; firstYear:number; normalizedInput:NormalizedPricingInput; selected:{family:Family;level:number;minLevel:number}[]};
+export function normalizePricingInput(input:PricingInput):NormalizedPricingInput;
+export function calculatePricing(input:PricingInput):PricingResult;
+export function tierCost(count:number, tiers:number[][]):number[];
