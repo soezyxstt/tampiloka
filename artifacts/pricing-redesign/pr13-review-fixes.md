@@ -20,3 +20,10 @@
 - Local browser: café + commerce, shared business, 2 outlets produced Rp1.198.000 setup / Rp98.000 monthly / Rp294.000 quarterly / Rp2.374.000 first year. Reload and header ID → EN restored inputs and totals, retaining UTM and hash. Back/forward between 2 and 3 outlets restored corresponding totals. Invalid v99 fell back safely. Quantity computed radius 8px from shared control. Desktop verified; mobile and detailed keyboard/focus comparison remain unverified.
 - Rendered metadata: ID canonical/OG URL `https://tampiloka.site/paket`; EN canonical/OG URL `https://tampiloka.site/en/pricing`; hreflang ID, EN and x-default point to pricing routes, with pricing-specific OG/Twitter titles and descriptions.
 - No build, typecheck, full lint, or CI rerun locally as requested.
+
+## Latest deployment diagnosis
+
+- Vercel deployment dpl_DcTZBCix1jLYimqA5qatBrG4mgEf at aa98df7 compiled successfully with Next 16.3.8 Turbopack, then failed type checking at service-pricing.tsx:32: the shared Accordion wrapper exposes `unknown[]`, incompatible with the `string[]` state setter. The handler now maps the known estimate item to the controlled state. Remote build verification is required.
+- Earlier font resolver failures remain unexplained; the latest deployment did not reproduce them. No font or bundler change was made. The last successful production deployment dpl_7vhPyo8adB8vQgRf7SznQDYEB9Se used commit 601aebe; package manifests, lockfile and Next config have no diff from that commit.
+- GitHub check annotations for runs 43177846891 and 43177836657 say the jobs did not start because recent account payments failed or the spending limit needs increasing. An account owner must resolve billing and rerun checks.
+- No local build, typecheck or full lint was run under the resource constraint.
