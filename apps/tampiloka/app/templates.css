@@ -37,7 +37,6 @@
 @media (max-width: 767px) {
   .template-discovery { padding: 3rem 6% 3.5rem; }
   .template-discovery__heading { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .template-discovery__heading > [data-slot="button"] { padding-left: 0; }
 }
 @media (max-width: 680px) {
   .template-gallery__controls, .template-gallery__controls--with-mode, .template-discovery__grid { grid-template-columns: 1fr; }

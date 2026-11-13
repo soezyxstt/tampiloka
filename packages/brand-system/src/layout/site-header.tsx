@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Fragment, type ReactElement, type ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { menuTransition } from "./menu-state.mjs";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 
@@ -236,18 +236,11 @@ export function SiteHeader({
         })}
         {action && (
           action.href.startsWith("http") || action.href.startsWith("mailto:") || action.href.startsWith("#") ? (
-            <a className="header-contact-link" href={action.href}>
+            <a className={buttonVariants({ variant: "brand", size: "pill", className: "header-contact-link" })} href={action.href}>
               {action.label}
             </a>
           ) : (
-            <Button
-              className="header-contact-link"
-              size="lg"
-              nativeButton={false}
-              render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-contact-link", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}
-            >
-              {action.label}
-            </Button>
+            renderLink({ href: action.href, className: buttonVariants({ variant: "brand", size: "pill", className: "header-contact-link" }), ariaCurrent: activePathname === action.href ? "page" : undefined, children: action.label })
           )
         )}
         {localization}
@@ -257,18 +250,11 @@ export function SiteHeader({
         {localization}
         {action && (
           action.href.startsWith("http") || action.href.startsWith("mailto:") || action.href.startsWith("#") ? (
-            <a className="header-contact-link header-contact-link--mobile" href={action.href}>
+            <a className={buttonVariants({ variant: "brand", size: "pill", className: "header-contact-link header-contact-link--mobile" })} href={action.href}>
               {action.label}
             </a>
           ) : (
-            <Button
-              className="header-contact-link header-contact-link--mobile"
-              size="lg"
-              nativeButton={false}
-              render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-contact-link header-contact-link--mobile", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}
-            >
-              {action.label}
-            </Button>
+            renderLink({ href: action.href, className: buttonVariants({ variant: "brand", size: "pill", className: "header-contact-link header-contact-link--mobile" }), ariaCurrent: activePathname === action.href ? "page" : undefined, children: action.label })
           )
         )}
         <Sheet
@@ -289,14 +275,7 @@ export function SiteHeader({
           <SheetContent className="header-sheet">
             <div className="header-sheet__top">
               <SheetTitle className="sr-only">{mobileTitle}</SheetTitle>
-              <SheetClose nativeButton={false} render={renderInternalLink ? renderInternalLink({ href: homeHref, ariaLabel: `${logo.alt}, ${homeLabel}`, className: "header-brand" }) as ReactElement : <Link href={homeHref} aria-label={`${logo.alt}, ${homeLabel}`} className="header-brand" />}>
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={logo.width ?? 800}
-                  height={logo.height ?? 200}
-                />
-              </SheetClose>
+              {renderLink({ href: homeHref, ariaLabel: `${logo.alt}, ${homeLabel}`, className: "header-brand", onClick: () => setSheetOpen(false), children: <Image src={logo.src} alt={logo.alt} width={logo.width ?? 800} height={logo.height ?? 200} /> })}
               <SheetClose
                 aria-label={closeMenuLabel}
                 render={<Button variant="ghost" size="icon" aria-label={closeMenuLabel} />}
@@ -313,25 +292,17 @@ export function SiteHeader({
                     {children.map(child => <Fragment key={child.href}>{renderLink({ ...child, children: child.label, onClick: () => { closeMenu(); setSheetOpen(false); } })}</Fragment>)}
                   </div></div>
                 </div> : href.startsWith("#") ? (
-                  <SheetClose nativeButton={false} key={href} render={<a className="header-nav-link" href={href} />}>
-                    {label}
-                  </SheetClose>
+                  <a key={href} className="header-nav-link" href={href} onClick={() => setSheetOpen(false)}>{label}</a>
                 ) : (
                   <Fragment key={href}>{renderLink({ href, className: navigationLinkClass(activePathname, href), ariaCurrent: activePathname === href ? "page" : undefined, onClick: () => setSheetOpen(false), children: label })}</Fragment>
                 )
               )}
               {action && (
                 action.href.startsWith("http") || action.href.startsWith("mailto:") || action.href.startsWith("#") ? (
-                  <SheetClose
-                    nativeButton={false}
-                    render={<a className="header-sheet__contact" href={action.href} />}
-                  >
-                    {action.label}
-                  </SheetClose>
+                  <a className="header-sheet__contact" href={action.href} onClick={() => setSheetOpen(false)}>{action.label}</a>
                 ) : (
-                  <SheetClose nativeButton={false} render={renderInternalLink ? renderInternalLink({ href: action.href, className: "header-sheet__contact", ariaCurrent: activePathname === action.href ? "page" : undefined }) as ReactElement : <Link className="header-sheet__contact" href={action.href} aria-current={activePathname === action.href ? "page" : undefined} />}>
-                    {action.label}
-                  </SheetClose>
+                  renderLink({ href: action.href, className: "header-sheet__contact", ariaCurrent: activePathname === action.href ? "page" : undefined, onClick: () => setSheetOpen(false), children: action.label })
+
                 )
               )}
             </nav>

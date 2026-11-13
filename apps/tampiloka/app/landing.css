@@ -16,7 +16,7 @@
 .solution-teasers { display:grid; grid-template-columns:.8fr 1.5fr; align-items:start; gap:clamp(2rem,6vw,6rem); max-width:1440px; margin:auto; padding:4rem 5%; border-top:1px solid #dce5de; }
 .solution-teasers__intro { position:sticky; top:130px; }
 .solution-teasers__intro h2 { margin:0; text-wrap:balance; }
-.solution-teasers__intro>a { margin:1rem 0 0 -1.25rem; }
+.solution-teasers__action { margin-top:2rem; }
 .solution-teaser { display:grid; grid-template-columns:.9fr 1fr; align-items:center; gap:1.75rem; padding:2rem 0; border-bottom:1px solid #dce5de; }
 .solution-teaser:first-child { padding-top:0; }
 .solution-teaser__visual { min-width:0; overflow:hidden; border-radius:8px; }

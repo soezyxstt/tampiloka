@@ -1,5 +1,7 @@
 "use client";
 
+import { MarketingCTA } from "@/components/marketing-cta";
+
 import { useState } from "react";
 import { Card, CardContent, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -47,7 +49,7 @@ export function TemplateGallery({ locale, initialCatalog = null }: { locale: Loc
             <CardTitle>{item.name[locale]}</CardTitle>
             <p className="type-body mt-2">{item.description[locale]}</p>
           </CardContent>
-          <CardFooter><Button variant="secondary" nativeButton={false} render={<a href={url} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${item.name[locale]} (${copy.opens})`} />}>{copy.open}</Button></CardFooter>
+          <CardFooter><MarketingCTA nativeButton={false} render={<a href={url} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${item.name[locale]} (${copy.opens})`} />}>{copy.open}</MarketingCTA></CardFooter>
         </Card>;
       })}</div> : catalog && <div className="template-gallery__empty"><p className="type-body">{catalog.entries.length ? copy.empty : copy.noTemplates}</p>{catalog.entries.length > 0 && <Button variant="outline" onClick={() => { setSearch(""); setFamily("all"); setModes({}); }}>{copy.reset}</Button>}</div>}
       <noscript><p className="type-body-sm">{copy.noScript}</p></noscript>
