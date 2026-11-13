@@ -16,17 +16,15 @@ const routePairs = [
   ['/paket', '/en/pricing'],
   ['/produk', '/en/work'],
   ['/templates', '/en/templates'],
-  ['/industri', '/en/industries'],
   ['/tentang', '/en/about'],
   ['/contact', '/en/contact'],
 ];
 const englishSignals = new Map([
   ['/en', 'A web studio for'],
   ['/en/services', 'Tampiloka services.'],
-  ['/en/pricing', 'Business website packages.'],
+  ['/en/pricing', 'Packages for your business.'],
   ['/en/work', 'digital invitations.'],
   ['/en/templates', 'Templates'],
-  ['/en/industries', 'Websites for your industry.'],
   ['/en/about', 'About Tampiloka.'],
   ['/en/contact', 'project'],
 ]);
@@ -87,6 +85,7 @@ for (let index = 0; index < routePairs.length; index += 1) {
     }
     if (locale === 'en') {
       assert.ok(visibleHtml.includes(englishSignals.get(path)), `${path}: English page-specific copy is present`);
+      if (idPath === '/layanan') assert.ok(visibleHtml.includes('Explore websites and applications for cafes, stores, schools, and other needs.'), `${path}: current services introduction is present`);
       assert.ok(visibleHtml.includes('Frequently asked questions.'), `${path}: English FAQ copy is present`);
       for (const untranslated of [
         'Langsung ke isi halaman',
@@ -143,28 +142,26 @@ for (const [locale, path] of [['id', '/halaman-tidak-tersedia'], ['en', '/en/pag
   assert.ok(locale === 'id' ? html.includes('Halaman tidak ditemukan.') : /Page not found/i.test(html), `${path}: localized 404 copy`);
 }
 
-const industryPage = pages.get('/industri');
-assert.equal((industryPage.match(/class="industry-row"/g) || []).length, 7, 'Seven editorial industry sections');
-assert.ok(!industryPage.includes('industry-card'), 'Industries use editorial sections');
-assert.ok(industryPage.includes('Contoh tampilan untuk ilustrasi'), 'Industry previews disclose concept status');
-assert.ok(pages.get('/en/industries').includes('These illustrative designs are concepts, not client projects.'), 'English industry previews disclose concept status');
-for (const [path, html] of pages) {
-  for (const [, href] of html.matchAll(/href="(\/(?:layanan|industri|services|industries)#[^"]+)"/g)) {
-    const [route, id] = href.split('#');
-    assert.ok(pages.get(route)?.includes(`id="${id}"`), `${path}: broken section link ${href}`);
-  }
+for (const [oldPath, target] of [['/industri', '/layanan'], ['/en/industries', '/en/services']]) {
+  const response = await fetch(new URL(`${oldPath}?source=check`, origin), { redirect: 'manual' });
+  assert.equal(response.status, 308, `${oldPath}: permanent redirect`);
+  const location = new URL(response.headers.get('location'), origin);
+  assert.equal(location.pathname, target, `${oldPath}: localized destination`);
+  assert.equal(location.search, '?source=check', `${oldPath}: query retained`);
 }
-const localizedFooterAnchors = [
-  ...['service-website', 'service-digital-product', 'service-development', 'service-branding'].map((id) => [`/en/services#${id}`, '/en/services', id]),
-  ...['industry-food', 'industry-fashion', 'industry-portfolio-architecture', 'industry-small-business', 'industry-technology', 'industry-enterprise', 'industry-wedding'].map((id) => [`/en/industries#${id}`, '/en/industries', id]),
-];
+const fieldIds = ['kafe-restoran', 'umkm', 'multioutlet', 'sekolah', 'toko-online', 'booking', 'portofolio', 'lainnya'];
+for (const route of ['/layanan', '/en/services']) {
+  for (const id of [...fieldIds, 'industry-food', 'industry-fashion', 'industry-portfolio-architecture', 'industry-small-business', 'industry-technology', 'industry-enterprise', 'industry-wedding']) assert.ok(pages.get(route).includes(`id="${id}"`), `${route}: field or legacy anchor ${id} exists`);
+}
+const localizedFooterAnchors = [...fieldIds, 'service-website', 'service-digital-product', 'service-development', 'service-branding'].map((id) => [`/en/services#${id}`, '/en/services', id]);
+for (const [path, html] of pages) assert.ok(!/href="\/(?:industri|en\/industries)(?:["#?])/i.test(html), `${path}: no obsolete industry link`);
 for (const [localeIndex, path] of routePairs.flatMap((pair) => pair.map((path, localeIndex) => [localeIndex, path]))) {
   const html = pages.get(path);
   const footerStart = html.indexOf('<footer');
   const footerEnd = html.indexOf('</footer>', footerStart);
   assert.ok(footerStart >= 0 && footerEnd > footerStart, `${path}: footer landmark exists`);
   const footer = html.slice(footerStart, footerEnd + '</footer>'.length);
-  for (const href of localizedPaths(localeIndex).slice(1)) {
+  for (const href of localizedPaths(localeIndex).slice(1).map(href => href === (localeIndex ? '/en/pricing' : '/paket') ? `${href}?family=website` : href)) {
     assert.ok(footer.includes(`href="${href}"`), `${path}: footer uses localized route ${href}`);
   }
 }

@@ -1,9 +1,10 @@
 "use client";
 
 import { useLocale } from "next-intl";
+import { useSearchParams } from "next/navigation";
 import { getPathname, usePathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
-import { useEffect, useState, type MouseEvent } from "react";
+import { Suspense, useCallback, useEffect, useState, type MouseEvent } from "react";
 import "../app/navigation.css";
 
 const localeLabels: Record<Locale, { visible: string; name: string; switchTo: string; current: string }> = {
@@ -11,14 +12,20 @@ const localeLabels: Record<Locale, { visible: string; name: string; switchTo: st
   en: { visible: "EN", name: "English", switchTo: "Switch to English", current: "English, current language" },
 };
 
+function SearchSync({ update }: { update: () => void }) {
+  const searchParams = useSearchParams();
+  useEffect(() => { update(); }, [searchParams, update]);
+  return null;
+}
+
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const [locationSuffix, setLocationSuffix] = useState("");
   const locales: Locale[] = ["id", "en"];
+  const updateLocationSuffix = useCallback(() => setLocationSuffix(`${window.location.search}${window.location.hash}`), []);
 
   useEffect(() => {
-    const updateLocationSuffix = () => setLocationSuffix(`${window.location.search}${window.location.hash}`);
     updateLocationSuffix();
     window.addEventListener("hashchange", updateLocationSuffix);
     window.addEventListener("popstate", updateLocationSuffix);
@@ -26,7 +33,7 @@ export function LanguageSwitcher() {
       window.removeEventListener("hashchange", updateLocationSuffix);
       window.removeEventListener("popstate", updateLocationSuffix);
     };
-  }, []);
+  }, [updateLocationSuffix]);
 
   function preserveCurrentLocation(event: MouseEvent<HTMLAnchorElement>, targetLocale: Locale) {
     if (typeof window === "undefined") return;
@@ -43,6 +50,7 @@ export function LanguageSwitcher() {
 
   return (
     <nav className="language-switcher" aria-label={locale === "en" ? "Choose language" : "Pilih bahasa"}>
+      <Suspense fallback={null}><SearchSync update={updateLocationSuffix} /></Suspense>
       {locales.map((targetLocale) => {
         const href = `${getPathname({ locale: targetLocale, href: pathname })}${locationSuffix}`;
         return (

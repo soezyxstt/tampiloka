@@ -12,6 +12,17 @@ const errors = [];
 page.on("pageerror", error => errors.push(error.message));
 const money = n => `Rp${new Intl.NumberFormat("id-ID").format(n * 1000)}`;
 try {
+  await page.goto(`${origin}/paket?family=school&source=check#details`);
+  assert.equal(await page.locator("#pricing-family").getAttribute("data-value"), "school");
+  await chooseSelect(page, page.locator("#pricing-family"), "booking");
+  assert.equal(await page.locator("#pricing-family").getAttribute("data-value"), "booking");
+  assert.equal(new URL(page.url()).searchParams.get("source"), "check");
+  assert.equal(new URL(page.url()).searchParams.get("family"), "booking");
+  assert.equal(new URL(page.url()).hash, "#details");
+  await page.goto(`${origin}/en/pricing?family=booking`);
+  assert.equal(await page.locator("#pricing-family").getAttribute("data-value"), "booking");
+  await page.goto(`${origin}/paket?family=invalid`);
+  assert.equal(await page.locator("#pricing-family").getAttribute("data-value"), "cafe");
   const response = await page.goto(`${origin}/paket`);
   assert.equal(response.status(), 200);
   assert.equal(await page.locator("h1").count(), 1);

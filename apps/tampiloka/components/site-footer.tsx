@@ -3,6 +3,7 @@ import { SiteFooter as SharedSiteFooter } from "@tampiloka/brand-system/footer";
 import { Link, toLocalizedHref } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { shellCopy } from "@/i18n/shell-copy";
+import { fieldLinks } from "@/lib/service-fields";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { ContactPlatformIcon } from "@/components/contact-icon-link";
 import { CONTACT, CONTACT_LINKS } from "@/lib/contact-links";
@@ -15,8 +16,7 @@ export async function SiteFooter() {
     { label: copy.nav.work, href: "/produk" },
     { label: copy.nav.templates, href: "/templates" },
     { label: copy.nav.services, href: "/layanan" },
-    { label: locale === "en" ? "Website pricing" : "Paket website", href: "/paket" },
-    { label: copy.nav.industries, href: "/industri" },
+    { label: locale === "en" ? "Website pricing" : "Paket website", href: "/paket?family=website" },
     { label: copy.nav.about, href: "/tentang" },
     { label: copy.nav.contact, href: "/contact" },
   ];
@@ -29,15 +29,7 @@ export async function SiteFooter() {
     { label: copy.footer.digitalInvitations, href: TEMURA_URL, external: true },
   ];
 
-  const industryLinks = [
-    { label: copy.footer.food, href: "/industri#industry-food" },
-    { label: copy.footer.fashion, href: "/industri#industry-fashion" },
-    { label: copy.footer.portfolio, href: "/industri#industry-portfolio-architecture" },
-    { label: copy.footer.smallBusiness, href: "/industri#industry-small-business" },
-    { label: copy.footer.technology, href: "/industri#industry-technology" },
-    { label: copy.footer.businessServices, href: "/industri#industry-enterprise" },
-    { label: copy.footer.weddingInvitations, href: "/industri#industry-wedding" },
-  ];
+  const industryLinks = fieldLinks(locale);
 
   const socials = CONTACT_LINKS.map((link) => ({
     label: link.label,
@@ -60,7 +52,7 @@ export async function SiteFooter() {
         { title: copy.footer.studio, items: studioLinks },
         { title: copy.footer.services, items: serviceLinks },
       ]}
-      wideGroup={{ title: copy.footer.industries, items: industryLinks }}
+      wideGroup={{ title: locale === "en" ? "Services by field" : "Layanan per bidang", items: industryLinks }}
       logo={{
         src: "/brand/logos/light/tampiloka-horizontal-light.svg",
         alt: "Tampiloka",

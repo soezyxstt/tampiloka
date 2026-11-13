@@ -73,7 +73,6 @@ export const PUBLIC_PAGE_PATHS = [
   "/paket",
   "/produk",
   "/templates",
-  "/industri",
   "/tentang",
   "/contact",
 ] as const;
@@ -102,15 +101,8 @@ export const PUBLIC_PAGES: Record<PublicPagePath, PageSitemapDetails> = {
   "/layanan": {
     priority: 0.9,
     changeFrequency: "monthly",
-    updatedAt: SITE_UPDATED_AT,
-    images: [
-      "/images/service-overview.webp",
-      "/images/service-website.webp",
-      "/images/service-digital-product.webp",
-      "/images/service-development.webp",
-      "/images/service-branding.webp",
-      "/images/service-digital-invitation.webp",
-    ],
+    updatedAt: "2026-11-13",
+    images: ["/images/service-overview.webp", "/images/service-website.webp", "/images/service-digital-product.webp", "/images/service-development.webp", "/images/service-branding.webp", "/images/service-digital-invitation.webp"],
   },
   "/produk": {
     priority: 0.9,
@@ -122,12 +114,6 @@ export const PUBLIC_PAGES: Record<PublicPagePath, PageSitemapDetails> = {
     priority: 0.9,
     changeFrequency: "weekly",
     updatedAt: "2026-10-30",
-  },
-  "/industri": {
-    priority: 0.8,
-    changeFrequency: "monthly",
-    updatedAt: "2026-10-30",
-    images: ["/images/industry-overview.webp"],
   },
   "/tentang": {
     priority: 0.7,

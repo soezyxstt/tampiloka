@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import "../../templates.css";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { PageVisual } from "@/components/page-visual";
+import { ServiceFields } from "@/components/service-fields";
 import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { createPageMetadata, itemListSchema, localizedSiteUrl, webPageSchema } from "@/lib/seo";
 import { getPrimaryCopy } from "@/i18n/primary-copy";
 import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
+import { serviceFields } from "@/lib/service-fields";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: requestedLocale } = await params;
@@ -54,33 +56,17 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
         <div className="inner-page__intro" data-reveal>
           <h1 id="services-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
-          <Button className="inner-page__cta" size="lg" nativeButton={false} render={<Link href="/contact" />}>
-            {copy.contactCta}
-          </Button>
+          <div className="service-hero__actions"><Button variant="brand" size="pill" nativeButton={false} render={<Link href="/contact" />}>{copy.contactCta}</Button><Button variant="link" nativeButton={false} render={<a href="#pilih-bidang" />}>{locale === "en" ? "Choose a field" : "Pilih bidang"}</Button></div>
         </div>
-        <PageVisual imageKey="service-overview" alt={copy.imageAlt} preload />
+        <figure className="service-hero__visual">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/services/school-lingua.png" width="1280" height="800" alt={locale === "en" ? "Example course catalogue with programmes and schedules" : "Contoh katalog kursus dengan program dan jadwal"} /><figcaption className="type-body-sm">{locale === "en" ? "Example learning centre demo in Indonesian, with sample data." : "Contoh demo pusat belajar dengan data contoh."}</figcaption></figure>
       </section>
 
-      <section className="inner-page__services" aria-label={copy.ariaLabel}>
-        {services.map((service) => (
-          <article className="service-row" id={service.imageKey} key={service.title}>
-            <div className="service-row__copy" data-reveal>
-              <h2 className="type-heading-1">{service.title}</h2>
-              <p className="type-body-lg">{service.description}</p>
-              <ul className="service-row__list type-body-sm">
-                {service.items.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-              {service.href && <Button variant="secondary" className="service-row__cta" nativeButton={false} render={<a href={service.href} target="_blank" rel="noopener noreferrer" />}>{copy.temuraCta}</Button>}
-              {service.imageKey === "service-website" && <Button variant="secondary" className="service-row__cta" nativeButton={false} render={<Link href="/paket" />}>{copy.packageCta}</Button>}
-            </div>
-            <PageVisual imageKey={service.imageKey} alt={service.imageAlt} />
-          </article>
-        ))}
-      </section>
+      <nav className="service-directory" id="pilih-bidang" aria-label={locale === "en" ? "Choose a field" : "Pilih bidang"}>
+        <h2 className="type-heading-3">{locale === "en" ? "Choose a field" : "Pilih bidang"}</h2>
+        <div>{serviceFields[locale].map(field => <a className="type-label-lg" href={`#${field.id}`} key={field.id}>{field.name}</a>)}</div>
+      </nav>
 
-      <div className="inner-page__end-link" data-reveal>
-        <Button variant="secondary" size="lg" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
-      </div>
+      <ServiceFields locale={locale} />
     </div>
   );
 }

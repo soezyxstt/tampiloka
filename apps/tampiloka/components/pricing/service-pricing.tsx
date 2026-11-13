@@ -1,29 +1,33 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Plus } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { families } from "@/lib/service-pricing.mjs";
+import { familyUrl, selectedFamily } from "@/lib/service-selection.mjs";
 import { decodeEstimate } from "@/lib/estimate-url.mjs";
 import { AdvancedEstimate } from "./advanced-estimate";
 import { CONTACT } from "@/lib/contact-links";
 import { SelectField } from "@/components/ui/form-controls";
 import { buttonVariants } from "@/components/ui/button";
 
-export function ServicePricing({locale}:{locale:string}) {
+export function ServicePricing({locale, initialFamily}:{locale:string; initialFamily:string}) {
  const [calculatorOpen,setCalculatorOpen]=useState<string[]>([]);
  useEffect(()=>{
   const openSaved=()=>{ if(decodeEstimate(new URLSearchParams(window.location.search).get('estimate'))) setCalculatorOpen(['estimate']); };
   openSaved(); window.addEventListener('popstate',openSaved);
   return ()=>window.removeEventListener('popstate',openSaved);
  },[]);
- const [familyId,setFamilyId]=useState("cafe");
+ const searchParams = useSearchParams();
+ const familyValues = searchParams.getAll("family");
+ const familyId = familyValues.length ? selectedFamily(familyValues.length === 1 ? familyValues[0] : familyValues) : initialFamily;
  const en=locale === "en", lang=en?1:0, t=(id:string,english:string)=>en?english:id;
  const money=(n:number)=>`Rp${new Intl.NumberFormat('id-ID').format(n*1000)}`;
  const contact=(message:string)=>`${CONTACT.whatsapp}?text=${encodeURIComponent(message)}`;
  const f=families.find(x=>x.id===familyId);
  return <div className="service-pricing">
   <header className="service-hero"><h1 className="type-display">{t('Paket untuk usaha Anda.','Packages for your business.')}</h1><p className="type-body-lg">{t('Pilih layanan yang sesuai, lalu ceritakan kebutuhan Anda kepada kami.','Choose a service and tell us what you need.')}</p></header>
-  <div className="family-picker"><SelectField id="pricing-family" label={t("Pilih jenis layanan","Choose a service")} value={familyId} onChange={setFamilyId} options={[...families.map(x=>({value:x.id,label:x.name[lang]})),{value:'operations',label:t('Operasional multilokasi','Multi-location operations')}]} /></div>
+  <div className="family-picker"><SelectField id="pricing-family" label={t("Pilih jenis layanan","Choose a service")} value={familyId} onChange={value=>{ window.history.replaceState(null, "", familyUrl(window.location.href, value)); }} options={[...families.map(x=>({value:x.id,label:x.name[lang]})),{value:'operations',label:t('Operasional multilokasi','Multi-location operations')}]} /></div>
   {f ? <section className="service-family" aria-labelledby="family-title"><div className="service-family-head"><h2 id="family-title" className="type-heading-2">{f.name[lang]}</h2></div>
    <div className="service-grid">{f.plans.map((p,i)=><article className={`service-card${i===1?' service-card--featured':''}`} key={i}><h3 className="type-heading-4">{p[lang]}</h3><p className="service-description type-body-sm">{p[en?3:2]}</p><div className="service-prices"><span className="price-label type-caption">{t('Penyiapan sekali','One-time setup')}</span><s className="type-body-sm"><span className="sr-only">{t('Harga reguler ','Regular price ')}</span>{money(p[6])}</s><strong className="type-heading-3">{money(p[4])}</strong><span className="type-body-sm"><s aria-label={`${t("Harga reguler", "Regular price")} ${money(p[7])} / ${t("bulan", "month")}`}>{money(p[7])}</s> {money(p[5])} / {t('bulan','month')}</span></div><a className={buttonVariants({variant:i===1?'brand':'outline',size:'pill',className:'service-button'})} href={contact(`${t('Halo, saya ingin membahas paket','Hello, I would like to discuss the')} ${p[lang]} — ${f.name[lang]}.`)} target="_blank" rel="noopener noreferrer">{t('Pilih paket','Choose package')}</a><ul className="card-benefits type-body-sm">{f.rows.filter(row=>row[1][i]===1).slice(-3).map(row=><li key={row[0][0]}><span aria-hidden="true">✓</span> {row[0][lang]}</li>)}</ul></article>)}</div>
    <div className="comparison-section"><h3 className="type-heading-3">{t('Bandingkan fitur','Compare features')}</h3><p className="scroll-hint type-body-sm">{t('Geser tabel untuk melihat semua paket →','Scroll to see all packages →')}</p><div className="comparison-scroll" tabIndex={0} role="region" aria-label={t('Tabel perbandingan paket','Package comparison table')}><table className="comparison-table"><thead><tr><th scope="col">{t('Fitur','Feature')}</th>{f.plans.map((p,i)=><th scope="col" key={i}>{p[lang]}</th>)}</tr></thead><tbody>{f.rows.map(row=><tr key={row[0][0]}><th scope="row">{row[0][lang]}</th>{row[1].map((v,i)=><td key={i}>{v===1?<span aria-label={t('Termasuk','Included')}>✓</span>:v===0?<span aria-label={t('Tidak termasuk','Not included')}>—</span>:v}</td>)}</tr>)}</tbody></table></div><p className="scope-note type-body-sm">{f.scope[lang]} {f.id === "cafe" && t("Pembayaran dicatat di luar aplikasi untuk Pesanan Staf dan Pesan dari Meja.", "Payments are recorded outside the app for Staff Orders and Order from Table.")}</p></div>
