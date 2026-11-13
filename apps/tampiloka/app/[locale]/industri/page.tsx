@@ -1,8 +1,8 @@
+import { MarketingCTA } from "@/components/marketing-cta";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { IndustryPreview } from "@/components/industry-preview";
 import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
@@ -97,7 +97,7 @@ export default async function IndustriPage({ params }: LocalizedPageProps) {
                 <ul className="industry-row__uses type-label">
                   {industry.uses.map(use => <li key={use}>{use}</li>)}
                 </ul>
-                {externalCta && <Button variant="secondary" nativeButton={false} render={<a href={TEMURA_URL} target="_blank" rel="noopener noreferrer" />}>{label}</Button>}
+                {externalCta && <MarketingCTA nativeButton={false} render={<a href={TEMURA_URL} target="_blank" rel="noopener noreferrer" />}>{label}</MarketingCTA>}
               </div>
               <div className="industry-row__visual" data-reveal><IndustryPreview kind={kind} /></div>
             </section>
@@ -107,9 +107,9 @@ export default async function IndustriPage({ params }: LocalizedPageProps) {
       <p className="industry-disclosure type-caption" data-reveal>{copy.industryDisclosure}</p>
 
       <div className="inner-page__end-link" data-reveal>
-        <Button className="inner-page__cta" nativeButton={false} render={<Link href="/contact" />}>
+        <MarketingCTA primary className="inner-page__cta" nativeButton={false} render={<Link href="/contact" />}>
           {copy.discussNeeds}
-        </Button>
+        </MarketingCTA>
       </div>
     </div>
   );

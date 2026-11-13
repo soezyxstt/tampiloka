@@ -16,9 +16,7 @@
 .inner-page__intro { max-width: 640px; }
 .inner-page__intro h1 { margin: 0; }
 .inner-page__intro > p { max-width: 520px; margin: 1.5rem 0 0; color: #59665e; }
-.inner-page .inner-page__cta { display: inline-flex; align-items: center; gap: .8rem; min-height: 3.2rem; padding: .85rem 1.25rem; border: 0; border-radius: 999px; background: #183e29; color: white; text-decoration: none; transition: background-color 180ms ease, transform 180ms ease; }
 .inner-page__intro .inner-page__cta { margin-top: 2rem; }
-.inner-page .inner-page__cta:hover { background: #15803d; transform: translateY(-2px); }
 .inner-page__cta svg { width: 1.1rem; height: 1.1rem; }
 .inner-page__end-link { display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding-top: 4rem; text-align: center; }
 .inner-page__end-link > p { margin: 0; color: #59665e; }

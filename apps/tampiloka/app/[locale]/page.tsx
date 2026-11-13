@@ -1,3 +1,4 @@
+import { MarketingCTA } from "@/components/marketing-cta";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
@@ -5,7 +6,6 @@ import { notFound } from "next/navigation";
 import ProjectShowcase from "@/components/project-showcase";
 import { TemplateDiscovery } from "@/components/template-discovery";
 import { StudioSections } from "@/components/studio-sections";
-import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
 import { getFaqItems } from "@/lib/faq";
 import { createPageMetadata, faqPageSchema, webPageSchema } from "@/lib/seo";
@@ -64,8 +64,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <h1 id="hero-title" className="type-display-xl">{copy.home.title}<br /><span className="hero-highlight">{copy.home.titleEmphasis}</span></h1>
           <p className="type-body-lg">{copy.home.description}</p>
           <div className="hero-actions">
-            <Button variant="brand" size="pill" nativeButton={false} render={<Link href="/contact" />}>{copy.home.contactCta}</Button>
-            <Button variant="link" size="pill" nativeButton={false} render={<Link href="/templates" />}>{copy.home.templatesCta}</Button>
+            <MarketingCTA primary nativeButton={false} render={<Link href="/contact" />}>{copy.home.contactCta}</MarketingCTA>
+            <MarketingCTA nativeButton={false} render={<Link href="/templates" />}>{copy.home.templatesCta}</MarketingCTA>
           </div>
         </div>
         <HeroBackdrop />
