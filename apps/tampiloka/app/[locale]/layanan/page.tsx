@@ -5,7 +5,7 @@ import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { ServiceFields } from "@/components/service-fields";
+import { ServiceFields, ServiceHeroPreview } from "@/components/service-fields";
 import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { createPageMetadata, itemListSchema, localizedSiteUrl, webPageSchema } from "@/lib/seo";
@@ -59,7 +59,7 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
           <p className="type-body-lg">{copy.description}</p>
           <div className="service-hero__actions"><MarketingCTA primary nativeButton={false} render={<Link href="/contact" />}>{copy.contactCta}</MarketingCTA><Button variant="link" nativeButton={false} render={<a href="#pilih-bidang" />}>{locale === "en" ? "Choose a field" : "Pilih bidang"}</Button></div>
         </div>
-        <figure className="service-hero__visual">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/services/school-lingua.png" width="1280" height="800" alt={locale === "en" ? "Example course catalogue with programmes and schedules" : "Contoh katalog kursus dengan program dan jadwal"} /><figcaption className="type-body-sm">{locale === "en" ? "Example learning centre demo in Indonesian, with sample data." : "Contoh demo pusat belajar dengan data contoh."}</figcaption></figure>
+        <ServiceHeroPreview locale={locale} />
       </section>
 
       <nav className="service-directory" id="pilih-bidang" aria-label={locale === "en" ? "Choose a field" : "Pilih bidang"}>

@@ -7,8 +7,8 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { serviceFields } from "@/lib/service-fields";
 import { families } from "@/lib/service-pricing.mjs";
-import { familyForField, matchesIllustrationUrl, representativeDemos } from "@/lib/service-selection.mjs";
-import { demoUrl } from "@/lib/template-catalog";
+import { familyForField, representativeDemos } from "@/lib/service-selection.mjs";
+import { demoUrl, featuredTemplates } from "@/lib/template-catalog";
 import { templateCopy } from "@/lib/template-copy";
 import { getPrimaryCopy } from "@/i18n/primary-copy";
 import { TEMURA_URL } from "@/lib/temura-url";
@@ -19,20 +19,21 @@ const legacyAnchors: Record<string, string[]> = {
   lainnya: ["industry-technology", "industry-enterprise", "industry-wedding"],
 };
 
-const illustrations: Record<string, { catalogId: string; sourceUrl: string; src: string; width: number; height: number; alt: Record<Locale, string>; caption: Record<Locale, string> }> = {
-  "toko-online": {
-    sourceUrl: "https://ecommerce.tampiloka.site/?preset=market&level=store&lang=id",
-    catalogId: "commerce-market", src: "/images/services/commerce-market.png", width: 1280, height: 800,
-    alt: { id: "Katalog demo Market dengan kategori, filter stok, produk, dan harga.", en: "Market demo catalogue showing categories, an in-stock filter, products and prices." },
-    caption: { id: "Contoh toko online dengan pencarian dan kategori produk. Demo menggunakan data contoh.", en: "Example online store with product search and categories. Indonesian-language demo with sample data." },
-  },
-  booking: {
-    sourceUrl: "https://booking.tampiloka.site/?preset=detailing&layout=service-market&palette=slate&view=customer&level=full&lang=id",
-    catalogId: "booking-detailing", src: "/images/services/booking-detailing.png", width: 1280, height: 800,
-    alt: { id: "Demo layanan detailing dengan durasi, harga, dan tombol pilih waktu.", en: "Detailing demo showing service duration, prices and choose-time buttons." },
-    caption: { id: "Contoh layanan perawatan kendaraan dengan durasi dan harga. Demo menggunakan data contoh.", en: "Example vehicle-care services with duration and prices. Indonesian-language demo with sample data." },
-  },
-};
+export function ServiceHeroPreview({ locale }: { locale: Locale }) {
+  const { catalog, status, retry } = useTemplateCatalog();
+  const copy = templateCopy[locale];
+  const entry = catalog ? featuredTemplates(catalog, 1)[0] : undefined;
+  const family = catalog?.families.find(item => item.id === entry?.family);
+  return <figure className="service-hero__visual">
+    {entry && <a className="template-discovery__image" href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`}><TemplatePreview src={entry.imageUrl} /></a>}
+    <figcaption className="type-body-sm" aria-live="polite">
+      {entry && <p>{entry.name[locale]}. {copy.disclosure}</p>}
+      {status === "loading" && <p>{copy.loading}</p>}
+      {status === "ready" && !entry && <p>{copy.noTemplates}</p>}
+      {(status === "stale" || status === "error") && <div className="template-catalog-status"><p>{status === "stale" ? copy.stale : copy.unavailable}</p><Button variant="outline" onClick={retry}>{copy.retry}</Button></div>}
+    </figcaption>
+  </figure>;
+}
 
 export function ServiceFields({ locale }: { locale: Locale }) {
   const { catalog, status, retry } = useTemplateCatalog();
@@ -47,8 +48,6 @@ export function ServiceFields({ locale }: { locale: Locale }) {
       const pricingId = familyForField(field.id);
       const pricing = families.find(item => item.id === pricingId);
       const lang = en ? 1 : 0;
-      const illustration = illustrations[field.id];
-      const showIllustration = status === "ready" && illustration && catalog?.entries.some(entry => entry.id === illustration.catalogId && entry.family === field.family && matchesIllustrationUrl(entry.url, illustration.sourceUrl));
       return <section className={`service-field${demoFamily ? "" : " service-field--single"}`} id={field.id} key={field.id} aria-labelledby={`${field.id}-title`}>
         {(legacyAnchors[field.id] ?? []).map(id => <span className="service-field__anchor" id={id} key={id} aria-hidden="true" />)}
         <div data-reveal><h2 className="type-heading-1" id={`${field.id}-title`}>{field.name}</h2><p className="type-body-lg">{field.description}</p>
@@ -68,12 +67,7 @@ export function ServiceFields({ locale }: { locale: Locale }) {
             {status === "loading" && <p>{copy.loading}</p>}
             {(status === "stale" || status === "error") && <div className="template-catalog-status"><p>{status === "stale" ? copy.stale : copy.unavailable}</p><Button variant="outline" onClick={retry}>{copy.retry}</Button></div>}
           </div>
-          {showIllustration && <figure className="service-field__illustration">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <a href={illustration.src} target="_blank" rel="noopener noreferrer"><img src={illustration.src} alt={illustration.alt[locale]} width={illustration.width} height={illustration.height} loading="lazy" /></a>
-            <figcaption className="type-body-sm">{illustration.caption[locale]}</figcaption>
-          </figure>}
-          {entries.map((entry, index) => <article key={entry.id} className="service-field__demo">{index === 0 && !showIllustration && <div className="template-discovery__image"><TemplatePreview src={entry.imageUrl} /></div>}<h4 className="type-heading-5">{entry.name[locale]}</h4><p className="type-body">{entry.description[locale]}</p><Button variant="link" nativeButton={false} render={<a href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`} />}>{en ? "Try demo" : "Coba demo"}</Button></article>)}
+          {entries.map((entry, index) => <article key={entry.id} className="service-field__demo">{index === 0 && <div className="template-discovery__image"><TemplatePreview src={entry.imageUrl} /></div>}<h4 className="type-heading-5">{entry.name[locale]}</h4><p className="type-body">{entry.description[locale]}</p><Button variant="link" nativeButton={false} render={<a href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`} />}>{en ? "Try demo" : "Coba demo"}</Button></article>)}
           {catalog && entries.length === 0 && <p className="type-body">{en ? "No matching demo is available yet. Contact us to discuss your needs." : "Belum ada demo yang sesuai. Hubungi kami untuk membahas kebutuhan Anda."}</p>}
           {entries.length > 0 && <Button variant="link" nativeButton={false} render={<Link href="/templates" />}>{en ? "View all templates" : "Lihat semua template"}</Button>}
         </div>}

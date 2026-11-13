@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { menuTransition } from "../../../packages/brand-system/src/layout/menu-state.mjs";
-import { familyForField, familyUrl, matchesIllustrationUrl, representativeDemos, selectedFamily } from "../lib/service-selection.mjs";
+import { familyForField, familyUrl, representativeDemos, selectedFamily } from "../lib/service-selection.mjs";
 import { families } from "../lib/service-pricing.mjs";
 
 let menu = menuTransition(null, "/layanan", "enter");
@@ -26,12 +26,10 @@ const demos = [{ id: "a", family: "shop" }, { id: "b", family: "shop", featured:
 assert.deepEqual(representativeDemos(demos, "shop").map(demo => demo.id), ["b", "a", "d"]);
 assert.deepEqual(representativeDemos(demos, "missing"), []);
 assert.equal(demos[0].id, "a");
-const illustratedDemo = "https://example.test/shop?preset=market&level=store&lang=id";
-assert.equal(matchesIllustrationUrl("https://example.test/shop?lang=en&level=store&preset=market", illustratedDemo), true);
-for (const changed of ["https://example.test/shop?preset=other&level=store", "https://example.test/shop?preset=market", "https://other.test/shop?preset=market&level=store", "https://example.test/other?preset=market&level=store", "https://example.test/shop?preset=market&level=store&view=staff", "https://example.test/shop?preset=market&level=store#other", "invalid"]) {
-  assert.equal(matchesIllustrationUrl(changed, illustratedDemo), false);
-}
-assert.equal(matchesIllustrationUrl(illustratedDemo, "invalid"), false);
+const originalDemo = { id: "catalog-demo", family: "shop", url: "https://example.test/demo", imageUrl: "https://example.test/old.png" };
+const updatedDemo = { ...originalDemo, imageUrl: "https://example.test/new.png" };
+assert.equal(representativeDemos([originalDemo], "shop")[0].imageUrl, originalDemo.imageUrl);
+assert.equal(representativeDemos([updatedDemo], "shop")[0].imageUrl, updatedDemo.imageUrl);
 const cafe = families.find(family => family.id === "cafe");
 assert.deepEqual(cafe.rows.find(row => row[0][0] === "Mencatat pembayaran")[1], [0, 0, 1, 1]);
 assert.equal(families.find(family => family.id === "school").plans.length, 4);
