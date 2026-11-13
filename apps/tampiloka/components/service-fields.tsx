@@ -27,6 +27,7 @@ export function ServiceHeroPreview({ locale }: { locale: Locale }) {
   return <figure className="service-hero__visual">
     {entry && <a className="template-discovery__image" href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`}><TemplatePreview src={entry.imageUrl} /></a>}
     <figcaption className="type-body-sm" aria-live="polite">
+      {entry && <Button className="px-0" variant="link" nativeButton={false} render={<a href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`} />}>{copy.open}</Button>}
       {entry && <p>{entry.name[locale]}. {copy.disclosure}</p>}
       {status === "loading" && <p>{copy.loading}</p>}
       {status === "ready" && !entry && <p>{copy.noTemplates}</p>}
