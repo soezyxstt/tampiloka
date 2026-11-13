@@ -115,12 +115,12 @@
 .service-field { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 7vw, 7rem); padding: clamp(3rem, 6vw, 6rem) 0; border-top: 1px solid #e1e8e1; scroll-margin-top: 100px; }
 .service-field h2, .service-field h3 { margin: 0 0 1rem; }
 .service-field p { color: #59665e; margin: 0 0 1.5rem; }
-.service-field__features { padding-left: 1.25rem; margin: 0 0 1.5rem; }
+.service-field__features { padding-left: 1.25rem; margin: 0 0 1.5rem; list-style: disc; }
 .service-field__features li { margin-bottom: .55rem; }
 .service-field__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 .service-field__demo + .service-field__demo { margin-top: 2rem; }
 .service-field__demo h4 { margin: 1rem 0 .5rem; }
-.service-field__process { border-top: 1px solid #e1e8e1; padding: 4rem 0; max-width: 720px; }
+.service-field__process { border-top: 1px solid #e1e8e1; padding: 4rem 0 0; max-width: 720px; }
 .service-field__process p { margin: 1rem 0 1.5rem; }
 @media (max-width: 680px) { .service-field { grid-template-columns: 1fr; } }
 
@@ -133,6 +133,7 @@
 .service-field__packages dd { margin: .35rem 0 0; }
 .service-field__packages p { margin-bottom: 0; }
 
+.inner-page--services { padding-bottom: 0; }
 .inner-page--services .inner-page__hero { padding-bottom: 3rem; }
 .service-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 2rem; }
 .service-hero__visual { margin: 0; }
