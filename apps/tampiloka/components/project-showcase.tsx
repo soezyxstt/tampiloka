@@ -1,5 +1,7 @@
 "use client";
 
+import { MarketingCTA } from "@/components/marketing-cta";
+
 import { useEffect, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from "react";
 import { ArrowUpRight, Pause, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -267,7 +269,7 @@ export default function ProjectShowcase({ page = false, locale: requestedLocale 
           ))}
         </div>
         {!page && <div className="showcase__links" data-reveal>
-          <Button variant="secondary" nativeButton={false} render={<a href={localePath(locale, "/produk")} />}>{copy.allWork}</Button>
+          <MarketingCTA nativeButton={false} render={<a href={localePath(locale, "/produk")} />}>{copy.allWork}</MarketingCTA>
         </div>}
       </div>
 

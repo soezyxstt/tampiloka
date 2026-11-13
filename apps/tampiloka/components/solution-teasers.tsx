@@ -1,7 +1,7 @@
+import { MarketingCTA } from "@/components/marketing-cta";
 import { Plus } from "lucide-react";
 import { IndustryPreview } from "@/components/industry-preview";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { getPrimaryCopy } from "@/i18n/primary-copy";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -12,7 +12,6 @@ export function SolutionTeasers({ locale }: { locale: Locale }) {
     <section className="solution-teasers" aria-labelledby="solutions-title">
       <div className="solution-teasers__intro">
         <h2 id="solutions-title" className="type-heading-1" data-reveal>{copy.title}</h2>
-        <Button variant="link" size="pill" nativeButton={false} render={<Link href="/layanan" />}>{copy.link}</Button>
       </div>
       <div className="solution-teasers__list">
         {copy.items.map((item) => (
@@ -30,6 +29,7 @@ export function SolutionTeasers({ locale }: { locale: Locale }) {
             </div>
           </article>
         ))}
+        <MarketingCTA className="solution-teasers__action" nativeButton={false} render={<Link href="/layanan" />}>{copy.link}</MarketingCTA>
       </div>
     </section>
   );

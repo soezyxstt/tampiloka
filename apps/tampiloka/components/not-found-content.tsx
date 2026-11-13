@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { MarketingCTA } from "@/components/marketing-cta";
 import { localePath, type Locale } from "@/i18n/routing";
 
 export function NotFoundContent({ locale }: { locale: Locale }) {
@@ -10,14 +10,14 @@ export function NotFoundContent({ locale }: { locale: Locale }) {
           <p className="type-label text-brand-primary-dark">404</p>
           <h1 id="not-found-title" className="type-display-xl">{english ? "Page not found." : "Halaman tidak ditemukan."}</h1>
           <p className="type-body-lg">{english ? "Check the address, or return to the home page." : "Periksa alamat yang Anda buka, atau kembali ke beranda."}</p>
-          <Button
+          <MarketingCTA
+            primary
             className="inner-page__cta"
-            size="pill"
             nativeButton={false}
             render={<a href={localePath(locale, "/")} />}
           >
             {english ? "Back to home" : "Kembali ke beranda"}
-          </Button>
+          </MarketingCTA>
           <a className="contact-page__email type-body" href={localePath(locale, "/produk")}>
             {english ? "View our work" : "Lihat karya"}
           </a>

@@ -23,7 +23,7 @@ const routePairs = [
 const englishSignals = new Map([
   ['/en', 'A web studio for'],
   ['/en/services', 'Tampiloka services.'],
-  ['/en/pricing', 'Business website packages.'],
+  ['/en/pricing', 'Packages for your business.'],
   ['/en/work', 'digital invitations.'],
   ['/en/templates', 'Templates'],
   ['/en/industries', 'Websites for your industry.'],

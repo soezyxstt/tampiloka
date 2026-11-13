@@ -1,8 +1,8 @@
+import { MarketingCTA } from "@/components/marketing-cta";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
 import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
@@ -54,9 +54,9 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
         <div className="inner-page__intro" data-reveal>
           <h1 id="services-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
-          <Button className="inner-page__cta" size="lg" nativeButton={false} render={<Link href="/contact" />}>
+          <MarketingCTA primary className="inner-page__cta" nativeButton={false} render={<Link href="/contact" />}>
             {copy.contactCta}
-          </Button>
+          </MarketingCTA>
         </div>
         <PageVisual imageKey="service-overview" alt={copy.imageAlt} preload />
       </section>
@@ -70,8 +70,8 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
               <ul className="service-row__list type-body-sm">
                 {service.items.map((item) => <li key={item}>{item}</li>)}
               </ul>
-              {service.href && <Button variant="secondary" className="service-row__cta" nativeButton={false} render={<a href={service.href} target="_blank" rel="noopener noreferrer" />}>{copy.temuraCta}</Button>}
-              {service.imageKey === "service-website" && <Button variant="secondary" className="service-row__cta" nativeButton={false} render={<Link href="/paket" />}>{copy.packageCta}</Button>}
+              {service.href && <MarketingCTA className="service-row__cta" nativeButton={false} render={<a href={service.href} target="_blank" rel="noopener noreferrer" />}>{copy.temuraCta}</MarketingCTA>}
+              {service.imageKey === "service-website" && <MarketingCTA className="service-row__cta" nativeButton={false} render={<Link href="/paket" />}>{copy.packageCta}</MarketingCTA>}
             </div>
             <PageVisual imageKey={service.imageKey} alt={service.imageAlt} />
           </article>
@@ -79,7 +79,7 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
       </section>
 
       <div className="inner-page__end-link" data-reveal>
-        <Button variant="secondary" size="lg" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
+        <MarketingCTA nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</MarketingCTA>
       </div>
     </div>
   );

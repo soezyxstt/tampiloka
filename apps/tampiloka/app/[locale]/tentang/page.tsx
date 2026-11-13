@@ -1,9 +1,9 @@
+import { MarketingCTA } from "@/components/marketing-cta";
 import { Check } from "lucide-react";
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { PageVisual } from "@/components/page-visual";
 import { JsonLd } from "@/components/json-ld";
 import { createPageMetadata, webPageSchema } from "@/lib/seo";
@@ -42,9 +42,9 @@ export default async function TentangPage({ params }: { params: Promise<{ locale
         <div className="inner-page__intro" data-reveal>
           <h1 id="about-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
-          <Button className="inner-page__cta" size="lg" nativeButton={false} render={<a href="#cara-kerja" />}>
+          <MarketingCTA className="inner-page__cta" nativeButton={false} render={<a href="#cara-kerja" />}>
             {copy.processCta}
-          </Button>
+          </MarketingCTA>
         </div>
         <PageVisual imageKey="about-studio" alt={copy.imageAlt} preload />
       </section>
@@ -65,7 +65,7 @@ export default async function TentangPage({ params }: { params: Promise<{ locale
           <h2 className="type-heading-1">{copy.processTitle}</h2>
           <p className="type-body-lg">{copy.processDescription}</p>
           <div className="about-process-action">
-            <Button variant="brand" size="pill" nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</Button>
+            <MarketingCTA primary nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</MarketingCTA>
           </div>
         </div>
       </section>

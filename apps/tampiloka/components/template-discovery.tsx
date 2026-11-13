@@ -1,5 +1,7 @@
 "use client";
 
+import { MarketingCTA } from "@/components/marketing-cta";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -16,7 +18,7 @@ export function TemplateDiscovery({ locale }: { locale: Locale }) {
     <div className="template-discovery__inner">
       <header className="template-discovery__heading" data-reveal>
         <div><h2 className="type-heading-1" id="template-discovery-title">{copy.home.title}</h2></div>
-        <Button variant="secondary" nativeButton={false} render={<Link href="/templates" />}>{copy.home.browse}</Button>
+        <MarketingCTA nativeButton={false} render={<Link href="/templates" />}>{copy.home.browse}</MarketingCTA>
       </header>
       {status === "loading" && <p className="template-discovery__status type-body-sm" role="status">{copy.loading}</p>}
       {(status === "stale" || status === "error") && <div className="template-catalog-status" role="status"><p className="type-body-sm">{status === "stale" ? copy.stale : copy.unavailable}</p><Button variant="outline" onClick={retry}>{copy.retry}</Button></div>}

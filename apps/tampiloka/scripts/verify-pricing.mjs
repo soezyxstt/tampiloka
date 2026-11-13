@@ -4,7 +4,7 @@ import { chromium } from "playwright";
 import { families } from "../lib/service-pricing.mjs";
 import { chooseSelect } from "./select-test-helper.mjs";
 
-const origin = process.env.PRICING_ORIGIN || process.argv[2] || "http://127.0.0.1:3000";
+const origin = process.env.PRICING_ORIGIN || process.argv[2] || "http://localhost:3000";
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || (existsSync("/usr/bin/chromium") ? "/usr/bin/chromium" : chromium.executablePath()), args: ["--no-sandbox"] });
 const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
 const page = await context.newPage();
@@ -18,9 +18,12 @@ try {
   assert.equal(await page.locator("main").count(), 1);
   assert.deepEqual(await page.locator(".service-card strong").allTextContents(), ["Rp249.000", "Rp499.000", "Rp899.000", "Rp1.490.000"]);
   const picker = page.locator("#pricing-family");
+  // Scroll the streamed component into view and wait for its hydration callback.
+  await picker.scrollIntoViewIfNeeded();
+  await page.locator('.family-picker[data-hydrated="true"]').waitFor({ state: "attached" });
+  const listbox = page.getByRole("listbox");
   await picker.focus();
   await page.keyboard.press("Enter");
-  const listbox = page.getByRole("listbox");
   await listbox.waitFor({ state: "visible" });
   assert.equal(await listbox.locator('[role="option"][data-value="cafe"]').getAttribute("aria-selected"), "true");
   await page.keyboard.press("ArrowDown");
