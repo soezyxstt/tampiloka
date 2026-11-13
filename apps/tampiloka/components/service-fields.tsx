@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { TemplatePreview } from "@/components/template-preview";
 import { useTemplateCatalog } from "@/components/use-template-catalog";
 import { Link } from "@/i18n/navigation";
@@ -12,6 +12,7 @@ import { demoUrl, featuredTemplates } from "@/lib/template-catalog";
 import { templateCopy } from "@/lib/template-copy";
 import { getPrimaryCopy } from "@/i18n/primary-copy";
 import { TEMURA_URL } from "@/lib/temura-url";
+import { cn } from "@/lib/utils";
 
 const legacyAnchors: Record<string, string[]> = {
   "kafe-restoran": ["industry-food"], "toko-online": ["industry-fashion"],
@@ -27,7 +28,7 @@ export function ServiceHeroPreview({ locale }: { locale: Locale }) {
   return <figure className="service-hero__visual">
     {entry && <a className="template-discovery__image" href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`}><TemplatePreview src={entry.imageUrl} /></a>}
     <figcaption className="type-body-sm" aria-live="polite">
-      {entry && <Button className="px-0" variant="link" nativeButton={false} render={<a href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`} />}>{copy.open}</Button>}
+      {entry && <a className={cn(buttonVariants({ variant: "link" }), "px-0")} href={demoUrl(entry, family?.defaultMode, locale)} target="_blank" rel="noopener noreferrer" aria-label={`${copy.open} ${entry.name[locale]} (${copy.opens})`}>{copy.open}</a>}
       {entry && <p>{entry.name[locale]}. {copy.disclosure}</p>}
       {status === "loading" && <p>{copy.loading}</p>}
       {status === "ready" && !entry && <p>{copy.noTemplates}</p>}
