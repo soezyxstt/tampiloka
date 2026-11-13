@@ -1,0 +1,18 @@
+﻿{
+  "head": "b82d372c4da320972adbbbe7dead7514dbd2ad6c",
+  "deploymentId": "dpl_74NkfGLs5n3UW9DEfacK5ETiPmda",
+  "deploymentIdentityEvidence": "Parent reported READY deployment metadata, exact SHA and null target; this executor did not query deployment metadata. An asset URL observed during capture carried this deployment ID.",
+  "origin": "https://tampiloka-920r8rigr-soezyxst-projects.vercel.app",
+  "sourceDiff": "git diff d945946 to HEAD: one file, two className changes wrapping existing brand button variants with cn; 2 insertions and 2 deletions",
+  "checkout": "git status --short empty at initial check; HEAD exact",
+  "captures": [
+    {"file":"desktop-cafe-cta.png","pixels":"1280x800","viewportCss":"1280x800"},
+    {"file":"mobile-cafe-cta.png","pixels":"390x844","viewportCss":"390x844"},
+    {"file":"mobile-process-faq.png","pixels":"390x844","viewportCss":"390x844","ctaBottomToFaqHeadingTopPx":72}
+  ],
+  "id": {"allDocumentAnchors":97,"anchorRoleButton":0,"fieldAndProcess":{"tag":"A","role":null,"href":"/contact","computedHeight":"43.989px at initial sample","computedBorderRadius":"3.06309e+07px","roundedFull":true,"roundedLg":false},"cafePackageHref":"/paket?family=cafe","cafeDemoHref":"https://cafe-full.tampiloka.site/?lang=id"},
+  "en": {"allDocumentAnchors":97,"anchorRoleButton":0,"fieldAndProcess":{"tag":"A","role":null,"href":"/en/contact","computedHeight":"43.989px at sample","computedBorderRadius":"3.06309e+07px","roundedFull":true,"roundedLg":false},"cafePackageHref":"/en/pricing?family=cafe","cafeDemoHref":"https://cafe-full.tampiloka.site/?lang=en"},
+  "captureReadiness": "document.fonts.status loaded; visible images at each capture reported complete with nonzero naturalWidth; no loader selector found in initial check; no independent timing comparison of animations",
+  "limitations": "Focused DOM and visual capture only; no link activation, popup, broad interaction, build, lint, typecheck, CI or independent deployment metadata query. No CSS injection or feedback overlay hiding. English capture not requested; English DOM checked. Browser viewport after navigation to EN reported 356x770; three saved image sizes listed above are actual pixel dimensions.",
+  "browser": "Opened in default authenticated profile. Initial tab automation timed out on scroll, snapshot, then evaluate; closed it, opened a fresh same-profile tab and completed capture. Both tabs closed."
+}
