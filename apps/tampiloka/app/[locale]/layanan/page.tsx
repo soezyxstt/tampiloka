@@ -1,15 +1,18 @@
 import { MarketingCTA } from "@/components/marketing-cta";
 import type { Metadata } from "next";
+import "../../templates.css";
 import { hasLocale } from "next-intl";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { PageVisual } from "@/components/page-visual";
+import { buttonVariants } from "@/components/ui/button";
+import { ServiceFields, ServiceHeroPreview } from "@/components/service-fields";
 import { JsonLd } from "@/components/json-ld";
 import { TEMURA_URL } from "@/lib/temura-url";
 import { createPageMetadata, itemListSchema, localizedSiteUrl, webPageSchema } from "@/lib/seo";
 import { getPrimaryCopy } from "@/i18n/primary-copy";
 import { Link } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
+import { serviceFields } from "@/lib/service-fields";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: requestedLocale } = await params;
@@ -54,33 +57,17 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
         <div className="inner-page__intro" data-reveal>
           <h1 id="services-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
-          <MarketingCTA primary className="inner-page__cta" nativeButton={false} render={<Link href="/contact" />}>
-            {copy.contactCta}
-          </MarketingCTA>
+          <div className="service-hero__actions"><MarketingCTA primary nativeButton={false} render={<Link href="/contact" />}>{copy.contactCta}</MarketingCTA><a className={buttonVariants({ variant: "link" })} href="#pilih-bidang">{locale === "en" ? "Choose a field" : "Pilih bidang"}</a></div>
         </div>
-        <PageVisual imageKey="service-overview" alt={copy.imageAlt} preload />
+        <ServiceHeroPreview locale={locale} />
       </section>
 
-      <section className="inner-page__services" aria-label={copy.ariaLabel}>
-        {services.map((service) => (
-          <article className="service-row" id={service.imageKey} key={service.title}>
-            <div className="service-row__copy" data-reveal>
-              <h2 className="type-heading-1">{service.title}</h2>
-              <p className="type-body-lg">{service.description}</p>
-              <ul className="service-row__list type-body-sm">
-                {service.items.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-              {service.href && <MarketingCTA className="service-row__cta" nativeButton={false} render={<a href={service.href} target="_blank" rel="noopener noreferrer" />}>{copy.temuraCta}</MarketingCTA>}
-              {service.imageKey === "service-website" && <MarketingCTA className="service-row__cta" nativeButton={false} render={<Link href="/paket" />}>{copy.packageCta}</MarketingCTA>}
-            </div>
-            <PageVisual imageKey={service.imageKey} alt={service.imageAlt} />
-          </article>
-        ))}
-      </section>
+      <nav className="service-directory" id="pilih-bidang" aria-label={locale === "en" ? "Choose a field" : "Pilih bidang"}>
+        <h2 className="type-heading-3">{locale === "en" ? "Choose a field" : "Pilih bidang"}</h2>
+        <div>{serviceFields[locale].map(field => <a className="type-label-lg" href={`#${field.id}`} key={field.id}>{field.name}</a>)}</div>
+      </nav>
 
-      <div className="inner-page__end-link" data-reveal>
-        <MarketingCTA nativeButton={false} render={<Link href="/contact" />}>{copy.endCta}</MarketingCTA>
-      </div>
+      <ServiceFields locale={locale} />
     </div>
   );
 }

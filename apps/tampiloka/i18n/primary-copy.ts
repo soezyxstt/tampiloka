@@ -109,7 +109,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
     },
     services: {
       title: "Layanan Tampiloka.",
-      description: "Website, aplikasi web, identitas visual, dan undangan digital.",
+      description: "Temukan pilihan website dan aplikasi untuk kafe, toko, sekolah, dan kebutuhan lainnya. Coba demo dan bahas lingkup yang sesuai.",
       contactCta: "Diskusikan kebutuhan",
       endCta: "Diskusikan kebutuhan",
       ariaLabel: "Layanan Tampiloka",
@@ -195,7 +195,7 @@ export const PRIMARY_COPY: Record<Locale, PrimaryPageCopy> = {
     },
     services: {
       title: "Tampiloka services.",
-      description: "Websites, web applications, visual identity, and digital invitations.",
+      description: "Explore websites and applications for cafes, stores, schools, and other needs. Try a demo and discuss the right scope.",
       contactCta: "Discuss your project",
       endCta: "Discuss your project",
       ariaLabel: "Tampiloka services",

@@ -99,7 +99,7 @@
 .site-card__description { margin: 0; color: #667168; }
 .site-card__content { padding: 18px 24px 24px; }
 .site-card__footer { display: flex; align-items: center; gap: 12px; padding: 0 24px 24px; }
-@media (max-width: 1100px) {
+@media (max-width: 767px) {
   .site-header--primary { min-height: 72px; padding-block: 12px; }
   .site-header--primary .header-desktop-nav { display: none; }
   .site-header--primary .header-mobile-actions { display: flex; align-items: center; gap: 12px; }

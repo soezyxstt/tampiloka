@@ -5,13 +5,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Fragment, type ReactNode } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Button, buttonVariants } from "../ui/button";
+import { menuTransition } from "./menu-state.mjs";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 
 export interface NavLinkItem {
   label: string;
   href: string;
+  children?: readonly NavLinkItem[];
+  overviewLabel?: string;
+  disclosureLabel?: string;
 }
 
 export interface HeaderAction {
@@ -80,6 +84,33 @@ export function SiteHeader({
   const activePathname = currentPath ?? pathname;
   const [hiddenFor, setHiddenFor] = useState<string | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [menu, setMenu] = useState<{ href: string; mode: "hover" | "pinned" } | null>(null);
+  const openMenu = menu?.href;
+  const closeMenu = () => setMenu(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const mobileButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!openMenu) return;
+    const dismiss = (event: PointerEvent) => {
+      if (!menuRef.current?.contains(event.target as Node) && !mobileMenuRef.current?.contains(event.target as Node)) closeMenu();
+    };
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        const focusInside = sheetOpen
+          ? mobileMenuRef.current?.contains(document.activeElement)
+          : document.activeElement === menuButtonRef.current || menuRef.current?.querySelector(".header-subnav__panel")?.contains(document.activeElement);
+        closeMenu();
+        if (focusInside) { event.stopPropagation(); (sheetOpen ? mobileButtonRef : menuButtonRef).current?.focus(); }
+      }
+    };
+    document.addEventListener("pointerdown", dismiss);
+    document.addEventListener("keydown", escape, true);
+    return () => { document.removeEventListener("pointerdown", dismiss); document.removeEventListener("keydown", escape, true); };
+  }, [openMenu, sheetOpen]);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const lastY = useRef(0);
   const scrollDirection = useRef(0);
@@ -167,6 +198,7 @@ export function SiteHeader({
     "site-header--primary",
     transparentOnTop ? "site-header--transparent-top" : "",
     transparentOnTop && isScrolled ? "is-scrolled" : "",
+    links.some(link => link.children?.length) ? "site-header--has-subnav" : "",
     className,
   ]
     .filter(Boolean)
@@ -175,13 +207,24 @@ export function SiteHeader({
   return (
     <header
       className={headerClassNames}
-      data-hidden={hiddenFor === pathname && !sheetOpen ? "true" : undefined}
+      data-hidden={hiddenFor === pathname && !sheetOpen && !openMenu ? "true" : undefined}
       data-scrolled={transparentOnTop ? (isScrolled ? "true" : "false") : undefined}
     >
       {renderLink({ href: homeHref, ariaLabel: `${logo.alt}, ${homeLabel}`, className: "header-brand", children: logoContent })}
 
       <nav className="header-desktop-nav type-label" aria-label={navigationLabel}>
-        {links.map(({ label, href }) => {
+        {links.map(({ label, href, children, overviewLabel, disclosureLabel }) => {
+          if (children?.length) return <div className="header-subnav" key={href} ref={menuRef}
+            onPointerEnter={event => { if (event.pointerType === "mouse") setMenu(current => menuTransition(current, href, "enter")); }}
+            onPointerLeave={event => { if (event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) setMenu(current => menuTransition(current, href, "leave")); }}
+            onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) closeMenu(); }}>
+            {renderLink({ href, className: navigationLinkClass(activePathname, href), ariaCurrent: activePathname === href ? "page" : undefined, onClick: closeMenu, children: label })}
+            <button ref={menuButtonRef} type="button" className="header-subnav__trigger" aria-label={disclosureLabel ?? label} aria-expanded={openMenu === href} aria-controls="header-subnav-desktop" onClick={() => setMenu(current => menuTransition(current, href, "click"))}><ChevronDown aria-hidden="true" size={16} /></button>
+            <div id="header-subnav-desktop" className="header-subnav__panel" data-open={openMenu === href} inert={openMenu !== href}>
+              {renderLink({ href, className: "header-subnav__overview", onClick: () => closeMenu(), children: overviewLabel ?? label })}
+              {children.map(child => <Fragment key={child.href}>{renderLink({ ...child, children: child.label, onClick: () => closeMenu() })}</Fragment>)}
+            </div>
+          </div>;
           const isCurrent = activePathname === href;
           return href.startsWith("#") ? (
             <a key={href} className="header-nav-link" href={href}>
@@ -218,6 +261,7 @@ export function SiteHeader({
           open={sheetOpen}
           onOpenChange={(open: boolean) => {
             setSheetOpen(open);
+            closeMenu();
             if (open) setHiddenFor(null);
           }}
         >
@@ -240,8 +284,14 @@ export function SiteHeader({
               </SheetClose>
             </div>
             <nav className="header-sheet__nav type-heading-3" aria-label={navigationLabel}>
-              {links.map(({ label, href }) =>
-                href.startsWith("#") ? (
+              {links.map(({ label, href, children, overviewLabel, disclosureLabel }) =>
+                children?.length ? <div className="header-sheet__group" key={href} ref={mobileMenuRef}>
+                  <button ref={mobileButtonRef} type="button" className="header-sheet__toggle" aria-label={disclosureLabel} aria-current={activePathname === href ? "page" : undefined} aria-expanded={openMenu === href} aria-controls="header-subnav-mobile" onClick={() => setMenu(current => menuTransition(current, href, "click"))}>{label}<ChevronDown aria-hidden="true" size={20} /></button>
+                  <div id="header-subnav-mobile" className="header-sheet__submenu" data-open={openMenu === href} inert={openMenu !== href}><div>
+                    {renderLink({ href, onClick: () => { closeMenu(); setSheetOpen(false); }, children: overviewLabel ?? label })}
+                    {children.map(child => <Fragment key={child.href}>{renderLink({ ...child, children: child.label, onClick: () => { closeMenu(); setSheetOpen(false); } })}</Fragment>)}
+                  </div></div>
+                </div> : href.startsWith("#") ? (
                   <a key={href} className="header-nav-link" href={href} onClick={() => setSheetOpen(false)}>{label}</a>
                 ) : (
                   <Fragment key={href}>{renderLink({ href, className: navigationLinkClass(activePathname, href), ariaCurrent: activePathname === href ? "page" : undefined, onClick: () => setSheetOpen(false), children: label })}</Fragment>

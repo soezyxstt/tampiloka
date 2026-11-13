@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import { SiteHeader as SharedSiteHeader } from "@tampiloka/brand-system/header";
 import { Link, toLocalizedHref, usePathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import { fieldLinks } from "@/lib/service-fields";
 import { shellCopy } from "@/i18n/shell-copy";
 import { LanguageSwitcher } from "@/components/language-switcher";
 
@@ -14,8 +15,7 @@ export function SiteHeader() {
   const links = [
     { label: copy.nav.work, href: "/produk" },
     { label: copy.nav.templates, href: "/templates" },
-    { label: copy.nav.services, href: "/layanan" },
-    { label: copy.nav.industries, href: "/industri" },
+    { label: copy.nav.services, href: "/layanan", children: fieldLinks(locale), overviewLabel: locale === "en" ? "All services" : "Semua layanan", disclosureLabel: locale === "en" ? "Open service categories" : "Buka pilihan layanan" },
     { label: copy.nav.pricing, href: "/paket" },
     { label: copy.nav.about, href: "/tentang" },
   ] as const;

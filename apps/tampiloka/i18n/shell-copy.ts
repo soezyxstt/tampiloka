@@ -9,7 +9,6 @@ export const SHELL_COPY = {
       work: "Karya",
       templates: "Template",
       services: "Layanan",
-      industries: "Industri",
       pricing: "Paket",
       about: "Tentang",
       contact: "Kontak",
@@ -22,7 +21,6 @@ export const SHELL_COPY = {
     footer: {
       studio: "Studio",
       services: "Layanan",
-      industries: "Industri",
       website: "Website",
       digitalProducts: "Produk digital",
       development: "Pengembangan",
@@ -50,7 +48,6 @@ export const SHELL_COPY = {
       work: "Work",
       templates: "Templates",
       services: "Services",
-      industries: "Industries",
       pricing: "Pricing",
       about: "About",
       contact: "Contact",
@@ -63,7 +60,6 @@ export const SHELL_COPY = {
     footer: {
       studio: "Studio",
       services: "Services",
-      industries: "Industries",
       website: "Websites",
       digitalProducts: "Digital products",
       development: "Development",

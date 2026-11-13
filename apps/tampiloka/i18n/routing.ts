@@ -10,7 +10,6 @@ export const pathnames = {
   "/produk": { id: "/produk", en: "/work" },
   "/templates": "/templates",
   "/layanan": { id: "/layanan", en: "/services" },
-  "/industri": { id: "/industri", en: "/industries" },
   "/paket": { id: "/paket", en: "/pricing" },
   "/tentang": { id: "/tentang", en: "/about" },
   "/contact": { id: "/contact", en: "/contact" },
