@@ -76,13 +76,14 @@ export function ServiceHeroPreview({ locale }: { locale: Locale }) {
 export function ServiceFields({ locale }: { locale: Locale }) {
   const { catalog, status, retry } = useTemplateCatalog();
   const copy = templateCopy[locale];
+  const servicesCopy = getPrimaryCopy(locale).services;
   const en = locale === "en";
   const lang = en ? 1 : 0;
 
   const allFields = serviceFields[locale];
   const coreFields = allFields.filter((field) => Boolean(field.family));
   const customFields = allFields.filter((field) => !field.family);
-  const supportItems = getPrimaryCopy(locale).services.items.filter(
+  const supportItems = servicesCopy.items.filter(
     (item) => item.imageKey !== "service-website",
   );
 
@@ -157,7 +158,7 @@ export function ServiceFields({ locale }: { locale: Locale }) {
                           </div>
                         ))}
                       </dl>
-                      <p className="type-caption service-packages__scope">{field.scope}</p>
+                      <p className="type-caption service-packages__scope">{pricing.scope[lang]} {field.scope}</p>
                     </details>
                   )}
 
@@ -212,13 +213,20 @@ export function ServiceFields({ locale }: { locale: Locale }) {
                     </div>
                   ) : (
                     <div className="service-demo-placeholder">
-                      <p className="type-body-sm">
-                        {status === "loading"
-                          ? copy.loading
-                          : en
+                      {status === "loading" && <p className="type-body-sm">{copy.loading}</p>}
+                      {status === "error" && (
+                        <div className="service-demo-placeholder__error">
+                          <p className="type-body-sm">{copy.unavailable}</p>
+                          <Button variant="outline" onClick={retry}>{copy.retry}</Button>
+                        </div>
+                      )}
+                      {catalog && entries.length === 0 && (
+                        <p className="type-body-sm">
+                          {en
                             ? "No matching demo is available yet. Contact us to discuss your needs."
                             : "Belum ada demo yang sesuai. Hubungi kami untuk membahas kebutuhan Anda."}
-                      </p>
+                        </p>
+                      )}
                     </div>
                   )}
 
@@ -278,11 +286,12 @@ export function ServiceFields({ locale }: { locale: Locale }) {
                 ))}
                 <h3 className="type-heading-3" id={`${field.id}-title`}>{field.name}</h3>
                 <p className="type-body service-custom-card__lead">{field.description}</p>
-                <ul className="service-custom-card__features type-body-sm">
+                <ul className="service-custom-card__features type-body">
                   {field.features.map((feature) => (
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
+                <p className="type-caption service-custom-card__scope">{field.scope}</p>
                 <div className="service-custom-card__actions">
                   {pricingId && (
                     <Link
@@ -331,7 +340,7 @@ export function ServiceFields({ locale }: { locale: Locale }) {
           {supportItems.map((item) => (
             <article id={item.imageKey} key={item.imageKey} data-reveal>
               <h3 className="type-heading-4">{item.title}</h3>
-              <p className="type-body-sm">{item.description}</p>
+              <p className="type-body">{item.description}</p>
               <p className="type-caption service-support__tags">{item.items.join(" · ")}</p>
               {item.href === "temura" && (
                 <a
@@ -341,7 +350,7 @@ export function ServiceFields({ locale }: { locale: Locale }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {getPrimaryCopy(locale).services.temuraCta}
+                  {servicesCopy.temuraCta}
                 </a>
               )}
             </article>
