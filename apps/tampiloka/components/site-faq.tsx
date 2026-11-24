@@ -8,7 +8,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { getFaqItems } from "@/lib/faq"
 
 import { shellCopy } from "@/i18n/shell-copy"
-import "../app/navigation.css"
 
 export function SiteFaq() {
   const locale = useLocale() as Locale

@@ -214,13 +214,13 @@ export function SiteHeader({
 
       <nav className="header-desktop-nav type-label" aria-label={navigationLabel}>
         {links.map(({ label, href, children, overviewLabel, disclosureLabel }) => {
-          if (children?.length) return <div className="header-subnav" key={href} ref={menuRef}
+          if (children?.length) return <div className="header-subnav" key={href} ref={menuRef} data-open={openMenu === href}
             onPointerEnter={event => { if (event.pointerType === "mouse") setMenu(current => menuTransition(current, href, "enter")); }}
             onPointerLeave={event => { if (event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) setMenu(current => menuTransition(current, href, "leave")); }}
             onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) closeMenu(); }}>
             {renderLink({ href, className: navigationLinkClass(activePathname, href), ariaCurrent: activePathname === href ? "page" : undefined, onClick: closeMenu, children: label })}
-            <button ref={menuButtonRef} type="button" className="header-subnav__trigger" aria-label={disclosureLabel ?? label} aria-expanded={openMenu === href} aria-controls="header-subnav-desktop" onClick={() => setMenu(current => menuTransition(current, href, "click"))}><ChevronDown aria-hidden="true" size={16} /></button>
-            <div id="header-subnav-desktop" className="header-subnav__panel" data-open={openMenu === href} inert={openMenu !== href}>
+            <button ref={menuButtonRef} type="button" className="header-subnav__trigger" aria-label={disclosureLabel ?? label} aria-expanded={openMenu === href} aria-controls="header-subnav-desktop" onClick={() => setMenu(current => menuTransition(current, href, "click"))}><ChevronDown aria-hidden="true" size={15} /></button>
+            <div id="header-subnav-desktop" className={`header-subnav__panel${children.length > 4 ? " header-subnav__panel--grid" : ""}`} data-open={openMenu === href} inert={openMenu !== href}>
               {renderLink({ href, className: "header-subnav__overview", onClick: () => closeMenu(), children: overviewLabel ?? label })}
               {children.map(child => <Fragment key={child.href}>{renderLink({ ...child, children: child.label, onClick: () => closeMenu() })}</Fragment>)}
             </div>
