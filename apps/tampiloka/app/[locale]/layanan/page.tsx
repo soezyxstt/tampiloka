@@ -57,14 +57,27 @@ export default async function LayananPage({ params }: { params: Promise<{ locale
         <div className="inner-page__intro" data-reveal>
           <h1 id="services-title" className="type-display-xl">{copy.title}</h1>
           <p className="type-body-lg">{copy.description}</p>
-          <div className="service-hero__actions"><MarketingCTA primary nativeButton={false} render={<Link href="/contact" />}>{copy.contactCta}</MarketingCTA><a className={buttonVariants({ variant: "link" })} href="#pilih-bidang">{locale === "en" ? "Choose a field" : "Pilih bidang"}</a></div>
+          <div className="service-hero__actions">
+            <MarketingCTA primary nativeButton={false} render={<Link href="/contact" />}>{copy.contactCta}</MarketingCTA>
+            <Link className={buttonVariants({ variant: "link" })} href="/paket">{locale === "en" ? "View packages" : "Lihat paket"}</Link>
+          </div>
         </div>
         <ServiceHeroPreview locale={locale} />
       </section>
 
       <nav className="service-directory" id="pilih-bidang" aria-label={locale === "en" ? "Choose a field" : "Pilih bidang"}>
-        <h2 className="type-heading-3">{locale === "en" ? "Choose a field" : "Pilih bidang"}</h2>
-        <div>{serviceFields[locale].map(field => <a className="type-label-lg" href={`#${field.id}`} key={field.id}>{field.name}</a>)}</div>
+        <div className="service-directory__head">
+          <h2 className="type-heading-4">{locale === "en" ? "Jump to your field" : "Pilih bidang usaha"}</h2>
+          <Link className={buttonVariants({ variant: "link" })} href="/templates">{locale === "en" ? "Browse all templates" : "Jelajahi semua template"}</Link>
+        </div>
+        <div className="service-directory__grid">
+          {serviceFields[locale].map((field, index) => (
+            <a className="service-directory__item" href={`#${field.id}`} key={field.id}>
+              <span className="service-directory__num type-caption" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <span className="type-label">{field.name}</span>
+            </a>
+          ))}
+        </div>
       </nav>
 
       <ServiceFields locale={locale} />
