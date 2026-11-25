@@ -1,0 +1,76 @@
+name: Deploy Tampiloka to Cloudflare
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tampiloka-cloudflare-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment: cloudflare-production
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+      NEXT_PUBLIC_TEMURA_URL: ${{ vars.NEXT_PUBLIC_TEMURA_URL }}
+      NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
+      NEXT_PUBLIC_BING_SITE_VERIFICATION: ${{ vars.NEXT_PUBLIC_BING_SITE_VERIFICATION }}
+      NEXT_PUBLIC_YANDEX_SITE_VERIFICATION: ${{ vars.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deployment prerequisites
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          missing=0
+          for key in CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_TEMURA_URL; do
+            if [[ -z "${!key}" ]]; then
+              echo "::error::Configure $key in cloudflare-production. See docs/tampiloka-cloudflare-workflow.md."
+              missing=1
+            fi
+          done
+          node <<'NODE'
+          const fs = require('node:fs');
+          const scripts = JSON.parse(fs.readFileSync('apps/tampiloka/package.json', 'utf8')).scripts;
+          for (const name of ['build:cloudflare', 'deploy:cloudflare']) {
+            if (!scripts?.[name]) {
+              console.error(`::error::Missing ${name} in apps/tampiloka/package.json. Complete the Cloudflare adapter setup described in docs/tampiloka-cloudflare-workflow.md.`);
+              process.exitCode = 1;
+            }
+          }
+          for (const name of ['NEXT_PUBLIC_SITE_URL', 'NEXT_PUBLIC_TEMURA_URL']) {
+            try {
+              const url = new URL(process.env[name]);
+              if (url.protocol !== 'https:' || url.username || url.password) throw new Error();
+            } catch {
+              console.error(`::error::${name} must be a valid public HTTPS URL.`);
+              process.exitCode = 1;
+            }
+          }
+          NODE
+          if [[ "$missing" != 0 ]]; then exit 1; fi
+      - uses: pnpm/action-setup@v4
+        with:
+          version: "11.19.0"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: pnpm
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build Cloudflare application
+        run: pnpm --filter @tampiloka/web run build:cloudflare
+      - name: Deploy Cloudflare application
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: pnpm --filter @tampiloka/web run deploy:cloudflare
